@@ -56,7 +56,8 @@ PAS ENCORE DISPONIBLE.
 Les éléments que nous renvoyons au partenaire une fois les éléments ci-dessus en notre possession:
 
 - Clé **x-third-party** de production (C’est une clé secrète unique entre vous et nous qui sera nécessaire pour requêter l’API).
-- Lien vers la documentation postman ([https://docs.api.myunisoft.fr/#intro](https://docs.api.myunisoft.fr/#intro)).
+- Un compte au sein d'un schéma dédié aux intégrations partenaires (Permets à vos équipes de tester l'intégration).
+- Lien vers la documentation **postman** ([https://docs.api.myunisoft.fr/#intro](https://docs.api.myunisoft.fr/#intro)).
 
 # Liens (URL) de nos API 🌍
 
@@ -95,7 +96,7 @@ Le proxy limite le nombre de requêtes par Clé/API Token (et non par IP), il en
 
 La limite par **défaut est de 100 requêtes par minute**.
 
-## Récupération des routes accessibles
+## Routes accessibles
 
 > ⚠️ Pour le moment uniquement possible avec un **🔸 accès société**.
 
