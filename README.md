@@ -1,10 +1,4 @@
 <p align="center">
-<h1 align="center">
-  👯 MyUnisoft API Partenaires 👯
-</h1>
-</p>
-
-<p align="center">
 <img src="./docs/images/logo.jpg" height="200">
 </p>
 
