@@ -16,13 +16,13 @@ Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur 
 | Alexandre Malaj | Développeur API | [alexandre.malaj@gmail.com](alexandre.malaj@gmail.com) |
 | Léon Souvannavong | Lead dev back-end (**a consulter pour la partie métier**) | [l.souvannavong@myunisoft.fr](l.souvannavong@myunisoft.fr) |
 
-# Scope 🔬
+# Type d'accès 🔬
 Notre API partenaires permet deux types distincts d'accès:
 
 - 🔸 Un accès restreint par **société** (dossier).
 - 🔹 [**bêta-test**] Un accès à l'intégralité des sociétés d'un **cabinet**.
 
-L'accès limité par société est le modèle le plus courant car il permet d'interconnecter nos solutions de manière permanente par le biais d'un jeton n'ayant aucune date d'expiration (il peut être néanmoins révoqué par le gestionnaire du dossier ou par nos équipes techniques). C'est un modèle qui est aussi très flexible car nous n'avons pas à intervenir dans ce processus de connexion.
+L'accès limité par société est le modèle le plus courant car il permet d'interconnecter nos solutions de manière permanente par le biais d'un jeton n'ayant aucune date d'expiration (il peut être néanmoins révoqué par le gestionnaire du dossier ou par nos équipes techniques). C'est un modèle qui est aussi très flexible car nous n'avons pas à intervenir dans le processus de connexion.
 
 À l'inverse un accès **cabinet** delivera un jeton ayant une durée de vie très courte pour garantir une meilleure sécurité des données appartenant au cabinet.
 
@@ -30,28 +30,27 @@ L'accès limité par société est le modèle le plus courant car il permet d'in
 
 Les éléments et informations que le partenaire doit nous fournir (mail a [c.mandrilly@myunisoft.fr](c.mandrilly@myunisoft.fr) ou slack si déjà invité.).
 
-<details><summary>🔸 Accès société</summary>
-<br />
+---
 
-Ces éléments permettront de créer le connecteur sur l’application MyUnisoft et de vous envoyer les infos techniques: 
+## 🔸 Accès société
+
+Ces éléments permettront de créer le connecteur sur l’application MyUnisoft et de vous envoyer les informations techniques: 
 
 - nom partenaire.
-- description courte partenaire (3 lignes 25 char max).
+- description courte partenaire (3 lignes 25 char maximum).
 - description longue.
 - logo partenaire (png, hauteur 50px).
 - texte complémentaire (par exemple ou coller la clé sur votre interface ou lien vers une doc/vidéo d’utilisation avec myunisoft)
 - nom, prénom, email pour un accès à myunisoft.
 - nom, prénom, email pour une invitation slack.
 
-</details>
+---
 
-<details><summary>🔹 Accès cabinet</summary>
-<br />
+## 🔹 Accès cabinet
 
-PAS ENCORE DISPONIBLE.
+> ⚠️ **PAS ENCORE DISPONIBLE**.
 
-</details>
-<br />
+---
 
 Les éléments que nous renvoyons au partenaire une fois les éléments ci-dessus en notre possession:
 
@@ -59,19 +58,19 @@ Les éléments que nous renvoyons au partenaire une fois les éléments ci-dessu
 - Un compte au sein d'un schéma dédié aux intégrations partenaires (Permets à vos équipes de tester l'intégration).
 - Lien vers la documentation **postman** ([https://docs.api.myunisoft.fr/#intro](https://docs.api.myunisoft.fr/#intro)).
 
-# Liens (URL) de nos API 🌍
+# Liens de nos API 🌍
 
-- API Partenaires > [https://app.myunisoft.fr/api/v1](https://app.myunisoft.fr/api/v1)
-- Service Auth > [https://app.myunisoft.fr/api/auth/token](https://app.myunisoft.fr/api/auth/token)
+- API Partenaires: [https://app.myunisoft.fr/api/v1](https://app.myunisoft.fr/api/v1)
+- Service Auth: [https://app.myunisoft.fr/api/auth/token](https://app.myunisoft.fr/api/auth/token)
 
 # Authentification 🔐
 
 Les sous-documentations suivantes vous guideront dans le flow d'authentification nécessaire selon le type d'accès que vous avez souhaité.
 
-- [🔸 Accès société](./docs/auth/societe.md)
-- [🔹 Accès cabinet](./docs/auth/cabinet)
+[🔸 Accès société](./docs/auth/societe.md)
+> ⚠️ Dans le cadre **d'un accès société** l'authentification n'est nécessaire **que pour la phase de développement** du connecteur! Notre équipe sera en charge du développement d'un composant front-end qui permettra au gestionnaire du dossier (comptables et autres) de générer le jeton pour ensuite le renseigner dans votre solution.
 
-> ⚠️ Dans le cadre **d'un accès société** l'authentification n'est nécessaire **que pour la phase de développement** du connecteur, notre équipe développera un composant front-end qui permettra au gestionnaire du dossier (comptables et autres) de générer le jeton lui-même pour ensuite le renseigner dans votre interface produit.
+[🔹 Accès cabinet](./docs/auth/cabinet.md)
 
 # Utilisation d’une route exposée par l’API 🚀
 
@@ -82,7 +81,7 @@ Il est aussi nécessaire d’ajouter une en-tête HTTP “**X-Third-Party-Secret
 Toutes les routes sont exposées directement à la racine api/v1. Pour plus d'informations nous vous invitons à consulter les sous-documentations suivantes:
 
 - [🔸 Accès société](./docs/endpoints/societe.md)
-- [🔹 Accès cabinet](./docs/endpoints/cabinet)
+- [🔹 Accès cabinet](./docs/endpoints/cabinet.md)
 
 > 👀 À noter qu’il est nécessaire que l’API Token vous donne l’autorisation d’accès à la route exposée (**droits et configurations à discuter avec l’équipe MyUnisoft**).
 
@@ -103,3 +102,21 @@ La limite par **défaut est de 100 requêtes par minute**.
 Il est possible de récupérer la liste des routes (endpoints http) auxquelles vous avez accès **grâce à votre API Token** (Ce qui peut aussi vous permettre de vérifier la validité du token). La route GET **/api/v1/key/info** permet de récupérer la liste des routes ainsi que la méthode HTTP nécessaire (get, post, put ..).
 
 Attention car la route nécessite que l'en-tête HTTP Authorization soit l’API Token et non pas le User Token.
+
+![](./docs/images/key_info.png)
+
+# Gestion des erreurs
+Chaque erreur sera désormais accompagnée d’un code unique (l'intégralité des codes [ici](./docs/error_codes.md)) et d’un message essayant de vous guider au mieux dans la résolution de l’erreur. La propriété “details” servira si besoin à nos équipes à tracer et identifier la source du problème en interne.
+
+![](./docs/images/erreur_api_exemple.PNG)
+
+La propriété message est en ce qui la concerne vouée à évoluer à travers le temps. **Nous vous recommandons de ne pas l’utiliser comme référentiel pour automatiser une gestion d’erreur au sein de vos implémentations**.
+
+L’API n’a pour le moment aucune gestion d’un retour de multiple “erreurs” mais il n’est pas exclu que cela soit le cas dans le futur. Tout retour HTTP n’ayant pas un statut code en 2xx retournera donc forcément un JSON avec une propriété racine “error”.
+
+> ⚠️ Attention nous ne parlons pas des erreurs qui sont retournées sur les routes qui ne sont que des passerelles vers d’autres API internes. ⚠️
+
+# Autres 📌
+
+- [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
+- [Création d'une entrée comptable avec le format TRA+PJ](./docs/entry_tra.md)
