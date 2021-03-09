@@ -75,20 +75,24 @@ Les sous-documentations suivantes vous guideront dans le flow d'authentification
 
 # Utilisation d’une route exposée par l’API 🚀
 
-Lors de l’utilisation d’une route exposée il est nécessaire d’avoir l’**API Token** dans l'en-tête HTTP **Authorization** (et surtout pas le User token délivré par le Service d'authentification MyUnisoft). Il est aussi important de noter qu'il s'agit d'un "Bearer token".
+Lors de l’utilisation d’une route exposée il est nécessaire d’avoir l’**API Token** dans l'en-tête HTTP **Authorization** (et surtout pas le User token délivré par le Service d'authentification MyUnisoft). Il est aussi important de noter qu'il s'agit d'un "[Bearer token](https://swagger.io/docs/specification/authentication/bearer-authentication/)".
 
-Il est aussi nécessaire d’ajouter une en-tête HTTP “**X-Third-Party-Secret**” contenant la clé secrète du partenaire lié à l’API Token. Ce secret vous sera communiqué par l’équipe technique MyUnisoft.
+Il est aussi nécessaire d’ajouter une en-tête HTTP “**X-Third-Party-Secret**” contenant la clé secrète communiqué par l’équipe technique MyUnisoft.
+
+```bash
+$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/vat_param' \
+--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+--header 'Authorization: Bearer {{JWT_TOKEN}}'
+```
 
 Pour plus d'informations nous vous invitons à consulter les sous-documentations suivantes:
 
 - [🔸 Accès par société](./docs/endpoints/societe.md)
 - [🔹 Accès cabinet](./docs/endpoints/cabinet.md)
 
-> 👀 À noter qu’il est nécessaire que l’API Token vous donne l’autorisation d’accès à la route exposée (**droits et configurations à discuter avec l’équipe MyUnisoft**).
-
 ## Rate-limit des routes exposées
 
-Le proxy limite le nombre de requêtes par Clé/API Token (et non par IP), il envoie quelques en-têtes supplémentaires avec la requête:
+L'API limite le nombre de requêtes par API Token, quelques en-têtes supplémentaires sont envoyés dans la réponse HTTP:
 
 - **X-Rate-Limit-Remaining** (le nombre de requêtes restantes dans la période).
 - **X-Rate-Limit-Reset** (timestamp correspondant au moment où la période sera réinitialisée).
@@ -102,7 +106,7 @@ La limite par **défaut est de 100 requêtes par minute**.
 
 Il est possible de récupérer la liste des routes (endpoints http) auxquelles vous avez accès **grâce à votre API Token** (Ce qui peut aussi vous permettre de vérifier la validité du token). La route GET **/api/v1/key/info** permet de récupérer la liste des routes ainsi que la méthode HTTP nécessaire (get, post, put ..).
 
-Attention car la route nécessite que l'en-tête HTTP Authorization soit l’API Token et non pas le User Token.
+Attention car la route nécessite que l'en-tête HTTP **Authorization soit l’API Token**.
 
 ![](./docs/images/key_info.PNG)
 
@@ -117,7 +121,9 @@ L’API n’a pour le moment aucune gestion d’un **retour de multiple** “err
 
 > ⚠️ Attention nous ne parlons pas des erreurs qui sont retournées sur les routes qui ne sont que des passerelles vers d’autres API internes. Nous travaillons encore à rendre tout cela plus clair et plus stable sur le moyen-long terme. ⚠️
 
-# Autres 📌
+# Guides supplémentaires 📌
+
+Une liste de guides qui pourront certainement vous aider dans la réalisation de l'interconnexion.
 
 - [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
 - [Création d'une entrée comptable avec le format TRA+PJ](./docs/entry_tra.md)
