@@ -7,7 +7,7 @@ Avant de pouvoir générer une clé (**API Token**) il est nécessaire de récup
 
 L’id récupéré peut être différent selon l’environnement (production, staging et dev) et  il sera utilisé en tant que clé `grantedFor` pour la génération de l’API Token dans la prochaine section.
 
-Pour récupérer l’id il vous faut requêter la route /api/v1/key/granted-for en POST avec le body JSON suivant:
+Pour récupérer l’id il vous faut requêter la route `/api/v1/key/granted-for` avec la méthode **POST**:
 ```bash
 $ curl --location --request POST 'https://app.myunisoft.fr/api/v1/key/granted-for' \
 --header 'Authorization: Bearer {{TOKEN}}' \
@@ -18,13 +18,15 @@ $ curl --location --request POST 'https://app.myunisoft.fr/api/v1/key/granted-fo
 ```
 
 Si tout se passe comme  prévu vous devriez recevoir un payload comme suit avec un status code `200` (**le 1 dans le retour étant évidemment un exemple**). 
-![](../images/societe_auth_granted.png)
+<p align="center">
+<img src="../images/societe_auth_granted.png" height="200">
+</p>
 
 À noter qu’il n’est pas forcément nécessaire d’envoyer l’intégralité du secret. Il est aussi possible d’envoyer uniquement la première section avant le tiret du six “-”.
 
 ## Génération de la clé (API Token)
 
-Il suffit de requêter la route **/api/v1/key/create** en POST:
+Il suffit de requêter la route `/api/v1/key/create` avec la méthode **POST**:
 ```bash
 $ curl --location --request POST 'https://app.myunisoft.fr/api/v1/key/create' \
 --header 'Authorization: Bearer {{TOKEN}}' \
@@ -41,7 +43,9 @@ $ curl --location --request POST 'https://app.myunisoft.fr/api/v1/key/create' \
 
 Si tout se passe comme  prévu vous devriez recevoir un payload comme suit avec un status code `200`. 
 
-![](../images/societe_auth_key.png)
+<p align="center">
+<img src="../images/societe_auth_key.png" height="300">
+</p>
 
 La clé value est un jeton [JWT](https://jwt.io/) que vous allez devoir utiliser pour requêter les routes exposées par l’API. Nous parlerons “d’API Token” quand il est question de l’utilisation de celui-ci (A ne pas confondre avec le jeton Utilisateur).
 
