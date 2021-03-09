@@ -1,3 +1,13 @@
+<p align="center">
+<h1 align="center">
+  👯 MyUnisoft API Partenaire 👯
+</h1>
+</p>
+
+<p align="center">
+<img src="./docs/images/logo.jpg">
+</p>
+
 # Introduction ✨
 L’API Partenaires permet à des logiciels partenaires ainsi que des cabinets membres de récupérer et d'envoyer de l'information depuis/vers MyUnisoft.
 
