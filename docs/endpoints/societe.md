@@ -6,6 +6,16 @@ Il ne vous est pas possible de récupérer des informations en lien avec le cabi
 
 Les routes sont documentés sur le [postman](https://docs.api.myunisoft.fr/#intro) en ligne.
 
+## Routes accessibles avec l'API Token
+
+> ⚠️ Pour le moment uniquement possible avec un **🔸 accès société**.
+
+Il est possible de récupérer la liste des routes (endpoints http) auxquelles vous avez accès **grâce à votre API Token** (Ce qui peut aussi vous permettre de vérifier la validité du token). La route GET **/api/v1/key/info** permet de récupérer la liste des routes ainsi que la méthode HTTP nécessaire (get, post, put ..).
+
+Attention car la route nécessite que l'en-tête HTTP **Authorization soit l’API Token**.
+
+![](../images/key_info.PNG)
+
 ## Restriction
 
-Les routes `/pers_physique` et `/users` ne sont utilisables qu'avec un accès de type cabinet.
+Les routes `/pers_physique` et `/users_v2` ne sont utilisables qu'avec un accès de type cabinet.

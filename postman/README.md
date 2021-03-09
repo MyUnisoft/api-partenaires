@@ -1,5 +1,5 @@
 # Collection postman
-Une petite collection postman pour vous aider à faire vos premiers tests avec notre API partenaires. Attention la collection n'est pas complète et ne contient pas l'intégralité des routes documentées sur la [version en ligne](https://docs.api.myunisoft.fr/#intro).
+Une petite collection postman pour vous aider à faire vos premiers tests avec notre API partenaires. **Attention la collection n'est pas complète et ne contient pas l'intégralité des routes documentées** sur la [version en ligne](https://docs.api.myunisoft.fr/#intro).
 
 ## Variables pour l'environnement
 
@@ -12,3 +12,7 @@ Une petite collection postman pour vous aider à faire vos premiers tests avec n
 | USER_PASSWORD | mot de passe du compte | - |
 | THIRD_PARTY_SECRET | clé secrète | - |
 | SOCIETY_ID | id de la société pour la clé avec accès société | - |
+
+## Feedbacks
+
+N'hésitez pas à nous faire des retours en cas de problèmes.

@@ -100,30 +100,16 @@ L'API limite le nombre de requêtes par API Token, quelques en-têtes supplémen
 
 La limite par **défaut est de 100 requêtes par minute**.
 
-## Routes accessibles avec l'API Token
-
-> ⚠️ Pour le moment uniquement possible avec un **🔸 accès société**.
-
-Il est possible de récupérer la liste des routes (endpoints http) auxquelles vous avez accès **grâce à votre API Token** (Ce qui peut aussi vous permettre de vérifier la validité du token). La route GET **/api/v1/key/info** permet de récupérer la liste des routes ainsi que la méthode HTTP nécessaire (get, post, put ..).
-
-Attention car la route nécessite que l'en-tête HTTP **Authorization soit l’API Token**.
-
-![](./docs/images/key_info.PNG)
-
-# Gestion des erreurs
-Chaque erreur est accompagnée d’un code unique (**l'intégralité des codes [ici](./docs/error_codes.md)**) et d’un message essayant de vous guider au mieux dans la résolution de l’erreur. La propriété “**details**” servira si besoin à nos équipes à tracer et identifier la source du problème en interne.
-
-![](./docs/images/erreur_api_exemple.PNG)
-
-La propriété message est en ce qui la concerne vouée à évoluer à travers le temps. **Nous vous recommandons de ne pas l’utiliser comme référentiel pour automatiser une gestion d’erreur au sein de vos implémentations**.
-
-L’API n’a pour le moment aucune gestion d’un **retour de multiple** “erreurs” mais il n’est pas exclu que cela soit le cas dans le futur. Tout retour HTTP n’ayant pas un statut code en 2xx retournera donc forcément un JSON avec une propriété racine “error”.
-
-> ⚠️ Attention nous ne parlons pas des erreurs qui sont retournées sur les routes qui ne sont que des passerelles vers d’autres API internes. Nous travaillons encore à rendre tout cela plus clair et plus stable sur le moyen-long terme. ⚠️
-
 # Guides supplémentaires 📌
 
 Une liste de guides qui pourront certainement vous aider dans la réalisation de l'interconnexion.
 
+- [Collection + Environment postman](./postman/README.md)
 - [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
 - [Création d'une entrée comptable avec le format TRA+PJ](./docs/entry_tra.md)
+- [Gestion des retours erreurs](./docs/erreurs.md)
+
+Exemple d'implémentation sur différents langages de programmation:
+- [Node.js](./exemples/nodejs/README.md)
+
+> 💡 Votre language est manquant ? N'hésitez pas à ouvrir une pull-request pour l'ajouter!
