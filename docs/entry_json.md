@@ -6,13 +6,13 @@ Les routes HTTP concernées;
 - https://api.myunisoft.fr/api/v1/entry?type=e
 - https://api.myunisoft.fr/api/v1/entry/temp (permet la création de "factures en attentes").
 ​
-# Définition TypeScript
+## Définition TypeScript d'une entrée au format JSON
 ​
 La définition de type permet d’identifier les différents types des propriétés pour les structures JSON.
 ​
 > Le signe **?** indique que la propriété est optionnelle. PJ**[]** indique que la propriété est un tableau de structure PJ.
 ​
-## Pièce jointe
+### Pièce jointe
 ​
 Définition de la structure JSON pour l’ajout d’une pièce jointe. Les mimes-types qui ne sont pas référencés ci-dessous ne sont pas supportés.
 ​
@@ -46,7 +46,7 @@ interface PJ {
 }
 ```
 ​
-## Ligne entrée comptable
+### Ligne entrée comptable
 ​
 Définition de type de la structure JSON d’une ligne d’entrée comptable.
 ​
@@ -106,7 +106,7 @@ interface NewEntryLine {
 ​
 > Les propriétés lettrage, pointage_aa, pointage_mm, pointage_jj ne sont certainement pas nécessaires aux partenaires.
 ​
-## Entrée comptable
+### Entrée comptable
 ​
 Structure principale (racine) pour la création d’une entrée comptable dans MyUnisoft. Il est important que l’intégralité des lignes soit équilibré en crédit et débit.
 ​
@@ -160,7 +160,7 @@ interface NewEntry {
 ​
 > Les propriétés entry_origin_partner_id , json et id_source ne sont certainement pas nécessaires aux partenaires.
 ​
-# Schéma JSON
+## Schéma JSON
 ​
 Le schéma JSON est un vocabulaire qui vous permet d'annoter et de valider les documents JSON. Il existe des outils en ligne comme JSON Schema Validator qui vous permettront d’expérimenter en temps réel la validation d’une structure JSON.
 ​
@@ -345,3 +345,8 @@ Exemple avec l’outil cité plus tôt:
 Il vous suffit de copier-coller le schéma ci-dessus dans le formulaire de gauche et votre entrée comptable dans le formulaire de droite. S'il y des anomalies elles seront détectées.
 ​
 ![](https://i.imgur.com/EUgYd4T.png)
+
+## Gestion des comptes
+À la **différence de l'import TRA+PJ** il n'est pas possible de synchroniser et créer automatiquement les comptes **411** et **401**.
+
+Il est donc nécessaire de vous assurer que les comptes soi bien créer avec la route [/account](https://docs.api.myunisoft.fr/#5fa4c33d-9208-40ac-b457-5b3ea970f913) avant de faire l'import.

@@ -30,8 +30,6 @@ L'accès limité par société est le modèle le plus courant car il permet d'in
 
 Les éléments et informations que le partenaire doit nous fournir (mail a [c.mandrilly@myunisoft.fr](c.mandrilly@myunisoft.fr) ou slack si déjà invité.).
 
----
-
 ## 🔸 Accès société
 
 Ces éléments permettront de créer le connecteur sur l’application MyUnisoft et de vous envoyer les informations techniques: 
@@ -43,8 +41,6 @@ Ces éléments permettront de créer le connecteur sur l’application MyUnisoft
 - texte complémentaire (par exemple ou coller la clé sur votre interface ou lien vers une doc/vidéo d’utilisation avec myunisoft)
 - nom, prénom, email pour un accès à myunisoft.
 - nom, prénom, email pour une invitation slack.
-
----
 
 ## 🔹 Accès cabinet
 
@@ -103,7 +99,7 @@ Il est possible de récupérer la liste des routes (endpoints http) auxquelles v
 
 Attention car la route nécessite que l'en-tête HTTP Authorization soit l’API Token et non pas le User Token.
 
-![](./docs/images/key_info.png)
+![](./docs/images/key_info.PNG)
 
 # Gestion des erreurs
 Chaque erreur sera désormais accompagnée d’un code unique (l'intégralité des codes [ici](./docs/error_codes.md)) et d’un message essayant de vous guider au mieux dans la résolution de l’erreur. La propriété “details” servira si besoin à nos équipes à tracer et identifier la source du problème en interne.
