@@ -28,18 +28,19 @@ Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur 
 # Type d'accès 🔬
 Notre API partenaires permet deux types distincts d'accès:
 
-- 🔸 Un accès restreint par **société** (dossier).
-- 🔹 [**bêta-test**] Un accès à l'intégralité des sociétés d'un **cabinet**.
+- 🔸 Un accès restreint a une **société** (dossier) d'un cabinet.
 
-L'accès limité par société est le modèle le plus courant car il permet d'interconnecter nos solutions de manière permanente par le biais d'un jeton n'ayant aucune date d'expiration (il peut être néanmoins révoqué par le gestionnaire du dossier ou par nos équipes techniques). C'est un modèle qui est aussi très flexible car nous n'avons pas à intervenir dans le processus de connexion.
+> L'accès limité par société est le modèle le plus courant car il permet d'interconnecter nos solutions de manière permanente par le biais d'un jeton n'ayant aucune date d'expiration (il peut être néanmoins révoqué par le gestionnaire du dossier ou par nos équipes techniques). C'est un modèle qui est aussi très flexible car nous n'avons pas à intervenir dans le processus de connexion. [Plus d'informations ici](./docs/connector.md).
 
-À l'inverse un accès **cabinet** delivera un jeton ayant une durée de vie très courte pour garantir une meilleure sécurité des données appartenant au cabinet.
+- 🔹 Un accès à l'intégralité d'un **cabinet**.
+
+> Un accès **cabinet** delivera un jeton ayant une durée de vie très courte pour garantir une meilleure sécurité des données appartenant au cabinet.
 
 # Prérequis 👀
 
-Les éléments et informations que le partenaire doit nous fournir (mail a [c.mandrilly@myunisoft.fr](c.mandrilly@myunisoft.fr) ou slack si déjà invité.).
+Les éléments et informations que le partenaire (ou cabinet) doit nous fournir (mail a [c.mandrilly@myunisoft.fr](c.mandrilly@myunisoft.fr) ou slack si déjà invité.).
 
-## 🔸 Accès société
+## 🔸 Accès par société
 
 Ces éléments permettront de créer le connecteur sur l’application MyUnisoft et de vous envoyer les informations techniques: 
 
@@ -63,7 +64,7 @@ Les éléments que nous renvoyons au partenaire une fois les éléments ci-dessu
 - Un compte au sein d'un schéma dédié aux intégrations partenaires (Permets à vos équipes de tester l'intégration).
 - Lien vers la documentation **postman** ([https://docs.api.myunisoft.fr/#intro](https://docs.api.myunisoft.fr/#intro)).
 
-# Liens de nos API 🌍
+# Liens racine de nos API 🌍
 
 - API Partenaires: [https://app.myunisoft.fr/api/v1](https://app.myunisoft.fr/api/v1)
 - Service Auth: [https://app.myunisoft.fr/api/auth/token](https://app.myunisoft.fr/api/auth/token)
@@ -72,10 +73,11 @@ Les éléments que nous renvoyons au partenaire une fois les éléments ci-dessu
 
 Les sous-documentations suivantes vous guideront dans le flow d'authentification nécessaire selon le type d'accès que vous avez souhaité.
 
-[🔸 Accès société](./docs/auth/societe.md)
-> ⚠️ Dans le cadre **d'un accès société** l'authentification n'est nécessaire **que pour la phase de développement** du connecteur! Notre équipe sera en charge du développement d'un composant front-end qui permettra au gestionnaire du dossier (comptables et autres) de générer le jeton pour ensuite le renseigner dans votre solution. Plus [d'informations ici](./docs/connector.md).
+- [🔸 Accès par société](./docs/auth/societe.md)
+> ⚠️ Dans le cadre **d'un accès société** l'authentification n'est nécessaire **que pour la phase de développement** du connecteur! Plus [d'informations ici](./docs/connector.md).
 
-[🔹 Accès cabinet](./docs/auth/cabinet.md)
+
+- [🔹 Accès cabinet](./docs/auth/cabinet.md)
 
 # Utilisation d’une route exposée par l’API 🚀
 
@@ -83,9 +85,9 @@ Lors de l’utilisation d’une route exposée il est nécessaire d’avoir l’
 
 Il est aussi nécessaire d’ajouter une en-tête HTTP “**X-Third-Party-Secret**” contenant la clé secrète du partenaire lié à l’API Token. Ce secret vous sera communiqué par l’équipe technique MyUnisoft.
 
-Toutes les routes sont exposées directement à la racine api/v1. Pour plus d'informations nous vous invitons à consulter les sous-documentations suivantes:
+Pour plus d'informations nous vous invitons à consulter les sous-documentations suivantes:
 
-- [🔸 Accès société](./docs/endpoints/societe.md)
+- [🔸 Accès par société](./docs/endpoints/societe.md)
 - [🔹 Accès cabinet](./docs/endpoints/cabinet.md)
 
 > 👀 À noter qu’il est nécessaire que l’API Token vous donne l’autorisation d’accès à la route exposée (**droits et configurations à discuter avec l’équipe MyUnisoft**).
