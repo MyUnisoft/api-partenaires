@@ -7,3 +7,11 @@ L'API partenaires offre la possibilité à nos partenaires (ainsi que les cabine
 Le gestionnaire d'un dossier aura plus tard la possibilité de gérer lui-même les outils qu'il souhaitera utiliser.
 
 ![](./images/connector_tab.PNG)
+
+Lors d'un clic sur un des connecteurs un pop-up s'ouvrira. Elle va permettre de générer une clé (API Token) que le comptable pourra renseigner dans votre solution.
+
+![](./images/connector_tab_evoliz.PNG)
+
+## Exemple avec Evoliz
+
+Pour mieux comprendre je vous invite à [visionner la vidéo de notre partenaire Evoliz](https://vimeo.com/432178505/b1a518283f) sûr comment connecter MyUnisoft avec leur solution.

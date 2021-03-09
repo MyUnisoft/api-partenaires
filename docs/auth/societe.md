@@ -33,7 +33,7 @@ Si tout se passe comme  prévu vous devriez recevoir un payload comme suit avec 
 
 ## Génération de la clé (API Token)
 
-Il suffit de requêter la route /api/v1/key/create en POST avec le body JSON suivant:
+Il suffit de requêter la route **/api/v1/key/create** en POST avec le body JSON suivant:
 ```json
 {
   "grantedFor": 1,
@@ -59,5 +59,5 @@ Si tout se passe comme  prévu vous devriez recevoir un payload comme suit avec 
 
 La clé value est un JWT token que vous allez devoir utiliser pour requêter les routes exposées par l’API. Nous parlerons “d’API Token” quand il est question de l’utilisation de celui-ci (A ne pas confondre avec le User token de l’étape 1).
 
-À noter qu’une fois votre API token généré il n’est plus nécessaire de refaire les étapes ci-dessus (sauf si le token a entre-temps expiré).
+À noter qu’une fois votre API token généré il n’est plus nécessaire de refaire les étapes ci-dessus (sauf si le token a entre-temps été revoqué).
 

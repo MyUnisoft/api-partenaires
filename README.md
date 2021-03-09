@@ -1,14 +1,13 @@
 <p align="center">
 <h1 align="center">
-  👯 MyUnisoft API Partenaire 👯
+  👯 MyUnisoft API Partenaires 👯
 </h1>
 </p>
 
 <p align="center">
-<img src="./docs/images/logo.jpg">
+<img src="./docs/images/logo.jpg" height="200">
 </p>
 
-# Introduction ✨
 L’API Partenaires permet à des logiciels partenaires ainsi que des cabinets membres de récupérer et d'envoyer de l'information depuis/vers MyUnisoft.
 
 L’authentification du partenaire/cabinet est principalement basé sur:
@@ -74,7 +73,7 @@ Les éléments que nous renvoyons au partenaire une fois les éléments ci-dessu
 Les sous-documentations suivantes vous guideront dans le flow d'authentification nécessaire selon le type d'accès que vous avez souhaité.
 
 [🔸 Accès société](./docs/auth/societe.md)
-> ⚠️ Dans le cadre **d'un accès société** l'authentification n'est nécessaire **que pour la phase de développement** du connecteur! Notre équipe sera en charge du développement d'un composant front-end qui permettra au gestionnaire du dossier (comptables et autres) de générer le jeton pour ensuite le renseigner dans votre solution.
+> ⚠️ Dans le cadre **d'un accès société** l'authentification n'est nécessaire **que pour la phase de développement** du connecteur! Notre équipe sera en charge du développement d'un composant front-end qui permettra au gestionnaire du dossier (comptables et autres) de générer le jeton pour ensuite le renseigner dans votre solution. Plus [d'informations ici](./docs/connector.md).
 
 [🔹 Accès cabinet](./docs/auth/cabinet.md)
 
@@ -101,7 +100,7 @@ Le proxy limite le nombre de requêtes par Clé/API Token (et non par IP), il en
 
 La limite par **défaut est de 100 requêtes par minute**.
 
-## Routes accessibles
+## Routes accessibles avec l'API Token
 
 > ⚠️ Pour le moment uniquement possible avec un **🔸 accès société**.
 
@@ -112,15 +111,15 @@ Attention car la route nécessite que l'en-tête HTTP Authorization soit l’API
 ![](./docs/images/key_info.PNG)
 
 # Gestion des erreurs
-Chaque erreur sera désormais accompagnée d’un code unique (l'intégralité des codes [ici](./docs/error_codes.md)) et d’un message essayant de vous guider au mieux dans la résolution de l’erreur. La propriété “details” servira si besoin à nos équipes à tracer et identifier la source du problème en interne.
+Chaque erreur est accompagnée d’un code unique (**l'intégralité des codes [ici](./docs/error_codes.md)**) et d’un message essayant de vous guider au mieux dans la résolution de l’erreur. La propriété “**details**” servira si besoin à nos équipes à tracer et identifier la source du problème en interne.
 
 ![](./docs/images/erreur_api_exemple.PNG)
 
 La propriété message est en ce qui la concerne vouée à évoluer à travers le temps. **Nous vous recommandons de ne pas l’utiliser comme référentiel pour automatiser une gestion d’erreur au sein de vos implémentations**.
 
-L’API n’a pour le moment aucune gestion d’un retour de multiple “erreurs” mais il n’est pas exclu que cela soit le cas dans le futur. Tout retour HTTP n’ayant pas un statut code en 2xx retournera donc forcément un JSON avec une propriété racine “error”.
+L’API n’a pour le moment aucune gestion d’un **retour de multiple** “erreurs” mais il n’est pas exclu que cela soit le cas dans le futur. Tout retour HTTP n’ayant pas un statut code en 2xx retournera donc forcément un JSON avec une propriété racine “error”.
 
-> ⚠️ Attention nous ne parlons pas des erreurs qui sont retournées sur les routes qui ne sont que des passerelles vers d’autres API internes. ⚠️
+> ⚠️ Attention nous ne parlons pas des erreurs qui sont retournées sur les routes qui ne sont que des passerelles vers d’autres API internes. Nous travaillons encore à rendre tout cela plus clair et plus stable sur le moyen-long terme. ⚠️
 
 # Autres 📌
 
