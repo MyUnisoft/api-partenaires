@@ -22,13 +22,15 @@ Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur 
 # Type d'accès 🔬
 Notre API partenaires permet deux types distincts d'accès:
 
-- 🔸 Un accès restreint a une **société** (dossier) d'un cabinet.
+🔸 Un accès restreint a une **société** (dossier) d'un cabinet.
 
-> L'accès limité par société est le modèle le plus courant car il permet d'interconnecter nos solutions de manière permanente par le biais d'un jeton n'ayant aucune date d'expiration (il peut être néanmoins révoqué par le gestionnaire du dossier ou par nos équipes techniques). C'est un modèle qui est aussi très flexible car nous n'avons pas à intervenir dans le processus de connexion. [Plus d'informations ici](./docs/connector.md).
+> L'accès limité par société est le modèle le plus courant car il permet d'interconnecter nos solutions de manière permanente par le biais d'un jeton n'ayant aucune date d'expiration (il peut être néanmoins révoqué par le gestionnaire du dossier ou par nos équipes techniques).
+>
+> C'est un modèle qui est aussi très flexible car nous n'avons pas à intervenir dans le processus de connexion. [Plus d'informations ici](./docs/connector.md).
 
-- 🔹 Un accès à l'intégralité d'un **cabinet**.
+🔹 Un accès à l'intégralité d'un **cabinet**.
 
-> Un accès **cabinet** delivera un jeton ayant une durée de vie très courte pour garantir une meilleure sécurité des données appartenant au cabinet.
+> Un accès **cabinet** delivera un jeton ayant une durée de vie très courte pour garantir une meilleure sécurité des données appartenant au cabinet. 
 
 # Prérequis 👀
 
@@ -54,38 +56,38 @@ Ces éléments permettront de créer le connecteur sur l’application MyUnisoft
 
 Les éléments que nous renvoyons au partenaire une fois les éléments ci-dessus en notre possession:
 
-- Clé **x-third-party** de production (C’est une clé secrète unique entre vous et nous qui sera nécessaire pour requêter l’API).
-- Un compte au sein d'un schéma dédié aux intégrations partenaires (Permets à vos équipes de tester l'intégration).
+- Clé **x-third-party** (C’est une clé secrète unique entre vous et nous qui sera nécessaire pour requêter l’API).
+- Un compte au sein d'un schéma dédié aux intégrations partenaires.
 - Lien vers la documentation **postman** ([https://docs.api.myunisoft.fr/#intro](https://docs.api.myunisoft.fr/#intro)).
 
 # Liens racine de nos API 🌍
 
 - API Partenaires: [https://app.myunisoft.fr/api/v1](https://app.myunisoft.fr/api/v1)
-- Service Auth: [https://app.myunisoft.fr/api/auth/token](https://app.myunisoft.fr/api/auth/token)
+- Service Auth: [https://app.myunisoft.fr/api/authenticate](https://app.myunisoft.fr/api/authenticate)
 
 # Authentification 🔐
 
 Les sous-documentations suivantes vous guideront dans le flow d'authentification nécessaire selon le type d'accès que vous avez souhaité.
 
-- [🔸 Accès par société](./docs/auth/societe.md)
+[🔸 Accès par société](./docs/auth/societe.md)
 > ⚠️ Dans le cadre **d'un accès société** l'authentification n'est nécessaire **que pour la phase de développement** du connecteur! Plus [d'informations ici](./docs/connector.md).
 
 
-- [🔹 Accès cabinet](./docs/auth/cabinet.md)
+[🔹 Accès cabinet](./docs/auth/cabinet.md)
 
 # Utilisation d’une route exposée par l’API 🚀
 
-Lors de l’utilisation d’une route exposée il est nécessaire d’avoir l’**API Token** dans l'en-tête HTTP **Authorization** (et surtout pas le User token délivré par le Service d'authentification MyUnisoft). Il est aussi important de noter qu'il s'agit d'un "[Bearer token](https://swagger.io/docs/specification/authentication/bearer-authentication/)".
+Lors de l’utilisation d’une route exposée il est nécessaire d’avoir l’**API Token** en [Bearer token](https://swagger.io/docs/specification/authentication/bearer-authentication/) dans l'en-tête **Authorization** (et surtout pas le jeton Utilisateur).
 
-Il est aussi nécessaire d’ajouter une en-tête HTTP “**X-Third-Party-Secret**” contenant la clé secrète communiqué par l’équipe technique MyUnisoft.
+Il est aussi nécessaire d’ajouter une en-tête “**X-Third-Party-Secret**” contenant la clé secrète communiqué par notre équipe.
 
 ```bash
 $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/vat_param' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
---header 'Authorization: Bearer {{JWT_TOKEN}}'
+--header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-Pour plus d'informations nous vous invitons à consulter les sous-documentations suivantes:
+Pour plus d'informations nous vous invitons à consulter les sous documentations suivantes selon la nature de votre accès:
 
 - [🔸 Accès par société](./docs/endpoints/societe.md)
 - [🔹 Accès cabinet](./docs/endpoints/cabinet.md)
@@ -104,7 +106,7 @@ La limite par **défaut est de 100 requêtes par minute**.
 
 Une liste de guides qui pourront certainement vous aider dans la réalisation de l'interconnexion.
 
-- [Collection + Environment postman](./postman/README.md)
+- [Collection + Environment postman](./postman/README.md) (voir le dossier /postman à la racine du github pour les fichiers .JSON)
 - [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
 - [Création d'une entrée comptable avec le format TRA+PJ](./docs/entry_tra.md)
 - [Gestion des retours erreurs](./docs/erreurs.md)
