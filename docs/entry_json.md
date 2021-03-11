@@ -6,12 +6,11 @@ Les routes HTTP concernées;
 
 - https://api.myunisoft.fr/api/v1/entry?type=e
 - https://api.myunisoft.fr/api/v1/entry/temp (permet la création de "factures en attentes").
+
 ​
 ## Définition TypeScript d'une entrée au format JSON
 ​
 La définition de type permet d’identifier les différents types des propriétés pour les structures JSON.
-​
-> Le signe ? indique que la propriété est optionnelle.
 ​
 ### Pièce jointe
 ​
@@ -104,9 +103,6 @@ interface NewEntryLine {
   pointage_jj?: string;
 }
 ```
-
-​
-> Les propriétés lettrage, pointage_aa, pointage_mm, pointage_jj ne sont certainement pas nécessaires aux partenaires.
 ​
 ### Entrée comptable
 ​
@@ -159,9 +155,7 @@ interface NewEntry {
   id_source?: number;
 }
 ```
-​
 
-> Les propriétés entry_origin_partner_id , json et id_source ne sont certainement pas nécessaires aux partenaires.
 ​
 ## Schéma JSON
 ​
