@@ -30,7 +30,7 @@ Notre API partenaires permet deux types distincts d'accès:
 
 🔹 Un accès à l'intégralité d'un **cabinet**.
 
-> Un accès **cabinet** delivera un jeton ayant une durée de vie très courte pour garantir une meilleure sécurité des données appartenant au cabinet. 
+> Cet accès à été principalement conçu pour être utilisé par les cabinets eux-mêmes. L'authentification delivera un jeton ayant une durée de vie très courte pour garantir une meilleure sécurité des données appartenant au cabinet. 
 
 # Prérequis 👀
 
@@ -38,7 +38,7 @@ Les éléments et informations que le partenaire (ou cabinet) doit nous fournir 
 
 ## 🔸 Accès par société
 
-Ces éléments permettront de créer le connecteur sur l’application MyUnisoft et de vous envoyer les informations techniques: 
+Ces éléments permettront de créer le connecteur sur l’application MyUnisoft: 
 
 - nom partenaire.
 - description courte partenaire (3 lignes 25 char maximum).
@@ -50,14 +50,14 @@ Ces éléments permettront de créer le connecteur sur l’application MyUnisoft
 
 ## 🔹 Accès cabinet
 
-> ⚠️ **PAS ENCORE DISPONIBLE**.
+Si vous êtes un partenaire et que votre solution **nécessite un tel accès** nous vous invitons à nous fournir les mêmes informations que pour `🔸 l'accès par société`.
 
 ---
 
-Les éléments que nous renvoyons au partenaire une fois les éléments ci-dessus en notre possession:
+Les éléments que nous renvoyons au partenaire (ou cabinet) une fois les éléments ci-dessus en notre possession:
 
 - Clé **x-third-party** (C’est une clé secrète unique entre vous et nous qui sera nécessaire pour requêter l’API).
-- Un compte au sein d'un schéma dédié aux intégrations partenaires.
+- Un compte au sein d'un schéma (cabinet) dédié aux tests d'intégration.
 - Lien vers la documentation **postman** ([https://docs.api.myunisoft.fr/#intro](https://docs.api.myunisoft.fr/#intro)).
 
 # Liens racine de nos API 🌍
