@@ -65,7 +65,9 @@ Les éléments que nous renvoyons au partenaire (ou cabinet) une fois les élém
 # Liens racine de nos API 🌍
 
 - API Partenaires: [https://app.myunisoft.fr/api/v1](https://app.myunisoft.fr/api/v1)
-- Service Auth: [https://app.myunisoft.fr/api/authenticate](https://app.myunisoft.fr/api/authenticate)
+> 👀 `api/v1/key` pour la gestion de la/les clé(s) API Token pour `🔸 l'accès par société`
+
+- Service d'Authentification: [https://app.myunisoft.fr/api/authenticate](https://app.myunisoft.fr/api/authenticate)
 
 # Authentification 🔐
 
