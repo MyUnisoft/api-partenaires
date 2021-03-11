@@ -38,7 +38,7 @@ Les éléments et informations que le partenaire (ou cabinet) doit nous fournir 
 
 ## 🔸 Accès par société
 
-Ces éléments permettront de créer le connecteur sur l’application MyUnisoft: 
+Ces éléments permettront de créer le connecteur sur l’application MyUnisoft et de vous envoyer les informations techniques: 
 
 - nom partenaire.
 - description courte partenaire (3 lignes 25 char maximum).
@@ -106,12 +106,12 @@ La limite par **défaut est de 100 requêtes par minute**.
 
 Une liste de guides qui pourront certainement vous aider dans la réalisation de l'interconnexion.
 
-- [Collection + Environment postman](./postman/README.md) (voir le dossier /postman à la racine du github pour les fichiers .JSON)
+- [Collection + Environment postman](https://github.com/MyUnisoft/api-partenaires/tree/main/postman)
 - [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
 - [Création d'une entrée comptable avec le format TRA+PJ](./docs/entry_tra.md)
 - [Gestion des retours erreurs](./docs/erreurs.md)
 
 Exemple d'implémentation sur différents langages de programmation:
-- [Node.js](./exemples/nodejs/README.md)
+- [Node.js](./exemples/nodejs/README.md) (**en cours de création**)
 
 > 💡 Votre language est manquant ? N'hésitez pas à ouvrir une pull-request pour l'ajouter!
