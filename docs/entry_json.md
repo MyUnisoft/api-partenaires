@@ -3,6 +3,7 @@
 Documentation sur la création d’une entrée comptable au format JSON.
 ​
 Les routes HTTP concernées;
+
 - https://api.myunisoft.fr/api/v1/entry?type=e
 - https://api.myunisoft.fr/api/v1/entry/temp (permet la création de "factures en attentes").
 ​
@@ -10,7 +11,7 @@ Les routes HTTP concernées;
 ​
 La définition de type permet d’identifier les différents types des propriétés pour les structures JSON.
 ​
-> Le signe **?** indique que la propriété est optionnelle. PJ**[]** indique que la propriété est un tableau de structure PJ.
+> Le signe ? indique que la propriété est optionnelle.
 ​
 ### Pièce jointe
 ​
@@ -103,6 +104,7 @@ interface NewEntryLine {
   pointage_jj?: string;
 }
 ```
+
 ​
 > Les propriétés lettrage, pointage_aa, pointage_mm, pointage_jj ne sont certainement pas nécessaires aux partenaires.
 ​
@@ -158,6 +160,7 @@ interface NewEntry {
 }
 ```
 ​
+
 > Les propriétés entry_origin_partner_id , json et id_source ne sont certainement pas nécessaires aux partenaires.
 ​
 ## Schéma JSON
