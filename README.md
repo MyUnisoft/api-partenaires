@@ -106,10 +106,13 @@ La limite par **défaut est de 100 requêtes par minute**.
 
 Une liste de guides qui pourront certainement vous aider dans la réalisation de l'interconnexion.
 
+- [Gestion des retours erreurs](./docs/erreurs.md)
 - [Collection + Environment postman](https://github.com/MyUnisoft/api-partenaires/tree/main/postman)
 - [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
 - [Création d'une entrée comptable avec le format TRA+PJ](./docs/entry_tra.md)
-- [Gestion des retours erreurs](./docs/erreurs.md)
+- [Récupérer la TVA d'une société (dossier)](./docs/tva.md)
+- [Récupérer les journaux d'une société (dossier)](./docs/journaux.md)
+- [Récupérer les types de paiement disponible sur une société (dossier)](./docs/paiements.md)
 
 Exemple d'implémentation sur différents langages de programmation:
 - [Node.js](./exemples/nodejs/README.md) (**en cours de création**)
