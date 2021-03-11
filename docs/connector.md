@@ -2,9 +2,9 @@
 
 Les connecteurs sont des abstractions qui permettent d'interconnecter MyUnisoft avec d'autres solutions (par le biais d'implémentations techniques diverses et variées selon les contraintes et besoins de chacun).
 
-L'API partenaires offre la possibilité à nos partenaires (ainsi que les cabinets utilisant déjà la solution) de s'interconnecter eux-mêmes avec MyUnisoft par le biais d'une API Gateway qui s'occupera de dispatcher les demandes à nos micros-services internes.
+L'API partenaires offre la possibilité à nos partenaires (ainsi que les cabinets utilisant déjà la solution) de s'interconnecter eux-mêmes avec MyUnisoft par le biais d'une API Gateway qui s'occupera de dispatcher les demandes à nos micros-services internes (pour récupérer ou envoyer des informations d'une société ou d'un cabinet entier).
 
-Le gestionnaire (comptable et autres) d'un dossier aura plus tard la possibilité de gérer lui-même les outils qu'il souhaitera utiliser.
+Le gestionnaire (comptable et autres) d'un dossier aura plus tard la possibilité de gérer lui-même les outils qu'il souhaitera utiliser (dans le cadre d'un accès par société). Les différents connecteurs sont disponibles dans `Paramètres` > `Tenue` > `Connecteur (Silea, RCA...)`
 
 ![](./images/connector_tab.PNG)
 

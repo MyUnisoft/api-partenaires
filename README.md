@@ -15,9 +15,9 @@ Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur 
 | Prénom - Nom | Rôle(s) | Email |
 | --- | --- | --- |
 | Cyril Mandrilly | CTO | [c.mandrilly@myunisoft.fr](c.mandrilly@myunisoft.fr) |
-| Thomas Gentilhomme | Lead Développeur API | [gentilhomme.thomas@gmail.com](gentilhomme.thomas@gmail.com) |
+| Thomas Gentilhomme | Lead Développeur API & Connecteurs | [gentilhomme.thomas@gmail.com](gentilhomme.thomas@gmail.com) |
+| Léon Souvannavong | Lead Développeur Métier | [l.souvannavong@myunisoft.fr](l.souvannavong@myunisoft.fr) |
 | Alexandre Malaj | Développeur API | [alexandre.malaj@gmail.com](alexandre.malaj@gmail.com) |
-| Léon Souvannavong | Lead dev back-end (**a consulter pour la partie métier**) | [l.souvannavong@myunisoft.fr](l.souvannavong@myunisoft.fr) |
 
 # Type d'accès 🔬
 Notre API partenaires permet deux types distincts d'accès:
@@ -51,6 +51,8 @@ Ces éléments permettront de créer le connecteur sur l’application MyUnisoft
 ## 🔹 Accès cabinet
 
 Si vous êtes un partenaire et que votre solution **nécessite un tel accès** nous vous invitons à nous fournir les mêmes informations que pour `🔸 l'accès par société`.
+
+Pour les cabinets déjà membre nous avons déjà les informations nécessaires!
 
 ---
 
@@ -110,6 +112,9 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Collection + Environment postman](https://github.com/MyUnisoft/api-partenaires/tree/main/postman)
 - [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
 - [Création d'une entrée comptable avec le format TRA+PJ](./docs/entry_tra.md)
+- [**bientôt**] Création d'une entrée comptable avec le format FEC.
+- [**bientôt**] Récupérer et travailler avec le plan comptable.
+- [Récupérer les exercices d'une société (dossier)](./docs/exercices.md)
 - [Récupérer la TVA d'une société (dossier)](./docs/tva.md)
 - [Récupérer les journaux d'une société (dossier)](./docs/journaux.md)
 - [Récupérer les types de paiement disponible sur une société (dossier)](./docs/paiements.md)
