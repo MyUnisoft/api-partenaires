@@ -96,7 +96,7 @@ Pour plus d'informations nous vous invitons à consulter les sous documentations
 - [🔸 Accès par société](./docs/endpoints/societe.md)
 - [🔹 Accès cabinet](./docs/endpoints/cabinet.md)
 
-## Rate-limit des routes exposées
+## Rate-limit des routes exposées 🚥
 
 L'API limite le nombre de requêtes par API Token, quelques en-têtes supplémentaires sont envoyés dans la réponse HTTP:
 
@@ -114,8 +114,8 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Collection + Environment postman](https://github.com/MyUnisoft/api-partenaires/tree/main/postman)
 - [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
 - [Création d'une entrée comptable avec le format TRA+PJ](./docs/entry_tra.md)
-- [**bientôt**] Création d'une entrée comptable avec le format FEC.
-- [**bientôt**] Récupérer et travailler avec le plan comptable.
+- [Création d'une entrée comptable avec le format FEC](./docs/entry_fec.md)
+- [Récupérer et travailler avec le plan comptable](./docs/plan_comptable.md)
 - [Récupérer les exercices d'une société (dossier)](./docs/exercices.md)
 - [Récupérer la TVA d'une société (dossier)](./docs/tva.md)
 - [Récupérer les journaux d'une société (dossier)](./docs/journaux.md)
