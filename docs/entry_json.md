@@ -343,7 +343,40 @@ Il vous suffit de copier-coller le schéma ci-dessus dans le formulaire de gauch
 ​
 ![](https://i.imgur.com/EUgYd4T.png)
 
-## Gestion des comptes
-À la **différence de l'import TRA+PJ** il n'est pas possible de synchroniser et créer automatiquement les comptes **411** et **401**.
+## Gestion des comptes tiers
+À la **différence de l'import TRA+PJ** il n'est pas possible de synchroniser et créer automatiquement les comptes tiers **411** et **401**.
 
-Il est donc nécessaire de vous assurer que les comptes soi bien créer avec la route [/account](https://docs.api.myunisoft.fr/#5fa4c33d-9208-40ac-b457-5b3ea970f913) avant de faire l'import.
+Il est donc nécessaire de vous assurer que les comptes soi bien créer avant d'importer l'écriture. Je vous invite à consulter le guide suivant: [Récupérer et travailler avec le plan comptable](./plan_comptable.md)
+
+## Gestion d'un id partenaire
+Les écritures MyUnisoft peuvent avoir un id partenaire `entry_origin_partner_id` qui se doit d'être strictement unique. Pour cela nous vous recommandons de par exemple préfixer un UUID/CUID avec le nom de votre entreprise: `name-0aad3319-2aa7-400a-b709-6942562a200e`.
+
+Cela peut éventuellement permettre de Synchroniser l'état d'une écriture entre nos deux solutions car l'id de l'écriture n'est pas forcément fiable (il changera par exemple quand l'écriture passera d'en "**attente de validation**" à "**valider**"). L'id partenaire lui ne changera jamais et vous pointera toujours vers la bonne écriture.
+
+L'id de l'écriture pourra être récupérés avec le endpoint suivant:
+
+```bash
+$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/entry/id?id_origin=name-0aad3319-2aa7-400a-b709-6942562a200e' \
+--header 'Authorization: Bearer {{API_TOKEN}}' \
+--header 'X-Third-Party-Secret: {{X-Third-Party-Secret}}'
+```
+
+Le retour de la route est un JSON décrit par l'interface TypeScript suivante:
+```ts
+interface PartnersEntryMetadata {
+  id_entry: number;
+  type: "ENTRIES" | "ENTRIES_TEMP";
+  json_metadata_partners?: string;
+}
+```
+
+`json_metadata_partners` étant un JSON au format texte (présent uniquement si vous aviez défini la clé `json` sur NewEntry).
+
+Pour récupérer l'écriture en elle même il vous suffit maintenant d'appeler la route `/entries` avec le body suivant:
+```json
+{
+    filters: [
+        { name: "id_entry", value: "id ici" }
+    ]
+};
+```
