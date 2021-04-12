@@ -20,6 +20,6 @@ Vous devriez recevoir un status code `200` avec un JSON contenant la clé API To
 ```json
 {
     "api_token": "{{API_TOKEN}}",
-    "expiresIn": ""
+    "expiresIn": "2021-04-12 11:54:46"
 }
 ```
