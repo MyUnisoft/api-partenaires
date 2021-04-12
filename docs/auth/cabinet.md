@@ -1,21 +1,25 @@
 # 🔹 Authentification avec accès cabinet
 
-Il est préalablement nécessaire de récupérer un jeton Utilisateur pour pouvoir générer une clé sur l'API partenaires. Nous vous invitons à suivre [le guide suivant](./user.md) pour récupérer le jeton.
+Notre service authentification possède un endpoint spécifique qui permet la génération d'un API Token spécialement conçu pour une utilisation avec accès cabinet. La durée de vie du token est de dix minutes.
 
 ## Génération de la clé (API Token)
 
-Il suffit de requêter la route **/api/v1/firm/token** en POST.
-
-> ⚠️ Pensez à ajouter le User Token dans le header Authorization (Bearer token).
-
-Si tout se passe comme  prévu vous devriez recevoir un payload comme suit avec un status code 200. 
-
+La route (racine) pour la requête http est POST **/api/authenticate/firm**. Le body (JSON) de la requête pour l’authentification:
 ```json
 {
-  "token": "{{JWT-TOKEN-HERE}}"
+    "mail": "{{mail}}",
+    "password": "{{password}}"
 }
 ```
 
-La clé token est un jeton JWT que vous allez devoir utiliser pour requêter les routes exposées par l’API. Nous parlerons “d’API Token” quand il est question de l’utilisation de celui-ci (A ne pas confondre avec le User token).
+Les champs “**password**” et “**mail**” doivent être complétés avec le compte qui vous a été fourni.
 
-**Ce token a une durée de vie de 10 minutes**.
+---
+
+Vous devriez recevoir un status code `200` avec un JSON contenant la clé API Token.
+```json
+{
+    "api_token": "{{API_TOKEN}}",
+    "expiresIn": ""
+}
+```
