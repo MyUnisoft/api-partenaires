@@ -10,6 +10,14 @@ L’authentification du partenaire/cabinet est principalement basé sur:
 
 Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur [https://docs.api.myunisoft.fr/](https://docs.api.myunisoft.fr/)
 
+# Pourquoi
+
+Il pourrait être tentant d'essayer de s'interconnecter à MyUnisoft en exploitant directement nos API comme le ferait nos frontaux. Mais laissez-nous vous expliquer pourquoi ce serait une terrible erreur:
+
+- Le modèle d'authentification est conçu pour un Utilisateur (une personne physique). Établir une utilisation non identifiée et non autorisée aura probablement comme conséquence de compromettre la sécurité des comptes que vous exploitez.
+- Vous n'avez aucune garantie que les endpoints HTTP seront demain toujours accessible et identique (Il vous sera donc impossible de vous plaindre à MyUnisoft en cas d'impact).
+- Ce ne sont pas les mêmes garanties en termes de sécurité, monitoring et support.
+
 # Equipe 👥
 
 | Prénom - Nom | Rôle(s) | Email |
