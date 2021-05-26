@@ -4,7 +4,9 @@ Notre service authentification possède un endpoint spécifique qui permet la g�
 
 ## Génération de la clé (API Token)
 
-La route (racine) pour la requête http est POST **/api/authenticate/firm**. Le body (JSON) de la requête pour l’authentification:
+La route (racine) pour la requête http est POST **/api/authenticate/firm**.
+
+Le body (JSON) de la requête pour l’authentification:
 ```json
 {
     "mail": "{{mail}}",
@@ -12,7 +14,9 @@ La route (racine) pour la requête http est POST **/api/authenticate/firm**. Le 
 }
 ```
 
-Les champs “**password**” et “**mail**” doivent être complétés avec le compte qui vous a été fourni.
+Les champs “**password**” et “**mail**” doivent être complétés avec le compte qui vous a été fourni. À noter qu'un champ supplémentaire "**firm**" peut être renseigné (si votre compte permet l'accès à plusieurs cabinets MyUnisoft).
+
+> 👀 Le champ **firm** peut contenir l'ID numérique du cabinet ou bien le nom de celui-ci (sur MyUnisoft).
 
 ---
 
@@ -20,6 +24,10 @@ Vous devriez recevoir un status code `200` avec un JSON contenant la clé API To
 ```json
 {
     "api_token": "{{API_TOKEN}}",
-    "expiresIn": "2021-04-12 11:54:46"
+    "expiresIn": "2021-04-12 11:54:46",
+    "firm": {
+        "id": 80,
+        "label": "TESTS PARTENAIRES"
+    }
 }
 ```
