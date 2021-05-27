@@ -121,6 +121,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer la TVA d'une société (dossier)](./docs/tva.md)
 - [Récupérer les journaux d'une société (dossier)](./docs/journaux.md)
 - [Récupérer les types de paiement disponible sur une société (dossier)](./docs/paiements.md)
+- [Récupérer les écritures comptables](./docs/ecritures.md)
 
 Exemple d'implémentation sur différents langages de programmation:
 - [Node.js](./exemples/nodejs/README.md) (**en cours de création**)
