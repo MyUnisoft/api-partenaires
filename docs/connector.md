@@ -15,3 +15,11 @@ Lors d'un clic sur un des connecteurs un pop-up s'ouvrira. Elle va permettre de 
 ## Exemple avec Evoliz
 
 Pour mieux comprendre je vous invite à [visionner la vidéo de notre partenaire Evoliz](https://vimeo.com/432178505/b1a518283f) sûr comment connecter MyUnisoft avec leur solution.
+
+## Pourquoi
+
+Il pourrait être tentant d'essayer de s'interconnecter à MyUnisoft en exploitant directement nos API comme le ferait nos frontaux. Mais laissez-nous vous expliquer pourquoi ce serait une terrible erreur:
+
+- Le modèle d'authentification est conçu pour un Utilisateur (une personne physique). Établir une utilisation non identifiée et non autorisée aura probablement comme conséquence de compromettre la sécurité des comptes que vous exploitez.
+- Vous n'avez aucune garantie que les endpoints HTTP seront demain toujours accessible et identique (Il vous sera donc impossible de vous plaindre à MyUnisoft en cas d'impact).
+- Ce ne sont pas les mêmes garanties en termes de sécurité, monitoring et support.
