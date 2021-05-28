@@ -4,10 +4,10 @@ Ce guide a pour objectif de vous aider dans la récupération des écritures com
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/entries permet de récupérer l'intégralité des écritures par **type**.
+La route https://api.myunisoft.fr/api/v1/entries?type=e permet de récupérer l'intégralité des écritures par **type**.
 
 ```bash
-$ curl --location --request POST 'https://api.myunisoft.fr/api/v1/entries' \
+$ curl --location --request POST 'https://api.myunisoft.fr/api/v1/entries?type=e' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 --data-raw '{
