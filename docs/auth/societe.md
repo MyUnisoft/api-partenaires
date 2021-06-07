@@ -22,8 +22,6 @@ Si tout se passe comme  prévu vous devriez recevoir un payload comme suit avec 
 <img src="../images/societe_auth_granted.png" height="200">
 </p>
 
-À noter qu’il n’est pas forcément nécessaire d’envoyer l’intégralité du secret. Il est aussi possible d’envoyer uniquement la première section avant le tiret du six “-”.
-
 ## Génération de la clé (API Token)
 
 Il suffit de requêter la route `/api/v1/key/create` avec la méthode **POST**:
