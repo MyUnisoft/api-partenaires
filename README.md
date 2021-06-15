@@ -52,7 +52,7 @@ Ces éléments permettront de créer le connecteur sur l’application MyUnisoft
 
 Si vous êtes un partenaire et que votre solution **nécessite un tel accès** nous vous invitons à nous fournir les mêmes informations que pour `🔸 l'accès par société`.
 
-Pour les cabinets déjà membre nous avons déjà les informations nécessaires!
+Pour les cabinets déjà membre il vous sera nécessaire de fournir un mail pour la création d'un compte API (Nous vous **recommandons de créer un mail spécialement pour l'occasion**, par exemple `apimyunisoft@domain.fr`).
 
 ---
 
