@@ -115,6 +115,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
 - [Création d'une entrée comptable avec le format TRA+PJ](./docs/entry_tra.md)
 - [Création d'une entrée comptable avec le format FEC](./docs/entry_fec.md)
+- [Création d'une entrée comptable avec le format Factur-X](./docs/entry_facturx.md)
 - [Attacher une pièce jointe à une entrée comptable existante](./docs/pj.md)
 - [Récupérer et travailler avec le plan comptable](./docs/plan_comptable.md)
 - [Récupérer les exercices d'une société (dossier)](./docs/exercices.md)
