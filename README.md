@@ -30,7 +30,11 @@ Notre API partenaires permet deux types distincts d'accès:
 
 🔹 Un accès à l'intégralité d'un **cabinet**.
 
-> Cet accès à été principalement conçu pour être utilisé par les cabinets eux-mêmes. L'authentification delivera un jeton ayant une durée de vie très courte pour garantir une meilleure sécurité des données appartenant au cabinet. 
+> Cet accès à été principalement conçu pour être utilisé par les cabinets eux-mêmes. L'authentification delivera un jeton ayant une durée de vie très courte pour garantir une meilleure sécurité des données appartenant au cabinet.
+>
+> **Note: Nous travaillons encore sur ce modèle d'accès et des changements sont à venir**.
+
+Il vous sera nécessaire de choisir l'un des deux (ou de discuter plus amplement avec nous pour que nous puissions vous guider vers la bonne abstraction).
 
 # Prérequis 👀
 
