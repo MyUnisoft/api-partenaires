@@ -17,7 +17,7 @@ Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur 
 | Cyril Mandrilly | CTO | [c.mandrilly@myunisoft.fr](c.mandrilly@myunisoft.fr) |
 | Thomas Gentilhomme | Lead Développeur API & Connecteurs | [t.gentilhomme@myunisoft.fr](t.gentilhomme@myunisoft.fr) |
 | Léon Souvannavong | Lead Développeur Métier | [l.souvannavong@myunisoft.fr](l.souvannavong@myunisoft.fr) |
-| Alexandre Malaj | Développeur API | [alexandre.malaj@gmail.com](alexandre.malaj@gmail.com) |
+| Rebecca Giaccone | PO | [r.bibas@myunisoft.fr](r.bibas@myunisoft.fr) |
 
 # Type d'accès 🔬
 Notre API partenaires permet deux types distincts d'accès:
