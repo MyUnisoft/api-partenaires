@@ -14,9 +14,9 @@ Le body (JSON) de la requête pour l’authentification:
 }
 ```
 
-Les champs “**password**” et “**mail**” doivent être complétés avec le compte qui vous a été fourni. À noter qu'un champ supplémentaire "**firm**" peut être renseigné (si votre compte permet l'accès à plusieurs cabinets MyUnisoft).
+Les champs “**password**” et “**mail**” doivent être complétés avec le compte qui vous a été fourni. À noter qu'un champ supplémentaire "**firm**" peut être renseigné (si votre compte permet l'accès à plusieurs cabinets/entités MyUnisoft).
 
-> 👀 Le champ **firm** peut contenir l'ID numérique du cabinet ou bien le nom de celui-ci (sur MyUnisoft).
+> 👀 Le champ **firm** peut contenir l'ID numérique de l'entité/schéma ou bien le nom de celui-ci (sur MyUnisoft). Nous appelons "entité" un cabinet ou un groupement de cabinets.
 
 ---
 
@@ -31,3 +31,7 @@ Vous devriez recevoir un status code `200` avec un JSON contenant la clé API To
     }
 }
 ```
+
+## Bonus: récupérer l'id de l'entité/schéma MyUnisoft
+
+Dans l'interface MyUnisoft il est possible de récupérer l'id de l'entité par le biais du menu `Tenue` > `Liens dynamiques`. Il suffira de récupérer le "numéro du schéma".
