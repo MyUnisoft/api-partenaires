@@ -36,8 +36,6 @@ Vous devriez recevoir un status code `200` avec un JSON contenant la clé API To
 
 Dans l'interface MyUnisoft il est possible de récupérer l'id de l'entité par le biais du menu `Tenue` > `Liens dynamiques`. Il suffira de récupérer le "numéro du schéma".
 
-<p align="center">
-<img src="../images/liens_dynamique.png">
-</p>
+![](../images/liens_dynamique.PNG)
 
 Si vous n'avez pas vous-même accès un collaborateur de l'entité pourra toujours vous fournir l'information (N'hésitez pas non plus à demander à notre équipe).
