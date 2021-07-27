@@ -1,4 +1,4 @@
-# Création d'une entrée comptable avec le format TRA+PJ
+# Création d'une entrée comptable avec le format FEC
 Documentation sur la création d’une entrée comptable au format FEC.
 ​
 
