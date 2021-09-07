@@ -31,9 +31,17 @@ Les paramètres (URL) de la route sont les suivants:
 | filename_extension | le nom du fichier avec l'extension |
 | type_result | laisser la valeur 1 |
 
+### Location
+
 Dans MyUnisoft la location correspond à la catégorie de la saisie
 
 ![](./images/saisie_location.PNG)
 
 - ENTRIES = **Ecriture**
 - ENTRIES_TEMP = **Facture(s) en attente**
+
+### Récupération d'une écriture
+
+Pour récupérer l'id d'une écriture les guides suivants pourront probablement vous aider;
+- [Par l'endpoint de récupération des écritures comptables](https://github.com/MyUnisoft/api-partenaires/blob/main/docs/ecritures.md)
+- [Par l'ID partenaire](https://github.com/MyUnisoft/api-partenaires/blob/main/docs/entry_json.md#gestion-dun-id-partenaire)
