@@ -17,7 +17,11 @@ Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur 
 | Cyril Mandrilly | CTO | [c.mandrilly@myunisoft.fr](c.mandrilly@myunisoft.fr) |
 | Thomas Gentilhomme | Lead Développeur API & Connecteurs | [t.gentilhomme@myunisoft.fr](t.gentilhomme@myunisoft.fr) |
 | Léon Souvannavong | Lead Développeur Métier | [l.souvannavong@myunisoft.fr](l.souvannavong@myunisoft.fr) |
-| Rebecca Giaccone | PO | [r.bibas@myunisoft.fr](r.bibas@myunisoft.fr) |
+
+# Vocabulaire
+
+- Le terme de **société** (society) est utilisé pour parler d'un dossier de production (une entreprise) MyUnisoft.
+- Le terme de "**cabinet**" est souvent utilisé à tort pour parler d'une entité/d'un schéma MyUnisoft. Une entité peut contenir un à plusieurs cabinets.
 
 # Type d'accès 🔬
 Notre API partenaires permet deux types distincts d'accès:
