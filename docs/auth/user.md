@@ -16,6 +16,9 @@ La route (racine) pour la requête http est POST **/api/authenticate**. Le body 
 
 Les champs “**password**” et “**mail**” doivent être complétés avec le compte qui vous a été fourni.
 
+> Si vous utilisez Postman, faites attention à désactiver l'utilisation des cookies.
+![](../images/user_cookie.png)
+
 ---
 
 Vous devriez recevoir un status code `200` avec un JSON contenant la fameuse clé JWT “**access_token**”.
