@@ -5,7 +5,7 @@
 L’API Partenaires permet à des logiciels partenaires ainsi que des cabinets membres de récupérer et d'envoyer de l'information depuis/vers MyUnisoft.
 
 L’authentification du partenaire/cabinet est principalement basé sur:
-- une clé **x-third-party** fournie par MyUnisoft (demande auprès de [c.mandrilly@myunisoft.fr](c.mandrilly@myunisoft.fr)).
+- une clé **x-third-party** fournie par MyUnisoft (demande auprès de [c.mandrilly@myunisoft.fr](c.mandrilly@myunisoft.fr)). C'est une clé **unique** qui ne doit surtout **pas être communiqué** en dehors de nos équipes techniques respectives.
 - une clé [JWT](https://jwt.io/) (**API Token**) pour chaque cabinet et/ou société.
 
 Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur [https://docs.api.myunisoft.fr/](https://docs.api.myunisoft.fr/)
@@ -21,7 +21,7 @@ Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur 
 # Vocabulaire
 
 - Le terme de **société** (society) est utilisé pour parler d'un dossier de production (une entreprise) MyUnisoft.
-- Le terme de "**cabinet**" est souvent utilisé à tort pour parler d'une entité/d'un schéma MyUnisoft. Une entité peut contenir un à plusieurs cabinets.
+- Le terme de "**cabinet**" est souvent utilisé à tort pour parler d'un schéma MyUnisoft. Un schéma peut contenir un à plusieurs cabinets.
 
 # Type d'accès 🔬
 Notre API partenaires permet deux types distincts d'accès:
