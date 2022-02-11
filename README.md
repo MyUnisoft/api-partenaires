@@ -116,17 +116,22 @@ L'API limite le nombre de requêtes par API Token, quelques en-têtes supplémen
 
 La limite par **défaut est de 100 requêtes par minute**.
 
-# Guides supplémentaires 📌
+# Documentation 📌
 
-Une liste de guides qui pourront certainement vous aider dans la réalisation de l'interconnexion.
+Une liste de guides qui pourront certainement vous aider dans la réalisation de l'interconnexion avec MyUnisoft.
 
-- [Gestion des retours erreurs](./docs/erreurs.md)
+## Guides API
 - [Collection + Environment postman](https://github.com/MyUnisoft/api-partenaires/tree/main/postman)
+- [Gestion des retours erreurs](./docs/erreurs.md)
+
+## Guides sur l'import d'écritures comptables
 - [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
 - [Création d'écritures et mouvements comptable avec le format TRA+PJ](./docs/entry_tra.md)
 - [Création et Modification d'écritures et mouvements comptable avec le format FEC](./docs/entry_fec.md)
 - [Création d'une entrée comptable avec le format Factur-X](./docs/entry_facturx.md)
 - [Attacher une pièce jointe à une entrée comptable existante](./docs/pj.md)
+
+## Guides sur comment intéragir avec le paramétrages et données d'un dossier de production
 - [Récupérer et travailler avec le plan comptable d'un dossier de production](./docs/plan_comptable.md)
 - [Récupérer les exercices d'un dossier de production](./docs/exercices.md)
 - [Récupérer la liste de TVA d'un dossier de production](./docs/tva.md)
