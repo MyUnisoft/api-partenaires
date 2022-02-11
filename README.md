@@ -18,11 +18,6 @@ Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur 
 | Rémy Longueville | Responsable des partenariats | [r.longueville@myunisoft.fr](r.longueville@myunisoft.fr) |
 | Thomas Gentilhomme | Lead Développeur API & Connecteurs | [t.gentilhomme@myunisoft.fr](t.gentilhomme@myunisoft.fr) |
 
-# Vocabulaire
-
-- Le terme de **société** (society) est utilisé pour parler d'un dossier de production (une entreprise) MyUnisoft.
-- Le terme de "**cabinet**" est souvent utilisé à tort pour parler d'un schéma MyUnisoft. Un schéma peut contenir un à plusieurs cabinets.
-
 # Type d'accès 🔬
 Notre API partenaires permet deux types distincts d'accès:
 
@@ -71,6 +66,17 @@ Les éléments que nous renvoyons au partenaire (ou cabinet) une fois les élém
 - Clé **x-third-party** (C’est une clé secrète unique entre vous et nous qui sera nécessaire pour requêter l’API).
 - Un compte au sein d'un schéma (cabinet) dédié aux tests d'intégration.
 - Lien vers la documentation **postman** ([https://docs.api.myunisoft.fr/#intro](https://docs.api.myunisoft.fr/#intro)).
+
+# Vocabulaire et entités
+
+- Le terme de "**société**" (society) est utilisé pour parler d'un dossier de production (une entreprise) MyUnisoft.
+- Le terme de "**cabinet**" (firm) est souvent utilisé à tort pour parler d'un schéma MyUnisoft. Un schéma peut contenir un à plusieurs cabinets et représente un client signé sur le plan commercial et technique.
+
+![](./docs/images/entities.png)
+
+Les utilisateurs sont attachés au schéma (ce sont les comptes ayant un accès à la plateforme Web et mobile).
+
+> Note: Pour récupérer la liste et le paramétrage de plusieurs dossiers il est nécessaire d'avoir un accès cabinet. Il en va de même pour la récupération des entités qui ne sont pas liées au dossier (comme les utilisateurs et les portefeuilles).
 
 # Liens racine de nos API 🌍
 
