@@ -144,3 +144,4 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer les journaux d'un dossier de production](./docs/journaux.md)
 - [Récupérer les types de paiement disponible d'un dossier de production](./docs/paiements.md)
 - [Récupérer les écritures comptables](./docs/ecritures.md)
+- [Gérer l'analytique d'une société (dossier)](./docs/analytique.md)
