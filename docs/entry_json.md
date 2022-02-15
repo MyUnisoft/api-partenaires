@@ -46,6 +46,27 @@ interface PJ {
 }
 ```
 ​
+### Analytique
+
+Définition de la structure JSON pour l'ajout de l'analytique sur une ligne d'une entrée comptable.
+
+```ts
+interface AnalyticRepartition {
+  id_axe: number;
+  code: string;
+  label: string;
+  repartition: RepartitionInfo[];
+}
+
+interface RepartitionInfo {
+  id_section: number;
+  code: string;
+  label: string;
+  rate: number;
+  amount: number;
+}
+```
+
 ### Ligne entrée comptable
 ​
 Définition de type de la structure JSON d’une ligne d’entrée comptable.
@@ -74,6 +95,12 @@ interface NewEntryLine {
   /** Credit et Debit de la ligne (l'un des deux doit toujours être à zéro). */
   credit: number;
   debit: number;
+
+  /** Devise, par exemple 'EUR' **/
+  currency?: string;
+
+  /** Tableau contenant la répartition/lien analytique à effectuer (si besoin) **/
+  analytique?: AnalyticRepartition[];
 
   /**
   ID du type de paiement pour la ligne.
@@ -224,6 +251,51 @@ Le schéma JSON est un vocabulaire qui vous permet d'annoter et de valider les d
         }
       }
     },
+    "RepartitionInfo": {
+      "type": "object",
+      "properties": {
+        "id_section": {
+          "type": "number"
+        },
+        "code": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "rate": {
+          "type": "number",
+          "description": "Rate (pourcent %)"
+        },
+        "amount": {
+          "type": "number"
+        }
+      },
+      "required": ["id_section", "code", "label", "rate", "amount"],
+      "additionalProperties": false
+    },
+    "AnalyticRepartition": {
+      "type": "object",
+      "properties": {
+        "id_axe": {
+          "type": "number"
+        },
+        "code": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "repartition": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RepartitionInfo"
+          }
+        }
+      },
+      "required": ["id_axe", "code", "label", "repartition"],
+      "additionalProperties": false
+    },
     "NewEntryLine": {
       "type": "object",
       "additionalProperties": true,
@@ -260,6 +332,18 @@ Le schéma JSON est un vocabulaire qui vous permet d'annoter et de valider les d
           "type": "number",
           "description": "debit",
           "default": 0
+        },
+        "analytique": {
+          "type": "array",
+          "description": "Tableau contenant les répartitions analytiques avec les liens sur les axes et sections.",
+          "items": {
+            "$ref": "#/definitions/AnalyticRepartition"
+          }
+        },
+        "currency": {
+          "type": "string",
+          "description": "Code ISO 4217",
+          "default": "EUR"
         },
         "payment_type_id": {
           "type": "number",
