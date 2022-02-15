@@ -67,6 +67,8 @@ interface RepartitionInfo {
 }
 ```
 
+L'objet en question est récupérable automatiquement par le biais de l'API `https://api.myunisoft.fr/api/v1/analytics/repartitions`. Pour plus d'informations nous vous invitons à consulter [le guide sur la gestion de l'analytique](./analytique.md).
+
 ### Ligne entrée comptable
 ​
 Définition de type de la structure JSON d’une ligne d’entrée comptable.
