@@ -63,6 +63,105 @@ Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à 
 }
 ```
 
+<details><summary>Définition TypeScript AccountDetails</summary>
+
+```ts
+interface AccountDetails {
+  solde: number;
+  sens: string;
+  comment: string;
+  intraco: boolean;
+  btp_autoliquidation: boolean;
+  presta: boolean;
+  exoneration: boolean;
+  das_2: boolean;
+  blocked: boolean;
+  vat_param: VatParam; // voir le guide sur la TVA
+  array_counterpart_account: CounterpartAccountLine[];
+  complementary_informations: ComplementaryInformations;
+  society_id: number;
+  closed: boolean;
+}
+
+interface ComplementaryInformations {
+  id_info_compte_tiers: number;
+  person_in_charge: string;
+  address_number: string;
+  indice_repetition: string;
+  address: string;
+  address_complement: string;
+  postal_code: string;
+  city: string;
+  siren: string;
+  name: string;
+  contact_lastname: string;
+  contact_firstname: string;
+  function: string;
+  tel: string;
+  email: string;
+  comment: string;
+  profession: string;
+  firstname: string;
+  lastname: string;
+  type_info_compte_tiers: number;
+  iban_list: Iban[];
+  way_type: WayType;
+  amount_type_paid: AmountTypePaid;
+  ape: Ape;
+  id_payment_deadline: number;
+  payment_deadline: PaymentDeadline;
+  payment_type_id: number;
+  payment_type: PaymentType;
+}
+
+interface CounterpartAccountLine extends Account {
+  num_ordre: string;
+  vat_param: VatParam | null;
+}
+
+interface Iban {
+  id_iban_compte_tiers: number;
+  iban: string;
+  bic: string;
+  etablissement: string;
+  rum_date_signature?: string;
+}
+
+interface PaymentType {
+  payment_type_id: number;
+  label: string;
+  code: string;
+}
+
+interface PaymentDeadline {
+  id_payment_deadline: number;
+  label: string;
+  number_of_days: number;
+  end_month: boolean;
+  day_number: number | null;
+}
+
+interface Ape {
+  id: number;
+  value: string;
+  label: string;
+  info: string;
+}
+
+interface WayType {
+  way_type_id: number;
+  label: string;
+}
+
+interface AmountTypePaid {
+  id_amount_type_paid: number;
+  label: string;
+}
+```
+</details>
+
+---
+
 Si vous avez choisi le mode 1 le retour sera plutôt similaire à celui-ci:
 
 ```json
@@ -105,6 +204,7 @@ Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à 
             "is_an": true,
             "entry_id": 1034259,
             "entry_line_id": 4030899,
+            "account_id": 1,
             "date": "2001-04-30",
             "piece": null,
             "piece2": null,
@@ -127,6 +227,64 @@ Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à 
     ]
 }
 ```
+
+<details><summary>Définition TypeScript AccountEntryLine</summary>
+
+```ts
+interface AccountEntryLine {
+  diary_id: number;
+  diary_code: string;
+  entry_id: number;
+  entry_line_id: number;
+  date: string;
+  piece: null | string;
+  piece2: string;
+  label: string;
+  debit: null | number;
+  credit: null | number;
+  solde: number;
+  lettrage: string;
+  comment: boolean;
+  pj_list: CloudDocument[];
+  payment_type: null | {
+    id_type_reglement: number;
+    nom: string;
+  };
+  deadline: null | string;
+  added_date: string;
+  closed: boolean;
+  flags: any | null;
+  dotted: boolean;
+  is_an: boolean;
+  creator: {
+    id: number;
+    firstname: string;
+    name: string;
+  }
+}
+
+interface CloudDocument {
+  document_id: number;
+  name: string;
+
+  /** Token de partage du document. */
+  token: string;
+
+  /** Adresse du serveur. */
+  baseUrl: string;
+
+  /** Miniature. */
+  thumbnail: string;
+
+  /** URL du document */
+  link: string;
+
+  /** URL de téléchargement du document */
+  download: string;
+}
+
+```
+</details>
 
 ### Récupération et/ou création d'un compte.
 Il est aussi possible de récupérer unitaire un compte (et s'il n'existe pas il sera créé). C'est une route plutôt pratique si vous souhaitez faire un import dans le format JSON (car celui-ci ne gère pas la création automatique des comptes).
