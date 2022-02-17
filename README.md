@@ -129,6 +129,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 ## Guides API
 - [Collection + Environment postman](https://github.com/MyUnisoft/api-partenaires/tree/main/postman)
 - [Gestion des retours erreurs](./docs/erreurs.md)
+- [TypeDoc publique](https://myunisoft.github.io/tsd/)
 
 ## Guides sur l'import d'écritures comptables
 - [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
@@ -145,3 +146,11 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer les types de paiement disponible d'un dossier de production](./docs/paiements.md)
 - [Récupérer les écritures comptables](./docs/ecritures.md)
 - [Gérer l'analytique d'une société (dossier)](./docs/analytique.md)
+
+# Roadmap 2022 📆
+
+- Flow d'autorisation avec le protocole OAuth2. L'objectif est l'automatisation et la sécurisation des intégrations.
+- Notifications temps réel vers nos partenaires grâce à des webhooks.
+- Création d'un SDK Node.js à destination des cabinets pour exploiter l'API partenaires sans difficultés.
+
+> 👀 L'ajout d'endpoints manquants n'est pas pris en compte dans cette section.
