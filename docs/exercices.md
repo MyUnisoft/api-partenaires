@@ -26,19 +26,40 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/society/exercic
 Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à l'exemple ci-dessous**
 ```json
 [
-    {
-        "exercice_id": 13647,
-        "start_date": "20200101",
-        "label": "N",
-        "end_date": "20201231",
-        "closed": false,
-        "blocked": true,
-        "duration": 12,
-        "result": -42.33,
-        "ca": -25,
-        "closed_at": null,
-        "closed_by": null
-    }
+  {
+    "exercice_id": 54,
+    "start_date": "20210101",
+    "end_date": "20211231",
+    "label": "N+1",
+    "result": 52457.86,
+    "ca": 105046.85,
+    "closed": false,
+    "duration": 12,
+    "closed_at": null,
+    "closed_by": null,
+    "review_model": {
+      "label": "Modèle Standard Myunisoft",
+      "id_review_model": 1
+    },
+    "lettering_method_id": 1
+  },
+  {
+    "exercice_id": 2,
+    "start_date": "20200101",
+    "end_date": "20201231",
+    "label": "N",
+    "result": 328414.96,
+    "ca": 323218.38,
+    "closed": false,
+    "duration": 12,
+    "closed_at": null,
+    "closed_by": null,
+    "review_model": {
+      "label": "Modèle Standard Myunisoft",
+      "id_review_model": 1
+    },
+    "lettering_method_id": 1
+  }
 ]
 ```
 
@@ -47,18 +68,25 @@ Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à 
 Le endpoint **society/exercice** retourne un tableau de structure Exercice.
 
 ```ts
-interface Exercice {
+export interface Exercice {
   exercice_id: number;
   start_date: string;
-  label: string;
   end_date: string;
-  closed: boolean;
-  blocked: boolean;
-  duration: number;
+  /**Label de l'exercice ( N-1, N, N+1 etc..). */
+  label: string;
   result: number;
+  /* Chiffre d'affaire sur l'exercice. */
   ca: number;
+  closed: boolean;
+  duration: number;
   closed_at: null | string;
+  /** ID de l'utilisateur qui a clotûré l'exercice. */
   closed_by: null | number;
+  review_model: {
+    label: string;
+    id_review_model: number;
+  };
+  lettering_method_id: number;
 }
 ```
 
