@@ -131,6 +131,9 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Gestion des retours erreurs](./docs/erreurs.md)
 - [TypeDoc publique](https://myunisoft.github.io/tsd/)
 
+## Guides pour l'accès cabinet
+- [Récupérer les utilisateurs et personne physiques d'un schéma (cabinet)](./docs/users.md)
+
 ## Guides sur l'import d'écritures comptables
 - [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
 - [Création d'écritures et mouvements comptable avec le format TRA+PJ](./docs/entry_tra.md)
