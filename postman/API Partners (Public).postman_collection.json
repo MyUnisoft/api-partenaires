@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "c4062d0b-3f1b-4d6f-98c0-952a0ba5cccd",
 		"name": "API Partners (Public)",
-		"description": "## ✨ Summary\nThe Partner API allows **partner software** or **member firms** to retrieve and send information from/to MyUnisoft. The API expose a set of HTTP routes (or endpoints) that will allow you to perform **various tasks and actions** such as:\n\n- Managing the accounting plan\n- Pushing accounting entries in different formats (FEC, TRA + PJ, Factur-X, JSON).\n- Extracting data (Entries, Balance, Grand livre etc..) \n\nIn order to access this API **you must request** an access to c.mandrilly@myunisoft.fr (CTO)\n\n##  🔬 Access type\nOur partner API allows two distinct types of access:\n\n🔸 Restricted access to a **company** (society)\n\n> Limited access per company is the most common model because it allows our solutions to be permanently interconnected by means of a token that has no expiration date (it can nevertheless be revoked by the company manager or by our technical teams).\n\n[A short video on how the connection work with our partner Evoliz](https://vimeo.com/432178505/b1a518283f)\n\n🔹 Access to an entire **cabinet** (firm)\n\n> This access was primarily designed to be used by the firms themselves. The authentication will deliver a token with a very short lifetime to ensure better security.\n\n## 📜 Technical documentation\n\nWe have created a complete documentation on our github page accessible [here](https://github.com/MyUnisoft/api-partenaires).\n\n### 🚀 Using a route exposed by the API\n\nWhen using an exposed route it is necessary to have the **API Token** as a [Bearer token](https://swagger.io/docs/specification/authentication/bearer-authentication/) in the HTTP **Authorization** header (and especially not the User token).\n\nIt is also necessary to add a \"**X-Third-Party-Secret**\" header containing the secret key communicated by our team.\n\n```bash\n$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/vat_param' \\\n--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \\\n--header 'Authorization: Bearer {{API_TOKEN}}'\n```\n\n🔹 For the firm access you may need to add an additional `society-id` header when requesting the API.\n\n### 📉 Ratelimit\n\nThe API limits the number of requests per API Token, some additional headers are sent in the HTTP response:\n\n- **X-Rate-Limit-Remaining** (the number of requests remaining in the period).\n- **X-Rate-Limit-Reset** (timestamp for when the period will be reset).\n- **X-Rate-Limit-Total** (the total number of requests for a period).\n\nThe default limit is `100` requests per minute.",
+		"description": "## ✨ Summary\n\nfull documentation is available at : [https://github.com/MyUnisoft/api-partenaires](https://github.com/MyUnisoft/api-partenaires)\n\nThe Partner API allows **partner software** or **member firms** to retrieve and send information from/to MyUnisoft. The API expose a set of HTTP routes (or endpoints) that will allow you to perform **various tasks and actions** such as:\n\n*   Managing the accounting plan\n*   Pushing accounting entries in different formats (FEC, TRA + PJ, Factur-X, JSON).\n*   Extracting data (Entries, Balance, Grand livre etc..)\n    \n\nIn order to access this API **you must request** an access to r.beck@myunisoft.fr (sales)\n\n## 🔬 Access type\n\nOur partner API allows two distinct types of access:\n\n🔸 Restricted access to a **company** (society)\n\n> Limited access per company is the most common model because it allows our solutions to be permanently interconnected by means of a token that has no expiration date (it can nevertheless be revoked by the company manager or by our technical teams).\n\n[A short video on how the connection work with our partner Evoliz](https://vimeo.com/432178505/b1a518283f)\n\n🔹 Access to an entire **cabinet** (firm)\n\n> This access was primarily designed to be used by the firms themselves. The authentication will deliver a token with a very short lifetime to ensure better security.\n\n## 📜 Technical documentation\n\nWe have created a complete documentation on our github page accessible [here](https://github.com/MyUnisoft/api-partenaires).\n\n### 🚀 Using a route exposed by the API\n\nWhen using an exposed route it is necessary to have the **API Token** as a [Bearer token](https://swagger.io/docs/specification/authentication/bearer-authentication/) in the HTTP **Authorization** header (and especially not the User token).\n\nIt is also necessary to add a \"**X-Third-Party-Secret**\" header containing the secret key communicated by our team.\n\n``` bash\n$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/vat_param' \\\n--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \\\n--header 'Authorization: Bearer {{API_TOKEN}}'\n\n```\n\n🔹 For the firm access you may need to add an additional `society-id` header when requesting the API.\n\n### 📉 Ratelimit\n\nThe API limits the number of requests per API Token, some additional headers are sent in the HTTP response:\n\n*   **X-Rate-Limit-Remaining** (the number of requests remaining in the period).\n*   **X-Rate-Limit-Reset** (timestamp for when the period will be reset).\n*   **X-Rate-Limit-Total** (the total number of requests for a period).\n    \n\nThe default limit is `100` requests per minute.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -51,7 +51,8 @@
 								"api",
 								"authenticate"
 							]
-						}
+						},
+						"description": "⚠️ If you use Postman, disable cookies.\n\n![](https://raw.githubusercontent.com/MyUnisoft/api-partenaires/main/docs/images/user_cookie.png)"
 					},
 					"response": [
 						{
@@ -2433,12 +2434,6 @@
 								"key": "Content-Type",
 								"value": "application/octet-stream",
 								"type": "text"
-							},
-							{
-								"key": "society-id",
-								"value": "3",
-								"description": "Required if you're using a firm access.",
-								"type": "text"
 							}
 						],
 						"body": {
@@ -2446,7 +2441,7 @@
 							"file": {}
 						},
 						"url": {
-							"raw": "https://api.myunisoft.fr/api/v1/releve_bancaire?filename=test.dat",
+							"raw": "https://api.myunisoft.fr/api/v1/releve_bancaire?filename=",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -2461,8 +2456,8 @@
 							"query": [
 								{
 									"key": "filename",
-									"value": "test.dat",
-									"description": "REQUIRED - Format: .dat\nContains account entries."
+									"value": "",
+									"description": "REQUIRED - Contains account entries."
 								}
 							]
 						},
@@ -2606,7 +2601,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{API-TOKEN}}",
+									"value": "{{API_TOKEN}}",
 									"type": "string"
 								}
 							]
@@ -2629,7 +2624,7 @@
 							"raw": "{\"sort\":{\"ecr\":\"desc\"},\"filters\":[{\"name\":\"type\",\"value\":\"e\"}]}"
 						},
 						"url": {
-							"raw": "https://api.myunisoft.fr/api/v1/entries?type",
+							"raw": "https://api.myunisoft.fr/api/v1/entries?type=e",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -2644,8 +2639,8 @@
 							"query": [
 								{
 									"key": "type",
-									"value": null,
-									"description": "Required. \nE = ECRITURE,\nO = ECRITURE OCR,\nIB = ECRITURE INTEGRATION BANCAIRE,\nM = ECRITURE  MANUEL,\nEXT = ECRITURE EXTOURNE,\nL = ECRITURE LETTRAGE\n"
+									"value": "e",
+									"description": "Required. \nE = ECRITURE,\nO = ECRITURE OCR/Ecriture en attente\nIB = ECRITURE INTEGRATION BANCAIRE,\nM = ECRITURE  MANUEL,\nEXT = ECRITURE EXTOURNE,\nL = ECRITURE LETTRAGE\n"
 								}
 							]
 						},
@@ -2702,7 +2697,7 @@
 					]
 				},
 				{
-					"name": "entry/id (Fetch entry by a partner ID)",
+					"name": "entry/id (by partner ID)",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -2775,11 +2770,12 @@
 							{
 								"key": "society-id",
 								"value": "x",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"url": {
-							"raw": "https://api.myunisoft.fr/api/v1/account/entries?offset=0&limit=10",
+							"raw": "https://api.myunisoft.fr/api/v1/account/entries?account_no=2610450&search_date={\"start_date\":\"20210101\",\"end_date\":\"20211231\"}&sort={\"column\":\"date\",\"direction\":\"desc\"}",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -2795,53 +2791,127 @@
 							"query": [
 								{
 									"key": "account_no",
-									"value": "775",
-									"disabled": true
-								},
-								{
-									"key": "offset",
-									"value": "0",
-									"description": "Optionnal (Default 0) Starting rows"
-								},
-								{
-									"key": "limit",
-									"value": "10"
-								},
-								{
-									"key": "search_date",
-									"value": "",
-									"description": "Optionnal date ranges but if it's activated start_date and end_date must be filled",
-									"disabled": true
-								},
-								{
-									"key": "sort",
-									"value": "{\"column\":\"date\",\"direction\":\"desc\"}",
-									"description": "Optionnal Column and direction of sorting results by (Columns : credit,debit,date,label,lettrage,piece,piece2      direction: asc,desc)",
-									"disabled": true
-								},
-								{
-									"key": "lettering",
-									"value": "",
-									"description": "Optionnal Filter if filled could be true (entries filtered by lettering not empty) or false (entries filtered by lettering empty)\nIf lettering param not filled all entries are retrieved",
-									"disabled": true
-								},
-								{
-									"key": "prevnext",
-									"value": "",
-									"description": "optionnal : previous ou next",
-									"disabled": true
+									"value": "2610450",
+									"description": "Required if account_id is not used."
 								},
 								{
 									"key": "account_id",
 									"value": "",
-									"description": "Account id",
+									"description": "Required if account_no is not used.",
+									"disabled": true
+								},
+								{
+									"key": "search_date",
+									"value": "{\"start_date\":\"20210101\",\"end_date\":\"20211231\"}",
+									"description": "Optionnal - Date range for which we will return entries.\nFormat: {\"start_date\":\"YYYYMMDD\",\"end_date\":\"YYYYMMDD\"}"
+								},
+								{
+									"key": "sort",
+									"value": "{\"column\":\"date\",\"direction\":\"desc\"}",
+									"description": "Optionnal - Column and direction of sorting results by (Columns : credit,debit,date,label,lettrage,piece,piece2      direction: asc,desc)"
+								},
+								{
+									"key": "lettering",
+									"value": "",
+									"description": "Optionnal - Filter if filled could be true (entries filtered by lettering not empty) or false (entries filtered by lettering empty)\nIf lettering param not filled all entries are retrieved",
+									"disabled": true
+								},
+								{
+									"key": "prevnext",
+									"value": "next",
+									"description": "Optionnal - previous or next\n/!\\ It only works with the account_id.",
 									"disabled": true
 								}
 							]
 						},
 						"description": "📢 Fetch/search entries by their relation to an account (or a class of account).\n\n⚠️ A `society-id` is required with a cabinet/firm access"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Account entries",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"type": "text",
+										"value": "{{X-Third-Party-Secret}}"
+									},
+									{
+										"key": "society-id",
+										"value": "x",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/account/entries?offset=0&limit=10&account_id=2610450",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"account",
+										"entries"
+									],
+									"query": [
+										{
+											"key": "account_no",
+											"value": "411",
+											"description": "Mandatory if account_id is not used.",
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": "0",
+											"description": "Optionnal (Default 0) Starting rows"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "search_date",
+											"value": "",
+											"description": "Optionnal date ranges but if it's activated start_date and end_date must be filled",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "{\"column\":\"date\",\"direction\":\"desc\"}",
+											"description": "Optionnal Column and direction of sorting results by (Columns : credit,debit,date,label,lettrage,piece,piece2      direction: asc,desc)",
+											"disabled": true
+										},
+										{
+											"key": "lettering",
+											"value": "",
+											"description": "Optionnal Filter if filled could be true (entries filtered by lettering not empty) or false (entries filtered by lettering empty)\nIf lettering param not filled all entries are retrieved",
+											"disabled": true
+										},
+										{
+											"key": "prevnext",
+											"value": "",
+											"description": "optionnal : previous ou next",
+											"disabled": true
+										},
+										{
+											"key": "account_id",
+											"value": "2610450",
+											"description": "Mandatory if account_no is not used."
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"list_entries_line\": [\n        {\n            \"diary_id\": 60733,\n            \"diary_code\": \"ECS\",\n            \"is_an\": false,\n            \"entry_id\": 32531634,\n            \"entry_line_id\": 93412347,\n            \"date\": \"2021-01-11\",\n            \"piece\": \"\",\n            \"piece2\": \"\",\n            \"label\": \"ACHATS MARCHANDISES\",\n            \"credit\": 1000000,\n            \"debit\": null,\n            \"solde\": -1000000,\n            \"lettrage\": \"\",\n            \"comment\": false,\n            \"payment_type\": {\n                \"id_type_reglement\": 0,\n                \"nom\": \"\"\n            },\n            \"deadline\": null,\n            \"added_date\": \"2021-05-11\",\n            \"closed\": false,\n            \"dotted\": false,\n            \"flags\": null,\n            \"pj_list\": [\n                {\n                    \"document_id\": 3519922,\n                    \"token\": \"RdMleakTMG9EMvL\",\n                    \"name\": \"linky.jpeg\",\n                    \"baseUrl\": \"https://cloud.myunisoft.fr\",\n                    \"thumbnail\": \"https://cloud.myunisoft.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=90&y=120&a=true&t=RdMleakTMG9EMvL&scalingup=0\",\n                    \"link\": \"https://cloud.myunisoft.fr/index.php/s/RdMleakTMG9EMvL\",\n                    \"download\": \"https://cloud.myunisoft.fr/index.php/s/RdMleakTMG9EMvL/download\"\n                }\n            ],\n            \"creator\": {\n                \"id\": 0,\n                \"firstname\": \"\",\n                \"name\": \"\"\n            }\n        },\n        {\n            \"diary_id\": 53519,\n            \"diary_code\": \"01\",\n            \"is_an\": false,\n            \"entry_id\": 32066592,\n            \"entry_line_id\": 91895003,\n            \"date\": \"2021-01-20\",\n            \"piece\": \"\",\n            \"piece2\": \"\",\n            \"label\": \"MATERIEL DE BUREAU\",\n            \"credit\": 10000,\n            \"debit\": null,\n            \"solde\": -1010000,\n            \"lettrage\": \"\",\n            \"comment\": false,\n            \"payment_type\": {\n                \"id_type_reglement\": 0,\n                \"nom\": \"\"\n            },\n            \"deadline\": null,\n            \"added_date\": \"2021-04-20\",\n            \"closed\": false,\n            \"dotted\": false,\n            \"flags\": null,\n            \"pj_list\": [],\n            \"creator\": {\n                \"id\": 5356,\n                \"firstname\": \"oliv2test\",\n                \"name\": \"dstest\"\n            }\n        },\n        {\n            \"diary_id\": 65588,\n            \"diary_code\": \"ttt\",\n            \"is_an\": false,\n            \"entry_id\": 32147379,\n            \"entry_line_id\": 92189649,\n            \"date\": \"2021-01-26\",\n            \"piece\": \"\",\n            \"piece2\": \"\",\n            \"label\": \"CAPITAL\",\n            \"credit\": 15000000,\n            \"debit\": null,\n            \"solde\": -16010000,\n            \"lettrage\": \"\",\n            \"comment\": false,\n            \"payment_type\": {\n                \"id_type_reglement\": 0,\n                \"nom\": \"\"\n            },\n            \"deadline\": null,\n            \"added_date\": \"2021-04-26\",\n            \"closed\": false,\n            \"dotted\": false,\n            \"flags\": null,\n            \"pj_list\": [],\n            \"creator\": {\n                \"id\": 5356,\n                \"firstname\": \"oliv2test\",\n                \"name\": \"dstest\"\n            }\n        }\n    ],\n    \"total_debit\": 0,\n    \"total_credit\": 16010000,\n    \"thisAccount\": {\n        \"id\": 2610450,\n        \"number\": \"471000\",\n        \"label\": \"COMPTE ATTENTE INFOR\"\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Find or create Account",
@@ -3395,6 +3465,84 @@
 							"body": "[\n    {\n        \"account_id\": 1225,\n        \"account_number\": \"106100\",\n        \"label\": \"RESERVE LEGALE\",\n        \"counterpart_account\": {\n            \"account_id\": 544,\n            \"account_number\": \"101000\",\n            \"label\": \"CAPITAL\"\n        },\n        \"array_counterpart_account\": [\n            {\n                \"label\": \"CAPITAL\",\n                \"num_ordre\": 1,\n                \"vat_param\": null,\n                \"account_id\": 544,\n                \"account_number\": \"101000\"\n            }\n        ]\n    },\n    {\n        \"account_id\": 56,\n        \"account_number\": \"106800\",\n        \"label\": \"AUTRES RESERVES\"\n    }\n]"
 						}
 					]
+				},
+				{
+					"name": "Account V2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "{{X-Third-Party-Secret}}",
+								"type": "default"
+							},
+							{
+								"key": "society-id",
+								"value": "1450",
+								"description": "Only with cabinet/firm access.",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/account/v2?account_id=424242&begin_by=41&details=true&compta=true&vat=true&counterpart=true&quantity=true&entry_date=20210628",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"account",
+								"v2"
+							],
+							"query": [
+								{
+									"key": "account_id",
+									"value": "424242",
+									"description": "OPTIONAL"
+								},
+								{
+									"key": "begin_by",
+									"value": "41",
+									"description": "OPTIONAL - Allows you to filter the accounts whose account number begins with the given value."
+								},
+								{
+									"key": "details",
+									"value": "true",
+									"description": "OPTIONAL - Default value: FALSE.\nTRUE to get detailed accounts."
+								},
+								{
+									"key": "compta",
+									"value": "true",
+									"description": "OPTIONAL - Default value: FALSE.\nTRUE to get \"sens\", \"solde\" and \"blocked\"."
+								},
+								{
+									"key": "vat",
+									"value": "true",
+									"description": "OPTIONAL - Default value: FALSE.\nTRUE to get VAT infos."
+								},
+								{
+									"key": "counterpart",
+									"value": "true",
+									"description": "OPTIONAL -  Default value: FALSE.\nTRUE to get counterpart infos."
+								},
+								{
+									"key": "quantity",
+									"value": "true",
+									"description": "OPTIONAL - Default value: FALSE.\nTRUE to get quantity infos."
+								},
+								{
+									"key": "entry_date",
+									"value": "20210628",
+									"description": "OPTIONAL - YYYYMMDD.\nAllows you to perform an account validation check on the given date (no check if no date)."
+								}
+							]
+						},
+						"description": "📢 Fetch all accounts and returns a simplified view of them if no parameters have been given.\n\n> If `begin_by` is supplied, only accounts whose the account number starts with `begin_by` will be returned. This way, you can find an account with its account number.\n\n⚠️ A `society-id` is required with a cabinet/firm access."
+					},
+					"response": []
 				}
 			]
 		},
@@ -3896,11 +4044,11 @@
 							{
 								"key": "Content-Type",
 								"type": "text",
-								"value": "application/octet-stream"
+								"value": "application/json"
 							}
 						],
 						"url": {
-							"raw": "https://api.myunisoft.fr/api/v1/grand_livre?start_date=2020-01-01&end_date=2020-12-30",
+							"raw": "https://api.myunisoft.fr/api/v1/grand_livre?start_date=2020-01-01&end_date=2020-12-30&xls=true",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -3920,6 +4068,11 @@
 								{
 									"key": "end_date",
 									"value": "2020-12-30"
+								},
+								{
+									"key": "xls",
+									"value": "true",
+									"description": "OPTIONAL\nTrue: return xls file.\nFalse: return PDF file"
 								}
 							]
 						},
@@ -3968,6 +4121,838 @@
 							]
 						},
 						"description": "📢 récupérer la balance JSON"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Analytic",
+			"item": [
+				{
+					"name": "Axes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "society-id",
+								"value": "3",
+								"description": "If using firm access.",
+								"type": "text"
+							},
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "{{X-Third-Party-Secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/analytics/axes",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"analytics",
+								"axes"
+							]
+						},
+						"description": "Fetch the list of axes of a company."
+					},
+					"response": [
+						{
+							"name": "Axes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "society-id",
+										"value": "3",
+										"description": "If using firm access.",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/analytics/axes",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"analytics",
+										"axes"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\r\n    {\r\n        \"id_axe\": 41,\r\n        \"code\": \"ANA002\",\r\n        \"label\": \"REGIONS\",\r\n        \"id_societe\": 3,\r\n        \"id_section_default\": 66\r\n    },\r\n    {\r\n        \"id_axe\": 39,\r\n        \"code\": \"ANA001\",\r\n        \"label\": \"PAYS\",\r\n        \"id_societe\": 3,\r\n        \"id_section_default\": 72\r\n    },\r\n    {\r\n        \"id_axe\": 45,\r\n        \"code\": \"code001\",\r\n        \"label\": \"EQUIPE\",\r\n        \"id_societe\": 3,\r\n        \"id_section_default\": 74\r\n    },\r\n    {\r\n        \"id_axe\": 47,\r\n        \"code\": \"code0023\",\r\n        \"label\": \"RACE\",\r\n        \"id_societe\": 3,\r\n        \"id_section_default\": 82\r\n    }\r\n]"
+						}
+					]
+				},
+				{
+					"name": "One axe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "society-id",
+								"value": "3",
+								"description": "If using firm access.",
+								"type": "text"
+							},
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "{{X-Third-Party-Secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"analytics",
+								"axes",
+								"{{id_axe}}"
+							]
+						},
+						"description": "Get informations of one axe."
+					},
+					"response": [
+						{
+							"name": "One axe",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "society-id",
+										"value": "3",
+										"description": "If using firm access.",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/axes/41",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"axes",
+										"41"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "[\r\n    {\r\n        \"id_axe\": 41,\r\n        \"code\": \"ANA002\",\r\n        \"label\": \"REGIONS\",\r\n        \"id_societe\": 3,\r\n        \"id_section_default\": 66\r\n    }\r\n]"
+						}
+					]
+				},
+				{
+					"name": "Informations from default section",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "society-id",
+								"value": "3",
+								"description": "If using firm access.",
+								"type": "text"
+							},
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "{{X-Third-Party-Secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/defaultsection",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"analytics",
+								"axes",
+								"{{id_axe}}",
+								"defaultsection"
+							]
+						},
+						"description": "Get informations of one axe."
+					},
+					"response": []
+				},
+				{
+					"name": "Sections",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "society-id",
+								"value": "3",
+								"description": "If using firm access.",
+								"type": "text"
+							},
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "{{X-Third-Party-Secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/sections?closed_section=true",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"analytics",
+								"axes",
+								"{{id_axe}}",
+								"sections"
+							],
+							"query": [
+								{
+									"key": "closed_section",
+									"value": "true",
+									"description": "OPTIONAL - Default value: FALSE.\nTrue if you want to get closed sections."
+								}
+							]
+						},
+						"description": "Fetch the list of sections of one axe."
+					},
+					"response": [
+						{
+							"name": "Sections",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "society-id",
+										"value": "3",
+										"description": "If using firm access.",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/41/sections",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"analytics",
+										"axes",
+										"41",
+										"sections"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\r\n    {\r\n        \"id_section_analytique\": \"number\",\r\n        \"code\": \"string\",\r\n        \"label\": \"string\",\r\n        \"id_axe\": 41,\r\n        \"account\": \"string\",\r\n        \"closed\": \"boolean\",\r\n        \"isdefault\": \"boolean\"\r\n    }\r\n]"
+						}
+					]
+				},
+				{
+					"name": "One section",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "society-id",
+								"value": "3",
+								"description": "If using firm access.",
+								"type": "text"
+							},
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "{{X-Third-Party-Secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"analytics",
+								"sections",
+								"{{id_section}}"
+							]
+						},
+						"description": "Get informations of one section."
+					},
+					"response": [
+						{
+							"name": "One section",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "society-id",
+										"value": "3",
+										"description": "If using firm access.",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"analytics",
+										"sections",
+										"{{id_section}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\r\n    {\r\n        \"id_section_analytique\": \"number\",\r\n        \"code\": \"string\",\r\n        \"label\": \"string\",\r\n        \"id_axe\": \"number\",\r\n        \"account\": \"string\",\r\n        \"closed\": \"boolean\",\r\n        \"isdefault\": \"boolean\"\r\n    }\r\n]"
+						}
+					]
+				},
+				{
+					"name": "Repartition keys",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "society-id",
+								"value": "3",
+								"description": "If using firm access.",
+								"type": "text"
+							},
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "{{X-Third-Party-Secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"analytics",
+								"axes",
+								"{{id_axe}}",
+								"repartition_keys"
+							]
+						},
+						"description": "Fetch the list of repartiton keys from one axe."
+					},
+					"response": [
+						{
+							"name": "Repartition keys",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "society-id",
+										"value": "3",
+										"description": "If using firm access.",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/41/repartition_keys",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"analytics",
+										"axes",
+										"41",
+										"repartition_keys"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\r\n    {\r\n        \"id_axe\": 41,\r\n        \"id_repartion_key\": 1,\r\n        \"condition\": \"6;-607,-606\",\r\n        \"key\": \"\"\r\n    }\r\n]"
+						}
+					]
+				},
+				{
+					"name": "One repartition key",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "society-id",
+								"value": "3",
+								"description": "If using firm access.",
+								"type": "text"
+							},
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "{{X-Third-Party-Secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"analytics",
+								"axes",
+								"{{id_axe}}",
+								"repartition_keys",
+								"{{id_repartition_key}}"
+							]
+						},
+						"description": "Get the informations of one repartition key."
+					},
+					"response": [
+						{
+							"name": "One repartition key",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "society-id",
+										"value": "3",
+										"description": "If using firm access.",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"analytics",
+										"axes",
+										"{{id_axe}}",
+										"repartition_keys",
+										"{{id_repartition_key}}"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\r\n    {\r\n        \"id_axe\": 41,\r\n        \"id_repartion_key\": 1,\r\n        \"condition\": \"6;-607,-606\",\r\n        \"key\": \"\"\r\n    }\r\n]"
+						}
+					]
+				},
+				{
+					"name": "Distribution rates of sections",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "society-id",
+								"value": "3",
+								"description": "If using firm access.",
+								"type": "text"
+							},
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "{{X-Third-Party-Secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/analytics/repartition_keys/{{id_repartition_key}}/repartition",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"analytics",
+								"repartition_keys",
+								"{{id_repartition_key}}",
+								"repartition"
+							]
+						},
+						"description": "Get the distribution rates of sections."
+					},
+					"response": [
+						{
+							"name": "Distribution rates of sections",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "society-id",
+										"value": "3",
+										"description": "If using firm access.",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/analytics/repartition_keys/{{id_repartition_key}}/repartition",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"analytics",
+										"repartition_keys",
+										"{{id_repartition_key}}",
+										"repartition"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\r\n    {\r\n        \"id_axe\": 41,\r\n        \"id_repartion_key\": 1,\r\n        \"condition\": \"6;-607,-606\",\r\n        \"key\": \"\"\r\n    }\r\n]"
+						}
+					]
+				},
+				{
+					"name": "Repartition from one line entry",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "society-id",
+								"value": "3",
+								"description": "If using firm access.",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "{{X-Third-Party-Secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/analytics/line_entries/{{id_line_entry}}/repartitions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"analytics",
+								"line_entries",
+								"{{id_line_entry}}",
+								"repartitions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Default repartitions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "society-id",
+								"value": "3",
+								"description": "If using firm access.",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "{{X-Third-Party-Secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/analytics/repartitions?account=601000&value=1000",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"analytics",
+								"repartitions"
+							],
+							"query": [
+								{
+									"key": "account",
+									"value": "601000"
+								},
+								{
+									"key": "value",
+									"value": "1000"
+								}
+							]
+						},
+						"description": "Get the default configuration of the analytical distribution of an entry line with its account and amount"
 					},
 					"response": []
 				}
