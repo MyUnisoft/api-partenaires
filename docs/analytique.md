@@ -22,9 +22,102 @@ L'intégralité des routes présentées dans ce guide est disponible sur le post
 
 Lien bonus: [Comptabilité analytique : définition, rôle et exemple de calculs de coûts](https://www.compta-facile.com/comptabilite-analytique-definition-utilite-calcul-de-couts/)
 
+## Activer l'analytique sur une société (dossier)
+
+La route `https://api.myunisoft.fr/api/v1/society/{{id_society}}` permet de modifier les paramètres d'une société (dossier).
+
+```bash
+$ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/society/3' \
+--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+--header 'Authorization: Bearer {{API_TOKEN}}'
+--data-raw '{
+	"analytics": true
+}'
+```
+<details>
+  <summary markdown="span">Retour JSON de l'API</summary>
+
+  ```json
+  { 
+    "ape":{
+      "id": 534,
+      "label": "5829C",
+      "value": "Édition de logiciels applicatifs"
+    }, 
+    "register": {  },
+    "legal_form": {  }, 
+    "road_type": {
+      "id": 9,
+      "label": "Rue",
+      "value": "Rue"
+    }, 
+    "owner_company":{ 
+      "id": 1, 
+      "label": "CABINET TEST", 
+      "value": "CABINET TEST" 
+    }, 
+    "bilan": null, 
+    "impot": null, 
+    "vat_regime": null, 
+    "axe": null, 
+    "coordonnee": null, 
+    "footer": null, 
+    "comment": "", 
+    "society_id": 3, 
+    "name": "MY UNISOFT", 
+    "siret": "84014327500039", 
+    "activity": "", 
+    "rof_tva": "", 
+    "rof_tdfc": "", 
+    "rof_cfe": "", 
+    "rof_cvae": "", 
+    "address_number": "4", 
+    "id_accountant": 1, 
+    "id_rm": 9, 
+    "id_collab": null, 
+    "accountant": {
+      "id_ex": 1,
+      "prenom": "THOMAS",
+      "nom": "GENTILHOMME"
+    },
+    "rm": {
+      "id_ex": 9,
+      "prenom": "Tony",
+      "nom": "Gorez"
+    }, 
+    "collab": null, 
+    "secured": false, 
+    "analytics": true, 
+    "enable_quantity": false, 
+    "folder_reference": "", 
+    "adherent_code": "", 
+    "formule_code": "STAN", 
+    "safe_status": true, 
+    "logo": null, 
+    "address_bis": null, 
+    "street_name": "GALVANI", 
+    "complement": "", 
+    "postal_code": "91300", 
+    "country": "FRANCE", 
+    "address": "4 Rue GALVANI 91300 MASSY FRANCE", 
+    "id_centre_gestion": 0, 
+    "code_sheet_group": "", 
+    "registration_date": "2022-02-02", 
+    "close_entries_VAT": false, 
+    "id_type_company": 1, 
+    "id_parent_society": 0, 
+    "secondary_establishments": null
+  }
+  ```
+</details>
+<br>
+
 ## Axes
 
 La route `https://api.myunisoft.fr/api/v1/axes` permet de récupérer l'intégralité des axes pour un dossier.
+
+
+> Il est possible de récupérer un axe précis par l'id, exemple avec l'id 41: https://api.myunisoft.fr/api/v1/axes/41
 
 ```bash
 $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/axes' \
@@ -32,41 +125,155 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/axes' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-Lors d'un retour positif vous devriez avoir un JSON identique à celui ci-dessous:
-```json
-[
-  {
-    "id_axe": 41,
-    "code": "ANA002",
-    "label": "REGIONS",
-    "id_societe": 3,
-    "id_section_default": 66
-  },
-  {
-    "id_axe": 39,
-    "code": "ANA001",
-    "label": "PAYS",
-    "id_societe": 3,
-    "id_section_default": 72
-  },
-  {
-    "id_axe": 45,
-    "code": "code001",
-    "label": "EQUIPE",
-    "id_societe": 3,
-    "id_section_default": 74
-  },
-  {
-    "id_axe": 47,
-    "code": "code0023",
-    "label": "RACE",
-    "id_societe": 3,
-    "id_section_default": 82
-  }
-]
+<details>
+  <summary markdown="span">Retour JSON de l'API</summary>
+
+  ```json
+  [
+    {
+      "id_axe": 41,
+      "code": "ANA002",
+      "label": "REGIONS",
+      "id_societe": 3,
+      "id_section_default": 66
+    },
+    {
+      "id_axe": 39,
+      "code": "ANA001",
+      "label": "PAYS",
+      "id_societe": 3,
+      "id_section_default": 72
+    },
+    {
+      "id_axe": 45,
+      "code": "code001",
+      "label": "EQUIPE",
+      "id_societe": 3,
+      "id_section_default": 74
+    },
+    {
+      "id_axe": 47,
+      "code": "code0023",
+      "label": "RACE",
+      "id_societe": 3,
+      "id_section_default": 82
+    }
+  ]
+  ```
+</details>
+<br>
+
+### Création d'un axe
+
+La route `https://api.myunisoft.fr/api/v1/analytics/axes` permet de créer un axe.
+
+```bash
+$ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes' \
+--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+--header 'Authorization: Bearer {{API_TOKEN}}'
+--data-raw '{
+  "code": "EQUIPE",
+	"label": "AxeEquipe"
+}'
 ```
 
-> Il est possible de récupérer un axe précis par l'id, exemple avec l'id 41: https://api.myunisoft.fr/api/v1/axes/41
+<details>
+  <summary markdown="span">Retour JSON de l'API</summary>
+
+  ```json
+  {
+    "id_axe": 48,
+    "code": "EQUIPE",
+    "label": "AxeEquipe",
+    "id_societe": 3,
+    "id_section_default": null
+  }
+  ```
+</details>
+<br>
+
+### Modification d'un axe
+
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}` permet de modifier un axe en renseignant les paramètres que l'on souhaite modifier ainsi que les nouvelles valeurs comme dans l'exemple ci-dessous.
+
+Voici la liste des paramètres modifiables d'un axe:
+  - code
+  - label
+  - id_section_default
+
+<details>
+  <summary markdown="span">Voici le JSON Schema définissant le body de la requête.</summary>
+
+  ```json
+  {
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "description": "Liste des propriétées de l'axe que l'on veut modifier",
+    "required": [],
+    "properties": {
+      "code": {
+        "type": "string",
+        "description": "Code de l'axe"
+      },
+      "label": {
+        "type": "string",
+        "description": "Libellé de l'axe"
+      },
+      "id_section_default": {
+        "type": "integer",
+        "description": "Identifiant de la section par défaut"
+      }
+    }
+  }
+  ```
+</details>
+<br>
+
+```bash
+$ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/analytics/axes/48' \
+--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+--header 'Authorization: Bearer {{API_TOKEN}}'
+--data-raw '{
+  "code": "TEAM",
+}'
+```
+
+
+<details>
+  <summary markdown="span">Retour JSON de l'API</summary>
+
+  ```json
+  {
+    "id_axe": 48,
+    "code": "TEAM",
+    "label": "AxeEquipe",
+    "id_societe": 3,
+    "id_section_default": null
+  }
+  ```
+</details>
+<br>
+
+### Suppression d'un axe
+
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}` permet de supprimer un axe.
+
+```bash
+$ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/axes/48' \
+--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+--header 'Authorization: Bearer {{API_TOKEN}}'
+```
+
+<details>
+  <summary markdown="span">Retour JSON de l'API</summary>
+  ```json
+  {
+    "success": true,
+    "message": "Suppression effectuée avec succès"
+  }
+  ```
+</details>
+<br>
 
 ## Sections
 
@@ -78,38 +285,154 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/{{id_axe}}/sect
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-Lors d'un retour positif vous devriez avoir un JSON identique à celui ci-dessous:
-```json
-[
-  {
-    "id_section_analytique": 1,
-    "code": "TEAM",
-    "label": "Section TEAM",
-    "id_axe": 41,
-    "account": "601000",
-    "closed": false,
-    "isdefault": false
-  }
-]
-```
+<details>
+  <summary markdown="span">Retour JSON de l'API</summary>
 
-Voici une interface TypeScript qui décrit une section:
-```ts
-export interface Section {
-  id_section_analytique: number;
-  code: string;
-  label: string;
-  id_axe: number;
-  account: string;
-  closed: boolean;
-  isdefault: boolean;
-}
-```
+  ```json
+  [
+    {
+      "id_section_analytique": 1,
+      "code": "TEAM",
+      "label": "Section TEAM",
+      "id_axe": 41,
+      "account": "601000",
+      "closed": false,
+      "isdefault": false
+    }
+  ]
+  ```
+</details>
+<br>
+
+<details>
+  <summary markdown="span">Définition TypeScript d'une section.</summary>
+
+  ```ts
+  export interface Section {
+    id_section_analytique: number;
+    code: string;
+    label: string;
+    id_axe: number;
+    account: string;
+    closed: boolean;
+    isdefault: boolean;
+  }
+  ```
+</details>
+<br>
 
 Il est possible de récupérer une section par son id (mais aussi de récupérer la section par défaut).
 
 - `https://api.myunisoft.fr/api/v1/sections/{{id_section}}`
 - `https://api.myunisoft.fr/api/v1/axes/{{id_axe}}/defaultsection`
+
+### Création d'une section
+
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/sections` permet de créer une section.
+
+> Dans le cas de la création de la section par défaut, le paramètre `by_default` doit être renseigné dans le payload de la requête comme dans l'exemple ci-dessous.
+
+```bash
+$ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes/48/sections' \
+--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+--header 'Authorization: Bearer {{API_TOKEN}}'
+--data-raw '{
+  "code": "ATTENTE",
+	"label": "Waiting section",
+  "by_default": true
+}'
+```
+
+<details>
+  <summary markdown="span">Retour JSON de l'API</summary>
+
+  ```json
+  {
+    "id_section_analytique": 10,
+    "code": "ATTENTE",
+    "label": "Waiting section",
+    "id_axe": 48,
+    "account": null,
+    "closed": false
+  }
+  ```
+</details>
+<br>
+
+### Modification d'une section
+
+La route `https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}` permet de modifier une section.
+
+<details>
+  <summary markdown="span">Voici le JSON Schema définissant le body de la requête.</summary>
+
+  ```json
+  {
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "description": "Proriétés modifiables d'une section",
+    "required": [],
+    "properties": {
+      "code": {
+        "type": "string",
+        "description": "code de la section"
+      },
+      "label": {
+        "type": "string",
+        "description": "label de la section"
+      },
+      "account": {
+        "type": "string",
+        "description": "chaine qui permet de savoir si oui ou non on doit utiliser cette section",
+        "example":"601;602;-601A;-601B"
+      },
+      "closed": {
+        "type": "boolean",
+        "description": "clos ou ouvre une section afin de la rendre active ou inactive"
+      }
+    }
+  }
+  ```
+
+</details>
+<br>
+
+```bash
+$ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/analytics/sections/58' \
+--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+--header 'Authorization: Bearer {{API_TOKEN}}'
+--data-raw '{
+  "closed": true
+}'
+```
+
+<details>
+  <summary markdown="span">Retour JSON de l'API</summary>
+
+  ```json
+  {
+    "id_section_analytique": 58,
+    "code": "BACK",
+    "label": "SectionBACK",
+    "id_axe": 48,
+    "account": "601",
+    "closed": true
+  }
+  ```
+</details>
+<br>
+
+### Suppression d'une section
+
+La route `https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}` permet de supprimer une section.
+
+> Il est impossible de supprimer la section par défaut.
+
+```bash
+$ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/sections/58' \
+--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+--header 'Authorization: Bearer {{API_TOKEN}}'
+```
 
 ## Clés de répartition
 Par défaut sans configuration le back-end utilisera le numéro du compte pour effectuer la répartition correctement (ou sur la section "en attente" si le compte ne correspond à aucune section).
@@ -117,29 +440,153 @@ Par défaut sans configuration le back-end utilisera le numéro du compte pour e
 Néanmoins il est possible de configurer la répartition directement au sein de l'interface MyUnisoft:
 ![](./images/analytique_cle_repartition.PNG)
 
-La route `https://api.myunisoft.fr/api/v1/axes/{{id_axe}}/repartition_keys` permet de récupérer l'intégralité des clés de répartitions pour un axe identifié.
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys` permet de récupérer l'intégralité des clés de répartitions pour un axe identifié.
+
+> Il est possible de récupérer une clé de répartition avec l'id de l'axe + l'id de clé: `https://api.myunisoft.fr/api/v1/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}`
 
 ```bash
-$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/{{id_axe}}/repartition_keys' \
+$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-Lors d'un retour positif vous devriez avoir un JSON identique à celui ci-dessous:
-```json
-[
+<details>
+  <summary markdown="span">Retour JSON de l'API</summary>
+
+  ```json
+  [
+    {
+      "id_axe": 3744,
+      "id_repartion_key": 50,
+      "condition": "61",
+      "key": "CLE_BUG"
+    }
+  ]
+  ```
+</details>
+<br>
+
+### Création d'une clé de répartition
+
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys` permet de créer une clé de répartition à laquelle sera associée des répartitions
+
+<details>
+  <summary markdown="span">Voici le JSON Schema définissant le body de la requête.</summary>
+
+  ```json
   {
-    "id_axe": 3744,
-    "id_repartion_key": 50,
-    "condition": "61",
-    "key": "CLE_BUG"
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "description": "Nouvelle clé de réparition.",
+    "required": [],
+    "properties": {
+      "key": {
+        "type": "string",
+        "description": "Clé/Code de la ressource"
+      },
+      "condition": {
+        "type": "string",
+        "description": "Condition sur les numéros de comptes permettant l'execution ou non de la clé de répartiton",
+        "examples": [
+          "6;-607,-606"
+        ]
+      }
+    }
   }
-]
+  ```
+</details>
+
+```bash
+$ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes/48/sections' \
+--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+--header 'Authorization: Bearer {{API_TOKEN}}'
+--data-raw '{
+  "key": "PAYS",
+  "condition": "6"
+}'
 ```
 
-> Il est possible de récupérer une clé de répartition avec l'id de l'axe + l'id de clé: `https://api.myunisoft.fr/api/v1/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}`
+<details>
+  <summary markdown="span">Retour JSON de l'API</summary>
 
-### Taux de répartitions par section
+  ```json
+  {
+    "condition": "6",
+    "id_axe": 48,
+    "id_repartition_key": 5,
+    "key": "PAYS"
+  }
+  ```
+</details>
+<br>
+
+### Modification d'une clé de répartition
+
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}` permet de modifier une clé de répartition.
+
+<details>
+  <summary markdown="span">Voici le JSON Schema définissant le body de la requête.</summary>
+
+  ```json
+  {
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "description": "Nouvelle valeur de la clé de réparition.",
+    "required": [],
+    "properties": {
+      "key": {
+        "type": "string",
+        "description": "Clé/Code de la ressource "
+      },
+      "condition": {
+        "type": "string",
+        "description": "Condition sur les numéros de comptes permettant l'execution ou non de la clé de répartiton",
+        "examples": [
+          "6;-607,-606"
+        ]
+      }
+    }
+  }
+  ```
+
+</details>
+<br>
+
+```bash
+$ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/analytics/axes/48/repartition_keys/5' \
+--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+--header 'Authorization: Bearer {{API_TOKEN}}'
+--data-raw '{
+  "key": "COUNTRY"
+}'
+```
+
+<details>
+  <summary markdown="span">Retour JSON de l'API</summary>
+
+  ```json
+  {
+    "condition": "6",
+    "id_axe": 48,
+    "id_repartition_key": 5,
+    "key": "COUNTRY"
+  }
+  ```
+</details>
+<br>
+
+### Suppression d'une clé de répartition
+
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}` permet de supprimer une clé de répartition.
+
+```bash
+$ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/axes/51/repartition_keys/5' \
+--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+--header 'Authorization: Bearer {{API_TOKEN}}'
+```
+
+
+## Taux de répartitions par section
 
 L'API vous permet de récupérer les taux des répartitions par section à l'aide de l'id de la clé de répartition.
 
@@ -148,18 +595,89 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/repartition_key
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
+La route retournera un tableau défini par l'interface TypeScript `RateOfRepartitionKey`
+<details>
+  <summary markdown="span">Définition TypeScript `RateOfRepartitionKey`.</summary>
 
-La route retournera un tableau d'objet défini par l'interface TypeScript suivante;
-```ts
-interface RateOfRepartitionKey {
-  id_section_from_key: number;
-  id_section: number;
-  id_repartition_key: number;
-  rate: number;
-}
+  ```ts
+  interface RateOfRepartitionKey {
+    id_section_from_key: number;
+    id_section: number;
+    id_repartition_key: number;
+    rate: number;
+  }
+  ```
+</details>
+<br>
+
+![](./images/analytique_cle_repartition.PNG)
+> 📢 Cela correspond à la partie droite de l'image.
+
+### Appliquer des taux de répartitions par section
+
+La route `https://api.myunisoft.fr/api/v1/analytics/repartition_keys/{{id_repartition_key}}/repartition` permet de définir des taux de répartitions par section.
+
+> La somme des taux de répartitions doit obligatoirement être égale à 100.
+
+<details>
+  <summary markdown="span">Voici le JSON Schema définissant le body de la requête.</summary>
+
+  ```json
+  {
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "array",
+    "description": "Liste des sections qui vont etre utilisé pour la répartition",
+    "items": {
+      "type": "object",
+      "description": "valeur de la répartition de la section",
+      "required": [
+        "id_section",
+        "rate"
+      ],
+      "properties": {
+        "id_section": {
+          "type": "integer",
+          "description": "identifiant interne de la section"
+        },
+        "rate": {
+          "type": "integer",
+          "description": "Taux de la répartition"
+        }
+      }
+    }
+  }
+  ```
+</details>
+
+```bash
+$ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/repartition_keys/5/repartition' \
+--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+--header 'Authorization: Bearer {{API_TOKEN}}'
+--data-raw '[
+    {
+      "id_section": 219,
+      "rate": 10
+    },
+    {
+      "id_section": 249,
+      "rate": 10
+    },
+    {
+      "id_section": 454,
+      "rate": 80
+    }
+]'
 ```
 
-> 📢 Cela correspond à la partie droite de l'image un peu plus haut.
+<details>
+  <summary markdown="span">Retour JSON de l'API</summary>
+
+  ```json
+  true
+  ```
+</details>
+<br>
+
 
 ---
 
@@ -179,23 +697,27 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/repartitions?ac
 L'API prend le numéro du compte (**account**) ainsi que la valeur (le **montant**) a ventilé. Si vous voulez mieux comprendre comment l'endpoint fonctionne nous vous invitons à lire le chapitre sur la gestion des clés de répartitions.
 
 La route retournera un tableau défini par l'interface TypeScript `AnalyticRepartition`.
+<details>
+  <summary markdown="span">Définition TypeScript `AnalyticRepartition`.</summary>
 
-```ts
-interface AnalyticRepartition {
-  id_axe: number;
-  code: string;
-  label: string;
-  repartition: RepartitionInfo[];
-}
+  ```ts
+  interface AnalyticRepartition {
+    id_axe: number;
+    code: string;
+    label: string;
+    repartition: RepartitionInfo[];
+  }
 
-interface RepartitionInfo {
-  id_section: number;
-  code: string;
-  label: string;
-  rate: number;
-  amount: number;
-}
-```
+  interface RepartitionInfo {
+    id_section: number;
+    code: string;
+    label: string;
+    rate: number;
+    amount: number;
+  }
+  ```
+</details>
+<br>
 
 Le JSON retourné sera à utiliser pour la création d'une écriture au format JSON. Voir le guide [Création d'une entrée comptable avec le format JSON](./entry_json.md) pour plus d'informations.
 
