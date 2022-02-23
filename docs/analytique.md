@@ -114,13 +114,13 @@ $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/society/3' \
 
 ## Axes
 
-La route `https://api.myunisoft.fr/api/v1/axes` permet de récupérer l'intégralité des axes pour un dossier.
+La route `https://api.myunisoft.fr/api/v1/analytics/axes` permet de récupérer l'intégralité des axes pour un dossier.
 
 
-> Il est possible de récupérer un axe précis par l'id, exemple avec l'id 41: https://api.myunisoft.fr/api/v1/axes/41
+> Il est possible de récupérer un axe précis par l'id, exemple avec l'id 41: https://api.myunisoft.fr/api/v1/analytics/axes/41
 
 ```bash
-$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/axes' \
+$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/axes' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
@@ -266,6 +266,7 @@ $ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/ax
 
 <details>
   <summary markdown="span">Retour JSON de l'API</summary>
+
   ```json
   {
     "success": true,
@@ -277,10 +278,10 @@ $ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/ax
 
 ## Sections
 
-La route `https://api.myunisoft.fr/api/v1/axes/{{id_axe}}/sections` permet de récupérer l'intégralité des sections pour un axe identifié.
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/sections` permet de récupérer l'intégralité des sections pour un axe identifié.
 
 ```bash
-$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/{{id_axe}}/sections' \
+$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/sections' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
@@ -323,8 +324,8 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/{{id_axe}}/sect
 
 Il est possible de récupérer une section par son id (mais aussi de récupérer la section par défaut).
 
-- `https://api.myunisoft.fr/api/v1/sections/{{id_section}}`
-- `https://api.myunisoft.fr/api/v1/axes/{{id_axe}}/defaultsection`
+- `https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}`
+- `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/defaultsection`
 
 ### Création d'une section
 
@@ -442,7 +443,7 @@ Néanmoins il est possible de configurer la répartition directement au sein de 
 
 La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys` permet de récupérer l'intégralité des clés de répartitions pour un axe identifié.
 
-> Il est possible de récupérer une clé de répartition avec l'id de l'axe + l'id de clé: `https://api.myunisoft.fr/api/v1/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}`
+> Il est possible de récupérer une clé de répartition avec l'id de l'axe + l'id de clé: `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}`
 
 ```bash
 $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys' \
@@ -591,7 +592,7 @@ $ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/ax
 L'API vous permet de récupérer les taux des répartitions par section à l'aide de l'id de la clé de répartition.
 
 ```bash
-$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/repartition_keys/{{id_repartition_key}}/repartition' \
+$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/repartition_keys/{{id_repartition_key}}/repartition' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
@@ -689,7 +690,7 @@ Les formats supportant l'analytique chez MyUnisoft sont:
 À noter que pour le format JSON il est possible de récupérer la répartition directement par API:
 
 ```bash
-$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/repartitions?account=601000&value=1000' \
+$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/repartitions?account=601000&value=1000' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
