@@ -143,6 +143,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 
 ## Guides sur comment intéragir avec le paramétrages et données d'un dossier de production
 - [Récupérer et travailler avec le plan comptable d'un dossier de production](./docs/plan_comptable.md)
+  - [Comprendre les informations complémentaires d'un compte client ou fournisseur](./docs/complementary_info.md)
 - [Récupérer les exercices d'un dossier de production](./docs/exercices.md)
 - [Récupérer la liste de TVA d'un dossier de production](./docs/tva.md)
 - [Récupérer les journaux d'un dossier de production](./docs/journaux.md)
