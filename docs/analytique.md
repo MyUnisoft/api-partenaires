@@ -498,7 +498,7 @@ La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_
 </details>
 
 ```bash
-$ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes/48/sections' \
+$ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes/48/repartition_keys' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 --data-raw '{
@@ -581,7 +581,7 @@ $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/analytics/axes/
 La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}` permet de supprimer une clé de répartition.
 
 ```bash
-$ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/axes/51/repartition_keys/5' \
+$ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/axes/48/repartition_keys/5' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
