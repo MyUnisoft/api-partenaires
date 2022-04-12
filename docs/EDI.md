@@ -7,7 +7,7 @@ Documentation (Guide) sur la récupération d'un fichier de déclaration EDI.
 ## API
 
 ```
-curl --location --request GET 'https://api.myunisoft.fr/api/v1/core/accounting/export/edi?exerciceId={{exerciceId}}' \
+curl --location --request GET 'https://api.myunisoft.fr/api/v1/accounting/export/edi?exerciceId={{exerciceId}}' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
