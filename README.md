@@ -142,6 +142,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Attacher une pièce jointe à une entrée comptable existante](./docs/pj.md)
 
 ## Guides sur comment intéragir avec le paramétrages et données d'un dossier de production
+- [Récupérer les dossiers de production (sociétés)](./docs/society.md)
 - [Récupérer et travailler avec le plan comptable d'un dossier de production](./docs/plan_comptable.md)
   - [Comprendre les informations complémentaires d'un compte client ou fournisseur](./docs/complementary_info.md)
 - [Récupérer les exercices d'un dossier de production](./docs/exercices.md)
