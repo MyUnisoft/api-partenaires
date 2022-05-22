@@ -133,6 +133,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 
 ## Guides pour l'accès cabinet
 - [Récupérer les utilisateurs et personne physiques d'un schéma (cabinet)](./docs/users.md)
+- [Récupérer les dossiers accessibles pour un utilisateur (cabinet)](./docs/dossier_accessible.md)
 
 ## Guides sur l'import d'écritures comptables
 - [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
