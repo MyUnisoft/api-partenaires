@@ -123,6 +123,7 @@ interface NewEntryLine {
   /**
   Configuration du lettrage pour la ligne.
   Longueur maximum de 3 caractères au fomat [a-zA-Z]{1,3}
+  Note: ⚠️ le lettrage n'est pas exploité par le back-end à ce jour.
   */
   lettrage?: string;
 
