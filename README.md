@@ -152,6 +152,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer les types de paiement disponible d'un dossier de production](./docs/paiements.md)
 - [Récupérer les écritures comptables](./docs/ecritures.md)
 - [Récupérer un fichier EDI](./docs/EDI.md)
+- [Récupération des données widget et dashboards](./docs/dashboard.md)
 - [Gérer l'analytique d'une société (dossier)](./docs/analytique.md)
 
 # Roadmap 2022 📆
