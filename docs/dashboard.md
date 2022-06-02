@@ -54,6 +54,9 @@ Par exemple ici `situation_globale`:
 
 ![](./images/dashboard_situation_globale.PNG)
 
+<details>
+<summary>Voir la réponse JSON</summary>
+
 ```json
 {
     "id_card": 3,
@@ -202,6 +205,7 @@ Par exemple ici `situation_globale`:
     ]
 }
 ```
+</details>
 
 ## Widget
 
