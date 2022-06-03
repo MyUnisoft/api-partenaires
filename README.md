@@ -8,7 +8,9 @@ L’authentification du partenaire/cabinet est principalement basée sur:
 - une clé **x-third-party** fournie par MyUnisoft (demande auprès de [c.mandrilly@myunisoft.fr](c.mandrilly@myunisoft.fr)). C'est une clé **unique** qui ne doit surtout **pas être communiqué** en dehors de nos équipes techniques respectives.
 - une clé [JWT](https://jwt.io/) (**API Token**) pour chaque cabinet et/ou société.
 
-Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur la documentation postman: [https://docs.api.myunisoft.fr/](https://docs.api.myunisoft.fr/)
+> **Note**
+>
+> Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur la documentation postman: [https://docs.api.myunisoft.fr/](https://docs.api.myunisoft.fr/)
 
 # Equipe 👥
 
@@ -29,9 +31,9 @@ Notre API partenaires permet deux types distincts d'accès:
 
 🔹 Un accès à l'intégralité d'un **cabinet**.
 
-> Cet accès à été principalement conçu pour être utilisé par les cabinets eux-mêmes. L'authentification delivera un jeton ayant une durée de vie très courte pour garantir une meilleure sécurité des données appartenant au cabinet.
+> Cet accès à été principalement conçu pour être utilisé par les cabinets eux-mêmes. L'authentification par le biais d'un compte de service API delivera un jeton ayant une durée de vie très courte pour garantir une meilleure sécurité des données appartenant au cabinet.
 >
-> **Note: Nous travaillons encore sur ce modèle d'accès et des changements sont à venir**.
+> **Note** Nous travaillons encore sur ce modèle d'accès et des changements sont **à venir**.
 
 Il vous sera nécessaire de choisir l'un des deux (ou de discuter plus amplement avec nous pour que nous puissions vous guider vers la bonne abstraction).
 
@@ -55,9 +57,11 @@ Ces éléments permettront de créer le connecteur sur l’application MyUnisoft
 
 ![](./docs/images/api_cabinet.png)
 
-Si vous êtes un partenaire et que votre solution **nécessite un tel accès** nous vous invitons à nous fournir les mêmes informations que pour `🔸 l'accès par société`.
+Si vous êtes un partenaire et que votre solution **nécessite un tel accès** nous vous invitons à nous fournir les mêmes informations que pour `🔸 l'accès par société`. Pour les cabinets déjà membre il vous sera nécessaire de fournir un mail pour la création d'un compte de service API.
 
-Pour les cabinets déjà membre il vous sera nécessaire de fournir un mail pour la création d'un compte API (Nous vous **recommandons de créer un mail spécialement pour l'occasion**, par exemple `apimyunisoft@domain.fr`).
+> **Note**
+> 
+> Nous vous **recommandons de créer un mail spécialement pour l'occasion**, par exemple `apimyunisoft@domain.fr`. Il est tout à fait possible de créer un Alias (attention néanmoins aux mailings list qui peuvent être problématique).
 
 ---
 
@@ -76,7 +80,7 @@ Les éléments que nous renvoyons au partenaire (ou cabinet) une fois les élém
 
 Les utilisateurs sont attachés au schéma (ce sont les comptes ayant un accès à la plateforme Web et mobile).
 
-> Note: Pour récupérer la liste et le paramétrage de plusieurs dossiers il est nécessaire d'avoir un accès cabinet. Il en va de même pour la récupération des entités qui ne sont pas liées au dossier (comme les utilisateurs et les portefeuilles).
+> **Note** Pour récupérer la liste et le paramétrage de plusieurs dossiers il est nécessaire d'avoir un accès cabinet. Il en va de même pour la récupération des entités qui ne sont pas liées au dossier (comme les utilisateurs et les portefeuilles).
 
 # Liens racine de nos API 🌍
 
@@ -90,14 +94,22 @@ Les utilisateurs sont attachés au schéma (ce sont les comptes ayant un accès 
 Les sous-documentations suivantes vous guideront dans le flow d'authentification nécessaire selon le type d'accès que vous avez souhaité.
 
 [🔸 Accès par société](./docs/auth/societe.md)
-> ⚠️ Dans le cadre **d'un accès société** l'authentification n'est nécessaire **que pour la phase de développement** du connecteur! Plus [d'informations ici](./docs/connector.md).
 
+> **Note**
+>
+> Dans le cadre **d'un accès société** l'authentification n'est nécessaire **que pour la phase de développement** du connecteur! Plus [d'informations ici](./docs/connector.md).
 
 [🔹 Accès cabinet](./docs/auth/cabinet.md)
 
+> **Note**
+>
+> Pour l'accès cabinet il vous sera nécessaire d'utiliser un compte de service API (à ne surtout pas confondre avec un compte Utilisateur MyUnisoft classique). Les comptes API ne peuvent pas se connecter sur la plateforme web ou mobile et ne sont utilisables que par le biais de l'API partenaires.
+
 # Utilisation d’une route exposée par l’API 🚀
 
-Lors de l’utilisation d’une route exposée il est nécessaire d’avoir l’**API Token** en [Bearer token](https://swagger.io/docs/specification/authentication/bearer-authentication/) dans l'en-tête **Authorization** (et surtout pas le jeton Utilisateur).
+Lors de l’utilisation d’une route exposée il est nécessaire d’avoir l’**API Token** en [Bearer token](https://swagger.io/docs/specification/authentication/bearer-authentication/) dans l'en-tête **Authorization**.
+
+> **Warning** À ne surtout pas confondre pas avec un jeton JWT Utilisateur.
 
 Il est aussi nécessaire d’ajouter une en-tête “**X-Third-Party-Secret**” contenant la clé secrète communiqué par notre équipe.
 
@@ -159,6 +171,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 
 - Flow d'autorisation avec le protocole OAuth2. L'objectif est l'automatisation et la sécurisation des intégrations.
 - Notifications temps réel vers nos partenaires grâce à des webhooks.
-- Création d'un SDK Node.js à destination des cabinets pour exploiter l'API partenaires sans difficultés.
+- Création d'un SDK Node.js à destination des cabinets (et partenaires secondairement) pour exploiter l'API partenaires sans difficultés.
+- Nouveau front-end (market place) dynamique qui offrira de nouvelles fonctionnalités (notamment lors des phases de développements et de tests).
 
 > 👀 L'ajout d'endpoints manquants n'est pas pris en compte dans cette section.
