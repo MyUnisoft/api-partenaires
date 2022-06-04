@@ -111,6 +111,7 @@ Pour plus d'informations nous vous invitons à consulter les sous documentations
 
 - [🔸 Accès par société](./docs/endpoints/societe.md)
 - [🔹 Accès cabinet](./docs/endpoints/cabinet.md)
+- [🔑 Liste des routes accessibles](./docs/endpoints/endpoints_accessibles.md)
 
 ## Rate-limit des routes exposées 🚥
 
