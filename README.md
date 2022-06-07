@@ -89,6 +89,13 @@ Les utilisateurs sont attachés au schéma (ce sont les comptes ayant un accès 
 
 - Service d'Authentification: [https://app.myunisoft.fr/api/authenticate](https://app.myunisoft.fr/api/authenticate)
 
+# Activation de la clé Third Party
+
+Vous n'avez rien à faire pour activer la clé, ce sont les équipes MyUnisoft qui s'occupent de la générer et de l'activer (càd la rendre valide vis à vis de l'API partenaires).
+
+> À noter qu'il peut parfois y avoir un certain délai entre la génération de la clé et son activation.
+La clé ne sera pas reconnue par notre API tant que la clé n'a pas été activée et par conséquent vous n'aurez pas l'autorisation de consommer notre API bien que vous ayez en votre possession une clé fournie par MyUnisoft.
+
 # Authentification 🔐
 
 Les sous-documentations suivantes vous guideront dans le flow d'authentification nécessaire selon le type d'accès que vous avez souhaité.
@@ -123,6 +130,7 @@ Pour plus d'informations nous vous invitons à consulter les sous documentations
 
 - [🔸 Accès par société](./docs/endpoints/societe.md)
 - [🔹 Accès cabinet](./docs/endpoints/cabinet.md)
+- [🔑 Liste des routes accessibles](./docs/endpoints/endpoints_accessibles.md)
 
 ## Rate-limit des routes exposées 🚥
 

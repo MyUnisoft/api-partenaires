@@ -1,5 +1,8 @@
 # Endpoints d'accès cabinet
 
+> Suivez [ce guide](./endpoints_accessibles.md) pour récupérer les routes disponibles.
+Les routes sont documentées sur le [postman](https://docs.api.myunisoft.fr/#intro) en ligne.
+
 Pour toutes les endpoints liées aux informations sur une société particulière, vous devez renseigner en plus l’en-tête HTTP “**society-id**”.
 
 ```bash

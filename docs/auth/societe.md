@@ -1,42 +1,21 @@
 # 🔸 Authentification avec accès société
 
-Il est nécessaire de récupérer **un jeton Utilisateur** pour pouvoir utiliser les routes décrites dans les sections ci-dessous. Nous vous invitons à suivre [le guide suivant](./user.md) pour en récupérer un.
-
-## Récupération de l’id du partenaire (grantedFor)
-Avant de pouvoir générer une clé (**API Token**) il est nécessaire de récupérer votre id partenaire à l’aide de la **clé secrète x-third-party**.
-
-L’id récupéré peut être différent selon l’environnement (production, staging et dev) et  il sera utilisé en tant que clé `grantedFor` pour la génération de l’API Token dans la prochaine section.
-
-Pour récupérer l’id il vous faut requêter la route `/api/v1/key/granted-for` avec la méthode **POST**:
-```bash
-$ curl --location --request POST 'https://app.myunisoft.fr/api/v1/key/granted-for' \
---header 'Authorization: Bearer {{TOKEN}}' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "secret": "nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V"
-}'
-```
-
-Si tout se passe comme  prévu vous devriez recevoir un payload comme suit avec un status code `200` (**le 1 dans le retour étant évidemment un exemple**). 
-<p align="center">
-<img src="../images/societe_auth_granted.png" height="200">
-</p>
+Pour commencer, il est nécessaire de récupérer **un jeton Utilisateur**. Nous vous invitons à suivre [le guide suivant](./user.md) pour en récupérer un.
 
 ## Génération de la clé (API Token)
 
 Il suffit de requêter la route `/api/v1/key/create` avec la méthode **POST**:
 ```bash
 $ curl --location --request POST 'https://app.myunisoft.fr/api/v1/key/create' \
---header 'Authorization: Bearer {{TOKEN}}' \
+--header 'Authorization: Bearer {{ TOKEN }}' \
+--header 'X-Third-Party-Secret: {{ X-Third-Party-Secret }}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "grantedFor": {{GRANTED_FOR}},
   "target": 1855
 }
 '
 ```
 
-- **grantedFor**: l’id du partenaire auquel vous souhaitez avoir accès et qui sera lié à l’API Token. Récupéré dans la section précédente.
 - **target**: l’id de la société qui sera lié à l’API token. Il est possible de récupérer l’id d’une société par le biais de l’application MyUnisoft (l’id sera présent dans l’URL).
 
 Si tout se passe comme  prévu vous devriez recevoir un payload comme suit avec un status code `200`. 
