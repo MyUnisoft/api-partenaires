@@ -226,3 +226,7 @@ export interface EntryOPJ {
   document_id?: number;
 }
 ```
+
+---
+
+⬅️ [README](../README.md)

@@ -249,3 +249,6 @@ interface Company {
 ```
 </details>
 
+---
+
+⬅️ [README](../README.md)

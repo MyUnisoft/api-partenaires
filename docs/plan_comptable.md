@@ -316,3 +316,7 @@ La requête ci-dessus aura pour effet de récupérer (ou créer s'il n'existe pa
 ### Mise à jour d'un compte existant
 
 TBC
+
+---
+
+⬅️ [README](../README.md)

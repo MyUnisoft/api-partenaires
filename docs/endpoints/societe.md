@@ -7,3 +7,6 @@ Lors de l'utilisation des endpoints avec un accès de type société il n'est pa
 
 Il n'est donc pas possible de récupérer des informations en lien avec le cabinet ou d'autres sociétés/dossiers.
 
+---
+
+⬅️ [README](../../README.md)

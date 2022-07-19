@@ -23,3 +23,7 @@ Il pourrait être tentant d'essayer de s'interconnecter à MyUnisoft en exploita
 - Le modèle d'authentification est conçu pour un Utilisateur (une personne physique). Établir une utilisation non identifiée et non autorisée aura probablement comme conséquence de compromettre la sécurité des comptes que vous exploitez.
 - Vous n'avez aucune garantie que les endpoints HTTP seront demain toujours accessible et identique (Il vous sera donc impossible de vous plaindre à MyUnisoft en cas d'impact).
 - Ce ne sont pas les mêmes garanties en termes de sécurité, monitoring et support.
+
+---
+
+⬅️ [README](../README.md)

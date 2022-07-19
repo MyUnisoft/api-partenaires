@@ -55,3 +55,7 @@ interface Route {
 
 type Routes = Route[];
 ```
+
+---
+
+⬅️ [README](../../README.md)

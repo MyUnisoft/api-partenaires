@@ -238,3 +238,7 @@ Dans le cas contraire le JSON retourné ressemble à ceci:
     "last_update":"2021-06-02T11:17:37"
 }
 ```
+
+---
+
+⬅️ [README](../README.md)

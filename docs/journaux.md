@@ -234,3 +234,7 @@ interface Diary<T = DiaryType> {
   diary_type_name: string;
 }
 ```
+
+---
+
+⬅️ [README](../README.md)

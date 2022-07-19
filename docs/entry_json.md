@@ -89,7 +89,7 @@ interface NewEntryLine {
   Numéro d'identification de la facture.
   Contient uniquement des caractères alphanumériques et avoir une longueur maximum de 10.
   */
-  piece2: string;
+  piece2?: string;
 
   /** Doit être supérieur ou égale a la propriété date_piece, format AAAA-MM-JJ */
   deadline: string;
@@ -133,6 +133,8 @@ interface NewEntryLine {
   pointage_jj?: string;
 }
 ```
+
+> **Note** Vous aurez probablement besoin d'un des deux champs (**piece** ou **piece2**).
 ​
 ### Entrée comptable
 ​
@@ -302,7 +304,7 @@ Le schéma JSON est un vocabulaire qui vous permet d'annoter et de valider les d
     "NewEntryLine": {
       "type": "object",
       "additionalProperties": true,
-      "required": ["piece2", "deadline", "account_id", "label", "credit", "debit"],
+      "required": ["deadline", "account_id", "label", "credit", "debit"],
       "properties": {
         "pj_list": {
           "type": "array",
@@ -467,3 +469,7 @@ Pour récupérer l'écriture en elle même il vous suffit maintenant d'appeler l
     ]
 };
 ```
+
+---
+
+⬅️ [README](../README.md)
