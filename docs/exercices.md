@@ -91,3 +91,7 @@ export interface Exercice {
 ```
 
 Si l'exercice n'est pas un clos les valeurs `closed_at` et `closed_by` seront null.
+
+---
+
+⬅️ [README](../README.md)

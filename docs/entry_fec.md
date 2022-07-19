@@ -34,3 +34,7 @@ Le type permet de configurer le comportement de la requête:
 - **0** = vérification si écriture sur l'exercice (renvoie d'un message d'erreur).
 - **1** = aucune vérification on rajoute les données a l'exercice existant.
 - **2** = on supprime les écritures si présent sur l'exercice.
+
+---
+
+⬅️ [README](../README.md)

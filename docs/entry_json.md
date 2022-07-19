@@ -467,3 +467,7 @@ Pour récupérer l'écriture en elle même il vous suffit maintenant d'appeler l
     ]
 };
 ```
+
+---
+
+⬅️ [README](../README.md)

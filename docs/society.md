@@ -595,3 +595,7 @@ Il est possible de récupérer les informations d'un dossier spécifique grâce:
 
   > Le retour JSON de l'API a la même structure que le retour JSON avec accès société.
 </details>
+
+---
+
+⬅️ [README](../README.md)

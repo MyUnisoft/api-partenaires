@@ -2,7 +2,7 @@
 
 Documentation (Guide) sur la récupération d'un fichier de déclaration EDI.
 
-> ⚠️ Attention l'accès à cet endpoint n'est pas automatique (si vous en avez besoin, merci de demander aux équipes MyUnisoft de vous autoriser l'accès).
+> **Warning**: L'accès à cet endpoint n'est pas automatique (si vous en avez besoin, merci de demander aux équipes MyUnisoft de vous autoriser l'accès).
 
 ## API
 
@@ -38,3 +38,7 @@ Il existe aussi deux autres erreurs possibles (avec statusCode 400);
 
 - `ACCOUNTING-FOLDER-NOT-FOUND` (L'id du dossier de production ne correspond à rien sur MyUnisoft).
 - `MISSING-ACCOUNTING-FOLDER-ID` (L'id du dossier de production est manquant, possible dans le cadre d'un 🔹 Accès cabinet)
+
+---
+
+⬅️ [README](../README.md)

@@ -26,3 +26,7 @@ Les routes sont documentés sur le [postman en ligne](https://docs.api.myunisoft
 
 ## Route society
 La route `/api/v1/society` peut recevoir le header **society-id** ce qui permet de récupérer les informations uniquement pour la société en question.
+
+---
+
+⬅️ [README](../../README.md)

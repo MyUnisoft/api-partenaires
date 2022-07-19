@@ -35,3 +35,7 @@ Vous devriez recevoir un status code `200` avec un JSON contenant la fameuse cl�
     }
 }
 ```
+
+---
+
+⬅️ [🔸 Authentification avec accès société](./societe.md)

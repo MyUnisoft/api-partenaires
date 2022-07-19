@@ -93,7 +93,7 @@ Les utilisateurs sont attachés au schéma (ce sont les comptes ayant un accès 
 
 Vous n'avez rien à faire pour activer la clé, ce sont les équipes MyUnisoft qui s'occupent de la générer et de l'activer (càd la rendre valide vis à vis de l'API partenaires).
 
-> À noter qu'il peut parfois y avoir un certain délai entre la génération de la clé et son activation.
+> **Note** Il peut y avoir un certain délai entre la génération de la clé et son activation.
 La clé ne sera pas reconnue par notre API tant que la clé n'a pas été activée et par conséquent vous n'aurez pas l'autorisation de consommer notre API bien que vous ayez en votre possession une clé fournie par MyUnisoft.
 
 # Authentification 🔐

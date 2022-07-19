@@ -70,3 +70,7 @@ interface Payment {
   code: string;
 }
 ```
+
+---
+
+⬅️ [README](../README.md)

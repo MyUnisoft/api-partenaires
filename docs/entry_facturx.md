@@ -28,3 +28,7 @@ La route prend plusieurs arguments:
 - **ocr_type_id** 6 Pour Factur-X.
 - **name** (le nom du fichier qui est attaché avec la requête).
 - **extension** pdf.
+
+---
+
+⬅️ [README](../README.md)
