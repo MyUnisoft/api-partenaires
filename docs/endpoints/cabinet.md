@@ -20,7 +20,9 @@ Les endpoints suivants ne nécessitent pas l'en-tête **society-id**:
 - /api/v1/users_v2 (liste des comptes utilisateurs du cabinet).
 - /api/v1/pers_physique (liste des personnes physiques gérées par cabinet).
 
-Les routes sont documentés sur le [postman en ligne](https://docs.api.myunisoft.fr/#intro). Attention car les routes sur le postman n'indique pas la nécessité d'avoir l'en-tête **society-id**.
+Les routes sont documentés sur le [postman en ligne](https://docs.api.myunisoft.fr/#intro).
+
+> **Warning**: Attention car les routes sur le postman n'indique pas la nécessité d'avoir l'en-tête **society-id**.
 
 ## Route society
 La route `/api/v1/society` peut recevoir le header **society-id** ce qui permet de récupérer les informations uniquement pour la société en question.
