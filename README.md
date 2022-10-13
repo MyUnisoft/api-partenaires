@@ -154,6 +154,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 ## Guides pour l'accès cabinet
 - [Récupérer les utilisateurs et personne physiques d'un schéma (cabinet)](./docs/users.md)
 - [Récupérer les dossiers accessibles pour un utilisateur (cabinet)](./docs/dossier_accessible.md)
+- [Recherche d'écriture comptable rapide](./docs/quick_search.md)
 
 ## Guides sur l'import d'écritures comptables
 - [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
@@ -167,6 +168,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer et travailler avec le plan comptable d'un dossier de production](./docs/plan_comptable.md)
   - [Comprendre les informations complémentaires d'un compte client ou fournisseur](./docs/complementary_info.md)
 - [Récupérer les exercices d'un dossier de production](./docs/exercices.md)
+- [Récupérer la liste d'IBAN pour un dossier de production](./docs/RIB.md)
 - [Récupérer la liste de TVA d'un dossier de production](./docs/tva.md)
 - [Récupérer les journaux d'un dossier de production](./docs/journaux.md)
 - [Récupérer les types de paiement disponible d'un dossier de production](./docs/paiements.md)
