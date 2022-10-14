@@ -1,3 +1,5 @@
+<span id="readme-top"></span>
+
 # Comprendre les informations complémentaires d'un compte client ou fournisseur
 
 > ⚠️ Nous vous invitons préalablement à lire le guide [Récupérer et travailler avec le plan comptable.](./plan_comptable.md)
@@ -15,6 +17,8 @@ Sélectionner par exemple un compte fournisseur et éditez-le (un pop-up devrait
 Vous n'avez plus qu'à accéder au second onglet "Info. complémentaires".
 
 ![](./images/fiche_compte_complementaire.PNG)
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ## API
 
@@ -174,6 +178,8 @@ interface AmountTypePaid {
 }
 ```
 </details>
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ---
 

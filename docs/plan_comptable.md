@@ -1,3 +1,5 @@
+<span id="readme-top"></span>
+
 # Récupérer et travailler avec le plan comptable.
 Ce guide a pour objectif de vous aider dans la gestion du plan comptable.
 
@@ -179,6 +181,8 @@ Si vous avez choisi le mode 1 le retour sera plutôt similaire à celui-ci:
 ]
 ```
 
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
 ### Récupération des entrées comptables en lien avec un compte.
 Il est possible de récupérer les entrées en lien avec un compte (par id ou numéro).
 
@@ -313,9 +317,7 @@ La requête ci-dessus aura pour effet de récupérer (ou créer s'il n'existe pa
 
 > Note: Le compte de contrepartie lorsqu'il est défini à la même structure qu'un compte normal (donc avec la propriété account_id, account_number et label).
 
-### Mise à jour d'un compte existant
-
-TBC
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ---
 

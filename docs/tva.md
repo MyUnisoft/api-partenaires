@@ -1,3 +1,5 @@
+<span id="readme-top"></span>
+
 # Récupérer la TVA d'une société (dossier)
 Ce guide a pour objectif de vous aider dans la récupération des paramètres de TVA d'un dossier (société).
 
@@ -57,6 +59,8 @@ Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à 
 
 ### Rate
 Les rates possibiles sont: 2.10%, 5.5%, 10%, 20%, 8.5%, 0%, 0.90%, 1.05%, 1.75%. Leur Ids dans le même ordre (de 1 à 9).
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Type de TVA (vat_type)
 
@@ -157,6 +161,8 @@ Attention `account_ded` et `account_coll` peuvent être null (dans le cas d'un r
 
 ## Architecture d'une TVA MyUnisoft
 À la différence de plusieurs autres logiciels la TVA sur MyUnisoft est directement composé d'un compte achat (déductible) et vente (collectée). Dans le cadre d'une auto-liquidation vous aurez donc au sein d'une même TVA l'intégralité des informations qui vous sont nécessaires.
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ---
 

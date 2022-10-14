@@ -1,3 +1,5 @@
+<span id="readme-top"></span>
+
 # Création d'une entrée comptable avec le format JSON
 
 Documentation sur la création d’une entrée comptable au format JSON.
@@ -46,6 +48,8 @@ interface PJ {
 }
 ```
 ​
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
 ### Analytique
 
 Définition de la structure JSON pour l'ajout de l'analytique sur une ligne d'une entrée comptable.
@@ -68,6 +72,8 @@ interface RepartitionInfo {
 ```
 
 L'objet en question est récupérable automatiquement par le biais de l'API `https://api.myunisoft.fr/api/v1/analytics/repartitions`. Pour plus d'informations nous vous invitons à consulter [le guide sur la gestion de l'analytique](./analytique.md).
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Ligne entrée comptable
 ​
@@ -136,6 +142,8 @@ interface NewEntryLine {
 
 > **Note** Vous aurez probablement besoin d'un des deux champs (**piece** ou **piece2**).
 ​
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
 ### Entrée comptable
 ​
 Structure principale (racine) pour la création d’une entrée comptable dans MyUnisoft. Il est important que l’intégralité des lignes soit équilibré en crédit et débit.
@@ -188,11 +196,15 @@ interface NewEntry {
 }
 ```
 
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 ​
 ## Schéma JSON
 ​
 Le schéma JSON est un vocabulaire qui vous permet d'annoter et de valider les documents JSON. Il existe des outils en ligne comme JSON Schema Validator qui vous permettront d’expérimenter en temps réel la validation d’une structure JSON.
 ​
+<details>
+<summary>Visualiser le schéma JSON</summary>
+
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
@@ -425,12 +437,15 @@ Le schéma JSON est un vocabulaire qui vous permet d'annoter et de valider les d
   }
 }
 ```
-​
+</details>
+
 Exemple avec l’outil cité plus tôt:
 ​
 Il vous suffit de copier-coller le schéma ci-dessus dans le formulaire de gauche et votre entrée comptable dans le formulaire de droite. S'il y des anomalies elles seront détectées.
 ​
 ![](https://i.imgur.com/EUgYd4T.png)
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ## Gestion des comptes tiers
 À la **différence de l'import TRA+PJ** il n'est pas possible de synchroniser et créer automatiquement les comptes tiers **411** et **401**.
@@ -469,6 +484,8 @@ Pour récupérer l'écriture en elle même il vous suffit maintenant d'appeler l
     ]
 };
 ```
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ---
 

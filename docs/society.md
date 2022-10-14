@@ -1,3 +1,5 @@
+<span id="readme-top"></span>
+
 # Récupérer les sociétés (dossiers)
 Ce guide a pour objectif de vous aider dans la récupération des dossiers d'un cabinet (entités/schémas).
 
@@ -318,8 +320,6 @@ curl --location --request GET 'https://api.myunisoft.fr/api/v1/society' \
   ```
 </details>
 
-<br>
-
 ### Plusieurs options sont disponibles:
 
 <details>
@@ -595,6 +595,8 @@ Il est possible de récupérer les informations d'un dossier spécifique grâce:
 
   > Le retour JSON de l'API a la même structure que le retour JSON avec accès société.
 </details>
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ---
 
