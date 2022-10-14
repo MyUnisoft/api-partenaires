@@ -1,3 +1,5 @@
+<span id="readme-top"></span>
+
 # Récupérer les exercices d'une société (dossier)
 Ce guide a pour objectif de vous aider dans la récupération des exercices d'une société (dossier).
 
@@ -91,6 +93,8 @@ export interface Exercice {
 ```
 
 Si l'exercice n'est pas un clos les valeurs `closed_at` et `closed_by` seront null.
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ---
 

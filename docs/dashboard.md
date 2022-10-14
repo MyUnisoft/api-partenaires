@@ -1,3 +1,5 @@
+<span id="readme-top"></span>
+
 # Récupération des données widget et dashboards
 
 API pour récupérer les informations des dashboards et widgets. Ces modules graphiques sont consultables sur la page d'accueil (home page) d'un dossier de production MyUnisoft.
@@ -238,6 +240,8 @@ Dans le cas contraire le JSON retourné ressemble à ceci:
     "last_update":"2021-06-02T11:17:37"
 }
 ```
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ---
 

@@ -1,3 +1,5 @@
+<span id="readme-top"></span>
+
 # Gérer l'analytique d'une société (dossier)
 
 Ce guide a pour objectif de vous aider à gérer l'analytique d'un dossier MyUnisoft par API.
@@ -112,6 +114,8 @@ $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/society/3' \
 </details>
 <br>
 
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
 ## Axes
 
 La route `https://api.myunisoft.fr/api/v1/analytics/axes` permet de récupérer l'intégralité des axes pour un dossier.
@@ -163,6 +167,8 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/axes'
 </details>
 <br>
 
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
 ### Création d'un axe
 
 La route `https://api.myunisoft.fr/api/v1/analytics/axes` permet de créer un axe.
@@ -191,6 +197,8 @@ $ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes
   ```
 </details>
 <br>
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Modification d'un axe
 
@@ -238,7 +246,6 @@ $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/analytics/axes/
 }'
 ```
 
-
 <details>
   <summary markdown="span">Retour JSON de l'API</summary>
 
@@ -253,6 +260,8 @@ $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/analytics/axes/
   ```
 </details>
 <br>
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Suppression d'un axe
 
@@ -275,6 +284,8 @@ $ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/ax
   ```
 </details>
 <br>
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ## Sections
 
@@ -327,6 +338,8 @@ Il est possible de récupérer une section par son id (mais aussi de récupérer
 - `https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}`
 - `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/defaultsection`
 
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
 ### Création d'une section
 
 La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/sections` permet de créer une section.
@@ -359,6 +372,8 @@ $ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes
   ```
 </details>
 <br>
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Modification d'une section
 
@@ -435,6 +450,8 @@ $ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/se
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
 ## Clés de répartition
 Par défaut sans configuration le back-end utilisera le numéro du compte pour effectuer la répartition correctement (ou sur la section "en attente" si le compte ne correspond à aucune section).
 
@@ -466,6 +483,8 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/axes/
   ```
 </details>
 <br>
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Création d'une clé de répartition
 
@@ -520,6 +539,8 @@ $ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes
   ```
 </details>
 <br>
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Modification d'une clé de répartition
 
@@ -576,6 +597,8 @@ $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/analytics/axes/
 </details>
 <br>
 
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
 ### Suppression d'une clé de répartition
 
 La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}` permet de supprimer une clé de répartition.
@@ -586,6 +609,7 @@ $ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/ax
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ## Taux de répartitions par section
 
@@ -613,6 +637,8 @@ La route retournera un tableau défini par l'interface TypeScript `RateOfReparti
 
 ![](./images/analytique_cle_repartition.PNG)
 > 📢 Cela correspond à la partie droite de l'image.
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Appliquer des taux de répartitions par section
 
@@ -679,6 +705,7 @@ $ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/repa
 </details>
 <br>
 
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ---
 
@@ -734,6 +761,8 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/line_
 ```
 
 Le retour sera là aussi identique à la définition `AnalyticRepartition` présent dans le chapitre précédent.
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ---
 

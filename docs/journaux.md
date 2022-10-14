@@ -1,3 +1,5 @@
+<span id="readme-top"></span>
+
 # Récupérer les journaux d'une société (dossier)
 Ce guide a pour objectif de vous aider dans la récupération des journaux (diary) d'une société (dossier).
 
@@ -18,6 +20,10 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/diary' \
 > 👀 Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
 
 Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à l'exemple ci-dessous**
+
+<details>
+<summary>Visualiser la réponse JSON</summary>
+
 ```json
 [
     {
@@ -176,6 +182,7 @@ Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à 
     }
 ]
 ```
+</details>
 
 ### Type de journaux
 
@@ -234,6 +241,8 @@ interface Diary<T = DiaryType> {
   diary_type_name: string;
 }
 ```
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ---
 

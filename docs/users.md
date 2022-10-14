@@ -1,3 +1,5 @@
+<span id="readme-top"></span>
+
 # Récupérer les utilisateurs et personne physiques d'un schéma (cabinet)
 Ce guide a pour objectif de vous aider dans la récupération des utilisateurs.
 
@@ -129,6 +131,8 @@ interface UserPersonalDetail {
 ```
 </details>
 
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
 ---
 
 MyUnisoft possède deux types de profil distincts;
@@ -138,6 +142,8 @@ MyUnisoft possède deux types de profil distincts;
 Il existent plusieurs droits au sein de chaque types.
 
 ![](./images/user_rights.png)
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Personne physiques
 
@@ -248,6 +254,8 @@ interface Company {
 }
 ```
 </details>
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ---
 
