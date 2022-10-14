@@ -1,3 +1,5 @@
+<span id="readme-top"></span>
+
 <p align="center">
 <img src="./docs/images/logo.jpg" height="200">
 </p>
@@ -37,6 +39,8 @@ Notre API partenaires permet deux types distincts d'accès:
 
 Il vous sera nécessaire de choisir l'un des deux (ou de discuter plus amplement avec nous pour que nous puissions vous guider vers la bonne abstraction).
 
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
 # Prérequis 👀
 
 Les éléments et informations que le partenaire (ou cabinet) doit nous fournir (mail a [c.mandrilly@myunisoft.fr](c.mandrilly@myunisoft.fr) ou slack si déjà invité.).
@@ -71,6 +75,8 @@ Les éléments que nous renvoyons au partenaire (ou cabinet) une fois les élém
 - Un compte au sein d'un schéma (cabinet) dédié aux tests d'intégration.
 - Lien vers la documentation **postman** ([https://docs.api.myunisoft.fr/#intro](https://docs.api.myunisoft.fr/#intro)).
 
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
 # Vocabulaire et entités
 
 - Le terme de "**société**" (society) est utilisé pour parler d'un dossier de production (une entreprise) MyUnisoft.
@@ -81,6 +87,8 @@ Les éléments que nous renvoyons au partenaire (ou cabinet) une fois les élém
 Les utilisateurs sont attachés au schéma (ce sont les comptes ayant un accès à la plateforme Web et mobile).
 
 > **Note** Pour récupérer la liste et le paramétrage de plusieurs dossiers il est nécessaire d'avoir un accès cabinet. Il en va de même pour la récupération des entités qui ne sont pas liées au dossier (comme les utilisateurs et les portefeuilles).
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 # Liens racine de nos API 🌍
 
@@ -112,6 +120,8 @@ Les sous-documentations suivantes vous guideront dans le flow d'authentification
 >
 > Pour l'accès cabinet il vous sera nécessaire d'utiliser un compte de service API (à ne surtout pas confondre avec un compte Utilisateur MyUnisoft classique). Les comptes API ne peuvent pas se connecter sur la plateforme web ou mobile et ne sont utilisables que par le biais de l'API partenaires.
 
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
 # Utilisation d’une route exposée par l’API 🚀
 
 Lors de l’utilisation d’une route exposée il est nécessaire d’avoir l’**API Token** en [Bearer token](https://swagger.io/docs/specification/authentication/bearer-authentication/) dans l'en-tête **Authorization**.
@@ -132,6 +142,8 @@ Pour plus d'informations nous vous invitons à consulter les sous documentations
 - [🔹 Accès cabinet](./docs/endpoints/cabinet.md)
 - [🔑 Liste des routes accessibles](./docs/endpoints/endpoints_accessibles.md)
 
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
 ## Rate-limit des routes exposées 🚥
 
 L'API limite le nombre de requêtes par API Token, quelques en-têtes supplémentaires sont envoyés dans la réponse HTTP:
@@ -141,6 +153,8 @@ L'API limite le nombre de requêtes par API Token, quelques en-têtes supplémen
 - **X-Rate-Limit-Total** (le nombre total de requêtes pour une période).
 
 La limite par **défaut est de 100 requêtes par minute**.
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 # Documentation 📌
 
@@ -185,3 +199,5 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - Nouveau front-end (market place) dynamique qui offrira de nouvelles fonctionnalités (notamment lors des phases de développements et de tests).
 
 > 👀 L'ajout d'endpoints manquants n'est pas pris en compte dans cette section.
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
