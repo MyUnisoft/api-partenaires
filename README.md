@@ -168,7 +168,6 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 ## Guides pour l'accès cabinet
 - [Récupérer les utilisateurs et personne physiques d'un schéma (cabinet)](./docs/users.md)
 - [Récupérer les dossiers accessibles pour un utilisateur (cabinet)](./docs/dossier_accessible.md)
-- [Recherche d'écriture comptable rapide](./docs/quick_search.md)
 
 ## Guides sur l'import d'écritures comptables
 - [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
@@ -176,6 +175,10 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Création et Modification d'écritures et mouvements comptable avec le format FEC](./docs/entry_fec.md)
 - [Création d'une entrée comptable avec le format Factur-X](./docs/entry_facturx.md)
 - [Attacher une pièce jointe à une entrée comptable existante](./docs/pj.md)
+
+## Guides sur la récupération des écritures comptables
+- [Recherche d'écriture comptable rapide](./docs/quick_search.md)
+- [Exportation d'écritures comptables au format FEC](./docs/export/FEC.md)
 
 ## Guides sur comment intéragir avec le paramétrages et données d'un dossier de production
 - [Récupérer les dossiers de production (sociétés)](./docs/society.md)
