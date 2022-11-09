@@ -26,7 +26,7 @@ Vous devriez recevoir un status code `200` avec un JSON contenant la fameuse cl√
 {
     "status": "authenticated",
     "policy": "OAuth2",
-    "firmId": 1,
+    "firm": { "id": "1", "label": "TESTS PARTENAIRES" },
     "details": {
         "expire_in": "2021-04-13 10:41:01",
         "access_token": "{{ACCESS_TOKEN}}",
