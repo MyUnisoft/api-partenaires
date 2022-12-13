@@ -107,6 +107,9 @@ interface NewEntryLine {
   /** Devise, par exemple 'EUR' **/
   currency?: string;
 
+  /** Montant de la devise **/
+  value_currency?: number;
+
   /** Tableau contenant la répartition/lien analytique à effectuer (si besoin) **/
   analytique?: AnalyticRepartition[];
 
@@ -342,12 +345,12 @@ Le schéma JSON est un vocabulaire qui vous permet d'annoter et de valider les d
         },
         "credit": {
           "type": "number",
-          "description": "credit",
+          "description": "credit (obligatoirement en EUROS)",
           "default": 0
         },
         "debit": {
           "type": "number",
-          "description": "debit",
+          "description": "debit (obligatoirement en EUROS)",
           "default": 0
         },
         "analytique": {
@@ -361,6 +364,10 @@ Le schéma JSON est un vocabulaire qui vous permet d'annoter et de valider les d
           "type": "string",
           "description": "Code ISO 4217",
           "default": "EUR"
+        },
+        "value_currency": {
+          "type": "number",
+          "description": "La valeur du débit ou crédit dans la devise choisi"
         },
         "payment_type_id": {
           "type": "number",
@@ -483,6 +490,29 @@ Pour récupérer l'écriture en elle même il vous suffit maintenant d'appeler l
         { name: "id_entry", value: "id ici" }
     ]
 };
+```
+
+## Gestion d'une devise différente de l'euro €
+
+Il vous sera nécessaire pour chaque **NewEntryLine** de renseigner le champ `currency` avec la devise et le champ `value_currency` avec le montant de la devise.
+
+Il sera nécessaire de convertir le crédit ou débit en euros avec le taux de conversion actuellement en vigueur. À noter que nous exposons une route permettant de récupérer les taux par devise:
+
+```bash
+$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/currencies' \
+--header 'Authorization: Bearer {{API_TOKEN}}' \
+--header 'X-Third-Party-Secret: {{X-Third-Party-Secret}}'
+```
+
+Voici un exemple avec une ligne d'un montant de 100 francs suisses (CHF) qui sera avec le taux de change égal à 101,86 €.
+```json
+{
+  "credit": 101.86,
+  "debit": 0,
+  "currency": "CHF",
+  "value_currency": 100
+}
+
 ```
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
