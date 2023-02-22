@@ -65,6 +65,13 @@ Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à 
 ]
 ```
 
+La propriété `lettering_method_id` permet de savoir si l'exercice est **MONO** ou **MULTI**. Par défaut un exercice est **MONO**.
+
+| id | nom |
+| --- | --- |
+| 1 | MONO |
+| 2 | MULTI |
+
 ## Définition TypeScript
 
 Le endpoint **society/exercice** retourne un tableau de structure Exercice.
