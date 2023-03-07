@@ -14,20 +14,38 @@ Dans MyUnisoft, vous pouvez accéder à la recherche rapide en cliquant sur la l
 
 | Nom | Description | Obligatoire |
 |---|---|---|
-|idEtablissement||✔️|
-|startDate||❌|
-|endDate||❌|
-|journalId||❌|
-|accountId||❌|
-|axeId||❌|
+|idEtablissement|Id du dossier de production/société|✔️|
+|fetchTotals|Récupérer le total débit + credit|❌|
+|fetchDocuments|Récupérer les documents attachés aux écritures et lignes d'écritures|❌|
+|startDate|Timestamp ou format valide en JavaScript|❌|
+|endDate|Timestamp ou format valide en JavaScript|❌|
+|journalIds[]|Recherche avec un ou plusieurs Ids de journaux|❌|
+|accountIds[]|Recherche avec un ou plusieurs Ids de comptes|❌|
+|exerciceIds[]|Recherche avec un ou plusieurs Ids d'exercices|❌|
+|axeId|Recherche par **axe** analytique|❌|
+|sectionId|Recherche par **section** analytique|❌|
+|sectionAmount||❌|
 |intitule||❌|
-|sectionId||❌|
-|exerciceIds||❌|
 |debit||❌|
 |credit||❌|
 |plusMinusRange||❌|
-|page||❌|
-|resultPerPage||❌|
+|piece|Recherche sur piece et piece2|❌|
+|accountClass|Recherche par classe du plan comptable (1, 2, 3 ...)|❌|
+|havingAnalytics|Récupérer uniquement les écritures attachées à un axe analytique|❌|
+|page|égal à **1** par défaut|❌|
+|resultPerPage|**100** résultats par pages (valeur par défaut)|❌|
+
+Le paramètre `fetchTotals` permet de récupérer le total débit + crédit
+
+```json
+{
+  "totals": {
+    "totalDebit": 48500,
+    "totalCredit": 54620
+  },
+  "data": []
+}
+```
 
 ## Quick Search
 
