@@ -23,7 +23,9 @@ Préalablement à la mise en place du  webhook par nos services, il est nécessa
 
 > **Note** Il est possible d’utiliser nos API webhooks pour souscrire vous-même (ce qui permet à un développeur d’utiliser des outils comme [ngrok](https://ngrok.com/)).
 
-## Exemple “JSON”
+## Exemple de réponse
+
+Notre service enverra un JSON similaire à celui ci-dessous. Noter qu'**une** requête HTTP peut contenir **plusieurs** webhooks (évènements).
 
 ```json
 {
@@ -45,11 +47,15 @@ Préalablement à la mise en place du  webhook par nos services, il est nécessa
 }
 ```
 
+Vous ne recevrez que les évènements et opérations que vous aurez demandé.
+
+> **Note** Les interfaces des “**webhooks**” et “**évènements**” disponibles sont spécifiés en [Typescript](https://github.com/MyUnisoft/events/blob/main/docs/events.md) ou en [JSON-Schema](https://github.com/MyUnisoft/events/tree/main/docs/json-schema/events).
+
 ## Détails d’implementation
 
 ### Qu’est-ce qu’un évènement ?
 
-> **Note** Rappel de [vocabulaire](https://github.com/MyUnisoft/api-partenaires#vocabulaire-et-entit%C3%A9s) (société, cabinet…)
+#### Scope (champ d'action)
 
 Chaque “**évènements**” est constitué d’un “**scope**” (comme défini ci-dessous) permettant d’identifier l’origine de l’évènement et donc de faire le lien avec vos données.
 
@@ -60,11 +66,9 @@ Chaque “**évènements**” est constitué d’un “**scope**” (comme défi
 | accountingFolderId | ❌ | Le terme accountingFolder (ou encore dossier) représente une entreprise cliente d’un cabinet. |
 | persPhysiqueId | ❌ | Le terme persPhysique représente un utilisateur rattaché au schéma. |
 
-> **Note** Les interfaces des “**webhooks**” et “**évènements**” disponibles sont spécifiés en [Typescript](https://github.com/MyUnisoft/events/blob/main/docs/events.md) ou en [JSON-Schema](https://github.com/MyUnisoft/events/tree/main/docs/json-schema/events).
-
 ### Validation de la requête
 
-> **Warning** Pour des mesures de sécurité, il est impératif de valider les entêtes HTTP “**date**” et “**signature**” avant de traiter les requêtes qui font suites aux webhooks. Si l’un des deux entêtes ne peut être validé, alors la requête doit être rejetée.
+> **Warning** Pour des mesures de sécurité, il est impératif de valider les entêtes HTTP <kdb>date</kdb> et <kdb>signature</kdb> avant de traiter les requêtes qui font suites aux webhooks. Si l’un des deux entêtes ne peut être validé, alors la requête doit être rejetée.
 
 - L’entête <kdb>signature</kdb> est un hash utilisant l’algorithme de chiffrement **SHA256**. Il est généré à partir du <kdb>body</kdb> joint à l’entête HTTP date, signé avec votre clé secrète `X-Third-Party`. Afin de valider cette entête, il faut que ce dernier colle avec un sha256 généré par vos soins en reprenant donc le body ainsi que la date, signé de votre secret.
 
@@ -85,10 +89,11 @@ Il vous suffira donc de générer un HASH avec l’algorithme SHA256 en utilisan
 - Vôtre clé secrète X-Third-Party (fournit par MyUnisoft).
 
 ```
-secret := “foobar”
-value := JSON.Stringify({ body, date })
-
-localSignature := crypto.hmac(secret, value, “SHA256”);
+localSignature := crypto.hmac(
+  xThirdPartySecret,
+  JSON.Stringify({ body, date }), 
+  “SHA256” // ALGORITHM
+);
 ```
 
 La signature générée doit être équivalente à la signature fournie par MyUnisoft. Si la signature ne correspond pas il est nécessaire de rejeter la requête HTTP.
