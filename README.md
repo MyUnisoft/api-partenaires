@@ -163,6 +163,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 ## Guides API
 - [Collection + Environment postman](https://github.com/MyUnisoft/api-partenaires/tree/main/postman)
 - [Gestion des retours erreurs](./docs/erreurs.md)
+- [Webhooks](./docs/webhooks.md)
 - [TypeDoc publique](https://myunisoft.github.io/tsd/)
 
 ## Guides pour l'accès cabinet
