@@ -3,7 +3,7 @@
 > **Warning** les webhooks ne sont pas disponibles pour l'offre API cabinet.
 
 ## Introduction
-L’objectif de ce guide est de simplifié la mise en place de nouveaux webhooks pour les partenaires.
+L’objectif de ce guide est de simplifier la mise en place de nouveaux webhooks pour les partenaires.
 
 ## Qu’est-ce qu’un webhook ?
 
@@ -11,7 +11,7 @@ Un webhook est une simple requête HTTP <kbd>POST</kbd> contenant le strict mini
 
 Il (le webhook) peut être scopé à un ou plusieurs dossiers de productions (**accountingFolderId**) afin de ne réagir qu’aux évènements prenant place au sein desdits dossiers de productions.
 
-En somme, le webhook contient l’informations des différents évènements propragés.
+En somme, le webhook contient les informations des différents évènements propragés.
 
 ## Pré-requis
 
@@ -51,11 +51,9 @@ Vous ne recevrez que les évènements et opérations que vous aurez demandé.
 
 > **Note** Les interfaces des “**webhooks**” et “**évènements**” disponibles sont spécifiés en [Typescript](https://github.com/MyUnisoft/events/blob/main/docs/events.md) ou en [JSON-Schema](https://github.com/MyUnisoft/events/tree/main/docs/json-schema/events).
 
-## Détails d’implementation
+## Qu’est-ce qu’un évènement ?
 
-### Qu’est-ce qu’un évènement ?
-
-#### Scope (champ d'action)
+### Scope (champ d'action)
 
 Chaque “**évènements**” est constitué d’un “**scope**” (comme défini ci-dessous) permettant d’identifier l’origine de l’évènement et donc de faire le lien avec vos données.
 
@@ -66,11 +64,13 @@ Chaque “**évènements**” est constitué d’un “**scope**” (comme défi
 | accountingFolderId | ❌ | Le terme accountingFolder (ou encore dossier) représente une entreprise cliente d’un cabinet. |
 | persPhysiqueId | ❌ | Le terme persPhysique représente un utilisateur rattaché au schéma. |
 
+## Détails d’implementation
+
 ### Validation de la requête
 
-> **Warning** Pour des mesures de sécurité, il est impératif de valider les entêtes HTTP <kdb>date</kdb> et <kdb>signature</kdb> avant de traiter les requêtes qui font suites aux webhooks. Si l’un des deux entêtes ne peut être validé, alors la requête doit être rejetée.
+> **Warning** Pour des mesures de sécurité, il est impératif de valider les en-têtes HTTP **date** et **signature** avant de traiter les requêtes qui font suites aux webhooks. Si l’une des deux en-têtes ne peut être validé, alors la requête doit être rejetée.
 
-- L’entête <kdb>signature</kdb> est un hash utilisant l’algorithme de chiffrement **SHA256**. Il est généré à partir du <kdb>body</kdb> joint à l’entête HTTP date, signé avec votre clé secrète `X-Third-Party`. Afin de valider cette entête, il faut que ce dernier colle avec un sha256 généré par vos soins en reprenant donc le body ainsi que la date, signé de votre secret.
+- L’en-tête <kdb>signature</kdb> est un hash utilisant l’algorithme de chiffrement **SHA256**. Il est généré à partir du <kdb>body</kdb> joint à l’en-tête HTTP date, signé avec votre clé secrète `X-Third-Party`. Afin de valider cette entête, il faut que ce dernier colle avec un sha256 généré par vos soins en reprenant donc le body ainsi que la date, signé de votre secret.
 
 - La date représente le moment de l’envoi par MyUnisoft. Afin de valider cette entête, il ne faut pas que cette date soit trop vieille. Ceci permet d'éviter les “**Replay attacks**” (replications de requêtes).
 
