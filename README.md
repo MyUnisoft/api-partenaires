@@ -193,6 +193,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer un fichier EDI](./docs/EDI.md)
 - [Récupération des données widget et dashboards](./docs/dashboard.md)
 - [Gérer l'analytique d'une société (dossier)](./docs/analytique.md)
+- [Récupérer les paramètres de comptabilité d'une société (dossier)](./docs/accounting_parameters.md)
 
 # Roadmap 2022 📆
 
