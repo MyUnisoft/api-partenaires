@@ -196,12 +196,10 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Gérer l'analytique d'une société (dossier)](./docs/analytique.md)
 - [Récupérer les paramètres de comptabilité d'une société (dossier)](./docs/accounting_parameters.md)
 
-# Roadmap 2022 📆
+# Roadmap 2023-2024 📆
 
 - Flow d'autorisation avec le protocole OAuth2. L'objectif est l'automatisation et la sécurisation des intégrations.
-- Notifications temps réel vers nos partenaires grâce à des webhooks.
 - Création d'un SDK Node.js à destination des cabinets (et partenaires secondairement) pour exploiter l'API partenaires sans difficultés.
-- Nouveau front-end (market place) dynamique qui offrira de nouvelles fonctionnalités (notamment lors des phases de développements et de tests).
 
 > 👀 L'ajout d'endpoints manquants n'est pas pris en compte dans cette section.
 
