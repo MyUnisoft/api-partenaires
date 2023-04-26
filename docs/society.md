@@ -596,6 +596,28 @@ Il est possible de récupérer les informations d'un dossier spécifique grâce:
   > Le retour JSON de l'API a la même structure que le retour JSON avec accès société.
 </details>
 
+## Identifier un dossier (une société) par référence
+
+> **Note** 🔹 Uniquement possible avec un accès cabinet
+
+Il est possible de rechercher/identifier un dossier de production par sa référence et de récupérer le nom, Siret et id de la société.
+
+```bash
+curl --location --request GET 'https://api.myunisoft.fr/api/v1/society/search?reference=ABC' \
+--header 'X-Third-Party-Secret: {{X-Third-Party-Secret}}' \
+--header 'Authorization: {{TOKEN}}'
+```
+
+La route retournera un JSON semblable à celui-ci
+
+```json
+{
+  "name": "Test Agz",
+  "siret": "849457791",
+  "society_id": 58
+}
+```
+
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ---
