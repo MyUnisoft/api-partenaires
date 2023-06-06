@@ -152,7 +152,7 @@ L'API limite le nombre de requêtes par API Token, quelques en-têtes supplémen
 - **X-Rate-Limit-Reset** (timestamp correspondant au moment où la période sera réinitialisée).
 - **X-Rate-Limit-Total** (le nombre total de requêtes pour une période).
 
-La limite par **défaut est de 100 requêtes par minute**.
+La limite par **défaut est de 20 requêtes par tranche de 10 secondes**. Certains endpoints d'import ou d'export lourd peuvent comptabiliser plusieurs utilisations d'un coup pour sécuriser les usages abusifs pouvant amener à une dégradation des performances de notre plateforme.
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
