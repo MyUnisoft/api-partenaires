@@ -7,7 +7,7 @@
 L’API Partenaires permet à des logiciels partenaires ainsi que des cabinets membres de récupérer et d'envoyer de l'information depuis/vers MyUnisoft.
 
 L’authentification du partenaire/cabinet est principalement basée sur:
-- une clé **x-third-party** fournie par MyUnisoft (demande auprès de [c.mandrilly@myunisoft.fr](c.mandrilly@myunisoft.fr)). C'est une clé **unique** qui ne doit surtout **pas être communiqué** en dehors de nos équipes techniques respectives.
+- une clé **x-third-party** fournie par MyUnisoft. C'est une clé **unique** qui ne doit surtout **pas être communiqué** en dehors de nos équipes techniques respectives.
 - une clé [JWT](https://jwt.io/) (**API Token**) pour chaque cabinet et/ou société.
 
 > **Note**
@@ -20,7 +20,7 @@ L’authentification du partenaire/cabinet est principalement basée sur:
 | --- | --- | --- |
 | Thierry Davoigniot | PMO | [t.davoigniot@myunisoft.fr](t.davoigniot@myunisoft.fr) |
 | Rémy Longueville | Responsable des partenariats | [r.longueville@myunisoft.fr](r.longueville@myunisoft.fr) |
-| Thomas Gentilhomme | Lead Développeur API & Connecteurs | [t.gentilhomme@myunisoft.fr](t.gentilhomme@myunisoft.fr) |
+| Thomas Gentilhomme | Lead Développeur API & Connecteurs | [partners.tech@myunisoft.fr](partners.tech@myunisoft.fr) |
 
 # Type d'accès 🔬
 Notre API partenaires permet deux types distincts d'accès:
@@ -43,7 +43,7 @@ Il vous sera nécessaire de choisir l'un des deux (ou de discuter plus amplement
 
 # Prérequis 👀
 
-Les éléments et informations que le partenaire (ou cabinet) doit nous fournir (mail a [c.mandrilly@myunisoft.fr](c.mandrilly@myunisoft.fr) ou slack si déjà invité.).
+Les éléments et informations que le partenaire (ou cabinet) doit nous fournir.
 
 ## 🔸 Accès par société
 
@@ -55,7 +55,7 @@ Ces éléments permettront de créer le connecteur sur l’application MyUnisoft
 - logo partenaire (png, hauteur 50px).
 - texte complémentaire (par exemple ou coller la clé sur votre interface ou lien vers une doc/vidéo d’utilisation avec myunisoft)
 - nom, prénom, email pour un accès à myunisoft.
-- nom, prénom, email pour une invitation slack.
+- nom, prénom, email pour une invitation slack/teams.
 
 ## 🔹 Accès cabinet
 
