@@ -291,31 +291,7 @@ interface CloudDocument {
 </details>
 
 ### Récupération et/ou création d'un compte.
-Il est aussi possible de récupérer unitaire un compte (et s'il n'existe pas il sera créé). C'est une route plutôt pratique si vous souhaitez faire un import dans le format JSON (car celui-ci ne gère pas la création automatique des comptes).
-
-```bash
-curl --location --request POST 'https://api.myunisoft.fr/api/v1/account' \
---header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
---header 'Authorization: Bearer {{API_TOKEN}}' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "account_number": "411FOOBAR",
-    "label": "FOOBAR account"
-}'
-```
-
-La requête ci-dessus aura pour effet de récupérer (ou créer s'il n'existe pas encore) le compte `411FOOBAR`. Le retour contiendra l'id du compte qui sera notamment nécessaire dans l'import format JSON.
-
-```json
-{
-  "account_id": 2228247,
-  "account_number": "411FOOBAR",
-  "label": "FOOBAR account",
-  "counterpart_account": null
-}
-```
-
-> Note: Le compte de contrepartie lorsqu'il est défini à la même structure qu'un compte normal (donc avec la propriété account_id, account_number et label).
+[Lire le guide suivant](./account_create.md)
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
