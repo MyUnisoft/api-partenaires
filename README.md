@@ -185,6 +185,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer les dossiers de production (sociétés)](./docs/society.md)
 - [Récupérer et travailler avec le plan comptable d'un dossier de production](./docs/plan_comptable.md)
   - [Comprendre les informations complémentaires d'un compte client ou fournisseur](./docs/complementary_info.md)
+  - [Récupération et/ou création d'un compte (upsert)](./docs/account_create.md)
 - [Récupérer les exercices d'un dossier de production](./docs/exercices.md)
 - [Récupérer la liste d'IBAN pour un dossier de production](./docs/RIB.md)
 - [Récupérer la liste de TVA d'un dossier de production](./docs/tva.md)
