@@ -154,6 +154,8 @@ L'API limite le nombre de requêtes par API Token, quelques en-têtes supplémen
 
 La limite par **défaut est de 20 requêtes par tranche de 10 secondes**. Certains endpoints d'import ou d'export lourd peuvent comptabiliser plusieurs utilisations d'un coup pour sécuriser les usages abusifs pouvant amener à une dégradation des performances de notre plateforme.
 
+Lorsque la limite est dépassé l'API retournera une erreur `ERR-TOO-MANY-REQUEST` avec un statusCode HTTP égal à 429.
+
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 # Documentation 📌
