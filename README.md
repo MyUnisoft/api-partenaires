@@ -181,6 +181,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 
 ## Guides sur la récupération des écritures comptables
 - [Recherche d'écriture comptable rapide](./docs/quick_search.md)
+- [Exportation d'écritures comptables au format JSON](./docs/ecritures.md)
 - [Exportation d'écritures comptables au format FEC](./docs/export/FEC.md)
 
 ## Guides sur comment intéragir avec le paramétrages et données d'un dossier de production
@@ -193,8 +194,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer la liste de TVA d'un dossier de production](./docs/tva.md)
 - [Récupérer les journaux d'un dossier de production](./docs/journaux.md)
 - [Récupérer les types de paiement disponible d'un dossier de production](./docs/paiements.md)
-- [Récupérer les écritures comptables](./docs/ecritures.md)
-- [Récupérer un fichier EDI](./docs/EDI.md)
+- [Récupérer la déclaration EDI d'un exercice comptable](./docs/EDI.md)
 - [Récupération des données widget et dashboards](./docs/dashboard.md)
 - [Gérer l'analytique d'une société (dossier)](./docs/analytique.md)
 - [Récupérer les paramètres de comptabilité d'une société (dossier)](./docs/accounting_parameters.md)

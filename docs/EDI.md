@@ -1,4 +1,4 @@
-# Récupérer un fichier EDI
+# Récupérer la déclaration EDI d'un exercice comptable
 
 Documentation (Guide) sur la récupération d'un fichier de déclaration EDI.
 
