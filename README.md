@@ -23,31 +23,20 @@ L’authentification du partenaire/cabinet est principalement basée sur:
 | Thomas Gentilhomme | Lead Développeur API & Connecteurs | [partners.tech@myunisoft.fr](partners.tech@myunisoft.fr) |
 
 # Type d'accès 🔬
-Notre API partenaires permet deux types distincts d'accès:
+
+Notre API partenaires a deux types distincts d'accès, chacun de ces accès permet d'interconnecter nos solutions de manière permanente par le biais d'un jeton n'ayant pas de date d'expiration (il peut être néanmoins révoqué par le gestionnaire du dossier/cabinet ou par nos équipes techniques).
+
+Il vous sera nécessaire de choisir l'un des deux type d'accès (ou de discuter plus amplement avec nous pour vous guider vers la bonne abstraction):
 
 🔸 Un accès restreint a une **société** (dossier) d'un cabinet.
 
-> L'accès limité par société est le modèle le plus courant car il permet d'interconnecter nos solutions de manière permanente par le biais d'un jeton n'ayant aucune date d'expiration (il peut être néanmoins révoqué par le gestionnaire du dossier ou par nos équipes techniques).
->
-> C'est un modèle qui est aussi très flexible car nous n'avons pas à intervenir dans le processus de connexion. [Plus d'informations ici](./docs/connector.md).
-
 🔹 Un accès à l'intégralité d'un **cabinet**.
-
-> Cet accès à été principalement conçu pour être utilisé par les cabinets eux-mêmes. L'authentification par le biais d'un compte de service API delivera un jeton ayant une durée de vie très courte pour garantir une meilleure sécurité des données appartenant au cabinet.
->
-> **Note** Nous travaillons encore sur ce modèle d'accès et des changements sont **à venir**.
-
-Il vous sera nécessaire de choisir l'un des deux (ou de discuter plus amplement avec nous pour que nous puissions vous guider vers la bonne abstraction).
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 # Prérequis 👀
 
-Les éléments et informations que le partenaire (ou cabinet) doit nous fournir.
-
-## 🔸 Accès par société
-
-Ces éléments permettront de créer le connecteur sur l’application MyUnisoft et de vous envoyer les informations techniques: 
+Voici les éléments et informations que le partenaire (ou cabinet) doit nous fournir:
 
 - nom partenaire.
 - description courte partenaire (3 lignes 25 char maximum).
@@ -57,21 +46,11 @@ Ces éléments permettront de créer le connecteur sur l’application MyUnisoft
 - nom, prénom, email pour un accès à myunisoft.
 - nom, prénom, email pour une invitation slack/teams.
 
-## 🔹 Accès cabinet
-
-![](./docs/images/api_cabinet.png)
-
-Si vous êtes un partenaire et que votre solution **nécessite un tel accès** nous vous invitons à nous fournir les mêmes informations que pour `🔸 l'accès par société`. Pour les cabinets déjà membre il vous sera nécessaire de fournir un mail pour la création d'un compte de service API.
-
-> **Note**
-> 
-> Nous vous **recommandons de créer un mail spécialement pour l'occasion**, par exemple `apimyunisoft@domain.fr`. Il est tout à fait possible de créer un Alias (attention néanmoins aux mailings list qui peuvent être problématique).
-
 ---
 
 Les éléments que nous renvoyons au partenaire (ou cabinet) une fois les éléments ci-dessus en notre possession:
 
-- Clé **x-third-party** (C’est une clé secrète unique entre vous et nous qui sera nécessaire pour requêter l’API).
+- Clé **X-Third-Party** (C’est une clé secrète unique entre vous et nous qui sera nécessaire pour requêter l’API).
 - Un compte au sein d'un schéma (cabinet) dédié aux tests d'intégration.
 - Lien vers la documentation **postman** ([https://docs.api.myunisoft.fr/#intro](https://docs.api.myunisoft.fr/#intro)).
 
@@ -97,36 +76,22 @@ Les utilisateurs sont attachés au schéma (ce sont les comptes ayant un accès 
 
 - Service d'Authentification: [https://app.myunisoft.fr/api/authenticate](https://app.myunisoft.fr/api/authenticate)
 
-# Activation de la clé Third Party
+# Activation de la clé secrète X-Third-Party
 
-Vous n'avez rien à faire pour activer la clé, ce sont les équipes MyUnisoft qui s'occupent de la générer et de l'activer (càd la rendre valide vis à vis de l'API partenaires).
+Vous n'avez rien à faire pour activer cette clé, ce sont les équipes MyUnisoft qui s'occupent de la générer et de l'activer (càd la rendre valide vis à vis de l'API partenaires).
 
 > **Note** Il peut y avoir un certain délai entre la génération de la clé et son activation.
 La clé ne sera pas reconnue par notre API tant que la clé n'a pas été activée et par conséquent vous n'aurez pas l'autorisation de consommer notre API bien que vous ayez en votre possession une clé fournie par MyUnisoft.
 
 # Authentification 🔐
 
-Les sous-documentations suivantes vous guideront dans le flow d'authentification nécessaire selon le type d'accès que vous avez souhaité.
-
-[🔸 Accès par société](./docs/auth/societe.md)
-
-> **Note**
->
-> Dans le cadre **d'un accès société** l'authentification n'est nécessaire **que pour la phase de développement** du connecteur! Plus [d'informations ici](./docs/connector.md).
-
-[🔹 Accès cabinet](./docs/auth/cabinet.md)
-
-> **Note**
->
-> Pour l'accès cabinet il vous sera nécessaire d'utiliser un compte de service API (à ne surtout pas confondre avec un compte Utilisateur MyUnisoft classique). Les comptes API ne peuvent pas se connecter sur la plateforme web ou mobile et ne sont utilisables que par le biais de l'API partenaires.
+Voici la marche à suivre concernant l'authentification: [Comment s'authentifier ?](/docs/auth.md)
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 # Utilisation d’une route exposée par l’API 🚀
 
 Lors de l’utilisation d’une route exposée il est nécessaire d’avoir l’**API Token** en [Bearer token](https://swagger.io/docs/specification/authentication/bearer-authentication/) dans l'en-tête **Authorization**.
-
-> **Warning** À ne surtout pas confondre pas avec un jeton JWT Utilisateur.
 
 Il est aussi nécessaire d’ajouter une en-tête “**X-Third-Party-Secret**” contenant la clé secrète communiqué par notre équipe.
 
