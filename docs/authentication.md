@@ -6,7 +6,7 @@ La consommation de l'api partenaire requiert un token/clé valide et une clé se
 
 Les tokens/clés se gèrent depuis la page **Connecteurs** dans l'application MyUnisoft: `Paramètres` > `Connecteurs`.
 
-![](./images/connector_path.PNG)
+![](./images/connector_path.png)
 
 ## Type d'accès
 
@@ -16,7 +16,7 @@ Les tokens/clés se gèrent depuis la page **Connecteurs** dans l'application My
 
     Faites attention a bien sélectionner la société ciblée pour créer ce type de token.
 
-    ![](./images/connector_society.PNG)
+    ![](./images/connector_society.png)
 
 - 🔹 **Accès Cabinet**:
 
@@ -24,7 +24,7 @@ Les tokens/clés se gèrent depuis la page **Connecteurs** dans l'application My
 
     Faites attention a bien sélectionner le mode `Cabinet`.
 
-    ![](./images/connector_schema.PNG)
+    ![](./images/connector_schema.png)
 
 ## Génération d'une clé
 
@@ -38,9 +38,9 @@ Les tokens/clés se gèrent depuis la page **Connecteurs** dans l'application My
 
     > **Warning** Assurez-vous de bien copier la clé avant de fermer la fenêtre sans quoi vous serez obliger de générer une nouvelle clé.
 
-    ![](./images/connector_society_card.PNG)
+    ![](./images/connector_society_card.png)
 
-    ![](./images/connector_society_token.PNG)
+    ![](./images/connector_society_token.png)
 
 
 > **Note** Une fois votre clé générée il n’est plus nécessaire de refaire les étapes ci-dessus sauf si la clé a entre-temps été **déconnecté**.
