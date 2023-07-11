@@ -85,7 +85,7 @@ La clé ne sera pas reconnue par notre API tant que la clé n'a pas été activ�
 
 # Authentification 🔐
 
-Voici la marche à suivre concernant l'authentification: [Comment s'authentifier ?](/docs/auth.md)
+Voici la marche à suivre concernant l'authentification: [Comment s'authentifier ?](./docs/authentication.md)
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
