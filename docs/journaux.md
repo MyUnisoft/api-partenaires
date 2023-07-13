@@ -202,6 +202,8 @@ Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à 
 | 12 | OD Lettrage | OD_LET |
 | 13 | Note de frais | NDF |
 | 14 | OD TVA | OD_DECL_FISCALE |
+| 15 | OD Extracomptable | OD_EXC |
+| 19 | Reprise Balance | RBAL |
 
 ## Définition TypeScript
 
