@@ -2,10 +2,6 @@
 
 Ce guide a pour objectif de vous aider à effectuer une recherche dans les écritures d'un dossier.
 
-> **Note**
->
-> Cet endpoint est uniquement disponible avec un accès cabinet.
-
 Dans MyUnisoft, vous pouvez accéder à la recherche rapide en cliquant sur la loupe du menu rapide comme indiqué dans l'image ci-dessous.
 
 ![](./images/quick_search.jpg)
@@ -50,8 +46,20 @@ Le paramètre `fetchTotals` permet de récupérer le total débit + crédit
 ## Quick Search
 
 ```bash
-curl --location --request GET 'https://app.myunisoft.fr/api/v1/accounting/entry/search?idEtablissement=5300&startDate=2020-01-01&endDate=2020-12-31' \
---header 'X-Third-Party-Secret: X-Third-Party-Secret'
+curl --location 'https://api.myunisoft.fr/api/v1/accounting/entry/search' \
+--header 'X-Third-Party-Secret: X-Third-Party-Secret-Key' \
+--header 'content-type: application/json' \
+--data '{
+	"idEtablissement": "1",
+  "accountIds": ["1", "2"],
+  "axeId": null,
+  "credit": 100,
+  "debit": 100,
+  "endDate": "2020-12-31",
+  "searchType": "analytics",
+  "havingAnalytics": true,
+  "sortByDirection": "DESC"
+}'
 ```
 
 <details>
