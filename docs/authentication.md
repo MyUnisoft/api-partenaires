@@ -53,7 +53,7 @@ Sur cette ligne, vous devriez voir la mention `En attente de connexion`. Ce mess
 
 > **Note** Pour activer une clé, il vous faut appeler l'url `https://api.myunisoft.fr/api/v1/key/info?mode=extended`.
 >
-> [Guide sur les endpoints accessibles](../endpoints/endpoints_accessibles.md).
+> [Guide sur les endpoints accessibles](./endpoints/endpoints_accessibles.md).
 
 ![](./images/connectors_state.png)
 
