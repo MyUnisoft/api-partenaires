@@ -85,7 +85,13 @@ La clé ne sera pas reconnue par notre API tant que la clé n'a pas été activ�
 
 # Authentification 🔐
 
-Voici la marche à suivre concernant l'authentification: [Comment s'authentifier ?](./docs/authentication.md)
+### Partenaire
+
+Voici la marche à suivre concernant l'authentification si vous êtes un partenaire: [Comment s'authentifier ?](./docs/authentication.md)
+
+### Formule API Cabinet (destiné aux cabinets eux-mêmes).
+
+Voici la marche à suivre concernant l'authentification si vous êtes un cabinet ayant souscrit à l'offre API Cabinet: [Comment s'authentifier ?](./docs/authentication_by_email.md)
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
