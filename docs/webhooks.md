@@ -18,7 +18,7 @@ En somme, le webhook contient les informations des différents évènements prop
 Préalablement à la mise en place du  webhook par nos services, il est nécessaire de :
 
 - Avoir des accès à notre API avec la clé secrète `X-Third-Party`.
-- Définir avec les équipes techniques MyUnisoft la liste des évènements auxquels vous souhaitez souscrire.
+- Définir avec les équipes techniques MyUnisoft la [liste des évènements](https://github.com/MyUnisoft/events/blob/main/docs/events.md) auxquels vous souhaitez souscrire.
 - Mettre en place un **point d’API** (ou encore **route**) que MyUnisoft exploitera afin d’informer de la propagation des évènements prédéfini. [Ici](https://github.com/MyUnisoft/events/tree/main/example/fastify), vous trouverez un exemple basé sur le framework **Fastify de Node.js**.
 
 > **Note** Il est possible d’utiliser nos API webhooks pour souscrire vous-même (ce qui permet à un développeur d’utiliser des outils comme [ngrok](https://ngrok.com/)).
@@ -40,7 +40,7 @@ Notre service enverra un JSON similaire à celui ci-dessous. Noter qu'**une** re
         "id": 1,
         "code": "JFAC"
       },
-      "webhookId": 1,
+      "webhookId": "83c22567-fd2f-4a50-abbb-48aedefdcfa5",
       "createdAt": 1678457043533
     }
   ]
@@ -60,9 +60,14 @@ Chaque “**évènements**” est constitué d’un “**scope**” (comme défi
 | Nom de la clé | Requis | Description |
 | --- | --- | --- |
 | schemaId | ✅ | Un schéma est un cabinet ou un groupement de cabinet (Il faut l’imaginer comme une abstraction permettant d’isoler nos clients entre eux). |
-| firmid | ❌ | Le terme de firm (ou encore cabinet) représente un client signé sur le plan commercial et technique. |
+| firmId | ❌ | Le terme de firm (ou encore cabinet) représente un client signé sur le plan commercial et technique. |
+| firmSIRET | ❌ | SIRET ou SIREN du cabinet lié au dossier |
 | accountingFolderId | ❌ | Le terme accountingFolder (ou encore dossier) représente une entreprise cliente d’un cabinet. |
+| accountingFolderRef | ❌ | Référence interne du dossier |
+| accountingFolderSIRET | ❌ | SIRET ou SIREN de l'entreprise (dossier) |
 | persPhysiqueId | ❌ | Le terme persPhysique représente un utilisateur rattaché au schéma. |
+
+À noter qu'il est possible de récupérer le `schemaId` d'une clé JWT avec la route [key/info?mode=extended](https://github.com/MyUnisoft/api-partenaires/blob/main/docs/endpoints/endpoints_accessibles.md#r%C3%A9cup%C3%A9ration-des-informations-du-token-et-des-routes-accessibles). Vous pouvez donc potentiellement persister l'ID en question pour simplifier l'identification du webhook reçu.
 
 ## Détails d’implementation
 
