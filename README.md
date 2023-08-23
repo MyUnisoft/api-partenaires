@@ -10,8 +10,7 @@ L’authentification du partenaire/cabinet est principalement basée sur:
 - une clé **x-third-party** fournie par MyUnisoft. C'est une clé **unique** qui ne doit surtout **pas être communiqué** en dehors de nos équipes techniques respectives.
 - une clé [JWT](https://jwt.io/) (**API Token**) pour chaque cabinet et/ou société.
 
-> **Note**
->
+> [!IMPORTANT] 
 > Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur la documentation postman: [https://docs.api.myunisoft.fr/](https://docs.api.myunisoft.fr/)
 
 # Equipe 👥
@@ -65,7 +64,8 @@ Les éléments que nous renvoyons au partenaire (ou cabinet) une fois les élém
 
 Les utilisateurs sont attachés au schéma (ce sont les comptes ayant un accès à la plateforme Web et mobile).
 
-> **Note** Pour récupérer la liste et le paramétrage de plusieurs dossiers il est nécessaire d'avoir un accès cabinet. Il en va de même pour la récupération des entités qui ne sont pas liées au dossier (comme les utilisateurs et les portefeuilles).
+> [!IMPORTANT]  
+> Pour récupérer la liste et le paramétrage de plusieurs dossiers il est nécessaire d'avoir un accès cabinet. Il en va de même pour la récupération des entités qui ne sont pas liées au dossier (comme les utilisateurs et les portefeuilles).
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
@@ -80,7 +80,8 @@ Les utilisateurs sont attachés au schéma (ce sont les comptes ayant un accès 
 
 Vous n'avez rien à faire pour activer cette clé, ce sont les équipes MyUnisoft qui s'occupent de la générer et de l'activer (càd la rendre valide vis à vis de l'API partenaires).
 
-> **Note** Il peut y avoir un certain délai entre la génération de la clé et son activation.
+> [!NOTE]  
+> Il peut y avoir un certain délai entre la génération de la clé et son activation.
 La clé ne sera pas reconnue par notre API tant que la clé n'a pas été activée et par conséquent vous n'aurez pas l'autorisation de consommer notre API bien que vous ayez en votre possession une clé fournie par MyUnisoft.
 
 # Authentification 🔐
