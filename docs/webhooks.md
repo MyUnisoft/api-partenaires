@@ -22,7 +22,8 @@ Préalablement à la mise en place du  webhook par nos services, il est nécessa
 - Définir avec les équipes techniques MyUnisoft la [liste des évènements](https://github.com/MyUnisoft/events/blob/main/docs/events.md) auxquels vous souhaitez souscrire.
 - Mettre en place un **point d’API** (ou encore **route**) que MyUnisoft exploitera afin d’informer de la propagation des évènements prédéfini. [Ici](https://github.com/MyUnisoft/events/tree/main/example/fastify), vous trouverez un exemple basé sur le framework **Fastify de Node.js**.
 
-> **Note** Il est possible d’utiliser nos API webhooks pour souscrire vous-même (ce qui permet à un développeur d’utiliser des outils comme [ngrok](https://ngrok.com/)).
+> [!NOTE]
+> Il est possible d’utiliser nos API webhooks pour souscrire vous-même (ce qui permet à un développeur d’utiliser des outils comme [ngrok](https://ngrok.com/)).
 
 ## Exemple de réponse
 
@@ -50,7 +51,8 @@ Notre service enverra un JSON similaire à celui ci-dessous. Noter qu'**une** re
 
 Vous ne recevrez que les évènements et opérations que vous aurez demandé.
 
-> **Note** Les interfaces des “**webhooks**” et “**évènements**” disponibles sont spécifiés en [Typescript](https://github.com/MyUnisoft/events/blob/main/docs/events.md) ou en [JSON-Schema](https://github.com/MyUnisoft/events/tree/main/docs/json-schema/events).
+> [!IMPORTANT]
+> Les interfaces des “**webhooks**” et “**évènements**” disponibles sont spécifiés en [Typescript](https://github.com/MyUnisoft/events/blob/main/docs/events.md) ou en [JSON-Schema](https://github.com/MyUnisoft/events/tree/main/docs/json-schema/events).
 
 ## Qu’est-ce qu’un évènement ?
 
