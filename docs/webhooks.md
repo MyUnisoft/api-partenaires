@@ -117,7 +117,7 @@ Quelle différence technique entre ses différents niveaux demanderez-vous!
 
 Le challenge technique du choix **un** ou **deux** réside dans le fait d'identifier un client (entreprise) avec le minimum de persistance au sein de votre infrastructure. Cela permet en somme une implémentation sans gestion du cycle de vie des souscriptions de webhooks (ce qui simplifie lourdement votre implémentation et sa maintenance).
 
-Le scope d'un évènement contiendra des informations tel que `accountingFolderRef` et `accountingFolderRef` pour vous aider à identifier l'entreprise concerné.
+Le scope d'un évènement contiendra des informations tel que `accountingFolderSIRET` et `accountingFolderRef` pour vous aider à identifier l'entreprise concerné.
 
 > [!NOTE]
 > Nous travaillons encore à l'ajout d'informations et outils pour simplifier l'identification (tout feedback est donc la bienvenue).
