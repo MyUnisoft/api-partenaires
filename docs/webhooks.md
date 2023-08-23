@@ -1,6 +1,7 @@
 # Guide Webhooks
 
-> **Warning** les webhooks ne sont pas disponibles pour l'offre API cabinet.
+> [!IMPORTANT]  
+> Les webhooks ne sont pas disponibles pour les clients possédant l'offre API cabinet.
 
 ## Introduction
 L’objectif de ce guide est de simplifier la mise en place de nouveaux webhooks pour les partenaires.
