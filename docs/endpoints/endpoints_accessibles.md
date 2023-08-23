@@ -123,7 +123,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/key/info?mode=e
 ---
 
 ## Types
-```typescript
+```ts
 interface Route {
   path: `/api/v1/${string}`;
   method: 'get' | 'post' | 'put' | 'delete';
@@ -133,19 +133,19 @@ type Routes = Route[];
 
 interface TokenDataWithRoutes {
   target: {
-		type: "api" | "firm";
-		schemaId: number;
-		thirdPartyId: number;
-		societyId: number;
-	},
-	version: {
-		current: number;
-		latest: number;
-		beta: boolean;
-	},
-	canBeActivated: boolean;
-	isActivated: boolean;
-	routes: Routes;
+    type: "api" | "firm";
+    schemaId: number;
+    thirdPartyId: number;
+    societyId: number;
+  },
+  version: {
+    current: number;
+    latest: number;
+    beta: boolean;
+  },
+  canBeActivated: boolean;
+  isActivated: boolean;
+  routes: Routes;
 }
 ```
 
