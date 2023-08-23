@@ -119,7 +119,8 @@ Le challenge technique du choix **un** ou **deux** réside dans le fait d'identi
 
 Le scope d'un évènement contiendra des informations tel que `accountingFolderRef` et `accountingFolderRef` pour vous aider à identifier l'entreprise concerné.
 
-> **Note** Nous travaillons encore à l'ajout d'informations et outils pour simplifier l'identification (tout feedback est donc la bienvenue).
+> [!NOTE]
+> Nous travaillons encore à l'ajout d'informations et outils pour simplifier l'identification (tout feedback est donc la bienvenue).
 
 #### Webhook unitaire
 
