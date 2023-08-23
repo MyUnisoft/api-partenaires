@@ -102,3 +102,28 @@ localSignature := crypto.hmac(
 ```
 
 La signature générée doit être équivalente à la signature fournie par MyUnisoft. Si la signature ne correspond pas il est nécessaire de rejeter la requête HTTP.
+
+### Niveau d'abstraction d'un webhook
+
+Vous pouvez créer et gérer des webhooks à plusieurs niveaux d'abstractions:
+
+1. un webhook pour l'intégralité des cabinets.
+2. un webhook par cabinet/groupement de cabinet (ce que nous appelons <kbd>schema</kbd> chez MyUnisoft).
+3. un webhook par dossier de production (entreprise).
+
+Quelle différence technique entre ses différents niveaux demanderez-vous!
+
+#### Webhook global
+
+Le challenge technique du choix **un** ou **deux** réside dans le fait d'identifier un client (entreprise) avec le minimum de persistance au sein de votre infrastructure. Cela permet en somme une implémentation sans gestion du cycle de vie des souscriptions de webhooks (ce qui simplifie lourdement votre implémentation et sa maintenance).
+
+Le scope d'un évènement contiendra des informations tel que `accountingFolderSIRET` et `accountingFolderRef` pour vous aider à identifier l'entreprise concerné.
+
+> [!NOTE]
+> Nous travaillons encore à l'ajout d'informations et outils pour simplifier l'identification (tout feedback est donc la bienvenue).
+
+#### Webhook unitaire
+
+La difficulté du choix **trois** réside dans la gestion de la persistance et du cycle de vie des souscriptions.
+
+Bien que très flexible et permettant une identification efficace ce sera de loin le modèle le plus coûteux à développer et maintenir.
