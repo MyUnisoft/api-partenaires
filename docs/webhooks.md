@@ -78,6 +78,8 @@ Chaque “**évènements**” est constitué d’un “**scope**” (comme défi
 
 > [!WARNING]
 > Pour des mesures de sécurité, il est impératif de valider les en-têtes HTTP **date** et **signature** avant de traiter les requêtes qui font suites aux webhooks. Si l’une des deux en-têtes ne peut être validé, alors la requête doit être rejetée.
+> 
+> [The importance of verifying webhook signatures (SNYK)](https://snyk.io/blog/verifying-webhook-signatures/)
 
 - L’en-tête <kdb>signature</kdb> est un hash utilisant l’algorithme de chiffrement **SHA256**. Il est généré à partir du <kdb>body</kdb> joint à l’en-tête HTTP date, signé avec votre clé secrète `X-Third-Party`. Afin de valider cette entête, il faut que ce dernier colle avec un sha256 généré par vos soins en reprenant donc le body ainsi que la date, signé de votre secret.
 
