@@ -141,6 +141,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [TypeDoc publique](https://myunisoft.github.io/tsd/)
 
 ## Guides pour l'accès cabinet
+- [Création et mise à jour d'un dossier de production (entreprise)](./docs/create_society.md)
 - [Récupérer les utilisateurs et personne physiques d'un schéma (cabinet)](./docs/users.md)
 - [Récupérer les dossiers accessibles pour un utilisateur (cabinet)](./docs/dossier_accessible.md)
 
