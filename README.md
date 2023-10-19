@@ -36,6 +36,9 @@ L’authentification du partenaire/cabinet est principalement basée sur:
 - Un compte au sein d'un schéma (cabinet) dédié aux tests d'intégration.
 - Lien vers la documentation **postman** ([https://docs.api.myunisoft.fr/#intro](https://docs.api.myunisoft.fr/#intro)).
 </details>
+<br>
+
+N'attendez pas pour rejoindre l'écosystème [MyUnisoft connected](https://myunisoft-connected.fr/) riche de plus d'une centaine de d'intégrations!
 
 ## Activation de la clé secrète X-Third-Party
 
