@@ -104,6 +104,8 @@ curl --location --request GET 'https://app.myunisoft.fr/api/v1/member' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
+Vous pouvez visualiser la réponse avec [la collection postman en ligne](https://docs.api.myunisoft.fr/#2f984650-1ec4-4842-8200-95b41d09c520)
+
 ### Type du dossier
 
 Type du dossier qui correspond à la propriété  `id_type_company`.
