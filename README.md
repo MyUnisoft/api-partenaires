@@ -7,35 +7,17 @@
 L’API Partenaires permet à des logiciels partenaires ainsi que des cabinets membres de récupérer et d'envoyer de l'information depuis/vers MyUnisoft.
 
 L’authentification du partenaire/cabinet est principalement basée sur:
-- une clé **x-third-party** fournie par MyUnisoft. C'est une clé **unique** qui ne doit surtout **pas être communiqué** en dehors de nos équipes techniques respectives.
+- une clé <kbd>X-Third-Party</kbd> fournie par MyUnisoft. C'est une clé `unique` qui ne doit surtout **pas être communiqué** en dehors de nos équipes techniques respectives.
 - une clé [JWT](https://jwt.io/) (**API Token**) pour chaque cabinet et/ou société.
 
 > [!IMPORTANT] 
 > Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur la documentation postman: [https://docs.api.myunisoft.fr/](https://docs.api.myunisoft.fr/)
 
-# Equipe 👥
-
-| Prénom - Nom | Rôle(s) | Email |
-| --- | --- | --- |
-| Thierry Davoigniot | PMO | [t.davoigniot@myunisoft.fr](t.davoigniot@myunisoft.fr) |
-| Rémy Longueville | Responsable des partenariats | [r.longueville@myunisoft.fr](r.longueville@myunisoft.fr) |
-| Thomas Gentilhomme | Lead Développeur API & Connecteurs | [partners.tech@myunisoft.fr](partners.tech@myunisoft.fr) |
-
-# Type d'accès 🔬
-
-Notre API partenaires a deux types distincts d'accès, chacun de ces accès permet d'interconnecter nos solutions de manière permanente par le biais d'un jeton n'ayant pas de date d'expiration (il peut être néanmoins révoqué par le gestionnaire du dossier/cabinet ou par nos équipes techniques).
-
-Il vous sera nécessaire de choisir l'un des deux type d'accès (ou de discuter plus amplement avec nous pour vous guider vers la bonne abstraction):
-
-🔸 Un accès restreint a une **société** (dossier) d'un cabinet.
-
-🔹 Un accès à l'intégralité d'un **cabinet**.
-
-<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
 # Prérequis 👀
 
-Voici les éléments et informations que le partenaire (ou cabinet) doit nous fournir:
+<details>
+<summary>✏️ Les éléments et informations à fournir</summary>
+<br>
 
 - nom partenaire.
 - description courte partenaire (3 lignes 25 char maximum).
@@ -44,45 +26,43 @@ Voici les éléments et informations que le partenaire (ou cabinet) doit nous fo
 - texte complémentaire (par exemple ou coller la clé sur votre interface ou lien vers une doc/vidéo d’utilisation avec myunisoft)
 - nom, prénom, email pour un accès à myunisoft.
 - nom, prénom, email pour une invitation slack/teams.
+</details>
 
----
+<details>
+<summary>👉 Ce que nous renvoyons une fois les éléments ci-dessus en notre possession</summary>
+<br>
 
-Les éléments que nous renvoyons au partenaire (ou cabinet) une fois les éléments ci-dessus en notre possession:
-
-- Clé **X-Third-Party** (C’est une clé secrète unique entre vous et nous qui sera nécessaire pour requêter l’API).
+- Clé <kbd>X-Third-Party</kbd> (C’est une clé secrète unique entre vous et nous qui sera nécessaire pour requêter l’API).
 - Un compte au sein d'un schéma (cabinet) dédié aux tests d'intégration.
 - Lien vers la documentation **postman** ([https://docs.api.myunisoft.fr/#intro](https://docs.api.myunisoft.fr/#intro)).
+</details>
 
-<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+## Activation de la clé secrète X-Third-Party
 
-# Vocabulaire et entités
+Vous n'avez rien à faire pour activer cette clé, ce sont les équipes MyUnisoft qui s'occupent de la générer et de l'activer (càd la rendre valide vis à vis de l'API partenaires).
 
-- Le terme de "**société**" (society) est utilisé pour parler d'un dossier de production (une entreprise) MyUnisoft.
-- Le terme de "**cabinet**" (firm) est souvent utilisé à tort pour parler d'un schéma MyUnisoft. Un schéma peut contenir un à plusieurs cabinets et représente un client signé sur le plan commercial et technique.
+> [!NOTE]  
+> Il peut y avoir un certain délai entre la génération de la clé et son activation. La clé ne sera pas reconnue par notre API tant que la clé n'a pas été activée!
+
+# Type d'accès 🔬
+
+Notre API partenaires a deux types distincts d'accès, chacun de ces accès permet d'interconnecter nos solutions de manière permanente par le biais d'un jeton n'ayant pas de date d'expiration (il peut être néanmoins révoqué par le gestionnaire du dossier/cabinet ou par nos équipes techniques).
+
+Il vous sera nécessaire de choisir l'un des deux type d'accès (ou de discuter plus amplement avec nous pour vous guider vers la bonne abstraction):
+
+🔸 Un accès restreint a une **société** (dossier de production) d'un cabinet.
+
+🔹 Un accès à l'intégralité d'un **cabinet**.
+
+> [!NOTE]
+> Le terme de **cabinet** ou **firm** est souvent utilisé à tort pour parler d'un schéma MyUnisoft. Un schéma peut contenir un à plusieurs cabinets et représente un client signé sur le plan commercial et technique.
 
 ![](./docs/images/entities.png)
-
-Les utilisateurs sont attachés au schéma (ce sont les comptes ayant un accès à la plateforme Web et mobile).
 
 > [!IMPORTANT]  
 > Pour récupérer la liste et le paramétrage de plusieurs dossiers il est nécessaire d'avoir un accès cabinet. Il en va de même pour la récupération des entités qui ne sont pas liées au dossier (comme les utilisateurs et les portefeuilles).
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
-# Liens racine de nos API 🌍
-
-- API Partenaires: [https://app.myunisoft.fr/api/v1](https://app.myunisoft.fr/api/v1)
-> 👀 `api/v1/key` pour la gestion de la/les clé(s) API Token pour `🔸 l'accès par société`
-
-- Service d'Authentification: [https://app.myunisoft.fr/api/authenticate](https://app.myunisoft.fr/api/authenticate)
-
-# Activation de la clé secrète X-Third-Party
-
-Vous n'avez rien à faire pour activer cette clé, ce sont les équipes MyUnisoft qui s'occupent de la générer et de l'activer (càd la rendre valide vis à vis de l'API partenaires).
-
-> [!NOTE]  
-> Il peut y avoir un certain délai entre la génération de la clé et son activation.
-La clé ne sera pas reconnue par notre API tant que la clé n'a pas été activée et par conséquent vous n'aurez pas l'autorisation de consommer notre API bien que vous ayez en votre possession une clé fournie par MyUnisoft.
 
 # Authentification 🔐
 
@@ -114,19 +94,21 @@ Pour plus d'informations nous vous invitons à consulter les sous documentations
 - [🔹 Accès cabinet](./docs/endpoints/cabinet.md)
 - [🔑 Liste des routes accessibles](./docs/endpoints/endpoints_accessibles.md)
 
-<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+## Lien racine 🌍
+
+La racine de notre API partenaires est la suivante: [https://api.myunisoft.fr/api/v1](https://api.myunisoft.fr/api/v1)
 
 ## Rate-limit des routes exposées 🚥
 
 L'API limite le nombre de requêtes par API Token, quelques en-têtes supplémentaires sont envoyés dans la réponse HTTP:
 
-- **X-Rate-Limit-Remaining** (le nombre de requêtes restantes dans la période).
-- **X-Rate-Limit-Reset** (timestamp correspondant au moment où la période sera réinitialisée).
-- **X-Rate-Limit-Total** (le nombre total de requêtes pour une période).
+- <kbd>X-Rate-Limit-Remaining</kbd> (le nombre de requêtes restantes dans la période).
+- <kbd>X-Rate-Limit-Reset</kbd> (timestamp correspondant au moment où la période sera réinitialisée).
+- <kbd>X-Rate-Limit-Total</kbd> (le nombre total de requêtes pour une période).
 
 La limite par **défaut est de 20 requêtes par tranche de 10 secondes**. Certains endpoints d'import ou d'export lourd peuvent comptabiliser plusieurs utilisations d'un coup pour sécuriser les usages abusifs pouvant amener à une dégradation des performances de notre plateforme.
 
-Lorsque la limite est dépassé l'API retournera une erreur `ERR-TOO-MANY-REQUEST` avec un statusCode HTTP égal à 429.
+Lorsque la limite est dépassé l'API retournera une erreur `ERR-TOO-MANY-REQUEST` avec un statusCode HTTP égal à <kbd>429</kbd>.
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
@@ -138,7 +120,6 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Collection + Environment postman](https://github.com/MyUnisoft/api-partenaires/tree/main/postman)
 - [Gestion des retours erreurs](./docs/erreurs.md)
 - [Webhooks](./docs/webhooks.md)
-- [TypeDoc publique](https://myunisoft.github.io/tsd/)
 
 ## Guides pour l'accès cabinet
 - [Création et mise à jour d'un dossier de production (entreprise)](./docs/create_society.md)
@@ -172,11 +153,12 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Gérer l'analytique d'une société (dossier)](./docs/analytique.md)
 - [Récupérer les paramètres de comptabilité d'une société (dossier)](./docs/accounting_parameters.md)
 
-# Roadmap 2023-2024 📆
+# Contact 👥
 
-- Flow d'autorisation avec le protocole OAuth2. L'objectif est l'automatisation et la sécurisation des intégrations.
-- Création d'un SDK Node.js à destination des cabinets (et partenaires secondairement) pour exploiter l'API partenaires sans difficultés.
-
-> 👀 L'ajout d'endpoints manquants n'est pas pris en compte dans cette section.
+| Prénom - Nom | Rôle(s) | Email |
+| --- | --- | --- |
+| Thierry Davoigniot | PMO | [t.davoigniot@myunisoft.fr](t.davoigniot@myunisoft.fr) |
+| Rémy Longueville | Responsable des partenariats | [r.longueville@myunisoft.fr](r.longueville@myunisoft.fr) |
+| Thomas Gentilhomme | Lead Développeur API & Connecteurs | [partners.tech@myunisoft.fr](partners.tech@myunisoft.fr) |
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>

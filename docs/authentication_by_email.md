@@ -4,7 +4,10 @@ Notre service authentification possède un endpoint spécifique qui permet la g�
 
 ## Génération de la clé (API Token)
 
-La route (racine) pour la requête http est POST **/api/authenticate/firm**.
+La route (racine) pour la requête http est POST <kdb>/api/authenticate/firm</kdb>.
+
+> [!NOTE]
+> Le lien racine du service authentification est le suivant: [https://app.myunisoft.fr/api/authenticate](https://app.myunisoft.fr/api/authenticate)
 
 Le body (JSON) de la requête pour l’authentification:
 ```json
@@ -16,7 +19,8 @@ Le body (JSON) de la requête pour l’authentification:
 
 Les champs “**password**” et “**mail**” doivent être complétés avec le compte qui vous a été fourni. À noter qu'un champ supplémentaire "**firm**" peut être renseigné (si votre compte permet l'accès à plusieurs cabinets/entités MyUnisoft).
 
-> 👀 Le champ **firm** peut contenir l'ID numérique de l'entité/schéma ou bien le nom de celui-ci (sur MyUnisoft). Nous appelons "entité" un cabinet ou un groupement de cabinets.
+> [!IMPORTANT]
+> Le champ **firm** peut contenir l'ID numérique de l'entité/schéma ou bien le nom de celui-ci (sur MyUnisoft). Nous appelons "entité" un cabinet ou un groupement de cabinets.
 
 ---
 
