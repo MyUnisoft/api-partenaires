@@ -4,6 +4,15 @@
 <img src="./docs/images/logo.jpg" height="200">
 </p>
 
+<p align="center">
+  <a href="https://myunisoft-connected.fr/">
+    <img src="https://img.shields.io/static/v1?label=MyUnisoft&message=Connected&color=blue&style=for-the-badge">
+  </a>
+  <a href="https://github.com/MyUnisoft/api-partenaires/blob/main/postman/API%20Partners%20(Public).postman_collection.json">
+    <img src="https://img.shields.io/static/v1?label=Postman&message=Collection&color=orange&style=for-the-badge&logo=postman">
+  </a>
+</p>
+
 L’API Partenaires permet à des logiciels partenaires ainsi que des cabinets membres de récupérer et d'envoyer de l'information depuis/vers MyUnisoft.
 
 L’authentification du partenaire/cabinet est principalement basée sur:
