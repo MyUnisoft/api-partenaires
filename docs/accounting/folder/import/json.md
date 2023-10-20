@@ -71,7 +71,7 @@ interface RepartitionInfo {
 }
 ```
 
-L'objet en question est récupérable automatiquement par le biais de l'API `https://api.myunisoft.fr/api/v1/analytics/repartitions`. Pour plus d'informations nous vous invitons à consulter [le guide sur la gestion de l'analytique](./analytique.md).
+L'objet en question est récupérable automatiquement par le biais de l'API `https://api.myunisoft.fr/api/v1/analytics/repartitions`. Pour plus d'informations nous vous invitons à consulter [le guide sur la gestion de l'analytique](../analytique.md).
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
@@ -143,7 +143,8 @@ interface NewEntryLine {
 }
 ```
 
-> **Note** Vous aurez probablement besoin d'un des deux champs (**piece** ou **piece2**).
+> [!NOTE]
+> Vous aurez probablement besoin d'un des deux champs (**piece** ou **piece2**).
 ​
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
@@ -457,7 +458,7 @@ Il vous suffit de copier-coller le schéma ci-dessus dans le formulaire de gauch
 ## Gestion des comptes tiers
 À la **différence de l'import TRA+PJ** il n'est pas possible de synchroniser et créer automatiquement les comptes tiers **411** et **401**.
 
-Il est donc nécessaire de vous assurer que les comptes soi bien créer avant d'importer l'écriture. Je vous invite à consulter le guide suivant: [Récupérer et travailler avec le plan comptable](./plan_comptable.md)
+Il est donc nécessaire de vous assurer que les comptes soi bien créer avant d'importer l'écriture. Je vous invite à consulter le guide suivant: [Récupérer et travailler avec le plan comptable](../account/plan_comptable.md)
 
 ## Gestion d'un id partenaire
 Les écritures MyUnisoft peuvent avoir un id partenaire `entry_origin_partner_id` qui se doit d'être strictement unique. Pour cela nous vous recommandons de par exemple préfixer un UUID/CUID avec le nom de votre entreprise: `name-0aad3319-2aa7-400a-b709-6942562a200e`.
@@ -519,4 +520,4 @@ Voici un exemple avec une ligne d'un montant de 100 francs suisses (CHF) qui ser
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../../README.md)

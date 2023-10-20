@@ -29,7 +29,7 @@ La requête ci-dessus aura pour effet de récupérer (ou créer s'il n'existe pa
 
 ## Liste des potentielles erreurs clientes
 
-L'intégralité des codes erreurs est documentée [ici](https://github.com/MyUnisoft/api-partenaires/blob/main/docs/erreurs.md)
+L'intégralité des codes erreurs est documentée [ici](../../../erreurs.md)
 
 ### COMPTE6
 Le premier caractère du numéro de compte `account_number` doit être compris entre 1 et 9. Les comptes commençant par des lettres ne sont pas autorisés, par exemple: `AB411` sera rejeté.
@@ -92,4 +92,4 @@ interface Iban {
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../../README.md)

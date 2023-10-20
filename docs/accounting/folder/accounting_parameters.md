@@ -2,7 +2,8 @@
 
 Il est possible de récupérer les paramètres de comptabilité présent sur la page `CRM` > `Entreprises` > `Comptabilité` avec la route GET `https://api.myunisoft.fr/api/v1/society/accountingParameters` à l'exception des adresses mail de collecte (encadré en rouge).
 
-> **Warning** Le header `society-id` est requis avec un accès 🔹Cabinet.
+> [!WARNING]
+> Le header `society-id` est requis avec un accès 🔹Cabinet.
 
 ```bash
 curl --location 'https://api.myunisoft.fr/api/v1/society/accountingParameters' \
@@ -104,8 +105,8 @@ curl --location 'https://api.myunisoft.fr/api/v1/society/accountingParameters' \
   ```
 </details>
 
-![](./images/accounting_parameters.png)
+![](../../images/accounting_parameters.png)
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../README.md)

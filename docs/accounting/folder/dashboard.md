@@ -4,7 +4,7 @@
 
 API pour récupérer les informations des dashboards et widgets. Ces modules graphiques sont consultables sur la page d'accueil (home page) d'un dossier de production MyUnisoft.
 
-![](./images/accountingFolderHomeGraphs.PNG)
+![](../../images/accountingFolderHomeGraphs.PNG)
 
 ## Dashboards
 
@@ -14,7 +14,8 @@ curl --location --request GET 'https://app.myunisoft.fr/api/v1/dashboard?applica
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-> Note: il est nécessaire de fournir l'id d'un exercice. Voir la [documentation suivante](https://github.com/MyUnisoft/api-partenaires/blob/main/docs/exercices.md) pour récupérer la liste de tous les exercices d'un dossier de production.
+> [!NOTE]
+> Il est nécessaire de fournir l'id d'un exercice. Voir la [documentation suivante](./exercices.md) pour récupérer la liste de tous les exercices d'un dossier de production.
 
 La réponse ressemble au payload JSON suivant:
 ```json
@@ -54,7 +55,7 @@ Chaque objet contenu au sein de **cards_list** représente un dashboard. La clé
 
 Par exemple ici `situation_globale`:
 
-![](./images/dashboard_situation_globale.PNG)
+![](../../images/dashboard_situation_globale.PNG)
 
 <details>
 <summary>Voir la réponse JSON</summary>
@@ -211,7 +212,7 @@ Par exemple ici `situation_globale`:
 
 ## Widget
 
-![](./images/dashboard_widget_waiting.PNG)
+![](../../images/dashboard_widget_waiting.PNG)
 
 ```bash
 $ curl --location --request GET 'https://app.myunisoft.fr/api/v1/customer_waiting_account/widget' \
@@ -219,7 +220,8 @@ $ curl --location --request GET 'https://app.myunisoft.fr/api/v1/customer_waitin
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-> ⚠️ Si le retour est un tableau vide `[]` c'est qu'il n'y a encore aucune informations.
+> [!WARNING]
+> Si le retour est un tableau vide `[]` c'est qu'il n'y a encore aucune informations.
 
 Dans le cas contraire le JSON retourné ressemble à ceci:
 
@@ -245,4 +247,4 @@ Dans le cas contraire le JSON retourné ressemble à ceci:
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../README.md)

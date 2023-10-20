@@ -26,7 +26,7 @@ $ curl --location --request POST 'https://api.myunisoft.fr/api/v1/fec?type=2&exe
 ```
 
 La route prend plusieurs arguments:
-- **exercice_id** (l'id de l'exercice. Il est possible de le récupérer par API, merci de suivre [le guide suivant](./exercices.md)).
+- **exercice_id** (l'id de l'exercice. Il est possible de le récupérer par API, merci de suivre [le guide suivant](../exercices.md)).
 - **filename** (le nom du fichier qui est attaché avec la requête).
 - **type** (valeur numérique entre `0` et `2`).
 
@@ -37,4 +37,4 @@ Le type permet de configurer le comportement de la requête:
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../../README.md)

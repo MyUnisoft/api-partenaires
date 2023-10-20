@@ -20,7 +20,8 @@ $ curl --location --request POST 'https://api.myunisoft.fr/api/v1/entries?type=e
   }'
 ```
 
-> 👀 Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
+> [!IMPORTANT]
+> Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
 
 Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à l'exemple ci-dessous**
 
@@ -229,4 +230,4 @@ export interface EntryOPJ {
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../../README.md)

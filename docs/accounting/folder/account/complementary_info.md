@@ -2,21 +2,22 @@
 
 # Comprendre les informations complémentaires d'un compte client ou fournisseur
 
-> ⚠️ Nous vous invitons préalablement à lire le guide [Récupérer et travailler avec le plan comptable.](./plan_comptable.md)
+> [!IMPORTANT]
+> Nous vous invitons préalablement à lire le guide [Récupérer et travailler avec le plan comptable.](./plan_comptable.md)
 
 Ce guide a pour objectif de vous aider dans la récupération et la compréhension des informations complémentaires attachées aux comptes du plan comptable (principalement les comptes clients et fournisseurs).
 
 Dans MyUnisoft le plan comptable est accessible à partir du menu: `Paramètres` > `Tenue` > `Plan comptable`.
 
-![](./images/plan_comptable.PNG)
+![](../../../images/plan_comptable.PNG)
 
 Sélectionner par exemple un compte fournisseur et éditez-le (un pop-up devrait apparaitre).
 
-![](./images/fiche_compte.PNG)
+![](../../../images/fiche_compte.PNG)
 
 Vous n'avez plus qu'à accéder au second onglet "Info. complémentaires".
 
-![](./images/fiche_compte_complementaire.PNG)
+![](../../../images/fiche_compte_complementaire.PNG)
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
@@ -183,4 +184,4 @@ interface AmountTypePaid {
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../../README.md)

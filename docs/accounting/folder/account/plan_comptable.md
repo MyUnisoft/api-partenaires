@@ -5,7 +5,7 @@ Ce guide a pour objectif de vous aider dans la gestion du plan comptable.
 
 Dans MyUnisoft le plan comptable peut être édité: `Paramètres` > `Tenue` > `Plan comptable`.
 
-![](./images/plan_comptable.PNG)
+![](../../../images/plan_comptable.PNG)
 
 ## API
 
@@ -17,7 +17,8 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/account?mode=2'
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-> 👀 Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
+> [!IMPORTANT]
+> Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
 
 Noter la présence du paramètre `mode` égal à **2**. Ce mode permet de récupérer toutes les informations en lien avec les comptes alors que le mode 1 ne retournera que l'id, numéro et label de chaque compte.
 
@@ -291,10 +292,10 @@ interface CloudDocument {
 </details>
 
 ### Récupération et/ou création d'un compte.
-[Lire le guide suivant](./account_create.md)
+[Lire le guide suivant](./create.md)
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../../README.md)

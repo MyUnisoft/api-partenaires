@@ -6,9 +6,10 @@ Ce guide a pour objectif de vous aider à gérer l'analytique d'un dossier MyUni
 
 Dans MyUnisoft la configuration de l'analytique s'effectue à partir de: `Paramètres` > `Tenue` > `Analytique`.
 
-> ⚠️ Note: par défaut l'analytique n'est pas activée.
+> [!WARNING]
+> Par défaut l'analytique n'est pas activée.
 
-![](./images/analytique.PNG)
+![](../../images/analytique.PNG)
 
 L'intégralité des routes présentées dans ce guide est disponible sur le postman en ligne (dossier **Analytic**). Les interfaces TypeScript peuvent être consultées en ligne [ici](https://myunisoft.github.io/tsd/modules/Windev.Analytique.html).
 
@@ -120,7 +121,7 @@ $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/society/3' \
 
 La route `https://api.myunisoft.fr/api/v1/analytics/axes` permet de récupérer l'intégralité des axes pour un dossier.
 
-
+> [!NOTE]
 > Il est possible de récupérer un axe précis par l'id, exemple avec l'id 41: https://api.myunisoft.fr/api/v1/analytics/axes/41
 
 ```bash
@@ -344,6 +345,7 @@ Il est possible de récupérer une section par son id (mais aussi de récupérer
 
 La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/sections` permet de créer une section.
 
+> [!NOTE]
 > Dans le cas de la création de la section par défaut, le paramètre `by_default` doit être renseigné dans le payload de la requête comme dans l'exemple ci-dessous.
 
 ```bash
@@ -442,6 +444,7 @@ $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/analytics/secti
 
 La route `https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}` permet de supprimer une section.
 
+> [!NOTE]
 > Il est impossible de supprimer la section par défaut.
 
 ```bash
@@ -456,10 +459,11 @@ $ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/se
 Par défaut sans configuration le back-end utilisera le numéro du compte pour effectuer la répartition correctement (ou sur la section "en attente" si le compte ne correspond à aucune section).
 
 Néanmoins il est possible de configurer la répartition directement au sein de l'interface MyUnisoft:
-![](./images/analytique_cle_repartition.PNG)
+![](../../images/analytique_cle_repartition.PNG)
 
 La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys` permet de récupérer l'intégralité des clés de répartitions pour un axe identifié.
 
+> [!NOTE]
 > Il est possible de récupérer une clé de répartition avec l'id de l'axe + l'id de clé: `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}`
 
 ```bash
@@ -635,7 +639,9 @@ La route retournera un tableau défini par l'interface TypeScript `RateOfReparti
 </details>
 <br>
 
-![](./images/analytique_cle_repartition.PNG)
+![](../../images/analytique_cle_repartition.PNG)
+
+> [!IMPORTANT]
 > 📢 Cela correspond à la partie droite de l'image.
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
@@ -644,6 +650,7 @@ La route retournera un tableau défini par l'interface TypeScript `RateOfReparti
 
 La route `https://api.myunisoft.fr/api/v1/analytics/repartition_keys/{{id_repartition_key}}/repartition` permet de définir des taux de répartitions par section.
 
+> [!NOTE]
 > La somme des taux de répartitions doit obligatoirement être égale à 100.
 
 <details>
@@ -747,7 +754,7 @@ La route retournera un tableau défini par l'interface TypeScript `AnalyticRepar
 </details>
 <br>
 
-Le JSON retourné sera à utiliser pour la création d'une écriture au format JSON. Voir le guide [Création d'une entrée comptable avec le format JSON](./entry_json.md) pour plus d'informations.
+Le JSON retourné sera à utiliser pour la création d'une écriture au format JSON. Voir le guide [Création d'une entrée comptable avec le format JSON](./export/ecritures.md) pour plus d'informations.
 
 ## Export des écritures avec analytique
 À ce jour nous n'avons pas encore d'endpoint qui supporte un export de toutes les écritures + les répartitions analytique. Nos équipes travaillent à l'ajout des répartitions sur POST /entries.
@@ -766,4 +773,4 @@ Le retour sera là aussi identique à la définition `AnalyticRepartition` prés
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../README.md)
