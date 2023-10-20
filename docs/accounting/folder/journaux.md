@@ -5,7 +5,7 @@ Ce guide a pour objectif de vous aider dans la récupération des journaux (diar
 
 Dans MyUnisoft la liste des journaux est accessible en passant par `Paramètres` > `Tenue` > `Journaux`.
 
-![](./images/liste_journaux.PNG)
+![](../../images/liste_journaux.PNG)
 
 ## API
 
@@ -17,7 +17,8 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/diary' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-> 👀 Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
+> [!IMPORTANT]
+> Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
 
 Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à l'exemple ci-dessous**
 
@@ -248,4 +249,4 @@ interface Diary<T = DiaryType> {
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../README.md)

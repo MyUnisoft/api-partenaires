@@ -7,7 +7,7 @@ Ce guide a pour objectif de vous aider dans l'ajout (upload) d'une pièce jointe
 
 Dans MyUnisoft les pièces jointes sont visibles à gauche (sur la saisie). À noter que leur présence sur la première ligne ne leur donne pas particulièrement d'affiliation avec la ligne elle-même (elles sont bien souvent en lien avec l'écriture elle-même).
 
-![](./images/pj.PNG)
+![](../../../images/pj.PNG)
 
 Effectuer un clic sur la bulle noire vous ouvrira une nouvelle page navigateur avec un rendu de la pièce.
 
@@ -35,7 +35,7 @@ Les paramètres (URL) de la route sont les suivants:
 
 Dans MyUnisoft la location correspond à la catégorie de la saisie
 
-![](./images/saisie_location.PNG)
+![](../../../images/saisie_location.PNG)
 
 - ENTRIES = **Ecriture**
 - ENTRIES_TEMP = **Facture(s) en attente**
@@ -48,4 +48,4 @@ Pour récupérer l'id d'une écriture les guides suivants pourront probablement 
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../../README.md)

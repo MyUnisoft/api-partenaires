@@ -18,6 +18,7 @@ Les informations disponibles sont:
 
 ## Récupération des routes accessibles
 
+> [!NOTE]
 > Les routes accessibles sont définies en fonction de votre type d'accès (🔹Cabinet ou 🔸Société).
 
 ```bash

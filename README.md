@@ -71,11 +71,11 @@ Il vous sera nécessaire de choisir l'un des deux type d'accès (ou de discuter 
 
 ### Partenaire
 
-Voici la marche à suivre concernant l'authentification si vous êtes un partenaire: [Comment s'authentifier ?](./docs/authentication.md)
+Voici la marche à suivre concernant l'authentification si vous êtes un partenaire: [Comment s'authentifier ?](./docs/authentication/authentication.md)
 
 ### Formule API Cabinet (destiné aux cabinets eux-mêmes).
 
-Voici la marche à suivre concernant l'authentification si vous êtes un cabinet ayant souscrit à l'offre API Cabinet: [Comment s'authentifier ?](./docs/authentication_by_email.md)
+Voici la marche à suivre concernant l'authentification si vous êtes un cabinet ayant souscrit à l'offre API Cabinet: [Comment s'authentifier ?](./docs/authentication/authentication_by_email.md)
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
@@ -125,36 +125,36 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Webhooks](./docs/webhooks.md)
 
 ## Guides pour l'accès cabinet
-- [Création et mise à jour d'un dossier de production (entreprise)](./docs/create_society.md)
-- [Récupérer les utilisateurs et personne physiques d'un schéma (cabinet)](./docs/users.md)
-- [Récupérer les dossiers accessibles pour un utilisateur (cabinet)](./docs/dossier_accessible.md)
+- [Création et mise à jour d'un dossier de production (entreprise)](docs/accounting/firm/create_society.md)
+- [Récupérer les utilisateurs et personne physiques d'un schéma (cabinet)](docs/accounting/firm/users.md)
+- [Récupérer les dossiers accessibles pour un utilisateur (cabinet)](docs/accounting/firm/dossier_accessible.md)
 
 ## Guides sur l'import d'écritures comptables
-- [Création d'une entrée comptable avec le format JSON](./docs/entry_json.md)
-- [Création d'écritures et mouvements comptable avec le format TRA+PJ](./docs/entry_tra.md)
-- [Création et Modification d'écritures et mouvements comptable avec le format FEC](./docs/entry_fec.md)
-- [Création d'une entrée comptable avec le format Factur-X](./docs/entry_facturx.md)
-- [Attacher une pièce jointe à une entrée comptable existante](./docs/pj.md)
+- [Création d'une entrée comptable avec le format JSON](docs/accounting/folder/import/json.md)
+- [Création d'écritures et mouvements comptable avec le format TRA+PJ](docs/accounting/folder/import/tra.md)
+- [Création et Modification d'écritures et mouvements comptable avec le format FEC](docs/accounting/folder/import/fec.md)
+- [Création d'une entrée comptable avec le format Factur-X](docs/accounting/folder/import/facturx.md)
+- [Attacher une pièce jointe à une entrée comptable existante](docs/accounting/folder/import/pj.md)
 
 ## Guides sur la récupération des écritures comptables
-- [Recherche d'écriture comptable rapide](./docs/quick_search.md)
-- [Exportation d'écritures comptables au format JSON](./docs/ecritures.md)
-- [Exportation d'écritures comptables au format FEC](./docs/export/FEC.md)
+- [Recherche d'écriture comptable rapide](docs/accounting/folder/export/quick_search.md)
+- [Exportation d'écritures comptables au format JSON](docs/accounting/folder/export/ecritures.md)
+- [Exportation d'écritures comptables au format FEC](docs/accounting/folder/export/FEC.md)
 
 ## Guides sur comment intéragir avec le paramétrages et données d'un dossier de production
-- [Récupérer les dossiers de production (sociétés)](./docs/society.md)
-- [Récupérer et travailler avec le plan comptable d'un dossier de production](./docs/plan_comptable.md)
-  - [Comprendre les informations complémentaires d'un compte client ou fournisseur](./docs/complementary_info.md)
-  - [Récupération et/ou création d'un compte (upsert)](./docs/account_create.md)
-- [Récupérer les exercices d'un dossier de production](./docs/exercices.md)
-- [Récupérer la liste d'IBAN pour un dossier de production](./docs/RIB.md)
-- [Récupérer la liste de TVA d'un dossier de production](./docs/tva.md)
-- [Récupérer les journaux d'un dossier de production](./docs/journaux.md)
-- [Récupérer les types de paiement disponible d'un dossier de production](./docs/paiements.md)
-- [Récupérer la déclaration EDI d'un exercice comptable](./docs/EDI.md)
-- [Récupération des données widget et dashboards](./docs/dashboard.md)
-- [Gérer l'analytique d'une société (dossier)](./docs/analytique.md)
-- [Récupérer les paramètres de comptabilité d'une société (dossier)](./docs/accounting_parameters.md)
+- [Récupérer les dossiers de production (sociétés)](docs/accounting/society.md)
+- [Récupérer et travailler avec le plan comptable d'un dossier de production](docs/accounting/folder/account/plan_comptable.md)
+  - [Comprendre les informations complémentaires d'un compte client ou fournisseur](docs/accounting/folder/account/complementary_info.md)
+  - [Récupération et/ou création d'un compte (upsert)](docs/accounting/folder/account/account_create.md)
+- [Récupérer les exercices d'un dossier de production](docs/accounting/folder/exercices.md)
+- [Récupérer la liste d'IBAN pour un dossier de production](docs/accounting/folder/RIB.md)
+- [Récupérer la liste de TVA d'un dossier de production](docs/accounting/folder/tva.md)
+- [Récupérer les journaux d'un dossier de production](docs/accounting/folder/journaux.md)
+- [Récupérer les types de paiement disponible d'un dossier de production](docs/accounting/folder/paiements.md)
+- [Récupérer la déclaration EDI d'un exercice comptable](docs/accounting/folder/export/EDI.md)
+- [Récupération des données widget et dashboards](docs/accounting/folder/dashboard.md)
+- [Gérer l'analytique d'une société (dossier)](docs/accounting/folder/analytique.md)
+- [Récupérer les paramètres de comptabilité d'une société (dossier)](docs/accounting/folder/accounting_parameters.md)
 
 # Contact 👥
 

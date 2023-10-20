@@ -2,7 +2,8 @@
 
 Documentation (Guide) sur la récupération d'un fichier de déclaration EDI.
 
-> **Warning**: L'accès à cet endpoint n'est pas automatique (si vous en avez besoin, merci de demander aux équipes MyUnisoft de vous autoriser l'accès).
+> [!WARNING]
+> L'accès à cet endpoint n'est pas automatique (si vous en avez besoin, merci de demander aux équipes MyUnisoft de vous autoriser l'accès).
 
 ## API
 
@@ -16,7 +17,8 @@ La route prend deux arguments dont un optionnel pour l'accès société:
 - **exerciceId** (l'id de l'exercice sur lequel vous souhaitez récupérer le fichier EDI).
 - **accountingFolderId** (l'id du dossier de production/la société). N'est pas obligatoire avec 🔸 Accès par société.
 
-> 👀 Pour récupérer l'id d'un exercice, nous vous invitons à consulter le guide [Récupérer les exercices d'un dossier de production](./exercices.md)
+> [!NOTE]
+> Pour récupérer l'id d'un exercice, nous vous invitons à consulter le guide [Récupérer les exercices d'un dossier de production](../exercices.md)
 
 l'API retourne le fichier directement sous la forme d'un stream.
 
@@ -41,4 +43,4 @@ Il existe aussi deux autres erreurs possibles (avec statusCode 400);
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../../README.md)

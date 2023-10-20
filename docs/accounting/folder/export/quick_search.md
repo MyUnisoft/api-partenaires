@@ -4,7 +4,7 @@ Ce guide a pour objectif de vous aider à effectuer une recherche dans les écri
 
 Dans MyUnisoft, vous pouvez accéder à la recherche rapide en cliquant sur la loupe du menu rapide comme indiqué dans l'image ci-dessous.
 
-![](./images/quick_search.jpg)
+![](../../../images/quick_search.jpg)
 
 ## Liste des paramètres de recherche
 
@@ -132,4 +132,4 @@ curl --location 'https://api.myunisoft.fr/api/v1/accounting/entry/search' \
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../../README.md)

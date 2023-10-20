@@ -5,7 +5,7 @@ Ce guide a pour objectif de vous aider dans la récupération des paramètres de
 
 Dans MyUnisoft les paramètres de TVA peuvent être récupérés dans `Paramètres` > `Tenue` > `Plan comptable` > `Liste TVA`.
 
-![](./images/liste_tva.PNG)
+![](../../images/liste_tva.PNG)
 
 > 🐤 Développeur ? Débutant en comptabilité ? Nous vous recommandons les ressources suivantes:
 > - [TVA collectée et TVA déductible](https://intia.fr/fr/ressources/lexique/tva-collectee-et-tva-deductible/)
@@ -20,7 +20,8 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/vat_param' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-> 👀 Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
+> [!IMPORTANT]
+> Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
 
 Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à l'exemple ci-dessous**
 ```json
@@ -55,7 +56,8 @@ Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à 
 ]
 ```
 
-> ⚠️ Il y a une erreur de frappe sur la clé **vat_exigility** (ce n'est pas une erreur dans l'exemple).
+> [!WARNING]
+> Il y a une erreur de frappe sur la clé **vat_exigility** (ce n'est pas une erreur dans l'exemple).
 
 ### Rate
 Les rates possibiles sont: 2.10%, 5.5%, 10%, 20%, 8.5%, 0%, 0.90%, 1.05%, 1.75%. Leur Ids dans le même ordre (de 1 à 9).
@@ -166,4 +168,4 @@ Attention `account_ded` et `account_coll` peuvent être null (dans le cas d'un r
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../README.md)

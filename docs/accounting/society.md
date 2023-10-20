@@ -598,7 +598,8 @@ Il est possible de récupérer les informations d'un dossier spécifique grâce:
 
 ## Identifier un dossier (une société) par référence
 
-> **Note** 🔹 Uniquement possible avec un accès cabinet
+> [!NOTE]
+> 🔹 Uniquement possible avec un accès cabinet
 
 Il est possible de rechercher/identifier un dossier de production par sa référence et de récupérer le nom, Siret et id de la société.
 
@@ -622,4 +623,4 @@ La route retournera un JSON semblable à celui-ci
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../README.md)

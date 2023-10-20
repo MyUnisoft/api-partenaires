@@ -4,10 +4,9 @@ Ce guide a pour but de vous aider dans la récupération des RIB/IBAN d'une soci
 
 Dans MyUnisoft, la configuration des RIB/IBAN s'effectue à partir de: `Paramètres` > `Banques`.
 
-![](./images/RIB.jpg)
+![](../../images/RIB.jpg)
 
-> **Note**
->
+> [!NOTE]
 > Si vous disposez d'un accès cabinet, vous devez renseigner l'ID de la société ciblée dans le header.
 
 # RIB

@@ -7,11 +7,11 @@ Dans MyUnisoft les exercices peuvent être gérés par le biais du CRM: `Ecosyst
 
 Choisir "Entreprises" dans la liste:
 
-![](./images/crm_list_entreprises.PNG)
+![](../../images/crm_list_entreprises.PNG)
 
 Choisir l'onglet "Exercices":
 
-![](./images/exercices.PNG)
+![](../../images/exercices.PNG)
 
 ## API
 
@@ -23,7 +23,8 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/society/exercic
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-> 👀 Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
+> [!IMPORTANT]
+> Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
 
 Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à l'exemple ci-dessous**
 ```json
@@ -105,4 +106,4 @@ Si l'exercice n'est pas un clos les valeurs `closed_at` et `closed_by` seront nu
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../README.md)

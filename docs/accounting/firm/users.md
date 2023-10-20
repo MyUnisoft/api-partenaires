@@ -5,7 +5,7 @@ Ce guide a pour objectif de vous aider dans la récupération des utilisateurs.
 
 Dans MyUnisoft les utilisateurs et personne physiques peuvent être gérés par le biais du CRM: `Ecosystème` > `CRM` > `Entreprise / Personne physique`.
 
-![](./images/crm_users.PNG)
+![](../../images/crm_users.PNG)
 
 ## API
 
@@ -13,6 +13,7 @@ Dans MyUnisoft les utilisateurs et personne physiques peuvent être gérés par 
 
 La route https://api.myunisoft.fr/api/v1/users_v2 permet de récupérer la liste des comptes utilisateurs du schéma ayant accès à la solution (les clients et collaborateurs du cabinet).
 
+> [!IMPORTANT]
 > Tout utilisateur sera aussi une personne physique.
 
 ```bash
@@ -141,7 +142,7 @@ MyUnisoft possède deux types de profil distincts;
 
 Il existent plusieurs droits au sein de chaque types.
 
-![](./images/user_rights.png)
+![](../../images/user_rights.png)
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
@@ -259,4 +260,4 @@ interface Company {
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../README.md)

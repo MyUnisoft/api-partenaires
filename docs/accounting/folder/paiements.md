@@ -11,7 +11,8 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/payment_type' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-> 👀 Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
+> [!IMPORTANT]
+> Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
 
 Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à l'exemple ci-dessous**
 ```json
@@ -73,4 +74,4 @@ interface Payment {
 
 ---
 
-⬅️ [README](../README.md)
+⬅️ [README](../../../README.md)
