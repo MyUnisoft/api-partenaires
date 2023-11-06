@@ -102,7 +102,7 @@ Il vous suffira donc de générer un HASH avec l’algorithme SHA256 en utilisan
 ```
 localSignature := crypto.hmac(
   xThirdPartySecret,
-  JSON.Stringify(body) + date, 
+  JSON.Stringify({ body, date }), 
   “SHA256” // ALGORITHM
 );
 ```
