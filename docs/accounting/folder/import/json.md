@@ -85,16 +85,18 @@ interface NewEntryLine {
   pj_list?: PJ[];
 
   /**
-  Il n'y a pas de règle prédéfini pour ce champ.
-  Il peut contenir ce que vous voulez (numéro de chèque, numéro de virement etc.).
-  Contient uniquement des caractères alphanumériques et avoir une longueur maximum de 15.
-  */
+   * Il peut contenir un numéro libre (numéro de chèque, numéro de virement etc).
+   * IMPORTANT: Merci d'utiliser le champ piece2 pour le numéro de facture!
+   *
+   * Contient uniquement des caractères alphanumériques et a une longueur maximum de 15.
+   */
   piece?: string;
 
   /**
-  Numéro d'identification de la facture.
-  Contient uniquement des caractères alphanumériques et avoir une longueur maximum de 10.
-  */
+   * Numéro d'identification de la facture.
+   *
+   * Contient uniquement des caractères alphanumériques et à une longueur maximum de 15.
+   */
   piece2?: string;
 
   /** Doit être supérieur ou égale a la propriété date_piece, format AAAA-MM-JJ */
@@ -144,7 +146,7 @@ interface NewEntryLine {
 ```
 
 > [!NOTE]
-> Vous aurez probablement besoin d'un des deux champs (**piece** ou **piece2**).
+> Vous aurez besoin du champ **piece2** pour le numéro de facture. Le champ **piece1** est régulièrement utilisé pour le numéro de facture interne du logiciel partenaire.
 ​
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
