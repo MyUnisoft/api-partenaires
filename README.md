@@ -1,7 +1,7 @@
 <span id="readme-top"></span>
 
 <p align="center">
-<img src="./docs/images/logo.jpg" height="200">
+<img src="./docs/myunisoft_banner.png" height="300">
 </p>
 
 <p align="center">
