@@ -23,162 +23,280 @@ Vous n'avez plus qu'à accéder au second onglet "Info. complémentaires".
 
 ## API
 
-Ces informations pourront être récupérées au sein de la clé **complementary_informations** retourner par la route `https://api.myunisoft.fr/api/v1/account?mode=2`.
+Ces informations pourront être récupérées au sein de la clé **complementary_informations** retourner par la route `https://api.myunisoft.fr/api/v1/account/v2?details=true&account_id={{id}}`.
+
 
 ```json
 {
-  "account_id": 990,
-  "account_number": "4041700000",
-  "label": "FOURNISSEURS IMMO.",
-  "solde": 0,
-  "sens": "",
-  "comment": "",
-  "intraco": false,
-  "btp_autoliquidation": false,
-  "presta": false,
-  "exoneration": false,
   "das_2": false,
+  "label": "FOURNISSEURS IMMO.",
   "closed": false,
-  "blocked": false,
-  "vat_param": null,
-  "counterpart_account": null,
-  "array_counterpart_account": null,
+  "id_tva": null,
+  "presta": false,
+  "comment": null,
+  "intraco": false,
+  "analytics": false,
+  "account_id": 990,
+  "society_id": 3,
+  "exoneration": false,
+  "param_vat_id": null,
+  "ocr_threshold": 0,
+  "account_number": "4041700000",
+  "ocr_autovalidation": false,
+  "btp_autoliquidation": false,
+  "correspondance_label": null,
+  "id_compte_contrepart": null,
+  "correspondance_no_compte": null,
   "complementary_informations": {
-    "id_info_compte_tiers": 10,
-    // Corresponds à DIRIGEANT dans l'interface.
-    "person_in_charge": "Cyril MANDRILLY",
-    "address_number": "3",
-    "indice_repetition": null,
-    "address": "GAI SEJOUR",
-    "address_complement": null,
-    "postal_code": "91700",
-    "city": "SAINTE GENEVIEVE DES BOIS",
-    "siren": "840143275",
-    "name": "MY UNISOFT",
-    "contact_lastname": "GENTILHOMME",
-    "contact_firstname": "Thomas",
-    "function": "Développeur API",
-    "tel": "+33655547180",
-    "email": "gentilhomme.thomas@gmail.com",
-    "comment": null,
-    "profession": null,
-
-    // firstname et lastname sont des informations récupérés sur des documents des impôts
-    "firstname": null,
-    "lastname": null,
-    "type_info_compte_tiers": null,
-    "iban_list": [
-      {
-        "id_iban_compte_tiers": 11,
-        "iban": "",
-        "bic": "",
-        "etablissement": "",
-        "rum_date_signature": null
-      }
-    ],
-    "way_type": {
-      "way_type_id": 9,
-      "label": "Rue"
-    },
-    "amount_type_paid": null,
-    "ape": {
-      "id": 534,
-      "value": "5829C",
-      "label": "5829C-Édition de logiciels applicatifs",
-      "info": "Édition de logiciels applicatifs"
-    },
-    "payment_deadline": {
-      "id_payment_deadline": 3,
-      "label": "30 jours fin de mois",
-      "number_of_days": 30,
-      "end_month": true,
-      "day_number": null
-    },
-    "id_payment_deadline": 3,
-    "payment_type_id": 13,
-    "payment_type": {
+      "ape": {
+          "id": 534,
+          "info": "Édition de logiciels applicatifs",
+          "label": "5829C-Édition de logiciels applicatifs",
+          "value": "5829C"
+      },
+      "tel": "+33655547180",
+      "city": "SAINTE GENEVIEVE DES BOIS",
+      "name": "MY UNISOFT",
+      "tel2": null,
+      "email": "gentilhomme.thomas@gmail.com",
+      "siren": "840143275",
+      "address": "GAI SEJOUR",
+      "comment": null,
+      "function": "Développeur API",
+      "lastname": null,
+      "typevoie": {
+          "lib": "Rue",
+          "id_type_voie": 9
+      },
+      "firstname": null,
+      "iban_list": [
+          {
+              "bic": "",
+              "rum": "",
+              "iban": "",
+              "document": null,
+              "first_prlv": false,
+              "etablissement": "",
+              "rum_date_signature": null,
+              "id_iban_compte_tiers": 11
+          }
+      ],
+      "id_country": null,
+      "is_foreign": false,
+      "misc_group": null,
+      "profession": null,
+      "postal_code": "91700",
+      "contact_list": [
+        {
+            "tel1": "",
+            "tel2": "",
+            "email": "user@myunisoft.fr",
+            "ordre": 1,
+            "lastname": "random",
+            "firstname": "name",
+            "id_contact_compte_tiers": 1
+        }
+      ],
+      "payment_type": {
+          "code": "CB",
+          "label": "Carte bleue",
+          "payment_type_id": 13
+      },
+      "misc_archived": false,
+      "misc_referent": null,
+      "address_number": "3",
       "payment_type_id": 13,
-      "label": "Carte bleue",
-      "code": "CB"
-    }
+      "amount_type_paid": null,
+      "contact_lastname": "GENTILHOMME",
+      "misc_doubtful_id": null,
+      "misc_language_id": 1,
+      "payment_deadline": {
+          "label": "30 jours fin de mois",
+          "end_month": true,
+          "day_number": null,
+          "number_of_days": 30,
+          "id_payment_deadline": 3
+      },
+      "person_in_charge": "Cyril MANDRILLY",
+      "contact_firstname": "Thomas",
+      "indice_repetition": null,
+      "address_complement": null,
+      "id_payment_deadline": 3,
+      "id_info_compte_tiers": 10,
+      "type_info_compte_tiers": null
   }
 }
 ```
 
+> 
+
 <details><summary>interface TypeScript pour la clé complementary_informations</summary>
 
 ```ts
-interface ComplementaryInformations {
-  id_info_compte_tiers: number;
-  person_in_charge: string;
-  address_number: string;
-  indice_repetition: string;
-  address: string;
-  address_complement: string;
-  postal_code: string;
-  city: string;
+export interface ComplementaryInformations {
+  ape?: Ape;
+  tel?: string;
+  city?: string;
+  name?: string;
+  tel2: null | string;
+  email?: string;
   siren: string;
-  name: string;
-  contact_lastname: string;
-  contact_firstname: string;
-  function: string;
-  tel: string;
-  email: string;
-  comment: string;
-  profession: string;
-  firstname: string;
-  lastname: string;
-  type_info_compte_tiers: number;
-  iban_list: Iban[];
-  way_type: WayType;
-  amount_type_paid: AmountTypePaid;
-  ape: Ape;
-  id_payment_deadline: number;
-  payment_deadline: PaymentDeadline;
-  payment_type_id: number;
+  address?: string;
+  comment: null | string;
+  function?: string;
+  lastname: null | string;
+  typevoie?: Typevoie;
+  firstname: null | string;
+  iban_list: IbanList[];
+  id_country?: number;
+  is_foreign: boolean;
+  misc_group: any;
+  profession?: string;
+  postal_code?: string;
+  contact_list: ContactList[];
   payment_type: PaymentType;
+  misc_archived: boolean;
+  misc_referent: any;
+  address_number?: string;
+  payment_type_id?: number;
+  amount_type_paid: any;
+  contact_lastname?: string;
+  misc_doubtful_id: any;
+  misc_language_id: number;
+  payment_deadline: PaymentDeadline;
+  person_in_charge?: string;
+  contact_firstname?: string;
+  indice_repetition?: string;
+  address_complement?: string;
+  id_payment_deadline?: number;
+  id_info_compte_tiers: number;
+  type_info_compte_tiers: any;
 }
 
-interface Iban {
-  id_iban_compte_tiers: number;
-  iban: string;
-  bic: string;
-  etablissement: string;
-  rum_date_signature?: string;
-}
+export interface ContactList {
+  tel1: string;
+  tel2: string;
+  email: string;
+  ordre: number;
+  lastname: string;
+  firstname: string;
+  id_contact_compte_tiers: number;
+}s
 
-interface PaymentType {
-  payment_type_id: number;
-  label: string;
-  code: string;
-}
-
-interface PaymentDeadline {
-  id_payment_deadline: number;
-  label: string;
-  number_of_days: number;
-  end_month: boolean;
-  day_number: number | null;
-}
-
-interface Ape {
+export interface Ape {
   id: number;
-  value: string;
-  label: string;
   info: string;
+  label: string;
+  value: string;
 }
 
-interface WayType {
-  way_type_id: number;
-  label: string;
+export interface Typevoie {
+  lib: string;
+  id_type_voie: number;
 }
 
-interface AmountTypePaid {
-  id_amount_type_paid: number;
-  label: string;
+export interface IbanList {
+  bic: string;
+  rum: string;
+  iban: string;
+  first_prlv: boolean;
+  etablissement: string;
+  rum_date_signature: null | string;
+  id_iban_compte_tiers: number;
+  document: any;
+}
+
+export interface PaymentType {
+  code?: string;
+  label?: string;
+  payment_type_id?: number;
+}
+
+export interface PaymentDeadline {
+  label?: string;
+  end_month?: boolean;
+  day_number: null | number;
+  number_of_days?: number;
+  id_payment_deadline?: number;
 }
 ```
+
 </details>
+
+### Contacts
+
+![](../../../images/fiche_compte_contact.PNG)
+
+Le contact principal est représenté par les champs suivants:
+
+```json
+{
+  "tel": "+33655547180",
+  "tel2": null,
+  "email": "gentilhomme.thomas@gmail.com",
+  "function": "Développeur API",
+  "contact_firstname": "Thomas",
+  "contact_lastname": "GENTILHOMME"
+}
+```
+
+Les contacts secondaires sont injectés dans le tableau `contact_list`
+
+```json
+{
+  "contact_list": [
+    {
+      "tel1": "0655547180",
+      "tel2": "",
+      "email": "john.doe@unknown.com",
+      "ordre": 1,
+      "lastname": "Doe",
+      "firstname": "John",
+      "id_contact_compte_tiers": 3
+    }
+  ],
+}
+```
+
+> [!NOTE]
+> Le tableau est trié avec la clé `ordre`!
+
+### Réglements
+
+![](../../../images/fiche_compte_reglement.PNG)
+
+Le délai de paiement peut être retrouvé avec la clé `payment_deadline`
+
+```json
+{
+  "payment_deadline": {
+    "label": "30 jours fin de mois",
+    "end_month": true,
+    "day_number": null,
+    "number_of_days": 30,
+    "id_payment_deadline": 3
+  },
+}
+```
+
+Les méthodes de réglements avec IBAN avec le tableau `iban_list`
+
+```json
+{
+  "iban_list": [
+    {
+      "bic": "CCBPFRPP",
+      "rum": "",
+      "iban": "FR7610107001011234567890129",
+      "document": null,
+      "first_prlv": false,
+      "etablissement": "",
+      "rum_date_signature": null,
+      "id_iban_compte_tiers": 17
+    }
+  ],
+}
+```
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
