@@ -72,6 +72,10 @@ Chaque “**évènements**” est constitué d’un “**scope**” (comme défi
 
 À noter qu'il est possible de récupérer le `schemaId` d'une clé JWT avec la route [key/info?mode=extended](https://github.com/MyUnisoft/api-partenaires/blob/main/docs/endpoints/endpoints_accessibles.md#r%C3%A9cup%C3%A9ration-des-informations-du-token-et-des-routes-accessibles). Vous pouvez donc potentiellement persister l'ID en question pour simplifier l'identification du webhook reçu.
 
+## Comment activer un évènement ?
+
+[Ici](https://myunisoft.atlassian.net/wiki/external/YjM0ZTdlYzNjNzc5NGNjZjgwNjFhMjc2YmVkZTc1ZTU) vous retrouverez les différents workflows afin d'activer lesdits évènements.
+
 ## Détails d’implementation
 
 ### Validation de la requête
