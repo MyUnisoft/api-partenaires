@@ -23,7 +23,7 @@ Vous n'avez plus qu'à accéder au second onglet "Info. complémentaires".
 
 ## API
 
-Ces informations pourront être récupérées au sein de la clé **complementary_informations** retourner par la route `https://api.myunisoft.fr/api/v1/account/v2?details=true&account_id={{id}}`.
+Ces informations pourront être récupérées au sein de la clé **complementary_informations** retournée par la route `https://api.myunisoft.fr/api/v1/account/v2?details=true&account_id={{id}}`.
 
 
 ```json
