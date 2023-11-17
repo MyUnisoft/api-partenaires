@@ -44,9 +44,10 @@ Les codes d’erreurs (unique) sont les suivants;
 - **ERR-THIRD-PARTY-DOESNT-EXIST** (le groupe/schéma cible n’existe pas).
 - **ERR-USER-UNEXPECTED-TYPE** (l’utilisateur générant la clé n’a pas les droits nécessaires sur le schéma).
 - **ERR-API-TOKEN-GENERATION-FAILED** (la génération du token a échoué… merci de prendre contact avec nous si cela se produit).
-- **ERR-TOKEN-ACTIVATION-FAILURE** (l'activation du token a échoué… merci de prendre contact avec nous si cela se produit)
-- **ERR-TOO-MANY-REQUEST** (vous avez dépassé la limite autorisée de votre jeton)
-- **ERR-TOO-MANY-CONCURRENT-REQUEST** (vous avez dépassé la limite autorisée de demandes concurrentes à un dossier de production/une société)
+- **ERR-TOKEN-ACTIVATION-FAILURE** (l'activation du token a échoué… merci de prendre contact avec nous si cela se produit).
+- **ERR-TOO-MANY-REQUEST** (vous avez dépassé la limite autorisée de votre jeton).
+- **ERR-TOO-MANY-CONCURRENT-REQUEST** (vous avez dépassé la limite autorisée de demandes concurrentes à un dossier de production/une société).
+- **ERR-THIRD-PARTY-DISCONNECTED** (l'intégration a été déconnecté par un membre de l'équipe technique MyUnisoft, la raison sera fournie en message).
 
 ## Proxy
 
