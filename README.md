@@ -71,7 +71,7 @@ Il vous sera nécessaire de choisir l'un des deux type d'accès (ou de discuter 
 
 ![](./docs/images/entities.png)
 
-> [!IMPORTANT]  
+> [!TIP]  
 > Pour récupérer la liste et le paramétrage de plusieurs dossiers il est nécessaire d'avoir un accès cabinet. Il en va de même pour la récupération des entités qui ne sont pas liées au dossier (comme les utilisateurs et les portefeuilles).
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
