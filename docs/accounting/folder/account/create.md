@@ -25,7 +25,8 @@ La requête ci-dessus aura pour effet de récupérer (ou créer s'il n'existe pa
 }
 ```
 
-> Note: Le compte de contrepartie lorsqu'il est défini à la même structure qu'un compte normal (donc avec la propriété account_id, account_number et label).
+> [!NOTE]
+> Le compte de contrepartie lorsqu'il est défini à la même structure qu'un compte normal (donc avec la propriété account_id, account_number et label).
 
 ## Liste des potentielles erreurs clientes
 
