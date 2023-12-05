@@ -16,7 +16,7 @@
 L’API Partenaires permet à des logiciels partenaires ainsi que des cabinets membres de récupérer et d'envoyer de l'information depuis/vers MyUnisoft.
 
 L’authentification du partenaire/cabinet est principalement basée sur:
-- une clé <kbd>X-Third-Party</kbd> fournie par MyUnisoft. C'est une clé `unique` qui ne doit surtout **pas être communiqué** en dehors de nos équipes techniques respectives.
+- une clé <kbd>X-Third-Party</kbd> fournie par MyUnisoft (à fournir en en-tête HTTP pour chaque requête). C'est une clé `unique` qui ne doit surtout **pas être communiqué** en dehors de nos équipes techniques respectives.
 - une clé [JWT](https://jwt.io/) (**API Token**) pour chaque cabinet et/ou société.
 
 > [!IMPORTANT] 
@@ -172,7 +172,6 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 | Prénom - Nom | Rôle(s) | Email |
 | --- | --- | --- |
 | Thierry Davoigniot | PMO | [t.davoigniot@myunisoft.fr](t.davoigniot@myunisoft.fr) |
-| Rémy Longueville | Responsable des partenariats | [r.longueville@myunisoft.fr](r.longueville@myunisoft.fr) |
 | Thomas Gentilhomme | Lead Développeur API & Connecteurs | [partners.tech@myunisoft.fr](partners.tech@myunisoft.fr) |
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
