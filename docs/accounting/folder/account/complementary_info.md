@@ -250,6 +250,7 @@ Les contacts secondaires sont injectés dans le tableau `contact_list`
       "tel2": "",
       "email": "john.doe@unknown.com",
       "ordre": 1,
+      "function": "CEO",
       "lastname": "Doe",
       "firstname": "John",
       "id_contact_compte_tiers": 3
@@ -260,6 +261,8 @@ Les contacts secondaires sont injectés dans le tableau `contact_list`
 
 > [!NOTE]
 > Le tableau est trié avec la clé `ordre`!
+
+Pour la mise à jour des contacts, merci de suivre le [guide suivant](./update_contact.md).
 
 ### Réglements
 
