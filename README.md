@@ -166,6 +166,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupération des données widget et dashboards](docs/accounting/folder/dashboard.md)
 - [Gérer l'analytique d'une société (dossier)](docs/accounting/folder/analytique.md)
 - [Récupérer les paramètres de comptabilité d'une société (dossier)](docs/accounting/folder/accounting_parameters.md)
+- [Récupérer les filiales associés à une entreprise](docs/accounting/folder/filiale_associate.md)
 
 # Contact 👥
 
