@@ -181,7 +181,8 @@ export interface ContactList {
   lastname: string;
   firstname: string;
   id_contact_compte_tiers: number;
-}s
+  function?: string;
+}
 
 export interface Ape {
   id: number;
