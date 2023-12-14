@@ -36,14 +36,16 @@ Les tokens/clés se gèrent depuis la page **Connecteurs** dans l'application My
 
     Cliquez sur le bouton `Générer` pour créer un clé.
 
-    > **Warning** Assurez-vous de bien copier la clé avant de fermer la fenêtre sans quoi vous serez obliger de générer une nouvelle clé.
+    > [!CAUTION]
+    > Assurez-vous de bien copier la clé avant de fermer la fenêtre sans quoi vous serez obliger de générer une nouvelle clé.
 
     ![](../images/connector_society_card.png)
 
     ![](../images/connector_society_token.png)
 
 
-> **Note** Une fois votre clé générée il n’est plus nécessaire de refaire les étapes ci-dessus sauf si la clé a entre-temps été **déconnecté**.
+> [!TIP]
+> Une fois votre clé générée il n’est plus nécessaire de refaire les étapes ci-dessus sauf si la clé a entre-temps été **déconnecté**.
 
 ## État d'une clé
 
@@ -51,7 +53,8 @@ Une fois la clé créée, vous verrez apparaitre une carte dans la section `Conn
 
 Sur cette ligne, vous devriez voir la mention `En attente de connexion`. Ce message disparaitra dès que la clé sera activée ou utilisée.
 
-> **Note** Pour activer une clé, il vous faut appeler l'url `https://api.myunisoft.fr/api/v1/key/info?mode=extended`.
+> [!IMPORTANT]
+> Pour activer une clé, il vous faut appeler l'url `https://api.myunisoft.fr/api/v1/key/info?mode=extended`.
 >
 > [Guide sur les endpoints accessibles](../endpoints/endpoints_accessibles.md).
 
