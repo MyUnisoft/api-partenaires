@@ -6,7 +6,7 @@ La consommation de l'api partenaire requiert un token/clé valide et une clé se
 
 Les tokens/clés se gèrent depuis la page **Connecteurs** dans l'application MyUnisoft: `Paramètres` > `Connecteurs`.
 
-![](./images/connector_path.png)
+![](../images/connector_path.png)
 
 ## Type d'accès
 
@@ -16,7 +16,7 @@ Les tokens/clés se gèrent depuis la page **Connecteurs** dans l'application My
 
     Faites attention a bien sélectionner la société ciblée pour créer ce type de token.
 
-    ![](./images/connector_society.png)
+    ![](../images/connector_society.png)
 
 - 🔹 **Accès Cabinet**:
 
@@ -24,7 +24,7 @@ Les tokens/clés se gèrent depuis la page **Connecteurs** dans l'application My
 
     Faites attention a bien sélectionner le mode `Cabinet`.
 
-    ![](./images/connector_schema.png)
+    ![](../images/connector_schema.png)
 
 ## Génération d'une clé
 
@@ -38,9 +38,9 @@ Les tokens/clés se gèrent depuis la page **Connecteurs** dans l'application My
 
     > **Warning** Assurez-vous de bien copier la clé avant de fermer la fenêtre sans quoi vous serez obliger de générer une nouvelle clé.
 
-    ![](./images/connector_society_card.png)
+    ![](../images/connector_society_card.png)
 
-    ![](./images/connector_society_token.png)
+    ![](../images/connector_society_token.png)
 
 
 > **Note** Une fois votre clé générée il n’est plus nécessaire de refaire les étapes ci-dessus sauf si la clé a entre-temps été **déconnecté**.
@@ -53,9 +53,9 @@ Sur cette ligne, vous devriez voir la mention `En attente de connexion`. Ce mess
 
 > **Note** Pour activer une clé, il vous faut appeler l'url `https://api.myunisoft.fr/api/v1/key/info?mode=extended`.
 >
-> [Guide sur les endpoints accessibles](./endpoints/endpoints_accessibles.md).
+> [Guide sur les endpoints accessibles](../endpoints/endpoints_accessibles.md).
 
-![](./images/connectors_state.png)
+![](../images/connectors_state.png)
 
 ## Évènements liés à une clé
 
@@ -65,13 +65,13 @@ Un évènement est une notification avec un statut (Error, Warning, Info) conten
 
 Pour consulter ce journal d'évènement, cliquez sur la carte partenaire dans la section `Connectés`, une fenêtre s'ouvre alors. Maintenant cliquez sur l'onglet `Journaux d'évènements`, vous devriez voir une liste contenant les informations citées plus tôt.
 
-![](./images/connectors_event.png)
+![](../images/connectors_event.png)
 
 ## Déconnexion d'une clé
 
 Pour supprimer une clé, cliquez sur la carte partenaire dans la section `Connectés`, une fenêtre s'ouvre alors. Maintenant cliquez sur le bouton rouge en haut à droite et enfin cliquez sur `Déconnecter`.
 
-![](./images/connector_delete.png)
+![](../images/connector_delete.png)
 
 ## Erreur
 
