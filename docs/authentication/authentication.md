@@ -36,12 +36,12 @@ Les tokens/clés se gèrent depuis la page **Connecteurs** dans l'application My
 
     Cliquez sur le bouton `Générer` pour créer un clé.
 
-    > [!CAUTION]
-    > Assurez-vous de bien copier la clé avant de fermer la fenêtre sans quoi vous serez obliger de générer une nouvelle clé.
+> [!CAUTION]
+> Assurez-vous de bien copier la clé avant de fermer la fenêtre sans quoi vous serez obliger de générer une nouvelle clé.
 
-    ![](../images/connector_society_card.png)
+![](../images/connector_society_card.png)
 
-    ![](../images/connector_society_token.png)
+![](../images/connector_society_token.png)
 
 
 > [!TIP]
