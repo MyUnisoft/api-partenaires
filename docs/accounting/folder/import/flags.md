@@ -10,10 +10,10 @@ Dans MyUnisoft vous pouvez retrouver l'information avec le module `Demande d'inf
 
 ## API
 
-La route <kbd>GET</kbd> https://api.myunisoft.fr/api/v1/flags permets de récupérer les mêmes données que le module `Demande d'info/PJ`:
+La route <kbd>GET</kbd> https://api.myunisoft.fr/api/v1/flags/comment_attach_doc permets de récupérer les mêmes données que le module `Demande d'info/PJ`:
 
 ```bash
-curl --location --request GET 'https://api.myunisoft.fr/api/v1/flags' \
+curl --location --request GET 'https://api.myunisoft.fr/api/v1/flags/comment_attach_doc' \
 --header 'X-Third-Party-Secret: {{X-Third-Party-Secret}}' \
 --header 'society-id: 1' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
