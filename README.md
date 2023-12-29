@@ -145,6 +145,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Création d'une entrée comptable avec le format Factur-X](docs/accounting/folder/import/facturx.md)
 - [Attacher une pièce jointe à une entrée comptable existante](docs/accounting/folder/import/pj.md)
 - [Récupérer et créer des drapeaux (flag) sur des lignes/mouvements](docs/accounting/folder/import/flags.md)
+- [Ajout ou modification d'un commentaire d'écriture comptable.](docs/accounting/firm/entry_comment.md)
 
 ## Guides sur la récupération des écritures comptables
 - [Recherche d'écriture comptable rapide](docs/accounting/folder/export/quick_search.md)
