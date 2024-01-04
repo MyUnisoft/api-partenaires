@@ -155,7 +155,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 ## Guides sur comment intéragir avec le paramétrages et données d'un dossier de production
 - [Récupérer les dossiers de production (sociétés)](docs/accounting/society.md)
 - [Récupérer et travailler avec le plan comptable d'un dossier de production](docs/accounting/folder/account/plan_comptable.md)
-  - [Comprendre les informations complémentaires d'un compte client ou fournisseur](docs/accounting/folder/account/complementary_info.md)
+  - [Comprendre les informations diverses et complémentaires d'un compte client ou fournisseur](docs/accounting/folder/account/miscellaneous_and_complementary_info.md)
   - [Mise à jour de la liste de contacts d'un compte client ou fournisseur](docs/accounting/folder/account/update_contact.md)
   - [Récupération et/ou création d'un compte (upsert)](docs/accounting/folder/account/account_create.md)
 - [Récupérer les exercices d'un dossier de production](docs/accounting/folder/exercices.md)
