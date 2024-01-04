@@ -1,11 +1,11 @@
 <span id="readme-top"></span>
 
-# Comprendre les informations complémentaires d'un compte client ou fournisseur
+# Comprendre les informations diverses et complémentaires d'un compte client ou fournisseur
 
 > [!IMPORTANT]
 > Nous vous invitons préalablement à lire le guide [Récupérer et travailler avec le plan comptable.](./plan_comptable.md)
 
-Ce guide a pour objectif de vous aider dans la récupération et la compréhension des informations complémentaires attachées aux comptes du plan comptable (principalement les comptes clients et fournisseurs).
+Ce guide a pour objectif de vous aider dans la récupération et la compréhension des informations complémentaires et diverses attachées aux comptes du plan comptable (principalement les comptes clients et fournisseurs).
 
 Dans MyUnisoft le plan comptable est accessible à partir du menu: `Paramètres` > `Tenue` > `Plan comptable`.
 
@@ -15,9 +15,28 @@ Sélectionner par exemple un compte fournisseur et éditez-le (un pop-up devrait
 
 ![](../../../images/fiche_compte.PNG)
 
-Vous n'avez plus qu'à accéder au second onglet "Info. complémentaires".
+Vous n'avez plus qu'à accéder à l'onglet secondaire "Info. complémentaires".
 
 ![](../../../images/fiche_compte_complementaire.PNG)
+
+## Informations diverses
+
+![](../../../images/fiche_compte_divers.jpg)
+
+Les valeurs contenues dans la pop-up **Divers** sont aussi des informations complémentaires ce qui implique que dans la réponse JSON de l'api, ces valeurs sont contenues la propriété `complementary_informations`.
+Toujours dans le retour JSON de l'api, les champs associés commencent tous par `misc_`: misc_language_id, misc_doubtful_id, misc_referent, misc_archived, misc_group.
+
+> [!IMPORTANT]
+> À savoir que le champ `Compte douteux`/`misc_doubtful_id` n'existe que pour les **comptes clients** (numéro de compte commençant par **41**).
+
+Voici un tableau des différentes langues disponibles associées à leur ID:
+| Label | id |
+|:---:|:---:|
+| Français | 1 |
+| Anglais | 2 |
+| Allemand | 3 |
+| Espagnol | 4 |
+| Autres | 999 |
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
