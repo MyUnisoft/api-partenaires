@@ -132,6 +132,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Collection + Environment postman](https://github.com/MyUnisoft/api-partenaires/tree/main/postman)
 - [Gestion des retours erreurs](./docs/erreurs.md)
 - [Webhooks](./docs/webhooks.md)
+- [MAD (MyUnisoft Accounting Data)](./MAD/introduction.md)
 
 ## Guides pour l'accès cabinet
 - [Création et mise à jour d'un dossier de production (entreprise)](docs/accounting/firm/create_society.md)
