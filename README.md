@@ -157,7 +157,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer et travailler avec le plan comptable d'un dossier de production](docs/accounting/folder/account/plan_comptable.md)
   - [Comprendre les informations diverses et complémentaires d'un compte client ou fournisseur](docs/accounting/folder/account/miscellaneous_and_complementary_info.md)
   - [Mise à jour de la liste de contacts d'un compte client ou fournisseur](docs/accounting/folder/account/update_contact.md)
-  - [Récupération et/ou création d'un compte (upsert)](docs/accounting/folder/account/account_create.md)
+  - [Récupération et/ou création d'un compte (upsert)](docs/accounting/folder/account/create.md)
 - [Récupérer les exercices d'un dossier de production](docs/accounting/folder/exercices.md)
 - [Récupérer la liste d'IBAN pour un dossier de production](docs/accounting/folder/RIB.md)
 - [Récupérer la liste de TVA d'un dossier de production](docs/accounting/folder/tva.md)
