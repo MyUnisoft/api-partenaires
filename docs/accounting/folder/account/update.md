@@ -58,7 +58,7 @@ interface ComplementaryInfo {
   // API: country
   id_country?: number;
 
-  // Contact principale
+  // Contact principal
   contact_lastname?: string;
   contact_firstname?: string;
   function?: string;
