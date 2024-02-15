@@ -46,7 +46,7 @@ interface ComplementaryInfo {
   person_in_charge?: string;
   profession?: string;
 
-    // Addresse du siège
+  // Addresse du siège
   repetition_index: string;
   way_type_id: number;
   address: string;
