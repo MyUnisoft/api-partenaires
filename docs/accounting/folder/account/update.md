@@ -66,7 +66,7 @@ interface ComplementaryInfo {
   tel2?: string;
   email?: string;
 
-  // Contact secondaires
+  // Contacts secondaires
   contact_list?: Contact[];
 
   // Règlement
