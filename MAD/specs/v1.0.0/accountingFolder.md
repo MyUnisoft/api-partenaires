@@ -11,11 +11,13 @@ Dossier de production (qui peut être aussi considéré comme une entreprise / u
   "reference": "MYUN",
   "address": {
     "country": "FRANCE",
-    "city": "Massy",
-    "addressNumber": 4,
+    "city": "MASSY",
+    "addressNumber": "4",
+    "locatingIndex": "B",
     "addressComplement": null,
-    "postalCode": 91300,
-    "streetName": "4 Rue Galvani"
+    "postalCode": "91300",
+    "streetName": "GALVANI",
+    "streetType": "Rue"
   },
   "contact": {
     "firstName": "Régis",

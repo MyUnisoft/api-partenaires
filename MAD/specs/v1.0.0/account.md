@@ -43,6 +43,7 @@ Les comptes fournisseurs et clients (racine 40 et 41) ont une propriété `compa
       "locatingIndex": null,
       "postalCode": "91700",
       "streetName": "GAI SEJOUR",
+      "streetType": "Rue",
       "country": "FRANCE"
     },
     "contacts": [

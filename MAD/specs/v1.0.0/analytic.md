@@ -57,9 +57,15 @@
     }
   ],
   "additionalProducerProperties": {
-    "defaultSectionId": 8156
+    "defaultSectionId": "8156"
   }
 }
+```
+
+La propriété `account` contient une ou plusieurs racines de comptes permettant d'affecter automatiquement le mouvement à 100% sur cette section. Exemple;
+
+```
+622;623;624
 ```
 
 ## Interfaces
