@@ -7,7 +7,7 @@ MyUnisoft Accounting Data (raccourci en **MAD**) est un format JSON hybride supp
 
 Lors de la création de ce nouveau format, nos objectifs étaient variés;
 
-- Produire des API comptables avec des contrats d'interfaces uniformes et versionés (Nous permettant de mettre en place des cycles de vies et d'itérer plus sereinement sur des évolutions).
+- Produire des API comptables avec des contrats d'interfaces uniformes et versionnés (Nous permettant de mettre en place des cycles de vies et d'itérer plus sereinement sur des évolutions).
 - Répondre à de nouveaux usages en intégrant des fonctionnalités et informations manquantes dans nos API actuelles.
 - Améliorer les performances tout en garantissant la santé de nos infrastructures.
 - Simplifier l'expérience d'intégration pour nos partenaires (respect des bonnes pratiques, schéma JSON etc).
