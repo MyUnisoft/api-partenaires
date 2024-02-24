@@ -37,7 +37,7 @@ Les comptes fournisseurs et clients (racine 40 et 41) ont une propriété `compa
     },
     "address": {
       "city": "SAINTE GENEVIEVE DES BOIS",
-      "fullname": "GAI SEJOUR",
+      "fullName": "3 Rue GAI SEJOUR",
       "addressNumber": "3",
       "addressComplement": null,
       "locatingIndex": null,

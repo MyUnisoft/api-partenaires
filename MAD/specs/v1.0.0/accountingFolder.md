@@ -12,6 +12,7 @@ Dossier de production (qui peut être aussi considéré comme une entreprise / u
   "address": {
     "country": "FRANCE",
     "city": "MASSY",
+    "fullName": "4 B Rue GALVANI",
     "addressNumber": "4",
     "locatingIndex": "B",
     "addressComplement": null,

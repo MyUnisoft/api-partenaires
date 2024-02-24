@@ -10,6 +10,7 @@ Ci-dessous un exemple d'adresse
   "address": {
     "country": "FRANCE",
     "city": "Lille",
+    "fullName": "32 Rue Chemin Challet",
     "addressNumber": "32",
     "addressComplement": null,
     "locatingIndex": null,
@@ -19,6 +20,61 @@ Ci-dessous un exemple d'adresse
   }
 }
 ```
+
+La propriété `fullName` est construite comme ceci
+
+```
+$addressNumber $locatingIndex $streetType $streetName
+```
+
+`locatingIndex` est ignoré si elle n'est pas complétée (néanmoins si un autre champ est manquant la valeur de fullName sera **null**).
+
+## Type de voie
+
+- Allée
+- Avenue
+- Boulevard
+- Carrefour
+- Chaussée
+- Chemin
+- Cité
+- Corniche
+- Cours
+- Descente
+- Domaine
+- Ecart
+- Esplanade
+- Faubourg
+- Grande Rue
+- Halle
+- Hameau
+- Impasse
+- Lieu dit
+- Lotissement
+- Mail
+- Marché
+- Montée
+- Parvis
+- Passage
+- Place
+- Plaine
+- Plateau
+- Promenade
+- Quai
+- Quartier
+- Residence
+- Rocade
+- Rond Point
+- Route
+- Rue
+- Ruelle
+- Sente-Sentier
+- Square
+- Terrasse
+- Terre-plein
+- Villa
+- Village
+- Voie
 
 ## Interfaces
 Ci-dessous les définitions avec TypeScript et JSON Schema.
@@ -35,7 +91,7 @@ interface Address {
   streetName: string | null;
   streetType?: string | null;
   locatingIndex?: "B" | "T" | "Q" | "C" | null;
-  fullname?: string | null;
+  fullName?: string | null;
   city?: string | null;
   country?: string | null;
 }
