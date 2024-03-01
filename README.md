@@ -128,48 +128,42 @@ Lorsque la limite est dépassé l'API retournera une erreur `ERR-TOO-MANY-REQUES
 
 Une liste de guides qui pourront certainement vous aider dans la réalisation de l'interconnexion avec MyUnisoft.
 
-## Guides API
 - [Collection + Environment postman](https://github.com/MyUnisoft/api-partenaires/tree/main/postman)
-- [Gestion des retours erreurs](./docs/erreurs.md)
-- [Webhooks](./docs/webhooks.md)
-- [MAD (MyUnisoft Accounting Data)](./MAD/introduction.md)
+- [Gestion et compréhension des retours/codes d'erreurs](./docs/erreurs.md)
+- **[BETA]** [Webhooks](./docs/webhooks.md)
 
-## Guides pour l'accès cabinet
-- [Création et mise à jour d'un dossier de production (entreprise)](docs/accounting/firm/create_society.md)
-- [Récupérer les utilisateurs et personne physiques d'un schéma (cabinet)](docs/accounting/firm/users.md)
-- [Récupérer les dossiers accessibles pour un utilisateur (cabinet)](docs/accounting/firm/dossier_accessible.md)
+## Guides sur les API cabinets
+- [Création et mise à jour d'un dossier de production](docs/accounting/firm/create_society.md)
+- [Récupérer les utilisateurs et personnes physiques](docs/accounting/firm/users.md)
+- [Récupérer les dossiers accessibles pour un utilisateur](docs/accounting/firm/dossier_accessible.md)
+- [Récupérer les dossiers de productions (entreprises)](docs/accounting/society.md)
+- [Récupérer le paramétrage comptable d'un dossier de production](docs/accounting/folder/accounting_parameters.md)
+- [Récupérer les filiales associées à une entreprise](docs/accounting/folder/filiale_associate.md)
 
-## Guides sur l'import d'écritures comptables
-- [Création d'une entrée comptable avec le format JSON](docs/accounting/folder/import/json.md)
-- [Création d'écritures et mouvements comptable avec le format TRA+PJ](docs/accounting/folder/import/tra.md)
-- [Création et Modification d'écritures et mouvements comptable avec le format FEC](docs/accounting/folder/import/fec.md)
-- [Création d'une entrée comptable avec le format Factur-X](docs/accounting/folder/import/facturx.md)
-- [Attacher une pièce jointe à une entrée comptable existante](docs/accounting/folder/import/pj.md)
-- [Récupérer et créer des drapeaux (flag) sur des lignes/mouvements](docs/accounting/folder/import/flags.md)
-- [Ajout ou modification d'un commentaire d'écriture comptable.](docs/accounting/firm/entry_comment.md)
+## Guides sur les API comptabilités
 
-## Guides sur la récupération des écritures comptables
-- [Recherche d'écriture comptable rapide](docs/accounting/folder/export/quick_search.md)
-- [Exportation d'écritures comptables au format JSON](docs/accounting/folder/export/ecritures.md)
-- [Exportation d'écritures comptables au format FEC](docs/accounting/folder/export/FEC.md)
-
-## Guides sur comment intéragir avec le paramétrages et données d'un dossier de production
-- [Récupérer les dossiers de production (sociétés)](docs/accounting/society.md)
-- [Récupérer et travailler avec le plan comptable d'un dossier de production](docs/accounting/folder/account/plan_comptable.md)
+- **[BETA]** [MAD (MyUnisoft Accounting Data)](./MAD/introduction.md)
+- [Récupérer les exercices](docs/accounting/folder/exercices.md)
+- [Récupérer les banques (RIBS / IBAN)](docs/accounting/folder/RIB.md)
+- [Récupérer les TVA](docs/accounting/folder/tva.md)
+- [Récupérer les journaux](docs/accounting/folder/journaux.md)
+- [Récupérer les méthodes de paiement](docs/accounting/folder/paiements.md)
+- [Récupérer la déclaration EDI d'un exercice comptable](docs/accounting/folder/export/EDI.md)
+- [Récupérer et travailler avec le plan comptable](docs/accounting/folder/account/plan_comptable.md)
   - [Comprendre les informations diverses et complémentaires d'un compte client ou fournisseur](docs/accounting/folder/account/miscellaneous_and_complementary_info.md)
   - [Mise à jour de la liste de contacts d'un compte client ou fournisseur](docs/accounting/folder/account/update_contact.md)
   - [Mise à jour complète d'un compte client ou fournisseur](docs/accounting/folder/account/update.md)
-  - [Récupération et/ou création d'un compte (upsert)](docs/accounting/folder/account/create.md)
-- [Récupérer les exercices d'un dossier de production](docs/accounting/folder/exercices.md)
-- [Récupérer la liste d'IBAN pour un dossier de production](docs/accounting/folder/RIB.md)
-- [Récupérer la liste de TVA d'un dossier de production](docs/accounting/folder/tva.md)
-- [Récupérer les journaux d'un dossier de production](docs/accounting/folder/journaux.md)
-- [Récupérer les types de paiement disponible d'un dossier de production](docs/accounting/folder/paiements.md)
-- [Récupérer la déclaration EDI d'un exercice comptable](docs/accounting/folder/export/EDI.md)
-- [Récupération des données widget et dashboards](docs/accounting/folder/dashboard.md)
+- [Récupération et/ou création d'un compte](docs/accounting/folder/account/create.md)
 - [Gérer l'analytique d'une société (dossier)](docs/accounting/folder/analytique.md)
-- [Récupérer les paramètres de comptabilité d'une société (dossier)](docs/accounting/folder/accounting_parameters.md)
-- [Récupérer les filiales associés à une entreprise](docs/accounting/folder/filiale_associate.md)
+- [Récupération des données liées aux widgets et dashboards](docs/accounting/folder/dashboard.md)
+
+### Ecritures et mouvements
+
+- <kbd>Import</kbd> [JSON](docs/accounting/folder/import/json.md), [TRA+PJ](docs/accounting/folder/import/tra.md), [FEC](docs/accounting/folder/import/fec.md), [Factur-X](docs/accounting/folder/import/facturx.md)
+- <kbd>Export</kbd> [JSON](docs/accounting/folder/export/ecritures.md), [FEC](docs/accounting/folder/export/FEC.md)
+- [Attacher une pièce jointe à une écriture existante](docs/accounting/folder/import/pj.md)
+- [Récupérer et créer des drapeaux (flag) sur des lignes/mouvements](docs/accounting/folder/import/flags.md)
+- [Ajout ou modification d'un commentaire sur une écriture](docs/accounting/firm/entry_comment.md)
 
 # Contact 👥
 
