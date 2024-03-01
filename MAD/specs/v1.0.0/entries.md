@@ -14,7 +14,12 @@ Sur MyUnisoft les mouvements sont groupés dans une abstraction que nous appelon
 ```json
 {
   "producerId": "13524346",
-  "attachments": {},
+  "attachments": {
+    "VotreDocumentSelectionne_12-06-2022 (5).pdf": {
+      "type": "URL",
+      "value": "https://app.myunisoft.fr/api/ged/ged/document/1-gTt2QkfLPABeb6Z/download"
+    }
+  },
   "date": "2023-02-01",
   "dueDate": null,
   "journal": {
