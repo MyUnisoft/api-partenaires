@@ -47,7 +47,7 @@ L’authentification du partenaire/cabinet est principalement basée sur:
 </details>
 <br>
 
-N'attendez pas pour rejoindre l'écosystème [MyUnisoft connected](https://myunisoft-connected.fr/) riche de plus d'une centaine de d'intégrations!
+N'attendez pas pour rejoindre l'écosystème [MyUnisoft connected](https://myunisoft-connected.fr/) riche de plus d'une centaine d'intégrations!
 
 ## Activation de la clé secrète X-Third-Party
 
