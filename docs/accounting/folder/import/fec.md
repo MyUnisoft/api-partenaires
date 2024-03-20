@@ -35,6 +35,21 @@ Le type permet de configurer le comportement de la requête:
 - **1** = aucune vérification on rajoute les données a l'exercice existant.
 - **2** = on supprime les écritures si présent sur l'exercice.
 
+## Pièce jointe
+
+Il est possible d'attacher des pièces jointes aux écritutres importées au format FEC. Pour ce faire il suffit d'ajouter les pièces jointes dans le dossier compressé (dossier `.zip`) et de renseigner le nom de fichier correspondant dans la colonne `Pièce jointe` du fichier FEC.
+
+### Exemple
+
+![](../../../images/fec_pj.jpg)
+
+Ficher fec.txt:
+```
+JournalCode	JournalLib	EcritureNum EcritureDate	CompteNum	  CompteLib	                              CompAuxNum	CompAuxLib	PieceRef	PieceDate	EcritureLib	Debit	Credit	EcritureLet	DateLet	ValidDate	MontantDevise	IdDevise	PieceJointe
+AC	        Achats                  20200220	    625ACCOUNT  Frais déplacements		          	                              0320-1	  20200331	sncf	      52	  0					                                          EUR     	PJ-1.pdf
+[...]
+AC	        Achats                  20200220	    625ACCOUNT  Frais déplacements			                                        0320-2	  20200331	sncf	      52	  0					                                          EUR	      PJ-2.jpg
+```
 ---
 
 ⬅️ [README](../../../../README.md)
