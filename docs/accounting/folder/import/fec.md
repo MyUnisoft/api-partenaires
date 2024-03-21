@@ -35,11 +35,9 @@ Le type permet de configurer le comportement de la requête:
 - **1** = aucune vérification on rajoute les données a l'exercice existant.
 - **2** = on supprime les écritures si présent sur l'exercice.
 
-## Pièce jointe
+### Import avec des pièces jointes
 
-Il est possible d'attacher des pièces jointes aux écritures importées au format FEC. Pour ce faire il suffit d'ajouter les pièces jointes dans le dossier compressé (dossier `.zip`) et de renseigner le nom de fichier correspondant dans la colonne `Pièce jointe` du fichier FEC.
-
-### Exemple
+Il est possible d'attacher des pièces jointes aux écritures importées au format FEC. Pour cela il suffit d'ajouter les pièces jointes dans le dossier compressé (dossier `.zip`) et de renseigner le nom de fichier correspondant dans la colonne `Pièce jointe` du fichier FEC. Le principe est similaire aux archives TRA+PJ.
 
 ![](../../../images/fec_pj.jpg)
 
