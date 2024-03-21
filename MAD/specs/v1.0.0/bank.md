@@ -2,11 +2,7 @@
 
 # Banque
 
-Dans MyUnisoft, la configuration des IBAN s'effectue à partir du menu: `Paramètres` > `Banques`.
-
-![](../../images/iban.PNG)
-
-## Exemple
+## Introduction
 
 Les banques permettent de lier des informations bancaires (IBAN, BIC) avec un [compte](./account.md) et un [journal](./journal.md).
 

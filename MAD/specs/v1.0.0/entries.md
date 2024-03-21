@@ -2,14 +2,14 @@
 
 # Écriture et Mouvements
 
+## Introduction
+
 Sur MyUnisoft les mouvements sont groupés dans une abstraction que nous appelons "Écriture comptable".
 
 ![](../../images/entries_abstract.png)
 
 > [!NOTE]
 > Un mouvement est aussi communément appelé une "ligne d'écriture".
-
-## Exemple
 
 ```json
 {

@@ -2,7 +2,7 @@
 
 # Paiement
 
-## Exemple
+## Introduction
 
 ```json
 [

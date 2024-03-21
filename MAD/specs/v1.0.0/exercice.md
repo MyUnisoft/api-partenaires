@@ -2,21 +2,7 @@
 
 # Exercice
 
-Dans MyUnisoft les exercices peuvent être gérés par le biais du CRM dans le menu: `Ecosystème` > `CRM` > `Entreprise / Personne physique`.
-
----
-
-1 - Choisir <kbd>Entreprises</kbd> dans la liste:
-
-![](../../../docs/images/crm_list_entreprises.PNG)
-
----
-
-2 - Choisir l'onglet <kbd>Exercices</kbd>
-
-<img src="../../../docs/images/exercices.PNG" width="800">
-
-## Exemple
+## Introduction
 
 ```json
 {
@@ -51,13 +37,13 @@ La propriété `by` correspond à l'id, nom et prénom de l'utilisateur ayant cl
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
-## Nommage
+### Nommage
 
 Les noms d'exercices sur MyUnisoft sont générés dynamiquement (N+1, N, N-1 ...). Le `N` étant l'exercice en cours.
 
 <img src="../../images/exercices.png">
 
-## Lettrage des exercices
+### Lettrage des exercices
 
 Les exercices MyUnisoft peuvent être ouverts avec l'une des deux méthodes de lettrage suivantes;
 

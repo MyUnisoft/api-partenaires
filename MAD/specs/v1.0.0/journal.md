@@ -2,12 +2,7 @@
 
 # Journal
 
-Dans MyUnisoft la liste des journaux est accessible dans le menu `Paramètres` > `Tenue` > `Journaux`.
-
-![](../../../docs/images/liste_journaux.PNG)
-
-
-## Exemple
+## Introduction
 
 Les journaux du type <kbd>Banque</kbd> et <kbd>Caisse</kbd> possèdent un compte de contrepartie (pour les autres, la propriété `counterpartAccount` sera égale à **null**).
 
@@ -45,7 +40,7 @@ La propriété <kbd>customerReferenceCode</kbd> permet au gestionnaire du dossie
 }
 ```
 
-## Type de journaux
+### Type de journaux
 
 | Nom / Type | Code MyUnisoft | Description | Compte de contrepartie |
 | --- | --- | --- | --- |

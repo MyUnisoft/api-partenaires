@@ -1,9 +1,10 @@
 <span id="readme-top"></span>
 
 # Dossier de production
-Dossier de production (qui peut être aussi considéré comme une entreprise / un établissement).
 
-## Exemple
+## Introduction
+
+Dossier de production (qui peut être aussi considéré comme une entreprise / un établissement).
 
 ```json
 {

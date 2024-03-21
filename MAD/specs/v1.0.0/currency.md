@@ -1,12 +1,13 @@
 <span id="readme-top"></span>
 
 # Devise
+
+## Introduction
+
 Objet représentant une devise. Les codes suivent la norme [ISO 4217](https://fr.wikipedia.org/wiki/ISO_4217)
 
 > [!IMPORTANT] 
 > Pour la conversion d'un montant, MyUnisoft supporte une liste réduite de devises consultable par le biais de l'API <kbd>GET /api/v1/currencie</kbd>
-
-## Exemple
 
 ```json
 {

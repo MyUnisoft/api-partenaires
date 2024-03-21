@@ -14,14 +14,9 @@ curl --location --request GET 'https://api.myunisoft.fr/api/v1/mad/entries?idExe
 --header 'Content-Type: application/json'
 ```
 
-Les écritures et mouvements retournés corresponderont à la [spécification suivante](../specs/v1.0.0/entries.md).
+## 🔧 Paramètres de la requête
 
-> [!IMPORTANT]
-> Pour éviter les extractions abusives nous avons volontairement limité à un exercice par requête API. Si vous souhaitez extraire l'intégralité des mouvements nous vous recommandons d'itérer sur l'intégralité des exercices séquentiellement.
-
-## 🔧 Paramètres
-
-Le paramétrage de la route se fait exclusivement par le biais des querystrings. 
+Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string). 
 
 | nom | description | obligatoire |
 | --- | --- | --- |
@@ -33,9 +28,16 @@ Le paramétrage de la route se fait exclusivement par le biais des querystrings.
 > [!NOTE]
 > L'écart maximum entre la date de début et de fin doit être de maximums 12 mois.
 
-## 🔹 Accès cabinet
+> [!IMPORTANT]
+> 🔹 Accès cabinet 
+> L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production (la société concernée par la demande d'extraction).
 
-L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production (la société concernée par la demande d'extraction).
+## 🔬 Réponse
+
+Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/entries.md).
+
+> [!CAUTION]
+> Pour éviter les extractions abusives nous avons volontairement limité à un exercice par requête API. Si vous souhaitez extraire l'intégralité des mouvements nous vous recommandons d'itérer sur l'intégralité des exercices séquentiellement.
 
 ---
 
