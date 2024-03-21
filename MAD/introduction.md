@@ -62,6 +62,7 @@ Ces interfaces et types sont régulièrement présents dans les différentes str
 - [Axe et Section Analytique](./specs/v1.0.0/analytic.md)
 - [Paiement](./specs/v1.0.0/payment.md)
 - [Banque](./specs/v1.0.0/bank.md)
+- **[BETA]** [VAT](./specs/v1.0.0/vat.md)
 
 ## 🌍 API
 
