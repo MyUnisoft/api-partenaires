@@ -37,7 +37,7 @@ Le type permet de configurer le comportement de la requête:
 
 ## Pièce jointe
 
-Il est possible d'attacher des pièces jointes aux écritutres importées au format FEC. Pour ce faire il suffit d'ajouter les pièces jointes dans le dossier compressé (dossier `.zip`) et de renseigner le nom de fichier correspondant dans la colonne `Pièce jointe` du fichier FEC.
+Il est possible d'attacher des pièces jointes aux écritures importées au format FEC. Pour ce faire il suffit d'ajouter les pièces jointes dans le dossier compressé (dossier `.zip`) et de renseigner le nom de fichier correspondant dans la colonne `Pièce jointe` du fichier FEC.
 
 ### Exemple
 
