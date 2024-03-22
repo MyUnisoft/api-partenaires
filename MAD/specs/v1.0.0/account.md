@@ -2,11 +2,7 @@
 
 # Compte
 
-Dans MyUnisoft, le plan comptable peut être configuré à partir du menu: `Paramètres` > `Tenue` > `Plan comptable`.
-
-![](../../../docs/images/plan_comptable.PNG)
-
-## Exemple
+## Introduction
 
 ```json
 {

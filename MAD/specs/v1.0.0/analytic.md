@@ -2,7 +2,7 @@
 
 # Analytique
 
-## Exemple
+## Introduction
 
 ```json
 {

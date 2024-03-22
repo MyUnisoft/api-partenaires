@@ -2,8 +2,7 @@
 
 # Adresse
 
-## Exemple
-Ci-dessous un exemple d'adresse
+## Introduction
 
 ```json
 {
