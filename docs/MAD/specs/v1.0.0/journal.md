@@ -1,3 +1,10 @@
+---
+prev:
+  text: 💃 Introduction
+  link: MAD/introduction.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Journal
@@ -227,7 +234,3 @@ Journaux (**JAL**). Page 38 de la spécification.
 | LIBELLE | 10 | name |
 | NATURE | 45 | additionalProducerProperties.type |
 | COMPTE | 54 | counterpartAccount.number |
-
----
-
-⬅️ [Introduction MAD](../../introduction.md)

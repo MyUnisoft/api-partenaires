@@ -40,7 +40,3 @@ Il existe aussi deux autres erreurs possibles (avec statusCode 400);
 
 - `ACCOUNTING-FOLDER-NOT-FOUND` (L'id du dossier de production ne correspond à rien sur MyUnisoft).
 - `MISSING-ACCOUNTING-FOLDER-ID` (L'id du dossier de production est manquant, possible dans le cadre d'un 🔹 Accès cabinet)
-
----
-
-⬅️ [README](../../../../README.md)

@@ -124,7 +124,3 @@ Type du dossier qui correspond à la propriété  `id_type_company`.
 | 10 | Cabinet |
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../README.md)

@@ -322,7 +322,3 @@ Les méthodes de réglements avec IBAN avec le tableau `iban_list`
 ```
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../../README.md)

@@ -1,7 +1,14 @@
-# Export des journaux
+---
+prev:
+  text: 💃 Introduction
+  link: MAD/introduction.md
+next: false
+---
+
+# Export des banques
 
 ```bash
-curl --location --request GET 'https://api.myunisoft.fr/api/v1/mad/journals?version=1.0.0' \
+curl --location --request GET 'https://api.myunisoft.fr/api/v1/mad/banks?version=1.0.0' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}' \
 --header 'Content-Type: application/json'
@@ -21,14 +28,10 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 
 ## 🔬 Réponse
 
-Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/journal.md).
+Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/bank.md).
 
-## 💬 Gérer les journaux sur l'interface MyUnisoft
+## 💬 Gérer les banques sur l'interface MyUnisoft
 
-La liste des journaux est accessible par le biais du menu: `Paramètres` > `Tenue` > `Journaux`.
+La configuration des banques (IBAN) s'effectue à partir du menu: `Paramètres` > `Banques`.
 
-![](../../docs/images/liste_journaux.PNG)
-
----
-
-⬅️ [Introduction MAD](../introduction.md)
+![](../images/iban.PNG)

@@ -1,7 +1,13 @@
-# Endpoints d'accès cabinet
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next:
+  text: 🔑 Routes accessibles
+  link: /endpoints/endpoints_accessibles.md
+---
 
-> [!IMPORTANT]
-> Suivez [ce guide](./endpoints_accessibles.md) pour récupérer les routes disponibles.
+# Endpoints d'accès cabinet
 
 Les routes sont documentées sur le [postman](https://docs.api.myunisoft.fr/#intro) en ligne.
 
@@ -29,7 +35,3 @@ Les routes sont documentés sur le [postman en ligne](https://docs.api.myunisoft
 
 ## Route society
 La route `/api/v1/society` peut recevoir le header **society-id** ce qui permet de récupérer les informations uniquement pour la société en question.
-
----
-
-⬅️ [README](../../README.md)

@@ -90,7 +90,3 @@ Les arguments disponibles pour la querystring sont les suivants:
 
 > [!IMPORTANT]
 > `ENTRIES_LINE_TEMP` doit être utilisé pour les flux à valider (comme les intégrations bancaires ou partenaires).
-
----
-
-⬅️ [README](../../../../README.md)

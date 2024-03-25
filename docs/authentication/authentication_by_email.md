@@ -1,6 +1,18 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next:
+  text: Utilisation des routes avec un 🔹 accès cabinet
+  link: /endpoints/cabinet.md
+---
+
 # 🔹 Authentification par email avec accès cabinet
 
 Notre service authentification possède un endpoint spécifique qui permet la génération d'un API Token spécialement conçu pour une utilisation avec accès cabinet. La durée de vie du token est de quatre heures.
+
+> [!CAUTION]
+> Ce guide est dédié aux cabinets clients ayant souscrit à l'offre API cabinet (il ne concerne pas nos partenaires effectuant une intégration avec un accès cabinet).
 
 ## Génération de la clé (API Token)
 
@@ -43,8 +55,3 @@ Dans l'interface MyUnisoft il est possible de récupérer l'id de l'entité par 
 ![](../images/liens_dynamique.PNG)
 
 Si vous n'avez pas vous-même accès un collaborateur de l'entité pourra toujours vous fournir l'information (N'hésitez pas non plus à demander à notre équipe).
-
----
-
-⬅️ [README](../README.md) |
-➡️ [Utilisation des routes avec un 🔹 Accès cabinet](./endpoints/cabinet.md)

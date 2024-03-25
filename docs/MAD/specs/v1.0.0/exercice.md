@@ -1,3 +1,10 @@
+---
+prev:
+  text: 💃 Introduction
+  link: MAD/introduction.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Exercice
@@ -207,6 +214,3 @@ Exercice (**EXO**). Page 16 de la spécification.
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
----
-
-⬅️ [Introduction MAD](../../introduction.md)

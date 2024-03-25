@@ -1,3 +1,10 @@
+---
+prev:
+  text: 💃 Introduction
+  link: MAD/introduction.md
+next: false
+---
+
 # Export des exercices
 
 ```bash
@@ -34,14 +41,10 @@ Les exercices peuvent être gérés par le biais du CRM dans le menu: `Ecosystè
 
 1 - Choisir <kbd>Entreprises</kbd> dans la liste:
 
-![](../../docs/images/crm_list_entreprises.PNG)
+![](../../images/crm_list_entreprises.PNG)
 
 ---
 
 2 - Choisir l'onglet <kbd>Exercices</kbd>
 
-<img src="../../docs/images/exercices.PNG" width="800">
-
----
-
-⬅️ [Introduction MAD](../introduction.md)
+<img src="../../images/exercices.PNG" width="800">

@@ -41,5 +41,4 @@ Tandis que le nouveau système d'authentification permet aux clients de génére
 
 ---
 
-⬅️ [README](../README.md) |
 ➡️ [Authentification](./authentication.md)

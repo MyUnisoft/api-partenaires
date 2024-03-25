@@ -1,3 +1,10 @@
+---
+prev:
+  text: 💃 Introduction
+  link: MAD/introduction.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Devise
@@ -55,7 +62,3 @@ interface Currency {
 }
 ```
 </details>
-
----
-
-⬅️ [Introduction MAD](../../introduction.md)

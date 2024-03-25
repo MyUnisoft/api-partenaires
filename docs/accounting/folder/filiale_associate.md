@@ -133,7 +133,3 @@ Type de la fonction signataire qui correspond à la propriété  `signatory_func
 | 4 | DG |
 | 5 | PDG |
 | 6 | Co-Gérant |
-
----
-
-⬅️ [README](../../../README.md)

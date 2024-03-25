@@ -1,3 +1,10 @@
+---
+prev:
+  text: 💃 Introduction
+  link: MAD/introduction.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Compte Simplifié
@@ -55,7 +62,3 @@ interface SimplifiedAccount {
 }
 ```
 </details>
-
----
-
-⬅️ [Introduction MAD](../../introduction.md)

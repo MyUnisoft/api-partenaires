@@ -1,6 +1,13 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Guide Webhooks
 
-> [!IMPORTANT]  
+> [!CAUTION]  
 > Les webhooks ne sont pas disponibles pour les clients possédant l'offre API cabinet.
 
 ## Introduction

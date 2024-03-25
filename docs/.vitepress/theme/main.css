@@ -1,0 +1,80 @@
+:root {
+  --vp-home-hero-name-color: #0bd1d1;
+  --vp-button-brand-bg: #0bd1d1;
+  --vp-c-brand-1: #087a7a;
+  --vp-sidebar-width: 330px;
+}
+
+:root.dark {
+  --vp-c-brand-1: #0bd1d1;
+}
+
+html:not(.dark) .github-alert.note {
+  background: #d6f7ff !important;
+}
+html.dark .github-alert.note {
+  background: #39b0eba3 !important;
+}
+
+html:not(.dark) .github-alert.tip {
+  background: #dffcdd !important;
+}
+html.dark .github-alert.tip {
+  background: #70eb91a3 !important;
+}
+
+.VPNavBar.has-sidebar .title {
+  padding: 0 !important;
+  width: var(--vp-sidebar-width);
+  max-width: 100%;
+  justify-content: center;
+  border-bottom: 0px;
+}
+
+@media (min-width: 1460px) {
+  .VPNavBar.has-sidebar .title {
+    width: calc((100% -(var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 32px);
+    justify-content: end;
+    padding-right: 70px !important;
+  }
+}
+
+.VPSidebar {
+  padding: 0px !important;
+  padding-top: var(--vp-nav-height) !important;
+}
+
+.VPSidebar .nav {
+  display: flex;
+  flex-direction: column;
+  align-items: last baseline;
+}
+.group {
+  flex-grow: 1;
+  max-width: 300px;
+  width: 100% !important;
+  padding: 0 16px;
+}
+
+@media (min-width: 960px) {
+  .VPLocalNav {
+    top: 0 !important
+  }
+}
+
+@media (max-width: 960px) {
+  .VPNavBar.has-sidebar .title {
+    width: auto !important;
+  }
+
+  .VPSidebar {
+    padding-top: 16px !important;
+  }
+}
+
+b.GET {
+  color: #2E7D32;
+}
+b.POST {
+  color: #7f7212;
+}

@@ -1,3 +1,9 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
 # Récupérer les routes accessibles
 
 Il est possible de récupérer les informations liées à votre accès (token) en appelant la route  **GET** `https://api.myunisoft.fr/api/v1/key/info`
@@ -121,8 +127,6 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/key/info?mode=e
   ```
 </details>
 
----
-
 ## Types
 ```ts
 interface Route {
@@ -149,7 +153,3 @@ interface TokenDataWithRoutes {
   routes: Routes;
 }
 ```
-
----
-
-⬅️ [README](../../README.md)

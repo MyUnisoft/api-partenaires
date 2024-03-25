@@ -1,7 +1,14 @@
-# Export des banques
+---
+prev:
+  text: 💃 Introduction
+  link: MAD/introduction.md
+next: false
+---
+
+# Export des méthodes de paiement
 
 ```bash
-curl --location --request GET 'https://api.myunisoft.fr/api/v1/mad/banks?version=1.0.0' \
+curl --location --request GET 'https://api.myunisoft.fr/api/v1/mad/payments?version=1.0.0' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}' \
 --header 'Content-Type: application/json'
@@ -21,14 +28,4 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 
 ## 🔬 Réponse
 
-Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/bank.md).
-
-## 💬 Gérer les banques sur l'interface MyUnisoft
-
-La configuration des banques (IBAN) s'effectue à partir du menu: `Paramètres` > `Banques`.
-
-![](../images/iban.PNG)
-
----
-
-⬅️ [Introduction MAD](../introduction.md)
+Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/payment.md).

@@ -1,7 +1,14 @@
-# Export des méthodes de paiement
+---
+prev:
+  text: 💃 Introduction
+  link: MAD/introduction.md
+next: false
+---
+
+# Export des axes et sections analytiques
 
 ```bash
-curl --location --request GET 'https://api.myunisoft.fr/api/v1/mad/payments?version=1.0.0' \
+curl --location --request GET 'https://api.myunisoft.fr/api/v1/mad/analytics?version=1.0.0' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}' \
 --header 'Content-Type: application/json'
@@ -21,8 +28,4 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 
 ## 🔬 Réponse
 
-Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/payment.md).
-
----
-
-⬅️ [Introduction MAD](../introduction.md)
+Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/analytic.md).

@@ -1,3 +1,10 @@
+---
+prev:
+  text: 💃 Introduction
+  link: MAD/introduction.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Paiement
@@ -114,7 +121,3 @@ Mode de paiement (**MDP**). Page 21 de la spécification.
 | IDENTIFIANT | 4 | `MDP` |
 | CODE | 7 | code |
 | LIBELLE | 10 | name |
-
----
-
-⬅️ [Introduction MAD](../../introduction.md)

@@ -519,7 +519,3 @@ Voici un exemple avec une ligne d'un montant de 100 francs suisses (CHF) qui ser
 ```
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../../README.md)

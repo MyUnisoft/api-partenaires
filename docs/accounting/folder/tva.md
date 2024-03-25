@@ -165,7 +165,3 @@ Attention `account_ded` et `account_coll` peuvent être null (dans le cas d'un r
 À la différence de plusieurs autres logiciels la TVA sur MyUnisoft est directement composé d'un compte achat (déductible) et vente (collectée). Dans le cadre d'une auto-liquidation vous aurez donc au sein d'une même TVA l'intégralité des informations qui vous sont nécessaires.
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../README.md)

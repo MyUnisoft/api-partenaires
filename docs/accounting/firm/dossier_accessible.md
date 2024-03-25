@@ -42,7 +42,3 @@ Retour JSON de l'API:
   "56"
 ]
 ```
-
----
-
-⬅️ [README](../../../README.md)

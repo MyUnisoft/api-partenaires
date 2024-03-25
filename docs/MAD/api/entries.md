@@ -1,3 +1,10 @@
+---
+prev:
+  text: 💃 Introduction
+  link: MAD/introduction.md
+next: false
+---
+
 # Export des écritures et mouvements
 
 L'API d'export ci-dessous vous permettra de récupérer les écritures par deux biais distincts;
@@ -38,7 +45,3 @@ Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/en
 
 > [!CAUTION]
 > Pour éviter les extractions abusives nous avons volontairement limité à un exercice par requête API. Si vous souhaitez extraire l'intégralité des mouvements nous vous recommandons d'itérer sur l'intégralité des exercices séquentiellement.
-
----
-
-⬅️ [Introduction MAD](../introduction.md)
