@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Récupération des RIB/IBAN d'une société
 
 Ce guide a pour but de vous aider dans la récupération des RIB/IBAN d'une société.
@@ -18,7 +25,7 @@ curl --location --request GET 'https://app.myunisoft.fr/api/v1/rib' \
 --header 'Authorization: Bearer Authorization'
 ```
 
-<details>
+<details class="details custom-block">
   <summary>Retour JSON de l'API</summary>
 
   ```json

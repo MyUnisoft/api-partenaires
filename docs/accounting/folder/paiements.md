@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Récupérer les types de paiement disponible sur une société (dossier)
 Ce guide a pour objectif de vous aider dans la récupération des méthodes de paiement disponible sur une société (dossier).
 
@@ -71,7 +78,3 @@ interface Payment {
   code: string;
 }
 ```
-
----
-
-⬅️ [README](../../../README.md)

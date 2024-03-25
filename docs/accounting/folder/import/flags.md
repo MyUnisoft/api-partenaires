@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Récupérer et créer des drapeaux (flag) sur des lignes/mouvements
 Ce guide a pour objectif de vous aider:
 
@@ -13,13 +20,14 @@ Dans MyUnisoft vous pouvez retrouver l'information avec le module `Demande d'inf
 La route <kbd>GET</kbd> https://api.myunisoft.fr/api/v1/flags/comment_attach_doc permets de récupérer les mêmes données que le module `Demande d'info/PJ`:
 
 ```bash
-curl --location --request GET 'https://api.myunisoft.fr/api/v1/flags/comment_attach_doc' \
+curl --location \
+--request GET 'https://api.myunisoft.fr/api/v1/flags/comment_attach_doc' \
 --header 'X-Third-Party-Secret: {{X-Third-Party-Secret}}' \
 --header 'society-id: 1' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
 ```json
@@ -90,7 +98,3 @@ Les arguments disponibles pour la querystring sont les suivants:
 
 > [!IMPORTANT]
 > `ENTRIES_LINE_TEMP` doit être utilisé pour les flux à valider (comme les intégrations bancaires ou partenaires).
-
----
-
-⬅️ [README](../../../../README.md)

@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Recherche simplifiée dans les écritures d'un dossier
 
 Ce guide a pour objectif de vous aider à effectuer une recherche dans les écritures d'un dossier.
@@ -62,7 +69,7 @@ curl --location 'https://api.myunisoft.fr/api/v1/accounting/entry/search' \
 }'
 ```
 
-<details>
+<details class="details custom-block">
   <summary>Retour JSON de l'API</summary>
 
   ```json
@@ -129,7 +136,3 @@ curl --location 'https://api.myunisoft.fr/api/v1/accounting/entry/search' \
     }
   ```
 </details>
-
----
-
-⬅️ [README](../../../../README.md)

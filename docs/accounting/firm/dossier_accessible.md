@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Liste des dossiers accessibles pour un utilisateur.
 Ce guide a pour but de vous aider dans la récupération des droits d'accès d'un utilisateur.
 
@@ -30,7 +37,8 @@ La route `https://api.myunisoft.fr/api/v1/accounting/access?userMail=s.doual%2Bt
 > Un seul des deux paramètres est requis. Dans le cas où les deux paramètres sont renseignés, une erreur sera retourné.
 
 ```bash
-curl --location --request GET 'https://api.myunisoft.fr/api/v1/accounting/access?userMail=s.doual%2Btest@myunisoft.fr' \
+curl --location \
+--request GET 'https://api.myunisoft.fr/api/v1/accounting/access?userMail=s.doual%2Btest@myunisoft.fr' \
 --header 'X-Third-Party-Secret: <SECRET KEY>' \
 --header 'Authorization: Bearer <TOKEN>'
 ```
@@ -42,7 +50,3 @@ Retour JSON de l'API:
   "56"
 ]
 ```
-
----
-
-⬅️ [README](../../../README.md)

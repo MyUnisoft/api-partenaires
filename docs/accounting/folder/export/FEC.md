@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Exportation d'écritures comptables au format FEC
@@ -11,7 +18,7 @@ Dans MyUnisoft, l'exportation d'écritures comptables s'effectue dans le module:
 ## Liste des paramètres
 
 | Nom | Description | Obligatoire |
-|---|---|---|
+|---|---|:---:|
 |export_type|Défini la période de sélection des écritures. `0` pour se baser sur un exercice et `1` pour un intervalle de temps donné|✔️|
 |from|YYYY-MM-DD|Si `export_type` vaut `1`|
 |to|YYYY-MM-DD|Si `export_type` vaut `1`|
@@ -24,7 +31,8 @@ Dans MyUnisoft, l'exportation d'écritures comptables s'effectue dans le module:
 ## Export FEC
 
 ```bash
-curl --location --request POST 'https://app.myunisoft.fr/api/v1/export/fec?export_type=0&exercice_id=159' \
+curl --location \
+--request POST 'https://app.myunisoft.fr/api/v1/export/fec?export_type=0&exercice_id=159' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Content-Type: application/json' \
 --header 'society-id: 19' \
@@ -34,7 +42,7 @@ curl --location --request POST 'https://app.myunisoft.fr/api/v1/export/fec?expor
 > [!IMPORTANT]
 > Pensez à préciser le header `society-id` avec un accès cabinet
 
-<details>
+<details class="details custom-block">
   <summary>Retour de l'API</summary>
 
   ```
@@ -84,5 +92,3 @@ AC|AC|4|20210102|613200|LOCATIONS IMMOBILIER|||0000|20210102|SC PALAIS|500|0|mlm
 </details>
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
-⬅️ [README](../../../../README.md)

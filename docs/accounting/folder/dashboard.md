@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Récupération des données widget et dashboards
@@ -57,7 +64,7 @@ Par exemple ici `situation_globale`:
 
 ![](../../images/dashboard_situation_globale.PNG)
 
-<details>
+<details class="details custom-block">
 <summary>Voir la réponse JSON</summary>
 
 ```json
@@ -244,7 +251,3 @@ Dans le cas contraire le JSON retourné ressemble à ceci:
 ```
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../README.md)

@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Gérer l'analytique d'une société (dossier)
@@ -37,7 +44,7 @@ $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/society/3' \
 	"analytics": true
 }'
 ```
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
   ```json
@@ -130,7 +137,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/axes'
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
   ```json
@@ -184,7 +191,7 @@ $ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes
 }'
 ```
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
   ```json
@@ -210,7 +217,7 @@ Voici la liste des paramètres modifiables d'un axe:
   - label
   - id_section_default
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Voici le JSON Schema définissant le body de la requête.</summary>
 
   ```json
@@ -247,7 +254,7 @@ $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/analytics/axes/
 }'
 ```
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
   ```json
@@ -274,7 +281,7 @@ $ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/ax
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
   ```json
@@ -298,7 +305,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/axes/
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
   ```json
@@ -317,7 +324,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/axes/
 </details>
 <br>
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Définition TypeScript d'une section.</summary>
 
   ```ts
@@ -359,7 +366,7 @@ $ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes
 }'
 ```
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
   ```json
@@ -381,7 +388,7 @@ $ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes
 
 La route `https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}` permet de modifier une section.
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Voici le JSON Schema définissant le body de la requête.</summary>
 
   ```json
@@ -424,7 +431,7 @@ $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/analytics/secti
 }'
 ```
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
   ```json
@@ -472,7 +479,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/axes/
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
   ```json
@@ -494,7 +501,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/axes/
 
 La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys` permet de créer une clé de répartition à laquelle sera associée des répartitions
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Voici le JSON Schema définissant le body de la requête.</summary>
 
   ```json
@@ -530,7 +537,7 @@ $ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes
 }'
 ```
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
   ```json
@@ -550,7 +557,7 @@ $ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes
 
 La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}` permet de modifier une clé de répartition.
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Voici le JSON Schema définissant le body de la requête.</summary>
 
   ```json
@@ -587,7 +594,7 @@ $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/analytics/axes/
 }'
 ```
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
   ```json
@@ -625,7 +632,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/repar
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 La route retournera un tableau défini par l'interface TypeScript `RateOfRepartitionKey`
-<details>
+<details class="details custom-block">
   <summary markdown="span">Définition TypeScript `RateOfRepartitionKey`.</summary>
 
   ```ts
@@ -653,7 +660,7 @@ La route `https://api.myunisoft.fr/api/v1/analytics/repartition_keys/{{id_repart
 > [!NOTE]
 > La somme des taux de répartitions doit obligatoirement être égale à 100.
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Voici le JSON Schema définissant le body de la requête.</summary>
 
   ```json
@@ -703,7 +710,7 @@ $ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/repa
 ]'
 ```
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
   ```json
@@ -732,7 +739,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/repar
 L'API prend le numéro du compte (**account**) ainsi que la valeur (le **montant**) a ventilé. Si vous voulez mieux comprendre comment l'endpoint fonctionne nous vous invitons à lire le chapitre sur la gestion des clés de répartitions.
 
 La route retournera un tableau défini par l'interface TypeScript `AnalyticRepartition`.
-<details>
+<details class="details custom-block">
   <summary markdown="span">Définition TypeScript `AnalyticRepartition`.</summary>
 
   ```ts
@@ -770,7 +777,3 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/line_
 Le retour sera là aussi identique à la définition `AnalyticRepartition` présent dans le chapitre précédent.
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../README.md)

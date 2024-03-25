@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Récupérer la déclaration EDI d'un exercice comptable
 
 Documentation (Guide) sur la récupération d'un fichier de déclaration EDI.
@@ -7,8 +14,9 @@ Documentation (Guide) sur la récupération d'un fichier de déclaration EDI.
 
 ## API
 
-```
-curl --location --request GET 'https://api.myunisoft.fr/api/v1/accounting/export/edi?exerciceId={{exerciceId}}' \
+```bash
+curl --location \
+--request GET 'https://api.myunisoft.fr/api/v1/accounting/export/edi?exerciceId={{exerciceId}}' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
@@ -40,7 +48,3 @@ Il existe aussi deux autres erreurs possibles (avec statusCode 400);
 
 - `ACCOUNTING-FOLDER-NOT-FOUND` (L'id du dossier de production ne correspond à rien sur MyUnisoft).
 - `MISSING-ACCOUNTING-FOLDER-ID` (L'id du dossier de production est manquant, possible dans le cadre d'un 🔹 Accès cabinet)
-
----
-
-⬅️ [README](../../../../README.md)

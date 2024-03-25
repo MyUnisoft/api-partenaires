@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Mise à jour complète d'un compte client ou fournisseur
 Il est possible de mettre à jour un compte (mais de manière non partielle, il est donc obligatoire de renvoyer l'intégralité des informations).
 
@@ -103,7 +110,3 @@ interface Contact {
 ```
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../../README.md)

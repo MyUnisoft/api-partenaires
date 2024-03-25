@@ -1,0 +1,116 @@
+.VPNavBar.has-sidebar .title {
+  padding: 0 !important;
+  width: var(--vp-sidebar-width);
+  max-width: 100%;
+  justify-content: center;
+  border-bottom: 0px;
+}
+
+@media (min-width: 960px) {
+  .VPLocalNav {
+    top: 0 !important
+  }
+}
+
+@media (min-width: 1460px) {
+  .VPNavBar.has-sidebar .title {
+    width: calc((100% -(var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 32px);
+    justify-content: end;
+    padding-right: 70px !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .VPNavBar.has-sidebar .title {
+    width: auto !important;
+  }
+
+  .VPSidebar {
+    padding-top: 16px !important;
+  }
+}
+
+.VPSidebar {
+  padding: 0px !important;
+  padding-top: var(--vp-nav-height) !important;
+}
+
+.VPSidebar .nav {
+  display: flex;
+  flex-direction: column;
+  align-items: last baseline;
+}
+
+.group {
+  flex-grow: 1;
+  max-width: 300px;
+  width: 100% !important;
+  padding: 0 16px;
+}
+
+.group p.text {
+  line-height: 22px !important;
+}
+
+html:not(.dark) .VPSidebarItem.level-2 .item:hover {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(211, 211, 211, 0.554) 100%);
+}
+
+html.dark .VPSidebarItem.level-2 .item:hover {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(211, 211, 211, 0.103) 100%);
+}
+
+.VPSidebarItem.level-2 .item {
+  padding-left: 8px;
+  border-radius: 4px;
+}
+
+.VPSidebarItem.level-1 .items {
+  padding-left: 8px !important;
+}
+
+/**
+ * HTTP Description
+ */
+b.GET,
+b.POST,
+b.PUT,
+b.DEL,
+b.PATCH {
+  letter-spacing: 0.35px;
+}
+
+html:not(.dark) b.GET {
+  color: #2E7D32;
+}
+
+html.dark b.GET {
+  color: #08a547;
+}
+
+html:not(.dark) b.POST {
+  color: #7f7212;
+}
+
+html.dark b.POST {
+  color: #d3bb07;
+}
+
+span.http_description {
+  font-size: 12px;
+  font-style: italic;
+  line-height: 0 !important;
+  letter-spacing: 0.5px;
+}
+
+html:not(.dark) span.http_description {
+  color: #064d87c2 !important;
+}
+
+html.dark span.http_description {
+  color: #f6fae4fc !important;
+}
+
+.indicator {
+  left: -9px !important;
+}

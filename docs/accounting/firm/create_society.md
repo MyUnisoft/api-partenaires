@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 > [!IMPORTANT]
@@ -12,8 +19,9 @@ Dans MyUnisoft, la création d'un dossier s'effectue avec le module CRM: `Ecosys
 ## API
 
 ```bash
-curl --location --request POST 'https://app.myunisoft.fr/api/v1/society' \
---header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+curl --location \
+--request POST 'https://app.myunisoft.fr/api/v1/society' \
+--header 'X-Third-Party-Secret: xxx-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
@@ -50,15 +58,16 @@ Exemple "minimaliste" d'un BODY JSON:
 ### Recherche d'informations à partir du SIREN/SIRET
 
 ```bash
-curl --location --request GET 'https://app.myunisoft.fr/api/v1/society/data_gouv_fields?siren={{SIRET}}&check=false' \
---header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+curl --location \
+--request GET 'https://app.myunisoft.fr/api/v1/society/data_gouv_fields?siren={{SIRET}}&check=false' \
+--header 'X-Third-Party-Secret: xxx-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
 La route en question vous retournera un ensemble de propriétés qui pourront être injectées dans la création du dossier.
 
-<details>
+<details class="details custom-block">
 <summary>Visualiser la réponse JSON</summary>
 
 Exemple de réponse pour le SIRET `84014327500039` (MY UNISOFT).
@@ -98,8 +107,9 @@ Exemple de réponse pour le SIRET `84014327500039` (MY UNISOFT).
 Le cabinet correspond à la propriété `member_id`.
 
 ```bash
-curl --location --request GET 'https://app.myunisoft.fr/api/v1/member' \
---header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+curl --location \
+--request GET 'https://app.myunisoft.fr/api/v1/member' \
+--header 'X-Third-Party-Secret: xxx-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
@@ -124,7 +134,3 @@ Type du dossier qui correspond à la propriété  `id_type_company`.
 | 10 | Cabinet |
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../README.md)

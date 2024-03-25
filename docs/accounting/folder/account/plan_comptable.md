@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Récupérer et travailler avec le plan comptable.
@@ -66,7 +73,7 @@ Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à 
 }
 ```
 
-<details><summary>Définition TypeScript AccountDetails</summary>
+<details class="details custom-block"><summary>Définition TypeScript AccountDetails</summary>
 
 ```ts
 interface AccountDetails {
@@ -233,7 +240,7 @@ Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à 
 }
 ```
 
-<details><summary>Définition TypeScript AccountEntryLine</summary>
+<details class="details custom-block"><summary>Définition TypeScript AccountEntryLine</summary>
 
 ```ts
 interface AccountEntryLine {
@@ -295,7 +302,3 @@ interface CloudDocument {
 [Lire le guide suivant](./create.md)
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../../README.md)

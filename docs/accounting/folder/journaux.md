@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Récupérer les journaux d'une société (dossier)
@@ -22,7 +29,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/diary' \
 
 Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à l'exemple ci-dessous**
 
-<details>
+<details class="details custom-block">
 <summary>Visualiser la réponse JSON</summary>
 
 ```json
@@ -246,7 +253,3 @@ interface Diary<T = DiaryType> {
 ```
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../README.md)

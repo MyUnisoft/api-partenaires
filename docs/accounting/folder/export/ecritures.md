@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Récupérer les écritures comptables
 
 Ce guide a pour objectif de vous aider dans la récupération des écritures comptables d'un dossier de production.
@@ -7,7 +14,8 @@ Ce guide a pour objectif de vous aider dans la récupération des écritures com
 La route https://api.myunisoft.fr/api/v1/entries?type=e permet de récupérer l'intégralité des écritures par **type**.
 
 ```bash
-$ curl --location --request POST 'https://api.myunisoft.fr/api/v1/entries?type=e' \
+$ curl --location \
+--request POST 'https://api.myunisoft.fr/api/v1/entries?type=e' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 --data-raw '{
@@ -227,7 +235,3 @@ export interface EntryOPJ {
   document_id?: number;
 }
 ```
-
----
-
-⬅️ [README](../../../../README.md)
