@@ -84,5 +84,3 @@ AC|AC|4|20210102|613200|LOCATIONS IMMOBILIER|||0000|20210102|SC PALAIS|500|0|mlm
 </details>
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
-⬅️ [README](../../../../README.md)

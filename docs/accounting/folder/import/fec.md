@@ -48,6 +48,3 @@ AC	        Achats                  20200220	    625ACCOUNT  Frais déplacements	
 [...]
 AC	        Achats                  20200220	    625ACCOUNT  Frais déplacements			                                        0320-2	  20200331	sncf	      52	  0					                                          EUR	      PJ-2.jpg
 ```
----
-
-⬅️ [README](../../../../README.md)

@@ -1,0 +1,6 @@
+{
+  "extends": "@nodesecure/eslint-config",
+  "parserOptions": {
+    "requireConfigFile": false
+  }
+}

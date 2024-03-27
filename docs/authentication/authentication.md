@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Authentification
@@ -98,7 +105,3 @@ Dans le cas où la clé n'existe pas ou alors que cette dernière a été décon
 Dans ce cas, il vous faut simplement générer une nouvellle clé.
 
 Si le problème persiste malgré ça, contactez nos équipes techniques.
-
----
-
-⬅️ [README](../README.md)

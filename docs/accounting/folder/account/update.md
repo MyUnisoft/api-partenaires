@@ -103,7 +103,3 @@ interface Contact {
 ```
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../../README.md)

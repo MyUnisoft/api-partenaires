@@ -129,7 +129,3 @@ curl --location 'https://api.myunisoft.fr/api/v1/accounting/entry/search' \
     }
   ```
 </details>
-
----
-
-⬅️ [README](../../../../README.md)

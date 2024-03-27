@@ -1,3 +1,10 @@
+---
+prev:
+  text: 💃 Introduction
+  link: MAD/introduction.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Banque
@@ -181,7 +188,3 @@ RIB (**BQC**). Page 51 de la spécification.
 
 > [!WARNING]
 > Attention à ne pas confondre avec la section `BQE`
-
----
-
-⬅️ [Introduction MAD](../../introduction.md)

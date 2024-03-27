@@ -106,7 +106,3 @@ curl --location 'https://api.myunisoft.fr/api/v1/society/accountingParameters' \
 </details>
 
 ![](../../images/accounting_parameters.png)
-
----
-
-⬅️ [README](../../../README.md)

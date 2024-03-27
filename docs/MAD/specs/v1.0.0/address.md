@@ -1,3 +1,10 @@
+---
+prev:
+  text: 💃 Introduction
+  link: MAD/introduction.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Adresse
@@ -142,7 +149,3 @@ interface Address {
 }
 ```
 </details>
-
----
-
-⬅️ [Introduction MAD](../../introduction.md)

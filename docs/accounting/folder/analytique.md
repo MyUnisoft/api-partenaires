@@ -770,7 +770,3 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/line_
 Le retour sera là aussi identique à la définition `AnalyticRepartition` présent dans le chapitre précédent.
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../README.md)

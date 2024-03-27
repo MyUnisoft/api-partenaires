@@ -1,3 +1,10 @@
+---
+prev:
+  text: 💃 Introduction
+  link: MAD/introduction.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Compte
@@ -299,7 +306,3 @@ export type Account =
 </details>
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [Introduction MAD](../../introduction.md)

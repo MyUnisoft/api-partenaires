@@ -244,7 +244,3 @@ Dans le cas contraire le JSON retourné ressemble à ceci:
 ```
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../README.md)

@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Gestion des retours erreurs 💥
 
 ## API Partenaires
@@ -840,7 +847,3 @@ Les codes d’erreurs (unique) sont les suivants;
 |WORKSHEET9          |Impossible de trouver la feuille de travail sélectionnée                                                                                                                                                                                                  |400            |
 |XML01               |Fichier XML invalide                                                                                                                                                                                                                                      |400            |
 |ZIP01               |Erreur à la création du ZIP                                                                                                                                                                                                                               |500            |
-
----
-
-⬅️ [README](../README.md)

@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # MAD
 
 > [!WARNING] 
@@ -77,7 +84,3 @@ Les différentes API sont disponibles sur notre [postman en ligne](https://docs.
 - [Export des banques](./api/bank.md)
 - [Export des méthodes de paiement](./api/payment.md)
 - [Export des axes et sections analytiques](./api/analytic.md)
-
----
-
-⬅️ [README](../README.md)
