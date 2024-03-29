@@ -49,7 +49,7 @@ export default defineConfig({
       dark: "monokai"
     }
   },
-  base: "/",
+  base: "/api-partenaires/",
   vite: {
     assetsInclude: ["**/*.PNG"]
   },
