@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Ajout d'un commentaire à une écriture comptable.
 
 Dans MyUnisoft, les écritures comptables sont composées de plusieurs élèments dont les **commentaires**.
@@ -27,7 +34,7 @@ curl --location 'https://api.myunisoft.fr/api/v1/entry/comment' \
 }'
 ```
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
   ```json

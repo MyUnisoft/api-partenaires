@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Attacher une pièce jointe à une entrée comptable existante
 Ce guide a pour objectif de vous aider dans l'ajout (upload) d'une pièce jointe sur une écriture comptable déjà existante. C'est une approche qui peut être nécessaire dans plusieurs situations:
 
@@ -45,7 +52,3 @@ Dans MyUnisoft la location correspond à la catégorie de la saisie
 Pour récupérer l'id d'une écriture les guides suivants pourront probablement vous aider;
 - [Par l'endpoint de récupération des écritures comptables](https://github.com/MyUnisoft/api-partenaires/blob/main/docs/ecritures.md)
 - [Par l'ID partenaire](https://github.com/MyUnisoft/api-partenaires/blob/main/docs/entry_json.md#gestion-dun-id-partenaire)
-
----
-
-⬅️ [README](../../../../README.md)

@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Comprendre les informations diverses et complémentaires d'un compte client ou fournisseur
@@ -149,7 +156,7 @@ Ces informations pourront être récupérées au sein de la clé **complementary
 
 > 
 
-<details><summary>interface TypeScript pour la clé complementary_informations</summary>
+<details class="details custom-block"><summary>interface TypeScript pour la clé complementary_informations</summary>
 
 ```ts
 export interface ComplementaryInformations {
@@ -322,7 +329,3 @@ Les méthodes de réglements avec IBAN avec le tableau `iban_list`
 ```
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../../README.md)

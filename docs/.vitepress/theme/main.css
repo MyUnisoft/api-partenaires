@@ -1,0 +1,50 @@
+:root {
+  --vp-home-hero-name-color: #0bd1d1;
+  --vp-button-brand-bg: #0bd1d1;
+  --vp-c-brand-1: #0688d8;
+  --vp-sidebar-width: 330px;
+}
+
+:root.dark {
+  --vp-c-brand-1: #0bd1d1;
+}
+
+html:not(.dark) .github-alert.note {
+  background: #d8ebf8 !important;
+}
+
+html.dark .github-alert.note {
+  background: #2975d857 !important;
+}
+
+html:not(.dark) .github-alert.tip {
+  background: #dffcdd !important;
+}
+
+html.dark .github-alert.tip {
+  background: #04ce122f !important;
+}
+
+kbd {
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+html:not(.dark) kbd {
+  background: rgba(207, 226, 238, 0.491);
+  color: rgb(11, 103, 178);
+}
+
+html.dark kbd {
+  background: rgba(54, 54, 54, 0.491);
+  color: rgb(10, 200, 187);
+}
+
+.vp-doc table {
+  width: 100%;
+  display: table;
+}
+
+.no_underline {
+  text-decoration: none !important;
+}

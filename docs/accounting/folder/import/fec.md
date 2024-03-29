@@ -1,6 +1,12 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Création d'une entrée comptable avec le format FEC
 Documentation sur la création d’une entrée comptable au format FEC.
-​
 
 Les routes HTTP concernées;
 - https://api.myunisoft.fr/api/v1/FEC
@@ -18,7 +24,8 @@ Exemple du format à plat:
 MyUnisoft permet de créer ou supprimer des écritures par le biais du format FEC grâce à la route `api/v1/fec`.
 
 ```bash
-$ curl --location --request POST 'https://api.myunisoft.fr/api/v1/fec?type=2&exercice_id=13647&filename=export_fec_20201002.txt' \
+$ curl --location \
+--request POST 'https://api.myunisoft.fr/api/v1/fec?type=2&exercice_id=13647&filename=export_fec_20201002.txt' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Content-Type: application/octet-stream' \
 --header 'Authorization: {{API_TOKEN}}' \
@@ -48,6 +55,3 @@ AC	        Achats                  20200220	    625ACCOUNT  Frais déplacements	
 [...]
 AC	        Achats                  20200220	    625ACCOUNT  Frais déplacements			                                        0320-2	  20200331	sncf	      52	  0					                                          EUR	      PJ-2.jpg
 ```
----
-
-⬅️ [README](../../../../README.md)

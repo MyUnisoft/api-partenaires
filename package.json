@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "@nodesecure/eslint-config": "^1.9.0",
+    "@nodesecure/fs-walk": "^2.0.0",
+    "@types/node": "^20.11.30",
+    "vitepress": "^1.0.1"
+  }
+}

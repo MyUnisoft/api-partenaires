@@ -1,6 +1,13 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Guide Webhooks
 
-> [!IMPORTANT]  
+> [!CAUTION]  
 > Les webhooks ne sont pas disponibles pour les clients possédant l'offre API cabinet.
 
 ## Introduction
@@ -61,7 +68,7 @@ Vous ne recevrez que les évènements et opérations que vous aurez demandé.
 Chaque “**évènements**” est constitué d’un “**scope**” (comme défini ci-dessous) permettant d’identifier l’origine de l’évènement et donc de faire le lien avec vos données.
 
 | Nom de la clé | Requis | Description |
-| --- | --- | --- |
+| --- | :---: | --- |
 | schemaId | ✅ | Un schéma est un cabinet ou un groupement de cabinet (Il faut l’imaginer comme une abstraction permettant d’isoler nos clients entre eux). |
 | firmId | ❌ | Le terme de firm (ou encore cabinet) représente un client signé sur le plan commercial et technique. |
 | firmSIRET | ❌ | SIRET ou SIREN du cabinet lié au dossier |

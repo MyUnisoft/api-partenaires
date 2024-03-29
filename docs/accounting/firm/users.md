@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Récupérer les utilisateurs et personne physiques d'un schéma (cabinet)
@@ -22,7 +29,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/users_v2' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-<details><summary>Retour JSON de l'API</summary>
+<details class="details custom-block"><summary>Retour JSON de l'API</summary>
 
 ```json
 {
@@ -81,7 +88,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/users_v2' \
 ```
 </details>
 
-<details><summary>Définition TypeScript d'un utilisateur</summary>
+<details class="details custom-block"><summary>Définition TypeScript d'un utilisateur</summary>
 
 ```ts
 interface User {
@@ -156,7 +163,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/pers_physique' 
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-<details><summary>Retour JSON de l'API</summary>
+<details class="details custom-block"><summary>Retour JSON de l'API</summary>
 
 ```json
 {
@@ -203,7 +210,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/pers_physique' 
 ```
 </details>
 
-<details><summary>Définition TypeScript d'une personne physique</summary>
+<details class="details custom-block"><summary>Définition TypeScript d'une personne physique</summary>
 
 ```ts
 interface PhysicalPerson {
@@ -257,7 +264,3 @@ interface Company {
 </details>
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../README.md)

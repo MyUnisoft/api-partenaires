@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Création d'une entrée comptable avec le format JSON
@@ -9,7 +16,6 @@ Les routes HTTP concernées;
 - https://api.myunisoft.fr/api/v1/entry?type=e
 - https://api.myunisoft.fr/api/v1/entry/temp (permet la création de "factures en attentes").
 
-​
 ## Définition TypeScript d'une entrée au format JSON
 ​
 La définition de type permet d’identifier les différents types des propriétés pour les structures JSON.
@@ -208,7 +214,7 @@ interface NewEntry {
 ​
 Le schéma JSON est un vocabulaire qui vous permet d'annoter et de valider les documents JSON. Il existe des outils en ligne comme JSON Schema Validator qui vous permettront d’expérimenter en temps réel la validation d’une structure JSON.
 ​
-<details>
+<details class="details custom-block">
 <summary>Visualiser le schéma JSON</summary>
 
 ```json
@@ -470,7 +476,8 @@ Cela peut éventuellement permettre de Synchroniser l'état d'une écriture entr
 L'id de l'écriture pourra être récupérés avec le endpoint suivant:
 
 ```bash
-$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/entry/id?id_origin=name-0aad3319-2aa7-400a-b709-6942562a200e' \
+$ curl --location \
+--request GET 'https://api.myunisoft.fr/api/v1/entry/id?id_origin=name-0aad3319-2aa7-400a-b709-6942562a200e' \
 --header 'Authorization: Bearer {{API_TOKEN}}' \
 --header 'X-Third-Party-Secret: {{X-Third-Party-Secret}}'
 ```
@@ -519,7 +526,3 @@ Voici un exemple avec une ligne d'un montant de 100 francs suisses (CHF) qui ser
 ```
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../../README.md)

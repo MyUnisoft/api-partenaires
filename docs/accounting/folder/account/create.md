@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Récupération et/ou création d'un compte (upsert)
 Il est aussi possible de récupérer unitairement un compte (et s'il n'existe pas il **sera créé**).
 
@@ -90,7 +97,3 @@ interface Iban {
 ```
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../../../README.md)

@@ -1,7 +1,7 @@
 <span id="readme-top"></span>
 
 <p align="center">
-<img src="./docs/myunisoft_banner.png" height="300">
+<img src="docs/images/github_banner.png" height="300">
 </p>
 
 <p align="center">
@@ -80,11 +80,11 @@ Il vous sera nécessaire de choisir l'un des deux type d'accès (ou de discuter 
 
 ### Partenaire
 
-Voici la marche à suivre concernant l'authentification si vous êtes un partenaire: [Comment s'authentifier ?](./docs/authentication/authentication.md)
+Voici la marche à suivre concernant l'authentification si vous êtes un partenaire: [Comment s'authentifier ?](docs/authentication/partenaire.md)
 
 ### Formule API Cabinet (destiné aux cabinets eux-mêmes).
 
-Voici la marche à suivre concernant l'authentification si vous êtes un cabinet ayant souscrit à l'offre API Cabinet: [Comment s'authentifier ?](./docs/authentication/authentication_by_email.md)
+Voici la marche à suivre concernant l'authentification si vous êtes un cabinet ayant souscrit à l'offre API Cabinet: [Comment s'authentifier ?](docs/authentication/cabinet.md)
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
@@ -104,7 +104,7 @@ Pour plus d'informations nous vous invitons à consulter les sous documentations
 
 - [🔸 Accès par société](./docs/endpoints/societe.md)
 - [🔹 Accès cabinet](./docs/endpoints/cabinet.md)
-- [🔑 Liste des routes accessibles](./docs/endpoints/endpoints_accessibles.md)
+- [🔑 Liste des routes accessibles](docs/endpoints/keyinfo.md)
 
 ## Lien racine 🌍
 
@@ -137,8 +137,8 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer les utilisateurs et personnes physiques](docs/accounting/firm/users.md)
 - [Récupérer les dossiers accessibles pour un utilisateur](docs/accounting/firm/dossier_accessible.md)
 - [Récupérer les dossiers de productions (entreprises)](docs/accounting/society.md)
-- [Récupérer le paramétrage comptable d'un dossier de production](docs/accounting/folder/accounting_parameters.md)
-- [Récupérer les filiales associées à une entreprise](docs/accounting/folder/filiale_associate.md)
+- [Récupérer le paramétrage comptable d'un dossier de production](docs/accounting/firm/accounting_parameters.md)
+- [Récupérer les filiales associées à une entreprise](docs/accounting/firm/filiale_associate.md)
 
 ## Guides sur les API comptabilités
 

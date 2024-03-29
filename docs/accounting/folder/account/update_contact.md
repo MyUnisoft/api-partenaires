@@ -1,3 +1,10 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Mise à jour de la liste de contacts d'un compte client ou fournisseur
 
 Il existe une API spécialement conçu pour la mise à jour de la liste des contacts pour les comptes fournisseurs et clients. Cet API a été créer pour répondre à une limitation de PUT account qui ne permet pas de mise à jour partielle.
@@ -33,8 +40,4 @@ Le body de la requête HTTP (`account_id` doit correspondre au compte à mettre 
 
 > [!CAUTION]
 > Vous devez donc envoyer l'intégralité des contacts à chaque mise à jour.
-
----
-
-⬅️ [README](../../../../README.md)
 

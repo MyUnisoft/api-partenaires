@@ -1,7 +1,13 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 # Création d'une entrée comptable avec le format Factur-X
 Documentation sur la création d’une entrée comptable au format Factur-X.
 ​
-
 Les routes HTTP concernées;
 - https://api.myunisoft.fr/api/v1/invoice
 
@@ -16,7 +22,8 @@ L’objectif premier de Factur-X est de permettre aux fournisseurs, émetteurs d
 ## API
 
 ```bash
-curl --location --request POST 'https://app.myunisoft.fr/api/v1/invoice?invoice_type_id=1&ocr_type_id=6&name=CHORUS0000003&extension=pdf' \
+curl --location \
+--request POST 'https://app.myunisoft.fr/api/v1/invoice?invoice_type_id=1&ocr_type_id=6&name=CHORUS0000003&extension=pdf' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Content-Type: application/octet-stream' \
 --header 'Authorization: {{API_TOKEN}}' \
@@ -28,7 +35,3 @@ La route prend plusieurs arguments:
 - **ocr_type_id** 6 Pour Factur-X.
 - **name** (le nom du fichier qui est attaché avec la requête).
 - **extension** pdf.
-
----
-
-⬅️ [README](../../../../README.md)

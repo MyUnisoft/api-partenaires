@@ -1,7 +1,14 @@
+---
+prev:
+  text: 🐤 Introduction
+  link: documentation.md
+next: false
+---
+
 <span id="readme-top"></span>
 
 # Récupérer les sociétés (dossiers)
-Ce guide a pour objectif de vous aider dans la récupération des dossiers d'un cabinet (entités/schémas).
+Ce guide a pour objectif de vous aider dans la récupération des dossiers d'un cabinet.
 
 Le guide se divise en deux parties:
 1. Récupération d'un dossier lié à un 🔸 accès société.
@@ -18,7 +25,7 @@ curl --location --request GET 'https://api.myunisoft.fr/api/v1/society' \
 --header 'Authorization: {{TOKEN}}'
 ```
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
   ```json
@@ -112,14 +119,12 @@ curl --location --request GET 'https://api.myunisoft.fr/api/v1/society' \
   ```
 </details>
 
----
-
 ## 🔹 **Accès cabinet**
 L'accès cabinet vous donne accès à l'intégralité des dossiers (sociétés) d'un cabinet.
 
 Voici la liste des différents paramètres disponibles:
 | PARAM | DESCRIPTION |
-| --- | --- |
+| :---: | --- |
 | sort | Permet de trier les dossiers selon le paramètre selectionné |
 | siret | Accepte en argument le SIRET (14 caractères) de la société recherchée ou le SIREN (9 caractères). |
 | q | Recherche les dossiers dont le nom contient la valeur passée |
@@ -133,7 +138,7 @@ curl --location --request GET 'https://api.myunisoft.fr/api/v1/society' \
 --header 'Authorization: {{TOKEN}}'
 ```
 
-<details>
+<details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>
 
   ```json
@@ -322,18 +327,20 @@ curl --location --request GET 'https://api.myunisoft.fr/api/v1/society' \
 
 ### Plusieurs options sont disponibles:
 
-<details>
+<details class="details custom-block">
   <summary>appliquer un filtre sur le nom des dossiers.</summary>
   
   | PARAM | DESCRIPTION |
-  | --- | --- |
+  | :---: | --- |
   | q | Recherche les dossiers dont le nom contient la valeur passée |
 
   ```bash
-  curl --location --request GET 'https://api.myunisoft.fr/api/v1/society?q=MyUni' \
+  curl --location \
+  --request GET 'https://api.myunisoft.fr/api/v1/society?q=MyUni' \
   --header 'X-Third-Party-Secret: {{X-Third-Party-Secret}}' \
   --header 'Authorization: {{TOKEN}}' \
   ```
+  <br>
 
   ```json
   {
@@ -432,11 +439,11 @@ curl --location --request GET 'https://api.myunisoft.fr/api/v1/society' \
   ```
 </details>
 
-<details>
+<details class="details custom-block">
   <summary>trier les dossiers.</summary>
   
   | PARAM | DESCRIPTION |
-  | --- | --- |
+  | :---: | --- |
   | sort | Permet de trier les dossiers selon le paramètre selectionné |
 
   Liste des paramètres:
@@ -453,10 +460,12 @@ curl --location --request GET 'https://api.myunisoft.fr/api/v1/society' \
   - desc (décroissant)
 
   ```bash
-  curl --location --request GET 'https://api.myunisoft.fr/api/v1/society?sort={"column":"name","direction":"asc"}' \
+  curl --location \
+  --request GET 'https://api.myunisoft.fr/api/v1/society?sort={"column":"name","direction":"asc"}' \
   --header 'X-Third-Party-Secret: {{X-Third-Party-Secret}}' \
   --header 'Authorization: {{TOKEN}}' \
   ```
+  <br>
 
   ```json
   {
@@ -555,12 +564,10 @@ curl --location --request GET 'https://api.myunisoft.fr/api/v1/society' \
   ```
 </details>
 
-<br>
-
 ## Récupérer un dossier (société)
 
 Il est possible de récupérer les informations d'un dossier spécifique grâce:
-<details>
+<details class="details custom-block">
   <summary>à son identifiant.</summary>
 
   **Récupération par ID**
@@ -576,7 +583,7 @@ Il est possible de récupérer les informations d'un dossier spécifique grâce:
   > Le retour JSON de l'API a la même structure que le retour JSON avec accès société.
 </details>
 
-<details>
+<details class="details custom-block">
   <summary>au SIRET / SIREN.</summary>
 
   **Récupération par SIRET / SIREN**
@@ -588,7 +595,8 @@ Il est possible de récupérer les informations d'un dossier spécifique grâce:
   | siret | Accepte en argument le SIRET (14 caractères) de la société recherchée ou le SIREN (9 caractères). |
 
   ```bash
-  curl --location --request GET 'https://api.myunisoft.fr/api/v1/society?siret=50112156000013' \
+  curl --location \
+  --request GET 'https://api.myunisoft.fr/api/v1/society?siret=50112156000013' \
   --header 'X-Third-Party-Secret: {{X-Third-Party-Secret}}' \
   --header 'Authorization: {{TOKEN}}'
   ```
@@ -604,7 +612,8 @@ Il est possible de récupérer les informations d'un dossier spécifique grâce:
 Il est possible de rechercher/identifier un dossier de production par sa référence et de récupérer le nom, Siret et id de la société.
 
 ```bash
-curl --location --request GET 'https://api.myunisoft.fr/api/v1/society/search?reference=ABC' \
+curl --location \
+--request GET 'https://api.myunisoft.fr/api/v1/society/search?reference=ABC' \
 --header 'X-Third-Party-Secret: {{X-Third-Party-Secret}}' \
 --header 'Authorization: {{TOKEN}}'
 ```
@@ -620,7 +629,3 @@ La route retournera un JSON semblable à celui-ci
 ```
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-
----
-
-⬅️ [README](../../README.md)
