@@ -104,7 +104,7 @@ Pour plus d'informations nous vous invitons à consulter les sous documentations
 
 Une liste de guides qui pourront certainement vous aider dans la réalisation de l'interconnexion avec MyUnisoft.
 
-- [Collection + Environment postman](https://github.com/MyUnisoft/api-partenaires/tree/main/postman)
+- [Collection + Environment postman](./postman.md)
 - <Badge type="tip" text="beta" /> [Webhooks](./webhooks.md)
 
 ### Guides sur les API cabinets

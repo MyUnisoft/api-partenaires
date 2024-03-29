@@ -32,7 +32,7 @@ export default defineConfig({
       provider: "local"
     },
     socialLinks: [
-      { icon: "github", link: "https://github.com/MyUnisoft/" },
+      { icon: "github", link: "https://github.com/MyUnisoft/api-partenaires" },
       { icon: "linkedin", link: "https://www.linkedin.com/company/myunisoft" }
     ],
     logo: {
