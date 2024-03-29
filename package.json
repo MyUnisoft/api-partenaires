@@ -9,5 +9,10 @@
     "@nodesecure/fs-walk": "^2.0.0",
     "@types/node": "^20.11.30",
     "vitepress": "^1.0.1"
+  },
+  "overrides": {
+    "vite": {
+      "rollup": "npm:@rollup/wasm-node"
+    }
   }
 }
