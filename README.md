@@ -11,9 +11,12 @@
   </a>
 </p>
 
-Notre documentation est désormais accessible en ligne sur https://myunisoft.github.io/api-partenaires/
+<p align="center">
+  <b>Notre documentation est désormais accessible en ligne: https://myunisoft.github.io/api-partenaires/</b>
+</p>
 
-La version Github est toujours accessible [ici](./docs/documentation.md)
+> [!NOTE]
+> La version Github est toujours accessible [ici](./docs/documentation.md)
 
 # Contact 👥
 
