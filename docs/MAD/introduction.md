@@ -19,13 +19,13 @@ Lors de la création de ce nouveau format, nos objectifs étaient variés;
 - Améliorer les performances tout en garantissant la santé de nos infrastructures.
 - Simplifier l'expérience d'intégration pour nos partenaires (respect des bonnes pratiques, schéma JSON etc).
 
-Nos implémentations ont aussi la particularité d'avoir un support natif du format historique <a href="./TRA.pdf" target="_blank">Cegid TRA+PJ</a>.
+Nos implémentations ont aussi la particularité d'avoir un support natif du format historique <a href="https://github.com/MyUnisoft/api-partenaires/blob/main/docs/MAD/TRA.pdf" target="_blank">Cegid TRA+PJ</a>.
 
 ## 📜 Schéma
 
 Lors de vos développements, pour de l'import, il vous sera aussi possible de valider vos structures à l'aide de nos schémas JSON. ​Un schéma est un ensemble de règles permettant d'annoter et de valider une donnée au format JSON (Similaire aux schémas XML). Il existe des outils en ligne comme [JSON Schema Validator](https://www.jsonschemavalidator.net/) qui vous permettront d’expérimenter en temps réel la validation d’une structure JSON.​
 
-- <a href="./specs/v1.0.0/schema.json" target="_blank">Schéma JSON complet (V1.0.0)</a>
+- <a href="https://github.com/MyUnisoft/api-partenaires/blob/main/docs/MAD/specs/v1.0.0/schema.json" target="_blank">Schéma JSON complet (V1.0.0)</a>
 
 ## 📑 Spécification
 

@@ -17,4 +17,4 @@ Un TRA + PJ est une archive .zip contenant un fichier .TRA et optionnellement de
 
 ![](../../../images/TRA_archive.PNG)
 
-Le format du fichier .TRA est documenté dans <a href="../../../MAD/TRA.pdf" target="_blank">le PDF ici</a>.
+Le format du fichier .TRA est documenté dans <a href="https://github.com/MyUnisoft/api-partenaires/blob/main/docs/MAD/TRA.pdf" target="_blank">le PDF ici</a>.
