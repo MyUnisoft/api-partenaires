@@ -209,6 +209,10 @@ export default {
               link: "/MAD/specs/v1.0.0/journal"
             },
             {
+              text: "TVA",
+              link: "/MAD/specs/v1.0.0/vat"
+            },
+            {
               text: "Analytique",
               link: "/MAD/specs/v1.0.0/analytic"
             },
