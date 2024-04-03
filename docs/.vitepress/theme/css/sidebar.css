@@ -14,7 +14,7 @@
 
 @media (min-width: 1460px) {
   .VPNavBar.has-sidebar .title {
-    width: calc((100% -(var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 32px);
+    width: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 32px);
     justify-content: end;
     padding-right: 70px !important;
   }
