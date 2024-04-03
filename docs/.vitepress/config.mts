@@ -7,6 +7,9 @@ export default defineConfig({
   description: "Documentation technique",
   lang: "fr-FR",
   lastUpdated: true,
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     outlineTitle: "Table des matières",
@@ -36,7 +39,7 @@ export default defineConfig({
       { icon: "linkedin", link: "https://www.linkedin.com/company/myunisoft" }
     ],
     logo: {
-      light: "https://res.cloudinary.com/postman/image/upload/t_team_logo_pubdoc/v1/team/e4951fd8010295ee229518551a558e0d74e9faf4c6ba3000b65cc04fad62789a",
+      light: "/images/logo/dark.png",
       dark: "/images/logo/white.svg"
     },
     editLink: {
