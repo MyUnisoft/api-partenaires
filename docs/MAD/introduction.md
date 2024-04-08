@@ -12,14 +12,17 @@ next: false
 
 MyUnisoft Accounting Data (raccourci en **MAD**) est un format JSON hybride supportant aussi bien l'export que l'import de données comptables.
 
-Lors de la création de ce nouveau format, nos objectifs étaient variés;
+Lors de la conception de ce nouveau format, nos objectifs étaient multiples :
 
-- Produire des API comptables avec des contrats d'interfaces uniformes et versionnés (Nous permettant de mettre en place des cycles de vies et d'itérer plus sereinement sur des évolutions).
-- Répondre à de nouveaux usages en intégrant des fonctionnalités et informations manquantes dans nos API actuelles.
-- Améliorer les performances tout en garantissant la santé de nos infrastructures.
+- Élaborer des API comptables dotées de contrats d'interfaces uniformes et versionnés, ce qui nous permettrait de mettre en place des cycles de vie et d'itérer de manière plus sereine sur les évolutions à venir.
+- Répondre à de nouveaux besoins en intégrant des fonctionnalités et des informations qui manquaient dans nos API existantes.
+- Améliorer les performances tout en garantissant la stabilité de nos infrastructures.
 - Simplifier l'expérience d'intégration pour nos partenaires (respect des bonnes pratiques, schéma JSON etc).
 
 Nos implémentations ont aussi la particularité d'avoir un support natif du format historique <a href="https://github.com/MyUnisoft/api-partenaires/blob/main/docs/MAD/TRA.pdf" target="_blank">Cegid TRA+PJ</a>.
+
+> [!NOTE]
+> Pour en découvrir plus sur nos choix techniques nous vous invitons à lire [Designing MyUnisoft Next-Gen Accounting APIs](https://dev.to/fraxken/designing-myunisoft-next-gen-accounting-apis-1mn)
 
 ## 📜 Schéma
 
