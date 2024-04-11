@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <b>Notre documentation est désormais accessible en ligne: https://myunisoft.github.io/api-partenaires/</b>
+  <b>Notre documentation est désormais accessible en ligne: https://partners.api.myunisoft.fr/</b>
 </p>
 
 > [!NOTE]
