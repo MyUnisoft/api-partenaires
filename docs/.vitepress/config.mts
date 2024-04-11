@@ -52,7 +52,6 @@ export default defineConfig({
       dark: "monokai"
     }
   },
-  base: "/api-partenaires/",
   vite: {
     assetsInclude: ["**/*.PNG"]
   },
