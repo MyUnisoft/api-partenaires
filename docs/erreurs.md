@@ -7,7 +7,6 @@ next: false
 
 # Gestion des retours erreurs 💥
 
-## API Partenaires
 Chaque erreur est accompagnée d’un code unique et d’un message essayant de vous guider au mieux dans la résolution de l’erreur. La propriété “**details**” servira si besoin à nos équipes à tracer et identifier la source du problème en interne.
 
 ```json
@@ -25,14 +24,24 @@ Chaque erreur est accompagnée d’un code unique et d’un message essayant de 
 }
 ```
 
-La propriété message est en ce qui la concerne vouée à évoluer à travers le temps. **Nous vous recommandons de ne pas l’utiliser comme référentiel pour automatiser une gestion d’erreur au sein de vos implémentations**.
+Attention parfois la propriété **error.details** sera une chaine de caractères vide (si vous avez besoin de l'id de correction nous vous recommandons de le récupérer avec l'en-tête `request-id`).
+
+```json
+{
+    "error": {
+        "code": "ECR12",
+        "message": "Une erreur s'est produite lors de l'enregistrement de l'écriture.",
+        "details": ""
+    }
+}
+```
+
+> [!WARNING]
+> Nous vous recommandons de ne pas utiliser `error.message` comme référentiel pour automatiser une gestion d’erreur au sein de vos implémentations
 
 L’API n’a pour le moment aucune gestion d’un **retour de multiple** “erreurs” mais il n’est pas exclu que cela soit le cas dans le futur. Tout retour HTTP n’ayant pas un statut code en 2xx retournera donc forcément un JSON avec une propriété racine “error”.
 
-> [!CAUTION]
-> Attention nous ne parlons pas des erreurs qui sont retournées sur les routes qui ne sont que des passerelles vers d’autres API internes.
-
-# Codes d'erreur
+## Codes d'erreur API partenaires
 
 Les codes d’erreurs (unique) sont les suivants;
 - **ERR-HTTP**
@@ -56,7 +65,7 @@ Les codes d’erreurs (unique) sont les suivants;
 - **ERR-TOO-MANY-CONCURRENT-REQUEST** (vous avez dépassé la limite autorisée de demandes concurrentes à un dossier de production/une société).
 - **ERR-THIRD-PARTY-DISCONNECTED** (l'intégration a été déconnecté par un membre de l'équipe technique MyUnisoft, la raison sera fournie en message).
 
-## Proxy
+## Codes d'erreur (liste complète)
 
 |code                |message                                                                                                                                                                                                                                                   |http_statuscode|
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
