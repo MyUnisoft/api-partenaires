@@ -16,34 +16,65 @@ next: false
   {
     "producerId": "1",
     "code": "CB",
-    "name": "Carte bleue"
+    "name": "Carte bleue",
+    "additionalProducerProperties": {
+      "code": "CB"
+    }
   },
   {
     "producerId": "2",
-    "code": "VIRT",
-    "name": "Virement"
+    "code": "VIR",
+    "name": "Virement",
+    "additionalProducerProperties": {
+      "code": "VIRT"
+    }
   },
   {
     "producerId": "3",
     "code": "ESP",
-    "name": "Espèce"
+    "name": "Espèce",
+    "additionalProducerProperties": {
+      "code": "ESP"
+    }
   },
   {
     "producerId": "4",
     "code": "CHQ",
-    "name": "Chèque"
+    "name": "Chèque",
+    "additionalProducerProperties": {
+      "code": "CHQ"
+    }
   },
   {
     "producerId": "5",
-    "code": "PRLV",
-    "name": "Prélèvement"
+    "code": "PRE",
+    "name": "Prélèvement",
+    "additionalProducerProperties": {
+      "code": "PRLV"
+    }
   },
   {
     "producerId": "6",
     "code": "LCR",
-    "name": "Lettre de change"
+    "name": "Lettre de change",
+    "additionalProducerProperties": {
+      "code": "LCR"
+    }
   }
 ]
+```
+
+Par défaut, la propriété du code est transformée pour être compatible avec le format TRA. La transformation suit un modèle spécifique de correspondance:
+
+```js
+match(abbreviation)
+  .with("CB", () => "CB")
+  .with("CHQ", () => "CHQ")
+  .with("ESP", () => "ESP")
+  .with("LCR", () => "LCR")
+  .with("PRLV", () => "PRE")
+  .with("VIRT", () => "VIR")
+  .otherwise(() => "CHQ");
 ```
 
 ## Interfaces
@@ -60,7 +91,10 @@ interface Payment {
         "Chèque" |
         "Prélèvement" |
         "Lettre de change";
-  code: "CB" | "VIRT" | "ESP" | "CHQ" | "PRLV" | "LCR";
+  code: "CB" | "CHQ" | "ESP" | "LCR" | "PRE" | "VIR";
+  additionalProducerProperties: {
+    code: "CB" | "VIRT" | "ESP" | "CHQ" | "PRLV" | "LCR";
+  }
 }
 ```
 </details>

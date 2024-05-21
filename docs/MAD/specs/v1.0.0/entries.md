@@ -102,7 +102,19 @@ Sur MyUnisoft les mouvements sont groupés dans une abstraction que nous appelon
       "payment": null,
       "analytics": []
     }
-  ]
+  ],
+  "additionalProducerProperties": {
+      "createdAt": 1709852400,
+      "source": {
+          "name": "API",
+          "thirdParty": {
+              "name": "Evoliz",
+              "code": "EVOL"
+          }
+      },
+      "partnerMetadata": null,
+      "comment": null
+  }
 }
 ```
 
@@ -366,6 +378,14 @@ interface Movement {
 
 ```ts
 interface EntryAdditionalProducerProps {
+  createdAt: number;
+  source: {
+    name: string,
+    thirdParty: {
+      name: string;
+      code: string;
+    } | null;
+  };
   partnerMetadata: {
     partnerId: string;
     json: string | null;
@@ -847,5 +867,43 @@ interface Entry {
 }
 ```
 </details>
+
+#### Source d'une écriture
+
+Les sources à ce jour possible pour une écriture sont les suivantes;
+
+| code | label |
+| --- | --- |
+| E | Saisie |
+| M | Manuel |
+| O | OCR |
+| EXT | Extourne |
+| L | Lettrage |
+| IB | Integration bancaire |
+| P | OD Paie |
+| AN | A nouveau |
+| OD_TVA | OD TVA |
+| OD_CALC_IS | OD Calcul IS |
+| OD_ECART | OD Ecart |
+| REM_BQ | Remise en banque |
+| RB_MANUEL | Fichier CFONB manuel |
+| WORKSHEET | Worksheet (feuille de travail) |
+| QUADRA | Import QUADRA |
+| CEGID | Import CEGID |
+| ACD | Import ACD |
+| FEC | Import FEC |
+| EXCEL | Import Excel |
+| RB_JDC | JeDeclare |
+| RB_QT | Qonto |
+| RB_SB | SoBank |
+| RB_FTP | FTP |
+| RTVR | Retriever |
+| QUICK | Quickbooks |
+| ABO | Abonnement |
+| PRLV_SEPA | Prélèvement SEPA |
+| VIRT_SEPA | Virement SEPA |
+| API | API |
+
+La source `API` fournira en supplément un code permettant l'identification du partenaire.
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
