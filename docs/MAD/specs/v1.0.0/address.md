@@ -90,13 +90,15 @@ Ci-dessous les définitions avec TypeScript et JSON Schema.
 
 
 ```ts
+type LocatingIndex = "BIS" | "TER" | "QUATER" | "QUINQUIES" | null;
+
 interface Address {
   addressNumber: string | null;
   addressComplement: string | null;
   postalCode: string | null;
   streetName: string | null;
   streetType?: string | null;
-  locatingIndex?: "B" | "T" | "Q" | "C" | null;
+  locatingIndex: LocatingIndex;
   fullName?: string | null;
   city?: string | null;
   country?: string | null;
