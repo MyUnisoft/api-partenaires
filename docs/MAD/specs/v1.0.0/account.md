@@ -73,6 +73,17 @@ Les comptes fournisseurs et clients (racine 40 et 41) ont une propriété `compa
 
 Sur MyUnisoft les comptes sont classés de `1` à `9` (Exactement comme le [plan comptable général](https://www.comptabilisation.fr/pcg-plan-comptable-general.php)).
 
+## Auxiliarisation (compte tiers)
+
+Les comptes ayant les racines `401` (Fournisseurs), `411` (Clients) et `421` (Personnel) seront divisés en deux parties:
+
+![](../../images/auxiliaire.png)
+
+1. La racine du compte, qui est toujours de **trois caractères**.
+2. L'auxiliaire.
+
+Pour identifier les comptes auxiliaires, il vous faudra donc filtrer par les racines des comptes tiers.
+
 ## Interfaces
 
 <details class="details custom-block" open>
