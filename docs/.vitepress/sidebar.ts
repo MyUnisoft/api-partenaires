@@ -270,6 +270,14 @@ export default {
             {
               text: httpText({
                 method: "GET",
+                endpoint: "/mad/analytics",
+                description: "Export des axes et sections analytiques"
+              }),
+              link: "/MAD/api/analytic.md"
+            },
+            {
+              text: httpText({
+                method: "GET",
                 endpoint: "/mad/banks",
                 description: "Export des banques"
               }),
