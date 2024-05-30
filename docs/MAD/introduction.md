@@ -81,9 +81,11 @@ Les différentes API sont disponibles sur notre [postman en ligne](https://docs.
 > Toutes nos API vous demanderont de fournir le numéro de version MAD. La dernière version est actuellement `1.0.0`.
 
 - [Export des écritures et mouvements](./api/entries.md)
+- [Récupérer une écriture et ses mouvements](./api/entry.md)
 - [Export des comptes](./api/account.md)
 - [Export des journaux](./api/journal.md)
 - [Export des exercices](./api/exercice.md)
+- [Export des axes et sections analytiques](./api/analytic.md)
 - [Export des banques](./api/bank.md)
 - [Export des méthodes de paiement](./api/payment.md)
 - [Export des axes et sections analytiques](./api/analytic.md)
