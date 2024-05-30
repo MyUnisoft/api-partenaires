@@ -29,6 +29,14 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 > 🔹 Accès cabinet 
 > L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production (la société concernée par la demande d'extraction).
 
+## 💬 Gérer l'analytique sur l'interface MyUnisoft
+
+L'analytique peut être gérée par le biais du menu: `Paramètres` > `Tenue` > `Analytique`.
+
+> [!NOTE]
+> Il vous sera nécessaire de sélectionner le dossier de production en amont (ou pendant la procédure).
+
+
 ## 🔬 Réponse
 
 Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/analytic.md).
