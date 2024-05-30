@@ -93,7 +93,6 @@ Nous vous recommandons de conserver le "**code**" ce qui vous permettra de visue
 | 2 | Encaissement / Décaissement |
 | 3 | Mixte |
 
-
 ## Interfaces
 
 <details class="details custom-block" open>
@@ -108,20 +107,46 @@ interface Vat {
     deductible: Required<SimplifiedAccount> | null;
     collected: Required<SimplifiedAccount> | null;
   } | null;
-  type: string
-  exigibility: string;
+  type: VatTypeLabel
+  exigibility: "Débit (facturation)" | "Encaissement / Décaissement";
   additionalProducerProperties: {
-    typeCode: string;
-    exigibilityCode: string;
+    typeCode: VatTypeCode;
+    exigibilityCode: "DEB" | "ENC";
   }
 }
+
+type VatTypeLabel = "Biens et services" | "Immobilisation" |
+"Auto-liquidation" | "Non soumis / Exclu" |
+"Autres opérations imposables basées sur le CA (A2/13)" |
+"Autoliquidation SSBAT (A2/13)" | "Livraison soi-même (A2/12)" |
+"Autoliquidation intra S (A3/AC)" | "Autoliquidation import (2B)" |
+"Autoliquidation intra B (B2)" | "Export (E1/02)" |
+"Autres opérations non imposables (E2/03)" |
+"OP non imposables ventes à distances taxables état membre (E3/3A)" |
+"Livraisons intra (F2/04)" |
+"OP non imposables ventes B ou S par assujetti non établi en France  (F7/4B)" |
+"OP non imposables en franchise de Taxe (F6/01)" |
+"Autres opérations imposables basées sur les charges (A2/13)" |
+"Livraison d'électricité non imp en France (F3/4D)" |
+"Tva sur marge" | "Autoliquidation Importation (A4)" |
+"Autoliquidation Pétro (B1)" | "Autoliquidation sortie de régime (A5/13)" |
+"OP non taxée importations (E4)" | "OP non taxée sortie de régime (E5)" |
+"OP non taxée importations  hors pétro sous régime susp (E6)" |
+"OP non taxée Acquisition intra (F1)" | "OP non taxée Importations pétro sous régime susp (F5)" |
+"Autoliquidation sur achats réalisés auprès d’un assujetti non établi en France (B4/AB)" |
+"Op Imposables en France taux particulier" | "Op imposables en Corse taux particulier" |
+"Op Imposables DOM " | "Autoliquidation immobilisation (B2) " |
+"Autoliquidation importation immobilisation (A4) ";
+
+type VatTypeCode = "BIEN" | "IMMO" | "AUTO" | "NONS" |
+"AUOPEIMPO" | "AUTOSSBAT" | "LIVSM" | "AUTOINTRAS" | "AUTOIMPORT" |
+"AUTOINTRAB" | "EXPORT" | "AUOPENONIMPO" | "OPENONIMPODIS" | "LIVINTRA" |
+"OPENONIMPOVB" | "OPENONIMPOFTX" | "AUOPEIMPOCHARGE" | "LIVELEC" |
+"TVAMARGE" | "AUTOIMPAUTRE" | "AUTOPETROL" | "AUTOSORTREG" |
+"OPNNTAXIMPORT" | "OPNNTAXSORTIER" | "OPNNTAXIMPORTR" | "OPNNTAXACQINTRA" |
+"OPNNTAXSUSP" | "AUTOACHASSUNE" | "OPOIMFRTXPARTI" | "OPOIMCRSETXPARTI" |
+"OPOIMDOM" | "AUTOIMMO" | "AUTOIMPIMMO";
 ```
-</details>
-
-<details class="details custom-block">
-<summary>JSON Schema</summary>
-
-TBC
 </details>
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
