@@ -32,3 +32,14 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 ## 🔬 Réponse
 
 Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/payment.md).
+
+## 💬 Consulter les méthodes de paiement sur l'interface MyUnisoft
+
+Il n'existe pour le moment aucune interface permettant de configurer des méthodes de paiement personnalisées. A à ce jour nous récupérons les mêmes méthodes pour chaque nouveau dossier créer:
+
+- Carte bleue
+- Virement
+- Espèce
+- Chèque
+- Prélèvement
+- Lettre de charge

@@ -103,14 +103,14 @@ export interface CompanyAccount {
   SIREN: string | null;
   CEO: string | null;
   payment: {
-    producerId: string | null;
-    code: string | null;
+    producerId: string;
+    code: string;
   } | null;
   address: Address | null;
   ape: {
-    producerId: string | null;
-    code: string | null;
-    name: string | null;
+    producerId: string;
+    code: string;
+    name: string;
   } | null;
   contacts: CompanyAccountContact[];
 }

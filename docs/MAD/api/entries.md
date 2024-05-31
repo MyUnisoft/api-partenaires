@@ -11,7 +11,7 @@ next:
 
 L'API d'export ci-dessous vous permettra de récupérer les écritures par deux biais distincts;
 
-- Avec un exercice
+- Avec un [exercice](./exercice.md)
 - Sur une période données de maximums **12 mois**.
 
 Il n'est pas possible de mélanger les deux.
@@ -49,3 +49,16 @@ Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/en
 
 > [!CAUTION]
 > Pour éviter les extractions abusives nous avons volontairement limité à un exercice par requête API. Si vous souhaitez extraire l'intégralité des mouvements nous vous recommandons d'itérer sur l'intégralité des exercices séquentiellement.
+
+## 💬 Consulter les écritures sur l'interface MyUnisoft
+
+Sur MyUnisoft, il existe plusieurs moyens de récupérer et/ou consulter les écritures:
+
+- Par le biais de la saisie: `Tenue` > `Saisie/Consultation` > `Saisie`
+- Par la **recherche rapide**: accessible via l'icône en forme de loupe en haut à droite.
+
+![](../../images/quick_search.jpg)
+
+L'avantage de la première option est qu'elle permet de consulter les factures en attente, ce qui est courant lors d'un import au format JSON nécessitant une étape de validation par le responsable de dossier.
+
+![](../images/saisie_header.PNG)

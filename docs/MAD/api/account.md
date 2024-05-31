@@ -38,3 +38,7 @@ Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/ac
 Le plan comptable peut être configuré à partir du menu: `Paramètres` > `Tenue` > `Plan comptable`.
 
 ![](../../images/plan_comptable.PNG)
+
+La modification des comptes tiers `401`, `411` et `421` permettra d'ajouter des informations complémentaires à ceux-ci, telles que l'adresse du siège, les contacts, etc.
+
+![](../../images/fiche_compte_complementaire.PNG)

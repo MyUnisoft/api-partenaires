@@ -42,3 +42,7 @@ Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/en
 
 > [!IMPORTANT]
 > Le retour de l'API correspond à l'écriture (ce n'est pas un tableau).
+
+## 💬 Consulter les écritures sur l'interface MyUnisoft
+
+Voir [Export des écritures et mouvements](./entries.md#💬-consulter-les-ecritures-sur-l-interface-myunisoft)

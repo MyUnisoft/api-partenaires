@@ -31,7 +31,9 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 
 ## 💬 Gérer l'analytique sur l'interface MyUnisoft
 
-L'analytique peut être gérée par le biais du menu: `Paramètres` > `Tenue` > `Analytique`.
+L'analytique peut être gérée par le biais du menu: `Paramètres` > `Tenue` > `Analytique`. Par défaut l'analytique d'un dossier est déactivé.
+
+Pour plus d'informations merci de consulter le guide [Gérer l'analytique d'une société (dossier)](../../accounting/folder/analytique.md)
 
 > [!NOTE]
 > Il vous sera nécessaire de sélectionner le dossier de production en amont (ou pendant la procédure).

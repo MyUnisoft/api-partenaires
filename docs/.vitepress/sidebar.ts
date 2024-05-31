@@ -238,64 +238,52 @@ export default {
             {
               text: httpText({
                 method: "GET",
-                endpoint: "/mad/accountingFolder",
-                description: "Export du dossier de production"
-              }),
-              link: "/MAD/api/accountingFolder.md"
-            },
-            {
-              text: httpText({
-                method: "GET",
-                endpoint: "/mad/account",
-                description: "Export des comptes"
-              }),
-              link: "/MAD/api/account.md"
-            },
-            {
-              text: httpText({
-                method: "GET",
-                endpoint: "/mad/entry",
-                description: "Récupérer une écriture et ses mouvements"
-              }),
-              link: "/MAD/api/entry.md"
-            },
-            {
-              text: httpText({
-                method: "GET",
                 endpoint: "/mad/entries",
-                description: "Export des écritures et mouvements"
+                description: "Ecritures et mouvements"
               }),
               link: "/MAD/api/entries.md"
             },
             {
               text: httpText({
                 method: "GET",
-                endpoint: "/mad/exercices",
-                description: "Export des exercices"
+                endpoint: "/mad/entry?id=X",
+                description: "Récupérer une écriture par ID"
+              }),
+              link: "/MAD/api/entry.md"
+            },
+            {
+              text: httpText({
+                method: "GET",
+                endpoint: "/mad/accountingFolder",
+                description: "Dossier de production / Entreprise"
+              }),
+              link: "/MAD/api/accountingFolder.md"
+            },
+            {
+              text: httpText({
+                method: "GET",
+                endpoint: "/mad/account"
+              }),
+              link: "/MAD/api/account.md"
+            },
+            {
+              text: httpText({
+                method: "GET",
+                endpoint: "/mad/exercices"
               }),
               link: "/MAD/api/exercice.md"
             },
             {
               text: httpText({
                 method: "GET",
-                endpoint: "/mad/journals",
-                description: "Export des journaux"
+                endpoint: "/mad/journals"
               }),
               link: "/MAD/api/journal.md"
             },
             {
               text: httpText({
                 method: "GET",
-                endpoint: "/mad/analytics",
-                description: "Export des axes et sections analytiques"
-              }),
-              link: "/MAD/api/analytic.md"
-            },
-            {
-              text: httpText({
-                method: "GET",
-                endpoint: "/mad/banks",
-                description: "Export des banques"
+                endpoint: "/mad/banks"
               }),
               link: "/MAD/api/bank.md"
             },
@@ -303,10 +291,18 @@ export default {
               text: httpText({
                 method: "GET",
                 endpoint: "/mad/payments",
-                description: "Export des méthodes de paiement"
+                description: "Méthodes de paiement"
               }),
               link: "/MAD/api/payment.md"
             },
+            {
+              text: httpText({
+                method: "GET",
+                endpoint: "/mad/analytics",
+                description: "Axes et sections analytiques"
+              }),
+              link: "/MAD/api/analytic.md"
+            }
           ]
         }
       ]
