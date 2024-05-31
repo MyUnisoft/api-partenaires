@@ -246,6 +246,14 @@ export default {
             {
               text: httpText({
                 method: "GET",
+                endpoint: "/mad/entry",
+                description: "Récupérer une écriture et ses mouvements"
+              }),
+              link: "/MAD/api/entry.md"
+            },
+            {
+              text: httpText({
+                method: "GET",
                 endpoint: "/mad/entries",
                 description: "Export des écritures et mouvements"
               }),
