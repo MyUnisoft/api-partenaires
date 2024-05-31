@@ -238,6 +238,14 @@ export default {
             {
               text: httpText({
                 method: "GET",
+                endpoint: "/mad/accountingFolder",
+                description: "Export du dossier de production"
+              }),
+              link: "/MAD/api/accountingFolder.md"
+            },
+            {
+              text: httpText({
+                method: "GET",
                 endpoint: "/mad/account",
                 description: "Export des comptes"
               }),
