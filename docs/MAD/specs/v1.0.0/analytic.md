@@ -185,3 +185,23 @@ interface AnalyticalAxe {
 </details>
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
+## Compatibilité TRA
+
+Sections analytiques (**SAT**). Page 26 de la spécification.
+
+| nom de la colonne | position | chemin de la propriété MyUnisoft |
+| --- | --- | --- | 
+| FIXE | 1 | N/A |
+| IDENTIFIANT | 4 | `SAT` |
+| CODE | 7 | section.code |
+| LIBELLE | 24 | section.name |
+| AXE | 59 | axe.code |
+
+Les sections d'attentes sont gérés par le biais des Paramètres généraux (2) (**PS2**). Page 12 de la spécification.
+
+- SECT1ATTEND (position 113)
+- SECT2ATTEND (position 130)
+- SECT3ATTEND (position 147)
+- SECT4ATTEND (position 164)
+- SECT5ATTEND (position 181)

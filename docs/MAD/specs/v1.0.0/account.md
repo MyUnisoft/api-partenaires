@@ -115,7 +115,7 @@ export interface CompanyAccount {
   contacts: CompanyAccountContact[];
 }
 
-// Account for account starting with 40 or 41
+// Account for account starting with 401, 411, 421
 export type AccountTiers = SimplifiedAccount & { company: CompanyAccount };
 
 export type Account =
@@ -317,3 +317,53 @@ export type Account =
 </details>
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
+## Compatibilité TRA
+
+Les comptes sont segmentés en plusieurs **sections distinctes** au sein du fichier TRA:
+
+- Comptes de correspondance (**CRR**). Page 31.
+- Compte général (**CGN**). Page 34.
+- Compte de tiers (**CAE**). Page 36.
+
+### Comptes de correspondance
+
+| nom de la colonne | position | chemin de la propriété MyUnisoft |
+| --- | --- | --- | 
+| FIXE | 1 | N/A |
+| IDENTIFIANT | 4 | `CRR` |
+| CODE | 7 | correspondanceAccount.number |
+| LIBELLE | 24 | correspondanceAccount.name |
+| TYPE | 59 | ??? |
+
+### Compte de tiers
+
+Ce sont les comptes commençant avec la racine 401, 411 ou 421.
+
+| nom de la colonne | position | chemin de la propriété MyUnisoft |
+| --- | --- | --- | 
+| FIXE | 1 | N/A |
+| IDENTIFIANT | 4 | `CAE` |
+| CODE | 7 | number |
+| LIBELLE | 24 | name |
+| ADRESSE1 | 267 | company.address.streetName |
+| ADRESSE2 | 302 | company.address.addressComplement |
+| CODEPOSTAL | 372 | company.address.postalCode |
+| VILLE | 381 | company.address.city |
+| TELEPHONE | 490 | company.contacts[0].phoneNumber |
+| MODEREGLEMENT | 543 | company.payment.code |
+| APE | 615 | company.ape.code |
+| PRENOM | 620 | company.contacts[0].firstname |
+
+### Compte général
++
+Ce sont tous les autres comptes ne correspondant pas aux racines des tiers.
+
+| nom de la colonne | position | chemin de la propriété MyUnisoft |
+| --- | --- | --- | 
+| FIXE | 1 | N/A |
+| IDENTIFIANT | 4 | `CGN` |
+| CODE | 7 | number |
+| LIBELLE | 24 | name |
+| CORRESP1 | 259 | correspondanceAccount.number |
+

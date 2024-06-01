@@ -191,3 +191,23 @@ interface AccountingFolder {
 </details>
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
+
+## Compatibilité TRA
+
+Paramètres généraux (1)  (**PS1**). Page 11 de la spécification.
+
+| nom de la colonne | position | chemin de la propriété MyUnisoft |
+| --- | --- | --- | 
+| FIXE | 1 | N/A |
+| IDENTIFIANT | 4 | `PS1` |
+| NOM | 7 | name |
+| ADRESSE1 | 42 | address.streetName |
+| ADRESSE2 | 77 | address.addressComplement |
+| CODEPOSTAL | 147 | address.postalCode |
+| VILLE | 156 | address.city |
+| PAYS | 191 | address.country |
+| TELEPHONE | 194 | contact.phoneNumber |
+| EMAIL | 269 | contact.mail |
+| SIRET | 391 | SIRET |
+| RCS | 426 | RCS.name |
+| CAPITAL | 478 | capital |
