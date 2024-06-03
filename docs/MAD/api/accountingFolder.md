@@ -37,4 +37,8 @@ Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/ac
 
 Un dossier de production (ou société) peut être configuré par le biais du CRM entreprise: `Écosystème` > `CRM` > `Entreprises`.
 
-![](../../images/crm_list_entreprises.PNG)
+![](../images/crm_enterprise.PNG)
+
+Dès la sélection d'une entreprise pour modification, la vue multi-onglets suivante se présentera à vous:
+
+![](../images/crm_edit.PNG)

@@ -199,7 +199,7 @@ interface Exercice {
 
 ## Compatibilité TRA
 
-Exercice (**EXO**). Page 16 de la spécification.
+Exercice (**EXO**). Page 17 de la spécification.
 
 | nom de la colonne | position | chemin de la propriété MyUnisoft |
 | --- | --- | --- | 
@@ -209,6 +209,7 @@ Exercice (**EXO**). Page 16 de la spécification.
 | DATEDEBUT | 10 | period.start |
 | DATEFIN | 18 | period.end |
 | ETATCPTA | 26 | state |
+| LIBELLE | 32 | `Exercice au period.end.format("DDMMYYYY")` |
 | ETATANO | 67 | additionalProducerProperties.lettering |
 | DATECREATION | 70 | period.start |
 
