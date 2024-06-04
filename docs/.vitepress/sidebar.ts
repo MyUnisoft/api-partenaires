@@ -217,6 +217,10 @@ export default {
               link: "/MAD/specs/v1.0.0/payment"
             },
             {
+              text: "Pièce/documents joints",
+              link: "/MAD/specs/v1.0.0/attachment"
+            },
+            {
               text: "Devise",
               link: "/MAD/specs/v1.0.0/currency"
             },

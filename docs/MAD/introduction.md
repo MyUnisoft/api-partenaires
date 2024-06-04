@@ -62,6 +62,7 @@ Ces interfaces et types sont régulièrement présents dans les différentes str
 - [Adresse](./specs/v1.0.0/address.md)
 - [Devise](./specs/v1.0.0/currency.md)
 - [Compte Simplifié](./specs/v1.0.0/simplifiedAccount.md)
+- [Pièce/documents joints à une écriture et/ou mouvements](./specs/v1.0.0/attachment.md)
 
 ### 💃 Les interfaces principales:
 - [Dossier de production (entreprise et/ou établissement)](./specs/v1.0.0/accountingFolder.md)

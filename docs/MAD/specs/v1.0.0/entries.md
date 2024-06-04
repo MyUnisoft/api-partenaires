@@ -22,7 +22,7 @@ Sur MyUnisoft les mouvements sont groupés dans une abstraction que nous appelon
 {
   "producerId": "13524346",
   "attachments": {
-    "VotreDocumentSelectionne_12-06-2022 (5).pdf": {
+    "document.pdf": {
       "type": "URL",
       "value": "https://app.myunisoft.fr/api/ged/ged/document/1-gTt2QkfLPABeb6Z/download"
     }
@@ -123,104 +123,13 @@ Sur MyUnisoft les mouvements sont groupés dans une abstraction que nous appelon
 ## Interfaces
 
 Liste des interfaces communes:
-- [Currency](./currency.md)
+- [Currency (Devise)](./currency.md)
 - [SimplifiedAccount](./simplifiedAccount.md)
+- [Attachment (Pièce/documents joints)](./attachment.md)
 
 ---
 
 Ci-dessous les définitions avec TypeScript et JSON Schema.
-
-### Pièce/documents joints
-
-Les écritures et mouvements peuvent avoir plusieurs types de pièce jointe;
-- <kbd>URL</kbd> - Lien vers le fichier
-- <kbd>File</kbd> - Chemin relatif vers un fichier (uniquement pour les archives en .zip)
-- <kbd>Base64</kbd> - Fichier au format base64 (uniquement pour l'import)
-
-> [!NOTE]
-> En export le type `URL` est privilégié
-
-<details class="details custom-block" open>
-<summary>TypeScript</summary>
-
-```ts
-type Attachment = {
-  type: "URL";
-  value: string;
-} | {
-  type: "File";
-  value: string;
-} | {
-  type: "Base64";
-  value: string;
-};
-```
-</details>
-
-<details class="details custom-block">
-<summary>JSON Schema</summary>
-
-```json
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "additionalProperties": false,
-  "type": "object",
-  "required": [],
-  "oneOf": [
-    {
-      "type": "object",
-      "properties": {
-        "type": {
-          "const": "URL"
-        },
-        "value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "type",
-        "value"
-      ],
-      "additionalProperties": false
-    },
-    {
-      "type": "object",
-      "properties": {
-        "type": {
-          "const": "File"
-        },
-        "value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "type",
-        "value"
-      ],
-      "additionalProperties": false
-    },
-    {
-      "type": "object",
-      "properties": {
-        "type": {
-          "const": "Base64"
-        },
-        "value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "type",
-        "value"
-      ],
-      "additionalProperties": false
-    }
-  ]
-}
-```
-</details>
-
-<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Lettrage
 
