@@ -4,11 +4,11 @@ next: false
 
 <span id="readme-top"></span>
 
-L’API Partenaires permet à des logiciels partenaires ainsi que des cabinets membres de récupérer et d'envoyer de l'information depuis/vers MyUnisoft.
+L’API Partenaires permet aux logiciels partenaires ainsi qu'aux cabinets membres de récupérer et d'envoyer des informations depuis et vers MyUnisoft.
 
-L’authentification du partenaire/cabinet est principalement basée sur:
-- une clé <kbd>X-Third-Party</kbd> fournie par MyUnisoft (à fournir en en-tête HTTP pour chaque requête). C'est une clé `unique` qui ne doit surtout **pas être communiqué** en dehors de nos équipes techniques respectives.
-- une clé [JWT](https://jwt.io/) (**API Token**) pour chaque cabinet et/ou société.
+L’authentification du partenaire ou du cabinet est principalement basée sur :
+- une clé <kbd>X-Third-Party</kbd> : fournie par MyUnisoft, à inclure dans l'en-tête HTTP de chaque requête. Cette clé `unique` ne doit surtout **pas être communiquée** en dehors de nos équipes techniques respectives.
+- une clé [JWT](https://jwt.io/) (**API Token**) : propre à chaque cabinet et/ou société.
 
 > [!IMPORTANT] 
 > Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur la documentation postman: [https://docs.api.myunisoft.fr/](https://docs.api.myunisoft.fr/)
@@ -38,28 +38,28 @@ N'attendez pas pour rejoindre l'écosystème [MyUnisoft connected](https://myuni
 
 ### Activation de la clé secrète X-Third-Party
 
-Vous n'avez rien à faire pour activer cette clé, ce sont les équipes MyUnisoft qui s'occupent de la générer et de l'activer (càd la rendre valide vis à vis de l'API partenaires).
+Vous n'avez rien à faire pour activer cette clé. Ce sont les équipes de MyUnisoft qui s'occupent de la générer et de l'activer (c'est-à-dire la rendre valide vis-à-vis de l'API Partenaires).
 
 > [!NOTE]  
-> Il peut y avoir un certain délai entre la génération de la clé et son activation. La clé ne sera pas reconnue par notre API tant que la clé n'a pas été activée!
+> Il peut y avoir un certain délai entre la génération de la clé et son activation. La clé ne sera pas reconnue par notre API tant qu'elle n'aura pas été activée !
 
 ## 🔬 Type d'accès
 
-Notre API partenaires a deux types distincts d'accès, chacun de ces accès permet d'interconnecter nos solutions de manière permanente par le biais d'un jeton n'ayant pas de date d'expiration (il peut être néanmoins révoqué par le gestionnaire du dossier/cabinet ou par nos équipes techniques).
+Notre API partenaires propose deux types distincts d'accès. Chacun permet d'interconnecter nos solutions de manière permanente via un jeton sans date d'expiration (il peut néanmoins être révoqué par le gestionnaire du dossier/cabinet ou par nos équipes techniques).
 
-Il vous sera nécessaire de choisir l'un des deux type d'accès (ou de discuter plus amplement avec nous pour vous guider vers la bonne abstraction):
+Il vous sera nécessaire de choisir l'un des deux types d'accès (ou de discuter plus amplement avec nous pour vous guider vers la bonne option) :
 
 🔸 Un accès restreint a une **société** (dossier de production) d'un cabinet.
 
 🔹 Un accès à l'intégralité d'un **cabinet**.
 
 > [!NOTE]
-> Le terme de **cabinet** ou **firm** est souvent utilisé à tort pour parler d'un schéma MyUnisoft. Un schéma peut contenir un à plusieurs cabinets et représente un client signé sur le plan commercial et technique.
+> Le terme **cabinet** ou **firm** est souvent utilisé à tort pour désigner un schéma (ou tenant) dans MyUnisoft. Un schéma peut contenir un à plusieurs cabinets et représente un client signé sur le plan commercial et technique.
 
 ![](./images/entities.png)
 
 > [!TIP]  
-> Pour récupérer la liste et le paramétrage de plusieurs dossiers il est nécessaire d'avoir un accès cabinet. Il en va de même pour la récupération des entités qui ne sont pas liées au dossier (comme les utilisateurs et les portefeuilles).
+> Pour récupérer la liste et le paramétrage de plusieurs dossiers, ainsi que pour accéder aux entités non liées au dossier telles que les utilisateurs et les portefeuilles, il est nécessaire d'avoir un accès de type cabinet.
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
@@ -81,9 +81,9 @@ La racine de notre API partenaires est la suivante: [https://api.myunisoft.fr/ap
 
 ---
 
-Lors de l’utilisation d’une route exposée il est nécessaire d’avoir l’**API Token** en [Bearer token](https://swagger.io/./specification/authentication/bearer-authentication/) dans l'en-tête **Authorization**.
+Lors de l’utilisation d’une route exposée, il est impératif d'inclure l’**API Token** en tant que [Bearer token](https://swagger.io/./specification/authentication/bearer-authentication/) dans l'en-tête HTTP **Authorization**.
 
-Il est aussi nécessaire d’ajouter une en-tête “**X-Third-Party-Secret**” contenant la clé secrète communiqué par notre équipe.
+De plus, vous devez ajouter l'en-tête “**X-Third-Party-Secret**” contenant la clé secrète communiqué par notre équipe.
 
 ```bash
 $ curl --location
@@ -92,7 +92,7 @@ $ curl --location
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
 
-Pour plus d'informations nous vous invitons à consulter les sous documentations suivantes selon la nature de votre accès:
+Pour plus de détails, nous vous invitons à consulter les sous-documentations suivantes en fonction de la nature de votre accès :
 
 - <a href="./endpoints/societe" class="no_underline">🔸 Usage API avec l'accès société</a>
 - <a href="./endpoints/cabinet" class="no_underline">🔹 Usage API avec l'accès cabinet</a>
