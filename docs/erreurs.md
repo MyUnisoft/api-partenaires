@@ -7,7 +7,9 @@ next: false
 
 # Gestion des retours erreurs 💥
 
-Chaque erreur est accompagnée d’un code unique et d’un message essayant de vous guider au mieux dans la résolution de l’erreur. La propriété “**details**” servira si besoin à nos équipes à tracer et identifier la source du problème en interne.
+Chaque erreur est accompagnée d’un code unique et d’un message visant à vous guider au mieux dans la résolution du problème. La propriété “**details**” est utilisée par nos équipes pour tracer et identifier la source du problème en interne.
+
+Exemple JSON pour une erreur avec détails :
 
 ```json
 {
@@ -24,7 +26,7 @@ Chaque erreur est accompagnée d’un code unique et d’un message essayant de 
 }
 ```
 
-Attention parfois la propriété **error.details** sera une chaine de caractères vide (si vous avez besoin de l'id de correction nous vous recommandons de le récupérer avec l'en-tête `request-id`).
+Parfois, la propriété error.details peut être une chaîne de caractères vide :
 
 ```json
 {
@@ -37,9 +39,9 @@ Attention parfois la propriété **error.details** sera une chaine de caractère
 ```
 
 > [!WARNING]
-> Nous vous recommandons de ne pas utiliser `error.message` comme référentiel pour automatiser une gestion d’erreur au sein de vos implémentations
+> Nous recommandons de ne pas utiliser `error.message` comme référence pour automatiser la gestion d'erreurs dans vos implémentations.
 
-L’API n’a pour le moment aucune gestion d’un **retour de multiple** “erreurs” mais il n’est pas exclu que cela soit le cas dans le futur. Tout retour HTTP n’ayant pas un statut code en 2xx retournera donc forcément un JSON avec une propriété racine “error”.
+Pour le moment, notre API ne gère pas le retour de multiples erreurs simultanément, mais cela pourrait être envisagé à l'avenir. Tout retour HTTP avec un statut différent de 2xx renverra forcément un JSON contenant la propriété racine “error”.
 
 ## Codes d'erreur API partenaires
 
