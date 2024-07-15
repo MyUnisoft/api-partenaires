@@ -2,10 +2,10 @@
 	"info": {
 		"_postman_id": "c4062d0b-3f1b-4d6f-98c0-952a0ba5cccd",
 		"name": "API Partners (Public)",
-		"description": "## ✨ Summary\n\nUp to date documentation is available here : [https://github.com/MyUnisoft/api-partenaires](https://github.com/MyUnisoft/api-partenaires)",
+		"description": "## ✨ Summary\n\nUp to date documentation is available here : [https://myunisoft.github.io/api-partenaires/](https://myunisoft.github.io/api-partenaires/)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "15036360",
-		"_collection_link": "https://myunisoft.postman.co/workspace/Node.js-API-~b2e1039b-b32c-4a29-84ec-2b27195223b7/collection/5276786-c4062d0b-3f1b-4d6f-98c0-952a0ba5cccd?action=share&creator=15036360&source=collection_link"
+		"_collection_link": "https://myunisoft.postman.co/workspace/Node.js-API-~b2e1039b-b32c-4a29-84ec-2b27195223b7/collection/5276786-c4062d0b-3f1b-4d6f-98c0-952a0ba5cccd?action=share&source=collection_link&creator=15036360"
 	},
 	"item": [
 		{
@@ -54,7 +54,7 @@
 								"firm"
 							]
 						},
-						"description": "📢 Endpoint to authenticate with a Firm/cabinet access. Will return an API Token.\n\nA numeric property `firm` can be added to the body for accounts with access to multiple entities/schemas.\n\nIn the MyUnisoft interface it is possible to retrieve the id of the entity through the menu `Tenue` > `Liens dynamiques`. It will be enough to retrieve the \"schema number\".\n\n![](https://github.com/MyUnisoft/api-partenaires/raw/main/docs/images/liens_dynamique.PNG)"
+						"description": "📢 Endpoint to authenticate with a Firm/cabinet access. Will return an API Token.\n\nA numeric property `firm` can be added to the body for accounts with access to multiple entities/schemas.\n\nIn the MyUnisoft interface it is possible to retrieve the id of the entity through the menu `Tenue` > `Liens dynamiques`. It will be enough to retrieve the \"schema number\".\n\n<img src=\"https://github.com/MyUnisoft/api-partenaires/raw/main/docs/images/liens_dynamique.PNG\" alt=\"\">\n\n!!!! PLEASE DO NOT USE THIS ENDPOINT WITH YOUR PERSONAL MYUNISOFT ACCOUNT !!!!"
 					},
 					"response": [
 						{
@@ -136,7 +136,7 @@
 								"authenticate"
 							]
 						},
-						"description": "⚠️ If you use Postman, disable cookies.\n\n![](https://raw.githubusercontent.com/MyUnisoft/api-partenaires/main/docs/images/user_cookie.png)"
+						"description": "⚠️ If you use Postman, disable cookies.\n\n<img src=\"https://raw.githubusercontent.com/MyUnisoft/api-partenaires/main/docs/images/user_cookie.png\" alt=\"\">"
 					},
 					"response": [
 						{
@@ -175,103 +175,6 @@
 					]
 				},
 				{
-					"name": "key/create",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"var jsonData = JSON.parse(responseBody);\r",
-									"postman.setEnvironmentVariable(\"API-TOKEN\", jsonData.value);"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{bearer-token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "X-Third-Party-Secret",
-								"value": "{{ X-Third-Party-Secret }}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"target\": 2\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.myunisoft.fr/api/v1/key/create",
-							"protocol": "https",
-							"host": [
-								"api",
-								"myunisoft",
-								"fr"
-							],
-							"path": [
-								"api",
-								"v1",
-								"key",
-								"create"
-							]
-						},
-						"description": "📢 This route allows the creation of a key (or API Token)\n\n*   target: the id of the company that will be linked to the token API. It is possible to retrieve the id of a company through the MyUnisoft application (the id will be present in the URL).\n    \n\nThis endpoint requires a User Bearer token as authorization header and a X-Third-Party-Secret header.\nGuide on [our github documentation](https://github.com/MyUnisoft/api-partenaires/blob/main/docs/auth/user.md)"
-					},
-					"response": [
-						{
-							"name": "key/create",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/key/create",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"key",
-										"create"
-									]
-								}
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"body": "{\n    \"id\": \"f75c3265-65f8-4417-9056-f285698eef5f\",\n    \"target\": 2,\n    \"grantedBy\": 1,\n    \"grantedFor\": 1,\n    \"value\": \"{{JWT-TOKEN-HERE}}\"\n}"
-						}
-					]
-				},
-				{
 					"name": "key/info",
 					"request": {
 						"auth": {
@@ -288,8 +191,8 @@
 						"header": [
 							{
 								"key": "X-Third-Party-Secret",
-								"type": "text",
-								"value": "{{X-Third-Party-Secret}}"
+								"value": "{{X-Third-Party-Secret}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -324,8 +227,8 @@
 								"header": [
 									{
 										"key": "X-Third-Party-Secret",
-										"type": "text",
-										"value": "{{X-Third-Party-Secret}}"
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -373,8 +276,8 @@
 								"header": [
 									{
 										"key": "X-Third-Party-Secret",
-										"type": "text",
-										"value": "{{X-Third-Party-Secret}}"
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -810,8 +713,8 @@
 								"header": [
 									{
 										"key": "X-Third-Party-Secret",
-										"type": "text",
-										"value": "{{X-Third-Party-Secret}}"
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -928,8 +831,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											},
 											{
 												"key": "Authorization",
@@ -1060,8 +963,8 @@
 								"header": [
 									{
 										"key": "X-Third-Party-Secret",
-										"type": "text",
-										"value": "{{X-Third-Party-Secret}}"
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -1095,8 +998,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -1251,8 +1154,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											},
 											{
 												"key": "society-id",
@@ -1321,8 +1224,8 @@
 												"header": [
 													{
 														"key": "X-Third-Party-Secret",
-														"type": "text",
-														"value": "{{X-Third-Party-Secret}}"
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
 													},
 													{
 														"key": "society-id",
@@ -1422,13 +1325,13 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											},
 											{
 												"key": "Content-Type",
-												"type": "text",
-												"value": "application/json"
+												"value": "application/json",
+												"type": "text"
 											}
 										],
 										"body": {
@@ -1464,13 +1367,13 @@
 												"header": [
 													{
 														"key": "X-Third-Party-Secret",
-														"type": "text",
-														"value": "{{X-Third-Party-Secret}}"
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
 													},
 													{
 														"key": "Content-Type",
-														"type": "text",
-														"value": "application/json"
+														"value": "application/json",
+														"type": "text"
 													}
 												],
 												"body": {
@@ -1511,13 +1414,13 @@
 												"header": [
 													{
 														"key": "X-Third-Party-Secret",
-														"type": "text",
-														"value": "{{X-Third-Party-Secret}}"
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
 													},
 													{
 														"key": "Content-Type",
-														"type": "text",
-														"value": "application/json"
+														"value": "application/json",
+														"type": "text"
 													}
 												],
 												"body": {
@@ -1564,7 +1467,7 @@
 											"bearer": [
 												{
 													"key": "token",
-													"value": "{{API-TOKEN}}",
+													"value": "",
 													"type": "string"
 												}
 											]
@@ -1573,18 +1476,24 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "",
+												"type": "text"
 											},
 											{
 												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "127",
 												"type": "text",
-												"value": "application/json"
+												"disabled": true
 											}
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"account_id\": \"548\",\r\n    \"account_number\": \"409800\",\r\n    \"counterpart_account_id\": \"710\"\r\n}\r\n",
+											"raw": "",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1603,6 +1512,70 @@
 												"api",
 												"v1",
 												"account"
+											]
+										},
+										"description": "📢 Update account. The **account_id** and **account_number** are required (Note: account_number can be replaced with the label).\n\nJSON Body is described by the following TypeScript interface.\n\n``` ts\ninterface UpdateAccount {\n  account_id: number;\n  account_number: string;\n  label: string;\n  analytics?: boolean;\n  intraco_account?: boolean;\n  btp_autoliquidation?: boolean;\n  exoneration?: boolean;\n  vat_param_id?: number;\n  counterpart_account_id?: number;\n  das_2?: boolean;\n  ocr_autovalidation?: boolean;\n  ocr_threshold?: number;\n  provider?: boolean;\n  complementary_info?: ComplementaryInfo;\n}\n\ninterface ComplementaryInfo {\n  name?: string;\n  siren?: string;\n  id_ape?: number;\n  is_foreign?: boolean;\n\n  person_in_charge?: string;\n  profession?: string;\n\n  contact_lastname?: string;\n  contact_firstname?: string;\n  function?: string;\n  tel?: string;\n  tel2?: string;\n  email?: string;\n\n  repetition_index: string;\n  way_type_id: number;\n  address: string;\n  address_number: string;\n  address_complement: string;\n  postal_code: string;\n  city: string;\n  id_country?: number;\n\n  iban_list?: Iban[];\n  contact_list?: Contact[];\n\n  id_payment_deadline?: number;\n  payment_type_id?: number;\n\n  misc_referent?: string;\n  misc_group?: string;\n  misc_doubtful_id?: number;\n  misc_language_id?: number;\n  misc_archived?: boolean;\n}\n\ninterface Iban {\n  id?: number;\n  iban: string;\n  bic?: string;\n  rum?: string;\n}\n\ninterface Contact {\n  email: string;\n  lastname: string;\n  firstname: string;\n  tel1: string;\n  tel2: string;\n  function: string;\n  id_contact_compte_tiers?: number | null;\n  isNew?: boolean;\n}\n\n ```\n\n📌 **This endpoint only work with a cabinet (firm) access**"
+									},
+									"response": []
+								},
+								{
+									"name": "Update Account Contact",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {
+											"content-type": true
+										}
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{API-TOKEN}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "1",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"account_id\": 18786343,\r\n  \"contact_list\": [\r\n    {\r\n      \"tel1\": \"0655547180\",\r\n      \"tel2\": \"\",\r\n      \"email\": \"john.doe@unknown.com\",\r\n      \"lastname\": \"Doe\",\r\n      \"firstname\": \"John\",\r\n      \"function\": \"CEO\",\r\n      \"id_contact_compte_tiers\": 1\r\n    }\r\n  ]   \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/account/contact",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"account",
+												"contact"
 											]
 										},
 										"description": "📢 Update account. The **account_id** and **account_number** are required (Note: account_number can be replaced with the label).\n\nJSON Body is described by the following TypeScript interface.\n\n```ts\ninterface UpdateAccount {\n  account_id: number;\n  account_number: string;\n  label: string;\n  provider?: boolean;\n  intraco_account?: boolean;\n  btp_autoliquidation?: boolean;\n  exoneration?: boolean;\n  society_id?: number;\n  vat_param_id?: number;\n  counterpart_account_id?: number;\n  das_2?: boolean;\n  complementary_info?: ComplementaryInfo;\n}\n​\ninterface ComplementaryInfo {\n  profession?: string;\n  siren?: string;\n  id_ape?: number;\n  person_in_charge?: string;\n  name?: string;\n  contact_lastname?: string;\n  contact_firstname?: string;\n  function?: string;\n  tel?: string;\n  email?: string;\n  iban_list?: Iban[];\n  id_payment_deadline?: number;\n  payment_type_id?: number;\n  address_number?: string;\n  repetition_index?: string;\n  way_type_id?: number;\n  address?: string;\n  address_complement?: string;\n  postal_code?: string;\n  city?: string;\n  country?: string;\n}\n​\ninterface Iban {\n  id_iban_compte_tiers: number;\n  iban: string;\n  bic: string;\n  etablissement: string;\n  rum_date_signature?: null;\n}\n```\n\n📌 **This endpoint only work with a cabinet (firm) access**"
@@ -1844,8 +1817,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -5444,13 +5417,13 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											},
 											{
 												"key": "Content-Type",
-												"type": "text",
-												"value": "application/json"
+												"value": "application/json",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -5497,13 +5470,13 @@
 												"header": [
 													{
 														"key": "X-Third-Party-Secret",
-														"type": "text",
-														"value": "{{X-Third-Party-Secret}}"
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
 													},
 													{
 														"key": "Content-Type",
-														"type": "text",
-														"value": "application/json"
+														"value": "application/json",
+														"type": "text"
 													}
 												],
 												"url": {
@@ -5572,8 +5545,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											}
 										],
 										"body": {
@@ -5616,13 +5589,13 @@
 												"header": [
 													{
 														"key": "X-Third-Party-Secret",
-														"type": "text",
-														"value": "{{X-Third-Party-Secret}}"
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
 													},
 													{
 														"key": "Content-Type",
-														"type": "text",
-														"value": "application/json"
+														"value": "application/json",
+														"type": "text"
 													}
 												],
 												"body": {
@@ -5872,13 +5845,13 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											},
 											{
 												"key": "Content-Type",
-												"type": "text",
-												"value": "application/json"
+												"value": "application/json",
+												"type": "text"
 											}
 										],
 										"body": {
@@ -5986,8 +5959,8 @@
 													},
 													{
 														"key": "Content-Type",
-														"name": "Content-Type",
 														"value": "application/json",
+														"name": "Content-Type",
 														"type": "text"
 													},
 													{
@@ -6070,13 +6043,13 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											},
 											{
 												"key": "Content-Type",
-												"type": "text",
-												"value": "application/octet-stream"
+												"value": "application/octet-stream",
+												"type": "text"
 											}
 										],
 										"body": {
@@ -6138,8 +6111,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											}
 										],
 										"body": {
@@ -6268,13 +6241,13 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											},
 											{
 												"key": "Content-Type",
-												"type": "text",
-												"value": "application/octet-stream"
+												"value": "application/octet-stream",
+												"type": "text"
 											}
 										],
 										"body": {
@@ -6333,13 +6306,13 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											},
 											{
 												"key": "Content-Type",
-												"type": "text",
-												"value": "application/octet-stream"
+												"value": "application/octet-stream",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -6511,13 +6484,13 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											},
 											{
 												"key": "Content-Type",
-												"type": "text",
-												"value": "application/octet-stream"
+												"value": "application/octet-stream",
+												"type": "text"
 											},
 											{
 												"key": "society-id",
@@ -6551,7 +6524,7 @@
 												{
 													"key": "ocr_type_id",
 													"value": "3",
-													"description": "Required / 2 = MANUEL / 3 = OCR MyUnisoft / 5 = OCR Premium / 6 = Factur-X"
+													"description": "Required / 2 = MANUEL / 3 = OCR MyUnisoft / 6 = Factur-X"
 												},
 												{
 													"key": "name",
@@ -6561,6 +6534,12 @@
 													"key": "extension",
 													"value": "",
 													"description": "Required - File extension (jpg, jpeg, tiff, tif, bmp, png, pdf)"
+												},
+												{
+													"key": "return_type",
+													"value": "",
+													"description": "1. No content (DEFAULT)\n2. Return document infos\n",
+													"disabled": true
 												}
 											]
 										},
@@ -6574,13 +6553,13 @@
 												"header": [
 													{
 														"key": "X-Third-Party-Secret",
-														"type": "text",
-														"value": "{{X-Third-Party-Secret}}"
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
 													},
 													{
 														"key": "Content-Type",
-														"type": "text",
-														"value": "application/octet-stream"
+														"value": "application/octet-stream",
+														"type": "text"
 													}
 												],
 												"body": {
@@ -6643,13 +6622,13 @@
 												"header": [
 													{
 														"key": "X-Third-Party-Secret",
-														"type": "text",
-														"value": "{{X-Third-Party-Secret}}"
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
 													},
 													{
 														"key": "Content-Type",
-														"type": "text",
-														"value": "application/octet-stream"
+														"value": "application/octet-stream",
+														"type": "text"
 													}
 												],
 												"body": {
@@ -6700,6 +6679,77 @@
 											"body": "{\n    \"code\": \"OCR1\",\n    \"message\": \"Extension non acceptée\",\n    \"details\": \"\"\n}"
 										}
 									]
+								},
+								{
+									"name": "Flags",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{API-TOKEN}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "1",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/flags?type_entry=ENTRIES_LINE&line_entry_id=1&type_flag=INFO_PJ&flagged=true&dh=2021-01-01T22%3A00%3A00.45654",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"flags"
+											],
+											"query": [
+												{
+													"key": "type_entry",
+													"value": "ENTRIES_LINE",
+													"description": "ENTRIES_LINE ou ENTRIES_LINE_TEMP"
+												},
+												{
+													"key": "line_entry_id",
+													"value": "1",
+													"description": "ID de la ligne d'écriture"
+												},
+												{
+													"key": "type_flag",
+													"value": "INFO_PJ",
+													"description": "Nom du flag"
+												},
+												{
+													"key": "flagged",
+													"value": "true",
+													"description": "true -> flag (création), false -> unflag (suppression)"
+												},
+												{
+													"key": "dh",
+													"value": "2021-01-01T22%3A00%3A00.45654",
+													"description": "format YYYY-MM-DDTHH:MM:SS.CCCCC"
+												}
+											]
+										},
+										"description": "📢 Company (dossier) Exercices. If an exercise is not closed **closed_at** and **closed_by** are set to `null`.\n\nExercices labels are `N+1`, `N`, `N-1`, `N-2` etc.\n\n``` ts\ninterface Exercice {\n  exercice_id: number;\n  start_date: string;\n  end_date: string;\n  /**Label de l'exercice ( N-1, N, N+1 etc..). */\n  label: string;\n  result: number;\n  /* Chiffre d'affaire sur l'exercice. */\n  ca: number;\n  closed: boolean;\n  duration: number;\n  closed_at: null | string;\n  /** ID de l'utilisateur qui a clotûré l'exercice. */\n  closed_by: null | number;\n  review_model: {\n    label: string;\n    id_review_model: number;\n  };\n  lettering_method_id: number;\n}\n\n```\n\nLa propriété lettering_method_id permet de savoir si l'exercice est **MONO** ou **MULTI**. Par défaut un exercice est **MONO**.\n\n- 1\\. MONO\n- 2\\. MULTI\n    \n\n⚠️ A `society-id` is required with a cabinet/firm access"
+									},
+									"response": []
 								}
 							],
 							"description": "All endpoints to import entries and documents (which will be transformed into an accounting entry)."
@@ -6724,8 +6774,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -6880,13 +6930,13 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											},
 											{
 												"key": "Content-Type",
-												"type": "text",
-												"value": "application/json"
+												"value": "application/json",
+												"type": "text"
 											},
 											{
 												"key": "society-id",
@@ -6943,8 +6993,8 @@
 								"header": [
 									{
 										"key": "X-Third-Party-Secret",
-										"type": "text",
-										"value": "{{X-Third-Party-Secret}}"
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
 									},
 									{
 										"key": "society-id",
@@ -6977,8 +7027,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											},
 											{
 												"key": "Authorization",
@@ -7015,8 +7065,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											},
 											{
 												"key": "Authorization",
@@ -7054,6 +7104,186 @@
 							]
 						},
 						{
+							"name": "Fiscal file (onglet dossier fiscal)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": ""
+									},
+									{
+										"key": "society-id",
+										"value": "42",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/society/fiscal_file",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"society",
+										"fiscal_file"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "fiscal file (onglet dossier fiscal)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": ""
+											},
+											{
+												"key": "society-id",
+												"value": "42",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/society/fiscal_file",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"society",
+												"fiscal_file"
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"rof_tva\": \"TVA1\",\n    \"rof_tdfc\": \"\",\n    \"rof_cfe\": \"CFE1\",\n    \"rof_cvae\": \"CVAE1\",\n    \"rof_rcm\": \"RCM1\",\n    \"acompte_pro_mens\": false,\n    \"tva_intraco\": \"\",\n    \"due_date_tva\": 0,\n    \"adherent_code\": \"\",\n    \"mono_etab\": false,\n    \"close_entries_VAT\": false,\n    \"mail_liasse\": \"\",\n    \"exercice_declaration\": false,\n    \"fiscal_integration\": false,\n    \"head_group_if\": false,\n    \"start_date_if\": \"\",\n    \"end_date_if\": \"\",\n    \"adv_legal_form_id\": \"\",\n    \"adv_name\": \"\",\n    \"adv_name_2\": \"\",\n    \"adv_phone_number\": \"\",\n    \"adv_address_number\": \"\",\n    \"adv_street_name\": \"\",\n    \"adv_postal_code\": \"\",\n    \"adv_city\": \"\",\n    \"adv_country\": \"\",\n    \"ecf_legal_form_id\": \"\",\n    \"ecf_siren\": \"\",\n    \"ecf_name\": \"\",\n    \"ecf_name_2\": \"\",\n    \"ecf_address_number\": \"\",\n    \"ecf_street_name\": \"\",\n    \"ecf_postal_code\": \"\",\n    \"ecf_city\": \"\",\n    \"ecf_country\": \"\",\n    \"sie_address_number\": \"\",\n    \"sie_street_name\": \"\",\n    \"sie_name\": \"\",\n    \"sie_postal_code\": \"\",\n    \"sie_city\": \"\",\n    \"sie_country\": \"\",\n    \"vis_name\": \"\",\n    \"vis_agreement_number\": \"\",\n    \"vis_viseur\": false,\n    \"vis_address_number\": \"\",\n    \"vis_street_name\": \"\",\n    \"vis_postal_code\": \"\",\n    \"vis_city\": \"\",\n    \"vis_country\": \"\",\n    \"id_pers_physique\": null,\n    \"id_societe_signataire\": null,\n    \"id_societe_comptable\": null,\n    \"fiscal_decl_by_firm\": true,\n    \"id_comptable\": null,\n    \"assujetti_unique\": false,\n    \"siren_assujetti_unique\": \"\",\n    \"rof_ts\": \"TS1\",\n    \"periodicity_ts\": 0,\n    \"holding_name\": \"\",\n    \"info_bnc\": {\n        \"info_bnc_id\": 1,\n        \"membership_year\": null,\n        \"activity_code_pm\": null\n    },\n    \"society_status\": {\n        \"id\": 1,\n        \"label\": \"En activité\",\n        \"value\": \"En activité\",\n        \"effective_date\": \"2024-04-12\"\n    },\n    \"account_edi\": {\n        \"id\": 1,\n        \"label\": null,\n        \"value\": \"email@email.com\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Flags (INFO/PJ)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{API-TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"description": "Firm access only.",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/flags/comment_attach_doc",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"flags",
+										"comment_attach_doc"
+									]
+								},
+								"description": "Fetch an entry and the associated lines with its line entry id."
+							},
+							"response": [
+								{
+									"name": "INFO/PJ",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "1",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/entry/line_entry",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"entry",
+												"line_entry"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{}
+									],
+									"cookie": [
+										{
+											"expires": "Invalid Date"
+										}
+									],
+									"body": "{\r\n  \"response_list\": [\r\n    {\r\n      \"location_pj\": \"ENTRIES_LINE\",\r\n      \"object_id_pj\": 66462271,\r\n      \"location_comment\": \"ENTRIES\",\r\n      \"object_id_comment\": 19299950,\r\n      \"entry_id\": 19299950,\r\n      \"entry_line_id\": 66462271,\r\n      \"diary_id\": 35898,\r\n      \"diary_code\": \"01\",\r\n      \"diary_label\": \"JOURNAL D'ACHATS\",\r\n      \"entry_date\": \"20230921\",\r\n      \"date_piece\": \"20230921\",\r\n      \"account_id\": 4204363,\r\n      \"account_number\": \"401CLAIRELE\",\r\n      \"piece\": \"\",\r\n      \"piece_2\": \"\",\r\n      \"label\": \"CLAIRE LEINA COMPANY\",\r\n      \"debit\": 0,\r\n      \"credit\": 414.41,\r\n      \"demand_date\": \"2023-11-16T11:48:13.000\",\r\n      \"comment_occ\": 2,\r\n      \"comment_list\": [\r\n        {\r\n          \"comment_id\": 198181,\r\n          \"date\": \"2023-09-21T10:42:59\",\r\n          \"body\": \"Article & Description Quantity Price Amount house 10 Inside out Medium 10,90 21,80 2 Prints M SKU: APM83 Print 29,7X39,7cm Rock 3 11 4,00 12,00 Pins SKU: P03 Pinswith and cellobag card Medium 12 Wooden Magnetic 54,00 Hanger 6 9,00 Hangers SKU: WMHO2 setin box 13 Wooden Magnetio Hanger Large 40,80 3 13,60 Hangers WMH03 SKU: set in box Sub Total 345,34 VAT (20%) 69,07 \\u20ac414,41 Total (-229,27 Payment Made Balance Due \\u20ac385,14 Notes Thank the you for payment You just made our day. Payment options PayPal Payment term: NET 30 Account Claire eina Company name: EURO BANK: 10100826 1P02944 BIC PSSTFRPPMAR (\\u20ac) I Banque postale IBAN : FR27 2004 1411 Transferwise GBP Code: Account number 10857935 (E) BANK: Sort 23-14-70- - USD ($) I BANK: Transferwise ACH ROUTING NUMBER: 026073150 ACCOUNT NUMBER: 8310006864 - - PAYPAL: contactallthewastosaa CLAIRE LEINA COMPANY-SAS\\u00e0 variable Penalty L441-3 14%perr capital RCS d''Aix en Provence Late art. year - 18308025 SIRET 818308025 00035 TVA: FR 7281 Collection & admin fee 40\\u20ac costs *ff this supply iszero-rate according tothe French VAT and youareVATT registeredin your country, Act subject to reverse charge OfVAT Exon\\u00e9 262 ation TVA article ter Id code g\\u00e9n\\u00e9raldes imp\\u00f4ts\"\r\n        },\r\n        {\r\n          \"comment_id\": 658378,\r\n          \"date\": \"2023-12-05T12:05:53\",\r\n          \"body\": \"<p>test<\\/p>\"\r\n        }\r\n      ],\r\n      \"pj_occ\": 0,\r\n      \"pj_list\": []\r\n    }\r\n  ],\r\n  \"waiting_list\": [\r\n    {\r\n      \"location_pj\": \"ENTRIES_LINE\",\r\n      \"object_id_pj\": 76212703,\r\n      \"location_comment\": \"ENTRIES\",\r\n      \"object_id_comment\": 22716527,\r\n      \"entry_id\": 22716527,\r\n      \"entry_line_id\": 76212703,\r\n      \"diary_id\": 35898,\r\n      \"diary_code\": \"01\",\r\n      \"diary_label\": \"JOURNAL D'ACHATS\",\r\n      \"entry_date\": \"20230921\",\r\n      \"date_piece\": \"20230921\",\r\n      \"account_id\": 4630170,\r\n      \"account_number\": \"625600\",\r\n      \"piece\": \"\",\r\n      \"piece_2\": \"\",\r\n      \"label\": \"F.M.R. FOR KIDS\",\r\n      \"debit\": 724.65,\r\n      \"credit\": 0,\r\n      \"demand_date\": \"2023-11-08T10:23:29.000\",\r\n      \"comment_occ\": 1,\r\n      \"comment_list\": [\r\n        {\r\n          \"comment_id\": 198180,\r\n          \"date\": \"2023-09-21T10:42:59\",\r\n          \"body\": \"Montant total H T 704,65 \\u20ac Total frais de 20,00 \\u20ac port T otal net H T 724,65 \\u20ac TVA 20,00% 144,93 \\u20ac TTC Montant total 869,58 \\u20ac Paiement carte bancaire du 869,58 \\u20ac par 05\\/10\\/2022 Total \\u20ac \\u00e0 r\\u00e9gler 0,00 Moyen de r\\u00e8glement carte bancaire D\\u00e9lai de r\\u00e8glement \\u00e0 la commande La loin 92\\/144 du31 d\\u00e9cembre fait llobligation de indiquer des conditions de entraine des 1992 le non respect paiement int\\u00e9r\\u00eats de retard suiv rant nous vous que modalit\\u00e9s et taux d\\u00e9finis loi minima la par FMR for Kids Minikane, Sas Capital de 5000\\u20ac Siren 752897587 4799B Ape: au - Eori N  TVA intra: FR49752897587 FR 75289 758700032 Page 2\\/2 T\\u00e9l:+33 48 77 09 03 Email infosaminikane.com\"\r\n        }\r\n      ],\r\n      \"pj_occ\": 0,\r\n      \"pj_list\": []\r\n    }\r\n  ]\r\n}"
+								}
+							]
+						},
+						{
 							"name": "Accounting parameters",
 							"request": {
 								"auth": {
@@ -7070,8 +7300,8 @@
 								"header": [
 									{
 										"key": "X-Third-Party-Secret",
-										"type": "text",
-										"value": "{{X-Third-Party-Secret}}"
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
 									},
 									{
 										"key": "society-id",
@@ -7118,8 +7348,8 @@
 											},
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -7185,6 +7415,136 @@
 							]
 						},
 						{
+							"name": "Filiale Associate",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{API-TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "1",
+										"description": "required",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/society/filiale_associate",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"society",
+										"filiale_associate"
+									]
+								},
+								"description": "📢 Fetch accounting parameters."
+							},
+							"response": [
+								{
+									"name": "Filiale Associate",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "society-id",
+												"value": "",
+												"description": "Required with Frim Access",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "Authorization",
+												"value": "{{TOKEN}}",
+												"type": "text"
+											},
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/society/filiale_associate",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"society",
+												"filiale_associate"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "request-id",
+											"value": "req-06376c5d-24dd-41a1-bdcd-67873b91abf2"
+										},
+										{
+											"key": "x-rate-limit-remaining",
+											"value": "9"
+										},
+										{
+											"key": "x-rate-limit-reset",
+											"value": "1678719506.167875"
+										},
+										{
+											"key": "x-rate-limit-total",
+											"value": "10"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "1826"
+										},
+										{
+											"key": "date",
+											"value": "Mon, 13 Mar 2023 14:58:25 GMT"
+										},
+										{
+											"key": "keep-alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"filiale_associate_list\": [\n    {\n      \"society_link_id\": 78,\n      \"society\": {\n        \"revenu_pro\": false,\n        \"id\": 372,\n        \"name\": \"SOCIETE DE TEST\",\n        \"siret\": \"\",\n        \"capital\": 50000,\n        \"nb_part\": 100,\n        \"date_capital\": \"20180101\",\n        \"address\": \"01 B Allee DOUDEAUVILLE HELO 29730 TREFFIAGAT FRANCE\",\n        \"account_id\": 0,\n        \"start_date\": \"2020-01-01\",\n        \"end_date\": \"\",\n        \"id_type_company\": 1,\n        \"head_group_if\": true,\n        \"fiscal_integration\": false,\n        \"assujetti_unique\": false,\n        \"vat_start_date\": \"\",\n        \"vat_end_date\": \"\",\n        \"start_date_if\": \"20200101\",\n        \"end_date_if\": \"20221231\",\n        \"direct_holding_percentage\": 0,\n        \"indirect_holding_percentage\": 0,\n        \"tax_scope\": false\n      },\n      \"signatory_function\": {\n        \"id\": 3,\n        \"label\": \"Chef d'entreprise\"\n      },\n      \"social_part\": {\n        \"PP\": 1,\n        \"NP\": 0,\n        \"US\": 0,\n        \"percent\": 1\n      }\n    },\n    {\n      \"society_link_id\": 100,\n      \"society\": {\n        \"revenu_pro\": false,\n        \"id\": 370,\n        \"name\": \"2065 BIS Exercice d\\u00e9cal\\u00e9\",\n        \"siret\": \"777555444\",\n        \"capital\": 100000,\n        \"nb_part\": 100,\n        \"date_capital\": \"20200701\",\n        \"address\": \"35 T Avenue Orange 91160 BALLAINVILLIERS FRANCE\",\n        \"account_id\": 0,\n        \"start_date\": \"2020-07-01\",\n        \"end_date\": \"\",\n        \"id_type_company\": 1,\n        \"head_group_if\": false,\n        \"fiscal_integration\": false,\n        \"assujetti_unique\": false,\n        \"vat_start_date\": \"\",\n        \"vat_end_date\": \"\",\n        \"start_date_if\": \"\",\n        \"end_date_if\": \"\",\n        \"direct_holding_percentage\": 0,\n        \"indirect_holding_percentage\": 0,\n        \"tax_scope\": false\n      },\n      \"signatory_function\": {\n        \"id\": 6,\n        \"label\": \"Co-G\\u00e9rant\"\n      },\n      \"social_part\": {\n        \"PP\": 40,\n        \"NP\": 0,\n        \"US\": 0,\n        \"percent\": 40\n      }\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
 							"name": "Exercices",
 							"request": {
 								"auth": {
@@ -7201,8 +7561,8 @@
 								"header": [
 									{
 										"key": "X-Third-Party-Secret",
-										"type": "text",
-										"value": "{{X-Third-Party-Secret}}"
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -7230,8 +7590,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -7309,8 +7669,8 @@
 								"header": [
 									{
 										"key": "X-Third-Party-Secret",
-										"type": "text",
-										"value": "{{X-Third-Party-Secret}}"
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -7354,8 +7714,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -7420,8 +7780,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -7460,8 +7820,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -7500,8 +7860,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -7552,8 +7912,8 @@
 								"header": [
 									{
 										"key": "X-Third-Party-Secret",
-										"type": "text",
-										"value": "{{X-Third-Party-Secret}}"
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -7580,8 +7940,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											},
 											{
 												"key": "Authorization",
@@ -7628,8 +7988,8 @@
 								"header": [
 									{
 										"key": "X-Third-Party-Secret",
-										"type": "text",
-										"value": "{{X-Third-Party-Secret}}"
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -7656,8 +8016,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -7699,8 +8059,8 @@
 								"header": [
 									{
 										"key": "X-Third-Party-Secret",
-										"type": "text",
-										"value": "{{X-Third-Party-Secret}}"
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
 									},
 									{
 										"key": "society-id",
@@ -7732,8 +8092,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -7775,13 +8135,13 @@
 								"header": [
 									{
 										"key": "X-Third-Party-Secret",
-										"type": "text",
-										"value": "{{X-Third-Party-Secret}}"
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
 									},
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -7844,6 +8204,18 @@
 											"description": "OPTIONAL - `true` or `false`"
 										},
 										{
+											"key": "axis_id",
+											"value": "",
+											"description": "REQUIRED with analytic",
+											"disabled": true
+										},
+										{
+											"key": "section_id",
+											"value": null,
+											"description": "OPTIONAL with analytic",
+											"disabled": true
+										},
+										{
 											"key": "echeance",
 											"value": "false",
 											"description": "OPTIONAL - `true` or `false`"
@@ -7881,13 +8253,13 @@
 								"header": [
 									{
 										"key": "X-Third-Party-Secret",
-										"type": "text",
-										"value": "{{X-Third-Party-Secret}}"
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
 									},
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/x-www-form-urlencoded"
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -7953,6 +8325,139 @@
 											"key": "compared_to",
 											"value": null,
 											"description": "OPTIONAL -  1: Billing date. / 2: Due date."
+										}
+									]
+								},
+								"description": "📢 récupérer la balance JSON"
+							},
+							"response": []
+						},
+						{
+							"name": "Balance V2 (JSON)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{API-TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/balance_dynamique/v2?start_date&end_date&filter=41-41999&unbalanced_only",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"balance_dynamique",
+										"v2"
+									],
+									"query": [
+										{
+											"key": "start_date",
+											"value": null,
+											"description": "Date format: YYYYMMDD"
+										},
+										{
+											"key": "end_date",
+											"value": null,
+											"description": "Date format: YYYYMMDD"
+										},
+										{
+											"key": "filter",
+											"value": "41-41999",
+											"description": "Comptes dont le numéro de compte commence par la valeur spécifiée. Ex: 1-3, 5, 6-7"
+										},
+										{
+											"key": "unbalanced_only",
+											"value": null,
+											"description": "'true' or 'false' - Afficher comptes non soldés uniquement"
+										},
+										{
+											"key": "an_simulation",
+											"value": "",
+											"description": "Optional - 'true' or 'false'.",
+											"disabled": true
+										},
+										{
+											"key": "cumul",
+											"value": "",
+											"description": "0 / 1",
+											"disabled": true
+										},
+										{
+											"key": "all_month",
+											"value": "",
+											"description": "OPTIONAL - 'true' or 'false'",
+											"disabled": true
+										},
+										{
+											"key": "fiscal_year_id",
+											"value": "",
+											"description": "OPTIONAL - Si  un exercice est selectionné , correspond à l'identifiant de l'exercice pour pouvoir recuperer les validations et commentaires",
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": "",
+											"description": "OPTIONAL - 'aged' or 'compare'",
+											"disabled": true
+										},
+										{
+											"key": "compared_to",
+											"value": "",
+											"description": "OPTIONAL -  1: Billing date. / 2: Due date.",
+											"disabled": true
+										},
+										{
+											"key": "compare",
+											"value": "",
+											"description": "OPTIONAL - 'true' or 'false' - Afficher toutes les périodes antérieures",
+											"disabled": true
+										},
+										{
+											"key": "same_period",
+											"value": "",
+											"description": "OPTIONAL - 'true' or 'false' - Périodes antérieures équivalentes",
+											"disabled": true
+										},
+										{
+											"key": "centralize_account",
+											"value": null,
+											"description": "OPTIONAL - 'true' or 'false' - Centraliser les comptes de tiers",
+											"disabled": true
+										},
+										{
+											"key": "extended",
+											"value": null,
+											"description": "OPTIONAL - 'true' or 'false'",
+											"disabled": true
+										},
+										{
+											"key": "subtype",
+											"value": null,
+											"description": "0 -> Balance Générale\n1 -> Client\n2 -> Fournisseur",
+											"disabled": true
 										}
 									]
 								},
@@ -8453,338 +8958,6 @@
 									"body": "{\r\n    \"rows_number\": 22,\r\n    \"pages_number\": 1,\r\n    \"list_manual_document\": [\r\n        {\r\n            \"row_number\": 1,\r\n            \"created_date\": \"2019-12-13T11:13:46.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3486876,\r\n                    \"name\": \"AC 09 2019.PDF\",\r\n                    \"thumbnail\": \"https://cloud.myunisoft.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=90&y=120&a=true&t=UK5fSL9wT96vInq&scalingup=0\",\r\n                    \"date\": \"2019-12-13T11:13:46.000\",\r\n                    \"token\": \"UK5fSL9wT96vInq\",\r\n                    \"link\": \"https://cloud.myunisoft.fr/index.php/s/UK5fSL9wT96vInq\",\r\n                    \"invoice_type_id\": 0\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 2,\r\n            \"created_date\": \"2019-12-13T11:13:46.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3486875,\r\n                    \"name\": \"AC 09 2019.PDF\",\r\n                    \"thumbnail\": \"https://cloud.myunisoft.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=90&y=120&a=true&t=CG2IF0D5LM3iLbM&scalingup=0\",\r\n                    \"date\": \"2019-12-13T11:13:46.000\",\r\n                    \"token\": \"CG2IF0D5LM3iLbM\",\r\n                    \"link\": \"https://cloud.myunisoft.fr/index.php/s/CG2IF0D5LM3iLbM\",\r\n                    \"invoice_type_id\": 0\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 3,\r\n            \"created_date\": \"2019-12-13T11:13:46.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3486874,\r\n                    \"name\": \"AC 09 2019.PDF\",\r\n                    \"thumbnail\": \"https://cloud.myunisoft.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=90&y=120&a=true&t=MQ86I8Rj06SxjEN&scalingup=0\",\r\n                    \"date\": \"2019-12-13T11:13:46.000\",\r\n                    \"token\": \"MQ86I8Rj06SxjEN\",\r\n                    \"link\": \"https://cloud.myunisoft.fr/index.php/s/MQ86I8Rj06SxjEN\",\r\n                    \"invoice_type_id\": 0\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 4,\r\n            \"created_date\": \"2019-12-13T11:13:46.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3486877,\r\n                    \"name\": \"AC 09 2019.PDF\",\r\n                    \"thumbnail\": \"https://cloud.myunisoft.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=90&y=120&a=true&t=3dqmq3Qw79evgt0&scalingup=0\",\r\n                    \"date\": \"2019-12-13T11:13:46.000\",\r\n                    \"token\": \"3dqmq3Qw79evgt0\",\r\n                    \"link\": \"https://cloud.myunisoft.fr/index.php/s/3dqmq3Qw79evgt0\",\r\n                    \"invoice_type_id\": 0\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 5,\r\n            \"created_date\": \"2019-12-13T11:13:46.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3486879,\r\n                    \"name\": \"AC 09 2019.PDF\",\r\n                    \"thumbnail\": \"https://cloud.myunisoft.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=90&y=120&a=true&t=HlPaO2mxmfaWWzU&scalingup=0\",\r\n                    \"date\": \"2019-12-13T11:13:46.000\",\r\n                    \"token\": \"HlPaO2mxmfaWWzU\",\r\n                    \"link\": \"https://cloud.myunisoft.fr/index.php/s/HlPaO2mxmfaWWzU\",\r\n                    \"invoice_type_id\": 0\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 6,\r\n            \"created_date\": \"2019-12-13T11:13:49.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3486880,\r\n                    \"name\": \"AC 09 2019.PDF\",\r\n                    \"thumbnail\": \"https://cloud.myunisoft.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=90&y=120&a=true&t=nOsGrM7xX7KmJKL&scalingup=0\",\r\n                    \"date\": \"2019-12-13T11:13:49.000\",\r\n                    \"token\": \"nOsGrM7xX7KmJKL\",\r\n                    \"link\": \"https://cloud.myunisoft.fr/index.php/s/nOsGrM7xX7KmJKL\",\r\n                    \"invoice_type_id\": 0\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 7,\r\n            \"created_date\": \"2019-12-13T11:14:06.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3486882,\r\n                    \"name\": \"AC 09 2019.PDF\",\r\n                    \"thumbnail\": \"https://cloud.myunisoft.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=90&y=120&a=true&t=eOhRDlOXYV2jPfj&scalingup=0\",\r\n                    \"date\": \"2019-12-13T11:14:06.000\",\r\n                    \"token\": \"eOhRDlOXYV2jPfj\",\r\n                    \"link\": \"https://cloud.myunisoft.fr/index.php/s/eOhRDlOXYV2jPfj\",\r\n                    \"invoice_type_id\": 0\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 8,\r\n            \"created_date\": \"2019-12-13T11:17:24.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3486883,\r\n                    \"name\": \"AC 09 2019.PDF\",\r\n                    \"thumbnail\": \"https://cloud.myunisoft.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=90&y=120&a=true&t=zXQZLSBTr4LK8DB&scalingup=0\",\r\n                    \"date\": \"2019-12-13T11:17:24.000\",\r\n                    \"token\": \"zXQZLSBTr4LK8DB\",\r\n                    \"link\": \"https://cloud.myunisoft.fr/index.php/s/zXQZLSBTr4LK8DB\",\r\n                    \"invoice_type_id\": 0\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 9,\r\n            \"created_date\": \"2019-12-13T11:17:25.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3486888,\r\n                    \"name\": \"AC 09 2019.PDF\",\r\n                    \"thumbnail\": \"https://cloud.myunisoft.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=90&y=120&a=true&t=YnnrVU4Mmr8lZdc&scalingup=0\",\r\n                    \"date\": \"2019-12-13T11:17:25.000\",\r\n                    \"token\": \"YnnrVU4Mmr8lZdc\",\r\n                    \"link\": \"https://cloud.myunisoft.fr/index.php/s/YnnrVU4Mmr8lZdc\",\r\n                    \"invoice_type_id\": 0\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 10,\r\n            \"created_date\": \"2019-12-13T11:17:25.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3486884,\r\n                    \"name\": \"AC 09 2019.PDF\",\r\n                    \"thumbnail\": \"https://cloud.myunisoft.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=90&y=120&a=true&t=WrMYpn9PbyIskZk&scalingup=0\",\r\n                    \"date\": \"2019-12-13T11:17:25.000\",\r\n                    \"token\": \"WrMYpn9PbyIskZk\",\r\n                    \"link\": \"https://cloud.myunisoft.fr/index.php/s/WrMYpn9PbyIskZk\",\r\n                    \"invoice_type_id\": 0\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 11,\r\n            \"created_date\": \"2019-12-13T11:17:25.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3486885,\r\n                    \"name\": \"AC 09 2019.PDF\",\r\n                    \"thumbnail\": \"https://cloud.myunisoft.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=90&y=120&a=true&t=qB5b906OlNz3rpJ&scalingup=0\",\r\n                    \"date\": \"2019-12-13T11:17:25.000\",\r\n                    \"token\": \"qB5b906OlNz3rpJ\",\r\n                    \"link\": \"https://cloud.myunisoft.fr/index.php/s/qB5b906OlNz3rpJ\",\r\n                    \"invoice_type_id\": 0\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 12,\r\n            \"created_date\": \"2019-12-13T11:17:25.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3486886,\r\n                    \"name\": \"AC 09 2019.PDF\",\r\n                    \"thumbnail\": \"https://cloud.myunisoft.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=90&y=120&a=true&t=P8i3bn9AYEBVXjJ&scalingup=0\",\r\n                    \"date\": \"2019-12-13T11:17:25.000\",\r\n                    \"token\": \"P8i3bn9AYEBVXjJ\",\r\n                    \"link\": \"https://cloud.myunisoft.fr/index.php/s/P8i3bn9AYEBVXjJ\",\r\n                    \"invoice_type_id\": 0\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 13,\r\n            \"created_date\": \"2019-12-13T11:17:25.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3486887,\r\n                    \"name\": \"AC 09 2019.PDF\",\r\n                    \"thumbnail\": \"https://cloud.myunisoft.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=90&y=120&a=true&t=zy5YqA3fMXCdXMy&scalingup=0\",\r\n                    \"date\": \"2019-12-13T11:17:25.000\",\r\n                    \"token\": \"zy5YqA3fMXCdXMy\",\r\n                    \"link\": \"https://cloud.myunisoft.fr/index.php/s/zy5YqA3fMXCdXMy\",\r\n                    \"invoice_type_id\": 0\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 14,\r\n            \"created_date\": \"2019-12-13T11:17:26.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3486889,\r\n                    \"name\": \"AC 09 2019.PDF\",\r\n                    \"thumbnail\": \"https://cloud.myunisoft.fr/index.php/apps/files_sharing/ajax/publicpreview.php?x=90&y=120&a=true&t=KEEaIj7kFeVejnd&scalingup=0\",\r\n                    \"date\": \"2019-12-13T11:17:26.000\",\r\n                    \"token\": \"KEEaIj7kFeVejnd\",\r\n                    \"link\": \"https://cloud.myunisoft.fr/index.php/s/KEEaIj7kFeVejnd\",\r\n                    \"invoice_type_id\": 0\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 15,\r\n            \"created_date\": \"2021-05-28T11:03:03.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3820109,\r\n                    \"name\": \"1%2Epng.png\",\r\n                    \"thumbnail\": \"https://mycloud.myunisoft.fr/index.php/apps/files_sharing/publicpreview/46bYqSQNjHfog46?x=90&y=120&a=true\",\r\n                    \"date\": \"2021-05-28T11:03:03.000\",\r\n                    \"token\": \"46bYqSQNjHfog46\",\r\n                    \"link\": \"https://mycloud.myunisoft.fr/index.php/s/46bYqSQNjHfog46\",\r\n                    \"invoice_type_id\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 16,\r\n            \"created_date\": \"2021-05-28T11:03:05.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3820110,\r\n                    \"name\": \"2%2Epng.png\",\r\n                    \"thumbnail\": \"https://mycloud.myunisoft.fr/index.php/apps/files_sharing/publicpreview/fFipoYo47eE5Z4p?x=90&y=120&a=true\",\r\n                    \"date\": \"2021-05-28T11:03:05.000\",\r\n                    \"token\": \"fFipoYo47eE5Z4p\",\r\n                    \"link\": \"https://mycloud.myunisoft.fr/index.php/s/fFipoYo47eE5Z4p\",\r\n                    \"invoice_type_id\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 17,\r\n            \"created_date\": \"2021-05-31T10:21:02.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3820209,\r\n                    \"name\": \"1%2Epng.png\",\r\n                    \"thumbnail\": \"https://mycloud.myunisoft.fr/index.php/apps/files_sharing/publicpreview/obdgQTA7WeH2i4w?x=90&y=120&a=true\",\r\n                    \"date\": \"2021-05-31T10:21:02.000\",\r\n                    \"token\": \"obdgQTA7WeH2i4w\",\r\n                    \"link\": \"https://mycloud.myunisoft.fr/index.php/s/obdgQTA7WeH2i4w\",\r\n                    \"invoice_type_id\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 18,\r\n            \"created_date\": \"2021-05-31T10:23:43.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3820210,\r\n                    \"name\": \"1%2Epng.png\",\r\n                    \"thumbnail\": \"https://mycloud.myunisoft.fr/index.php/apps/files_sharing/publicpreview/CBSysS72GRZNHPH?x=90&y=120&a=true\",\r\n                    \"date\": \"2021-05-31T10:23:43.000\",\r\n                    \"token\": \"CBSysS72GRZNHPH\",\r\n                    \"link\": \"https://mycloud.myunisoft.fr/index.php/s/CBSysS72GRZNHPH\",\r\n                    \"invoice_type_id\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 19,\r\n            \"created_date\": \"2021-05-31T10:26:20.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3820211,\r\n                    \"name\": \"1%2Epng.png\",\r\n                    \"thumbnail\": \"https://mycloud.myunisoft.fr/index.php/apps/files_sharing/publicpreview/9yJFtcCdi8HRtad?x=90&y=120&a=true\",\r\n                    \"date\": \"2021-05-31T10:26:20.000\",\r\n                    \"token\": \"9yJFtcCdi8HRtad\",\r\n                    \"link\": \"https://mycloud.myunisoft.fr/index.php/s/9yJFtcCdi8HRtad\",\r\n                    \"invoice_type_id\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 20,\r\n            \"created_date\": \"2021-06-08T11:11:12.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3820576,\r\n                    \"name\": \"1%2Epng.png\",\r\n                    \"thumbnail\": \"https://mycloud.myunisoft.fr/index.php/apps/files_sharing/publicpreview/SXPBDFyJT6Bxisn?x=90&y=120&a=true\",\r\n                    \"date\": \"2021-06-08T11:11:12.000\",\r\n                    \"token\": \"SXPBDFyJT6Bxisn\",\r\n                    \"link\": \"https://mycloud.myunisoft.fr/index.php/s/SXPBDFyJT6Bxisn\",\r\n                    \"invoice_type_id\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 21,\r\n            \"created_date\": \"2021-07-15T19:06:02.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3834421,\r\n                    \"name\": \"Sans%20titre%2Epng.png\",\r\n                    \"thumbnail\": \"https://mycloud.myunisoft.fr/index.php/apps/files_sharing/publicpreview/WA9KakPyA23KE52?x=90&y=120&a=true\",\r\n                    \"date\": \"2021-07-15T19:06:02.000\",\r\n                    \"token\": \"WA9KakPyA23KE52\",\r\n                    \"link\": \"https://mycloud.myunisoft.fr/index.php/s/WA9KakPyA23KE52\",\r\n                    \"invoice_type_id\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"row_number\": 22,\r\n            \"created_date\": \"2021-07-15T19:06:17.000\",\r\n            \"document_attached_id\": 0,\r\n            \"documents\": [\r\n                {\r\n                    \"document_id\": 3834426,\r\n                    \"name\": \"Sans%20titre%2Epng.png\",\r\n                    \"thumbnail\": \"https://mycloud.myunisoft.fr/index.php/apps/files_sharing/publicpreview/g8nTCgaNwsYriWr?x=90&y=120&a=true\",\r\n                    \"date\": \"2021-07-15T19:06:17.000\",\r\n                    \"token\": \"g8nTCgaNwsYriWr\",\r\n                    \"link\": \"https://mycloud.myunisoft.fr/index.php/s/g8nTCgaNwsYriWr\",\r\n                    \"invoice_type_id\": 1\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
 								}
 							]
-						},
-						{
-							"name": "Quick Search",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 200\", () => {",
-											"    pm.response.to.have.status(200);",
-											"});",
-											"",
-											"pm.test(\"Should have valid response body structure\", () => {",
-											"    const schema = {",
-											"        \"type\": \"object\",",
-											"        \"properties\": {",
-											"          \"data\": {",
-											"            \"type\": \"array\",",
-											"            \"items\" : {",
-											"              \"id_ecriture\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"date_comptabilisation\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"date_piece\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"id_journal\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"journal_code\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"id_axe\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"intitule_journal\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"no_compte\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"intitule_ligne\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"date_echeance\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"id_compte\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"exercice_date_debut\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"exercice_date_fin\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"id_exercice\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"ligneEcriture_piece\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"ligneEcriture_piece_2\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"ligneEcriture_debit\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"ligneEcriture_credit\": {",
-											"                \"type\": \"string\"",
-											"              },",
-											"              \"analytics\": {",
-											"                \"type\": \"array\",",
-											"                \"items\": {",
-											"                  \"id_axe\": {",
-											"                    \"type\": \"number\"",
-											"                  },",
-											"                  \"label_axe\": {",
-											"                    \"type\": \"string\"",
-											"                  },",
-											"                  \"code_axe\": {",
-											"                    \"type\": \"string\"",
-											"                  },",
-											"                  \"code_section\": {",
-											"                    \"type\": \"string\"",
-											"                  },",
-											"                  \"id_section\": {",
-											"                    \"type\": \"number\"",
-											"                  },",
-											"                  \"label_section\": {",
-											"                    \"type\": \"string\"",
-											"                  },",
-											"                  \"montant\": {",
-											"                    \"type\": \"number\"",
-											"                  },",
-											"                  \"taux\": {",
-											"                    \"type\": \"number\"",
-											"                  }",
-											"                }",
-											"              }",
-											"            }",
-											"          }",
-											"        },",
-											"        \"additionalProperties\": false",
-											"      };",
-											"    pm.response.to.have.jsonSchema(schema);",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Third-Party-Secret",
-										"value": "{{X-Third-Party-Secret}}",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/accounting/entry/search?idEtablissement=5300",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"accounting",
-										"entry",
-										"search"
-									],
-									"query": [
-										{
-											"key": "idEtablissement",
-											"value": "5300",
-											"description": "Required"
-										},
-										{
-											"key": "startDate",
-											"value": "",
-											"description": "Format: YYYY-MM-DD",
-											"disabled": true
-										},
-										{
-											"key": "endDate",
-											"value": "",
-											"description": "Format: YYYY-MM-DD",
-											"disabled": true
-										},
-										{
-											"key": "journalId",
-											"value": "",
-											"disabled": true
-										},
-										{
-											"key": "accountId",
-											"value": "",
-											"disabled": true
-										},
-										{
-											"key": "axeId",
-											"value": "",
-											"disabled": true
-										},
-										{
-											"key": "intitule",
-											"value": "",
-											"disabled": true
-										},
-										{
-											"key": "sectionId",
-											"value": "",
-											"disabled": true
-										},
-										{
-											"key": "exerciceIds",
-											"value": "",
-											"disabled": true
-										},
-										{
-											"key": "debit",
-											"value": "",
-											"disabled": true
-										},
-										{
-											"key": "credit",
-											"value": "",
-											"disabled": true
-										},
-										{
-											"key": "plusMinusRange",
-											"value": "",
-											"disabled": true
-										},
-										{
-											"key": "page",
-											"value": "",
-											"disabled": true
-										},
-										{
-											"key": "resultPerPage",
-											"value": "",
-											"disabled": true
-										}
-									]
-								}
-							},
-							"response": [
-								{
-									"name": "Quick Search",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "X-Third-Party-Secret",
-												"value": "X-Third-Party-Secret",
-												"type": "text"
-											}
-										],
-										"url": {
-											"raw": "{{service_partners_url}}/accounting/entry/search?idEtablissement=5300&startDate=2020-01-01&endDate=2020-12-31",
-											"host": [
-												"{{service_partners_url}}"
-											],
-											"path": [
-												"accounting",
-												"entry",
-												"search"
-											],
-											"query": [
-												{
-													"key": "idEtablissement",
-													"value": "5300"
-												},
-												{
-													"key": "startDate",
-													"value": "2020-01-01"
-												},
-												{
-													"key": "endDate",
-													"value": "2020-12-31"
-												},
-												{
-													"key": "journalId",
-													"value": "",
-													"disabled": true
-												},
-												{
-													"key": "accountId",
-													"value": "",
-													"disabled": true
-												},
-												{
-													"key": "axeId",
-													"value": "",
-													"disabled": true
-												},
-												{
-													"key": "intitule",
-													"value": "",
-													"disabled": true
-												},
-												{
-													"key": "sectionId",
-													"value": "",
-													"disabled": true
-												},
-												{
-													"key": "exerciceIds",
-													"value": "",
-													"disabled": true
-												},
-												{
-													"key": "debit",
-													"value": "",
-													"disabled": true
-												},
-												{
-													"key": "credit",
-													"value": "",
-													"disabled": true
-												},
-												{
-													"key": "plusMinusRange",
-													"value": "",
-													"disabled": true
-												},
-												{
-													"key": "page",
-													"value": "",
-													"disabled": true
-												},
-												{
-													"key": "resultPerPage",
-													"value": "",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "content-type",
-											"value": "application/json; charset=utf-8",
-											"description": "",
-											"type": "text"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"data\": [\n\t\t{\n\t\t\t\"ligneEcriture_piece\": null,\n\t\t\t\"ligneEcriture_piece_2\": \"0000\",\n\t\t\t\"ligneEcriture_lettrage\": null,\n\t\t\t\"ligneEcriture_debit\": \"0\",\n\t\t\t\"ligneEcriture_credit\": \"14.62\",\n\t\t\t\"journal_code\": \"20\",\n\t\t\t\"id_etablissement\": \"5300\",\n\t\t\t\"id_ecriture\": \"46889055\",\n\t\t\t\"date_comptabilisation\": \"2020-12-30T23:00:00.000Z\",\n\t\t\t\"date_piece\": \"2020-12-30T23:00:00.000Z\",\n\t\t\t\"id_axe\": null,\n\t\t\t\"code_axe\": null,\n\t\t\t\"label_axe\": null,\n\t\t\t\"id_journal\": \"128926\",\n\t\t\t\"intitule_journal\": \"JOURNAL D' OD\",\n\t\t\t\"no_compte\": \"280500\",\n\t\t\t\"id_compte\": \"6393513\",\n\t\t\t\"intitule_ligne\": \"DOT. AMORT. 12/2020\",\n\t\t\t\"idligneecriture\": \"141757599\",\n\t\t\t\"date_echeance\": null,\n\t\t\t\"id_exercice\": \"29623\",\n\t\t\t\"exercice_date_debut\": \"2019-12-31T23:00:00.000Z\",\n\t\t\t\"exercice_date_fin\": \"2020-12-30T23:00:00.000Z\",\n\t\t\t\"type_reglement_name\": null,\n\t\t\t\"type_reglement_abbreviation\": null,\n\t\t\t\"analytics\": null\n\t\t},\n\t\t// ...\n\t\t{\n\t\t\t\"ligneEcriture_piece\": null,\n\t\t\t\"ligneEcriture_piece_2\": \"0000\",\n\t\t\t\"ligneEcriture_lettrage\": null,\n\t\t\t\"ligneEcriture_debit\": \"2.1\",\n\t\t\t\"ligneEcriture_credit\": \"0\",\n\t\t\t\"journal_code\": \"20\",\n\t\t\t\"id_etablissement\": \"5300\",\n\t\t\t\"id_ecriture\": \"46889057\",\n\t\t\t\"date_comptabilisation\": \"2020-12-30T23:00:00.000Z\",\n\t\t\t\"date_piece\": \"2020-12-30T23:00:00.000Z\",\n\t\t\t\"id_axe\": null,\n\t\t\t\"code_axe\": null,\n\t\t\t\"label_axe\": null,\n\t\t\t\"id_journal\": \"128926\",\n\t\t\t\"intitule_journal\": \"JOURNAL D' OD\",\n\t\t\t\"no_compte\": \"681000\",\n\t\t\t\"id_compte\": \"6393510\",\n\t\t\t\"intitule_ligne\": \"DOT. AMORT. 12/2020\",\n\t\t\t\"idligneecriture\": \"141757603\",\n\t\t\t\"date_echeance\": null,\n\t\t\t\"id_exercice\": \"29623\",\n\t\t\t\"exercice_date_debut\": \"2019-12-31T23:00:00.000Z\",\n\t\t\t\"exercice_date_fin\": \"2020-12-30T23:00:00.000Z\",\n\t\t\t\"type_reglement_name\": null,\n\t\t\t\"type_reglement_abbreviation\": null,\n\t\t\t\"analytics\": null\n\t\t}\n\t]\n}"
-								}
-							]
 						}
 					]
 				},
@@ -8792,7 +8965,7 @@
 					"name": "Others",
 					"item": [
 						{
-							"name": "Get countries",
+							"name": "Countries (Pays)",
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -8871,7 +9044,7 @@
 							]
 						},
 						{
-							"name": "Get currencies",
+							"name": "Currencies (devises)",
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -9036,8 +9209,8 @@
 								"header": [
 									{
 										"key": "X-Third-Party-Secret",
-										"type": "text",
-										"value": "{{X-Third-Party-Secret}}"
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -9072,8 +9245,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -9114,8 +9287,8 @@
 										"header": [
 											{
 												"key": "X-Third-Party-Secret",
-												"type": "text",
-												"value": "{{X-Third-Party-Secret}}"
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
 											},
 											{
 												"key": "society-id",
@@ -9159,6 +9332,112 @@
 									],
 									"cookie": [],
 									"body": "[\n    {\n        \"id\": 3,\n        \"name\": \"Culture de légumes, de melons, de racines et de tubercules\",\n        \"code\": \"0113Z\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Flags",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{API-TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/flags",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"flags"
+									]
+								},
+								"description": "📢 The complete static list of available flags kind in MyUnisoft"
+							},
+							"response": [
+								{
+									"name": "flags",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/flags",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"flags"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "X-Rate-Limit-Remaining",
+											"value": "9"
+										},
+										{
+											"key": "X-Rate-Limit-Reset",
+											"value": "1596442585.866154"
+										},
+										{
+											"key": "X-Rate-Limit-Total",
+											"value": "10"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 03 Aug 2020 08:16:25 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Content-Length",
+											"value": "352"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"flag_types\": [\n        {\n            \"id\": 1,\n            \"code\": \"CCA\",\n            \"label\": \"Charges constatées d'avance\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 2,\n            \"code\": \"PCA\",\n            \"label\": \"Produits constatés d'avance\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 3,\n            \"code\": \"FNP\",\n            \"label\": \"Factures non parvenues\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 4,\n            \"code\": \"AAR\",\n            \"label\": \"Avoirs à recevoir\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 5,\n            \"code\": \"AAE\",\n            \"label\": \"Avoirs à établir\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 6,\n            \"code\": \"CAP_PER\",\n            \"label\": \"CAP Personnel\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 7,\n            \"code\": \"CAP_CS\",\n            \"label\": \"CAP Charges sociales\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 8,\n            \"code\": \"CAP_IT\",\n            \"label\": \"CAP Impôts et taxes\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 9,\n            \"code\": \"CAP_DIV\",\n            \"label\": \"CAP divers\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 11,\n            \"code\": \"FAE\",\n            \"label\": \"Factures à etablir\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 13,\n            \"code\": \"IMMO\",\n            \"label\": \"Immobilisation\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 16,\n            \"code\": \"CPE\",\n            \"label\": \"Charges et produits exceptionnels\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 17,\n            \"code\": \"CPE_ANT\",\n            \"label\": \"Charges et produits exceptionnels antérieurs\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 18,\n            \"code\": \"VEH\",\n            \"label\": \"Véhicule\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 19,\n            \"code\": \"C-B\",\n            \"label\": \"Crédit-bail\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 52,\n            \"code\": \"EMP\",\n            \"label\": \"Emprunt\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 10,\n            \"code\": \"CAP_INT\",\n            \"label\": \"CAP Intérêts courus non échus\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 53,\n            \"code\": \"PAR_DIV\",\n            \"label\": \"PAR Divers\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 54,\n            \"code\": \"PAR_INT\",\n            \"label\": \"PAR Intérêt\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 55,\n            \"code\": \"PAR_IT\",\n            \"label\": \"PAR Impôts et Taxes\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 56,\n            \"code\": \"PAR_CS\",\n            \"label\": \"PAR Charges Sociales\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 57,\n            \"code\": \"PAR_PER\",\n            \"label\": \"PAR Personnel\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 24,\n            \"code\": \"SUBV\",\n            \"label\": \"Subvention\",\n            \"is_worksheet\": true\n        },\n        {\n            \"id\": 58,\n            \"code\": \"INFO/PJ\",\n            \"label\": \"INFO/PJ\",\n            \"is_worksheet\": false\n        },\n        {\n            \"id\": 59,\n            \"code\": \"DB_DEBT\",\n            \"label\": \"Clients douteux\",\n            \"is_worksheet\": true\n        }\n    ]\n}"
 								}
 							]
 						}
@@ -9213,7 +9492,7 @@
 								}
 							]
 						},
-						"description": "Get document data.\n\nFor document of type `DB`, the `revisionFolder` field won't be in JSON response.\n\nAbout `folderPath` field, this array means that the document is in the following path : `PF/Contrôles/Régularité/Fiscal/modele-facture-fr-moderne-rouge-750px.png`\n\nHere is the TypeScript interface of the response\n\n``` typescript\nenum DocumentKind {\n    DossierAnnuel = \"AF\",\n    DossierPermanent = \"PF\",\n    BaseDocumentaire = \"DB\"\n}\ninterface DbDocument {\n  accountingFirm: {\n    id: string;\n  },\n  accountingFolder: {\n    activity: string;\n    apeCode: string;\n    charteredAccountant: string;\n    companyType: string;\n    headOfFolder: string\n    id: string;\n    legalFormCode: string;\n    manager: string;\n    name: string;\n    reference: string;\n    siret: string;\n  };\n  schema: {\n    id: string;\n  };\n  createdAt: string;\n  id: string;\n  kind: DocumentKind;\n  name: string;\n  folderPath: string[];\n  uploadedBy: string;\n  uuid: string;\n}\ninterface AfDocument extends DbDocument {\n  revisionFolder: {\n    type: string;\n    endDate: string;\n  }\n}\n\n```"
+						"description": "Get document data.\n\nFor document of type `DB`, the `revisionFolder` field won't be in JSON response.\n\nAbout `folderPath` field, this array means that the document is in the following path : `PF/Contrôles/Régularité/Fiscal/modele-facture-fr-moderne-rouge-750px.png`\n\nHere is the TypeScript interface of the response\n\n``` typescript\nenum DocumentKind {\n    DossierAnnuel = \"AF\",\n    DossierPermanent = \"PF\",\n    BaseDocumentaire = \"DB\"\n}\ninterface DbDocument {\n  accountingFirm: {\n    id: string;\n  },\n  accountingFolder: {\n    activity: string;\n    apeCode: string;\n    charteredAccountant: string;\n    companyType: string;\n    headOfFolder: string\n    id: string;\n    legalFormCode: string;\n    manager: string;\n    name: string;\n    reference: string;\n    siret: string;\n  };\n  schema: {\n    id: string;\n  };\n  createdAt: string;\n  id: string;\n  kind: DocumentKind;\n  name: string;\n  folderPath: string[];\n  uploadedBy: string;\n  uuid: string;\n}\ninterface AfDocument extends DbDocument {\n  revisionFolder: {\n    type: string;\n    endDate: string;\n  }\n}\n\n ```"
 					},
 					"response": [
 						{
@@ -9436,7 +9715,7 @@
 						"header": [
 							{
 								"key": "x-filename",
-								"value": "",
+								"value": "fichier.jpg",
 								"description": "File name with its extension",
 								"type": "text"
 							},
@@ -9449,6 +9728,12 @@
 							{
 								"key": "X-Third-Party-Secret",
 								"value": "{{X-Third-Party-Secret}}",
+								"type": "text"
+							},
+							{
+								"key": "accounting-folder-id",
+								"value": "2",
+								"description": "No required if you're token is of type 'api', otherwise it must be used",
 								"type": "text"
 							}
 						],
@@ -9472,11 +9757,434 @@
 					"response": []
 				}
 			],
-			"description": "The following endpoints allow you to get document data and document file.\n\nThere are 3 kinds of document :\n\n- `AF` => Annual Folder\n- `PF` => Permanent Folder\n- `DB` => Documentary Base\n    \n\nFor example, to upload a document from these categories :\n\n_**Documentary Base :**_\n\nYou have to go in `Tenue > GED > Base documentaire` then use the `Ajouter un fichier` button.\n\n<img src=\"https://content.pstmn.io/aa3e3a23-4075-4f62-8151-d46eb9fbb34c/Q2FwdHVyZS5KUEc=\">\n\n_**Annual Folder :**_\n\nYou have to go in `Révision > Dossier de révision > Achats + Fournisseurs` then upload a document in a Diligence.\n\n<img src=\"https://content.pstmn.io/07f72c9e-ba02-4996-aa2a-1a71867d1bcf/Q2FwdHVyZS5KUEc=\">\n\n_**Permanent Folder :**_\n\nYou have to go in `Révision > Dossier de révision > Régularité` then upload a document in a Diligence.\n\n<img src=\"https://content.pstmn.io/8082dfc8-97e9-4bd9-9dd4-a041f9990117/Q2FwdHVyZS5KUEc=\">\n\nThese documents are respectively available in `Tenue > GED > Base documentaire > Your_folder`, `Tenue > GED > Dossier de révision > DA` and `Tenue > GED > Dossier de révision > DP`."
+			"description": "The following endpoints allow you to get document data and document file.\n\nThere are 3 kinds of document :\n\n- `AF` => Annual Folder\n- `PF` => Permanent Folder\n- `DB` => Documentary Base\n    \n\nFor example, to upload a document from these categories :\n\n_**Documentary Base :**_\n\nYou have to go in `Tenue > GED > Base documentaire` then use the `Ajouter un fichier` button.\n\n<img src=\"https://content.pstmn.io/aa3e3a23-4075-4f62-8151-d46eb9fbb34c/Q2FwdHVyZS5KUEc=\">\n\n_**Annual Folder :**_\n\nYou have to go in `Révision > Dossier de révision > Achats + Fournisseurs` then upload a document in a Diligence.\n\n<img src=\"https://content.pstmn.io/07f72c9e-ba02-4996-aa2a-1a71867d1bcf/Q2FwdHVyZS5KUEc=\">\n\n_**Permanent Folder :**_\n\nYou have to go in `Révision > Dossier de révision > Régularité` then upload a document in a Diligence.\n\n<img src=\"https://content.pstmn.io/8082dfc8-97e9-4bd9-9dd4-a041f9990117/Q2FwdHVyZS5KUEc=\">\n\nThese documents are respectively available in `Tenue > GED > Base documentaire > Your_folder`, `Tenue > GED > Dossier de révision > DA` and `Tenue > GED > Dossier de révision > DP`.\n\nFor each of the above actions, a `CREATE` document event is triggered. if a partner has a webhook attached to this event, they will be notified when a new document is created at MyUnisoft.\n\n> ⚠️ Document size limit is 50MB"
 		},
 		{
 			"name": "Webhook (BETA)",
 			"item": [
+				{
+					"name": "Global",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"postUrl\": \"https://0822-2a01-cb0c-45a-5c00-fd71-a3da-a430-9c6b.ngrok-free.app/api/webhook/\",\r\n    \"onEvents\": [\"document\"],\r\n    \"thirdPartyId\": \"1\",\r\n    \"signature\": \"jeDeclare\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/webhook/global",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"webhook",
+										"global"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"postUrl\": \"https://your_url.com\",\r\n    \"onEvents\": [\"connector\"],\r\n    \"accountingFolderId\": [\"1\", \"2\", \"4\"]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/webhook",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"webhook"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": "{\r\n    \"id\": 1,\r\n    \"postUrl\": \"https://your_url.com\",\r\n    \"onEvents\": [\"connector\"],\r\n    \"accountingFolderId\": [\"1\", \"2\", \"4\"],\r\n    \"thirdPartyId\": 1\r\n}"
+								}
+							]
+						},
+						{
+							"name": "All",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/webhook/global",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"webhook",
+										"global"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "All",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/webhook",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"webhook"
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "[\r\n    {\r\n        \"id\": 1,\r\n        \"postUrl\": \"https://your_url.com\",\r\n        \"onEvents\": [\"connector\"],\r\n        \"accountingFolderId\": [\"1\", \"2\", \"4\"],\r\n        \"thirdPartyId\": 1\r\n    },\r\n    {\r\n        \"id\": 2,\r\n        \"postUrl\": \"https://your_url.com\",\r\n        \"onEvents\": [\"accountingFolder\"],\r\n        \"accountingFolderId\": [],\r\n        \"thirdPartyId\": 1\r\n    }\r\n]"
+								}
+							]
+						},
+						{
+							"name": "By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/webhook/global/:id",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"webhook",
+										"global",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "By Id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/webhook/:webhookId",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"webhook",
+												":webhookId"
+											],
+											"variable": [
+												{
+													"key": "webhookId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"postUrl\": \"https://your_url.com\",\n    \"onEvents\": [\n        \"connector\"\n    ],\n    \"accountingFolderId\": [\n        \"1\",\n        \"2\",\n        \"4\"\n    ],\n    \"thirdPartyId\": 1\n}"
+								}
+							]
+						},
+						{
+							"name": "ByEventName",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/webhook/global/event/:name",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"webhook",
+										"global",
+										"event",
+										":name"
+									],
+									"variable": [
+										{
+											"key": "name",
+											"value": "document"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "ByEventName",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/webhook/event/:name/:accountingFolderId",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"webhook",
+												"event",
+												":name",
+												":accountingFolderId"
+											],
+											"variable": [
+												{
+													"key": "name",
+													"value": "accountingFolder"
+												},
+												{
+													"key": "accountingFolderId",
+													"value": null
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "[\r\n    {\r\n        \"id\": 2,\r\n        \"postUrl\": \"https://your_url.com\",\r\n        \"onEvents\": [\"accountingFolder\"],\r\n        \"accountingFolderId\": [],\r\n        \"thirdPartyId\": 1\r\n    }\r\n]"
+								},
+								{
+									"name": "ByEventName & accountingFolderId",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/webhook/event/:name/:accountingFolderId",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"webhook",
+												"event",
+												":name",
+												":accountingFolderId"
+											],
+											"variable": [
+												{
+													"key": "name",
+													"value": "connector"
+												},
+												{
+													"key": "accountingFolderId",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"postUrl\": \"https://your_url.com\",\n        \"onEvents\": [\n            \"connector\"\n        ],\n        \"accountingFolderId\": [\n            \"1\",\n            \"2\",\n            \"4\"\n        ],\n        \"thirdPartyId\": 1\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"op\": \"replace\",\r\n        \"path\": \"/postUrl\",\r\n        \"value\": \"https://4d31-2a01-cb0c-45a-5c00-8d57-138b-d5b9-a4f9.ngrok-free.app/api/webhook/\"\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/webhook/global/:id",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"webhook",
+										"global",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/webhook/global/:id",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"webhook",
+										"global",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
 				{
 					"name": "Create",
 					"request": {
@@ -9959,6 +10667,1397 @@
 						}
 					},
 					"response": []
+				}
+			]
+		},
+		{
+			"name": "Myunisoft Accounting Data (MAD)",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "society-id",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/mad/all?format=json&version=1.0.0",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mad",
+								"all"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json",
+									"description": "'tra' or ''json'"
+								},
+								{
+									"key": "version",
+									"value": "1.0.0",
+									"description": "MAD Format version"
+								}
+							]
+						},
+						"description": "Get a composition of all MAD features."
+					},
+					"response": [
+						{
+							"name": "INIT",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/all?format=json&version=1.0.0",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"all"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json",
+											"description": "'tra' or ''json'"
+										},
+										{
+											"key": "version",
+											"value": "1.0.0",
+											"description": "MAD Format version"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"export_sch-1_acf-1\", // exportId that can be used in Get All status route\n    \"status\": \"INIT\" // export request is received\n}"
+						},
+						{
+							"name": "PROCESSING",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/all?format=json&version=1.0.0",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"all"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json",
+											"description": "'tra' or ''json'"
+										},
+										{
+											"key": "version",
+											"value": "1.0.0",
+											"description": "MAD Format version"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n      \"id\": \"export_sch-1_acf-1\", // exportId that can be used in Get All status route\n      \"status\": \"PROCESSING\" // export is in progress\n}"
+						},
+						{
+							"name": "FAILED",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/all?format=json&version=1.0.0",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"all"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json",
+											"description": "'tra' or ''json'"
+										},
+										{
+											"key": "version",
+											"value": "1.0.0",
+											"description": "MAD Format version"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"FAILED\",\n    \"reason\": \"failure reason\" // Will contain an error message depending on the error\n}"
+						},
+						{
+							"name": "DONE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/all?format=json&version=1.0.0",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"all"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "json",
+											"description": "'tra' or ''json'"
+										},
+										{
+											"key": "version",
+											"value": "1.0.0",
+											"description": "MAD Format version"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"export_sch-1_acf-1\",\n    \"status\": \"DONE\", // export is ready to be downloaded using the url provided in \"url\"\n    \"url\": \"<url>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/mad/all/status?exportId=export_sch-5_acf-1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mad",
+								"all",
+								"status"
+							],
+							"query": [
+								{
+									"key": "exportId",
+									"value": "export_sch-5_acf-1",
+									"description": "exportId returned by  Get All endpoint"
+								}
+							]
+						},
+						"description": "Get the document generation status or the link to download it."
+					},
+					"response": [
+						{
+							"name": "INIT",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/all/status?exportId=export_sch-5_acf-1",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"all",
+										"status"
+									],
+									"query": [
+										{
+											"key": "exportId",
+											"value": "export_sch-5_acf-1",
+											"description": "exportId returned by  Get All endpoint"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"export_sch-1_acf-1\", // exportId that can be used in Get All status route\n    \"status\": \"INIT\" // export request is received\n}"
+						},
+						{
+							"name": "PROCESSING",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/all/status?exportId=export_sch-5_acf-1",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"all",
+										"status"
+									],
+									"query": [
+										{
+											"key": "exportId",
+											"value": "export_sch-5_acf-1",
+											"description": "exportId returned by  Get All endpoint"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n      \"id\": \"export_sch-1_acf-1\", // exportId that can be used in Get All status route\n      \"status\": \"PROCESSING\" // export is in progress\n}"
+						},
+						{
+							"name": "FAILED",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/all/status?exportId=export_sch-5_acf-1",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"all",
+										"status"
+									],
+									"query": [
+										{
+											"key": "exportId",
+											"value": "export_sch-5_acf-1",
+											"description": "exportId returned by  Get All endpoint"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"FAILED\",\n    \"reason\": \"failure reason\" // Will contain an error message depending on the error\n}"
+						},
+						{
+							"name": "DONE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/all/status?exportId=export_sch-5_acf-1",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"all",
+										"status"
+									],
+									"query": [
+										{
+											"key": "exportId",
+											"value": "export_sch-5_acf-1",
+											"description": "exportId returned by  Get All endpoint"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"export_sch-1_acf-1\",\n    \"status\": \"DONE\", // export is ready to be downloaded using the url provided in \"url\"\n    \"url\": \"<url>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get entries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Third-Party-Secret",
+								"value": ""
+							},
+							{
+								"key": "society-id",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/mad/entries?idExercice&version=1.0.0",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mad",
+								"entries"
+							],
+							"query": [
+								{
+									"key": "idExercice",
+									"value": null,
+									"description": "Retrieve all entries related to this exercice id."
+								},
+								{
+									"key": "startDate",
+									"value": null,
+									"description": "Retrieve entries from this date.",
+									"disabled": true
+								},
+								{
+									"key": "endDate",
+									"value": null,
+									"description": "Retrieve entries up to this date.",
+									"disabled": true
+								},
+								{
+									"key": "journalIds",
+									"value": null,
+									"description": "N'incluent que les écritures liés aux journaux demandés",
+									"disabled": true
+								},
+								{
+									"key": "version",
+									"value": "1.0.0",
+									"description": "MAD Format version"
+								}
+							]
+						},
+						"description": "[https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/entries.md](https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/entries.md)\n\n| nom | description | obligatoire |\n| --- | --- | --- |\n| version | version du format | ✔️ |\n| idExercice | id exercice | ❌ |\n| startDate | Date de début d'extraction au format `YYYYMMDD` | ❌ |\n| endDate | Date de fin d'extraction au format `YYYYMMDD` | ❌ |"
+					},
+					"response": [
+						{
+							"name": "Get entries",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/entries?idExercice&startDate&endDate&version",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"entries"
+									],
+									"query": [
+										{
+											"key": "idExercice",
+											"value": null,
+											"description": "Retrieve all entries related to this exercice id."
+										},
+										{
+											"key": "startDate",
+											"value": null,
+											"description": "Retrieve entries from this date."
+										},
+										{
+											"key": "endDate",
+											"value": null,
+											"description": "Retrieve entries up to this date."
+										},
+										{
+											"key": "version",
+											"value": null,
+											"description": "Data document version."
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"producerId\": \"13524346\",\n        \"attachments\": {\n            \"VotreDocumentSelectionne_12-06-2022 (5).pdf\": {\n                \"type\": \"URL\",\n                \"value\": \"https://app.myunisoft.fr/api/ged/ged/document/1-gTt2QkfLPABeb6Z/download\"\n            }\n        },\n        \"date\": \"2023-02-01\",\n        \"dueDate\": null,\n        \"journal\": {\n            \"producerId\": \"137145\",\n            \"customerReferenceCode\": \"AC\",\n            \"name\": \"ACHATS\",\n            \"type\": \"Achat\"\n        },\n        \"currency\": {\n            \"code\": \"EUR\"\n        },\n        \"movements\": [\n            {\n                \"producerId\": \"43221797\",\n                \"description\": \"TEST\",\n                \"value\": {\n                    \"credit\": 1200,\n                    \"debit\": 0,\n                    \"amount\": 1200\n                },\n                \"dueDate\": null,\n                \"lettering\": {\n                    \"state\": \"none\",\n                    \"value\": null\n                },\n                \"freeNumber\": null,\n                \"invoiceNumber\": null,\n                \"attachments\": {},\n                \"account\": {\n                    \"producerId\": \"1482937\",\n                    \"number\": \"6010000000\",\n                    \"name\": \"ACHATS MATIERES PREM\"\n                },\n                \"payment\": null,\n                \"analytics\": [\n                    {\n                        \"producerId\": \"703\",\n                        \"code\": \"AXE1\",\n                        \"name\": \"LIBELLE AXE1\",\n                        \"sections\": [\n                            {\n                                \"producerId\": \"1694\",\n                                \"amount\": 1200,\n                                \"rate\": 100,\n                                \"code\": \"ATTENTE\",\n                                \"name\": \"Waiting section\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                \"producerId\": \"43221798\",\n                \"description\": \"TEST\",\n                \"value\": {\n                    \"credit\": 0,\n                    \"debit\": 1200,\n                    \"amount\": -1200\n                },\n                \"dueDate\": null,\n                \"lettering\": {\n                    \"state\": \"none\",\n                    \"value\": null\n                },\n                \"freeNumber\": null,\n                \"invoiceNumber\": null,\n                \"attachments\": {},\n                \"account\": {\n                    \"producerId\": \"2567407\",\n                    \"number\": \"4551200000\",\n                    \"name\": \"COMPTE COURANT RACLE\"\n                },\n                \"payment\": null,\n                \"analytics\": []\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get entry",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Third-Party-Secret",
+								"value": ""
+							},
+							{
+								"key": "society-id",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/mad/entry?id=170300&version=1.0.0",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mad",
+								"entry"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "170300"
+								},
+								{
+									"key": "version",
+									"value": "1.0.0"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get entry",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": ""
+									},
+									{
+										"key": "society-id",
+										"value": ""
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/entries?idExercice&startDate&endDate&version",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"entries"
+									],
+									"query": [
+										{
+											"key": "idExercice",
+											"value": null,
+											"description": "Retrieve all entries related to this exercice id."
+										},
+										{
+											"key": "startDate",
+											"value": null,
+											"description": "Retrieve entries from this date."
+										},
+										{
+											"key": "endDate",
+											"value": null,
+											"description": "Retrieve entries up to this date."
+										},
+										{
+											"key": "version",
+											"value": null,
+											"description": "Data document version."
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"producerId\": \"170300\",\n    \"attachments\": {\n        \"VotreDocumentSelectionne_12-06-2022 (5).pdf\": {\n            \"type\": \"URL\",\n            \"value\": \"https://app.myunisoft.fr/api/ged/ged/document/1-gTt2QkfLPABeb6Z/download\"\n        }\n    },\n    \"date\": \"2023-02-01\",\n    \"dueDate\": null,\n    \"journal\": {\n        \"producerId\": \"137145\",\n        \"customerReferenceCode\": \"AC\",\n        \"name\": \"ACHATS\",\n        \"type\": \"Achat\"\n    },\n    \"currency\": {\n        \"code\": \"EUR\"\n    },\n    \"movements\": [\n        {\n            \"producerId\": \"43221797\",\n            \"description\": \"TEST\",\n            \"value\": {\n                \"credit\": 1200,\n                \"debit\": 0,\n                \"amount\": 1200\n            },\n            \"dueDate\": null,\n            \"lettering\": {\n                \"state\": \"none\",\n                \"value\": null\n            },\n            \"freeNumber\": null,\n            \"invoiceNumber\": null,\n            \"attachments\": {},\n            \"account\": {\n                \"producerId\": \"1482937\",\n                \"number\": \"6010000000\",\n                \"name\": \"ACHATS MATIERES PREM\"\n            },\n            \"payment\": null,\n            \"analytics\": [\n                {\n                    \"producerId\": \"703\",\n                    \"code\": \"AXE1\",\n                    \"name\": \"LIBELLE AXE1\",\n                    \"sections\": [\n                        {\n                            \"producerId\": \"1694\",\n                            \"amount\": 1200,\n                            \"rate\": 100,\n                            \"code\": \"ATTENTE\",\n                            \"name\": \"Waiting section\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"producerId\": \"43221798\",\n            \"description\": \"TEST\",\n            \"value\": {\n                \"credit\": 0,\n                \"debit\": 1200,\n                \"amount\": -1200\n            },\n            \"dueDate\": null,\n            \"lettering\": {\n                \"state\": \"none\",\n                \"value\": null\n            },\n            \"freeNumber\": null,\n            \"invoiceNumber\": null,\n            \"attachments\": {},\n            \"account\": {\n                \"producerId\": \"2567407\",\n                \"number\": \"4551200000\",\n                \"name\": \"COMPTE COURANT RACLE\"\n            },\n            \"payment\": null,\n            \"analytics\": []\n        }\n    ]\n    }"
+						}
+					]
+				},
+				{
+					"name": "Get payments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "society-id",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/mad/payments?version=1.0.0",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mad",
+								"payments"
+							],
+							"query": [
+								{
+									"key": "version",
+									"value": "1.0.0",
+									"description": "MAD Format version"
+								}
+							]
+						},
+						"description": "[https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/payment.md](https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/payment.md)"
+					},
+					"response": [
+						{
+							"name": "Get payments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/payments?version=1.0.0",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"payments"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "1.0.0",
+											"description": "MAD Format version"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"producerId\": \"1\",\n        \"code\": \"CB\",\n        \"name\": \"Carte bleue\"\n    },\n    {\n        \"producerId\": \"2\",\n        \"code\": \"VIRT\",\n        \"name\": \"Virement\"\n    },\n    {\n        \"producerId\": \"3\",\n        \"code\": \"ESP\",\n        \"name\": \"Espèce\"\n    },\n    {\n        \"producerId\": \"4\",\n        \"code\": \"CHQ\",\n        \"name\": \"Chèque\"\n    },\n    {\n        \"producerId\": \"5\",\n        \"code\": \"PRLV\",\n        \"name\": \"Prélèvement\"\n    },\n    {\n        \"producerId\": \"6\",\n        \"code\": \"LCR\",\n        \"name\": \"Lettre de change\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get banks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "society-id",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/mad/banks?version=1.0.0",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mad",
+								"banks"
+							],
+							"query": [
+								{
+									"key": "version",
+									"value": "1.0.0",
+									"description": "MAD Format version"
+								}
+							]
+						},
+						"description": "[https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/bank.md](https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/bank.md)"
+					},
+					"response": [
+						{
+							"name": "Get banks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/banks?version=1.0.0",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"banks"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "1.0.0",
+											"description": "MAD Format version"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"producerId\": \"1993\",\n        \"IBAN\": \"AL35202111090000000001234567\",\n        \"BIC\": \"SGSBALTX\",\n        \"account\": {\n            \"producerId\": \"2567424\",\n            \"number\": \"5120900000\",\n            \"name\": \"CIC Lyonnaise de banque\"\n        },\n        \"journal\": {\n            \"producerId\": \"36502\",\n            \"name\": \"BANQUE CIC\",\n            \"type\": \"BANQUE\",\n            \"customerReferenceCode\": \"CIC\"\n        },\n        \"additionalProducerProperties\": {\n            \"isDefault\": true\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get journals",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "society-id",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/mad/journals?version=1.0.0",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mad",
+								"journals"
+							],
+							"query": [
+								{
+									"key": "version",
+									"value": "1.0.0",
+									"description": "MAD Format version"
+								}
+							]
+						},
+						"description": "[https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/journal.md](https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/journal.md)"
+					},
+					"response": [
+						{
+							"name": "Get journals",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/journals?version=1.0.0",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"journals"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "1.0.0",
+											"description": "MAD Format version"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"producerId\": \"367808\",\n        \"name\": \"AC\",\n        \"customerReferenceCode\": \"AC\",\n        \"type\": \"OD\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"OD\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"314036\",\n        \"name\": \"A NOUVEAU\",\n        \"customerReferenceCode\": \"AN\",\n        \"type\": \"À Nouveaux\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"AN\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"313998\",\n        \"name\": \"JOURNAL D'ACHATS\",\n        \"customerReferenceCode\": \"01\",\n        \"type\": \"Achat\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"ACH\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"313999\",\n        \"name\": \"JOURNAL DE VENTES\",\n        \"customerReferenceCode\": \"02\",\n        \"type\": \"Vente\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"VTE\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"314000\",\n        \"name\": \"JOURNAL D'ACHATS BIS\",\n        \"customerReferenceCode\": \"03\",\n        \"type\": \"Achat\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"ACH\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"314001\",\n        \"name\": \"JOURNAL NDF\",\n        \"customerReferenceCode\": \"09\",\n        \"type\": \"Note de frais\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"NDF\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"314004\",\n        \"name\": \"JOURNAL D' OD\",\n        \"customerReferenceCode\": \"20\",\n        \"type\": \"OD\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"OD\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"314005\",\n        \"name\": \"JOURNAL DE PAIE\",\n        \"customerReferenceCode\": \"30\",\n        \"type\": \"OD Paie\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"OD_PAIE\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"314006\",\n        \"name\": \"JOURNAL AN\",\n        \"customerReferenceCode\": \"40\",\n        \"type\": \"À Nouveaux\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"AN\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"314007\",\n        \"name\": \"JOURNAL OD DECL FISCALE\",\n        \"customerReferenceCode\": \"50\",\n        \"type\": \"OD TVA\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"OD_DECL_FISCALE\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"314008\",\n        \"name\": \"JOURNAL OD LETTRAGE\",\n        \"customerReferenceCode\": \"60\",\n        \"type\": \"OD Lettrage\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"OD_LET\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"314009\",\n        \"name\": \"JOURNAL A EXTOURNER\",\n        \"customerReferenceCode\": \"98\",\n        \"type\": \"À extourner\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"A_EXT\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"314010\",\n        \"name\": \"JOURNAL EXTOURNE\",\n        \"customerReferenceCode\": \"99\",\n        \"type\": \"Extourne\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"EXT\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"314011\",\n        \"name\": \"EXTRA COMPTABLE DE SITUATION\",\n        \"customerReferenceCode\": \"ECS\",\n        \"type\": \"OD Extracomptable\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"OD_EXC\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"380272\",\n        \"name\": \"VT\",\n        \"customerReferenceCode\": \"VT\",\n        \"type\": \"Vente\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"VTE\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"314003\",\n        \"name\": \"JOURNAL DE CAISSE\",\n        \"customerReferenceCode\": \"18\",\n        \"type\": \"Caisse\",\n        \"counterpartAccount\": {\n            \"producerId\": \"11788188\",\n            \"number\": \"53000000\",\n            \"name\": \"CAISSE\"\n        },\n        \"additionalProducerProperties\": {\n            \"type\": \"CAISSE\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"380274\",\n        \"name\": \"ST\",\n        \"customerReferenceCode\": \"ST\",\n        \"type\": \"OD\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"OD\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"642949\",\n        \"name\": \"JOURNAL REPRISE BALANCE\",\n        \"customerReferenceCode\": \"RBAL\",\n        \"type\": \"Reprise Balance\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"RBAL\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"380273\",\n        \"name\": \"CE\",\n        \"customerReferenceCode\": \"CE\",\n        \"type\": \"Banque\",\n        \"counterpartAccount\": {\n            \"producerId\": \"11788183\",\n            \"number\": \"51400000\",\n            \"name\": \"CHEQUES POSTAUX\"\n        },\n        \"additionalProducerProperties\": {\n            \"type\": \"BQ\",\n            \"locked\": true\n        }\n    },\n    {\n        \"producerId\": \"314037\",\n        \"name\": \"OD AUDIT\",\n        \"customerReferenceCode\": \"T1\",\n        \"type\": \"OD Audit\",\n        \"counterpartAccount\": null,\n        \"additionalProducerProperties\": {\n            \"type\": \"OD_AUDIT\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"681356\",\n        \"name\": \"BANQUE AVEC 511\",\n        \"customerReferenceCode\": \"BQ\",\n        \"type\": \"Banque\",\n        \"counterpartAccount\": {\n            \"producerId\": \"13194211\",\n            \"number\": \"51100000\",\n            \"name\": \"Paiement Carte Bancaire - Alexandra DECLERCK\"\n        },\n        \"additionalProducerProperties\": {\n            \"type\": \"BQ\",\n            \"locked\": false\n        }\n    },\n    {\n        \"producerId\": \"314002\",\n        \"name\": \"JOURNAL BANQUE\",\n        \"customerReferenceCode\": \"15\",\n        \"type\": \"Banque\",\n        \"counterpartAccount\": {\n            \"producerId\": \"11788182\",\n            \"number\": \"51200000\",\n            \"name\": \"BANQUES\"\n        },\n        \"additionalProducerProperties\": {\n            \"type\": \"BQ\",\n            \"locked\": true\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get exercices",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "society-id",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/mad/exercices?version=1.0.0",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mad",
+								"exercices"
+							],
+							"query": [
+								{
+									"key": "version",
+									"value": "1.0.0",
+									"description": "MAD Format version"
+								}
+							]
+						},
+						"description": "[https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/exercice.md](https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/exercice.md)"
+					},
+					"response": [
+						{
+							"name": "Get exercices",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/exercices?version=1.0.0",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"exercices"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "1.0.0",
+											"description": "MAD Format version"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"producerId\": \"54697\",\n        \"name\": \"N+1\",\n        \"period\": {\n            \"start\": \"2024-01-01\",\n            \"end\": \"2024-12-31\",\n            \"duration\": 12,\n            \"closed\": null\n        },\n        \"state\": \"open\",\n        \"additionalProducerProperties\": {\n            \"lettering\": \"MULTI\"\n        }\n    },\n    {\n        \"producerId\": \"51081\",\n        \"name\": \"N\",\n        \"period\": {\n            \"start\": \"2023-01-01\",\n            \"end\": \"2023-12-31\",\n            \"duration\": 12,\n            \"closed\": null\n        },\n        \"state\": \"open\",\n        \"additionalProducerProperties\": {\n            \"lettering\": \"MULTI\"\n        }\n    },\n    {\n        \"producerId\": \"51082\",\n        \"name\": \"N-1\",\n        \"period\": {\n            \"start\": \"2022-01-01\",\n            \"end\": \"2022-12-31\",\n            \"duration\": 12,\n            \"closed\": {\n                \"at\": \"2024-02-16\",\n                \"by\": {\n                    \"producerId\": \"5776\",\n                    \"firstName\": \"Benoit\",\n                    \"lastName\": \"GARIAZZO\"\n                }\n            }\n        },\n        \"state\": \"closed\",\n        \"additionalProducerProperties\": {\n            \"lettering\": \"MULTI\"\n        }\n    },\n    {\n        \"producerId\": \"51083\",\n        \"name\": \"N-2\",\n        \"period\": {\n            \"start\": \"2021-01-01\",\n            \"end\": \"2021-12-31\",\n            \"duration\": 12,\n            \"closed\": {\n                \"at\": \"2021-12-31\",\n                \"by\": {\n                    \"producerId\": \"5776\",\n                    \"firstName\": \"Benoit\",\n                    \"lastName\": \"GARIAZZO\"\n                }\n            }\n        },\n        \"state\": \"closed\",\n        \"additionalProducerProperties\": {\n            \"lettering\": \"MULTI\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get accounts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "society-id",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/mad/accounts?version=1.0.0",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mad",
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "version",
+									"value": "1.0.0",
+									"description": "MAD Format version"
+								}
+							]
+						},
+						"description": "[https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/account.md](https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/account.md)"
+					},
+					"response": [
+						{
+							"name": "Get accounts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/accounts?version=1.0.0",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"accounts"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "1.0.0",
+											"description": "MAD Format version"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\r\n    {\r\n        \"producerId\": \"1482937\",\r\n        \"number\": \"6010000000\",\r\n        \"name\": \"ACHATS MATIERES PREM\",\r\n        \"correspondanceAccount\": {\r\n            \"name\": \"Corresp 602\",\r\n            \"number\": \"6020000000\"\r\n        }\r\n    },\r\n    {\r\n        \"producerId\": \"990\",\r\n        \"number\": \"4041700000\",\r\n        \"name\": \"MYUNISOFT\",\r\n        \"company\": {\r\n            \"name\": \"MYUNISOFT\",\r\n            \"SIREN\": \"840143275\",\r\n            \"CEO\": \"Régis SAMUEL\",\r\n            \"payment\": {\r\n            \"producerId\": \"13\",\r\n            \"code\": \"CB\"\r\n            },\r\n            \"address\": {\r\n            \"city\": \"SAINTE GENEVIEVE DES BOIS\",\r\n            \"fullName\": \"3 Rue GAI SEJOUR\",\r\n            \"addressNumber\": \"3\",\r\n            \"addressComplement\": null,\r\n            \"locatingIndex\": null,\r\n            \"postalCode\": \"91700\",\r\n            \"streetName\": \"GAI SEJOUR\",\r\n            \"streetType\": \"Rue\",\r\n            \"country\": \"FRANCE\"\r\n            },\r\n            \"contacts\": [\r\n            {\r\n                \"firstname\": \"Thomas\",\r\n                \"lastname\": \"GENTILHOMME\",\r\n                \"phoneNumber\": \"+33600000000\",\r\n                \"role\": \"Développeur API\",\r\n                \"email\": \"t.gentilhomme@myunisoft.fr\"\r\n            }\r\n            ],\r\n            \"ape\": {\r\n            \"producerId\": \"534\",\r\n            \"code\": \"5829C\",\r\n            \"name\": \"Édition de logiciels applicatifs\"\r\n            }\r\n        }\r\n    }\r\n]"
+						}
+					]
+				},
+				{
+					"name": "Get analytics",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "society-id",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/mad/analytics?version=1.0.0",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mad",
+								"analytics"
+							],
+							"query": [
+								{
+									"key": "version",
+									"value": "1.0.0",
+									"description": "MAD Format Version"
+								}
+							]
+						},
+						"description": "Get analytics by society."
+					},
+					"response": [
+						{
+							"name": "Get analytics",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/analytics?accountingFolderId&version",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"analytics"
+									],
+									"query": [
+										{
+											"key": "accountingFolderId",
+											"value": null,
+											"description": "Society id."
+										},
+										{
+											"key": "version",
+											"value": null,
+											"description": "Data document version."
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"producerId\": \"1385\",\n        \"code\": \"IMM\",\n        \"name\": \"Immeubles\",\n        \"sections\": [\n            {\n                \"producerId\": \"8157\",\n                \"code\": \"001\",\n                \"name\": \"IMMEUBLE 1\",\n                \"account\": null,\n                \"additionalProducerProperties\": {\n                    \"closed\": false\n                }\n            },\n            {\n                \"producerId\": \"8164\",\n                \"code\": \"002\",\n                \"name\": \"IMMEUBLE 2\",\n                \"account\": null,\n                \"additionalProducerProperties\": {\n                    \"closed\": false\n                }\n            },\n            {\n                \"producerId\": \"8158\",\n                \"code\": \"003\",\n                \"name\": \"IMMEUBLE 3\",\n                \"account\": null,\n                \"additionalProducerProperties\": {\n                    \"closed\": false\n                }\n            },\n            {\n                \"producerId\": \"8165\",\n                \"code\": \"004\",\n                \"name\": \"IMMEUBLE 4\",\n                \"account\": null,\n                \"additionalProducerProperties\": {\n                    \"closed\": false\n                }\n            },\n            {\n                \"producerId\": \"8156\",\n                \"code\": \"ATTENTE\",\n                \"name\": \"Section d'attente\",\n                \"account\": null,\n                \"additionalProducerProperties\": {\n                    \"closed\": false\n                }\n            }\n        ],\n        \"additionalProducerProperties\": {\n            \"defaultSectionId\": \"8156\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get accountingFolder",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "society-id",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/mad/accountingFolder?version=1.0.0",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mad",
+								"accountingFolder"
+							],
+							"query": [
+								{
+									"key": "version",
+									"value": "1.0.0",
+									"description": "MAD Format version"
+								}
+							]
+						},
+						"description": "[https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/accountingFolder.md](https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/accountingFolder.md)"
+					},
+					"response": [
+						{
+							"name": "Get accountingFolder",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/accountingFolder?version=1.0.0",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"accountingFolder"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "1.0.0",
+											"description": "MAD Format version"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"MyUnisoft\",\n    \"reference\": \"MYUN\",\n    \"address\": {\n        \"country\": \"FRANCE\",\n        \"city\": \"MASSY\",\n        \"fullName\": \"4 B Rue GALVANI\",\n        \"addressNumber\": \"4\",\n        \"locatingIndex\": \"B\",\n        \"addressComplement\": null,\n        \"postalCode\": \"91300\",\n        \"streetName\": \"GALVANI\",\n        \"streetType\": \"Rue\"\n    },\n    \"contact\": {\n        \"firstName\": \"Régis\",\n        \"lastName\": \"SAMUEL\",\n        \"phoneNumber\": \"00 00 00 00 00\",\n        \"mobilePhoneNumber\": \"00 00 00 00 00\",\n        \"mail\": null\n    },\n    \"RCS\": {\n        \"producerId\": \"99\",\n        \"name\": \"PARIS\"\n    },\n    \"SIRET\": \"84014327500039\",\n    \"capital\": 10000\n}"
+						}
+					]
 				}
 			]
 		}
