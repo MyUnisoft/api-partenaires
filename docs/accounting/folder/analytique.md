@@ -34,7 +34,7 @@ Lien bonus: [Comptabilité analytique : définition, rôle et exemple de calculs
 
 ## Activer l'analytique sur une société (dossier)
 
-La route `https://api.myunisoft.fr/api/v1/society/{{id_society}}` permet de modifier les paramètres d'une société (dossier).
+La route `https://api.myunisoft.fr/api/v1/society/:id_society` permet de modifier les paramètres d'une société (dossier).
 
 ```bash
 $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/society/3' \
@@ -210,7 +210,7 @@ $ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes
 
 ### Modification d'un axe
 
-La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}` permet de modifier un axe en renseignant les paramètres que l'on souhaite modifier ainsi que les nouvelles valeurs comme dans l'exemple ci-dessous.
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/:id_axe` permet de modifier un axe en renseignant les paramètres que l'on souhaite modifier ainsi que les nouvelles valeurs comme dans l'exemple ci-dessous.
 
 Voici la liste des paramètres modifiables d'un axe:
   - code
@@ -273,7 +273,7 @@ $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/analytics/axes/
 
 ### Suppression d'un axe
 
-La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}` permet de supprimer un axe.
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/:id_axe` permet de supprimer un axe.
 
 ```bash
 $ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/axes/48' \
@@ -297,7 +297,7 @@ $ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/ax
 
 ## Sections
 
-La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/sections` permet de récupérer l'intégralité des sections pour un axe identifié.
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/:id_axe/sections` permet de récupérer l'intégralité des sections pour un axe identifié.
 
 ```bash
 $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/sections' \
@@ -343,14 +343,14 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/axes/
 
 Il est possible de récupérer une section par son id (mais aussi de récupérer la section par défaut).
 
-- `https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}`
-- `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/defaultsection`
+- `https://api.myunisoft.fr/api/v1/analytics/sections/:id_section`
+- `https://api.myunisoft.fr/api/v1/analytics/axes/:id_axe/defaultsection`
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Création d'une section
 
-La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/sections` permet de créer une section.
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/:id_axe/sections` permet de créer une section.
 
 > [!NOTE]
 > Dans le cas de la création de la section par défaut, le paramètre `by_default` doit être renseigné dans le payload de la requête comme dans l'exemple ci-dessous.
@@ -386,7 +386,7 @@ $ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes
 
 ### Modification d'une section
 
-La route `https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}` permet de modifier une section.
+La route `https://api.myunisoft.fr/api/v1/analytics/sections/:id_section` permet de modifier une section.
 
 <details class="details custom-block">
   <summary markdown="span">Voici le JSON Schema définissant le body de la requête.</summary>
@@ -449,7 +449,7 @@ $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/analytics/secti
 
 ### Suppression d'une section
 
-La route `https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}` permet de supprimer une section.
+La route `https://api.myunisoft.fr/api/v1/analytics/sections/:id_section` permet de supprimer une section.
 
 > [!NOTE]
 > Il est impossible de supprimer la section par défaut.
@@ -468,10 +468,10 @@ Par défaut sans configuration le back-end utilisera le numéro du compte pour e
 Néanmoins il est possible de configurer la répartition directement au sein de l'interface MyUnisoft:
 ![](../../images/analytique_cle_repartition.PNG)
 
-La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys` permet de récupérer l'intégralité des clés de répartitions pour un axe identifié.
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/:id_axe/repartition_keys` permet de récupérer l'intégralité des clés de répartitions pour un axe identifié.
 
 > [!NOTE]
-> Il est possible de récupérer une clé de répartition avec l'id de l'axe + l'id de clé: `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}`
+> Il est possible de récupérer une clé de répartition avec l'id de l'axe + l'id de clé: `https://api.myunisoft.fr/api/v1/analytics/axes/:id_axe/repartition_keys/:id_repartition_key`
 
 ```bash
 $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys' \
@@ -499,7 +499,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/analytics/axes/
 
 ### Création d'une clé de répartition
 
-La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys` permet de créer une clé de répartition à laquelle sera associée des répartitions
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/:id_axe/repartition_keys` permet de créer une clé de répartition à laquelle sera associée des répartitions
 
 <details class="details custom-block">
   <summary markdown="span">Voici le JSON Schema définissant le body de la requête.</summary>
@@ -555,7 +555,7 @@ $ curl --location --request POST 'https://api.myunisoft.fr/api/v1/analytics/axes
 
 ### Modification d'une clé de répartition
 
-La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}` permet de modifier une clé de répartition.
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/:id_axe/repartition_keys/:id_repartition_key` permet de modifier une clé de répartition.
 
 <details class="details custom-block">
   <summary markdown="span">Voici le JSON Schema définissant le body de la requête.</summary>
@@ -612,7 +612,7 @@ $ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/analytics/axes/
 
 ### Suppression d'une clé de répartition
 
-La route `https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}` permet de supprimer une clé de répartition.
+La route `https://api.myunisoft.fr/api/v1/analytics/axes/:id_axe/repartition_keys/:id_repartition_key` permet de supprimer une clé de répartition.
 
 ```bash
 $ curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/analytics/axes/48/repartition_keys/5' \
@@ -655,7 +655,7 @@ La route retournera un tableau défini par l'interface TypeScript `RateOfReparti
 
 ### Appliquer des taux de répartitions par section
 
-La route `https://api.myunisoft.fr/api/v1/analytics/repartition_keys/{{id_repartition_key}}/repartition` permet de définir des taux de répartitions par section.
+La route `https://api.myunisoft.fr/api/v1/analytics/repartition_keys/:id_repartition_key/repartition` permet de définir des taux de répartitions par section.
 
 > [!NOTE]
 > La somme des taux de répartitions doit obligatoirement être égale à 100.
