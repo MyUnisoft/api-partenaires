@@ -41,28 +41,26 @@ Préalablement à la mise en place du webhook par nos services, il est nécessai
 Notre service enverra un JSON similaire à celui ci-dessous. Noter qu'**une** requête HTTP peut contenir **plusieurs** webhooks (évènements).
 
 ```json
-{
-  "webhooks": [
-    {
-      "name": "connector",
-      "operation": "CREATE",
-      "scope": {
-        "schemaId": 1,
-        "firmId": 1,
-        "firmSIRET": "83966500700010",
-        "accountingFolderId": 409,
-        "accountingFolderRef": "MYU01",
-        "accountingFolderSIRET": "84014327500039"
-      },
-      "data": {
-        "id": 1,
-        "code": "JFAC"
-      },
-      "webhookId": "83c22567-fd2f-4a50-abbb-48aedefdcfa5",
-      "createdAt": 1678457043533
-    }
-  ]
-}
+[
+  {
+    "name": "connector",
+    "operation": "CREATE",
+    "scope": {
+      "schemaId": 1,
+      "firmId": 1,
+      "firmSIRET": "83966500700010",
+      "accountingFolderId": 409,
+      "accountingFolderRef": "MYU01",
+      "accountingFolderSIRET": "84014327500039"
+    },
+    "data": {
+      "id": 1,
+      "code": "JFAC"
+    },
+    "webhookId": "83c22567-fd2f-4a50-abbb-48aedefdcfa5",
+    "createdAt": 1678457043533
+  }
+]
 ```
 
 Vous ne recevrez que les évènements et opérations que vous aurez demandé.
