@@ -7,7 +7,7 @@
   "devDependencies": {
     "@nodesecure/eslint-config": "^1.9.0",
     "@nodesecure/fs-walk": "^2.0.0",
-    "@types/node": "^20.11.30",
+    "@types/node": "^22.0.0",
     "vitepress": "^1.0.1"
   },
   "overrides": {
