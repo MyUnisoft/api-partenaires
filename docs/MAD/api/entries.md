@@ -32,8 +32,8 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 | --- | --- | :---: |
 | version | version du format | ✔️ |
 | idExercice | id exercice | ❌ |
-| startDate | Date de début d'extraction au format `YYYYMMDD` | ❌ |
-| endDate | Date de fin d'extraction au format `YYYYMMDD` | ❌ |
+| startDate | Date de début d'extraction au format `YYYY-MM-DD` | ❌ |
+| endDate | Date de fin d'extraction au format `YYYY-MM-DD` | ❌ |
 | journalIds | N'incluent que les écritures liés aux journaux demandés, les IDs peuvent être récupérés à partir de la route MAD [journals](./journal.md) | ❌ |
 
 > [!NOTE]
