@@ -33,7 +33,7 @@ $ curl --location \
 ```
 
 La route prend plusieurs arguments:
-- **exercice_id** (l'id de l'exercice. Il est possible de le récupérer par API, merci de suivre [le guide suivant](../exercices.md)).
+- **exercice_id** (Il est possible de le récupérer par [API](../../../MAD/api/exercice.md)).
 - **filename** (le nom du fichier qui est attaché avec la requête).
 - **type** (valeur numérique entre `0` et `2`).
 
