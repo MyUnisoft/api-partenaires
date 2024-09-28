@@ -22,5 +22,4 @@
 
 | Prénom - Nom | Rôle(s) | Email |
 | --- | --- | --- |
-| Thierry Davoigniot | PMO | [t.davoigniot@myunisoft.fr](t.davoigniot@myunisoft.fr) |
 | Thomas Gentilhomme | Lead Développeur API & Connecteurs | [partners.tech@myunisoft.fr](partners.tech@myunisoft.fr) |

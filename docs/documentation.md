@@ -148,7 +148,6 @@ Les guides et API suivantes seront prochainement remplacés par MAD.
 
 | Prénom - Nom | Rôle(s) | Email |
 | --- | --- | --- |
-| Thierry Davoigniot | PMO | [t.davoigniot@myunisoft.fr](mailto:t.davoigniot@myunisoft.fr) |
 | Thomas Gentilhomme | Lead Développeur API & Connecteurs | [partners.tech@myunisoft.fr](mailto:partners.tech@myunisoft.fr) |
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
