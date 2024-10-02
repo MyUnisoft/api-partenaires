@@ -13,7 +13,7 @@ Les routes HTTP concernées;
 
 ## Introduction
 
-FEC est le diminutif de fichier des écritures comptables. Si n'êtes pas encore à l'aise avec ce format nous vous recommandons de lire la ressource [suivante](https://www.compta-facile.com/fichier-des-ecritures-comptables-fec-definition-contenu-utilite/) ou encore [Tout savoir sur le fec](https://info.masterfec.fr/tout-savoir-sur-le-fec).
+FEC est le diminutif de fichier des écritures comptables. Si n'êtes pas encore à l'aise avec ce format nous vous recommandons de lire la ressource [suivante](https://www.compta-facile.com/fichier-des-ecritures-comptables-fec-definition-contenu-utilite/) ou encore [Tout savoir sur le fec](https://www.appvizer.fr/magazine/finance-comptabilite/comptabilite/fec).
 
 Exemple du format à plat:
 
