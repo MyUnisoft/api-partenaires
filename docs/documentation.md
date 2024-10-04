@@ -81,6 +81,14 @@ La racine de notre API partenaires est la suivante: [https://api.myunisoft.fr/ap
 
 ---
 
+Toutes les réponses de l'API Partenaires contiennent un ID unique afin de traquer les requêtes.
+Vous trouverez cet ID dans le header `request-id`.
+
+> [!TIP]
+> N'hésitez pas à exploiter cet ID (dans vos logs par exemple). Cet info est utile lors des échanges avec le support MyUnisoft.
+
+---
+
 Lors de l’utilisation d’une route exposée, il est impératif d'inclure l’**API Token** en tant que [Bearer token](https://swagger.io/./specification/authentication/bearer-authentication/) dans l'en-tête HTTP **Authorization**.
 
 De plus, vous devez ajouter l'en-tête “**X-Third-Party-Secret**” contenant la clé secrète communiqué par notre équipe.
