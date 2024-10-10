@@ -41,7 +41,7 @@ Le paramétrage de cette route s'effectue uniquement via des [query strings](htt
 | lettering | Filtre les mouvements selon l'état du lettrage : `none`, `partial`, ou `complete` | ❌ |
 
 > [!NOTE]
-> L'écart maximum entre la date de début et de fin doit être de maximums 12 mois.
+> L'écart entre la date de début et de fin doit être de maximum 12 mois.
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet 
