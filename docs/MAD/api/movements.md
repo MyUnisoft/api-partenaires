@@ -15,7 +15,7 @@ next:
 L'API d'export ci-dessous vous permettra de récupérer les mouvements par deux biais distincts;
 
 - Avec un [exercice](./exercice.md)
-- Sur une période données de maximums **12 mois**.
+- Sur une période donnée de maximum **12 mois**.
 
 Il n'est pas possible de mélanger les deux.
 
