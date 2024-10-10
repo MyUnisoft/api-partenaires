@@ -47,9 +47,6 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 
 Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/entries.md).
 
-> [!CAUTION]
-> Pour éviter les extractions abusives nous avons volontairement limité à un exercice par requête API. Si vous souhaitez extraire l'intégralité des mouvements nous vous recommandons d'itérer sur l'intégralité des exercices séquentiellement.
-
 ## 💬 Consulter les écritures sur l'interface MyUnisoft
 
 Sur MyUnisoft, il existe plusieurs moyens de récupérer et/ou consulter les écritures:

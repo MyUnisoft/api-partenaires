@@ -266,13 +266,6 @@ interface Movement {
     name: string | null;
     code: string | null;
   } | null;
-  sections: {
-    producerId: string;
-    amount: number;
-    rate: number;
-    code: string;
-    name: string;
-  }[];
   analytics: MovementAnalytics[];
 }
 ```

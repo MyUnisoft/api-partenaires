@@ -7,9 +7,6 @@ next: false
 
 # MAD
 
-> [!WARNING] 
-> Le format est encore au stade expérimental (des changements sont à prévoir)
-
 MyUnisoft Accounting Data (raccourci en **MAD**) est un format JSON hybride supportant aussi bien l'export que l'import de données comptables.
 
 Lors de la conception de ce nouveau format, nos objectifs étaient multiples :
@@ -77,17 +74,34 @@ Ces interfaces et types sont régulièrement présents dans les différentes str
 
 ## 🌍 API
 
-Les différentes API sont disponibles sur notre [postman en ligne](https://docs.api.myunisoft.fr/) au sein du dossier racine MAD.
+Les différentes API sont disponibles sur notre [Postman en ligne](https://docs.api.myunisoft.fr/) dans le dossier racine intitulé **MAD**.
 
 > [!IMPORTANT]
-> Toutes nos API vous demanderont de fournir le numéro de version MAD. La dernière version est actuellement `1.0.0`.
+> Toutes nos API requièrent que vous fournissiez le numéro de version MAD. La dernière version disponible est actuellement `1.0.0`
 
 - [Export du dossier de production](./api/accountingFolder.md)
-- [Export des écritures et mouvements](./api/entries.md)
-- [Récupérer une écriture et ses mouvements](./api/entry.md)
 - [Export des comptes](./api/account.md)
 - [Export des journaux](./api/journal.md)
 - [Export des exercices](./api/exercice.md)
 - [Export des axes et sections analytiques](./api/analytic.md)
 - [Export des banques](./api/bank.md)
 - [Export des méthodes de paiement](./api/payment.md)
+
+---
+
+MAD vous permet de récupérer les mouvements (lignes d'écriture) sous deux formes :
+
+- Groupés par une entité/abstraction appelée [Écriture](https://www.compta-facile.com/qu-est-ce-qu-une-ecriture-comptable/).
+- À plat (équivalent à un **FEC**, mais plus complet).
+
+L'**écriture** garantit une liste de mouvements équilibrés sur plusieurs racines de comptes. Toutefois, cela peut poser problème si votre besoin est de filtrer des données selon des critères spécifiques, tels qu'une racine de compte (par exemple, 40 ou 41) ou par lettrage.
+
+Les deux API offrent des fonctionnalités différentes et des options de filtrage distinctes.
+
+- [Export des écritures (+ mouvements associés)](./api/entries.md)
+- [Export des mouvements](./api/movements.md)
+- [Récupérer une écriture et ses mouvements](./api/entry.md)
+
+> [!IMPORTANT]
+> Afin de limiter les extractions abusives de mouvements, nous avons volontairement restreint l'export à un exercice par requête API.
+> Pour extraire l'intégralité des mouvements, nous vous recommandons d'itérer séquentiellement sur l'ensemble des exercices.
