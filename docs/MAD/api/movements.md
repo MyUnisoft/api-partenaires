@@ -31,14 +31,16 @@ curl --location \
 
 Le paramétrage de cette route s'effectue uniquement via des [query strings](https://en.wikipedia.org/wiki/Query_string). 
 
-| nom | description | obligatoire |
-| --- | --- | :---: |
-| version | version du format | ✔️ |
-| idExercice | Identifiant de l'exercice | ❌ |
-| startDate | Date de début d'extraction au format `YYYY-MM-DD` | ❌ |
-| endDate | Date de fin d'extraction au format `YYYY-MM-DD` | ❌ |
-| classAccount | Inclut uniquement les comptes commençant par la classe/catégorie spécifiée. Peut prendre une ou plusieurs racines. | ❌ |
-| lettering | Filtre les mouvements selon l'état du lettrage : `none`, `partial`, ou `complete` | ❌ |
+| nom | description | obligatoire | valeurs multiples |
+| --- | --- | :---: | :---: |
+| version | version du format | ✔️ | ❌ |
+| idExercice | Identifiant de l'exercice | ❌ | ❌ |
+| startDate | Date de début d'extraction au format `YYYY-MM-DD` | ❌ | ❌ |
+| endDate | Date de fin d'extraction au format `YYYY-MM-DD` | ❌ | ❌ |
+| dateFilter | Modifie la colonne utilisée par les options `startDate` et `endDate`. Les valeurs possibles sont **document** (par défaut), **myunisoft** (horodatage MyUnisoft), et **accounting** (date de comptabilisation). | ❌ | ❌ |
+| source | Permet de récupérer les écritures liées à une source spécifique. | ❌ |  ❌ |
+| classAccount | Inclut uniquement les comptes commençant par la classe/catégorie spécifiée. Peut prendre une ou plusieurs racines. | ❌ | ✔️ |
+| lettering | Filtre les mouvements selon l'état du lettrage : `none`, `partial`, ou `complete` | ❌ | ❌ |
 
 > [!NOTE]
 > L'écart entre la date de début et de fin doit être de maximum 12 mois.
@@ -46,6 +48,11 @@ Le paramétrage de cette route s'effectue uniquement via des [query strings](htt
 > [!IMPORTANT]
 > 🔹 Accès cabinet 
 > L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production (la société concernée par la demande d'extraction).
+
+### Source
+
+Le paramètre `source` doit contenir le code correspondant à l'une des sources documentées [ici](../specs/v1.0.0/entries.md#source-d-une-ecriture)
+
 
 ## 🔬 Réponse
 

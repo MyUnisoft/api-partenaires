@@ -28,13 +28,15 @@ curl --location \
 
 Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string). 
 
-| nom | description | obligatoire |
-| --- | --- | :---: |
-| version | version du format | ✔️ |
-| idExercice | id exercice | ❌ |
-| startDate | Date de début d'extraction au format `YYYY-MM-DD` | ❌ |
-| endDate | Date de fin d'extraction au format `YYYY-MM-DD` | ❌ |
-| journalIds | N'incluent que les écritures liés aux journaux demandés, les IDs peuvent être récupérés à partir de la route MAD [journals](./journal.md) | ❌ |
+| nom | description | obligatoire | valeurs multiples |
+| --- | --- | :---: | :---: |
+| version | Version du format | ✔️ | ❌ |
+| idExercice | Identifiant de l'exercice | ❌ | ❌ |
+| startDate | Date de début d'extraction au format `YYYY-MM-DD` | ❌ | ❌ |
+| endDate | Date de fin d'extraction au format `YYYY-MM-DD` | ❌ | ❌ |
+| dateFilter | Modifie la colonne utilisée par les options `startDate` et `endDate`. Les valeurs possibles sont **document** (par défaut), **myunisoft** (horodatage MyUnisoft), et **accounting** (date de comptabilisation). | ❌ | ❌ |
+| source | Permet de récupérer les écritures liées à une source spécifique. | ❌ |  ❌ |
+| journalIds | Filtre pour inclure uniquement les écritures associées aux journaux spécifiés. Les ID**s** peuvent être récupérés via la route MAD [journals](./journal.md) | ❌ | ✔️ |
 
 > [!NOTE]
 > L'écart maximum entre la date de début et de fin doit être de maximums 12 mois.
@@ -42,6 +44,10 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 > [!IMPORTANT]
 > 🔹 Accès cabinet 
 > L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production (la société concernée par la demande d'extraction).
+
+### Source
+
+Le paramètre `source` doit contenir le code correspondant à l'une des sources documentées [ici](../specs/v1.0.0/entries.md#source-d-une-ecriture)
 
 ## 🔬 Réponse
 
