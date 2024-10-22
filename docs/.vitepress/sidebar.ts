@@ -254,6 +254,14 @@ export default {
             {
               text: httpText({
                 method: "GET",
+                endpoint: "/mad/movements",
+                description: "Mouvements (FEC avancé)"
+              }),
+              link: "/MAD/api/movements.md"
+            },
+            {
+              text: httpText({
+                method: "GET",
                 endpoint: "/mad/entry?id=X",
                 description: "Récupérer une écriture par ID"
               }),
