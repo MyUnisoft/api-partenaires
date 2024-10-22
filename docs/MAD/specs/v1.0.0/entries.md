@@ -105,6 +105,7 @@ Sur MyUnisoft les mouvements sont groupés dans une abstraction que nous appelon
   ],
   "additionalProducerProperties": {
       "createdAt": 1709852400,
+      "accountedAt": "2023-01-20",
       "source": {
           "name": "API",
           "thirdParty": {
@@ -266,13 +267,6 @@ interface Movement {
     name: string | null;
     code: string | null;
   } | null;
-  sections: {
-    producerId: string;
-    amount: number;
-    rate: number;
-    code: string;
-    name: string;
-  }[];
   analytics: MovementAnalytics[];
 }
 ```
@@ -288,6 +282,7 @@ interface Movement {
 ```ts
 interface EntryAdditionalProducerProps {
   createdAt: number;
+  accountedAt: string;
   source: {
     name: string,
     thirdParty: {
@@ -776,6 +771,17 @@ interface Entry {
 }
 ```
 </details>
+
+#### Dates
+
+Une écriture possède plusieurs propriétés de date distinctes. Voici la définition de chacune d'elles :
+
+- `date` : représente la date officielle de l'écriture ou du document comptable.
+- `dueDate` : correspond à la date d'échéance du paiement ou du règlement associé à l'écriture (si applicable). Utilisée principalement pour les écritures de créances ou de dettes, elle indique le délai de paiement.
+- `additionalProducerProperties.createdAt` : indique l'horodatage (timestamp) du moment où l'écriture a été créée et enregistrée dans la base de données MyUnisoft.
+- `additionalProducerProperties.accountedAt` : varie en fonction du contexte :
+  - Si l'écriture est générée via l'application, cette date correspond à la validation de la saisie par l'utilisateur.
+  - Si l'écriture est issue d'un import (lors d'une migration ou d'un chargement de données, comme via un fichier TRA), cette date reprend celle de l'écriture d'origine, reflétant la date effective de la transaction dans le journal comptable.
 
 #### Source d'une écriture
 
