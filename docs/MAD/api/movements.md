@@ -8,7 +8,7 @@ next:
 ---
 
 > [!CAUTION]
-> Cette API est encore à un stade expérimental et certaines informations peuvent manquer.
+> Cette API est encore en phase expérimentale, et certaines informations peuvent être manquantes. Les réponses peuvent également être très gourmandes en termes de sérialisation JSON. Par exemple, pour des exercices contenant plus de 500 000 mouvements, la taille des réponses peut varier entre **150** et **250** Mo.
 
 # Export des mouvements
 
