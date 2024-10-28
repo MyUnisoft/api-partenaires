@@ -6,7 +6,7 @@ next: false
 ---
 
 # Création d'écriture comptable avec le format CSV
-MyUnisoft met à disposition son propre [modèle/format](./Modele_import_csv.csv) CSV pour l'import d'écritures comptable.
+MyUnisoft met à disposition son propre [modèle/format](https://github.com/MyUnisoft/api-partenaires/blob/main/docs/accounting/folder/import/Modele_import_csv.csv) CSV pour l'import d'écritures comptable.
 
 Cela correspond à la même API utilisé dans l'interface MyUnisoft `Tenue` > `Imports`
 
