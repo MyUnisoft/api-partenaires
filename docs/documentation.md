@@ -136,7 +136,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 
 #### Ecritures et mouvements
 
-- <kbd>Import</kbd> [JSON](./accounting/folder/import/json.md), [TRA+PJ](./accounting/folder/import/tra.md), [FEC](./accounting/folder/import/fec.md), [Factur-X](./accounting/folder/import/facturx.md)
+- <kbd>Import</kbd> [JSON](./accounting/folder/import/json.md), [TRA+PJ](./accounting/folder/import/tra.md), [FEC](./accounting/folder/import/fec.md), [CSV](./accounting/folder/import/csv.md), [Factur-X](./accounting/folder/import/facturx.md)
 - <kbd>Export</kbd> [JSON](./accounting/folder/export/ecritures.md), [FEC](./accounting/folder/export/FEC.md), [EDI](./accounting/folder/export/EDI.md)
 - [Attacher une pièce jointe à une écriture existante](./accounting/folder/import/pj.md)
 - [Récupérer et créer des drapeaux (flag) sur des lignes/mouvements](./accounting/folder/import/flags.md)

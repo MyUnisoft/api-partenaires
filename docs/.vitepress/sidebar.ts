@@ -134,6 +134,10 @@ export default {
                   link: "/accounting/folder/import/fec.md"
                 },
                 {
+                  text: "CSV",
+                  link: "/accounting/folder/import/csv.md"
+                },
+                {
                   text: "TRA+PJ",
                   link: "/accounting/folder/import/tra.md"
                 },
