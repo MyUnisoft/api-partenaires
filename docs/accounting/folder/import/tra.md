@@ -22,4 +22,4 @@ Le format du fichier .TRA est documenté dans <a href="https://github.com/MyUnis
 
 ### Arguments
 
-Par défaut, l'API n'échouera pas en cas de pièces manquantes (que ce soi dans l'archive ou suite à une indisponibilité d'un de nos services de stockage). Ce comportement peut être modifié en activant le paramètre (querystring) `mandatory_docs` avec la valeur **1**.
+Par défaut, l'API n'échouera pas en cas de pièces manquantes (que ce soit dans l'archive ou suite à une indisponibilité d'un de nos services de stockage). Ce comportement peut être modifié en activant le paramètre (querystring) `mandatory_docs` avec la valeur **1**.
