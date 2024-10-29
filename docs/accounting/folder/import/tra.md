@@ -18,3 +18,8 @@ Un TRA + PJ est une archive .zip contenant un fichier .TRA et optionnellement de
 ![](../../../images/TRA_archive.PNG)
 
 Le format du fichier .TRA est documenté dans <a href="https://github.com/MyUnisoft/api-partenaires/blob/main/docs/MAD/TRA.pdf" target="_blank">le PDF ici</a>.
+
+
+### Arguments
+
+Par défaut, l'API n'échouera pas en cas de pièces manquantes (que ce soi dans l'archive ou suite à une indisponibilité d'un de nos services de stockage). Ce comportement peut être modifié en activant le paramètre (querystring) `mandatory_docs` avec la valeur **1**.
