@@ -16,6 +16,7 @@ Les banques permettent de lier des informations bancaires (IBAN, BIC) avec un [c
 ```json
 {
   "producerId": "1993",
+  "RIB": "30007321451234567890043",
   "IBAN": "AL35202111090000000001234567",
   "BIC": "SGSBALTX",
   "account": {
@@ -53,6 +54,7 @@ Ci-dessous les définitions avec TypeScript et JSON Schema.
 ```ts
 interface Bank {
   producerId: string;
+  RIB: string | null;
   IBAN: string;
   BIC: string;
   account: SimplifiedAccount | null;
@@ -174,17 +176,21 @@ interface Bank {
 
 ## Compatibilité TRA
 
-RIB (**BQC**). Page 51 de la spécification.
+RIB. Page 51 de la spécification.
 
 | nom de la colonne | position | chemin de la propriété MyUnisoft |
 | --- | --- | --- | 
 | FIXE | 1 | N/A |
-| IDENTIFIANT | 4 | `BQC` |
-| GENERAL | 24 | account.number |
-| LIBELLE | 41 | account.name |
-| BIC | 375 | BIC |
-| BANQUE | 912 | journal.customerReferenceCode |
-| CODEIBAN | 998 | IBAN |
+| IDENTIFIANT | 4 | `RIB` |
+| AXULIAIRE | 7 | account.name |
+| NUMERORIB | 24 | RIB |
+| PRINCIPAL | 30 | additionalProducerProperties.isDefault |
+| ETATBBQ | 31 | RIB |
+| GUICHET | 36 | RIB |
+| NUMEROCOMPTE | account.number |
+| CLERIB | 52 | RIB |
+| CODEBIC | 119 | BIC |
+| CODEIBAN | 160 | IBAN |
 
 > [!WARNING]
-> Attention à ne pas confondre avec la section `BQE`
+> Attention à ne pas confondre avec la section `BQC` (Compléments sur Banque) ou `BQE` (Banques)
