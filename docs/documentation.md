@@ -122,6 +122,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer les dossiers de productions (entreprises)](./accounting/society.md)
 - [Récupérer le paramétrage comptable d'un dossier de production](accounting/firm/accounting_parameters.md)
 - [Récupérer les filiales associées à une entreprise](accounting/firm/filiale_associate.md)
+- [Récupérer le paramétrage plans comptables étalons](./accounting/firm/pcg_etalon.md)
 
 ### Guides sur les API comptabilités
 
