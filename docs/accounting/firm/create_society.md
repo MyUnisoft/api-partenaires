@@ -133,4 +133,18 @@ Type du dossier qui correspond à la propriété  `id_type_company`.
 | 9 | Etablissement |
 | 10 | Cabinet |
 
+### Utilisateurs (Expert comptable, Manager et Collaborateur)
+
+Cet affichage correspond à l'onglet `Utilisateurs` du **CRM**, permettant de configurer les responsables du dossier (personnes physiques).
+
+![](../../images/crm_users_responsable.PNG)
+
+Les trois champs doivent être mis à jour en utilisant les clés suivantes, chaque clé contenant l’ID de la personne physique (préalablement récupéré via l'API users_v2) :
+
+- Expert-comptable : `id_accountant`
+- Manager : `id_rm`
+- Collaborateur : `id_collab`
+
+Pour plus d'informations, consultez le guide : [Récupérer les utilisateurs et personne physiques d'un schéma (cabinet)](./users.md)
+
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
