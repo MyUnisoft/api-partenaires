@@ -139,7 +139,7 @@ Cet affichage correspond à l'onglet `Utilisateurs` du **CRM**, permettant de co
 
 ![](../../images/crm_users_responsable.PNG)
 
-Les trois champs doivent être mis à jour en utilisant les clés suivantes, chaque clé contenant l’ID de la personne physique (préalablement récupéré via l'API users_v2) :
+Les trois champs doivent être mis à jour en utilisant les clés suivantes, chacune contenant l’ID de la personne physique (préalablement récupéré via l'API users_v2) :
 
 - Expert-comptable : `id_accountant`
 - Manager : `id_rm`
