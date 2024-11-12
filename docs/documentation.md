@@ -125,6 +125,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer les filiales associées à une entreprise](accounting/firm/filiale_associate.md)
 - [Récupérer le paramétrage plans comptables étalons](./accounting/firm/pcg_etalon.md)
 - [Récupérer les portefeuilles](./accounting/firm/wallets.md)
+- [Gérer les utilisateurs d'un schéma](./accounting/firm/user_create_update.md)
 
 ### Guides sur les API comptabilités
 
