@@ -117,6 +117,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 
 ### Guides sur les API cabinets
 - [Création et mise à jour d'un dossier de production](./accounting/firm/create_society.md)
+  - [Mise à jour des paramètres comptable d'un dossier de production](./accounting/firm/society_accounting_parameters.md)
 - [Récupérer les utilisateurs et personnes physiques](./accounting/firm/users.md)
 - [Récupérer les dossiers accessibles pour un utilisateur](./accounting/firm/dossier_accessible.md)
 - [Récupérer les dossiers de productions (entreprises)](./accounting/society.md)
