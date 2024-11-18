@@ -145,16 +145,6 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer et créer des drapeaux (flag) sur des lignes/mouvements](./accounting/folder/import/flags.md)
 - [Ajout ou modification d'un commentaire sur une écriture](./accounting/firm/entry_comment.md)
 
-#### Historique
-
-Les guides et API suivantes seront prochainement remplacés par MAD.
-
-- [Récupérer les exercices](./accounting/folder/exercices.md)
-- [Récupérer les banques (RIBS / IBAN)](./accounting/folder/RIB.md)
-- [Récupérer les TVA](./accounting/folder/tva.md)
-- [Récupérer les journaux](./accounting/folder/journaux.md)
-- [Récupérer les méthodes de paiement](./accounting/folder/paiements.md)
-
 ## 👥 Contact
 
 | Prénom - Nom | Rôle(s) | Email |
