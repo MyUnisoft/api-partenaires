@@ -42,6 +42,7 @@ Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/en
 
 > [!IMPORTANT]
 > Le retour de l'API correspond à l'écriture (ce n'est pas un tableau).
+> En cas d'absence de correspondance (aucun résultat trouvé), l'API renverra un `statusCode` avec pour valeur `404`.
 
 ## 💬 Consulter les écritures sur l'interface MyUnisoft
 
