@@ -58,6 +58,15 @@ export default {
       ]
     },
     {
+      text: "🏄 Parcours éditeurs",
+      items: [
+        {
+          text: "Dataviz 📊",
+          link: "/course/dataviz.md",
+        }
+      ]
+    },
+    {
       text: "📌 Guides",
       items: [
         {
