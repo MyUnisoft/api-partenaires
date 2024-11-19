@@ -40,6 +40,11 @@ html.dark kbd {
   color: rgb(10, 200, 187);
 }
 
+.VPHomeHero {
+  padding-bottom: 20px !important;
+  margin-bottom: 20px !important;
+}
+
 .vp-doc table {
   width: 100%;
   display: table;
@@ -47,4 +52,42 @@ html.dark kbd {
 
 .no_underline {
   text-decoration: none !important;
+}
+
+div.course {
+  display: flex;
+}
+
+div.course > a + a {
+  margin-left: 10px;
+}
+
+div.course > a.soon {
+  cursor: default;
+  opacity: 0.75;
+}
+
+div.course > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--vp-c-bg-soft);
+  color: var(--vp-button-alt-text);
+  padding: 12px;
+  border: 1px solid var(--vp-c-bg-soft);
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+div.course > a:hover {
+  cursor: pointer;
+  border: 1px solid var(--vp-c-brand-1);
+}
+
+div.course > a p {
+  margin: 0px;
 }
