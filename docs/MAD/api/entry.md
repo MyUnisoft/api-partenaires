@@ -31,6 +31,7 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 | --- | --- | :---: |
 | version | version du format | ✔️ |
 | id | producerId de l'écriture, numéro de la facture ou identifiant du partenaire | ✔️ |
+| draft | Si présent, la recherche se limitera exclusivement aux écritures en attente de validation | ❌ |
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet 

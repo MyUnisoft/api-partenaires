@@ -37,6 +37,7 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 | dateFilter | Modifie la colonne utilisée par les options `startDate` et `endDate`. Les valeurs possibles sont **document** (par défaut), **myunisoft** (horodatage MyUnisoft), et **accounting** (date de comptabilisation). | ❌ | ❌ |
 | source | Permet de récupérer les écritures liées à une source spécifique. | ❌ |  ❌ |
 | journalIds | Filtre pour inclure uniquement les écritures associées aux journaux spécifiés. Les ID**s** peuvent être récupérés via la route MAD [journals](./journal.md) | ❌ | ✔️ |
+| draft | Si présent, l'API retournera uniquement les écritures en attente de validation | ❌ | ❌ |
 
 > [!NOTE]
 > L'écart maximum entre la date de début et de fin doit être de maximums 12 mois.
