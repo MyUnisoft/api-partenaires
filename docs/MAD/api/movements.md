@@ -41,6 +41,7 @@ Le paramétrage de cette route s'effectue uniquement via des [query strings](htt
 | source | Permet de récupérer les écritures liées à une source spécifique. | ❌ |  ❌ |
 | classAccount | Inclut uniquement les comptes commençant par la classe/catégorie spécifiée. Peut prendre une ou plusieurs racines. | ❌ | ✔️ |
 | lettering | Filtre les mouvements selon l'état du lettrage : `none`, `partial`, ou `complete` | ❌ | ❌ |
+| draft | Si présent, l'API retournera uniquement les écritures en attente de validation | ❌ | ❌ |
 
 > [!NOTE]
 > L'écart entre la date de début et de fin doit être de maximum 12 mois.
