@@ -118,3 +118,4 @@ dist
 # VitePress
 docs/.vitepress/dist
 docs/.vitepress/cache
+image_list.json

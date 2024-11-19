@@ -40,4 +40,7 @@ Laissez-vous guider par des parcours et des usages conçus à partir de l'expér
   <a href="course/dataviz.html">
     <p>📊 Dataviz</p>
   </a>
+  <a href="course/ged.html">
+    <p>📂 GED</p>
+  </a>
 </div>
