@@ -26,7 +26,7 @@ La route prend deux arguments dont un optionnel pour l'accès société:
 - **accountingFolderId** (l'id du dossier de production/la société). N'est pas obligatoire avec 🔸 Accès par société.
 
 > [!NOTE]
-> Pour récupérer l'id d'un exercice, nous vous invitons à consulter le guide [Récupérer les exercices d'un dossier de production](../exercices.md)
+> Pour récupérer l'id d'un exercice, nous vous invitons à consulter le guide [Récupérer les exercices d'un dossier de production](../../../MAD/api/exercice.md)
 
 l'API retourne le fichier directement sous la forme d'un stream.
 

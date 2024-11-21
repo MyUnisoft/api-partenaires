@@ -22,7 +22,7 @@ curl --location --request GET 'https://app.myunisoft.fr/api/v1/dashboard?applica
 ```
 
 > [!NOTE]
-> Il est nécessaire de fournir l'id d'un exercice. Voir la [documentation suivante](./exercices.md) pour récupérer la liste de tous les exercices d'un dossier de production.
+> Il est nécessaire de fournir l'id d'un exercice. Voir la [documentation suivante](../../MAD/api/exercice.md) pour récupérer la liste de tous les exercices d'un dossier de production.
 
 La réponse ressemble au payload JSON suivant:
 ```json
