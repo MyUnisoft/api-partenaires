@@ -28,7 +28,7 @@ La GED intégrée à MyUnisoft offre une organisation divisée en plusieurs ongl
 
 La plupart des éditeurs de GED souhaitent :
 
-1. Être informés de la création d’un document dans MyUnisoft.
+1. Être informés de la création d’un document dans MyUnisoft (webhooks).
 2. Obtenir les informations liées aux documents (métadonnées, détails sur le dossier comptable, etc.).
 3. Télécharger des fichiers.
 4. Envoyer des fichiers.
@@ -42,7 +42,7 @@ Actuellement, l'API partenaires de la GED se limite à la gestion des éléments
 #### Documents partagés
 L’arborescence des documents partagés est entièrement personnalisée par le client. Elle se compose uniquement de dossiers et sous-dossiers créés selon les besoins spécifiques du client, offrant ainsi une structure adaptée à son utilisation.
 
-Si le dossier \_\_OLD__ est présent, cela signifie que le cabinet a propagé l’arborescence configurée au niveau cabinet à l’ensemble des dossiers comptables. Lors de cette propagation, si des documents étaient déjà présents dans l’onglet Documents partagés, ils sont automatiquement déplacés dans le dossier \_\_OLD__ pour éviter toute perte de données.
+Si le dossier <kbd>\_\_OLD__</kbd> est présent, cela signifie que le cabinet a propagé l’arborescence configurée au niveau cabinet à l’ensemble des dossiers comptables. Lors de cette propagation, si des documents étaient déjà présents dans l’onglet Documents partagés, ils sont automatiquement déplacés dans le dossier <kbd>\_\_OLD__</kbd> pour éviter toute perte de données.
 
 #### Dossier de révision
 Pour le dossier de révision, vous pouvez vous référer à l'image ci-dessous pour mieux comprendre son organisation et son contenu.
