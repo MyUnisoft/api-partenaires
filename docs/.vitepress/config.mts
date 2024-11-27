@@ -1,5 +1,22 @@
-import { defineConfig } from "vitepress"
-import sidebar from "./sidebar"
+// Import Node.js Dependencies
+import fs from "node:fs";
+import path from "node:path";
+
+// Import Third-Party Dependencies
+import { defineConfig } from "vitepress";
+
+// Import Internal Dependencies
+import sidebar from "./sidebar";
+
+function getCarouselImageList() {
+  const imagePaths = path.join(process.cwd(), "docs", "public");
+  const filePaths = fs.readdirSync(imagePaths, { recursive: true }) as string[];
+  const data = filePaths
+    .filter((filePath) => filePath.includes(path.normalize("images/carousel/")))
+    .map((filePath) => ({ path: filePath, name: path.parse(filePath).name }));
+
+  return JSON.stringify(data)
+}
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -53,6 +70,9 @@ export default defineConfig({
     }
   },
   vite: {
-    assetsInclude: ["**/*.PNG"]
+    assetsInclude: ["**/*.PNG"],
+    define: {
+      CAROUSEL_IMAGE_LIST: getCarouselImageList()
+    }
   },
 })

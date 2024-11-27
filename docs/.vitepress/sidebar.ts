@@ -63,6 +63,10 @@ export default {
         {
           text: "Dataviz 📊",
           link: "/course/dataviz.md",
+        },
+        {
+          text: "GED 📂",
+          link: "/course/ged.md",
         }
       ]
     },
