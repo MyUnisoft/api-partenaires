@@ -79,6 +79,8 @@ Voici la marche à suivre concernant l'authentification si vous êtes un cabinet
 
 La racine de notre API partenaires est la suivante: [https://api.myunisoft.fr/api/v1](https://api.myunisoft.fr/api/v1)
 
+Pour vérifier sa disponibilité et son bon fonctionnement vous pouvez appeler: [https://api.myunisoft.fr/api/partners/health](https://app.myunisoft.fr/api/partners/health)
+
 ---
 
 Toutes les réponses de l'API Partenaires contiennent un ID unique afin de traquer les requêtes.
@@ -95,7 +97,7 @@ De plus, vous devez ajouter l'en-tête “**X-Third-Party-Secret**” contenant 
 
 ```bash
 $ curl --location
---request GET 'https://api.myunisoft.fr/api/v1/vat_param' \
+--request GET 'https://api.myunisoft.fr/api/v1/mad/exercices?version=1.0.0' \
 --header 'X-Third-Party-Secret: xxx-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
