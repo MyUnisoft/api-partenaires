@@ -22,7 +22,7 @@ Dans MyUnisoft, l'exportation d'écritures comptables s'effectue dans le module:
 |export_type|Défini la période de sélection des écritures. `0` pour se baser sur un exercice et `1` pour un intervalle de temps donné|✔️|
 |from|YYYY-MM-DD|Si `export_type` vaut `1`|
 |to|YYYY-MM-DD|Si `export_type` vaut `1`|
-|exercice_id|Pour récupérer les exercices, voir le guide [suivant](https://github.com/MyUnisoft/api-partenaires/blob/main/docs/exercices.md)|Si `export_type` vaut `0`|
+|exercice_id|Pour récupérer les exercices, voir le guide [suivant](../../../MAD/api/exercice.md)|Si `export_type` vaut `0`|
 |export_attachment|Si égal à `true`, l'API exportera les pièces jointes|❌|
 
 > [!NOTE]
