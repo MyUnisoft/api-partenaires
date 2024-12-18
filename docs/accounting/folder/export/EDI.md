@@ -44,7 +44,10 @@ Il est possible que l'API tombe en erreur pour plusieurs raisons, la plus fréqu
 }
 ```
 
-Il existe aussi deux autres erreurs possibles (avec statusCode 400);
+Il existe aussi d'autres erreurs possibles :
 
-- `ACCOUNTING-FOLDER-NOT-FOUND` (L'id du dossier de production ne correspond à rien sur MyUnisoft).
-- `MISSING-ACCOUNTING-FOLDER-ID` (L'id du dossier de production est manquant, possible dans le cadre d'un 🔹 Accès cabinet)
+| code | statusCode | cause |
+| --- | --- | --- |
+| `ACCOUNTING-FOLDER-NOT-FOUND` | 400 | L'id du dossier de production ne correspond à rien sur MyUnisoft |
+| `MISSING-ACCOUNTING-FOLDER-ID` | 400 | L'id du dossier de production est manquant, possible dans le cadre d'un 🔹 Accès cabinet |
+| `DILIGENCE-NOT-VALIDATED` | 403 | Le dossier ne comporte pas de diligence validée sur l'exercice |
