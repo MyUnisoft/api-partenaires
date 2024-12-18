@@ -46,26 +46,34 @@ Pour le moment, notre API ne gère pas le retour de multiples erreurs simultané
 ## Codes d'erreur API partenaires
 
 Les codes d’erreurs (unique) sont les suivants;
+
 - **ERR-HTTP**
+- **ERR-SCHEMA-NOT-FOUND** (Le schema demandé n'existe pas).
 - **ERR-INVALID-AUTH-HEADER** (l’en-tête http “Authorization” doit être préfixé du mot clé Bearer).
 - **ERR-INVALID-JWT** (Le jeton Utilisateur ou API n’est pas valide).
 - **ERR-INVALID-USER-JWT**
 - **ERR-INVALID-API-JWT**
+- **ERR-INVALID-FIRM-JWT**
 - **ERR-API-TOKEN-NOT-FOUND** (le token n’existe pas ou est révoqué).
 - **ERR-FIRM-TOKEN-NOT-FOUND** (le token n’existe pas ou est révoqué).
+- **ERR-FOLDER-NOT-FOUND** (pas de dossier actif lié à ce token, il faut le regénérer).
 - **ERR-SECRET-NOT-CONFIGURED**
 - **ERR-SECRET-HEADER-NOT-SET** (l’en-tête X-Third-Party-Secret est manquante).
 - **ERR-INVALID-SECRET** (l’en-tête X-Third-Party-Secret n’est pas valide).
 - **ERR-MISSING-RULE**
 - **ERR-FORBIDDEN-ROUTE** (vous n’avez pas les droits d’accès pour la route).
-- **ERR-SOCIETY-DOESNT-EXIST** (la société cible n’existe pas).
-- **ERR-THIRD-PARTY-DOESNT-EXIST** (le groupe/schéma cible n’existe pas).
-- **ERR-USER-UNEXPECTED-TYPE** (l’utilisateur générant la clé n’a pas les droits nécessaires sur le schéma).
-- **ERR-API-TOKEN-GENERATION-FAILED** (la génération du token a échoué… merci de prendre contact avec nous si cela se produit).
-- **ERR-TOKEN-ACTIVATION-FAILURE** (l'activation du token a échoué… merci de prendre contact avec nous si cela se produit).
+- **ERR-FORBIDDEN-ACCESS** (vous n'avez pas les permissions requises pour accéder à l'api).
+- **ERR-THIRD-PARTY-DISCONNECTED** (l'intégration a été déconnecté par un membre de l'équipe technique MyUnisoft, la raison sera fournie en message).
+- **ERR-API-UNDER-MAINTENANCE** (l'api n'est pas disponible pour cause de maintenance).
+
+### Limitation des requêtes
+
+En raison de la mise en place d'une limitation du nombre de requêtes, vous pouvez rencontrer les erreurs spécifiques suivantes :
+
 - **ERR-TOO-MANY-REQUEST** (vous avez dépassé la limite autorisée de votre jeton).
 - **ERR-TOO-MANY-CONCURRENT-REQUEST** (vous avez dépassé la limite autorisée de demandes concurrentes à un dossier de production/une société).
-- **ERR-THIRD-PARTY-DISCONNECTED** (l'intégration a été déconnecté par un membre de l'équipe technique MyUnisoft, la raison sera fournie en message).
+
+Pour plus de détails sur la limitation du nombre de requêtes, vous pouvez consulter [la page dédiée](./ratelimit.md).
 
 ## Codes d'erreur (liste complète)
 
