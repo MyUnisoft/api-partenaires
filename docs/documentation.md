@@ -120,14 +120,14 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 ### Guides sur les API cabinets
 - [Création et mise à jour d'un dossier de production](./accounting/firm/create_society.md)
   - [Mise à jour des paramètres comptable d'un dossier de production](./accounting/firm/society_accounting_parameters.md)
-- [Récupérer les utilisateurs et personnes physiques](./accounting/firm/users.md)
+- [Gérer les utilisateurs d'un schéma](./accounting/firm/user_create_update.md)
+  - [Récupérer les utilisateurs et personnes physiques](./accounting/firm/users.md)
 - [Récupérer les dossiers accessibles pour un utilisateur](./accounting/firm/dossier_accessible.md)
 - [Récupérer les dossiers de productions (entreprises)](./accounting/society.md)
 - [Récupérer le paramétrage comptable d'un dossier de production](accounting/firm/accounting_parameters.md)
 - [Récupérer les filiales associées à une entreprise](accounting/firm/filiale_associate.md)
 - [Récupérer le paramétrage plans comptables étalons](./accounting/firm/pcg_etalon.md)
 - [Récupérer les portefeuilles](./accounting/firm/wallets.md)
-- [Gérer les utilisateurs d'un schéma](./accounting/firm/user_create_update.md)
 
 ### Guides sur les API comptabilités
 
