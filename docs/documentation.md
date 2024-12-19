@@ -148,6 +148,10 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer et créer des drapeaux (flag) sur des lignes/mouvements](./accounting/folder/import/flags.md)
 - [Ajout ou modification d'un commentaire sur une écriture](./accounting/firm/entry_comment.md)
 
+#### Documents divers
+
+- [Déposer des documents divers sur un dossier](./discussion/add_various_documents.md)
+
 ## 👥 Contact
 
 | Prénom - Nom | Rôle(s) | Email |
