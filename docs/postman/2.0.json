@@ -2,10 +2,10 @@
 	"info": {
 		"_postman_id": "c4062d0b-3f1b-4d6f-98c0-952a0ba5cccd",
 		"name": "API Partners (Public)",
-		"description": "## ✨ Summary\n\nUp to date documentation is available here : [https://myunisoft.github.io/api-partenaires/](https://myunisoft.github.io/api-partenaires/)",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "15036360",
-		"_collection_link": "https://myunisoft.postman.co/workspace/Node.js-API-~b2e1039b-b32c-4a29-84ec-2b27195223b7/collection/5276786-c4062d0b-3f1b-4d6f-98c0-952a0ba5cccd?action=share&source=collection_link&creator=15036360"
+		"description": "## ✨ Summary\n\nUp to date documentation is available here : [https://partners.api.myunisoft.fr/](https://partners.api.myunisoft.fr/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17772610",
+		"_collection_link": "https://myunisoft.postman.co/workspace/Node.js-API-~b2e1039b-b32c-4a29-84ec-2b27195223b7/collection/5276786-c4062d0b-3f1b-4d6f-98c0-952a0ba5cccd?action=share&source=collection_link&creator=17772610"
 	},
 	"item": [
 		{
@@ -40,20 +40,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "https://app.myunisoft.fr/api/authenticate/firm",
-							"protocol": "https",
-							"host": [
-								"app",
-								"myunisoft",
-								"fr"
-							],
-							"path": [
-								"api",
-								"authenticate",
-								"firm"
-							]
-						},
+						"url": "https://app.myunisoft.fr/api/authenticate/firm",
 						"description": "📢 Endpoint to authenticate with a Firm/cabinet access. Will return an API Token.\n\nA numeric property `firm` can be added to the body for accounts with access to multiple entities/schemas.\n\nIn the MyUnisoft interface it is possible to retrieve the id of the entity through the menu `Tenue` > `Liens dynamiques`. It will be enough to retrieve the \"schema number\".\n\n<img src=\"https://github.com/MyUnisoft/api-partenaires/raw/main/docs/images/liens_dynamique.PNG\" alt=\"\">\n\n!!!! PLEASE DO NOT USE THIS ENDPOINT WITH YOUR PERSONAL MYUNISOFT ACCOUNT !!!!"
 					},
 					"response": [
@@ -71,20 +58,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "https://app.myunisoft.fr/api/authenticate/firm",
-									"protocol": "https",
-									"host": [
-										"app",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"authenticate",
-										"firm"
-									]
-								}
+								"url": "https://app.myunisoft.fr/api/authenticate/firm"
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
@@ -123,19 +97,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "https://app.myunisoft.fr/api/authenticate",
-							"protocol": "https",
-							"host": [
-								"app",
-								"myunisoft",
-								"fr"
-							],
-							"path": [
-								"api",
-								"authenticate"
-							]
-						},
+						"url": "https://app.myunisoft.fr/api/authenticate",
 						"description": "⚠️ If you use Postman, disable cookies.\n\n<img src=\"https://raw.githubusercontent.com/MyUnisoft/api-partenaires/main/docs/images/user_cookie.png\" alt=\"\">"
 					},
 					"response": [
@@ -153,19 +115,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "https://app.myunisoft.fr/api/authenticate",
-									"protocol": "https",
-									"host": [
-										"app",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"authenticate"
-									]
-								}
+								"url": "https://app.myunisoft.fr/api/authenticate"
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
@@ -179,13 +129,9 @@
 					"request": {
 						"auth": {
 							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{API-TOKEN}}",
-									"type": "string"
-								}
-							]
+							"bearer": {
+								"token": "{{API-TOKEN}}"
+							}
 						},
 						"method": "GET",
 						"header": [
@@ -280,21 +226,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/key/info",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"key",
-										"info"
-									]
-								}
+								"url": "https://api.myunisoft.fr/api/v1/key/info"
 							},
 							"status": "OK",
 							"code": 200,
@@ -340,13 +272,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -361,20 +289,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/users_v2",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"users_v2"
-									]
-								},
+								"url": "https://api.myunisoft.fr/api/v1/users_v2",
 								"description": "📢 Get/fetch the list of users. Physical persons should not be confused with users. A user can be a physical person but the reverse is not necessarily true.\n\nFrom a technical point of view, a user is first and foremost someone who has access to the MyUnisoft solution (and more specifically to the firm).\n\n📌 **This endpoint only work with a cabinet (firm) access**"
 							},
 							"response": [
@@ -389,20 +304,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/users_v2",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"users_v2"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/users_v2"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -416,13 +318,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -432,20 +330,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/pers_physique",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"pers_physique"
-									]
-								},
+								"url": "https://api.myunisoft.fr/api/v1/pers_physique",
 								"description": "📢 Get/fetch the list of Physical persons.\n\n📌 **This endpoint only work with a cabinet (firm) access**"
 							},
 							"response": [
@@ -460,20 +345,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/pers_physique",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"pers_physique"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/pers_physique"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -487,13 +359,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -503,20 +371,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/wallet",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"wallet"
-									]
-								},
+								"url": "https://api.myunisoft.fr/api/v1/wallet",
 								"description": "📢 Get/fetch the list of wallets (portefeuilles). Each wallet is related to a list of companies and users.\n\n📌 **This endpoint only work with a cabinet (firm) access**"
 							},
 							"response": [
@@ -531,20 +386,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/wallet",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"wallet"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/wallet"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -558,13 +400,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -574,20 +412,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/member",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"member"
-									]
-								},
+								"url": "https://api.myunisoft.fr/api/v1/member",
 								"description": "📢 Get/fetch the list of firms (cabinets).\n\n📌 **This endpoint only work with a cabinet (firm) access**"
 							},
 							"response": [
@@ -602,20 +427,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/member",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"member"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/member"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -629,13 +441,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -645,21 +453,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/dashboard/modules",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"dashboard",
-										"modules"
-									]
-								},
+								"url": "https://api.myunisoft.fr/api/v1/dashboard/modules",
 								"description": "📢 Get/fetch the configuration/formules used for each company (dossier).\n\nPreaccounting (**preaccounting_id**):\n\n| id | label | code |\n| --- | --- | --- |\n| 1 | Evoliz Smoothie | ESMOO |\n| 2 | Evoliz Caisse | ECAI |\n| 3 | Evoliz Banana Split | EBAN |\n| 4 | Aucun | AUCU |\n\nEmployee application (**employee_app_id**):\n\n| id | label | code |\n| --- | --- | --- |\n| 1 | Coffre fort uniquement | COFF |\n| 2 | Weekera (NDF, abs + coffre) | WEEK |\n| 3 | Aucun | AUCU |\n\nMyUnisoft formule (**formula_myun_id**):\n\n| id | label | code |\n| --- | --- | --- |\n| 1 | Light | LIGHT |\n| 2 | Standard | STAN |\n| 3 | Duo | DUO |\n| 4 | Business | BUSI |\n| 5 | Light + One | LONE |\n| 6 | Standard + One | SONE |\n| 7 | Premium | PREM |\n| 8 | MyDataRH uniquement | MYDA |\n| 9 | Inactif | INAC |\n| 10 | One | ONEE |\n\n📌 **This endpoint only work with a cabinet (firm) access**"
 							},
 							"response": [
@@ -674,20 +468,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/member",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"member"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/member"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -701,13 +482,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -769,20 +546,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/society",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"society"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/society"
 									},
 									"status": "OK",
 									"code": 200,
@@ -889,20 +653,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/society",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"society"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/society"
 									},
 									"status": "OK",
 									"code": 200,
@@ -951,13 +702,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -1036,13 +783,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -1127,6 +870,54 @@
 									"body": "[\r\n\t\"1\",\r\n\t\"23\"\r\n]"
 								}
 							]
+						},
+						{
+							"name": "statistic_thirdParty",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{API_TOKEN}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": "{{root}}/api/v1/core/statistic/thirdParty",
+								"description": "📢 Get statistics for third parties"
+							},
+							"response": [
+								{
+									"name": "statistic_thirdParty",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "",
+												"type": "text"
+											}
+										],
+										"url": "{{root}}/api/v1/core/statistic/thirdParty"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"1\",\n        \"name\": \"Budget Insight\",\n        \"type\": 1,\n        \"code\": \"BUDG\",\n        \"scope\": \"Accounting Folder\",\n        \"connectedFolders\": [],\n        \"connectedFoldersCount\": 0\n    },\n    {\n        \"id\": \"2\",\n        \"name\": \"Silae\",\n        \"type\": 1,\n        \"code\": \"SILA\",\n        \"scope\": \"Accounting Folder\",\n        \"connectedFolders\": [\n            {\n                \"id\": \"29\",\n                \"state\": \"Active\",\n                \"name\": \"Dossier TEST 1\",\n                \"formulaMyun\": {\n                    \"name\": \"Standard\",\n                    \"code\": \"STAN\"\n                }\n            },\n            {\n                \"id\": \"1\",\n                \"state\": \"Active\",\n                \"name\": \"Dossier TEST 2\",\n                \"formulaMyun\": {\n                    \"name\": \"Standard\",\n                    \"code\": \"STAN\"\n                }\n            }\n        ],\n        \"connectedFoldersCount\": 2\n    }\n]"
+								}
+							]
 						}
 					],
 					"description": "Endpoints restricted to Firm/Cabinet access. Those endpoints allow to fetch information on:\n\n- The list of companies (dossiers)\n- The list of users (who have an access to the platform) and physical person"
@@ -1142,13 +933,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -1313,13 +1100,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "POST",
 										"header": [
@@ -1343,20 +1126,7 @@
 												}
 											}
 										},
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/account",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"account"
-											]
-										},
+										"url": "https://api.myunisoft.fr/api/v1/account",
 										"description": "📢 Find or automatically create an account. Useful when you'r working with the JSON format.\n\n⚠️ A `society-id` is required with a cabinet/firm access"
 									},
 									"response": [
@@ -1385,20 +1155,7 @@
 														}
 													}
 												},
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/account",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"account"
-													]
-												}
+												"url": "https://api.myunisoft.fr/api/v1/account"
 											},
 											"status": "OK",
 											"code": 200,
@@ -1432,20 +1189,7 @@
 														}
 													}
 												},
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/account",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"account"
-													]
-												}
+												"url": "https://api.myunisoft.fr/api/v1/account"
 											},
 											"_postman_previewlanguage": "json",
 											"header": null,
@@ -1464,13 +1208,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": ""
+											}
 										},
 										"method": "PUT",
 										"header": [
@@ -1500,20 +1240,7 @@
 												}
 											}
 										},
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/account",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"account"
-											]
-										},
+										"url": "https://api.myunisoft.fr/api/v1/account",
 										"description": "📢 Update account. The **account_id** and **account_number** are required (Note: account_number can be replaced with the label).\n\nJSON Body is described by the following TypeScript interface.\n\n``` ts\ninterface UpdateAccount {\n  account_id: number;\n  account_number: string;\n  label: string;\n  analytics?: boolean;\n  intraco_account?: boolean;\n  btp_autoliquidation?: boolean;\n  exoneration?: boolean;\n  vat_param_id?: number;\n  counterpart_account_id?: number;\n  das_2?: boolean;\n  ocr_autovalidation?: boolean;\n  ocr_threshold?: number;\n  provider?: boolean;\n  complementary_info?: ComplementaryInfo;\n}\n\ninterface ComplementaryInfo {\n  name?: string;\n  siren?: string;\n  id_ape?: number;\n  is_foreign?: boolean;\n\n  person_in_charge?: string;\n  profession?: string;\n\n  contact_lastname?: string;\n  contact_firstname?: string;\n  function?: string;\n  tel?: string;\n  tel2?: string;\n  email?: string;\n\n  repetition_index: string;\n  way_type_id: number;\n  address: string;\n  address_number: string;\n  address_complement: string;\n  postal_code: string;\n  city: string;\n  id_country?: number;\n\n  iban_list?: Iban[];\n  contact_list?: Contact[];\n\n  id_payment_deadline?: number;\n  payment_type_id?: number;\n\n  misc_referent?: string;\n  misc_group?: string;\n  misc_doubtful_id?: number;\n  misc_language_id?: number;\n  misc_archived?: boolean;\n}\n\ninterface Iban {\n  id?: number;\n  iban: string;\n  bic?: string;\n  rum?: string;\n}\n\ninterface Contact {\n  email: string;\n  lastname: string;\n  firstname: string;\n  tel1: string;\n  tel2: string;\n  function: string;\n  id_contact_compte_tiers?: number | null;\n  isNew?: boolean;\n}\n\n ```\n\n📌 **This endpoint only work with a cabinet (firm) access**"
 									},
 									"response": []
@@ -1528,13 +1255,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "PUT",
 										"header": [
@@ -1563,21 +1286,7 @@
 												}
 											}
 										},
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/account/contact",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"account",
-												"contact"
-											]
-										},
+										"url": "https://api.myunisoft.fr/api/v1/account/contact",
 										"description": "📢 Update account. The **account_id** and **account_number** are required (Note: account_number can be replaced with the label).\n\nJSON Body is described by the following TypeScript interface.\n\n```ts\ninterface UpdateAccount {\n  account_id: number;\n  account_number: string;\n  label: string;\n  provider?: boolean;\n  intraco_account?: boolean;\n  btp_autoliquidation?: boolean;\n  exoneration?: boolean;\n  society_id?: number;\n  vat_param_id?: number;\n  counterpart_account_id?: number;\n  das_2?: boolean;\n  complementary_info?: ComplementaryInfo;\n}\n​\ninterface ComplementaryInfo {\n  profession?: string;\n  siren?: string;\n  id_ape?: number;\n  person_in_charge?: string;\n  name?: string;\n  contact_lastname?: string;\n  contact_firstname?: string;\n  function?: string;\n  tel?: string;\n  email?: string;\n  iban_list?: Iban[];\n  id_payment_deadline?: number;\n  payment_type_id?: number;\n  address_number?: string;\n  repetition_index?: string;\n  way_type_id?: number;\n  address?: string;\n  address_complement?: string;\n  postal_code?: string;\n  city?: string;\n  country?: string;\n}\n​\ninterface Iban {\n  id_iban_compte_tiers: number;\n  iban: string;\n  bic: string;\n  etablissement: string;\n  rum_date_signature?: null;\n}\n```\n\n📌 **This endpoint only work with a cabinet (firm) access**"
 									},
 									"response": []
@@ -1587,13 +1296,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -1696,13 +1401,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -1805,13 +1506,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -1861,13 +1558,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -1979,13 +1672,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -2608,13 +2297,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "GET",
 												"header": [
@@ -2630,21 +2315,7 @@
 														"type": "text"
 													}
 												],
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/axes",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"axes"
-													]
-												},
+												"url": "https://api.myunisoft.fr/api/v1/analytics/axes",
 												"description": "Fetch the list of axes of a company."
 											},
 											"response": [
@@ -2660,21 +2331,7 @@
 																"type": "text"
 															}
 														],
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/axes",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"axes"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/axes"
 													},
 													"_postman_previewlanguage": "json",
 													"header": [
@@ -2701,13 +2358,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "GET",
 												"header": [
@@ -2723,22 +2376,7 @@
 														"type": "text"
 													}
 												],
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"axes",
-														"{{id_axe}}"
-													]
-												},
+												"url": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}",
 												"description": "Get informations of one axe."
 											},
 											"response": [
@@ -2754,21 +2392,7 @@
 																"type": "text"
 															}
 														],
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/axes/41",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"axes",
-																"41"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/axes/41"
 													},
 													"_postman_previewlanguage": "json",
 													"header": null,
@@ -2782,13 +2406,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "POST",
 												"header": [
@@ -2813,21 +2433,7 @@
 														}
 													}
 												},
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/axes",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"axes"
-													]
-												},
+												"url": "https://api.myunisoft.fr/api/v1/analytics/axes",
 												"description": "``` json\n{\n    \"$schema\": \"http://json-schema.org/draft-07/schema\",\n    \"type\": \"object\",\n    \"description\": \"liste des propriétés pour créer un axe.\",\n    \"required\": [ \"code\", \"label\"],\n    \"properties\": {\n        \"code\": {\n            \"type\": \"string\",\n            \"description\": \"Code de l'axe\"\n        },\n        \"label\": {\n            \"type\": \"string\",\n            \"description\": \"Libellé de l'axe\"\n        },\n        \"id_section_default\": {\n            \"type\": \"integer\",\n            \"description\": \"Identifiant de la section par defaut\"\n        }\n    }\n}\n\n```"
 											},
 											"response": [
@@ -2857,21 +2463,7 @@
 																}
 															}
 														},
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/axes",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"axes"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/axes"
 													},
 													"status": "Created",
 													"code": 201,
@@ -2893,13 +2485,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "PUT",
 												"header": [
@@ -2924,22 +2512,7 @@
 														}
 													}
 												},
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"axes",
-														"{{id_axe}}"
-													]
-												},
+												"url": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}",
 												"description": "``` json\n{\n    \"$schema\": \"http://json-schema.org/draft-07/schema\",\n    \"type\": \"object\",\n    \"description\": \"liste des propriétés de l'axe que l'on peut modifier\",\n    \"required\": [],\n    \"properties\": {\n        \"code\": {\n            \"type\": \"string\",\n            \"description\": \"Code de l'axe\"\n        },\n        \"label\": {\n            \"type\": \"string\",\n            \"description\": \"Libellé de l'axe\"\n        },\n        \"id_section_default\": {\n            \"type\": \"integer\",\n            \"description\": \"Identifiant de la section par defaut\"\n        }\n    }\n}\n\n```"
 											},
 											"response": [
@@ -2969,22 +2542,7 @@
 																}
 															}
 														},
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/48",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"axes",
-																"48"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/axes/48"
 													},
 													"status": "OK",
 													"code": 200,
@@ -3000,13 +2558,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "DELETE",
 												"header": [
@@ -3022,22 +2576,7 @@
 														"type": "text"
 													}
 												],
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"axes",
-														"{{id_axe}}"
-													]
-												},
+												"url": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}",
 												"description": "Get informations of one axe."
 											},
 											"response": [
@@ -3067,22 +2606,7 @@
 																}
 															}
 														},
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/48",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"axes",
-																"48"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/axes/48"
 													},
 													"status": "Accepted",
 													"code": 202,
@@ -3109,13 +2633,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "GET",
 												"header": [
@@ -3131,23 +2651,7 @@
 														"type": "text"
 													}
 												],
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/defaultsection",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"axes",
-														"{{id_axe}}",
-														"defaultsection"
-													]
-												},
+												"url": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/defaultsection",
 												"description": "Get informations of one axe."
 											},
 											"response": []
@@ -3157,13 +2661,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "GET",
 												"header": [
@@ -3218,23 +2718,7 @@
 																"type": "text"
 															}
 														],
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/41/sections",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"axes",
-																"41",
-																"sections"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/axes/41/sections"
 													},
 													"_postman_previewlanguage": "json",
 													"header": [
@@ -3261,13 +2745,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "GET",
 												"header": [
@@ -3283,22 +2763,7 @@
 														"type": "text"
 													}
 												],
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"sections",
-														"{{id_section}}"
-													]
-												},
+												"url": "https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}",
 												"description": "Get informations of one section."
 											},
 											"response": [
@@ -3314,22 +2779,7 @@
 																"type": "text"
 															}
 														],
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"sections",
-																"{{id_section}}"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}"
 													},
 													"_postman_previewlanguage": "json",
 													"header": [
@@ -3356,13 +2806,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "POST",
 												"header": [
@@ -3387,23 +2833,7 @@
 														}
 													}
 												},
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/sections",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"axes",
-														"{{id_axe}}",
-														"sections"
-													]
-												},
+												"url": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/sections",
 												"description": "When creating the default section, the by_default parameter must be added in the payload.\n\n```json\n{\n    \"$schema\": \"http://json-schema.org/draft-07/schema\",\n    \"type\": \"object\",\n    \"description\": \"liste des propriétées de l'axe que l'on veut modifier\",\n    \"required\": [\"code\"],\n    \"properties\": {\n        \"code\": {\n            \"type\": \"string\",\n            \"description\": \"Code de l'axe\"\n        },\n        \"label\": {\n            \"type\": \"string\",\n            \"description\": \"Libellé de l'axe\"\n        },\n        \"id_section_default\": {\n            \"type\": \"integer\",\n            \"description\": \"Identifiant de la section par defaut\"\n        }\n    }\n}\n```"
 											},
 											"response": [
@@ -3433,23 +2863,7 @@
 																}
 															}
 														},
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/48/sections",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"axes",
-																"48",
-																"sections"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/axes/48/sections"
 													},
 													"status": "Created",
 													"code": 201,
@@ -3471,13 +2885,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "PUT",
 												"header": [
@@ -3502,22 +2912,7 @@
 														}
 													}
 												},
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"sections",
-														"{{id_section}}"
-													]
-												},
+												"url": "https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}",
 												"description": "```json\n{\n  \"$schema\": \"http://json-schema.org/draft-07/schema\",\n  \"type\": \"object\",\n  \"description\": \"Proriétés modifiables d'une section\",\n  \"required\": [],\n  \"properties\": {\n    \"code\": {\n      \"type\": \"string\",\n      \"description\": \"code de la section\"\n    },\n    \"label\": {\n      \"type\": \"string\",\n      \"description\": \"label de la section\"\n    },\n    \"account\": {\n      \"type\": \"string\",\n      \"description\": \"chaine qui permet de savoir si oui ou non on doit utiliser cette section\",\n      \"example\":\"601;602;-601A;-601B\"\n    },\n    \"closed\": {\n      \"type\": \"boolean\",\n      \"description\": \"clos ou ouvre une section afin de la rendre active ou inactive\"\n    }\n  }\n}\n```"
 											},
 											"response": [
@@ -3547,22 +2942,7 @@
 																}
 															}
 														},
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/sections/58",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"sections",
-																"58"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/sections/58"
 													},
 													"status": "OK",
 													"code": 200,
@@ -3584,13 +2964,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "DELETE",
 												"header": [
@@ -3606,22 +2982,7 @@
 														"type": "text"
 													}
 												],
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"sections",
-														"{{id_section}}"
-													]
-												}
+												"url": "https://api.myunisoft.fr/api/v1/analytics/sections/{{id_section}}"
 											},
 											"response": [
 												{
@@ -3641,22 +3002,7 @@
 																"type": "text"
 															}
 														],
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/sections/58",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"sections",
-																"58"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/sections/58"
 													},
 													"status": "Accepted",
 													"code": 202,
@@ -3683,13 +3029,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "GET",
 												"header": [
@@ -3705,23 +3047,7 @@
 														"type": "text"
 													}
 												],
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"axes",
-														"{{id_axe}}",
-														"repartition_keys"
-													]
-												},
+												"url": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys",
 												"description": "Fetch the list of repartiton keys from one axe."
 											},
 											"response": [
@@ -3737,23 +3063,7 @@
 																"type": "text"
 															}
 														],
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/41/repartition_keys",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"axes",
-																"41",
-																"repartition_keys"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/axes/41/repartition_keys"
 													},
 													"_postman_previewlanguage": "json",
 													"header": [
@@ -3780,13 +3090,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "GET",
 												"header": [
@@ -3802,24 +3108,7 @@
 														"type": "text"
 													}
 												],
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"axes",
-														"{{id_axe}}",
-														"repartition_keys",
-														"{{id_repartition_key}}"
-													]
-												},
+												"url": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}",
 												"description": "Get the informations of one repartition key."
 											},
 											"response": [
@@ -3835,24 +3124,7 @@
 																"type": "text"
 															}
 														],
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"axes",
-																"{{id_axe}}",
-																"repartition_keys",
-																"{{id_repartition_key}}"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}"
 													},
 													"_postman_previewlanguage": "json",
 													"header": [
@@ -3879,13 +3151,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "POST",
 												"header": [
@@ -3910,23 +3178,7 @@
 														}
 													}
 												},
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"axes",
-														"{{id_axe}}",
-														"repartition_keys"
-													]
-												},
+												"url": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys",
 												"description": "```json\n{\n  \"$schema\": \"http://json-schema.org/draft-07/schema\",\n  \"type\": \"object\",\n  \"description\": \"Nouvelle clé de réparition.\",\n  \"required\": [],\n  \"properties\": {\n    \"key\": {\n      \"type\": \"string\",\n      \"description\": \"Clé/Code de la ressource\"\n    },\n    \"condition\": {\n      \"type\": \"string\",\n      \"description\": \"Condition sur les numéros de comptes permettant l'execution ou non de la clé de répartiton\",\n      \"examples\": [\n        \"6;-607,-606\"\n      ]\n    }\n  }\n}\n```"
 											},
 											"response": [
@@ -3956,23 +3208,7 @@
 																}
 															}
 														},
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/48/repartition_keys",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"axes",
-																"48",
-																"repartition_keys"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/axes/48/repartition_keys"
 													},
 													"status": "Created",
 													"code": 201,
@@ -3994,13 +3230,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "PUT",
 												"header": [
@@ -4025,24 +3257,7 @@
 														}
 													}
 												},
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"axes",
-														"{{id_axe}}",
-														"repartition_keys",
-														"{{id_repartition_key}}"
-													]
-												},
+												"url": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}",
 												"description": "``` json\n{\n  \"$schema\": \"http://json-schema.org/draft-07/schema\",\n  \"type\": \"object\",\n  \"description\": \"Valeur modifiable\",\n  \"required\": [],\n  \"properties\": {\n    \"key\": {\n      \"type\": \"string\",\n      \"description\": \"Clé/Code de la ressource \"\n    },\n    \"condition\": {\n      \"type\": \"string\",\n      \"description\": \"Condition sur les numéros de comptes permettant l'execution ou non de la clé de répartiton\",\n      \"examples\": [\n        \"6;-607,-606\"\n      ]\n    }\n  }\n}\n\n```"
 											},
 											"response": [
@@ -4072,24 +3287,7 @@
 																}
 															}
 														},
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/48/repartition_keys/5",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"axes",
-																"48",
-																"repartition_keys",
-																"5"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/axes/48/repartition_keys/5"
 													},
 													"status": "OK",
 													"code": 200,
@@ -4111,13 +3309,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "DELETE",
 												"header": [
@@ -4133,24 +3327,7 @@
 														"type": "text"
 													}
 												],
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"axes",
-														"{{id_axe}}",
-														"repartition_keys",
-														"{{id_repartition_key}}"
-													]
-												}
+												"url": "https://api.myunisoft.fr/api/v1/analytics/axes/{{id_axe}}/repartition_keys/{{id_repartition_key}}"
 											},
 											"response": [
 												{
@@ -4170,24 +3347,7 @@
 																"type": "text"
 															}
 														],
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/axes/48/repartition_keys/5",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"axes",
-																"48",
-																"repartition_keys",
-																"5"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/axes/48/repartition_keys/5"
 													},
 													"status": "Accepted",
 													"code": 202,
@@ -4214,13 +3374,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "GET",
 												"header": [
@@ -4236,23 +3392,7 @@
 														"type": "text"
 													}
 												],
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/repartition_keys/{{id_repartition_key}}/repartition",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"repartition_keys",
-														"{{id_repartition_key}}",
-														"repartition"
-													]
-												},
+												"url": "https://api.myunisoft.fr/api/v1/analytics/repartition_keys/{{id_repartition_key}}/repartition",
 												"description": "Get the distribution rates of sections."
 											},
 											"response": [
@@ -4268,23 +3408,7 @@
 																"type": "text"
 															}
 														],
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/repartition_keys/5/repartition",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"repartition_keys",
-																"5",
-																"repartition"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/repartition_keys/5/repartition"
 													},
 													"status": "OK",
 													"code": 200,
@@ -4313,13 +3437,9 @@
 											"request": {
 												"auth": {
 													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{API-TOKEN}}",
-															"type": "string"
-														}
-													]
+													"bearer": {
+														"token": "{{API-TOKEN}}"
+													}
 												},
 												"method": "POST",
 												"header": [
@@ -4344,23 +3464,7 @@
 														}
 													}
 												},
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/repartition_keys/{{id_repartition_key}}/repartition",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"repartition_keys",
-														"{{id_repartition_key}}",
-														"repartition"
-													]
-												},
+												"url": "https://api.myunisoft.fr/api/v1/analytics/repartition_keys/{{id_repartition_key}}/repartition",
 												"description": "The sum of the rates must be equal to 100.\n\n```json\n{\n  \"$schema\": \"http://json-schema.org/draft-07/schema\",\n  \"type\": \"array\",\n  \"description\": \"Liste des sections qui vont etre utilisé pour la répartition\",\n  \"items\": {\n    \"type\": \"object\",\n    \"description\": \"valeur de la répartition de la section\",\n    \"required\": [\n      \"id_section\",\n      \"rate\"\n    ],\n    \"properties\": {\n      \"id_section\": {\n        \"type\": \"integer\",\n        \"description\": \"identifiant interne de la section\"\n      },\n      \"rate\": {\n        \"type\": \"integer\",\n        \"description\": \"Taux de la répartition\"\n      }\n    }\n  }\n}\n```"
 											},
 											"response": [
@@ -4390,23 +3494,7 @@
 																}
 															}
 														},
-														"url": {
-															"raw": "https://api.myunisoft.fr/api/v1/analytics/repartition_keys/{{id_repartition_key}}/repartition",
-															"protocol": "https",
-															"host": [
-																"api",
-																"myunisoft",
-																"fr"
-															],
-															"path": [
-																"api",
-																"v1",
-																"analytics",
-																"repartition_keys",
-																"{{id_repartition_key}}",
-																"repartition"
-															]
-														}
+														"url": "https://api.myunisoft.fr/api/v1/analytics/repartition_keys/{{id_repartition_key}}/repartition"
 													},
 													"_postman_previewlanguage": "text",
 													"header": [
@@ -4428,13 +3516,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -4455,23 +3539,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/analytics/line_entries/{{id_line_entry}}/repartitions",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"analytics",
-												"line_entries",
-												"{{id_line_entry}}",
-												"repartitions"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/analytics/line_entries/{{id_line_entry}}/repartitions"
 									},
 									"response": [
 										{
@@ -4496,23 +3564,7 @@
 														"type": "text"
 													}
 												],
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/line_entries/3495/repartitions",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"line_entries",
-														"3495",
-														"repartitions"
-													]
-												}
+												"url": "https://api.myunisoft.fr/api/v1/analytics/line_entries/3495/repartitions"
 											},
 											"_postman_previewlanguage": "json",
 											"header": [
@@ -4547,23 +3599,7 @@
 														"type": "text"
 													}
 												],
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/analytics/line_entries/3495/repartitions",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"analytics",
-														"line_entries",
-														"3495",
-														"repartitions"
-													]
-												}
+												"url": "https://api.myunisoft.fr/api/v1/analytics/line_entries/3495/repartitions"
 											},
 											"_postman_previewlanguage": "json",
 											"header": [
@@ -4583,13 +3619,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -4711,13 +3743,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -4804,13 +3832,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -4916,13 +3940,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -5062,13 +4082,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -5226,13 +4242,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -5405,13 +4417,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "POST",
 										"header": [
@@ -5533,13 +4541,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "POST",
 										"header": [
@@ -5636,13 +4640,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -5775,13 +4775,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -5833,13 +4829,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "POST",
 										"header": [
@@ -5899,13 +4891,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "POST",
 										"header": [
@@ -6031,13 +5019,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "POST",
 										"header": [
@@ -6099,13 +5083,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "POST",
 										"header": [
@@ -6134,6 +5114,14 @@
 												"v1",
 												"TRA",
 												"partial"
+											],
+											"query": [
+												{
+													"key": "mandatory_docs",
+													"value": "1",
+													"description": "Si l'argument est présent, l'import de l'archive échouera en cas de pièces manquantes.",
+													"disabled": true
+												}
 											]
 										},
 										"description": "📢 Import entries with the TRA + PJ Archive format.\n\n⚠️ A `society-id` is required with a cabinet/firm access"
@@ -6166,21 +5154,7 @@
 														"src": "/C:/Users/Leon Pro/Downloads/MHINGIS_20200424104608_5ea2a75094c2a.zip"
 													}
 												},
-												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/TRA/partial",
-													"protocol": "https",
-													"host": [
-														"api",
-														"myunisoft",
-														"fr"
-													],
-													"path": [
-														"api",
-														"v1",
-														"TRA",
-														"partial"
-													]
-												}
+												"url": "https://api.myunisoft.fr/api/v1/TRA/partial"
 											},
 											"status": "OK",
 											"code": 200,
@@ -6229,13 +5203,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "POST",
 										"header": [
@@ -6294,13 +5264,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "POST",
 										"header": [
@@ -6358,13 +5324,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "POST",
 										"header": [
@@ -6472,13 +5434,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "POST",
 										"header": [
@@ -6685,13 +5643,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "PUT",
 										"header": [
@@ -6750,6 +5704,69 @@
 										"description": "📢 Company (dossier) Exercices. If an exercise is not closed **closed_at** and **closed_by** are set to `null`.\n\nExercices labels are `N+1`, `N`, `N-1`, `N-2` etc.\n\n``` ts\ninterface Exercice {\n  exercice_id: number;\n  start_date: string;\n  end_date: string;\n  /**Label de l'exercice ( N-1, N, N+1 etc..). */\n  label: string;\n  result: number;\n  /* Chiffre d'affaire sur l'exercice. */\n  ca: number;\n  closed: boolean;\n  duration: number;\n  closed_at: null | string;\n  /** ID de l'utilisateur qui a clotûré l'exercice. */\n  closed_by: null | number;\n  review_model: {\n    label: string;\n    id_review_model: number;\n  };\n  lettering_method_id: number;\n}\n\n```\n\nLa propriété lettering_method_id permet de savoir si l'exercice est **MONO** ou **MULTI**. Par défaut un exercice est **MONO**.\n\n- 1\\. MONO\n- 2\\. MULTI\n    \n\n⚠️ A `society-id` is required with a cabinet/firm access"
 									},
 									"response": []
+								},
+								{
+									"name": "CSV",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/octet-stream",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "",
+												"description": "Required with firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "file",
+											"file": {
+												"src": "/C:/Users/MYUNISOFT - Francky/Downloads/export_fec_20201002.txt"
+											}
+										},
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/csv?filename=export_csv_20201002.txt&HascodeVerif=true",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"csv"
+											],
+											"query": [
+												{
+													"key": "filename",
+													"value": "export_csv_20201002.txt"
+												},
+												{
+													"key": "HascodeVerif",
+													"value": "true",
+													"description": "Boolean "
+												}
+											]
+										},
+										"description": "⚠️ A `society-id` is required with a cabinet/firm access"
+									},
+									"response": []
 								}
 							],
 							"description": "All endpoints to import entries and documents (which will be transformed into an accounting entry)."
@@ -6762,13 +5779,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -6808,13 +5821,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "GET",
 										"header": [
@@ -6918,13 +5927,9 @@
 									"request": {
 										"auth": {
 											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{API-TOKEN}}",
-													"type": "string"
-												}
-											]
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
 										},
 										"method": "PUT",
 										"header": [
@@ -6953,23 +5958,7 @@
 												}
 											}
 										},
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/entry/line_entry/label/line_id",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"entry",
-												"line_entry",
-												"label",
-												"line_id"
-											]
-										},
+										"url": "https://api.myunisoft.fr/api/v1/entry/line_entry/label/line_id",
 										"description": "📢 Update account. The **account_id** and **account_number** are required (Note: account_number can be replaced with the label).\n\nJSON Body is described by the following TypeScript interface.\n\n```ts\ninterface UpdateAccount {\n  account_id: number;\n  account_number: string;\n  label: string;\n  provider?: boolean;\n  intraco_account?: boolean;\n  btp_autoliquidation?: boolean;\n  exoneration?: boolean;\n  society_id?: number;\n  vat_param_id?: number;\n  counterpart_account_id?: number;\n  das_2?: boolean;\n  complementary_info?: ComplementaryInfo;\n}\n​\ninterface ComplementaryInfo {\n  profession?: string;\n  siren?: string;\n  id_ape?: number;\n  person_in_charge?: string;\n  name?: string;\n  contact_lastname?: string;\n  contact_firstname?: string;\n  function?: string;\n  tel?: string;\n  email?: string;\n  iban_list?: Iban[];\n  id_payment_deadline?: number;\n  payment_type_id?: number;\n  address_number?: string;\n  repetition_index?: string;\n  way_type_id?: number;\n  address?: string;\n  address_complement?: string;\n  postal_code?: string;\n  city?: string;\n  country?: string;\n}\n​\ninterface Iban {\n  id_iban_compte_tiers: number;\n  iban: string;\n  bic: string;\n  etablissement: string;\n  rum_date_signature?: null;\n}\n```\n\n📌 **This endpoint only work with a cabinet (firm) access**"
 									},
 									"response": []
@@ -6981,13 +5970,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -7003,20 +5988,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/society",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"society"
-									]
-								},
+								"url": "https://api.myunisoft.fr/api/v1/society",
 								"description": "📢 Fetch information on a given company/dossier.\n\n> Note: If you are using a company access it is not necessary to specify a company id."
 							},
 							"response": [
@@ -7036,20 +6008,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/society",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"society"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/society"
 									},
 									"status": "OK",
 									"code": 200,
@@ -7079,20 +6038,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/society",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"society"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/society"
 									},
 									"status": "OK",
 									"code": 200,
@@ -7108,13 +6054,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": ""
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -7128,21 +6070,7 @@
 										"disabled": true
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/society/fiscal_file",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"society",
-										"fiscal_file"
-									]
-								}
+								"url": "https://api.myunisoft.fr/api/v1/society/fiscal_file"
 							},
 							"response": [
 								{
@@ -7160,21 +6088,7 @@
 												"disabled": true
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/society/fiscal_file",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"society",
-												"fiscal_file"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/society/fiscal_file"
 									},
 									"_postman_previewlanguage": "json",
 									"header": [
@@ -7195,13 +6109,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -7217,21 +6127,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/flags/comment_attach_doc",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"flags",
-										"comment_attach_doc"
-									]
-								},
+								"url": "https://api.myunisoft.fr/api/v1/flags/comment_attach_doc",
 								"description": "Fetch an entry and the associated lines with its line entry id."
 							},
 							"response": [
@@ -7252,21 +6148,7 @@
 												"disabled": true
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/entry/line_entry",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"entry",
-												"line_entry"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/entry/line_entry"
 									},
 									"status": "OK",
 									"code": 200,
@@ -7288,13 +6170,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -7311,21 +6189,7 @@
 										"disabled": true
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/society/accountingParameters",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"society",
-										"accountingParameters"
-									]
-								},
+								"url": "https://api.myunisoft.fr/api/v1/society/accountingParameters",
 								"description": "📢 Fetch accounting parameters."
 							},
 							"response": [
@@ -7352,21 +6216,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/society/accountingParameters",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"society",
-												"accountingParameters"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/society/accountingParameters"
 									},
 									"status": "OK",
 									"code": 200,
@@ -7419,13 +6269,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -7441,21 +6287,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/society/filiale_associate",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"society",
-										"filiale_associate"
-									]
-								},
+								"url": "https://api.myunisoft.fr/api/v1/society/filiale_associate",
 								"description": "📢 Fetch accounting parameters."
 							},
 							"response": [
@@ -7482,21 +6314,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/society/filiale_associate",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"society",
-												"filiale_associate"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/society/filiale_associate"
 									},
 									"status": "OK",
 									"code": 200,
@@ -7549,13 +6367,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -7565,21 +6379,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/society/exercice",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"society",
-										"exercice"
-									]
-								},
+								"url": "https://api.myunisoft.fr/api/v1/society/exercice",
 								"description": "📢 Company (dossier) Exercices. If an exercise is not closed **closed_at** and **closed_by** are set to `null`.\n\nExercices labels are `N+1`, `N`, `N-1`, `N-2` etc.\n\n``` ts\ninterface Exercice {\n  exercice_id: number;\n  start_date: string;\n  end_date: string;\n  /**Label de l'exercice ( N-1, N, N+1 etc..). */\n  label: string;\n  result: number;\n  /* Chiffre d'affaire sur l'exercice. */\n  ca: number;\n  closed: boolean;\n  duration: number;\n  closed_at: null | string;\n  /** ID de l'utilisateur qui a clotûré l'exercice. */\n  closed_by: null | number;\n  review_model: {\n    label: string;\n    id_review_model: number;\n  };\n  lettering_method_id: number;\n}\n\n```\n\nLa propriété lettering_method_id permet de savoir si l'exercice est **MONO** ou **MULTI**. Par défaut un exercice est **MONO**.\n\n- 1\\. MONO\n- 2\\. MULTI\n    \n\n⚠️ A `society-id` is required with a cabinet/firm access"
 							},
 							"response": [
@@ -7594,21 +6394,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/society/exercice",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"society",
-												"exercice"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/society/exercice"
 									},
 									"status": "OK",
 									"code": 200,
@@ -7657,13 +6443,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -7718,20 +6500,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/diary",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"diary"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/diary"
 									},
 									"status": "OK",
 									"code": 200,
@@ -7900,13 +6669,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -7916,20 +6681,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/vat_param",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"vat_param"
-									]
-								},
+								"url": "https://api.myunisoft.fr/api/v1/vat_param",
 								"description": "📢 Company (dossier) VAT parameters\n\n> Note: DED mean **Deductible** and COLL mean **Collected**\n\nVAT type:\n\n| id | label |\n| --- | --- |\n| 1 | Bien et service |\n| 2 | Immobilisation |\n| 3 | Auto-liquidation |\n| 4 | non soumis |\n| 5 | import/export |\n\nType of Exigibility\n\n| id | label |\n| --- | --- |\n| 1 | Débit (facturation) |\n| 2 | Encaissement / Décaissement |\n| 3 | Mixte |\n\n⚠️ A `society-id` is required with a cabinet/firm access"
 							},
 							"response": [
@@ -7949,20 +6701,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/vat_param",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"vat_param"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/vat_param"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -7976,13 +6715,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -7992,20 +6727,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/payment_type",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"payment_type"
-									]
-								},
+								"url": "https://api.myunisoft.fr/api/v1/payment_type",
 								"description": "📢 Company (dossier) available Payments method\n\nDefault payments are:\n\n| id | label | code |\n| --- | --- | --- |\n| 1 | Télépaiement | TP |\n| 2 | Chéque | CH |\n| 3 | Prélèvement | PRE |\n| 4 | Virement | VIR |\n| 5 | Espèce | ESP |\n\n⚠️ A `society-id` is required with a cabinet/firm access"
 							},
 							"response": [
@@ -8020,20 +6742,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/payment_type",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"payment_type"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/payment_type"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -8047,13 +6756,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -8068,20 +6773,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/rib",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"rib"
-									]
-								},
+								"url": "https://api.myunisoft.fr/api/v1/rib",
 								"description": "📢 Company (dossier) IBAN List\n\nThe response is described by the following TypeScript interface:\n\n``` typescript\ninterface RIB {\n  rib_id: number;\n  diary_id: number;\n  diary_label: string;\n  society_id: number;\n  start_date: string;\n  owner: string;\n  iban: string;\n  bic: string;\n  is_default: boolean;\n}\n\n```\n\n⚠️ A `society-id` is required with a cabinet/firm access"
 							},
 							"response": [
@@ -8096,20 +6788,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/payment_type",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"payment_type"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/payment_type"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -8123,13 +6802,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -8241,13 +6916,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -8337,13 +7008,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -8470,13 +7137,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -8491,22 +7154,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/society/{{id_society}}/associate",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"society",
-										"{{id_society}}",
-										"associate"
-									]
-								},
+								"url": "https://api.myunisoft.fr/api/v1/society/{{id_society}}/associate",
 								"description": "📢 Fetch society associates and capital.\n\n⚠️ A `society-id` is required with a cabinet/firm access."
 							},
 							"response": [
@@ -8526,23 +7174,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1//society/{{id_society}}/associate",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"",
-												"society",
-												"{{id_society}}",
-												"associate"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1//society/{{id_society}}/associate"
 									},
 									"_postman_previewlanguage": "json",
 									"header": [
@@ -8562,13 +7194,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -8578,21 +7206,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://app.myunisoft.fr/api/v1/customer_waiting_account/widget",
-									"protocol": "https",
-									"host": [
-										"app",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"customer_waiting_account",
-										"widget"
-									]
-								},
+								"url": "https://app.myunisoft.fr/api/v1/customer_waiting_account/widget",
 								"description": "📢 Get widget data (MyUnisoft homepage widget).\n\n⚠️ A society-id is required with a cabinet/firm access.\n\n> Note: if there is no data, the response will be an empty array."
 							},
 							"response": [
@@ -8607,21 +7221,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://app.myunisoft.fr/api/v1/customer_waiting_account/widget",
-											"protocol": "https",
-											"host": [
-												"app",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"customer_waiting_account",
-												"widget"
-											]
-										}
+										"url": "https://app.myunisoft.fr/api/v1/customer_waiting_account/widget"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -8635,13 +7235,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "POST",
 								"header": [
@@ -8808,13 +7404,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -8969,13 +7561,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -8985,20 +7573,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://app.myunisoft.fr/api/v1/country",
-									"protocol": "https",
-									"host": [
-										"app",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"country"
-									]
-								},
+								"url": "https://app.myunisoft.fr/api/v1/country",
 								"description": "📢 Get countries."
 							},
 							"response": [
@@ -9013,20 +7588,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://app.myunisoft.fr/api/v1/country",
-											"protocol": "https",
-											"host": [
-												"app",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"country"
-											]
-										}
+										"url": "https://app.myunisoft.fr/api/v1/country"
 									},
 									"_postman_previewlanguage": "json",
 									"header": [
@@ -9048,13 +7610,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -9197,13 +7755,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -9249,21 +7803,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/society/ape",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"society",
-												"ape"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/society/ape"
 									},
 									"status": "OK",
 									"code": 200,
@@ -9340,13 +7880,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{API-TOKEN}}",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "{{API-TOKEN}}"
+									}
 								},
 								"method": "GET",
 								"header": [
@@ -9356,20 +7892,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/flags",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"flags"
-									]
-								},
+								"url": "https://api.myunisoft.fr/api/v1/flags",
 								"description": "📢 The complete static list of available flags kind in MyUnisoft"
 							},
 							"response": [
@@ -9384,20 +7907,7 @@
 												"type": "text"
 											}
 										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/flags",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"flags"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/flags"
 									},
 									"status": "OK",
 									"code": 200,
@@ -9453,13 +7963,9 @@
 					"request": {
 						"auth": {
 							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{API-TOKEN}}",
-									"type": "string"
-								}
-							]
+							"bearer": {
+								"token": "{{API-TOKEN}}"
+							}
 						},
 						"method": "GET",
 						"header": [
@@ -9507,7 +8013,7 @@
 									}
 								],
 								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/ged/document/:documentId/data",
+									"raw": "https://api.myunisoft.fr/api/v1/document/:documentId/data",
 									"protocol": "https",
 									"host": [
 										"api",
@@ -9517,7 +8023,6 @@
 									"path": [
 										"api",
 										"v1",
-										"ged",
 										"document",
 										":documentId",
 										"data"
@@ -9536,7 +8041,6 @@
 								{
 									"key": "Content-Type",
 									"value": "application/json",
-									"name": "Content-Type",
 									"description": "",
 									"type": "text"
 								}
@@ -9551,13 +8055,9 @@
 					"request": {
 						"auth": {
 							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{API-TOKEN}}",
-									"type": "string"
-								}
-							]
+							"bearer": {
+								"token": "{{API-TOKEN}}"
+							}
 						},
 						"method": "GET",
 						"header": [
@@ -9599,13 +8099,9 @@
 					"request": {
 						"auth": {
 							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{API-TOKEN}}",
-									"type": "string"
-								}
-							]
+							"bearer": {
+								"token": "{{API-TOKEN}}"
+							}
 						},
 						"method": "GET",
 						"header": [
@@ -9615,21 +8111,7 @@
 								"type": "text"
 							}
 						],
-						"url": {
-							"raw": "https://api.myunisoft.fr/api/v1/documents/data",
-							"protocol": "https",
-							"host": [
-								"api",
-								"myunisoft",
-								"fr"
-							],
-							"path": [
-								"api",
-								"v1",
-								"documents",
-								"data"
-							]
-						},
+						"url": "https://api.myunisoft.fr/api/v1/documents/data",
 						"description": "Get documents data.\n\nSame as `/document/:documentId/data` but with an array in response.\n\nThe following querystring can be used :\n\n| **Querystring** | **Required** | **Comment** |\n| --- | --- | --- |\n| accountingFolderId | ✔️ | Accounting folder id |\n| kind | ✔️ | `AF`, `PF` or `DB` |\n| from | ✔️ | Date with `YYYY-MM-DD` format |\n| to | ❌ | Date with `YYYY-MM-DD` format Today if not provided |"
 					},
 					"response": [
@@ -9645,7 +8127,7 @@
 									}
 								],
 								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/ged/documents/data?kind=DB&accountingFolderId=3&from=2023-01-01&to=2023-01-31",
+									"raw": "https://api.myunisoft.fr/api/v1/documents/data?kind=DB&accountingFolderId=3&from=2023-01-01&to=2023-01-31",
 									"protocol": "https",
 									"host": [
 										"api",
@@ -9655,7 +8137,6 @@
 									"path": [
 										"api",
 										"v1",
-										"ged",
 										"documents",
 										"data"
 									],
@@ -9688,7 +8169,6 @@
 								{
 									"key": "Content-Type",
 									"value": "application/json",
-									"name": "Content-Type",
 									"description": "",
 									"type": "text"
 								}
@@ -9703,13 +8183,9 @@
 					"request": {
 						"auth": {
 							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{API-TOKEN}}",
-									"type": "string"
-								}
-							]
+							"bearer": {
+								"token": "{{API-TOKEN}}"
+							}
 						},
 						"method": "POST",
 						"header": [
@@ -9737,27 +8213,13 @@
 								"type": "text"
 							}
 						],
-						"url": {
-							"raw": "https://api.myunisoft.fr/api/v1/document/upload",
-							"protocol": "https",
-							"host": [
-								"api",
-								"myunisoft",
-								"fr"
-							],
-							"path": [
-								"api",
-								"v1",
-								"document",
-								"upload"
-							]
-						},
+						"url": "https://api.myunisoft.fr/api/v1/document/upload",
 						"description": "Upload raw file (binary).\n\nIf the upload is a success the API will return a status code 204."
 					},
 					"response": []
 				}
 			],
-			"description": "The following endpoints allow you to get document data and document file.\n\nThere are 3 kinds of document :\n\n- `AF` => Annual Folder\n- `PF` => Permanent Folder\n- `DB` => Documentary Base\n    \n\nFor example, to upload a document from these categories :\n\n_**Documentary Base :**_\n\nYou have to go in `Tenue > GED > Base documentaire` then use the `Ajouter un fichier` button.\n\n<img src=\"https://content.pstmn.io/aa3e3a23-4075-4f62-8151-d46eb9fbb34c/Q2FwdHVyZS5KUEc=\">\n\n_**Annual Folder :**_\n\nYou have to go in `Révision > Dossier de révision > Achats + Fournisseurs` then upload a document in a Diligence.\n\n<img src=\"https://content.pstmn.io/07f72c9e-ba02-4996-aa2a-1a71867d1bcf/Q2FwdHVyZS5KUEc=\">\n\n_**Permanent Folder :**_\n\nYou have to go in `Révision > Dossier de révision > Régularité` then upload a document in a Diligence.\n\n<img src=\"https://content.pstmn.io/8082dfc8-97e9-4bd9-9dd4-a041f9990117/Q2FwdHVyZS5KUEc=\">\n\nThese documents are respectively available in `Tenue > GED > Base documentaire > Your_folder`, `Tenue > GED > Dossier de révision > DA` and `Tenue > GED > Dossier de révision > DP`.\n\nFor each of the above actions, a `CREATE` document event is triggered. if a partner has a webhook attached to this event, they will be notified when a new document is created at MyUnisoft.\n\n> ⚠️ Document size limit is 50MB"
+			"description": "The following endpoints allow you to get document data and document file.\n\nThere are 3 kinds of document :\n\n- `AF` => Annual Folder\n    \n- `PF` => Permanent Folder\n    \n- `DB` => Documentary Base\n    \n\nFor example, to upload a document from these categories :\n\n_**Documentary Base :**_\n\nYou have to go in `Tenue > GED > Base documentaire` then use the `Ajouter un fichier` button.\n\n<img src=\"https://content.pstmn.io/aa3e3a23-4075-4f62-8151-d46eb9fbb34c/Q2FwdHVyZS5KUEc=\">\n\n_**Annual Folder :**_\n\nYou have to go in `Révision > Dossier de révision > Achats + Fournisseurs` then upload a document in a Diligence.\n\n<img src=\"https://content.pstmn.io/07f72c9e-ba02-4996-aa2a-1a71867d1bcf/Q2FwdHVyZS5KUEc=\">\n\n_**Permanent Folder :**_\n\nYou have to go in `Révision > Dossier de révision > Régularité` then upload a document in a Diligence.\n\n<img src=\"https://content.pstmn.io/8082dfc8-97e9-4bd9-9dd4-a041f9990117/Q2FwdHVyZS5KUEc=\">\n\nThese documents are respectively available in `Tenue > GED > Base documentaire > Your_folder`, `Tenue > GED > Dossier de révision > DA` and `Tenue > GED > Dossier de révision > DP`.\n\nFor each of the above actions, a `CREATE` document event is triggered. if a partner has a webhook attached to this event, they will be notified when a new document is created at MyUnisoft.\n\n> ⚠️ Document size limit is 50MB"
 		},
 		{
 			"name": "Webhook (BETA)",
@@ -9785,20 +8247,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/webhook/global",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"webhook",
-										"global"
-									]
-								}
+								"url": "https://api.myunisoft.fr/api/webhook/global"
 							},
 							"response": [
 								{
@@ -9815,20 +8264,7 @@
 												}
 											}
 										},
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/webhook",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"webhook"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/webhook"
 									},
 									"_postman_previewlanguage": null,
 									"header": null,
@@ -9848,20 +8284,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/webhook/global",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"webhook",
-										"global"
-									]
-								}
+								"url": "https://api.myunisoft.fr/api/webhook/global"
 							},
 							"response": [
 								{
@@ -9869,20 +8292,7 @@
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/webhook",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"webhook"
-											]
-										}
+										"url": "https://api.myunisoft.fr/api/v1/webhook"
 									},
 									"_postman_previewlanguage": "json",
 									"header": [
@@ -10190,13 +8600,9 @@
 					"request": {
 						"auth": {
 							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{API-TOKEN}}",
-									"type": "string"
-								}
-							]
+							"bearer": {
+								"token": "{{API-TOKEN}}"
+							}
 						},
 						"method": "POST",
 						"header": [
@@ -10215,20 +8621,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "https://api.myunisoft.fr/api/v1/webhook",
-							"protocol": "https",
-							"host": [
-								"api",
-								"myunisoft",
-								"fr"
-							],
-							"path": [
-								"api",
-								"v1",
-								"webhook"
-							]
-						}
+						"url": "https://api.myunisoft.fr/api/v1/webhook"
 					},
 					"response": [
 						{
@@ -10245,20 +8638,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/webhook",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"webhook"
-									]
-								}
+								"url": "https://api.myunisoft.fr/api/v1/webhook"
 							},
 							"_postman_previewlanguage": null,
 							"header": null,
@@ -10272,13 +8652,9 @@
 					"request": {
 						"auth": {
 							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{API-TOKEN}}",
-									"type": "string"
-								}
-							]
+							"bearer": {
+								"token": "{{API-TOKEN}}"
+							}
 						},
 						"method": "GET",
 						"header": [
@@ -10288,20 +8664,7 @@
 								"type": "text"
 							}
 						],
-						"url": {
-							"raw": "https://api.myunisoft.fr/api/v1/webhook",
-							"protocol": "https",
-							"host": [
-								"api",
-								"myunisoft",
-								"fr"
-							],
-							"path": [
-								"api",
-								"v1",
-								"webhook"
-							]
-						}
+						"url": "https://api.myunisoft.fr/api/v1/webhook"
 					},
 					"response": [
 						{
@@ -10309,20 +8672,7 @@
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/webhook",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"webhook"
-									]
-								}
+								"url": "https://api.myunisoft.fr/api/v1/webhook"
 							},
 							"_postman_previewlanguage": "json",
 							"header": [
@@ -10344,13 +8694,9 @@
 					"request": {
 						"auth": {
 							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{API-TOKEN}}",
-									"type": "string"
-								}
-							]
+							"bearer": {
+								"token": "{{API-TOKEN}}"
+							}
 						},
 						"method": "GET",
 						"header": [
@@ -10430,13 +8776,9 @@
 					"request": {
 						"auth": {
 							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{API-TOKEN}}",
-									"type": "string"
-								}
-							]
+							"bearer": {
+								"token": "{{API-TOKEN}}"
+							}
 						},
 						"method": "GET",
 						"header": [
@@ -10574,13 +8916,9 @@
 					"request": {
 						"auth": {
 							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{API-TOKEN}}",
-									"type": "string"
-								}
-							]
+							"bearer": {
+								"token": "{{API-TOKEN}}"
+							}
 						},
 						"method": "PATCH",
 						"header": [
@@ -10628,13 +8966,9 @@
 					"request": {
 						"auth": {
 							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{API-TOKEN}}",
-									"type": "string"
-								}
-							]
+							"bearer": {
+								"token": "{{API-TOKEN}}"
+							}
 						},
 						"method": "DELETE",
 						"header": [
@@ -11167,7 +9501,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://api.myunisoft.fr/api/v1/mad/entries?idExercice&version=1.0.0",
+							"raw": "https://api.myunisoft.fr/api/v1/mad/entries?version=1.0.0&idExercice",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -11182,36 +9516,54 @@
 							],
 							"query": [
 								{
+									"key": "version",
+									"value": "1.0.0",
+									"description": "MAD Format version"
+								},
+								{
 									"key": "idExercice",
 									"value": null,
 									"description": "Retrieve all entries related to this exercice id."
 								},
 								{
 									"key": "startDate",
-									"value": null,
+									"value": "",
 									"description": "Retrieve entries from this date.",
 									"disabled": true
 								},
 								{
 									"key": "endDate",
-									"value": null,
+									"value": "",
 									"description": "Retrieve entries up to this date.",
 									"disabled": true
 								},
 								{
 									"key": "journalIds",
-									"value": null,
+									"value": "",
 									"description": "N'incluent que les écritures liés aux journaux demandés",
 									"disabled": true
 								},
 								{
-									"key": "version",
-									"value": "1.0.0",
-									"description": "MAD Format version"
+									"key": "dateFilter",
+									"value": "document",
+									"description": "\"document\" | \"myunisoft\" | \"accounting\"",
+									"disabled": true
+								},
+								{
+									"key": "source",
+									"value": "",
+									"description": "\"M\" | \"O\" | \"IB\" | \"P\" | \"EXT\" | \"L\" | \"OD_TVA\" | \"REM_BQ\" | \"WORKSHEET\" | \"OD_CALC_IS\" | \"AN\" | \"OD_ECART\" | \"E\" | \"QUADRA\" | \"CEGID\" | \"FEC\" | \"EXCEL\" | \"RB_JDC\" | \"RB_QT\" | \"RB_SB\" | \"RB_FTP\" | \"RTVR\" | \"QUICK\" | \"ABO\" | \"PRLV_SEPA\" | \"ACD\" | \"RB_MANUEL\" | \"VIRT_SEPA\" | \"API\"",
+									"disabled": true
+								},
+								{
+									"key": "draft",
+									"value": null,
+									"description": "true | false (default)",
+									"disabled": true
 								}
 							]
 						},
-						"description": "[https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/entries.md](https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/entries.md)\n\n| nom | description | obligatoire |\n| --- | --- | --- |\n| version | version du format | ✔️ |\n| idExercice | id exercice | ❌ |\n| startDate | Date de début d'extraction au format `YYYYMMDD` | ❌ |\n| endDate | Date de fin d'extraction au format `YYYYMMDD` | ❌ |"
+						"description": "[https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/entries.md](https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/entries.md)\n\n| nom | description | obligatoire |\n| --- | --- | --- |\n| version | version du format | ✔️ |\n| idExercice | id exercice | ❌ |\n| startDate | Date de début d'extraction au format `YYYY-MM-DD` | ❌ |\n| endDate | Date de fin d'extraction au format `YYYY-MM-DD` | ❌ |"
 					},
 					"response": [
 						{
@@ -11284,6 +9636,150 @@
 					]
 				},
 				{
+					"name": "Get movements",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Third-Party-Secret",
+								"value": ""
+							},
+							{
+								"key": "society-id",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/mad/movements?version=1.0.0&idExercice=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mad",
+								"movements"
+							],
+							"query": [
+								{
+									"key": "version",
+									"value": "1.0.0"
+								},
+								{
+									"key": "idExercice",
+									"value": "1"
+								},
+								{
+									"key": "startDate",
+									"value": "",
+									"description": "Retrieve entries from this date. (format = YYYY-MM-DD)",
+									"disabled": true
+								},
+								{
+									"key": "endDate",
+									"value": "",
+									"description": "Retrieve entries up to this date. (format = YYYY-MM-DD)",
+									"disabled": true
+								},
+								{
+									"key": "dateFilter",
+									"value": "document",
+									"description": "\"document\" | \"myunisoft\" | \"accounting\"",
+									"disabled": true
+								},
+								{
+									"key": "source",
+									"value": "",
+									"description": "\"M\" | \"O\" | \"IB\" | \"P\" | \"EXT\" | \"L\" | \"OD_TVA\" | \"REM_BQ\" | \"WORKSHEET\" | \"OD_CALC_IS\" | \"AN\" | \"OD_ECART\" | \"E\" | \"QUADRA\" | \"CEGID\" | \"FEC\" | \"EXCEL\" | \"RB_JDC\" | \"RB_QT\" | \"RB_SB\" | \"RB_FTP\" | \"RTVR\" | \"QUICK\" | \"ABO\" | \"PRLV_SEPA\" | \"ACD\" | \"RB_MANUEL\" | \"VIRT_SEPA\" | \"API\"",
+									"disabled": true
+								},
+								{
+									"key": "classAccount",
+									"value": "",
+									"description": "include only entries by accounting root asked",
+									"disabled": true
+								},
+								{
+									"key": "lettering",
+									"value": "",
+									"description": "\"none\" | \"partial\" | \"complete\"",
+									"disabled": true
+								},
+								{
+									"key": "draft",
+									"value": null,
+									"description": "true | false (default)",
+									"disabled": true
+								}
+							]
+						},
+						"description": "[https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/entries.md](https://github.com/MyUnisoft/api-partenaires/blob/main/MAD/specs/v1.0.0/entries.md)\n\n| nom | description | obligatoire |\n| --- | --- | --- |\n| version | version du format | ✔️ |\n| idExercice | id exercice | ❌ |\n| startDate | Date de début d'extraction au format `YYYY-MM-DD` | ❌ |\n| endDate | Date de fin d'extraction au format `YYYY-MM-DD` | ❌ |"
+					},
+					"response": [
+						{
+							"name": "Get movements",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/mad/entries?startDate=2024-01-01&endDate=2024-12-31&version=1.0.0",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mad",
+										"entries"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2024-01-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-12-31"
+										},
+										{
+											"key": "version",
+											"value": "1.0.0"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"producerId\": \"148627082\",\n    \"description\": \"MC DONALDS\",\n    \"dueDate\": null,\n    \"freeNumber\": null,\n    \"invoiceNumber\": \"0210123784\",\n    \"value\": {\n      \"credit\": 0,\n      \"debit\": 264.44,\n      \"amount\": -264.44\n    },\n    \"entry\": {\n      \"producerId\": \"49016246\",\n      \"date\": \"2022-01-21\",\n      \"dueDate\": null,\n      \"currency\": {\n        \"code\": \"EUR\"\n      },\n      \"journal\": {\n        \"producerId\": \"178745\",\n        \"customerReferenceCode\": \"AC\",\n        \"name\": \"JOURNAL D'ACHATS\",\n        \"type\": \"Achat\"\n      },\n      \"additionalProducerProperties\": {\n        \"source\": {\n          \"name\": \"FEC\",\n          \"thirdParty\": null\n        },\n        \"partnerMetadata\": null,\n        \"comment\": null,\n        \"createdAt\": 1642719600,\n        \"accountedAt\": \"2022-01-21\"\n      },\n      \"attachments\": {}\n    },\n    \"attachments\": {},\n    \"account\": {\n      \"producerId\": \"9267210\",\n      \"number\": \"6226100000\",\n      \"name\": \"HONORAIRES COMPTABLES\"\n    },\n    \"payment\": null,\n    \"analytics\": [\n      {\n        \"producerId\": \"4412\",\n        \"code\": \"AXE 1\",\n        \"name\": \"Axe 1\",\n        \"sections\": [\n          {\n            \"producerId\": \"499295\",\n            \"amount\": 264.44,\n            \"rate\": 100,\n            \"code\": \"AXE1SEC3\",\n            \"name\": \"Axe1Sec3\"\n          }\n        ]\n      },\n      {\n        \"producerId\": \"4413\",\n        \"code\": \"AXE 2\",\n        \"name\": \"Axe 2\",\n        \"sections\": [\n          {\n            \"producerId\": \"499296\",\n            \"amount\": 264.44,\n            \"rate\": 100,\n            \"code\": \"ATTENTE\",\n            \"name\": \"Section d'attente\"\n          }\n        ]\n      }\n    ],\n    \"lettering\": {\n      \"state\": \"none\",\n      \"value\": null\n    }\n  }\n]"
+						}
+					]
+				},
+				{
 					"name": "Get entry",
 					"request": {
 						"method": "GET",
@@ -11314,11 +9810,18 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "170300"
+									"value": "170300",
+									"description": "producerId de l'écriture, numéro de la facture ou identifiant du partenaire"
 								},
 								{
 									"key": "version",
 									"value": "1.0.0"
+								},
+								{
+									"key": "draft",
+									"value": null,
+									"description": "true | false (default)",
+									"disabled": true
 								}
 							]
 						}
@@ -12060,17 +10563,120 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Various documents",
+			"item": [
+				{
+					"name": "get various documents",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{API_TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "society-id",
+								"value": "",
+								"description": "Mandatory",
+								"type": "text"
+							},
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "",
+								"description": "Mandatory",
+								"type": "text"
+							}
+						],
+						"url": "https://api.myunisoft.fr/api/v1/variousDocuments",
+						"description": "📢 Let you get all rooms created on an accounting folder"
+					},
+					"response": []
+				},
+				{
+					"name": "add various documents",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{API_TOKEN}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "society-id",
+								"value": "",
+								"description": "Mandatory id of the accounting folder",
+								"type": "text"
+							},
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "",
+								"description": "Your X-Third-Party-Secret is mandatory",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "Mandatory chosen file you want to upload",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/variousDocuments?name=",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"variousDocuments"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "",
+									"description": "Mandatory name and extension of the document file"
+								}
+							]
+						},
+						"description": "📢 Add and upload a various document"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "health",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{root}}/api/partners/health",
+				"description": "📢 List of accessible and authorized HTTP endpoints with your access."
+			},
+			"response": []
 		}
 	],
 	"auth": {
 		"type": "bearer",
-		"bearer": [
-			{
-				"key": "token",
-				"value": "{{API-TOKEN}}",
-				"type": "string"
-			}
-		]
+		"bearer": {
+			"token": "{{API-TOKEN}}"
+		}
 	},
 	"event": [
 		{
