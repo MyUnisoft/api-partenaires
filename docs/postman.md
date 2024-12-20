@@ -8,7 +8,11 @@ next: false
 # Postman
 Collection postman correspondant à celle disponible [en ligne](https://docs.api.myunisoft.fr/#intro). Aussi accessible directement par la navigation tout en haut.
 
-- <a href="https://github.com/MyUnisoft/api-partenaires/blob/main/docs/postman/API%20Partners%20(Public).postman_collection.json" target="_blank">API Partners (Public).postman_collection.json</a>
+> [!WARNING]
+> Il existe 2 versions de collection Postman, à savoir la 2.0 et la 2.1.
+
+- <a href="https://github.com/MyUnisoft/api-partenaires/blob/main/docs/postman/2.0.json" target="_blank">Collection 2.0</a>
+- <a href="https://github.com/MyUnisoft/api-partenaires/blob/main/docs/postman/2.1.postman_collection" target="_blank">Collection 2.1</a>
 
 ## Variables
 
