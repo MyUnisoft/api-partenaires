@@ -39,6 +39,7 @@ Le paramètre (URL) de la route est le suivant :
 | clé | description | formats supportés | taille maximale |
 | --- | --- | --- | --- |
 | name | Le nom du fichier et son extension | - Documents **(.doc, .docx, .pdf)**<br>- Tableurs **(.xls, .xlsx)**<br>- Présentations **(.ppt, .pptx)**<br>- Images **(.jpeg, .jpg, .gif, .png, .bmp, .tif, .tiff, .heic, .heif)** | **15 Mégaoctets (15Mo)** |
+| pers_physique_id | l'identifiant de l'utilisateur | N/A | N/A |
 
 <details class="details custom-block"><summary>Retour JSON de l'API</summary>
 
