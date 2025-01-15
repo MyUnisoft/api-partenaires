@@ -11,7 +11,7 @@ next: false
 
 La consommation de l'api partenaire requiert une clé [JWT](https://jwt.io/) valide ainsi qu'une clé secrète `X-Third-Party-Secret`.
 
-Les clés se gèrent depuis la page **Connecteurs** dans l'application MyUnisoft: `Paramètres` > `Connecteurs`.
+Les clés se gèrent depuis les pages **Connecteurs dossier** ou **Connecteurs cabinet** (suivant votre type d'accès) dans l'application MyUnisoft: `Paramètres` > `Connecteurs dossier` ou `Connecteurs cabinet`.
 
 ![](../images/connector_path.png)
 
