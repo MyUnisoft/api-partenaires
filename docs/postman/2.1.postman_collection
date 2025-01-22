@@ -4,8 +4,8 @@
 		"name": "API Partners (Public)",
 		"description": "## ✨ Summary\n\nUp to date documentation is available here : [https://partners.api.myunisoft.fr/](https://partners.api.myunisoft.fr/)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "17772610",
-		"_collection_link": "https://myunisoft.postman.co/workspace/Node.js-API-~b2e1039b-b32c-4a29-84ec-2b27195223b7/collection/5276786-c4062d0b-3f1b-4d6f-98c0-952a0ba5cccd?action=share&source=collection_link&creator=17772610"
+		"_exporter_id": "15036360",
+		"_collection_link": "https://myunisoft.postman.co/workspace/Node.js-API-~b2e1039b-b32c-4a29-84ec-2b27195223b7/collection/5276786-c4062d0b-3f1b-4d6f-98c0-952a0ba5cccd?action=share&source=collection_link&creator=15036360"
 	},
 	"item": [
 		{
@@ -9899,7 +9899,7 @@
 								"upload"
 							]
 						},
-						"description": "Upload raw file (binary).\n\nIf the upload is a success the API will return a status code 204."
+						"description": "Upload raw file (binary).\n\nIf the upload is a success the API will return a status code 201."
 					},
 					"response": []
 				}
@@ -12466,7 +12466,7 @@
 							]
 						},
 						"url": {
-							"raw": "https://api.myunisoft.fr/api/v1/variousDocuments?name=",
+							"raw": "https://api.myunisoft.fr/api/v1/variousDocuments?name=&pers_physique_id",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -12483,6 +12483,11 @@
 									"key": "name",
 									"value": "",
 									"description": "Mandatory name and extension of the document file"
+								},
+								{
+									"key": "pers_physique_id",
+									"value": null,
+									"description": "Mandatory id from the user token"
 								}
 							]
 						},
