@@ -181,6 +181,9 @@ Voici un aperçu des deux cas d'utilisations à suivre pour ajouter un document 
 > [!TIP]
 > Lorsqu'un document est upload dans un dossier comptable via l'API GED, une notification sera envoyée pour informer le(s) client(s) de la disponibilité du document à classer.
 
+> [!TIP]
+> Si vous disposez d'un 🔹 Accès cabinet, ajoutez l'en-tête `society-id` à votre requête pour spécifier le dossier comptable à utiliser.
+
 > [!NOTE]
 > Lorsqu'un document à classer est déplacé dans le dossier de révision ou les documents partagés, aucun événement n'est déclenché.
 
