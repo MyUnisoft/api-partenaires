@@ -35,6 +35,6 @@ Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/jo
 
 ## 💬 Gérer les journaux sur l'interface MyUnisoft
 
-La liste des journaux est accessible par le biais du menu: `Paramètres` > `Tenue` > `Journaux`.
+La liste des journaux est accessible par le biais du menu: `Paramètres` > `Dossier` > `Journaux`.
 
 ![](../../images/liste_journaux.PNG)

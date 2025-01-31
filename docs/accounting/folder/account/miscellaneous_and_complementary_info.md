@@ -14,7 +14,7 @@ next: false
 
 Ce guide a pour objectif de vous aider dans la récupération et la compréhension des informations complémentaires et diverses attachées aux comptes du plan comptable (principalement les comptes clients et fournisseurs).
 
-Dans MyUnisoft le plan comptable est accessible à partir du menu: `Paramètres` > `Tenue` > `Plan comptable`.
+Dans MyUnisoft le plan comptable est accessible à partir du menu: `Paramètres` > `Dossier` > `Plan comptable`.
 
 ![](../../../images/plan_comptable.PNG)
 

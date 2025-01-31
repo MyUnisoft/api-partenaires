@@ -10,7 +10,7 @@ next: false
 # Récupérer et travailler avec le plan comptable.
 Ce guide a pour objectif de vous aider dans la gestion du plan comptable.
 
-Dans MyUnisoft le plan comptable peut être édité: `Paramètres` > `Tenue` > `Plan comptable`.
+Dans MyUnisoft le plan comptable peut être édité: `Paramètres` > `Dossier` > `Plan comptable`.
 
 ![](../../../images/plan_comptable.PNG)
 

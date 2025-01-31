@@ -10,7 +10,7 @@ next: false
 # Récupérer la TVA d'une société (dossier)
 Ce guide a pour objectif de vous aider dans la récupération des paramètres de TVA d'un dossier (société).
 
-Dans MyUnisoft les paramètres de TVA peuvent être récupérés dans `Paramètres` > `Tenue` > `Plan comptable` > `Liste TVA`.
+Dans MyUnisoft les paramètres de TVA peuvent être récupérés dans `Paramètres` > `Dossier` > `Plan comptable` > `Liste TVA`.
 
 ![](../../images/liste_tva.PNG)
 

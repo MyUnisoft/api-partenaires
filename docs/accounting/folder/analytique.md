@@ -11,7 +11,7 @@ next: false
 
 Ce guide a pour objectif de vous aider à gérer l'analytique d'un dossier MyUnisoft par API.
 
-Dans MyUnisoft la configuration de l'analytique s'effectue à partir de: `Paramètres` > `Tenue` > `Analytique`.
+Dans MyUnisoft la configuration de l'analytique s'effectue à partir de: `Paramètres` > `Dossier` > `Analytique`.
 
 > [!WARNING]
 > Par défaut l'analytique n'est pas activée.

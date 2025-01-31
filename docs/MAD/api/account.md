@@ -35,7 +35,7 @@ Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/ac
 
 ## 💬 Gérer les comptes sur l'interface MyUnisoft
 
-Le plan comptable peut être configuré à partir du menu: `Paramètres` > `Tenue` > `Plan comptable`.
+Le plan comptable peut être configuré à partir du menu: `Paramètres` > `Dossier` > `Plan comptable`.
 
 ![](../../images/plan_comptable.PNG)
 
