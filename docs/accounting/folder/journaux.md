@@ -10,7 +10,7 @@ next: false
 # Récupérer les journaux d'une société (dossier)
 Ce guide a pour objectif de vous aider dans la récupération des journaux (diary) d'une société (dossier).
 
-Dans MyUnisoft la liste des journaux est accessible en passant par `Paramètres` > `Tenue` > `Journaux`.
+Dans MyUnisoft la liste des journaux est accessible en passant par `Paramètres` > `Dossier` > `Journaux`.
 
 ![](../../images/liste_journaux.PNG)
 

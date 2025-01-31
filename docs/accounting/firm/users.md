@@ -10,7 +10,7 @@ next: false
 # Récupérer les utilisateurs et personne physiques d'un schéma (cabinet)
 Ce guide a pour objectif de vous aider dans la récupération des utilisateurs.
 
-Dans MyUnisoft les utilisateurs et personne physiques peuvent être gérés par le biais du CRM: `Ecosystème` > `CRM` > `Entreprise / Personne physique`.
+Dans MyUnisoft les utilisateurs et personne physiques peuvent être gérés par le biais du CRM: `Ecosystème` > `CRM` > `Utilisateurs`.
 
 ![](../../images/crm_users.PNG)
 

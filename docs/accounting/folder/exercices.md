@@ -10,9 +10,9 @@ next: false
 # Récupérer les exercices d'une société (dossier)
 Ce guide a pour objectif de vous aider dans la récupération des exercices d'une société (dossier).
 
-Dans MyUnisoft les exercices peuvent être gérés par le biais du CRM: `Ecosystème` > `CRM` > `Entreprise / Personne physique`.
+Dans MyUnisoft les exercices peuvent être gérés par le biais du CRM: `Ecosystème` > `CRM` > `Entreprise`.
 
-Choisir "Entreprises" dans la liste:
+"Entreprises" doit être sélectionné dans la liste:
 
 ![](../../images/crm_list_entreprises.PNG)
 

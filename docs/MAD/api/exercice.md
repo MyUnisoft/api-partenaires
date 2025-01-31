@@ -35,14 +35,14 @@ Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/ex
 
 ## 💬 Gérer les exercices sur l'interface MyUnisoft
 
-Les exercices peuvent être gérés par le biais du CRM dans le menu: `Ecosystème` > `CRM` > `Entreprise / Personne physique`.
+Les exercices peuvent être gérés par le biais du CRM dans le menu: `Ecosystème` > `CRM` > `Entreprise`.
 
 > [!NOTE]
 > Il vous sera nécessaire de sélectionner le dossier de production en amont (ou pendant la procédure).
 
 ---
 
-1 - Choisir <kbd>Entreprises</kbd> dans la liste:
+1 - <kbd>Entreprises</kbd> doit être sélectionné dans la liste:
 
 ![](../../images/crm_list_entreprises.PNG)
 
