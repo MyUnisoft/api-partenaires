@@ -15,13 +15,13 @@ Dans MyUnisoft les emprunts sont gérés depuis : `Révision` > `Feuilles de tra
 
 ![](../../images/revision_feuille_de_travail_emprunts_menu.png)
 
-Vous obtenez la liste des comptes d'immobilisations et le détails de chacun.
+Vous obtenez la liste des comptes d'immobilisations.
 
 ![](../../images/emprunts.png)
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/loans permet de récupérer la même liste mais par le biais de l'API partenaires.
+La route https://api.myunisoft.fr/api/v1/loans permet de récupérer cette liste avec l'API partenaires.
 
 ```bash
 curl --location 'https://app.dev.myunisoft.tech/api/v1/loans?dossier_revision_id=12345' \
@@ -37,11 +37,9 @@ L'endpoint attend un paramètre de requête (QuerryParams) `dossier_revision_id`
 
 | paramètre | decription |
 | --- | --- |
-| dossier_revision_id | L'id dossier de révision de l'exercice pour lequel vous souhaitez récupérer le tableau des immibilisations |
+| dossier_revision_id | L'id du dossier de révision de l'exercice que vous interrogez |
 
-Pour obtenir la liste des dossiers de révision d'une société et récupérer leur id, vous pouvez consulter la page [](./dossiers_de_révision.md).
-
-L'exécution accomplie, vous recevrez une réponse avec un `status code 200` un JSON avec **une structure similaire à l'exemple ci-dessous**
+Pour obtenir la liste des dossiers de révision et leur id : [Récupérer les dossiers de révision](./dossiers_de_révision.md).
 
 <details class="details custom-block"><summary>Retour JSON de l'API</summary>
 
@@ -139,11 +137,7 @@ L'exécution accomplie, vous recevrez une réponse avec un `status code 200` un 
 
 </details>
 
-## Définition TypeScript
-
-Le endpoint **/loans** retourne un tableau de structure Emprunt.
-
-<details class="details custom-block"><summary>Détails de l'interface Emprunt</summary>
+<details class="details custom-block"><summary>Interface TypeScript Emprunt</summary>
 
 ```ts
 export interface Emprunt {

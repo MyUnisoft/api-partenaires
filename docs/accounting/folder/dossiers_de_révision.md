@@ -11,11 +11,11 @@ next: false
 
 Ce guide va vous accompagner afin de récupérer la liste des `dossiers de révision` d'une société.
 
-Pour opérer certaines requêtes (récupération de la liste des immobilisations ou des emprunts par exemple), vous aurez besoin de renseigner en paramètre (QuerryParams) le `dossier_revision_id`.
+Pour opérer certaines requêtes, vous aurez besoin de renseigner en paramètre (QuerryParams) le `dossier_revision_id`.
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/dadp/dossier_revision_list permet de récupérer l'ensemble des dossiers de révision rattaché à une société par le biais de l'API partenaires.
+La route https://api.myunisoft.fr/api/v1/dadp/dossier_revision_list permet de récupérer cette liste avec l'API partenaires.
 
 ```bash
 curl --location 'https://app.dev.myunisoft.tech/api/v1/dadp/dossier_revision_list' \
@@ -26,8 +26,6 @@ curl --location 'https://app.dev.myunisoft.tech/api/v1/dadp/dossier_revision_lis
 
 > [!IMPORTANT]
 > Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
-
-Une fois la requête accomplie avec succès, vous recevrez réponse avec un `status code 200` un JSON avec **une structure similaire à l'exemple ci-dessous**
 
 <details class="details custom-block"><summary>Retour JSON de l'API</summary>
 
@@ -70,6 +68,6 @@ Une fois la requête accomplie avec succès, vous recevrez réponse avec un `sta
 
 </details>
 
-La valeur de la propriété `id_dossier_revision` (de type number) est celle à récupérer pour être utilisée en tant que paramètres sur d'autres endpoints.
+La valeur de la propriété `id_dossier_revision` (de type number) est celle à récupérer.
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
