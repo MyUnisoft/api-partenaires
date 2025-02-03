@@ -9,7 +9,7 @@
     "@nodesecure/fs-walk": "^2.0.0",
     "@types/node": "^22.0.0",
     "vitepress": "^1.0.1",
-    "vue3-carousel": "^0.12.0"
+    "vue3-carousel": "^0.13.0"
   },
   "overrides": {
     "rollup": "npm:@rollup/wasm-node"
