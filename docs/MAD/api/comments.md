@@ -3,15 +3,15 @@ prev:
   text: 💃 Introduction
   link: MAD/introduction.md
 next:
-  text: Compte (Spec)
-  link: MAD/specs/v1.0.0/account.md
+  text: Commentaire (Spec)
+  link: MAD/specs/v1.0.0/comments.md
 ---
 
-# Export des comptes
+# Export des commentaires
 
 ```bash
 curl --location \
---request GET 'https://api.myunisoft.fr/api/v1/mad/accounts?version=1.0.0' \
+--request GET 'https://api.myunisoft.fr/api/v1/mad/comments?version=1.0.0' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}' \
 --header 'Content-Type: application/json'
@@ -24,7 +24,8 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 | nom | description | obligatoire |
 | --- | --- | :---: |
 | version | version du format | ✔️ |
-| comment | Ajoute les commentaires liés aux comptes | ❌ |
+| type | Choix du type de commentaires que vous voulez chercher : `account`, `entry`, ou `entryTemp` | ✔️ |
+| id | Identifiant du compte / ecriture / ecriture temporaire en fonction du type choisi` | ✔️ |
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet 
@@ -32,14 +33,4 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 
 ## 🔬 Réponse
 
-Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/account.md).
-
-## 💬 Gérer les comptes sur l'interface MyUnisoft
-
-Le plan comptable peut être configuré à partir du menu: `Paramètres` > `Dossier` > `Plan comptable`.
-
-![](../../images/plan_comptable.PNG)
-
-La modification des comptes tiers `401`, `411` et `421` permettra d'ajouter des informations complémentaires à ceux-ci, telles que l'adresse du siège, les contacts, etc.
-
-![](../../images/fiche_compte_complementaire.PNG)
+Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/comments.md) sous forme de tableau.

@@ -90,6 +90,15 @@ Pour identifier les comptes auxiliaires, il vous faudra donc filtrer par les rac
 <summary>TypeScript</summary>
 
 ```ts
+export type MiscellaneousAccountLanguage = "Français" | "Anglais" | "Allemand" | "Espagnol" | "Autres" | null;
+
+export interface MiscellaneousAccount {
+  referent: string | null;
+  language: MiscellaneousAccountLanguage;
+  group: string | null;
+  archived: boolean | null;
+}
+
 export interface CompanyAccountContact {
   firstname: string | null;
   lastname: string | null;
@@ -112,207 +121,55 @@ export interface CompanyAccount {
     code: string;
     name: string;
   } | null;
+  vat: {
+    producerId: string;
+    customerReferenceCode: string;
+    rate: number;
+  } | null;
+  IBANs: string[];
   contacts: CompanyAccountContact[];
+  miscellaneous: MiscellaneousAccount | null;
+}
+
+export interface EmployeeAccount {
+  firstName: string | null;
+  lastName: string | null;
+  email: string | null;
+  phoneNumber: string | null;
+  phoneNumberBis: string | null;
+  NIR: string | null;
+  profession: string | null;
+  payment: {
+    producerId: string;
+    code: string;
+  } | null;
+  address: Address | null;
+  IBANs: string[];
+  contacts: CompanyAccountContact[];
+  miscellaneous: (MiscellaneousAccount & {
+    doubtfulAccount: {
+      producerId: string;
+      name: string;
+      number: string;
+    } | null;
+  }) | null;
 }
 
 // Account for account starting with 401, 411, 421
-export type AccountTiers = SimplifiedAccount & { company: CompanyAccount };
-
-export type Account =
-  SimplifiedAccount & { correspondanceAccount: SimplifiedAccount | null } |
-  AccountTiers;
-```
-</details>
-
-<details class="details custom-block">
-<summary>JSON Schema</summary>
-
-```json
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "object",
-  "additionalProperties": false,
-  "required": [],
-  "oneOf": [
-    {
-      "properties": {
-        "producerId": {
-          "type": "string",
-          "nullable": true
-        },
-        "number": {
-          "type": "string",
-          "nullable": true
-        },
-        "name": {
-          "type": "string",
-          "nullable": true
-        },
-        "correspondanceAccount": {
-          "type": "object",
-          "properties": {
-            "producerId": {
-              "type": "string",
-              "nullable": true
-            },
-            "number": {
-              "type": "string",
-              "nullable": true
-            },
-            "name": {
-              "type": "string",
-              "nullable": true
-            }
-          },
-          "additionalProperties": false,
-          "nullable": true
-        }
-      },
-      "additionalProperties": false
-    },
-    {
-      "properties": {
-        "producerId": {
-          "type": "string",
-          "nullable": true
-        },
-        "number": {
-          "type": "string",
-          "nullable": true
-        },
-        "name": {
-          "type": "string",
-          "nullable": true
-        },
-        "company": {
-          "additionalProperties": false,
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string",
-              "nullable": true
-            },
-            "SIREN": {
-              "type": "string",
-              "nullable": true
-            },
-            "CEO": {
-              "type": "string",
-              "nullable": true
-            },
-            "payment": {
-              "type": "object",
-              "properties": {
-                "producerId": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "code": {
-                  "type": "string",
-                  "nullable": true
-                }
-              },
-              "nullable": true
-            },
-            "address": {
-              "additionalProperties": false,
-              "type": "object",
-              "properties": {
-                "addressNumber": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "addressComplement": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "postalCode": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "streetName": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "locatingIndex": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "fullname": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "city": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "country": {
-                  "type": "string",
-                  "nullable": true
-                }
-              },
-              "nullable": true
-            },
-            "ape": {
-              "type": "object",
-              "properties": {
-                "producerId": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "code": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "name": {
-                  "type": "string",
-                  "nullable": true
-                }
-              }
-            },
-            "contacts": {
-              "type": "array",
-              "items": {
-                "additionalProperties": false,
-                "type": "object",
-                "properties": {
-                  "firstname": {
-                    "type": "string",
-                    "nullable": true
-                  },
-                  "lastname": {
-                    "type": "string",
-                    "nullable": true
-                  },
-                  "phoneNumber": {
-                    "type": "string",
-                    "nullable": true
-                  },
-                  "role": {
-                    "type": "string",
-                    "nullable": true
-                  },
-                  "email": {
-                    "type": "string",
-                    "nullable": true
-                  }
-                }
-              }
-            }
-          },
-          "required": [
-            "ape",
-            "contacts"
-          ]
-        }
-      },
-      "required": [
-        "company"
-      ],
-      "additionalProperties": false
-    }
-  ]
-}
+export type Account = SimplifiedAccount & {
+  closed: boolean;
+  comments?: SimplifiedComment[];
+} & (
+  {
+    counterpartAccount: SimplifiedAccount | null;
+    correspondanceAccount: SimplifiedAccount | null;
+  } |
+  {
+    counterpartAccount: SimplifiedAccount | null;
+    company: CompanyAccount;
+  } |
+  { employee: EmployeeAccount; }
+);
 ```
 </details>
 

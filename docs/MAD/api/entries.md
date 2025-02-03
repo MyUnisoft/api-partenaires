@@ -38,6 +38,7 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 | source | Permet de récupérer les écritures liées à une source spécifique. | ❌ |  ❌ |
 | journalIds | Filtre pour inclure uniquement les écritures associées aux journaux spécifiés. Les ID**s** peuvent être récupérés via la route MAD [journals](./journal.md) | ❌ | ✔️ |
 | draft | Si présent, l'API retournera uniquement les écritures en attente de validation | ❌ | ❌ |
+| comment | Ajoute les commentaires liés aux écritures | ❌ | ❌ |
 
 > [!NOTE]
 > L'écart maximum entre la date de début et de fin doit être de maximums 12 mois.
