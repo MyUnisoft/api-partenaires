@@ -120,7 +120,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 ### Guides sur les API cabinets
 - [Création et mise à jour d'un dossier de production](./accounting/firm/create_society.md)
   - [Mise à jour des paramètres comptable d'un dossier de production](./accounting/firm/society_accounting_parameters.md)
-  - [Créer, mettre à jour, cotûrer un exercice comptable](./accounting/firm/exercices.md)
+  - [Créer, mettre à jour, clôturer un exercice comptable](./accounting/firm/exercices.md)
 - [Gérer les utilisateurs d'un schéma](./accounting/firm/user_create_update.md)
   - [Récupérer les utilisateurs et personnes physiques](./accounting/firm/users.md)
 - [Récupérer les dossiers accessibles pour un utilisateur](./accounting/firm/dossier_accessible.md)
@@ -140,7 +140,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupération et/ou création d'un compte](./accounting/folder/account/create.md)
 - [Gérer l'analytique d'une société (dossier)](./accounting/folder/analytique.md)
 - [Récupération des données liées aux widgets et dashboards](./accounting/folder/dashboard.md)
-- [Récupérer la liste des dossiers de révision d'une société](./accounting/folder/dossiers_de_révision.md)
+- [Récupération des dossiers de révision et des modèles de dossier](./accounting/folder/dossiers_de_révision.md)
 - [Récupérer la liste des immobilisations d'une société](./accounting/folder/immobilisations.md)
 - [Récupérer la liste des emprunts d'une société](./accounting/folder/emprunts.md)
 

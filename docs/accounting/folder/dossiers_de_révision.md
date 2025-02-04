@@ -7,18 +7,20 @@ next: false
 
 <span id="readme-top"></span>
 
-# Récupérer la liste des dossiers de révisions d'une société (dossier)
+# Récupération des dossiers de révision et des modèles de dossier
 
-Ce guide va vous accompagner afin de récupérer la liste des `dossiers de révision` d'une société.
+Pour exécuter certaines requêtes, vous aurez besoin de renseigner en paramètre le `dossier_revision_id` ou l'`id_review_model`.
 
-Pour opérer certaines requêtes, vous aurez besoin de renseigner en paramètre (QuerryParams) le `dossier_revision_id`.
+Ce guide va vous accompagner pour récupérer la liste des `dossiers de révision` et celle des `modèles de dossiers de révision` d'une société.
 
-## API
+## Récupérer la liste des dossiers de révisions d'une société (dossier)
+
+### API
 
 La route https://api.myunisoft.fr/api/v1/dadp/dossier_revision_list permet de récupérer cette liste avec l'API partenaires.
 
 ```bash
-curl --location 'https://app.dev.myunisoft.tech/api/v1/dadp/dossier_revision_list' \
+curl --location 'https://api.myunisoft.fr/api/v1/dadp/dossier_revision_list' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'society-id: 1' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
@@ -69,5 +71,45 @@ curl --location 'https://app.dev.myunisoft.tech/api/v1/dadp/dossier_revision_lis
 </details>
 
 La valeur de la propriété `id_dossier_revision` (de type number) est celle à récupérer.
+
+## Récupérer la liste des modèles de dossiers de révisions d'une société (dossier)
+
+### API
+
+La route https://api.myunisoft.fr/api/v1/dadp/dossier_revision/models permet de récupérer cette liste avec l'API partenaires.
+
+```bash
+curl --location 'https://api.myunisoft.fr/api/v1/dadp/dossier_revision/models' \
+--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+--header 'society-id: 1' \
+--header 'Authorization: Bearer {{API_TOKEN}}'
+```
+
+> [!IMPORTANT]
+> Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
+
+<details class="details custom-block"><summary>Retour JSON de l'API</summary>
+
+```json
+[
+  {
+    "code": "TEST",
+    "close": false,
+    "label": "Dossier de révision - test",
+    "cree_par": "Antoine Dupont",
+    "myun_model": false,
+    "create_date": "2024-07-05T10:10:38.680461",
+    "modifie_par": "Antoine Dupont",
+    "id_pp_create": 100,
+    "id_review_model": 10,
+    "last_modify_date": "2024-07-22T17:05:24"
+  }
+  // ...
+]
+```
+
+</details>
+
+La valeur de la propriété `id_review_model` (de type number) est celle à récupérer.
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>

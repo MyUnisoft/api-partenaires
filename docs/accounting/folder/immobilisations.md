@@ -24,7 +24,7 @@ Vous obtenez la liste des comptes d'immobilisations et le détails de chacun.
 La route https://api.myunisoft.fr/api/v1/immo permet de récupérer cette liste avec l'API partenaires.
 
 ```bash
-curl --location 'https://app.myunisoft.fr/api/v1/immo?dossier_revision_id=12345' \
+curl --location 'https://api.myunisoft.fr/api/v1/immo?dossier_revision_id=12345' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'society-id: 1' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
@@ -33,11 +33,11 @@ curl --location 'https://app.myunisoft.fr/api/v1/immo?dossier_revision_id=12345'
 > [!IMPORTANT]
 > Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
 
-L'endpoint attend un paramètre de requête (QuerryParams) `dossier_revision_id` pour pouvoir être exécuté.
+L'endpoint attend un paramètre de requête `dossier_revision_id` pour pouvoir être exécuté.
 
 | paramètre | decription |
 | --- | --- |
-| dossier_revision_id | L'id du dossier de révision de l'exercice que vous interrogez |
+| `dossier_revision_id` | L'id du dossier de révision de l'exercice que vous interrogez |
 
 Pour obtenir la liste des dossiers de révision et leur id : [Récupérer les dossiers de révision](./dossiers_de_révision.md).
 

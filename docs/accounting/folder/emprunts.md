@@ -15,7 +15,7 @@ Dans MyUnisoft les emprunts sont gérés depuis : `Révision` > `Feuilles de tra
 
 ![](../../images/revision_feuille_de_travail_emprunts_menu.png)
 
-Vous obtenez la liste des comptes d'immobilisations.
+Vous obtenez la liste des comptes d'emprunts.
 
 ![](../../images/emprunts.png)
 
@@ -24,7 +24,7 @@ Vous obtenez la liste des comptes d'immobilisations.
 La route https://api.myunisoft.fr/api/v1/loans permet de récupérer cette liste avec l'API partenaires.
 
 ```bash
-curl --location 'https://app.dev.myunisoft.tech/api/v1/loans?dossier_revision_id=12345' \
+curl --location 'https://api.myunisoft.fr/api/v1/loans?dossier_revision_id=12345' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Society-id: 1' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
@@ -33,13 +33,13 @@ curl --location 'https://app.dev.myunisoft.tech/api/v1/loans?dossier_revision_id
 > [!IMPORTANT]
 > Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
 
-L'endpoint attend un paramètre de requête (QuerryParams) `dossier_revision_id` pour pouvoir être exécuté.
+L'endpoint attend un paramètre de requête `dossier_revision_id` pour pouvoir être exécuté.
 
 | paramètre | decription |
 | --- | --- |
-| dossier_revision_id | L'id du dossier de révision de l'exercice que vous interrogez |
+| `dossier_revision_id` | L'id du dossier de révision de l'exercice que vous interrogez |
 
-Pour obtenir la liste des dossiers de révision et leur id : [Récupérer les dossiers de révision](./dossiers_de_révision.md).
+Pour obtenir la liste des dossiers de révision : [Récupérer les dossiers de révision](./dossiers_de_révision.md).
 
 <details class="details custom-block"><summary>Retour JSON de l'API</summary>
 

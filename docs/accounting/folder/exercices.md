@@ -13,13 +13,13 @@ Ce guide a pour objectif de vous aider dans la récupération des exercices d'un
 
 Dans MyUnisoft les exercices peuvent être gérés par le biais du CRM: `Ecosystème` > `CRM` > `Modifier l'entreprise`.
 
-![](../../images/ecosyteme_crm_entreprise_menu.png)
+![](../../images/ecosysteme_crm_entreprise_menu.png)
 
-Choisir "Entreprises" à la question "Sur quelle liste souhaitez-vous travailler ?":
+Assurez-vous de travailler sur les **Entreprises** :
 
 ![](../../images/crm_list_entreprises.PNG)
 
-Choisir l'onglet "Exercices":
+Choisir l'onglet "Exercices" :
 
 ![](../../images/exercices.PNG)
 
