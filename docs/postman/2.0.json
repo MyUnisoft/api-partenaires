@@ -918,6 +918,221 @@
 									"body": "[\n    {\n        \"id\": \"1\",\n        \"name\": \"Budget Insight\",\n        \"type\": 1,\n        \"code\": \"BUDG\",\n        \"scope\": \"Accounting Folder\",\n        \"connectedFolders\": [],\n        \"connectedFoldersCount\": 0\n    },\n    {\n        \"id\": \"2\",\n        \"name\": \"Silae\",\n        \"type\": 1,\n        \"code\": \"SILA\",\n        \"scope\": \"Accounting Folder\",\n        \"connectedFolders\": [\n            {\n                \"id\": \"29\",\n                \"state\": \"Active\",\n                \"name\": \"Dossier TEST 1\",\n                \"formulaMyun\": {\n                    \"name\": \"Standard\",\n                    \"code\": \"STAN\"\n                }\n            },\n            {\n                \"id\": \"1\",\n                \"state\": \"Active\",\n                \"name\": \"Dossier TEST 2\",\n                \"formulaMyun\": {\n                    \"name\": \"Standard\",\n                    \"code\": \"STAN\"\n                }\n            }\n        ],\n        \"connectedFoldersCount\": 2\n    }\n]"
 								}
 							]
+						},
+						{
+							"name": "Create Exercice",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{API_TOKEN}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "1",
+										"description": "Required if you are using a firm access",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"exercice\": [\r\n        {\r\n            \"start_date\": \"2025-01-01\",\r\n            \"end_date\": \"2025-12-31\",\r\n            \"label\":\"N+1\",\r\n            \"id_review_model\":1,\r\n            \"change_model\":false,\r\n            \"used_software\":\"MyUnisoft Comptabilité\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{root}}/api/v1/society/exercice",
+								"description": "📢 This endpoint is used to create an exercice.\n\nExercices labels are `N+1`, `N`, `N-1`, `N-2` etc.\n\n``` ts\ninterface Exercice {\n  exercice_id: number;\n  start_date: string;\n  label: string;\n  end_date: string;\n  closed: boolean;\n  duration: number;\n  ca: number;\n  used_software: string;\n}\n\n ```\n\n⚠️ A `society-id` is required with a cabinet/firm access"
+							},
+							"response": [
+								{
+									"name": "society/exercice",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "Society-id",
+												"value": "",
+												"description": "With firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"exercice\": [\r\n        {\r\n            \"start_date\": \"2025-01-01\",\r\n            \"end_date\": \"2025-12-31\",\r\n            \"label\":\"N+1\",\r\n            \"id_review_model\":1,\r\n            \"change_model\":false,\r\n            \"used_software\":\"MyUnisoft Comptabilité\"\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.myunisoft.fr/api/v1/society/exercice"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "X-Rate-Limit-Remaining",
+											"value": "9"
+										},
+										{
+											"key": "X-Rate-Limit-Reset",
+											"value": "1596442585.866154"
+										},
+										{
+											"key": "X-Rate-Limit-Total",
+											"value": "10"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 03 Aug 2020 08:16:25 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Content-Length",
+											"value": "352"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update Exercice",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{API_TOKEN}}"
+									}
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "1",
+										"description": "Required if you are using a firm access",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"exercice\": [\r\n    {\r\n      \"start_date\": \"2025-01-01\",\r\n      \"end_date\": \"2026-12-31\",\r\n      \"label\": \"N+1\",\r\n      \"id_review_model\": 1,\r\n      \"change_model\": false,\r\n      \"used_software\": \"MyUnisoft Comptabilité\",\r\n      \"exercice_id\": 420\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{root}}/api/v1/society/exercice",
+								"description": "📢 This endpoint is used to update an existing Exercice.\n\nExercices labels are `N+1`, `N`, `N-1`, `N-2` etc.\n\n``` ts\ninterface Exercice {\n  exercice_id: number;\n  start_date: string;\n  label: string;\n  end_date: string;\n  closed: boolean;\n  duration: number;\n  ca: number;\n  used_software: string;\n}\n\n ```\n\n⚠️ A `society-id` is required with a cabinet/firm access\n\n⚠️ You need to specify the `exercice_id` you want to update in the body."
+							},
+							"response": [
+								{
+									"name": "society/exercice",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"exercice\": [\r\n    {\r\n      \"start_date\": \"2025-01-01\",\r\n      \"end_date\": \"2026-12-31\",\r\n      \"label\": \"N+1\",\r\n      \"id_review_model\": 1,\r\n      \"change_model\": false,\r\n      \"used_software\": \"MyUnisoft Comptabilité\",\r\n      \"exercice_id\": 420\r\n    }\r\n  ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.myunisoft.fr/api/v1/society/exercice"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "X-Rate-Limit-Remaining",
+											"value": "9"
+										},
+										{
+											"key": "X-Rate-Limit-Reset",
+											"value": "1596442585.866154"
+										},
+										{
+											"key": "X-Rate-Limit-Total",
+											"value": "10"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 03 Aug 2020 08:16:25 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Content-Length",
+											"value": "352"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
 						}
 					],
 					"description": "Endpoints restricted to Firm/Cabinet access. Those endpoints allow to fetch information on:\n\n- The list of companies (dossiers)\n- The list of users (who have an access to the platform) and physical person"
@@ -4078,6 +4293,97 @@
 									]
 								},
 								{
+									"name": "dossier revision models",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API_TOKEN}}"
+											}
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "1",
+												"description": "Required if you're using a firm access.",
+												"type": "text"
+											}
+										],
+										"url": "{{root}}/api/v1/dadp/dossier_revision/models",
+										"description": "📢 Fetch the list of review models (dossiers de révision standards et personnalisés).\n\n⚠️ `society-id` header is required **with a cabinet (firm) access**.\n\n📌 **This endpoint only work with a cabinet (firm) access.**"
+									},
+									"response": [
+										{
+											"name": "dossier revision list",
+											"originalRequest": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{API_TOKEN}}"
+													}
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "1",
+														"description": "Required if you're using a firm access.",
+														"type": "text"
+													}
+												],
+												"url": "{{root}}/api/v1/dadp/dossier_revision/models",
+												"description": "📢 Fetch the list of review models (dossiers de révision standards et personnalisés).\n\n⚠️ `society-id` header is required **with a cabinet (firm) access**.\n\n📌 **This endpoint only work with a cabinet (firm) access.**"
+											},
+											"_postman_previewlanguage": "",
+											"header": "",
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "get one review",
+											"originalRequest": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{API_TOKEN}}"
+													}
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "1",
+														"description": "Required if you're using a firm access.",
+														"type": "text"
+													}
+												],
+												"url": "{{root}}/api/v1/dadp/dossier_revision/models",
+												"description": "📢 Fetch the list of review models (dossiers de révision standards et personnalisés).\n\n⚠️ `society-id` header is required **with a cabinet (firm) access**.\n\n📌 **This endpoint only work with a cabinet (firm) access.**"
+											},
+											"_postman_previewlanguage": "",
+											"header": "",
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
 									"name": "dossier revision cycle",
 									"request": {
 										"auth": {
@@ -5959,7 +6265,7 @@
 											}
 										},
 										"url": "https://api.myunisoft.fr/api/v1/entry/line_entry/label/line_id",
-										"description": "📢 Update account. The **account_id** and **account_number** are required (Note: account_number can be replaced with the label).\n\nJSON Body is described by the following TypeScript interface.\n\n```ts\ninterface UpdateAccount {\n  account_id: number;\n  account_number: string;\n  label: string;\n  provider?: boolean;\n  intraco_account?: boolean;\n  btp_autoliquidation?: boolean;\n  exoneration?: boolean;\n  society_id?: number;\n  vat_param_id?: number;\n  counterpart_account_id?: number;\n  das_2?: boolean;\n  complementary_info?: ComplementaryInfo;\n}\n​\ninterface ComplementaryInfo {\n  profession?: string;\n  siren?: string;\n  id_ape?: number;\n  person_in_charge?: string;\n  name?: string;\n  contact_lastname?: string;\n  contact_firstname?: string;\n  function?: string;\n  tel?: string;\n  email?: string;\n  iban_list?: Iban[];\n  id_payment_deadline?: number;\n  payment_type_id?: number;\n  address_number?: string;\n  repetition_index?: string;\n  way_type_id?: number;\n  address?: string;\n  address_complement?: string;\n  postal_code?: string;\n  city?: string;\n  country?: string;\n}\n​\ninterface Iban {\n  id_iban_compte_tiers: number;\n  iban: string;\n  bic: string;\n  etablissement: string;\n  rum_date_signature?: null;\n}\n```\n\n📌 **This endpoint only work with a cabinet (firm) access**"
+										"description": "📢 Update entry lines label. You need to specify the new label and if you want to apply it to all lines or not.\n\nJSON Body is described by the following TypeScript interface.\n\n``` ts\ninterface UpdateEntryLinesLabel {\n  label: string;\n  all_lines: boolean;\n}\n\n ```\n\n📌 **This endpoint only work with a cabinet (firm) access**"
 									},
 									"response": []
 								}
@@ -6287,8 +6593,7 @@
 										"type": "text"
 									}
 								],
-								"url": "https://api.myunisoft.fr/api/v1/society/filiale_associate",
-								"description": "📢 Fetch accounting parameters."
+								"url": "https://api.myunisoft.fr/api/v1/society/filiale_associate"
 							},
 							"response": [
 								{
@@ -6437,6 +6742,157 @@
 									"body": "[\n  {\n    \"exercice_id\": 6358,\n    \"start_date\": \"20231001\",\n    \"end_date\": \"20240930\",\n    \"label\": \"N+1\",\n    \"result\": 0,\n    \"ca\": 0,\n    \"closed\": false,\n    \"duration\": 12,\n    \"closed_at\": null,\n    \"closed_by\": null,\n    \"review_model\": {\n      \"label\": \"Mod\\u00e8le Standard Myunisoft\",\n      \"id_review_model\": 1\n    },\n    \"lettering_method_id\": 1\n  },\n  {\n    \"exercice_id\": 6357,\n    \"start_date\": \"20221001\",\n    \"end_date\": \"20230930\",\n    \"label\": \"N\",\n    \"result\": 38738.95,\n    \"ca\": 671925.85,\n    \"closed\": false,\n    \"duration\": 12,\n    \"closed_at\": null,\n    \"closed_by\": null,\n    \"review_model\": {\n      \"label\": \"Mod\\u00e8le Standard Myunisoft\",\n      \"id_review_model\": 1\n    },\n    \"lettering_method_id\": 1\n  },\n  {\n    \"exercice_id\": 6356,\n    \"start_date\": \"20211001\",\n    \"end_date\": \"20220930\",\n    \"label\": \"N-1\",\n    \"result\": 4742.8263,\n    \"ca\": 1782024.08,\n    \"closed\": true,\n    \"duration\": 12,\n    \"closed_at\": \"20220930\",\n    \"closed_by\": null,\n    \"review_model\": {\n      \"label\": \"Mod\\u00e8le Standard Myunisoft\",\n      \"id_review_model\": 1\n    },\n    \"lettering_method_id\": 1\n  },\n  {\n    \"exercice_id\": 6355,\n    \"start_date\": \"20201001\",\n    \"end_date\": \"20210930\",\n    \"label\": \"N-2\",\n    \"result\": 124826.978224,\n    \"ca\": 1866723.56,\n    \"closed\": true,\n    \"duration\": 12,\n    \"closed_at\": \"20210930\",\n    \"closed_by\": null,\n    \"review_model\": {\n      \"label\": \"Mod\\u00e8le Standard Myunisoft\",\n      \"id_review_model\": 1\n    },\n    \"lettering_method_id\": 1\n  },\n  {\n    \"exercice_id\": 6354,\n    \"start_date\": \"20191001\",\n    \"end_date\": \"20200930\",\n    \"label\": \"N-3\",\n    \"result\": 150146.661863,\n    \"ca\": 1939299.12,\n    \"closed\": true,\n    \"duration\": 12,\n    \"closed_at\": \"20200930\",\n    \"closed_by\": null,\n    \"review_model\": {\n      \"label\": \"Mod\\u00e8le Standard Myunisoft\",\n      \"id_review_model\": 1\n    },\n    \"lettering_method_id\": 1\n  },\n  {\n    \"exercice_id\": 6353,\n    \"start_date\": \"20181001\",\n    \"end_date\": \"20190930\",\n    \"label\": \"N-4\",\n    \"result\": 130626.6,\n    \"ca\": 1924434.29,\n    \"closed\": true,\n    \"duration\": 12,\n    \"closed_at\": \"20190930\",\n    \"closed_by\": null,\n    \"review_model\": {\n      \"label\": \"Mod\\u00e8le Standard Myunisoft\",\n      \"id_review_model\": 1\n    },\n    \"lettering_method_id\": 1\n  }\n]\n"
 								}
 							]
+						},
+						{
+							"name": "Close Exercice",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{API_TOKEN}}"
+									}
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "1",
+										"description": "With firm access",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{root}}/api/v1/society/closeExercice?id_exercice&lettering_method_id&id_review_model&carry_forward",
+									"host": [
+										"{{root}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"society",
+										"closeExercice"
+									],
+									"query": [
+										{
+											"key": "id_exercice",
+											"value": null,
+											"description": "The id of the exercise attempted to be closed must be provided"
+										},
+										{
+											"key": "lettering_method_id",
+											"value": null,
+											"description": "Select which \"exercise lettering method\" using => available values : 1 = \"MONO\" (only on current exercise) | 2 = \"MULTI\" (lettering allowed on many exercises)\n\nBe careful with your choice, you can go from \"MONO\" to \"MULTI\" one time but no reverse is possible"
+										},
+										{
+											"key": "id_review_model",
+											"value": null,
+											"description": "Select the accounting review model to use => available default value : 1 = \"Modèle standard MyUnisoft\" (Customize this model parameters later) "
+										},
+										{
+											"key": "carry_forward",
+											"value": null,
+											"description": "To generate immediatly or later the accounting carryforwards : available values = true (for immediate generation) | false ( for manual after closure generation)"
+										}
+									]
+								},
+								"description": "📢 This endpoint is used to close an exercise.\n\n⚠️ A `society-id` is required with a cabinet/firm access"
+							},
+							"response": []
+						},
+						{
+							"name": "Emprunts",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{API_TOKEN}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
+									},
+									{
+										"key": "Society-id",
+										"value": "",
+										"description": "Required if you are using a firm access",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{root}}/api/v1/loans?dossier_revision_id=",
+									"host": [
+										"{{root}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"loans"
+									],
+									"query": [
+										{
+											"key": "dossier_revision_id",
+											"value": "",
+											"description": "The id of the review file belonging to the accounting folder"
+										}
+									]
+								},
+								"description": "📢 This endpoint is used to get all loans for a specified review file.\n\n⚠️ A `society-id` is required with a cabinet/firm access"
+							},
+							"response": []
+						},
+						{
+							"name": "Immobilsations",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{API_TOKEN}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
+									},
+									{
+										"key": "Society-id",
+										"value": "",
+										"description": "Required if you are using a firm access",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{root}}/api/v1/immo?dossier_revision_id=",
+									"host": [
+										"{{root}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"immo"
+									],
+									"query": [
+										{
+											"key": "dossier_revision_id",
+											"value": "",
+											"description": "The id of the review file belonging to the accounting folder"
+										}
+									]
+								},
+								"description": "📢 This endpoint is used to get all fixed assets and non-current assets for a specified review file.\n\n⚠️ A `society-id` is required with a cabinet/firm access"
+							},
+							"response": []
 						},
 						{
 							"name": "Diary (journaux)",
@@ -8198,18 +8654,12 @@
 							{
 								"key": "x-external-ref",
 								"value": "",
-								"description": "External reference of the partner document (not required)",
+								"description": "No required. External reference of the partner document",
 								"type": "text"
 							},
 							{
 								"key": "X-Third-Party-Secret",
 								"value": "{{X-Third-Party-Secret}}",
-								"type": "text"
-							},
-							{
-								"key": "accounting-folder-id",
-								"value": "2",
-								"description": "No required if you're token is of type 'api', otherwise it must be used",
 								"type": "text"
 							}
 						],
