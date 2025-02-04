@@ -8,15 +8,18 @@ next: false
 <span id="readme-top"></span>
 
 # Récupérer les exercices d'une société (dossier)
+
 Ce guide a pour objectif de vous aider dans la récupération des exercices d'une société (dossier).
 
-Dans MyUnisoft les exercices peuvent être gérés par le biais du CRM: `Ecosystème` > `CRM` > `Entreprise`.
+Dans MyUnisoft les exercices peuvent être gérés par le biais du CRM: `Ecosystème` > `CRM` > `Modifier l'entreprise`.
 
-"Entreprises" doit être sélectionné dans la liste:
+![](../../images/ecosysteme_crm_entreprise_menu.png)
+
+Assurez-vous de travailler sur les **Entreprises** :
 
 ![](../../images/crm_list_entreprises.PNG)
 
-Choisir l'onglet "Exercices":
+Choisir l'onglet "Exercices" :
 
 ![](../../images/exercices.PNG)
 
@@ -34,6 +37,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/society/exercic
 > Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
 
 Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à l'exemple ci-dessous**
+
 ```json
 [
   {
