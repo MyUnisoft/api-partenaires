@@ -26,5 +26,5 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 
 | nom | description | obligatoire |
 | --- | --- | :---: |
-| `mandatory_docs` | Par défaut, l'API ne retournera pas d'erreur en cas de documents manquants (que ce soit dans l'archive ou en raison de l'indisponibilité d'un de nos services de stockage). Ce comportement peut être modifié en activant le paramètre `mandatory_docs` avec la valeur **1**. | ❌ |
+| `mandatory_docs` | Par défaut, l'API ne retournera pas d'erreur en cas de documents manquants (que ce soit dans l'archive ou en raison de l'indisponibilité d'un de nos services de stockage). Ce comportement peut être modifié en activant ce paramètre avec la valeur **1**. | ❌ |
 | `HascodeVerif` | Si présent/activé (`true`), le back-end vérifiera si le fichier **TRA** n'a pas déjà été importé en calculant un hash **MD5** du fichier `.tra` présent dans l'archive. **Cette vérification ne concerne pas les pièces jointes des écritures contenues dans l'archive.** | ❌ |
