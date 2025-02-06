@@ -228,6 +228,9 @@ export default {
             {
               text: "TVA",
               link: "/MAD/specs/v1.0.0/vat"
+            },{
+              text: "Commentaire",
+              link: "/MAD/specs/v1.0.0/comments"
             },
             {
               text: "Analytique",
@@ -335,6 +338,14 @@ export default {
                 description: "Axes et sections analytiques"
               }),
               link: "/MAD/api/analytic.md"
+            },
+            {
+              text: httpText({
+                method: "GET",
+                endpoint: "/mad/comments",
+                description: "Commentaires Compte / Ecritures"
+              }),
+              link: "/MAD/api/comments.md"
             }
           ]
         }
