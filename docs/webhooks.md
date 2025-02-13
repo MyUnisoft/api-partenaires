@@ -66,7 +66,7 @@ Notre service enverra un JSON similaire à celui ci-dessous. Noter qu'**une** re
 Vous ne recevrez que les évènements et opérations que vous aurez demandé.
 
 > [!IMPORTANT]
-> Les interfaces des “**webhooks**” et “**évènements**” disponibles sont spécifiés en [Typescript](https://github.com/MyUnisoft/events/blob/main/docs/events.md) ou en [JSON-Schema](https://github.com/MyUnisoft/events/tree/main/docs/json-schema/events).
+> Les interfaces des “**webhooks**” et “**évènements**” disponibles sont spécifiés en [Typescript & JSON-Schema](https://github.com/MyUnisoft/events/blob/main/docs/events.md).
 
 ## Anatomie d'un évènement MyUnisoft
 
