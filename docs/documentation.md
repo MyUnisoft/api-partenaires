@@ -139,6 +139,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
   - [Mise à jour complète d'un compte client ou fournisseur](./accounting/folder/account/update.md)
 - [Récupération et/ou création d'un compte](./accounting/folder/account/create.md)
 - [Lettrer les mouvements d'un compte](./accounting/folder/account/lettering.md)
+  - [Récupérer la prochaine valeur de lettrage d'un compte](./accounting/folder/account/next_lettering_value.md)
 - [Gérer l'analytique d'une société (dossier)](./accounting/folder/analytique.md)
 - [Récupération des données liées aux widgets et dashboards](./accounting/folder/dashboard.md)
 - [Récupération des dossiers de révision et des modèles de dossier](./accounting/folder/dossiers_de_révision.md)

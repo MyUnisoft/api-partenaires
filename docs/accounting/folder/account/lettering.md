@@ -19,7 +19,7 @@ Vous obtenez la page de consultation du compte avec les boutons d'actions permet
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/lentry/lettering permet de lettrer des mouvements avec l'API partenaires.
+La route https://api.myunisoft.fr/api/v1/entry/lettering permet de lettrer des mouvements avec l'API partenaires.
 
 ```bash
 curl --location --request PUT 'https://api.myunisoft.fr/api/v1/entry/lettering' \
@@ -43,9 +43,22 @@ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/entry/lettering' 
 > [!IMPORTANT]
 > Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
 
-Il sera de renseigner dans le body les paramètres de requête suivants :
+Il sera nécessaire de renseigner dans le body les paramètres de requête suivants :
 
 | paramètre | decription |
 | --- | --- |
-| `lettering` | le code lettrage à appliquer aux lignes que vous souhaiter lettrer.<br> Pour déterminer la valeur vous pouvez consulter [Récupérer la prochaine valeur de lettrage](./next_lettering_value.md) |
-| `line_entry_list` | Un tableau composé des `entry_line_id` des écritures que vous souhaitez lettrer<br> Pour récupérer les id des écritures vous pouvez consulter []() |
+| `lettering` | le code lettrage à appliquer aux lignes que vous souhaiter lettrer.<br> Pour déterminer la valeur, vous devez utiliser le endpoint  vous pouvez consulter [Récupérer la prochaine valeur de lettrage](./next_lettering_value.md) |
+| `line_entry_list` | Un tableau composé des `entry_line_id` des écritures que vous souhaitez lettrer<br> Pour récupérer les id des écritures vous pouvez consulter [Récupérer les mouvements comptables](../../../MAD/api/movements.md) |
+
+<details class="details custom-block"><summary>Retour JSON de l'API</summary>
+
+```json
+{
+    "code": "Success",
+    "message": ""
+}
+```
+
+</details>
+
+<p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
