@@ -206,6 +206,10 @@ export default {
               link: "/MAD/specs/v1.0.0/accountingFolder"
             },
             {
+              text: "Associés",
+              link: "/MAD/specs/v1.0.0/associates"
+            },
+            {
               text: "Écriture et Mouvements",
               link: "/MAD/specs/v1.0.0/entries"
             },
@@ -294,6 +298,14 @@ export default {
                 description: "Dossier de production / Entreprise"
               }),
               link: "/MAD/api/accountingFolder.md"
+            },
+            {
+              text: httpText({
+                method: "GET",
+                endpoint: "/mad/associates",
+                description: "Associés"
+              }),
+              link: "/MAD/api/associates.md"
             },
             {
               text: httpText({
