@@ -90,16 +90,16 @@ Pour identifier les comptes auxiliaires, il vous faudra donc filtrer par les rac
 <summary>TypeScript</summary>
 
 ```ts
-export type MiscellaneousAccountLanguage = "Français" | "Anglais" | "Allemand" | "Espagnol" | "Autres" | null;
+type MiscellaneousAccountLanguage = "Français" | "Anglais" | "Allemand" | "Espagnol" | "Autres" | null;
 
-export interface MiscellaneousAccount {
+interface MiscellaneousAccount {
   referent: string | null;
   language: MiscellaneousAccountLanguage;
   group: string | null;
   archived: boolean | null;
 }
 
-export interface CompanyAccountContact {
+interface CompanyAccountContact {
   firstname: string | null;
   lastname: string | null;
   phoneNumber: string | null;
@@ -107,7 +107,7 @@ export interface CompanyAccountContact {
   email: string | null;
 }
 
-export interface CompanyAccount {
+interface CompanyAccount {
   name: string | null;
   SIREN: string | null;
   CEO: string | null;
@@ -131,7 +131,7 @@ export interface CompanyAccount {
   miscellaneous: MiscellaneousAccount | null;
 }
 
-export interface EmployeeAccount {
+interface EmployeeAccount {
   firstName: string | null;
   lastName: string | null;
   email: string | null;
@@ -156,7 +156,7 @@ export interface EmployeeAccount {
 }
 
 // Account for account starting with 401, 411, 421
-export type Account = SimplifiedAccount & {
+type Account = SimplifiedAccount & {
   closed: boolean;
   comments?: SimplifiedComment[];
 } & (
