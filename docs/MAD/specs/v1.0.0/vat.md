@@ -11,10 +11,6 @@ next: false
 
 ## Introduction
 
-Dans MyUnisoft les paramètres de TVA peuvent être récupérés dans `Paramètres` > `Dossier` > `Plan comptable` > `Liste TVA`.
-
-![](../../../images/liste_tva.PNG)
-
 > [!TIP]
 > Développeur ? Débutant en comptabilité ? Nous vous recommandons les ressources suivantes:
 > - [TVA collectée et TVA déductible](https://intia.fr/fr/ressources/lexique/tva-collectee-et-tva-deductible/)

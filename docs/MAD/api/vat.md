@@ -7,7 +7,7 @@ next:
   link: MAD/specs/v1.0.0/vat.md
 ---
 
-# Export des comptes
+# Export des TVAs
 
 ```bash
 curl --location \
@@ -31,10 +31,12 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 
 ## 🔬 Réponse
 
+Retour d'API: `Vat[]`
+
 Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/vat.md).
 
-## 💬 Gérer les comptes sur l'interface MyUnisoft
+## 💬 Consulter les TVAs sur l'interface MyUnisoft
 
-Le plan comptable peut être configuré à partir du menu: `Paramètres` > `Dossier` > `Plan comptable`.
+Dans MyUnisoft les paramètres de TVA peuvent être récupérés dans `Paramètres` > `Dossier` > `Plan comptable` > `Liste TVA`.
 
-![](../../images/plan_comptable.PNG)
+![](../../../images/liste_tva.PNG)
