@@ -6,7 +6,7 @@ hero:
   name: "API Partenaire"
   text: "Documentation technique"
   image:
-    src: https://www.myunisoft.fr/img/bg-header-min.png
+    src: https://myunisoft.fr/wp-content/uploads/2024/11/Squence01-ezgif.com-video-to-webp-converter.webp
     alt: MyUnisoft
   tagline: L’API Partenaires permet à des logiciels partenaires ainsi que des cabinets membres de récupérer et d'envoyer de l'information depuis/vers MyUnisoft.
   actions:
