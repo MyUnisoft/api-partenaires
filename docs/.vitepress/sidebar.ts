@@ -319,6 +319,13 @@ export default {
             {
               text: httpText({
                 method: "GET",
+                endpoint: "/mad/vats"
+              }),
+              link: "/MAD/api/vat.md"
+            },
+            {
+              text: httpText({
+                method: "GET",
                 endpoint: "/mad/banks"
               }),
               link: "/MAD/api/bank.md"
