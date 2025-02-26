@@ -39,4 +39,4 @@ Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/va
 
 Dans MyUnisoft les paramètres de TVA peuvent être récupérés dans `Paramètres` > `Dossier` > `Plan comptable` > `Liste TVA`.
 
-![](../../../images/liste_tva.PNG)
+![](../../images/liste_tva.PNG)
