@@ -152,6 +152,8 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
   - [Importer des emprunts](./accounting/folder/import/emprunts.md)
 - [Récupérer la liste des crédits-bails d'une société](./accounting/folder/credit_bail.md)
   - [Importer des crédits-bails](./accounting/folder/import/credit_bail.md)
+- [Récupérer la liste des véhicules d'une société](./accounting/folder/vehicules.md)
+  - [Importer des véhicules](./accounting/folder/import/vehicules.md)
 
 #### Ecritures et mouvements
 
