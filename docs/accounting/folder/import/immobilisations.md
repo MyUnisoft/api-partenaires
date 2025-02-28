@@ -11,7 +11,7 @@ next: false
 
 Ce guide va vous accompagner pour vous permettre d'importer des immobilisations.
 
-Dans MyUnisoft, il est possible de procéder à un import des immobilisations depuis : `Tenue` > `Flux` > `Import`.
+Dans MyUnisoft, il est possible de procéder à un import des immobilisations depuis : `Tenue` > `Flux` > `Imports`.
 
 ![](../../../images/tenue_flux_imports_menu.png)
 
