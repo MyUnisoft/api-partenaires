@@ -13,7 +13,7 @@ next: false
 
 > [!TIP]
 > Développeur ? Débutant en comptabilité ? Nous vous recommandons les ressources suivantes:
-> - [TVA collectée et TVA déductible](https://intia.fr/fr/ressources/lexique/tva-collectee-et-tva-deductible/)
+> - [TVA collectée et TVA déductible](https://intia.fr/fr/ressources/tva-collectee-et-tva-deductible/)
 
 ```json
 {
