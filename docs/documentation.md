@@ -121,6 +121,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Création et mise à jour d'un dossier de production](./accounting/firm/create_society.md)
   - [Mise à jour des paramètres comptable d'un dossier de production](./accounting/firm/society_accounting_parameters.md)
   - [Créer, mettre à jour, clôturer un exercice comptable](./accounting/firm/exercices.md)
+- [Archiver un dossier de production](./accounting/firm/archive_society.md)
 - [Gérer les utilisateurs d'un schéma](./accounting/firm/user_create_update.md)
   - [Récupérer les utilisateurs et personnes physiques](./accounting/firm/users.md)
 - [Récupérer les dossiers accessibles pour un utilisateur](./accounting/firm/dossier_accessible.md)
