@@ -202,6 +202,10 @@ export default {
           collapsed: true,
           items: [
             {
+              text: "Cabinet",
+              link: "/MAD/specs/v1.0.0/accountingFirm"
+            },
+            {
               text: "Dossier de production",
               link: "/MAD/specs/v1.0.0/accountingFolder"
             },
@@ -286,6 +290,14 @@ export default {
                 description: "Récupérer une écriture par ID"
               }),
               link: "/MAD/api/entry.md"
+            },
+            {
+              text: httpText({
+                method: "GET",
+                endpoint: "/mad/accountingFirm",
+                description: "Cabinet"
+              }),
+              link: "/MAD/api/accountingFirm.md"
             },
             {
               text: httpText({
