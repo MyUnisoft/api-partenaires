@@ -29,8 +29,6 @@ Les commentaires permettent de laisser des informations sur les [Comptes](./acco
 
 ## Interfaces
 
-Ci-dessous la définition avec TypeScript et JSON Schema.
-
 <details class="details custom-block" open>
 <summary>TypeScript</summary>
 

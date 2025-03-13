@@ -218,6 +218,10 @@ export default {
               link: "/MAD/specs/v1.0.0/account"
             },
             {
+              text: "Balance",
+              link: "/MAD/specs/v1.0.0/balance"
+            },
+            {
               text: "Banque",
               link: "/MAD/specs/v1.0.0/bank"
             },
@@ -313,6 +317,13 @@ export default {
                 endpoint: "/mad/account"
               }),
               link: "/MAD/api/account.md"
+            },
+            {
+              text: httpText({
+                method: "GET",
+                endpoint: "/mad/balance"
+              }),
+              link: "/MAD/api/balance.md"
             },
             {
               text: httpText({
