@@ -21,16 +21,22 @@ curl --location \
 
 Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string). 
 
-| nom | description | obligatoire |
-| --- | --- | :---: |
-| version | version du format | ✔️ |
-| comment | Ajoute les commentaires liés aux comptes | ❌ |
+| nom | description | obligatoire | valeurs multiples |
+| --- | --- | :---: | :---: |
+| version | version du format | ✔️ | ❌ |
+| comment | Ajoute les commentaires liés aux comptes | ❌ | ❌ |
+| classAccount | Inclut uniquement les comptes commençant par la classe/catégorie spécifiée. Peut prendre une ou plusieurs racines. | ❌ | ✔️ |
 
-> [!IMPORTANT]
-> 🔹 Accès cabinet 
+> [!NOTE]  
+> Le filtre `classAccount` gère plusieurs racines de compte avec un `%` à la fin (ex: `400%`)
+
+> [!IMPORTANT]  
+> 🔹 Accès cabinet  
 > L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production (la société concernée par la demande d'extraction).
 
 ## 🔬 Réponse
+
+Retour d'API: `Account[]`
 
 Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/account.md).
 
