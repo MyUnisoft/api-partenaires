@@ -159,7 +159,7 @@ curl --location 'https://api.myunisoft.fr/api/v1/society/fiscal_file' \
 
 </details>
 
-<details class="details custom-block"><summary>Définition TypeScript d'un dossier fiscal</summary>
+<details class="details custom-block"><summary>Définition TypeScript Fiscal file</summary>
 
 ```ts
 interface FiscalFile {

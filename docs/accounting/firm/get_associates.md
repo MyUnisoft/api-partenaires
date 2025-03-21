@@ -127,7 +127,7 @@ curl --location --globoff 'https://api.myunisoft.fr/api/v1/society/1/associate' 
 
 </details>
 
-<details class="details custom-block"><summary>Définition TypeScript (...)</summary>
+<details class="details custom-block"><summary>Définition TypeScript Associates</summary>
 
 ```ts
 interface Associates {
