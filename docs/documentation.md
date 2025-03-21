@@ -122,6 +122,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
   - [Mise à jour des paramètres comptable d'un dossier de production](./accounting/firm/society_accounting_parameters.md)
   - [Créer, mettre à jour, clôturer un exercice comptable](./accounting/firm/exercices.md)
   - [Créer, mettre à jour le dossier fiscal d'une société](./accounting/firm/create_update_fiscal_file.md)
+  - [Créer, mettre à jour le capital et les associés d'une société](./accounting/firm/manage_associates.md)
 - [Archiver un dossier de production](./accounting/firm/archive_society.md)
 - [Gérer les utilisateurs d'un schéma](./accounting/firm/user_create_update.md)
   - [Récupérer les utilisateurs et personnes physiques](./accounting/firm/users.md)
@@ -133,6 +134,8 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer les portefeuilles](./accounting/firm/wallets.md)
 - [Récupérer la liste des centre de gestion](./accounting/firm/gestion_center.md)
 - [Récupérer les comptes d'envoie EDI d'un dossier de production](./accounting/firm/compte_edi.md)
+- [Récupérer le dossier fiscal d'une société](./accounting/firm/get_fiscal_file.md)
+- [Récupérer le capital et les associés d'une société](./accounting/firm/get_associates.md)
 
 ### Guides sur les API comptabilités
 
