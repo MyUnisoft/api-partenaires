@@ -338,4 +338,34 @@ $ curl --location --request PUT 'https://app.myunisoft.fr/api/v1/user' \
 
 </details>
 
+### Désactivation d'un utilisateur
+
+La route `https://api.myunisoft.fr/api/v1/user` permet de désactiver un compte utilisateur associé au schéma ayant accès à la solution.
+
+```bash
+curl --location --request DELETE 'https://app.myunisoft.fr/api/v1/user?user_id=123' \
+--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+--header 'Authorization: {{API_TOKEN}}'
+```
+
+> [!IMPORTANT]
+> Cette route n'est accessible qu'aux accès de type `cabinet`.
+
+La route attend le paramètre (query string) suivant :
+
+| paramètres | decriptions |
+| --- | --- |
+| `user_id` | l'id de l'utilisateur que vous souhaitez désactiver.<br> Pour récupérer cette donnée, vous pouvez consulter cette [page](./users.md). |
+
+<details class="details custom-block"><summary>Retour JSON de l'API</summary>
+
+```json
+{
+  code: "Success",
+  message: ""
+}
+```
+
+</details>
+
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
