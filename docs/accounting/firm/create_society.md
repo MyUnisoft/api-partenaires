@@ -2,7 +2,9 @@
 prev:
   text: 🐤 Introduction
   link: documentation.md
-next: false
+next: 
+  text: ⚙️ Paramétrage avancé d'un dossier de production
+  link: /accounting/firm/manage_society.md
 ---
 
 <span id="readme-top"></span>
