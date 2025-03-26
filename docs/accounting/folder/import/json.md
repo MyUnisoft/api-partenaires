@@ -16,14 +16,17 @@ Les routes HTTP concernées;
 - <https://api.myunisoft.fr/api/v1/entry?type=e>
 - <https://api.myunisoft.fr/api/v1/entry/temp> (permet la création de "factures en attentes").
 
+> [!NOTE]
+> Cet API ne permet pas la création de plusieurs écritures à la fois comme leur homologue FEC ou TRA+PJ.
+
 ## Définition TypeScript d'une entrée au format JSON
 
 ​La définition de type permet d’identifier les différents types des propriétés pour les structures JSON.
 
 ### Pièce jointe
-
-​Définition de la structure JSON pour l’ajout d’une pièce jointe. Les mimes-types qui ne sont pas référencés ci-dessous ne sont pas supportés.
-
+​
+Définition de la structure JSON pour l’ajout d’une pièce jointe. Les mimes-types qui ne sont pas référencés ci-dessous ne sont pas supportés (Nous ne gérons pas non plus les archives .zip ou .tar).
+​
 ```ts
 interface PJ {
   /** Le contenu (Buffer) de la pièce jointe au format base64. */
@@ -54,6 +57,9 @@ interface PJ {
 }
 ```
 
+> [!NOTE]
+> La taille maximum autorisée est de 50MB. Nous vous recommandons néanmoins d'optimiser les pièces pour éviter les problèmes et les temps de traitement longs.
+​
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Analytique
@@ -94,14 +100,14 @@ interface NewEntryLine {
    * Il peut contenir un numéro libre (numéro de chèque, numéro de virement etc).
    * IMPORTANT: Merci d'utiliser le champ piece2 pour le numéro de facture!
    *
-   * Contient uniquement des caractères alphanumériques et a une longueur maximum de 15.
+   * Contient uniquement des caractères alphanumériques et a une longueur maximum de 25.
    */
   piece?: string;
 
   /**
    * Numéro d'identification de la facture.
    *
-   * Contient uniquement des caractères alphanumériques et à une longueur maximum de 15.
+   * Contient uniquement des caractères alphanumériques et à une longueur maximum de 25.
    */
   piece2?: string;
 
@@ -340,12 +346,12 @@ Le schéma JSON est un vocabulaire qui vous permet d'annoter et de valider les d
         "piece": {
           "type": "string",
           "description": "Peut contenir ce que vous voulez (numéro de chèque, numéro de virement etc.).",
-          "format": "^[a-zA-Z0-9]{1,15}$"
+          "format": "^[a-zA-Z0-9]{1,25}$"
         },
         "piece2": {
           "type": "string",
           "description": "Numéro d'identification de la facture.",
-          "format": "^[a-zA-Z0-9]{1,10}$"
+          "format": "^[a-zA-Z0-9]{1,25}$"
         },
         "deadline": {
           "type": "string",
