@@ -25,11 +25,12 @@ Chacun des onglets consultables vous permettra de paramétrer de façon avancée
 
 ## Guides de paramétrages avancés d'une société
 
-### Comptabilité et archivage
+### Comptabilité, archivage et désactivation
 
 - [Récupérer le paramétrage comptable d'un dossier de production](./accounting_parameters.md)
 - [Mise à jour des paramètres comptable d'un dossier de production](./society_accounting_parameters.md)
 - [Archiver un dossier de production](./archive_society.md)
+- [Désactiver un dossier de production](./disable_accounting_folder.md)
 
 ### Exercices
 
