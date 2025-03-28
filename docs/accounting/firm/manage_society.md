@@ -49,6 +49,7 @@ Chacun des onglets consultables vous permettra de paramétrer de façon avancée
 ### Filiales
 
 - [Récupérer les filiales associées à une entreprise](./filiale_associate.md)
+- [Ajouter, mettre à jour les filiales associées à une entreprise](./manage_filiales_associates.md)
 
 ## Données statiques complémentaires exploitables
 
