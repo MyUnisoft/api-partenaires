@@ -51,6 +51,10 @@ Chacun des onglets consultables vous permettra de paramétrer de façon avancée
 - [Récupérer les filiales associées à une entreprise](./filiale_associate.md)
 - [Ajouter, mettre à jour les filiales associées à une entreprise](./manage_filiales_associates.md)
 
+### Immeubles
+
+- [Récupérer les immeubles d'une entreprise](./buildings.md)
+
 ## Données statiques complémentaires exploitables
 
 En fonction des api interrogées, vous pourrez être amené à renseigner un certain nombre d'informations via le body (données statiques dont les liens sont consultables ci-dessous ou directement depuis la page de la thématique abordée).
