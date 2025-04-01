@@ -54,6 +54,7 @@ Chacun des onglets consultables vous permettra de paramétrer de façon avancée
 ### Immeubles
 
 - [Récupérer les immeubles d'une entreprise](./buildings.md)
+- [Ajouter, mettre à jour, supprimer les immeubles d'une entreprise](./manage_buildings.md)
 
 ## Données statiques complémentaires exploitables
 
