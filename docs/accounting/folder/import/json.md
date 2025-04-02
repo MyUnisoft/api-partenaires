@@ -209,9 +209,9 @@ interface NewEntry {
 ```
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
-​
-## Schéma JSON
-​
+
+### Schéma JSON
+
 Le schéma JSON est un vocabulaire qui vous permet d'annoter et de valider les documents JSON. Il existe des outils en ligne comme JSON Schema Validator qui vous permettront d’expérimenter en temps réel la validation d’une structure JSON.
 ​
 <details class="details custom-block">
@@ -453,6 +453,7 @@ Le schéma JSON est un vocabulaire qui vous permet d'annoter et de valider les d
   }
 }
 ```
+
 </details>
 
 Exemple avec l’outil cité plus tôt:
@@ -463,12 +464,126 @@ Il vous suffit de copier-coller le schéma ci-dessus dans le formulaire de gauch
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
+### Exemples de JSON
+
+- Exemple d'import JSON d'écritures (avec commentaires et pièces jointes, **sans** gestion de l'analytique) :
+
+<details class="details custom-block">
+<summary>Visualiser le body JSON</summary>
+
+```json
+{
+  "pj_list": [
+    {
+      "content": "...",
+      "name": "Apercu - Copie.pdf",
+      "type": "application/pdf"
+    }
+  ],
+  "entry_list": [
+    {
+      "label": "CARREFOUR",
+      "deadline": "2020-05-05",
+      "debit": 1000,
+      "credit": 0,
+      "account_id": 1021,
+      "piece": "5043",
+      "piece2": "1484515",
+      "payment_type_id": 1271
+    },
+    {
+      "label": "CARREFOUR",
+      "deadline": "2020-05-05",
+      "debit": 0,
+      "credit": 1000,
+      "account_id": 1190,
+      "payment_type": -1,
+      "piece": "5043",
+      "piece2": "1484515",
+      "payment_type_id": 1271
+    }
+  ],
+  "diary_id": 43,
+  "date_piece": "2020-04-22",
+  "etablissement_id": 3,
+  "period_to": "2020-04-22",
+  "period_from": "2020-03-22"
+}
+```
+
+</details>
+
+- Exemple d'import JSON d'écritures (avec commentaires et pièces jointes, **avec** gestion de l'analytique) :
+
+<details class="details custom-block">
+<summary>Visualiser le body JSON</summary>
+
+```json
+{
+  "pj_list": [
+    {
+      "content": "...",
+      "name": "Apercu - Copie.pdf",
+      "type": "application/pdf"
+    }
+  ],
+  "entry_list": [
+    {
+      "label": "CARREFOUR",
+      "deadline": "2020-05-05",
+      "debit": 1000,
+      "credit": 0,
+      "account_id": 1021,
+      "piece": "5043",
+      "piece2": "1484515",
+      "payment_type_id": 1271,
+      "analytique": [
+        {
+          "id_axe": 5489,
+          "label_axe": "Lib 1",
+          "code_axe": "AXE 1",
+          "repartition": [
+            {
+              "id_section": 518529,
+              "code_section": "ATTENTE",
+              "label_section": "Section d'attente",
+              "montant": 1000,
+              "taux": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "CARREFOUR",
+      "deadline": "2020-05-05",
+      "debit": 0,
+      "credit": 1000,
+      "account_id": 1190,
+      "payment_type": -1,
+      "piece": "5043",
+      "piece2": "1484515",
+      "payment_type_id": 1271
+    }
+  ],
+  "diary_id": 43,
+  "date_piece": "2020-04-22",
+  "etablissement_id": 3,
+  "period_to": "2020-04-22",
+  "period_from": "2020-03-22"
+}
+```
+
+</details>
+
 ## Gestion des comptes tiers
+
 À la **différence de l'import TRA+PJ** il n'est pas possible de synchroniser et créer automatiquement les comptes tiers **411** et **401**.
 
-Il est donc nécessaire de vous assurer que les comptes soi bien créer avant d'importer l'écriture. Je vous invite à consulter le guide suivant: [Récupérer et travailler avec le plan comptable](../account/plan_comptable.md)
+Il est donc nécessaire de vous assurer que les comptes soient bien créés avant d'importer l'écriture. Je vous invite à consulter le guide suivant: [Récupérer et travailler avec le plan comptable](../account/plan_comptable.md)
 
 ## Gestion d'un id partenaire
+
 Les écritures MyUnisoft peuvent avoir un id partenaire `entry_origin_partner_id` qui se doit d'être strictement unique. Pour cela nous vous recommandons de par exemple préfixer un UUID/CUID avec le nom de votre entreprise: `name-0aad3319-2aa7-400a-b709-6942562a200e`.
 
 Cela peut éventuellement permettre de Synchroniser l'état d'une écriture entre nos deux solutions car l'id de l'écriture n'est pas forcément fiable (il changera par exemple quand l'écriture passera d'en "**attente de validation**" à "**valider**"). L'id partenaire lui ne changera jamais et vous pointera toujours vers la bonne écriture.
@@ -483,6 +598,7 @@ $ curl --location \
 ```
 
 Le retour de la route est un JSON décrit par l'interface TypeScript suivante:
+
 ```ts
 interface PartnersEntryMetadata {
   id_entry: number;
@@ -494,6 +610,7 @@ interface PartnersEntryMetadata {
 `json_metadata_partners` étant un JSON au format texte (présent uniquement si vous aviez défini la clé `json` sur NewEntry).
 
 Pour récupérer l'écriture en elle même il vous suffit maintenant d'appeler la route `/entries` avec le body suivant:
+
 ```json
 {
     filters: [
@@ -515,6 +632,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/currencies' \
 ```
 
 Voici un exemple avec une ligne d'un montant de 100 francs suisses (CHF) qui sera avec le taux de change égal à 101,86 €.
+
 ```json
 {
   "credit": 101.86,
