@@ -278,6 +278,14 @@ export default {
             {
               text: httpText({
                 method: "GET",
+                endpoint: "/mad/getAll",
+                description: "Export Complet"
+              }),
+              link: "/MAD/api/export-all.md"
+            },
+            {
+              text: httpText({
+                method: "GET",
                 endpoint: "/mad/entries",
                 description: "Ecritures et mouvements"
               }),
