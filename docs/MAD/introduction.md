@@ -79,6 +79,7 @@ Les différentes API sont disponibles sur notre [Postman en ligne](https://docs.
 > [!IMPORTANT]
 > Toutes nos API requièrent que vous fournissiez le numéro de version MAD. La dernière version disponible est actuellement `1.0.0`
 
+- [Export Complet](./api/export-all.md)
 - [Export du dossier de production](./api/accountingFolder.md)
 - [Export des comptes](./api/account.md)
 - [Export des journaux](./api/journal.md)
