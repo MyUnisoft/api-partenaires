@@ -54,8 +54,10 @@ Ces interfaces et types sont régulièrement présents dans les différentes str
 - [Devise](./specs/v1.0.0/currency.md)
 - [Compte Simplifié](./specs/v1.0.0/simplifiedAccount.md)
 - [Pièce/documents joints à une écriture et/ou mouvements](./specs/v1.0.0/attachment.md)
+- [Commentaire](./specs/v1.0.0/comments.md)
 
 ### 💃 Les interfaces principales:
+- [Cabinet](./specs/v1.0.0/accountingFirm.md)
 - [Dossier de production (entreprise et/ou établissement)](./specs/v1.0.0/accountingFolder.md)
 - [Écriture et Mouvements](./specs/v1.0.0/entries.md)
 - [Exercice](./specs/v1.0.0/exercice.md)
@@ -64,7 +66,9 @@ Ces interfaces et types sont régulièrement présents dans les différentes str
 - [Axe et Section Analytique](./specs/v1.0.0/analytic.md)
 - [Paiement](./specs/v1.0.0/payment.md)
 - [Banque](./specs/v1.0.0/bank.md)
-- <Badge type="tip" text="beta" /> [TVA](./specs/v1.0.0/vat.md)
+- [TVA](./specs/v1.0.0/vat.md)
+- [Balance](./specs/v1.0.0/balance.md)
+- [Associés](./specs/v1.0.0/associates.md)
 
 ## 🌍 API
 
@@ -73,7 +77,8 @@ Les différentes API sont disponibles sur notre [Postman en ligne](https://docs.
 > [!IMPORTANT]
 > Toutes nos API requièrent que vous fournissiez le numéro de version MAD. La dernière version disponible est actuellement `1.0.0`
 
-- [Export Complet](./api/export-all.md)
+- [Export complet (format JSON ou TRA)](./api/export-all.md)
+- [Export du cabinet](./api/accountingFirm.md)
 - [Export du dossier de production](./api/accountingFolder.md)
 - [Export des comptes](./api/account.md)
 - [Export des journaux](./api/journal.md)
@@ -81,6 +86,10 @@ Les différentes API sont disponibles sur notre [Postman en ligne](https://docs.
 - [Export des axes et sections analytiques](./api/analytic.md)
 - [Export des banques](./api/bank.md)
 - [Export des méthodes de paiement](./api/payment.md)
+- [Export des TVAs](./api/vat.md)
+- [Export des balances de comptes](./api/balance.md)
+- [Export des associés](./api/associates.md)
+- [Export des commentaires](./api/comments.md)
 
 ---
 
@@ -99,4 +108,4 @@ Les deux API offrent des fonctionnalités différentes et des options de filtrag
 
 > [!IMPORTANT]
 > Afin de limiter les extractions abusives de mouvements, nous avons volontairement restreint l'export à un exercice par requête API.
-> Pour extraire l'intégralité des mouvements, nous vous recommandons d'itérer séquentiellement sur l'ensemble des exercices.
+> Pour extraire l'intégralité des mouvements, nous vous recommandons d'itérer séquentiellement sur l'ensemble des exercices ou d'utiliser [l'API d'extraction d'un dossier de production au complet](./api/export-all.md).
