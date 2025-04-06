@@ -21,12 +21,6 @@ Nos implémentations ont aussi la particularité d'avoir un support natif du for
 > [!NOTE]
 > Pour en découvrir plus sur nos choix techniques nous vous invitons à lire [Designing MyUnisoft Next-Gen Accounting APIs](https://dev.to/fraxken/designing-myunisoft-next-gen-accounting-apis-1mn)
 
-## 📜 Schéma
-
-Lors de vos développements, pour de l'import, il vous sera aussi possible de valider vos structures à l'aide de nos schémas JSON. ​Un schéma est un ensemble de règles permettant d'annoter et de valider une donnée au format JSON (Similaire aux schémas XML). Il existe des outils en ligne comme [JSON Schema Validator](https://www.jsonschemavalidator.net/) qui vous permettront d’expérimenter en temps réel la validation d’une structure JSON.​
-
-- <a href="https://github.com/MyUnisoft/api-partenaires/blob/main/docs/MAD/specs/v1.0.0/schema.json" target="_blank">Schéma JSON complet (V1.0.0)</a>
-
 ## 📑 Spécification
 
 Un export complet d'un dossier de production vous renverra un JSON correspondant à l'interface ci-dessous:
