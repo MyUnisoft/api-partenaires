@@ -7,7 +7,7 @@ next:
   link: MAD/specs/v1.0.0/associates.md
 ---
 
-# Export des Associés
+# Export des associés
 
 ```bash
 curl --location \
