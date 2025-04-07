@@ -279,7 +279,7 @@ export default {
               text: httpText({
                 method: "GET",
                 endpoint: "/mad/getAll",
-                description: "Export Complet"
+                description: "Export complet du dossier"
               }),
               link: "/MAD/api/export-all.md"
             },
@@ -310,14 +310,6 @@ export default {
             {
               text: httpText({
                 method: "GET",
-                endpoint: "/mad/accountingFirm",
-                description: "Cabinet"
-              }),
-              link: "/MAD/api/accountingFirm.md"
-            },
-            {
-              text: httpText({
-                method: "GET",
                 endpoint: "/mad/accountingFolder",
                 description: "Dossier de production / Entreprise"
               }),
@@ -326,8 +318,14 @@ export default {
             {
               text: httpText({
                 method: "GET",
-                endpoint: "/mad/associates",
-                description: "Associés"
+                endpoint: "/mad/accountingFirm"
+              }),
+              link: "/MAD/api/accountingFirm.md"
+            },
+            {
+              text: httpText({
+                method: "GET",
+                endpoint: "/mad/associates"
               }),
               link: "/MAD/api/associates.md"
             },
@@ -376,8 +374,7 @@ export default {
             {
               text: httpText({
                 method: "GET",
-                endpoint: "/mad/payments",
-                description: "Méthodes de paiement"
+                endpoint: "/mad/payments"
               }),
               link: "/MAD/api/payment.md"
             },
@@ -393,7 +390,7 @@ export default {
               text: httpText({
                 method: "GET",
                 endpoint: "/mad/comments",
-                description: "Commentaires Compte / Ecritures"
+                description: "Commentaires sur Compte et/ou Ecritures"
               }),
               link: "/MAD/api/comments.md"
             }
