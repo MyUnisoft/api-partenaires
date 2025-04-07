@@ -5,7 +5,7 @@
 		"description": "## ✨ Summary\n\nUp to date documentation is available here : [https://partners.api.myunisoft.fr/](https://partners.api.myunisoft.fr/)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "15036360",
-		"_collection_link": "https://myunisoft.postman.co/workspace/Node.js-API-~b2e1039b-b32c-4a29-84ec-2b27195223b7/collection/5276786-c4062d0b-3f1b-4d6f-98c0-952a0ba5cccd?action=share&source=collection_link&creator=15036360"
+		"_collection_link": "https://myunisoft.postman.co/workspace/Node.js-API~b2e1039b-b32c-4a29-84ec-2b27195223b7/collection/5276786-c4062d0b-3f1b-4d6f-98c0-952a0ba5cccd?action=share&source=collection_link&creator=15036360"
 	},
 	"item": [
 		{
@@ -694,9 +694,12 @@
 											}
 										],
 										"url": {
-											"raw": "{{root}}/api/v1/society",
+											"raw": "https://api.myunisoft.fr/api/v1/society",
+											"protocol": "https",
 											"host": [
-												"{{root}}"
+												"api",
+												"myunisoft",
+												"fr"
 											],
 											"path": [
 												"api",
@@ -1613,6 +1616,239 @@
 									"body": ""
 								}
 							]
+						},
+						{
+							"name": "gestion_center",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{API_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/society/gestion_center",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"society",
+										"gestion_center"
+									]
+								},
+								"description": "📢 Get/fetch the list of gestion center.\n\n📌 **This endpoint only work with a cabinet (firm) access**"
+							},
+							"response": []
+						},
+						{
+							"name": "compte EDI",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{API_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
+									},
+									{
+										"key": "society-id",
+										"value": "",
+										"description": "Mandatory",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/society/compte_edi",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"society",
+										"compte_edi"
+									]
+								},
+								"description": "📢 Get/fetch the list of EDI sender accounts.\n\n📌 **This endpoint only work with a cabinet (firm) access**"
+							},
+							"response": []
+						},
+						{
+							"name": "user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{API_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tel\": null,\r\n    \"mail\": {\r\n        \"coordonnee\": \"user@emailexemple.fr\",\r\n        \"id\": 0\r\n    },\r\n    \"name\": \"user_name\",\r\n    \"badmin\": false,\r\n    \"tel_fix\": \"\",\r\n    \"user_id\": 190,\r\n    \"firstname\": \"Sofian\",\r\n    \"groupslst\": [],\r\n    \"id_profil\": 5,\r\n    \"created_at\": \"2022-10-28T16:15:44\",\r\n    \"access_list\": [\r\n        {\r\n            \"label\": \"Test\",\r\n            \"siret\": \"923145171\",\r\n            \"acces_id\": 227,\r\n            \"profil_id\": 7,\r\n            \"wallet_id\": null,\r\n            \"society_id\": 127,\r\n            \"profil_name\": \"Collab social\",\r\n            \"wallet_label\": null,\r\n            \"id_type_profil\": 2,\r\n            \"libelle_type_profil\": \"Cabinet\"\r\n        }\r\n    ],\r\n    \"civility_id\": 1,\r\n    \"maiden_name\": \"\",\r\n    \"tel_portable\": \"\",\r\n    \"id_type_profil\": 2,\r\n    \"ndf_ocr_account\": null,\r\n    \"is_collaborative_user\": false,\r\n    \"civility_code\": \"Mr\",\r\n    \"accessTypeSociety-227\": {\r\n        \"id\": 2,\r\n        \"value\": \"Cabinet\",\r\n        \"label\": \"Cabinet\"\r\n    },\r\n    \"accessProfilSociety-227\": {\r\n        \"id\": 7,\r\n        \"value\": \"Collab social\",\r\n        \"label\": \"Collab social\"\r\n    },\r\n    \"wallet_access_list\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/user",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user"
+									]
+								},
+								"description": "This endpoint is used to update an user."
+							},
+							"response": []
+						},
+						{
+							"name": "user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{API_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tel\": null,\r\n    \"mail\": {\r\n        \"coordonnee\": \"user@emailexemple.fr\",\r\n        \"id\": 0\r\n    },\r\n    \"name\": \"user_name\",\r\n    \"badmin\": false,\r\n    \"tel_fix\": \"\",\r\n    \"user_id\": 190,\r\n    \"firstname\": \"Sofian\",\r\n    \"groupslst\": [],\r\n    \"id_profil\": 5,\r\n    \"created_at\": \"2022-10-28T16:15:44\",\r\n    \"access_list\": [\r\n        {\r\n            \"label\": \"Test\",\r\n            \"siret\": \"923145171\",\r\n            \"acces_id\": 227,\r\n            \"profil_id\": 7,\r\n            \"wallet_id\": null,\r\n            \"society_id\": 127,\r\n            \"profil_name\": \"Collab social\",\r\n            \"wallet_label\": null,\r\n            \"id_type_profil\": 2,\r\n            \"libelle_type_profil\": \"Cabinet\"\r\n        }\r\n    ],\r\n    \"civility_id\": 1,\r\n    \"maiden_name\": \"\",\r\n    \"tel_portable\": \"\",\r\n    \"id_type_profil\": 2,\r\n    \"ndf_ocr_account\": null,\r\n    \"is_collaborative_user\": false,\r\n    \"civility_code\": \"Mr\",\r\n    \"accessTypeSociety-227\": {\r\n        \"id\": 2,\r\n        \"value\": \"Cabinet\",\r\n        \"label\": \"Cabinet\"\r\n    },\r\n    \"accessProfilSociety-227\": {\r\n        \"id\": 7,\r\n        \"value\": \"Collab social\",\r\n        \"label\": \"Collab social\"\r\n    },\r\n    \"wallet_access_list\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/user",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user"
+									]
+								},
+								"description": "This endpoint is used to create an user."
+							},
+							"response": []
+						},
+						{
+							"name": "user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{API_TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.myunisoft.fr/api/v1/user?user_id",
+									"protocol": "https",
+									"host": [
+										"api",
+										"myunisoft",
+										"fr"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": null,
+											"description": "Feed the user id you want to delete"
+										}
+									]
+								},
+								"description": "📢 This endpoint is used to delete a user.\n\nBe carefull to use it with caution."
+							},
+							"response": []
 						}
 					],
 					"description": "Endpoints restricted to Firm/Cabinet access. Those endpoints allow to fetch information on:\n\n- The list of companies (dossiers)\n- The list of users (who have an access to the platform) and physical person"
@@ -8165,6 +8401,826 @@
 							]
 						},
 						{
+							"name": "Associates",
+							"item": [
+								{
+									"name": "Associate",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{API_TOKEN}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/society/{{id_society}}/associate",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"society",
+												"{{id_society}}",
+												"associate"
+											]
+										},
+										"description": "📢 Fetch society associates and capital.\n\n⚠️ A `society-id` is required with a cabinet/firm access."
+									},
+									"response": [
+										{
+											"name": "Associate",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "https://api.myunisoft.fr/api/v1//society/{{id_society}}/associate",
+													"protocol": "https",
+													"host": [
+														"api",
+														"myunisoft",
+														"fr"
+													],
+													"path": [
+														"api",
+														"v1",
+														"",
+														"society",
+														"{{id_society}}",
+														"associate"
+													]
+												}
+											},
+											"_postman_previewlanguage": "json",
+											"header": [
+												{}
+											],
+											"cookie": [
+												{
+													"expires": "Invalid Date"
+												}
+											],
+											"body": "{\n    \"capital\": {\n        \"historical_id\": 31,\n        \"date\": \"2019-05-21\",\n        \"capital\": 100000,\n        \"social_part\": 10250,\n        \"social_part_value\": 9.76\n    },\n    \"associate_list\": {\n        \"physical_person_list\": [\n            {\n                \"physical_person_link_id\": 35,\n                \"physical_person\": {\n                    \"id\": 2,\n                    \"firstname\": \"Léon\",\n                    \"name\": \"Souvannavong\"\n                },\n                \"signatory_function\": {\n                    \"id\": 1,\n                    \"label\": \"Gérant\"\n                },\n                \"function\": {\n                    \"id\": 3,\n                    \"label\": \"Dirigeant associé\"\n                },\n                \"start_date\": \"2018-12-29\",\n                \"end_date\": \"2018-01-01\",\n                \"social_part\": {\n                    \"PP\": 7860,\n                    \"NP\": 500,\n                    \"US\": 500,\n                    \"percent\": 81.6\n                }\n            }\n        ],\n        \"society_list\": [\n            {\n                \"society_link_id\": 35,\n                \"society\": {\n                    \"id\": 114,\n                    \"name\": \"SOCIETE ETCHEBEST\",\n                    \"siret\": \"\",\n                    \"capital\": 0,\n                    \"address\": \"25 T Allee paul vaillant près du lac 91360 Villemoisson FRANCE\"\n                },\n                \"signatory_function\": {\n                    \"id\": 1,\n                    \"label\": \"Gérant\"\n                },\n                \"start_date\": \"2018-12-31\",\n                \"end_date\": \"\",\n                \"social_part\": {\n                    \"PP\": 1000,\n                    \"NP\": 890,\n                    \"US\": 890,\n                    \"percent\": 18.4\n                }\n            }\n        ]\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Capital (Associate)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{API_TOKEN}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"effective_date\": \"YYYY-MM-DD\",\r\n    \"capital\": 0,\r\n    \"social_part\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/society/capital",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"society",
+												"capital"
+											]
+										},
+										"description": "📢 Provide the capital company.\n\n⚠️ A `society-id` is required with a cabinet/firm access."
+									},
+									"response": [
+										{
+											"name": "Capital (Associate)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "https://api.myunisoft.fr/api/v1/society/capital",
+													"protocol": "https",
+													"host": [
+														"api",
+														"myunisoft",
+														"fr"
+													],
+													"path": [
+														"api",
+														"v1",
+														"society",
+														"capital"
+													]
+												}
+											},
+											"_postman_previewlanguage": "json",
+											"header": [
+												{}
+											],
+											"cookie": [
+												{
+													"expires": "Invalid Date"
+												}
+											],
+											"body": "{\n    \"effective_date\": \"YYYY-MM-DD\",\n    \"capital\": 0,\n    \"social_part\": 0\n}"
+										}
+									]
+								},
+								{
+									"name": "Associé personne physique (Associate)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{API_TOKEN}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"physical_person_id\": 0,\r\n    \"signatory_function_id\": 0,\r\n    \"function_id\": 0,\r\n    \"start_date\": \"YYYY-MM-DD\",\r\n    \"end_date\": \"YYYY-MM-DD\",\r\n    \"social_part\": {\r\n        \"PP\": 0,\r\n        \"NP\": 0,\r\n        \"US\": 0\r\n    },\r\n    \"account_id\": 0,\r\n    \"effective_date\": \"YYYY-MM-DD\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/associate/natural_person",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"associate",
+												"natural_person"
+											]
+										},
+										"description": "📢 Provide individual natural person associate.\n\n⚠️ A `society-id` is required with a cabinet/firm access."
+									},
+									"response": [
+										{
+											"name": "Associé personne physique (Associate)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "https://api.myunisoft.fr/api/v1/associate/natural_person",
+													"protocol": "https",
+													"host": [
+														"api",
+														"myunisoft",
+														"fr"
+													],
+													"path": [
+														"api",
+														"v1",
+														"associate",
+														"natural_person"
+													]
+												}
+											},
+											"_postman_previewlanguage": "json",
+											"header": [
+												{}
+											],
+											"cookie": [
+												{
+													"expires": "Invalid Date"
+												}
+											],
+											"body": "{\n    \"physical_person_id\": 0,\n    \"signatory_function_id\": 0,\n    \"function_id\": 0,\n    \"start_date\": \"YYYT-MM-DD\",\n    \"end_date\": \"YYYT-MM-DD\",\n    \"social_part\": {\n        \"PP\": 0,\n        \"NP\": 0,\n        \"US\": 0\n    },\n    \"account_id\": 0,\n    \"effective_date\": \"YYYT-MM-DD\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Associé personne morale (Associate)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{API_TOKEN}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"society_id\": 0,\r\n    \"signatory_function_id\": 0,\r\n    \"start_date\": \"YYYY-MM-DD\",\r\n    \"end_date\": \"YYYY-MM-DD\",\r\n    \"social_part\": {\r\n        \"PP\": 0,\r\n        \"NP\": 0,\r\n        \"US\": 0\r\n    },\r\n    \"account_id\": 0,\r\n    \"effective_date\": \"YYYY-MM-DD\",\r\n    \"revenu_pro\": false\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/associate/legal_entity",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"associate",
+												"legal_entity"
+											]
+										},
+										"description": "📢 Provide individual legal entity associate.\n\n⚠️ A `society-id` is required with a cabinet/firm access."
+									},
+									"response": [
+										{
+											"name": "Associé personne morale (Associate)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "https://api.myunisoft.fr/api/v1/associate/legal_entity",
+													"protocol": "https",
+													"host": [
+														"api",
+														"myunisoft",
+														"fr"
+													],
+													"path": [
+														"api",
+														"v1",
+														"associate",
+														"legal_entity"
+													]
+												}
+											},
+											"_postman_previewlanguage": "json",
+											"header": [
+												{}
+											],
+											"cookie": [
+												{
+													"expires": "Invalid Date"
+												}
+											],
+											"body": "{\n    \"society_id\": 0,\n    \"signatory_function_id\": 0,\n    \"start_date\": \"YYYY-MM-DD\",\n    \"end_date\": \"YYYY-MM-DD\",\n    \"social_part\": {\n        \"PP\": 0,\n        \"NP\": 0,\n        \"US\": 0\n    },\n    \"account_id\": 0,\n    \"effective_date\": \"YYYY-MM-DD\",\n    \"revenu_pro\": false\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Fiscal file",
+							"item": [
+								{
+									"name": "Fiscal file (onglet dossier fiscal)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{API_TOKEN}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}"
+											},
+											{
+												"key": "society-id",
+												"value": ""
+											}
+										],
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/society/fiscal_file",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"society",
+												"fiscal_file"
+											]
+										},
+										"description": "📢 Fetch information on a given company/dossier.\n\n> Note: If you are using a company access it is not necessary to specify a company id. \n  \n\n⚠️ The use of the `society-id` is optional with a firm access."
+									},
+									"response": [
+										{
+											"name": "fiscal file (onglet dossier fiscal)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "cognix-st1iBFblXoLwtrO4CJ7I0KGY"
+													},
+													{
+														"key": "society-id",
+														"value": "42",
+														"disabled": true
+													}
+												],
+												"url": {
+													"raw": "{{root}}/api/v1/society",
+													"host": [
+														"{{root}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"society"
+													]
+												}
+											},
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"rof_tva\": \"TVA1\",\n    \"rof_tdfc\": \"\",\n    \"rof_cfe\": \"CFE1\",\n    \"rof_cvae\": \"CVAE1\",\n    \"rof_rcm\": \"RCM1\",\n    \"acompte_pro_mens\": false,\n    \"tva_intraco\": \"\",\n    \"due_date_tva\": 0,\n    \"adherent_code\": \"\",\n    \"mono_etab\": false,\n    \"close_entries_VAT\": false,\n    \"mail_liasse\": \"\",\n    \"exercice_declaration\": false,\n    \"fiscal_integration\": false,\n    \"head_group_if\": false,\n    \"start_date_if\": \"\",\n    \"end_date_if\": \"\",\n    \"adv_legal_form_id\": \"\",\n    \"adv_name\": \"\",\n    \"adv_name_2\": \"\",\n    \"adv_phone_number\": \"\",\n    \"adv_address_number\": \"\",\n    \"adv_street_name\": \"\",\n    \"adv_postal_code\": \"\",\n    \"adv_city\": \"\",\n    \"adv_country\": \"\",\n    \"ecf_legal_form_id\": \"\",\n    \"ecf_siren\": \"\",\n    \"ecf_name\": \"\",\n    \"ecf_name_2\": \"\",\n    \"ecf_address_number\": \"\",\n    \"ecf_street_name\": \"\",\n    \"ecf_postal_code\": \"\",\n    \"ecf_city\": \"\",\n    \"ecf_country\": \"\",\n    \"sie_address_number\": \"\",\n    \"sie_street_name\": \"\",\n    \"sie_name\": \"\",\n    \"sie_postal_code\": \"\",\n    \"sie_city\": \"\",\n    \"sie_country\": \"\",\n    \"vis_name\": \"\",\n    \"vis_agreement_number\": \"\",\n    \"vis_viseur\": false,\n    \"vis_address_number\": \"\",\n    \"vis_street_name\": \"\",\n    \"vis_postal_code\": \"\",\n    \"vis_city\": \"\",\n    \"vis_country\": \"\",\n    \"id_pers_physique\": null,\n    \"id_societe_signataire\": null,\n    \"id_societe_comptable\": null,\n    \"fiscal_decl_by_firm\": true,\n    \"id_comptable\": null,\n    \"assujetti_unique\": false,\n    \"siren_assujetti_unique\": \"\",\n    \"rof_ts\": \"TS1\",\n    \"periodicity_ts\": 0,\n    \"holding_name\": \"\",\n    \"info_bnc\": {\n        \"info_bnc_id\": 1,\n        \"membership_year\": null,\n        \"activity_code_pm\": null\n    },\n    \"society_status\": {\n        \"id\": 1,\n        \"label\": \"En activité\",\n        \"value\": \"En activité\",\n        \"effective_date\": \"2024-04-12\"\n    },\n    \"account_edi\": {\n        \"id\": 1,\n        \"label\": null,\n        \"value\": \"email@email.com\"\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Fiscal file Create/Update (Onglet dossier fiscal)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{API_TOKEN}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "Society-id",
+												"value": "",
+												"description": "Required to select the accounting Folder",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/society/fiscal_file",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"society",
+												"fiscal_file"
+											]
+										},
+										"description": "📢Create/update fiscal file informations on a given company/dossier."
+									},
+									"response": [
+										{
+											"name": "Fiscal file Create/Update (Onglet dossier fiscal)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "",
+														"type": "text"
+													},
+													{
+														"key": "Society-id",
+														"value": "",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"rof_tva\": \"TVA2\",\r\n    \"rof_tdfc\": \"IS1\",\r\n    \"rof_cfe\": \"CFE2\",\r\n    \"rof_cvae\": \"CVAE2\",\r\n    \"rof_rcm\": \"RCM2\",\r\n    \"rof_groupe\": \"\",\r\n    \"acompte_pro_mens\": false,\r\n    \"exercice_declaration\": false,\r\n    \"tva_intraco\": \"FR45530514157\",\r\n    \"due_date_tva\": 21,\r\n    \"adherent_code\": \"\",\r\n    \"mono_etab\": false,\r\n    \"close_entries_VAT\": false,\r\n    \"mail_liasse\": \"\",\r\n    \"fiscal_integration\": false,\r\n    \"head_group_if\": false,\r\n    \"start_date_if\": \"\",\r\n    \"end_date_if\": \"\",\r\n    \"adv_legal_form_id\": \"\",\r\n    \"adv_name\": \"\",\r\n    \"adv_name_2\": \"\",\r\n    \"adv_phone_number\": \"\",\r\n    \"adv_address_number\": \"\",\r\n    \"adv_street_name\": \"\",\r\n    \"adv_postal_code\": \"\",\r\n    \"adv_city\": \"\",\r\n    \"adv_country\": \"\",\r\n    \"ecf_legal_form_id\": \"\",\r\n    \"ecf_siren\": \"\",\r\n    \"ecf_name\": \"\",\r\n    \"ecf_name_2\": \"\",\r\n    \"ecf_address_number\": \"\",\r\n    \"ecf_street_name\": \"\",\r\n    \"ecf_postal_code\": \"\",\r\n    \"ecf_city\": \"\",\r\n    \"ecf_country\": \"\",\r\n    \"sie_address_number\": \"\",\r\n    \"sie_street_name\": \"\",\r\n    \"sie_name\": \"\",\r\n    \"sie_postal_code\": \"\",\r\n    \"sie_city\": \"\",\r\n    \"sie_country\": \"\",\r\n    \"vis_name\": \"\",\r\n    \"vis_agreement_number\": \"\",\r\n    \"vis_viseur\": false,\r\n    \"vis_address_number\": \"\",\r\n    \"vis_street_name\": \"\",\r\n    \"vis_postal_code\": \"\",\r\n    \"vis_city\": \"\",\r\n    \"vis_country\": \"\",\r\n    \"id_pers_physique\": null,\r\n    \"id_societe_signataire\": null,\r\n    \"id_societe_comptable\": null,\r\n    \"fiscal_decl_by_firm\": true,\r\n    \"id_comptable\": 0,\r\n    \"assujetti_unique\": false,\r\n    \"siren_assujetti_unique\": \"\",\r\n    \"rof_ts\": \"TS2\",\r\n    \"periodicity_ts\": 0,\r\n    \"holding_name\": \"\",\r\n    \"sheet_group\": {\r\n        \"id\": 3,\r\n        \"label\": \"IS-BIC-Simplifié\",\r\n        \"value\": \"ISBICS\",\r\n        \"id_bilan\": 2,\r\n        \"regime_impot\": true,\r\n        \"id_regime_impot\": 1\r\n    },\r\n    \"vat_regime\": {\r\n        \"id\": 4,\r\n        \"label\": \"Réel Normal Mensuel\",\r\n        \"value\": \"M\"\r\n    },\r\n    \"info_bnc\": {\r\n        \"info_bnc_id\": 1982,\r\n        \"membership_year\": null,\r\n        \"activity_code_pm\": null\r\n    },\r\n    \"society_status\": {\r\n        \"id\": 1,\r\n        \"label\": \"En activité\",\r\n        \"value\": \"En activité\",\r\n        \"effective_date\": \"2023-09-14\"\r\n    }\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{root}}/api/v1/society/fiscal_file",
+													"host": [
+														"{{root}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"society",
+														"fiscal_file"
+													]
+												}
+											},
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"rof_tva\": \"TVA2\",\n    \"rof_tdfc\": \"IS1\",\n    \"rof_cfe\": \"CFE2\",\n    \"rof_cvae\": \"CVAE2\",\n    \"rof_rcm\": \"RCM2\",\n    \"rof_groupe\": \"\",\n    \"acompte_pro_mens\": false,\n    \"exercice_declaration\": false,\n    \"tva_intraco\": \"FR45530514157\",\n    \"due_date_tva\": 21,\n    \"adherent_code\": \"\",\n    \"mono_etab\": false,\n    \"close_entries_VAT\": false,\n    \"mail_liasse\": \"\",\n    \"fiscal_integration\": false,\n    \"head_group_if\": false,\n    \"start_date_if\": \"\",\n    \"end_date_if\": \"\",\n    \"adv_legal_form_id\": \"\",\n    \"adv_name\": \"\",\n    \"adv_name_2\": \"\",\n    \"adv_phone_number\": \"\",\n    \"adv_address_number\": \"\",\n    \"adv_street_name\": \"\",\n    \"adv_postal_code\": \"\",\n    \"adv_city\": \"\",\n    \"adv_country\": \"\",\n    \"ecf_legal_form_id\": \"\",\n    \"ecf_siren\": \"\",\n    \"ecf_name\": \"\",\n    \"ecf_name_2\": \"\",\n    \"ecf_address_number\": \"\",\n    \"ecf_street_name\": \"\",\n    \"ecf_postal_code\": \"\",\n    \"ecf_city\": \"\",\n    \"ecf_country\": \"\",\n    \"sie_address_number\": \"\",\n    \"sie_street_name\": \"\",\n    \"sie_name\": \"\",\n    \"sie_postal_code\": \"\",\n    \"sie_city\": \"\",\n    \"sie_country\": \"\",\n    \"vis_name\": \"\",\n    \"vis_agreement_number\": \"\",\n    \"vis_viseur\": false,\n    \"vis_address_number\": \"\",\n    \"vis_street_name\": \"\",\n    \"vis_postal_code\": \"\",\n    \"vis_city\": \"\",\n    \"vis_country\": \"\",\n    \"id_pers_physique\": null,\n    \"id_societe_signataire\": null,\n    \"id_societe_comptable\": null,\n    \"fiscal_decl_by_firm\": true,\n    \"id_comptable\": 0,\n    \"assujetti_unique\": false,\n    \"siren_assujetti_unique\": \"\",\n    \"rof_ts\": \"TS2\",\n    \"periodicity_ts\": 0,\n    \"holding_name\": \"\",\n    \"sheet_group\": {\n        \"id\": 3,\n        \"label\": \"IS-BIC-Simplifié\",\n        \"value\": \"ISBICS\",\n        \"id_bilan\": 2,\n        \"regime_impot\": true,\n        \"id_regime_impot\": 1\n    },\n    \"vat_regime\": {\n        \"id\": 4,\n        \"label\": \"Réel Normal Mensuel\",\n        \"value\": \"M\"\n    },\n    \"info_bnc\": {\n        \"info_bnc_id\": 1982,\n        \"membership_year\": null,\n        \"activity_code_pm\": null\n    },\n    \"society_status\": {\n        \"id\": 1,\n        \"label\": \"En activité\",\n        \"value\": \"En activité\",\n        \"effective_date\": \"2023-09-14\"\n    }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Filiale Associate",
+							"item": [
+								{
+									"name": "Filiale Associate",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{API-TOKEN}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "1",
+												"description": "required",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/society/filiale_associate",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"society",
+												"filiale_associate"
+											]
+										},
+										"description": "📢 This endpoint let you get all filiales associates added to your accounting folder."
+									},
+									"response": [
+										{
+											"name": "Filiale Associate",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "society-id",
+														"value": "",
+														"description": "Required with Frim Access",
+														"type": "text",
+														"disabled": true
+													},
+													{
+														"key": "Authorization",
+														"value": "{{TOKEN}}",
+														"type": "text"
+													},
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "https://api.myunisoft.fr/api/v1/society/filiale_associate",
+													"protocol": "https",
+													"host": [
+														"api",
+														"myunisoft",
+														"fr"
+													],
+													"path": [
+														"api",
+														"v1",
+														"society",
+														"filiale_associate"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "vary",
+													"value": "Origin"
+												},
+												{
+													"key": "request-id",
+													"value": "req-06376c5d-24dd-41a1-bdcd-67873b91abf2"
+												},
+												{
+													"key": "x-rate-limit-remaining",
+													"value": "9"
+												},
+												{
+													"key": "x-rate-limit-reset",
+													"value": "1678719506.167875"
+												},
+												{
+													"key": "x-rate-limit-total",
+													"value": "10"
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "content-length",
+													"value": "1826"
+												},
+												{
+													"key": "date",
+													"value": "Mon, 13 Mar 2023 14:58:25 GMT"
+												},
+												{
+													"key": "keep-alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"filiale_associate_list\": [\n    {\n      \"society_link_id\": 78,\n      \"society\": {\n        \"revenu_pro\": false,\n        \"id\": 372,\n        \"name\": \"SOCIETE DE TEST\",\n        \"siret\": \"\",\n        \"capital\": 50000,\n        \"nb_part\": 100,\n        \"date_capital\": \"20180101\",\n        \"address\": \"01 B Allee DOUDEAUVILLE HELO 29730 TREFFIAGAT FRANCE\",\n        \"account_id\": 0,\n        \"start_date\": \"2020-01-01\",\n        \"end_date\": \"\",\n        \"id_type_company\": 1,\n        \"head_group_if\": true,\n        \"fiscal_integration\": false,\n        \"assujetti_unique\": false,\n        \"vat_start_date\": \"\",\n        \"vat_end_date\": \"\",\n        \"start_date_if\": \"20200101\",\n        \"end_date_if\": \"20221231\",\n        \"direct_holding_percentage\": 0,\n        \"indirect_holding_percentage\": 0,\n        \"tax_scope\": false\n      },\n      \"signatory_function\": {\n        \"id\": 3,\n        \"label\": \"Chef d'entreprise\"\n      },\n      \"social_part\": {\n        \"PP\": 1,\n        \"NP\": 0,\n        \"US\": 0,\n        \"percent\": 1\n      }\n    },\n    {\n      \"society_link_id\": 100,\n      \"society\": {\n        \"revenu_pro\": false,\n        \"id\": 370,\n        \"name\": \"2065 BIS Exercice d\\u00e9cal\\u00e9\",\n        \"siret\": \"777555444\",\n        \"capital\": 100000,\n        \"nb_part\": 100,\n        \"date_capital\": \"20200701\",\n        \"address\": \"35 T Avenue Orange 91160 BALLAINVILLIERS FRANCE\",\n        \"account_id\": 0,\n        \"start_date\": \"2020-07-01\",\n        \"end_date\": \"\",\n        \"id_type_company\": 1,\n        \"head_group_if\": false,\n        \"fiscal_integration\": false,\n        \"assujetti_unique\": false,\n        \"vat_start_date\": \"\",\n        \"vat_end_date\": \"\",\n        \"start_date_if\": \"\",\n        \"end_date_if\": \"\",\n        \"direct_holding_percentage\": 0,\n        \"indirect_holding_percentage\": 0,\n        \"tax_scope\": false\n      },\n      \"signatory_function\": {\n        \"id\": 6,\n        \"label\": \"Co-G\\u00e9rant\"\n      },\n      \"social_part\": {\n        \"PP\": 40,\n        \"NP\": 0,\n        \"US\": 0,\n        \"percent\": 40\n      }\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Filiale Associate",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{API_TOKEN}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "",
+												"description": "Required with firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"society_list\" : \r\n\t[\r\n\t\t{\r\n            \"society\": {\r\n                \"society_id\": 12345,\r\n                \"effective_date\": \"YYYY-MM-DD\",\r\n                \"end_date\": \"\"\r\n            },\r\n            \"signatory_function_id\": 2,\r\n            \"social_part\": {\r\n                \"PP\": 50,\r\n                \"NP\": 0,\r\n                \"US\": 0\r\n             }\r\n        }\r\n\t]\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/society/filiale_associate",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"society",
+												"filiale_associate"
+											]
+										},
+										"description": "📢 Add or update a filiale associate to your accounting folder."
+									},
+									"response": [
+										{
+											"name": "Filiale Associate",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "",
+														"description": "Required with firm access",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"society_list\" : \r\n\t[\r\n\t\t{\r\n            \"society\": {\r\n                \"society_id\": 12345,\r\n                \"effective_date\": \"2023-08-10\",\r\n                \"end_date\": \"\"\r\n            },\r\n            \"signatory_function_id\": 2,\r\n            \"social_part\": {\r\n                \"PP\": 10,\r\n                \"NP\": 0,\r\n                \"US\": 0\r\n             }\r\n        }\r\n\t]\r\n\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{root}}/api/v1/society/filiale_associate",
+													"host": [
+														"{{root}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"society",
+														"filiale_associate"
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							]
+						},
+						{
 							"name": "Society (dossier/company info)",
 							"request": {
 								"auth": {
@@ -8299,7 +9355,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "",
+											"value": "{{API_TOKEN}}",
 											"type": "string"
 										}
 									]
@@ -12488,7 +13544,13 @@
 					"name": "Get All status",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "https://api.myunisoft.fr/api/v1/mad/all/status?exportId=export_sch-5_acf-1",
 							"protocol": "https",
