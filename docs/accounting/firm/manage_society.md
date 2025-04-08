@@ -56,6 +56,11 @@ Chacun des onglets consultables vous permettra de paramétrer de façon avancée
 - [Récupérer les immeubles d'une entreprise](./buildings.md)
 - [Ajouter, mettre à jour, supprimer les immeubles d'une entreprise](./manage_buildings.md)
 
+### Etablissements
+
+- [Récupérer les établissements secondaires d'une entreprise](./get_establishments.md)
+- [Ajouter, fermer des établissements](./manage_establishments.md)
+
 ## Données statiques complémentaires exploitables
 
 En fonction des api interrogées, vous pourrez être amené à renseigner un certain nombre d'informations via le body (données statiques dont les liens sont consultables ci-dessous ou directement depuis la page de la thématique abordée).

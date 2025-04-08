@@ -25,7 +25,7 @@ Vous obtenez les différents onglets de l'entreprise interrogée. Cliquez sur `A
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/society/:id_society/associate' permet de procéder à cette même opération via l'API partenaire.
+La route https://api.myunisoft.fr/api/v1/society/:id_society/associate permet de procéder à cette même opération via l'API partenaire.
 
 ```bash
 curl --location --globoff 'https://api.myunisoft.fr/api/v1/society/1/associate' \
