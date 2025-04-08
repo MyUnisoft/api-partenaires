@@ -41,7 +41,7 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 | comment | Ajoute les commentaires liés aux écritures | ❌ | ❌ |
 
 > [!NOTE]
-> L'écart maximum entre la date de début et de fin doit être de maximums 12 mois.
+> L'écart entre la date de début et de fin ne doit pas dépasser le bornage maximum prévu par l'exercice comptable (12 à 24 mois).
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet 
