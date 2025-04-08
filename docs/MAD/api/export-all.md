@@ -65,8 +65,8 @@ Exemple de retour JSON de l'API :
 ```
 
 > [!NOTE]  
-> Un délais de 24 heures est requis pour pouvoir déclencher un nouvel export avec les mêmes paramètres.  
-> Durant ce délais l'API retournera le résultat de la précédente tentative.
+> Un délai de 1 heure est requis pour pouvoir déclencher un nouvel export avec les mêmes paramètres.  
+> Durant ce délai l'API retournera le résultat de la précédente tentative.
 
 ## Récupération du statut de l'export
 
