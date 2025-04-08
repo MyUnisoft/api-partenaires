@@ -8,7 +8,7 @@ next:
 ---
 
 > [!CAUTION]
-> Cette API est encore en phase expérimentale, et certaines informations peuvent être manquantes. Les réponses peuvent également être très gourmandes en termes de sérialisation JSON. Par exemple, pour des exercices contenant plus de 500 000 mouvements, la taille des réponses peut varier entre **150** et **250** Mo.
+> Les réponses peuvent également être très gourmandes en termes de sérialisation JSON. Par exemple, pour des exercices contenant plus de 500 000 mouvements, la taille des réponses peut varier entre **150** et **250** Mo.
 
 # Export des mouvements
 
@@ -44,7 +44,7 @@ Le paramétrage de cette route s'effectue uniquement via des [query strings](htt
 | draft | Si présent, l'API retournera uniquement les écritures en attente de validation | ❌ | ❌ |
 
 > [!NOTE]
-> L'écart entre la date de début et de fin doit être de maximum 12 mois.
+> L'écart entre la date de début et de fin ne doit pas dépasser le bornage maximum prévu par l'exercice comptable (12 à 24 mois).
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet 
