@@ -36,9 +36,9 @@ Voici les [querystrings](https://en.wikipedia.org/wiki/Query_string) attendues :
 | journalIds | tableau d'id des journaux | ❌ | ✔️ | - |
 
 > [!IMPORTANT]  
-> L'export en format TRA **requiert obligatoirement** un `idExercice` ou une période (`startDate`, `endDate`) mais ne peut pas combiner les deux.
+> L'export en format TRA **ne peut pas combiner** un `idExercice` et une période (`startDate`, `endDate`) .
 <br>
-> L'écart entre la date de début et de fin d'une période doit être de maximum 12 mois.
+> L'écart entre la date de début et de fin ne doit pas dépasser le bornage maximum prévu par l'exercice comptable (12 à 24 mois).
 
 <br>
 La génération est opérée de manière asynchrone et se décompose de la façon suivante :
