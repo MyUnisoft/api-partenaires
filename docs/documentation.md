@@ -140,6 +140,8 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
   - [Récupérer la prochaine valeur de lettrage d'un compte](./accounting/folder/account/next_lettering_value.md)
 - [Gérer l'analytique d'une société (dossier)](./accounting/folder/analytique.md)
 - [Récupération des données liées aux widgets et dashboards](./accounting/folder/dashboard.md)
+- [Récupération des RIB/IBAN d'une société](./accounting/folder/RIB.md)
+  - [Gérer les RIB/IBAN d'une société](./accounting/folder/manage_RIB.md)
 
 #### Révision
 
