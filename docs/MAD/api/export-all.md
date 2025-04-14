@@ -43,6 +43,8 @@ Voici les [querystrings](https://en.wikipedia.org/wiki/Query_string) attendues :
 <br>
 La génération est opérée de manière asynchrone et se décompose de la façon suivante :
 
+![Décomposition asynchrone de l'export complet](../images/sequence_export_all.png)
+
 ## Déclenchement de l'opération
 
 > [!IMPORTANT]  
