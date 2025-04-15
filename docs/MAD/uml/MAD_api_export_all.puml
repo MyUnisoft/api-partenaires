@@ -1,0 +1,39 @@
+@startuml MAD API
+scale 4/3
+
+actor "Client" as client
+participant "API MyUnisoft" as core_api
+
+== REQUESTING EXPORT ==
+client -> core_api: request export
+activate core_api #LightSkyBlue
+
+core_api -> core_api: create export <font color=red><b>ID
+
+return return export <font color=red><b>ID
+deactivate core_api
+
+== GET EXPORT ==
+client -> core_api: get export status by <font color=red><b>ID</b></font>
+activate core_api #LightSkyBlue
+
+alt#Gold #LightPink ID not found
+  core_api -> client: return 404
+else #LightYellow status === INIT
+  core_api -> client: return status
+else #LightYellow status === PROCESSING
+  core_api -> client: return status
+else #LightGreen status === DONE
+  core_api -> client: return status + donwload link
+end
+
+deactivate core_api
+
+client -> core_api: download export file
+activate core_api #LightSkyBlue
+
+return file
+
+deactivate core_api
+
+@enduml
