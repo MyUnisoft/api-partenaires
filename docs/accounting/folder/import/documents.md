@@ -50,12 +50,30 @@ La route requiert des paramètres [(query string)](https://en.wikipedia.org/wiki
 | `invoice_type_id` | l'id du type de document | 1 = Achat<br> 2 = Note de frais<br> 3 = Vente<br> 4 = Avoir | ✅ |
 | `ocr_type_id` | l'id de type d'OCR utilisé |  2 = MANUEL<br> 3 = OCR MyUnisoft<br> 6 = Factur-X | ✅ |
 | `name` | le nom du document |  | ❌ |
+| `return_type` | permet de préciser le type de retour | 1 = "Pas de contenu" (Default)<br> 2 = retourne les infos du document | ❌ |
 | `extension` | l'extension de fichier du document | formats supportés : **jpg, jpeg, tiff, tif, bmp, png, pdf**<br> Taille maximale : **15 Mégaoctets (15Mo)** | ✅ |
 
-En cas de succès, l'API retournera un status code `200` ainsi que la réponse JSON suivante :
+En cas de succès, l'API retournera un status code `200` avec la réponse JSON suivante :
+
+- `return_type` par défaut :
 
 ```json
 {
-    "result": "success"
+  "result": "success"
+}
+```
+
+- `return_type` enrichis (contenant les infos du document) :
+
+```json
+{
+    "id": 1234567,
+    "token": "8a6ec632125eeedc7008xxxxxxxx5512",
+    "link": "https://api.myunisoft.fr/api/ged/ged/document/1-8a6ec632125eeedc7008xxxxxxxx5512",
+    "thumbnail": "https://api.myunisoft.fr/api/ged/ged/document/1-8a6ec632125eeedc7008xxxxxxxx5512/preview?x=90&y=120",
+    "download": "https://api.myunisoft.fr/api/ged/ged/document/1-8a6ec632125eeedc7008xxxxxxxx5512/download",
+    "baseURL": "https://x.xxxxxxxx.myunisoft.fr",
+    "label": "facture.png",
+    "OCR": false
 }
 ```
