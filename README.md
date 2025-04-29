@@ -17,9 +17,3 @@
 
 > [!NOTE]
 > La version Github est toujours accessible [ici](./docs/documentation.md)
-
-# Contact 👥
-
-| Prénom - Nom | Rôle(s) | Email |
-| --- | --- | --- |
-| Thomas Gentilhomme | Lead Développeur API & Connecteurs | [partners.tech@myunisoft.fr](partners.tech@myunisoft.fr) |
