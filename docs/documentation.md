@@ -7,10 +7,11 @@ next: false
 L’API Partenaires permet aux logiciels partenaires ainsi qu'aux cabinets membres de récupérer et d'envoyer des informations depuis et vers MyUnisoft.
 
 L’authentification du partenaire ou du cabinet est principalement basée sur :
+
 - une clé <kbd>X-Third-Party</kbd> : fournie par MyUnisoft, à inclure dans l'en-tête HTTP de chaque requête. Cette clé `unique` ne doit surtout **pas être communiquée** en dehors de nos équipes techniques respectives.
 - une clé [JWT](https://jwt.io/) (**API Token**) : propre à chaque cabinet et/ou société.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Ces deux clés sont nécessaires pour pouvoir utiliser les routes définies sur la documentation postman: [https://docs.api.myunisoft.fr/](https://docs.api.myunisoft.fr/)
 
 ## 👀 Prérequis
@@ -25,6 +26,7 @@ L’authentification du partenaire ou du cabinet est principalement basée sur :
 - texte complémentaire (par exemple ou coller la clé sur votre interface ou lien vers une doc/vidéo d’utilisation avec myunisoft)
 - nom, prénom, email pour un accès à myunisoft.
 - nom, prénom, email pour une invitation slack/teams.
+
 </details>
 <details class="details custom-block">
 <summary>👉 Ce que nous renvoyons une fois les éléments ci-dessus en notre possession</summary>
@@ -32,6 +34,7 @@ L’authentification du partenaire ou du cabinet est principalement basée sur :
 - Clé <kbd>X-Third-Party</kbd> (C’est une clé secrète unique entre vous et nous qui sera nécessaire pour requêter l’API).
 - Un compte au sein d'un schéma (cabinet) dédié aux tests d'intégration.
 - Lien vers la documentation **postman** ([https://docs.api.myunisoft.fr/#intro](https://docs.api.myunisoft.fr/#intro)).
+
 </details>
 
 N'attendez pas pour rejoindre l'écosystème [MyUnisoft connected](https://myunisoft-connected.fr/) riche de plus d'une centaine d'intégrations!
@@ -168,11 +171,5 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 
 - [Déposer des documents typés (achats, ventes, avoirs et notes de frais)](./accounting/folder/import/documents.md)
 - [Déposer des documents divers sur un dossier](./discussion/add_various_documents.md)
-
-## 👥 Contact
-
-| Prénom - Nom | Rôle(s) | Email |
-| --- | --- | --- |
-| Thomas Gentilhomme | Lead Développeur API & Connecteurs | [partners.tech@myunisoft.fr](mailto:partners.tech@myunisoft.fr) |
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
