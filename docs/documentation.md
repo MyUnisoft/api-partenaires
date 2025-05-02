@@ -142,6 +142,8 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupération et/ou création d'un compte](./accounting/folder/account/create.md)
   - [Récupérer la prochaine valeur de lettrage d'un compte](./accounting/folder/account/next_lettering_value.md)
 - [Gérer l'analytique d'une société (dossier)](./accounting/folder/analytique.md)
+- [Récupération de la liste des journaux d'une société](./accounting/folder/journaux.md)
+  - [Gérer les journaux d'une société](./accounting/folder/manage_journaux.md)
 - [Récupération des données liées aux widgets et dashboards](./accounting/folder/dashboard.md)
 - [Récupération des RIB/IBAN d'une société](./accounting/folder/RIB.md)
   - [Gérer les RIB/IBAN d'une société](./accounting/folder/manage_RIB.md)
