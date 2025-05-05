@@ -30,7 +30,7 @@ curl --location 'https://api.myunisoft.fr/api/v1/diary' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{API_TOKEN}}' \
 --data '{
-    "code": "TESTS",
+    "code": "TEST",
     "name": "JOURNAL TESTS",
     "diary_type_id": 3,
     "diary_account_id": 18720228
@@ -157,7 +157,7 @@ La route attend un body contenant la propriété suivante :
 
 - `diary` : Vous devrez passer un tableau avec l'id du journal que vous souhaitez supprimer. Pour récupérer la valeur de l'id du journal vous pouvez consulter cette [page](./journaux.md).
 
-#### éfinition TypeScript du body
+#### Définition TypeScript du body
 
 ```ts
 interface DiariesToRemove {
