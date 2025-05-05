@@ -534,6 +534,37 @@
 										"description": "📢 This endpoint can be used to archive an accounting folder.\n\n📌 **It only work with a cabinet (firm) access**"
 									},
 									"response": []
+								},
+								{
+									"name": "disable accounting folder",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API_TOKEN}}"
+											}
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "",
+												"description": "required with firm access",
+												"type": "text"
+											}
+										],
+										"url": "https://api.myunisoft.fr/api/v1/disable_accounting_folder",
+										"description": "📢 This endpoint can be used to disable an accounting folder.\n\n📌 **It only work with a cabinet (firm) access**"
+									},
+									"response": []
 								}
 							]
 						},
@@ -7083,7 +7114,7 @@
 											}
 										},
 										"url": "https://api.myunisoft.fr/api/v1/society/capital",
-										"description": "📢 Provide the capital company.\n\n⚠️ A `society-id` is required with a cabinet/firm access."
+										"description": "📢 Provide the capital company.\n\n⚠️ A `society-id` is required with a cabinet/firm access.\n\n``` typescript\ninterface Capital {\n    effective_date: string,\n    capital: number,\n    social_part:  number\n}\n\n ```"
 									},
 									"response": [
 										{
@@ -7149,7 +7180,7 @@
 											}
 										},
 										"url": "https://api.myunisoft.fr/api/v1/associate/natural_person",
-										"description": "📢 Provide individual natural person associate.\n\n⚠️ A `society-id` is required with a cabinet/firm access."
+										"description": "📢 Provide individual natural person associate.\n\n⚠️ A `society-id` is required with a cabinet/firm access.\n\n``` typescript\ninterface PersonnePhysique {\n    physical_person_id: number,\n    signatory_function_id: number,\n    function_id: number,\n    start_date: string,\n    end_date: string,\n    social_part: {\n        PP: number,\n        NP: number,\n        US: number\n    },\n    account_id: number,\n    effective_date: string\n}\n ```"
 									},
 									"response": [
 										{
@@ -7215,7 +7246,7 @@
 											}
 										},
 										"url": "https://api.myunisoft.fr/api/v1/associate/legal_entity",
-										"description": "📢 Provide individual legal entity associate.\n\n⚠️ A `society-id` is required with a cabinet/firm access."
+										"description": "📢 Provide individual legal entity associate.\n\n⚠️ A `society-id` is required with a cabinet/firm access.\n\n``` typescript\ninterface PersonneMorale {\n    society_id: number,\n    signatory_function_id: number,\n    start_date: string,\n    end_date: string,\n    social_part: {\n        PP: number,\n        NP: number,\n        US: number\n    },\n    account_id: number,\n    effective_date: string,\n    revenu_pro: boolean\n}\n ```"
 									},
 									"response": [
 										{
@@ -7342,7 +7373,7 @@
 											}
 										},
 										"url": "https://api.myunisoft.fr/api/v1/society/fiscal_file",
-										"description": "📢Create/update fiscal file informations on a given company/dossier."
+										"description": "📢Create/update fiscal file informations on a given company/dossier.\n\n``` typescript\ninterface FiscalFile {\n  rof_tva: string,\n  rof_tdfc: string,\n  rof_cfe: string,\n  rof_cvae: string,\n  rof_rcm: string,\n  rof_groupe: string,\n  acompte_pro_mens: boolean,\n  exercice_declaration: boolean,\n  tva_intraco: string,\n  due_date_tva: number,\n  adherent_code: string,\n  mono_etab: boolean,\n  close_entries_VAT: boolean,\n  mail_liasse: string,\n  fiscal_integration: boolean,\n  head_group_if: boolean,\n  start_date_if: string,\n  end_date_if: string,\n  adv_forme_juridique_id: number,\n  adv_name: string,\n  adv_name_2: string,\n  adv_phone_number: string,\n  adv_address_number: string,\n  adv_street_name: string,\n  adv_postal_code: string,\n  adv_city: string,\n  adv_country: string,\n  ecf_forme_juridique_id: number,\n  ecf_siren: string,\n  ecf_name: string,\n  ecf_name_2: string,\n  ecf_address_number: string,\n  ecf_street_name: string,\n  ecf_postal_code: string,\n  ecf_city: string,\n  ecf_country: string,\n  sie_address_number: string,\n  sie_street_name: string,\n  sie_name: string,\n  sie_postal_code: string,\n  sie_city: string,\n  sie_country: string,\n  vis_name: string,\n  vis_agreement_number: string,\n  vis_viseur: boolean,\n  vis_address_number: string,\n  vis_street_name: string,\n  vis_postal_code: string,\n  vis_city: string,\n  vis_country: string,\n  id_pers_physique: number,\n  id_societe_signataire: number,\n  id_societe_comptable: number,\n  fiscal_decl_by_firm: boolean,\n  id_comptable: number,\n  assujetti_unique: boolean,\n  siren_assujetti_unique: string,\n  rof_ts: string,\n  periodicity_ts: number,\n  holding_name: string,\n  adv_road_type_id: number,\n  sie_road_type_id: number,\n  ecf_road_type_id: number,\n  vis_road_type_id: number,\n  id_sheet_group: number,\n  vat_regime_id: number,\n  gestion_center_id: number,\n  account_edi_id: number,\n  info_bnc: {\n    membership_year: string,\n    activity_code_pm: string,\n    comptability_held_id: number\n  },\n  society_status: {\n    id: number,\n    effective_date: string\n  }\n}\n ```"
 									},
 									"response": [
 										{
@@ -7522,7 +7553,7 @@
 											}
 										},
 										"url": "https://api.myunisoft.fr/api/v1/society/filiale_associate",
-										"description": "📢 Add or update a filiale associate to your accounting folder."
+										"description": "📢 Add or update a filiale associate to your accounting folder.\n\n``` typescript\ninterface FilialeAssociate {\n  society_list : [\n    {\n      society: {\n        society_id: number,\n        effective_date: string,\n        end_date: string\n      },\n      signatory_function_id: number,\n      social_part: {\n        PP: number,\n        NP: number,\n        US: number\n      }\n    }\n  ]\n}\n ```"
 									},
 									"response": [
 										{
@@ -7557,6 +7588,1270 @@
 											"header": null,
 											"cookie": [],
 											"body": null
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Buildings (Immeubles)",
+							"item": [
+								{
+									"name": "buildings",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API_TOKEN}}"
+											}
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "",
+												"description": "Required with firm access",
+												"type": "text"
+											}
+										],
+										"url": "https://api.myunisoft.fr/api/v1/building",
+										"description": "📢 This endpoint let you get the building list owned by a company"
+									},
+									"response": []
+								},
+								{
+									"name": "buildings",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API_TOKEN}}"
+											}
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "",
+												"description": "Required with firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"acquisition_date\": \"YYYY-MM-DD\",\r\n    \"address_bis\": \"\",\r\n    \"address_number\": \"\",\r\n    \"bare_building\": false,\r\n    \"building_construction_type_id\": 1,\r\n    \"building_deduction_amort_id\": 2,\r\n    \"building_land_system_id\": 10,\r\n    \"cession_date\": \"YYYY-MM-DD\",\r\n    \"city\": \"\",\r\n    \"complement\": \"\",\r\n    \"completion_date\": \"YYYY-MM-DD\",\r\n    \"country\": \"\",\r\n    \"list_building_type_id\": [6],\r\n    \"local_number\": \"\",\r\n    \"name\": \"\",\r\n    \"postal_code\": \"\",\r\n    \"road_type_id\": 9,\r\n    \"street_name\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.myunisoft.fr/api/v1/building",
+										"description": "📢 This endpoint let you add a building owned by you accounting folder\n\n``` typescript\ninterface Immeuble {\n  acquisition_date: string,\n  address_bis: string,\n  address_number: string,\n  bare_building: boolean,\n  building_construction_type_id: number,\n  building_deduction_amort_id: number,\n  building_land_system_id: number,\n  cession_date: string,\n  city: string,\n  complement: string,\n  completion_date: string,\n  country: string,\n  list_building_type_id: number[],\n  local_number: string,\n  name: string,\n  postal_code: string,\n  road_type_id: number,\n  street_name: string\n}\n ```"
+									},
+									"response": [
+										{
+											"name": "Add buildings",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "",
+														"description": "Required with firm access",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"acquisition_date\": \"2023-09-10\",\r\n    \"address_bis\": \"B\",\r\n    \"address_number\": \"8\",\r\n    \"bare_building\": true,\r\n    \"building_construction_type_id\": 1,\r\n    \"building_deduction_amort_id\": 2,\r\n    \"building_land_system_id\": 10,\r\n    \"cession_date\": \"2023-12-31\",\r\n    \"city\": \"PARIS\",\r\n    \"complement\": \"saint victorien\",\r\n    \"completion_date\": \"2023-10-20\",\r\n    \"country\": \"FRANCE\",\r\n    \"list_building_type_id\": [6],\r\n    \"local_number\": \"1\",\r\n    \"name\": \"Local principal\",\r\n    \"postal_code\": \"75000\",\r\n    \"road_type_id\": 9,\r\n    \"street_name\": \"Emile Zola\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "https://api.myunisoft.fr/api/v1/building"
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "buildings",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API_TOKEN}}"
+											}
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "",
+												"description": "Required with firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"acquisition_date\": \"YYYY-MM-DD\",\r\n    \"address_bis\": \"\",\r\n    \"address_number\": \"\",\r\n    \"bare_building\": false,\r\n    \"building_construction_type_id\": 1,\r\n    \"building_deduction_amort_id\": 2,\r\n    \"building_land_system_id\": 10,\r\n    \"cession_date\": \"YYYY-MM-DD\",\r\n    \"city\": \"\",\r\n    \"complement\": \"\",\r\n    \"completion_date\": \"YYYY-MM-DD\",\r\n    \"country\": \"\",\r\n    \"list_building_type_id\": [6],\r\n    \"local_number\": \"\",\r\n    \"name\": \"\",\r\n    \"postal_code\": \"\",\r\n    \"road_type_id\": 9,\r\n    \"street_name\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/building?building_id",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"building"
+											],
+											"query": [
+												{
+													"key": "building_id",
+													"value": null,
+													"description": "Specify the building id you would like to update"
+												}
+											]
+										},
+										"description": "📢 This endpoint let you update a building owned by you accounting folder\n\n``` typescript\ninterface Immeuble {\n  acquisition_date: string,\n  address_bis: string,\n  address_number: string,\n  bare_building: boolean,\n  building_construction_type_id: number,\n  building_deduction_amort_id: number,\n  building_land_system_id: number,\n  cession_date: string,\n  city: string,\n  complement: string,\n  completion_date: string,\n  country: string,\n  list_building_type_id: number[],\n  local_number: string,\n  name: string,\n  postal_code: string,\n  road_type_id: number,\n  street_name: string\n}\n ```"
+									},
+									"response": [
+										{
+											"name": "Update buildings",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "",
+														"description": "Required with firm access",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"acquisition_date\": \"2023-09-10\",\r\n    \"address_bis\": \"B\",\r\n    \"address_number\": \"8\",\r\n    \"bare_building\": true,\r\n    \"building_construction_type_id\": 1,\r\n    \"building_deduction_amort_id\": 2,\r\n    \"building_land_system_id\": 10,\r\n    \"cession_date\": \"2023-12-31\",\r\n    \"city\": \"PARIS\",\r\n    \"complement\": \"saint victorien\",\r\n    \"completion_date\": \"2023-10-20\",\r\n    \"country\": \"FRANCE\",\r\n    \"list_building_type_id\": [6],\r\n    \"local_number\": \"1\",\r\n    \"name\": \"Local principal\",\r\n    \"postal_code\": \"75000\",\r\n    \"road_type_id\": 9,\r\n    \"street_name\": \"Emile Zola\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://api.myunisoft.fr/api/v1/building?building_id",
+													"protocol": "https",
+													"host": [
+														"api",
+														"myunisoft",
+														"fr"
+													],
+													"path": [
+														"api",
+														"v1",
+														"building"
+													],
+													"query": [
+														{
+															"key": "building_id",
+															"value": null,
+															"description": "Specify the building id you would like to update"
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "buildings",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API_TOKEN}}"
+											}
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "",
+												"description": "Required with firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"list_building_id\": [\r\n        92\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.myunisoft.fr/api/v1/building",
+										"description": "📢 This endpoint let you remove a building owned by you accounting folder\n\n``` typescript\ninterface Immeuble {\n  \"list_building_id\": number[]\n}\n ```"
+									},
+									"response": [
+										{
+											"name": "Delete buildings",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "",
+														"description": "Required with firm access",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"list_building_id\": [\r\n        92\r\n    ]\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "https://api.myunisoft.fr/api/v1/building"
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Establishments",
+							"item": [
+								{
+									"name": "Establishment",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API_TOKEN}}"
+											}
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "Society-id",
+												"value": "",
+												"description": "required with firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"nom_etab_test_1\",\r\n    \"siret\": \"123456789\",\r\n    \"address_number\": \"119\",\r\n    \"road_type_id\": 1,\r\n    \"street_name\": \"de l'essaie concluant\",\r\n    \"postal_code\": \"83001\",\r\n    \"city\": {\r\n        \"label\": \"SAINT ZACHARIE\"\r\n    },\r\n    \"country\": \"FRANCE\",\r\n    \"indice_repetition\": \"B\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.myunisoft.fr/api/v1/society/establishment",
+										"description": "📢 This endpoint is used to create a new establishment linked to an existing accounting folder.\n\n``` typescript\ninterface Etablissement {\n  name: string,\n  siret: string,\n  address_number: string,\n  road_type_id: number,\n  street_name: string,\n  postal_code: string,\n  city: {\n      label: string\n  },\n  country: string,\n  indice_repetition: string\n}\n ```"
+									},
+									"response": [
+										{
+											"name": "establishment",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "Society-id",
+														"value": "",
+														"description": "required with firm access",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\": \"nom_etab_test_1\",\r\n    \"siret\": \"123456789\",\r\n    \"address_number\": \"119\",\r\n    \"road_type_id\": 1,\r\n    \"street_name\": \"de l'essaie concluant\",\r\n    \"postal_code\": \"83001\",\r\n    \"city\": {\r\n        \"label\": \"SAINT ZACHARIE\"\r\n    },\r\n    \"country\": \"FRANCE\",\r\n    \"indice_repetition\": \"B\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{root}}/api/v1/society/establishment"
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Establishment",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{TOKEN_API}}"
+											}
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "Society-id",
+												"value": "",
+												"description": "required with firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[\r\n    {\r\n        \"id_society\": 12345\r\n    }\r\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/society/establishment/close?closing_date=20230910",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"society",
+												"establishment",
+												"close"
+											],
+											"query": [
+												{
+													"key": "closing_date",
+													"value": "20230910",
+													"description": "Fill the date your establishment is closed (format = YYYYMMDD)"
+												}
+											]
+										},
+										"description": "📢This endpoint is used to close an establishment with its closing date."
+									},
+									"response": [
+										{
+											"name": "Establishment",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "Society-id",
+														"value": "1",
+														"description": "required with firm access",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "[\r\n    {\r\n        \"id_society\": 12345\r\n    }\r\n]",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{root}}/api/v1/society/establishment/close?closing_date=20230910",
+													"host": [
+														"{{root}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"society",
+														"establishment",
+														"close"
+													],
+													"query": [
+														{
+															"key": "closing_date",
+															"value": "20230910",
+															"description": "Fill the date your establishment is closed (format = YYYYMMDD)"
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "RIBS (IBAN list)",
+							"item": [
+								{
+									"name": "RIBS (IBAN LIST)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API_TOKEN}}"
+											}
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "1",
+												"type": "text"
+											}
+										],
+										"url": "https://api.myunisoft.fr/api/v1/rib",
+										"description": "📢 Company (dossier) IBAN List\n\nThe response is described by the following TypeScript interface:\n\n``` typescript\ninterface RIB {\n  rib_id: number;\n  diary_id: number;\n  diary_label: string;\n  society_id: number;\n  start_date: string;\n  owner: string;\n  iban: string;\n  bic: string;\n  is_default: boolean;\n}\n\n```\n\n⚠️ A `society-id` is required with a cabinet/firm access"
+									},
+									"response": []
+								},
+								{
+									"name": "RIBS",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API_TOKEN}}"
+											}
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "Society-id",
+												"value": "",
+												"description": "Required with firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"banking_integration\": true,\r\n    \"bic\": \"ABCDFRPP\",\r\n    \"diary_id\": 669294,\r\n    \"iban\": \"FR3817569000XXXXX5232686L18\",\r\n    \"is_default\": true,\r\n    \"owner\": \"SOCIETE TEST\",\r\n    \"rib_label\": \"CIC\",\r\n    \"start_date\": \"2023-08-10\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.myunisoft.fr/api/v1/rib",
+										"description": "📢 This endpoint is used to add a RIB for collecting banking data on your accounting folder.\n\nUse the interface example :\n\n``` typescript\ninterface RIB {\n  banking_integration: boolean,\n  bic: string,\n  diary_id: number,\n  iban: string,\n  is_default: boolean,\n  owner: string,\n  rib_label: string,\n  start_date: string\n}\n ```"
+									},
+									"response": [
+										{
+											"name": "RIBS",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "Society-id",
+														"value": "",
+														"description": "Required with firm access",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"banking_integration\": true,\r\n    \"bic\": \"ABCDFRPP\",\r\n    \"diary_id\": 669294,\r\n    \"iban\": \"FR3817569000XXXXX5232686L18\",\r\n    \"is_default\": true,\r\n    \"owner\": \"SOCIETE TEST\",\r\n    \"rib_label\": \"CIC\",\r\n    \"start_date\": \"2023-08-10\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "https://api.myunisoft.fr/api/v1/rib"
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "RIBS",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "Society-id",
+												"value": "",
+												"description": "Required with firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"banking_integration\": true,\r\n    \"bic\": \"ABCDFRPP\",\r\n    \"diary_id\": 669294,\r\n    \"iban\": \"FR3817569000505XXXX32686L18\",\r\n    \"is_default\": true,\r\n    \"owner\": \"SOCIETE TEST\",\r\n    \"rib_id\": 10665,\r\n    \"rib_label\": \"BNP\",\r\n    \"start_date\": \"2023-08-10\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/rib/:id",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"rib",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "10665"
+												}
+											]
+										},
+										"description": "📢 This endpoint is used to update an existing parametered RIB on your accounting folder.\n\n💥The rib_id is needed in URL path variable.\n\nUse the interface example above :\n\n``` typescript\ninterface RIB {\n  banking_integration: boolean,\n  bic: string,\n  diary_id: number,\n  iban: string,\n  is_default: true,\n  owner: string,\n  rib_id: number,\n  rib_label: string,\n  start_date: string\n}\n ```"
+									},
+									"response": [
+										{
+											"name": "RIBS",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "Society-id",
+														"value": "",
+														"description": "Required with firm access",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"banking_integration\": true,\r\n    \"bic\": \"ABCDFRPP\",\r\n    \"diary_id\": 669294,\r\n    \"iban\": \"FR3817569000505XXXX32686L18\",\r\n    \"is_default\": true,\r\n    \"owner\": \"SOCIETE TEST\",\r\n    \"rib_id\": 10665,\r\n    \"rib_label\": \"BNP\",\r\n    \"start_date\": \"2023-08-10\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://api.myunisoft.fr/api/v1/rib/:id",
+													"protocol": "https",
+													"host": [
+														"api",
+														"myunisoft",
+														"fr"
+													],
+													"path": [
+														"api",
+														"v1",
+														"rib",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": ""
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "RIBS",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "Society-id",
+												"value": "",
+												"description": "Required with firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"rib_id\": [\r\n        10665\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.myunisoft.fr/api/v1/rib",
+										"description": "📢 This endpoint lets you remove an existing parametered RIB/IBAN from an accounting folder.\n\nUse the example interface above to do it :\n\n``` typescript\ninterface RIB {\n  \"rib_id\": number[]\n}\n ```"
+									},
+									"response": [
+										{
+											"name": "RIBS",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "Society-id",
+														"value": "",
+														"description": "Required with firm access",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"rib_id\": [\r\n        10665\r\n    ]\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "https://api.myunisoft.fr/api/v1/rib"
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Diary (Journaux)",
+							"item": [
+								{
+									"name": "Diary (journaux)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API_TOKEN}}"
+											}
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "1",
+												"description": "Required with firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"code\": \"API\",\r\n    \"name\": \"JOURNAL TESTS\",\r\n    \"diary_type_id\": 3,\r\n    \"diary_account_id\": 1234567\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.myunisoft.fr/api/v1/diary",
+										"description": "📢 This endpoint allows you to create an accounting diary.\n\nIt requires to provide the diary_type_id. See the list :\n\n| **id** | **name** | **code** |\n| --- | --- | --- |\n| 1 | Achat | ACH |\n| 2 | Vente | VTE |\n| 3 | Banque | BQ |\n| 4 | Caisse | CAISSE |\n| 5 | OD | OD |\n| 6 | OD AUDIT | OD_AUDIT |\n| 8 | À extourner | A_EXT |\n| 9 | Extourne | EXT |\n| 10 | À Nouveaux | AN |\n| 11 | OD Paie | AD_PAIE |\n| 12 | OD Lettrage | OD_LET |\n| 13 | Note de frais | NDF |\n| 14 | OD TVA | OD_DECL_FISCALE |\n| 15 | OD Extracomptable | OD_EXC |\n| 19 | Reprise Balance | RBAL |\n\nYou may need to provide the diary_account_id (for bank diaries)\n\n⚠️ A `society-id` is required with a cabinet/firm access"
+									},
+									"response": [
+										{
+											"name": "diary",
+											"originalRequest": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{API_TOKEN}}"
+													}
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "1",
+														"description": "Required with firm access",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"code\": \"API\",\r\n    \"name\": \"JOURNAL TESTS\",\r\n    \"diary_type_id\": 3,\r\n    \"diary_account_id\": 1234567\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "https://api.myunisoft.fr/api/v1/diary",
+												"description": "📢 This endpoint allows you to create an accounting diary.\n\nIt requires to provide the diary_type_id. See the list :\n\n| **id** | **name** | **code** |\n| --- | --- | --- |\n| 1 | Achat | ACH |\n| 2 | Vente | VTE |\n| 3 | Banque | BQ |\n| 4 | Caisse | CAISSE |\n| 5 | OD | OD |\n| 6 | OD AUDIT | OD_AUDIT |\n| 8 | À extourner | A_EXT |\n| 9 | Extourne | EXT |\n| 10 | À Nouveaux | AN |\n| 11 | OD Paie | AD_PAIE |\n| 12 | OD Lettrage | OD_LET |\n| 13 | Note de frais | NDF |\n| 14 | OD TVA | OD_DECL_FISCALE |\n| 15 | OD Extracomptable | OD_EXC |\n| 19 | Reprise Balance | RBAL |\n\nYou may need to provide the diary_account_id (for bank diaries)\n\n⚠️ A `society-id` is required with a cabinet/firm access"
+											},
+											"_postman_previewlanguage": "",
+											"header": "",
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Diary (journaux)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API-TOKEN}}"
+											}
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/diary?q&type&code",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"diary"
+											],
+											"query": [
+												{
+													"key": "q",
+													"value": null,
+													"description": "OPTIONAL - Fetch diaries whose name and code include \"q\"."
+												},
+												{
+													"key": "type",
+													"value": null,
+													"description": "OPTIONAL - Fetch diaries by type."
+												},
+												{
+													"key": "code",
+													"value": null,
+													"description": "OPTIONAL - Get diary by code."
+												}
+											]
+										},
+										"description": "📢 List of diaries (journaux).\n\n*   The name property can be updated and should not be used as a constraint key.\n*   Some diary have an account like Bank (To define to which bank the accounting entries should be attached).\n    \n\n| id | label | traduction | type |\n| --- | --- | --- | --- |\n| 1 | Achat | Purchase | ACH |\n| 2 | Vente | Sale | VTE |\n| 3 | Banque | Bank | BQ |\n| 4 | Caisse | \\- | CAISSE |\n| 5 | OD | Various operations | OD |\n| 6 | OD Audit | \\- | OD_AUDIT |\n| 7 | OD Simulation | \\- | OD_SIMUL |\n| 8 | À extourner | To be extorted | A_EXT |\n| 9 | Extourne | \\- | EXT |\n| 10 | À Nouveaux | \\- | AN |\n| 11 | OD Paie | OD Payroll | OD_PAIE |\n| 12 | OD Lettrage | \\- | OD_LET |\n| 13 | Note de frais | Expense report | NDF |\n| 14 | OD TVA | OD VAT | OD_DECL_FISCALE |\n\n⚠️ A `society-id` is required with a cabinet/firm access"
+									},
+									"response": [
+										{
+											"name": "Get all",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													}
+												],
+												"url": "https://api.myunisoft.fr/api/v1/diary"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "X-Rate-Limit-Remaining",
+													"value": "9"
+												},
+												{
+													"key": "X-Rate-Limit-Reset",
+													"value": "1596441345.429604"
+												},
+												{
+													"key": "X-Rate-Limit-Total",
+													"value": "10"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 03 Aug 2020 07:55:44 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "2535"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"code\": \"01\",\n        \"name\": \"JOURNAL D'ACHATS\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31420,\n        \"diary_type_id\": 1,\n        \"diary_type_code\": \"ACH\",\n        \"diary_type_name\": \"Achat\"\n    },\n    {\n        \"code\": \"02\",\n        \"name\": \"JOURNAL DE VENTES\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31421,\n        \"diary_type_id\": 2,\n        \"diary_type_code\": \"VTE\",\n        \"diary_type_name\": \"Vente\"\n    },\n    {\n        \"code\": \"03\",\n        \"name\": \"JOURNAL D'ACHATS BIS\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31422,\n        \"diary_type_id\": 1,\n        \"diary_type_code\": \"ACH\",\n        \"diary_type_name\": \"Achat\"\n    },\n    {\n        \"code\": \"09\",\n        \"name\": \"JOURNAL NDF\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31423,\n        \"diary_type_id\": 13,\n        \"diary_type_code\": \"NDF\",\n        \"diary_type_name\": \"Note de frais\"\n    },\n    {\n        \"code\": \"15\",\n        \"name\": \"JOURNAL BANQUE\",\n        \"account\": {\n            \"id\": 1158058,\n            \"label\": \"BANQUES\",\n            \"number\": \"512000\"\n        },\n        \"blocked\": false,\n        \"diary_id\": 31424,\n        \"diary_type_id\": 3,\n        \"diary_type_code\": \"BQ\",\n        \"diary_type_name\": \"Banque\"\n    },\n    {\n        \"code\": \"18\",\n        \"name\": \"JOURNAL DE CAISSE\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31425,\n        \"diary_type_id\": 4,\n        \"diary_type_code\": \"CAISSE\",\n        \"diary_type_name\": \"Caisse\"\n    },\n    {\n        \"code\": \"20\",\n        \"name\": \"JOURNAL D' OD\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31426,\n        \"diary_type_id\": 5,\n        \"diary_type_code\": \"OD\",\n        \"diary_type_name\": \"OD\"\n    },\n    {\n        \"code\": \"21\",\n        \"name\": \"JOURNAL  SITUATIONS\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31427,\n        \"diary_type_id\": 7,\n        \"diary_type_code\": \"OD_SIMUL\",\n        \"diary_type_name\": \"OD Simulation\"\n    },\n    {\n        \"code\": \"30\",\n        \"name\": \"JOURNAL DE PAIE\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31428,\n        \"diary_type_id\": 11,\n        \"diary_type_code\": \"OD_PAIE\",\n        \"diary_type_name\": \"OD Paie\"\n    },\n    {\n        \"code\": \"40\",\n        \"name\": \"JOURNAL AN\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31429,\n        \"diary_type_id\": 10,\n        \"diary_type_code\": \"AN\",\n        \"diary_type_name\": \"À Nouveaux\"\n    },\n    {\n        \"code\": \"50\",\n        \"name\": \"JOURNAL OD DECL FISCALE\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31430,\n        \"diary_type_id\": 14,\n        \"diary_type_code\": \"OD_DECL_FISCALE\",\n        \"diary_type_name\": \"OD TVA\"\n    },\n    {\n        \"code\": \"60\",\n        \"name\": \"JOURNAL OD LETTRAGE\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31431,\n        \"diary_type_id\": 12,\n        \"diary_type_code\": \"OD_LET\",\n        \"diary_type_name\": \"OD Lettrage\"\n    },\n    {\n        \"code\": \"98\",\n        \"name\": \"JOURNAL A EXTOURNER\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31432,\n        \"diary_type_id\": 8,\n        \"diary_type_code\": \"A_EXT\",\n        \"diary_type_name\": \"À extourner\"\n    },\n    {\n        \"code\": \"99\",\n        \"name\": \"JOURNAL EXTOURNE\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31433,\n        \"diary_type_id\": 9,\n        \"diary_type_code\": \"EXT\",\n        \"diary_type_name\": \"Extourne\"\n    }\n]"
+										},
+										{
+											"name": "Get one (by code)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "https://api.myunisoft.fr/api/v1/diary?code=01",
+													"protocol": "https",
+													"host": [
+														"api",
+														"myunisoft",
+														"fr"
+													],
+													"path": [
+														"api",
+														"v1",
+														"diary"
+													],
+													"query": [
+														{
+															"key": "code",
+															"value": "01",
+															"description": "OPTIONAL - Get diary by code."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": null,
+											"cookie": [],
+											"body": "[\n    {\n        \"code\": \"01\",\n        \"name\": \"JOURNAL D'ACHATS\",\n        \"closed\": false,\n        \"account\": null,\n        \"blocked\": true,\n        \"diary_id\": 188,\n        \"diary_type_id\": 1,\n        \"diary_type_code\": \"ACH\",\n        \"diary_type_name\": \"Achat\"\n    }\n]"
+										},
+										{
+											"name": "Fetch diaries by type",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "https://api.myunisoft.fr/api/v1/diary?type=ACH",
+													"protocol": "https",
+													"host": [
+														"api",
+														"myunisoft",
+														"fr"
+													],
+													"path": [
+														"api",
+														"v1",
+														"diary"
+													],
+													"query": [
+														{
+															"key": "type",
+															"value": "ACH",
+															"description": "OPTIONAL - Fetch diaries by type."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": null,
+											"cookie": [],
+											"body": "[\n    {\n        \"code\": \"01\",\n        \"name\": \"JOURNAL D'ACHATS\",\n        \"closed\": false,\n        \"account\": null,\n        \"blocked\": true,\n        \"diary_id\": 188,\n        \"diary_type_id\": 1,\n        \"diary_type_code\": \"ACH\",\n        \"diary_type_name\": \"Achat\"\n    },\n    {\n        \"code\": \"03\",\n        \"name\": \"JOURNAL D'ACHATS BIS\",\n        \"closed\": false,\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 190,\n        \"diary_type_id\": 1,\n        \"diary_type_code\": \"ACH\",\n        \"diary_type_name\": \"Achat\"\n    }\n]"
+										},
+										{
+											"name": "Fetch by diary name",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "https://api.myunisoft.fr/api/v1/diary?q=situation",
+													"protocol": "https",
+													"host": [
+														"api",
+														"myunisoft",
+														"fr"
+													],
+													"path": [
+														"api",
+														"v1",
+														"diary"
+													],
+													"query": [
+														{
+															"key": "q",
+															"value": "situation",
+															"description": "OPTIONAL - Fetch diaries whose name and code include \"q\"."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": null,
+											"cookie": [],
+											"body": "[\n    {\n        \"code\": \"21\",\n        \"name\": \"JOURNAL  SITUATIONS\",\n        \"closed\": false,\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 199,\n        \"diary_type_id\": 5,\n        \"diary_type_code\": \"OD\",\n        \"diary_type_name\": \"OD\"\n    },\n    {\n        \"code\": \"ECS\",\n        \"name\": \"EXTRA COMPTABLE DE SITUATION\",\n        \"closed\": false,\n        \"account\": null,\n        \"blocked\": true,\n        \"diary_id\": 58952,\n        \"diary_type_id\": 15,\n        \"diary_type_code\": \"OD_EXC\",\n        \"diary_type_name\": \"OD Extracomptable\"\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "Diary (journaux)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API_TOKEN}}"
+											}
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "1",
+												"description": "Required with firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"JOURNAL A MODIFIER\",\r\n    \"diary_type_id\": 3,\r\n    \"diary_account_id\": 1234567\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/diary?id",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"diary"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": null,
+													"description": "provide the diary id you try to update"
+												}
+											]
+										},
+										"description": "📢 This endpoint allows you to update an accounting diary.\n\nIt requires to provide the diary_type_id. See the list :\n\n| **id** | **name** | **code** |\n| --- | --- | --- |\n| 1 | Achat | ACH |\n| 2 | Vente | VTE |\n| 3 | Banque | BQ |\n| 4 | Caisse | CAISSE |\n| 5 | OD | OD |\n| 6 | OD AUDIT | OD_AUDIT |\n| 8 | À extourner | A_EXT |\n| 9 | Extourne | EXT |\n| 10 | À Nouveaux | AN |\n| 11 | OD Paie | AD_PAIE |\n| 12 | OD Lettrage | OD_LET |\n| 13 | Note de frais | NDF |\n| 14 | OD TVA | OD_DECL_FISCALE |\n| 15 | OD Extracomptable | OD_EXC |\n| 19 | Reprise Balance | RBAL |\n\nYou may need to provide the diary_account_id (for bank diaries)\n\n⚠️ A `society-id` is required with a cabinet/firm access"
+									},
+									"response": [
+										{
+											"name": "diary",
+											"originalRequest": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{API_TOKEN}}"
+													}
+												},
+												"method": "PUT",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "1",
+														"description": "Required with firm access",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\": \"JOURNAL A MODIFIER\",\r\n    \"diary_type_id\": 3,\r\n    \"diary_account_id\": 1234567\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://api.myunisoft.fr/api/v1/diary?id",
+													"protocol": "https",
+													"host": [
+														"api",
+														"myunisoft",
+														"fr"
+													],
+													"path": [
+														"api",
+														"v1",
+														"diary"
+													],
+													"query": [
+														{
+															"key": "id",
+															"value": null,
+															"description": "provide the diary id you try to update"
+														}
+													]
+												},
+												"description": "📢 This endpoint allows you to update an accounting diary.\n\nIt requires to provide the diary_type_id. See the list :\n\n| **id** | **name** | **code** |\n| --- | --- | --- |\n| 1 | Achat | ACH |\n| 2 | Vente | VTE |\n| 3 | Banque | BQ |\n| 4 | Caisse | CAISSE |\n| 5 | OD | OD |\n| 6 | OD AUDIT | OD_AUDIT |\n| 8 | À extourner | A_EXT |\n| 9 | Extourne | EXT |\n| 10 | À Nouveaux | AN |\n| 11 | OD Paie | AD_PAIE |\n| 12 | OD Lettrage | OD_LET |\n| 13 | Note de frais | NDF |\n| 14 | OD TVA | OD_DECL_FISCALE |\n| 15 | OD Extracomptable | OD_EXC |\n| 19 | Reprise Balance | RBAL |\n\nYou may need to provide the diary_account_id (for bank diaries)\n\n⚠️ A `society-id` is required with a cabinet/firm access"
+											},
+											"_postman_previewlanguage": "",
+											"header": "",
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Diary (journaux)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API_TOKEN}}"
+											}
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "1",
+												"description": "Required with firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"diary\": [\r\n        123456\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.myunisoft.fr/api/v1/diary",
+										"description": "📢 This endpoint allows you to delete accounting diaries.\n\nIt requires to provide the diary id in the body.\n\n⚠️ A `society-id` is required with a cabinet/firm access"
+									},
+									"response": [
+										{
+											"name": "diary",
+											"originalRequest": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{API_TOKEN}}"
+													}
+												},
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "1",
+														"description": "Required with firm access",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"diary\": [\r\n        123456\r\n    ]\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "https://api.myunisoft.fr/api/v1/diary",
+												"description": "📢 This endpoint allows you to delete accounting diaries.\n\nIt requires to provide the diary id in the body.\n\n⚠️ A `society-id` is required with a cabinet/firm access"
+											},
+											"_postman_previewlanguage": "",
+											"header": "",
+											"cookie": [],
+											"body": ""
 										}
 									]
 								}
@@ -7643,61 +8938,6 @@
 									"header": null,
 									"cookie": [],
 									"body": "{\n    \"ape\": {\n        \"id\": 534,\n        \"label\": \"5829C\",\n        \"value\": \"Édition de logiciels applicatifs\"\n    },\n    \"register\": null,\n    \"legal_form\": null,\n    \"road_type\": {\n        \"id\": 9,\n        \"label\": \"Rue\",\n        \"value\": \"Rue\"\n    },\n    \"owner_company\": {\n        \"id\": 1,\n        \"label\": \"SCH5\",\n        \"value\": \"SCH5\"\n    },\n    \"bilan\": null,\n    \"impot\": null,\n    \"vat_regime\": null,\n    \"coordonnee\": null,\n    \"footer\": null,\n    \"city\": {\n        \"label\": \"MASSY\",\n        \"value\": \"MASSY\"\n    },\n    \"comment\": \"\",\n    \"society_id\": 3,\n    \"name\": \"MY UNISOFT\",\n    \"siret\": \"84014327500039\",\n    \"activity\": \"\",\n    \"rof_tva\": \"\",\n    \"rof_tdfc\": \"\",\n    \"rof_cfe\": \"\",\n    \"rof_cvae\": \"\",\n    \"address_number\": \"4\",\n    \"id_accountant\": 1,\n    \"id_rm\": 9,\n    \"id_collab\": null,\n    \"accountant\": {\n        \"id_ex\": 1,\n        \"prenom\": \"THOMAS\",\n        \"nom\": \"GENTILHOMME\"\n    },\n    \"rm\": {\n        \"id_ex\": 9,\n        \"prenom\": \"Tony\",\n        \"nom\": \"Gorez\"\n    },\n    \"collab\": null,\n    \"secured\": false,\n    \"analytics\": false,\n    \"enable_quantity\": false,\n    \"folder_reference\": \"\",\n    \"adherent_code\": \"\",\n    \"formule_code\": \"STAN\",\n    \"safe_status\": true,\n    \"logo\": null,\n    \"address_bis\": null,\n    \"street_name\": \"GALVANI\",\n    \"complement\": \"\",\n    \"postal_code\": \"91300\",\n    \"country\": \"FRANCE\",\n    \"address\": \"4 Rue GALVANI 91300 MASSY FRANCE\",\n    \"id_centre_gestion\": 0,\n    \"code_sheet_group\": \"\",\n    \"registration_date\": \"2021-03-22\",\n    \"close_entries_VAT\": false,\n    \"id_type_company\": 1\n}"
-								}
-							]
-						},
-						{
-							"name": "Fiscal file (onglet dossier fiscal)",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{API_TOKEN}}"
-									}
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Third-Party-Secret",
-										"value": ""
-									},
-									{
-										"key": "society-id",
-										"value": "42",
-										"disabled": true
-									}
-								],
-								"url": "https://api.myunisoft.fr/api/v1/society/fiscal_file"
-							},
-							"response": [
-								{
-									"name": "fiscal file (onglet dossier fiscal)",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "X-Third-Party-Secret",
-												"value": ""
-											},
-											{
-												"key": "society-id",
-												"value": "42",
-												"disabled": true
-											}
-										],
-										"url": "https://api.myunisoft.fr/api/v1/society/fiscal_file"
-									},
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json",
-											"description": "",
-											"type": "text"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"rof_tva\": \"TVA1\",\n    \"rof_tdfc\": \"\",\n    \"rof_cfe\": \"CFE1\",\n    \"rof_cvae\": \"CVAE1\",\n    \"rof_rcm\": \"RCM1\",\n    \"acompte_pro_mens\": false,\n    \"tva_intraco\": \"\",\n    \"due_date_tva\": 0,\n    \"adherent_code\": \"\",\n    \"mono_etab\": false,\n    \"close_entries_VAT\": false,\n    \"mail_liasse\": \"\",\n    \"exercice_declaration\": false,\n    \"fiscal_integration\": false,\n    \"head_group_if\": false,\n    \"start_date_if\": \"\",\n    \"end_date_if\": \"\",\n    \"adv_legal_form_id\": \"\",\n    \"adv_name\": \"\",\n    \"adv_name_2\": \"\",\n    \"adv_phone_number\": \"\",\n    \"adv_address_number\": \"\",\n    \"adv_street_name\": \"\",\n    \"adv_postal_code\": \"\",\n    \"adv_city\": \"\",\n    \"adv_country\": \"\",\n    \"ecf_legal_form_id\": \"\",\n    \"ecf_siren\": \"\",\n    \"ecf_name\": \"\",\n    \"ecf_name_2\": \"\",\n    \"ecf_address_number\": \"\",\n    \"ecf_street_name\": \"\",\n    \"ecf_postal_code\": \"\",\n    \"ecf_city\": \"\",\n    \"ecf_country\": \"\",\n    \"sie_address_number\": \"\",\n    \"sie_street_name\": \"\",\n    \"sie_name\": \"\",\n    \"sie_postal_code\": \"\",\n    \"sie_city\": \"\",\n    \"sie_country\": \"\",\n    \"vis_name\": \"\",\n    \"vis_agreement_number\": \"\",\n    \"vis_viseur\": false,\n    \"vis_address_number\": \"\",\n    \"vis_street_name\": \"\",\n    \"vis_postal_code\": \"\",\n    \"vis_city\": \"\",\n    \"vis_country\": \"\",\n    \"id_pers_physique\": null,\n    \"id_societe_signataire\": null,\n    \"id_societe_comptable\": null,\n    \"fiscal_decl_by_firm\": true,\n    \"id_comptable\": null,\n    \"assujetti_unique\": false,\n    \"siren_assujetti_unique\": \"\",\n    \"rof_ts\": \"TS1\",\n    \"periodicity_ts\": 0,\n    \"holding_name\": \"\",\n    \"info_bnc\": {\n        \"info_bnc_id\": 1,\n        \"membership_year\": null,\n        \"activity_code_pm\": null\n    },\n    \"society_status\": {\n        \"id\": 1,\n        \"label\": \"En activité\",\n        \"value\": \"En activité\",\n        \"effective_date\": \"2024-04-12\"\n    },\n    \"account_edi\": {\n        \"id\": 1,\n        \"label\": null,\n        \"value\": \"email@email.com\"\n    }\n}"
 								}
 							]
 						},
@@ -7858,103 +9098,6 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"customer_waiting_account\": \"\",\n    \"accounting_firm_waiting_account\": \"\",\n    \"ics\": \"\",\n    \"accounting_plan_id\": -100,\n    \"max_car_third_p_account\": 10,\n    \"max_car_general_account\": 6,\n    \"auto_complete_account\": true,\n    \"customer_payment_deadline_id\": null,\n    \"provider_payment_deadline_id\": null,\n    \"customer_reglement_type_id\": null,\n    \"provider_reglement_type_id\": null,\n    \"diary_purchases_id\": 2424,\n    \"comptability_type_id\": 1,\n    \"diary_sales_id\": 2425,\n    \"expense_report_id\": 2427,\n    \"enable_autolettering\": true,\n    \"enable_RB_autoentries\": true,\n    \"annual_depreciation_period\": 360,\n    \"diary_dotation_id\": 2430,\n    \"bank_reconciliation_state\": true,\n    \"diary_interest_id\": null,\n    \"account_interest_id\": null,\n    \"maximum_difference_amount\": 0.9,\n    \"comptability_type\": {\n        \"id\": 1,\n        \"label\": \"Engagement\",\n        \"code\": \"ENGA\"\n    },\n    \"accounting_plan\": {\n        \"id\": -100,\n        \"label\": \"Etalon MYUNISOFT\"\n    },\n    \"customer_payment_deadline\": null,\n    \"provider_payment_deadline\": null,\n    \"customer_reglement_type\": null,\n    \"provider_reglement_type\": null,\n    \"diary_purchases\": {\n        \"id\": 2424,\n        \"label\": \"01 - JOURNAL D'ACHATS\"\n    },\n    \"diary_sales\": {\n        \"id\": 2425,\n        \"label\": \"02 - JOURNAL DE VENTES\"\n    },\n    \"diary_dotation\": {\n        \"id\": 2430,\n        \"label\": \"20 - JOURNAL D' OD\"\n    },\n    \"expense_report\": {\n        \"id\": 2427,\n        \"label\": \"09 - JOURNAL NDF\"\n    },\n    \"diary_interest\": null,\n    \"diary_lettering\": {\n        \"id\": 2434,\n        \"label\": \"60 - JOURNAL OD LETTRAGE\"\n    },\n    \"diary_situation_id\": null,\n    \"account_interest\": null,\n    \"account_purchases\": {\n        \"id\": 89538,\n        \"label\": \"607000\"\n    },\n    \"account_sales\": {\n        \"id\": 89649,\n        \"label\": \"707000\"\n    },\n    \"account_expense_report\": {\n        \"id\": 89572,\n        \"label\": \"625600\"\n    },\n    \"account_income_lettering\": {\n        \"id\": 89679,\n        \"label\": \"758000 - PRODUITS DIV.GESTION\"\n    },\n    \"account_expense_lettering\": {\n        \"id\": 89604,\n        \"label\": \"658000 - CHARGES DIV.GEST.COU\"\n    },\n    \"wallets\": [\n        {\n            \"id\": 1,\n            \"label\": \"TOUTES\"\n        }\n    ]\n}"
-								}
-							]
-						},
-						{
-							"name": "Filiale Associate",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{API-TOKEN}}"
-									}
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Third-Party-Secret",
-										"value": "{{X-Third-Party-Secret}}",
-										"type": "text"
-									},
-									{
-										"key": "society-id",
-										"value": "1",
-										"description": "required",
-										"type": "text"
-									}
-								],
-								"url": "https://api.myunisoft.fr/api/v1/society/filiale_associate"
-							},
-							"response": [
-								{
-									"name": "Filiale Associate",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "society-id",
-												"value": "",
-												"description": "Required with Frim Access",
-												"type": "text",
-												"disabled": true
-											},
-											{
-												"key": "Authorization",
-												"value": "{{TOKEN}}",
-												"type": "text"
-											},
-											{
-												"key": "X-Third-Party-Secret",
-												"value": "{{X-Third-Party-Secret}}",
-												"type": "text"
-											}
-										],
-										"url": "https://api.myunisoft.fr/api/v1/society/filiale_associate"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "vary",
-											"value": "Origin"
-										},
-										{
-											"key": "request-id",
-											"value": "req-06376c5d-24dd-41a1-bdcd-67873b91abf2"
-										},
-										{
-											"key": "x-rate-limit-remaining",
-											"value": "9"
-										},
-										{
-											"key": "x-rate-limit-reset",
-											"value": "1678719506.167875"
-										},
-										{
-											"key": "x-rate-limit-total",
-											"value": "10"
-										},
-										{
-											"key": "content-type",
-											"value": "application/json; charset=utf-8"
-										},
-										{
-											"key": "content-length",
-											"value": "1826"
-										},
-										{
-											"key": "date",
-											"value": "Mon, 13 Mar 2023 14:58:25 GMT"
-										},
-										{
-											"key": "keep-alive",
-											"value": "timeout=5"
-										}
-									],
-									"cookie": [],
-									"body": "{\n  \"filiale_associate_list\": [\n    {\n      \"society_link_id\": 78,\n      \"society\": {\n        \"revenu_pro\": false,\n        \"id\": 372,\n        \"name\": \"SOCIETE DE TEST\",\n        \"siret\": \"\",\n        \"capital\": 50000,\n        \"nb_part\": 100,\n        \"date_capital\": \"20180101\",\n        \"address\": \"01 B Allee DOUDEAUVILLE HELO 29730 TREFFIAGAT FRANCE\",\n        \"account_id\": 0,\n        \"start_date\": \"2020-01-01\",\n        \"end_date\": \"\",\n        \"id_type_company\": 1,\n        \"head_group_if\": true,\n        \"fiscal_integration\": false,\n        \"assujetti_unique\": false,\n        \"vat_start_date\": \"\",\n        \"vat_end_date\": \"\",\n        \"start_date_if\": \"20200101\",\n        \"end_date_if\": \"20221231\",\n        \"direct_holding_percentage\": 0,\n        \"indirect_holding_percentage\": 0,\n        \"tax_scope\": false\n      },\n      \"signatory_function\": {\n        \"id\": 3,\n        \"label\": \"Chef d'entreprise\"\n      },\n      \"social_part\": {\n        \"PP\": 1,\n        \"NP\": 0,\n        \"US\": 0,\n        \"percent\": 1\n      }\n    },\n    {\n      \"society_link_id\": 100,\n      \"society\": {\n        \"revenu_pro\": false,\n        \"id\": 370,\n        \"name\": \"2065 BIS Exercice d\\u00e9cal\\u00e9\",\n        \"siret\": \"777555444\",\n        \"capital\": 100000,\n        \"nb_part\": 100,\n        \"date_capital\": \"20200701\",\n        \"address\": \"35 T Avenue Orange 91160 BALLAINVILLIERS FRANCE\",\n        \"account_id\": 0,\n        \"start_date\": \"2020-07-01\",\n        \"end_date\": \"\",\n        \"id_type_company\": 1,\n        \"head_group_if\": false,\n        \"fiscal_integration\": false,\n        \"assujetti_unique\": false,\n        \"vat_start_date\": \"\",\n        \"vat_end_date\": \"\",\n        \"start_date_if\": \"\",\n        \"end_date_if\": \"\",\n        \"direct_holding_percentage\": 0,\n        \"indirect_holding_percentage\": 0,\n        \"tax_scope\": false\n      },\n      \"signatory_function\": {\n        \"id\": 6,\n        \"label\": \"Co-G\\u00e9rant\"\n      },\n      \"social_part\": {\n        \"PP\": 40,\n        \"NP\": 0,\n        \"US\": 0,\n        \"percent\": 40\n      }\n    }\n  ]\n}"
 								}
 							]
 						},
@@ -8283,232 +9426,6 @@
 								"description": "📢 This endpoint is used to get all fixed assets and non-current assets for a specified review file.\n\n⚠️ A `society-id` is required with a cabinet/firm access"
 							},
 							"response": []
-						},
-						{
-							"name": "Diary (journaux)",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{API-TOKEN}}"
-									}
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Third-Party-Secret",
-										"value": "{{X-Third-Party-Secret}}",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "https://api.myunisoft.fr/api/v1/diary?q&type&code",
-									"protocol": "https",
-									"host": [
-										"api",
-										"myunisoft",
-										"fr"
-									],
-									"path": [
-										"api",
-										"v1",
-										"diary"
-									],
-									"query": [
-										{
-											"key": "q",
-											"value": null,
-											"description": "OPTIONAL - Fetch diaries whose name and code include \"q\"."
-										},
-										{
-											"key": "type",
-											"value": null,
-											"description": "OPTIONAL - Fetch diaries by type."
-										},
-										{
-											"key": "code",
-											"value": null,
-											"description": "OPTIONAL - Get diary by code."
-										}
-									]
-								},
-								"description": "📢 List of diaries (journaux).\n\n*   The name property can be updated and should not be used as a constraint key.\n*   Some diary have an account like Bank (To define to which bank the accounting entries should be attached).\n    \n\n| id | label | traduction | type |\n| --- | --- | --- | --- |\n| 1 | Achat | Purchase | ACH |\n| 2 | Vente | Sale | VTE |\n| 3 | Banque | Bank | BQ |\n| 4 | Caisse | \\- | CAISSE |\n| 5 | OD | Various operations | OD |\n| 6 | OD Audit | \\- | OD_AUDIT |\n| 7 | OD Simulation | \\- | OD_SIMUL |\n| 8 | À extourner | To be extorted | A_EXT |\n| 9 | Extourne | \\- | EXT |\n| 10 | À Nouveaux | \\- | AN |\n| 11 | OD Paie | OD Payroll | OD_PAIE |\n| 12 | OD Lettrage | \\- | OD_LET |\n| 13 | Note de frais | Expense report | NDF |\n| 14 | OD TVA | OD VAT | OD_DECL_FISCALE |\n\n⚠️ A `society-id` is required with a cabinet/firm access"
-							},
-							"response": [
-								{
-									"name": "Get all",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "X-Third-Party-Secret",
-												"value": "{{X-Third-Party-Secret}}",
-												"type": "text"
-											}
-										],
-										"url": "https://api.myunisoft.fr/api/v1/diary"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "X-Rate-Limit-Remaining",
-											"value": "9"
-										},
-										{
-											"key": "X-Rate-Limit-Reset",
-											"value": "1596441345.429604"
-										},
-										{
-											"key": "X-Rate-Limit-Total",
-											"value": "10"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json; charset=utf-8"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 03 Aug 2020 07:55:44 GMT"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Content-Length",
-											"value": "2535"
-										}
-									],
-									"cookie": [],
-									"body": "[\n    {\n        \"code\": \"01\",\n        \"name\": \"JOURNAL D'ACHATS\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31420,\n        \"diary_type_id\": 1,\n        \"diary_type_code\": \"ACH\",\n        \"diary_type_name\": \"Achat\"\n    },\n    {\n        \"code\": \"02\",\n        \"name\": \"JOURNAL DE VENTES\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31421,\n        \"diary_type_id\": 2,\n        \"diary_type_code\": \"VTE\",\n        \"diary_type_name\": \"Vente\"\n    },\n    {\n        \"code\": \"03\",\n        \"name\": \"JOURNAL D'ACHATS BIS\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31422,\n        \"diary_type_id\": 1,\n        \"diary_type_code\": \"ACH\",\n        \"diary_type_name\": \"Achat\"\n    },\n    {\n        \"code\": \"09\",\n        \"name\": \"JOURNAL NDF\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31423,\n        \"diary_type_id\": 13,\n        \"diary_type_code\": \"NDF\",\n        \"diary_type_name\": \"Note de frais\"\n    },\n    {\n        \"code\": \"15\",\n        \"name\": \"JOURNAL BANQUE\",\n        \"account\": {\n            \"id\": 1158058,\n            \"label\": \"BANQUES\",\n            \"number\": \"512000\"\n        },\n        \"blocked\": false,\n        \"diary_id\": 31424,\n        \"diary_type_id\": 3,\n        \"diary_type_code\": \"BQ\",\n        \"diary_type_name\": \"Banque\"\n    },\n    {\n        \"code\": \"18\",\n        \"name\": \"JOURNAL DE CAISSE\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31425,\n        \"diary_type_id\": 4,\n        \"diary_type_code\": \"CAISSE\",\n        \"diary_type_name\": \"Caisse\"\n    },\n    {\n        \"code\": \"20\",\n        \"name\": \"JOURNAL D' OD\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31426,\n        \"diary_type_id\": 5,\n        \"diary_type_code\": \"OD\",\n        \"diary_type_name\": \"OD\"\n    },\n    {\n        \"code\": \"21\",\n        \"name\": \"JOURNAL  SITUATIONS\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31427,\n        \"diary_type_id\": 7,\n        \"diary_type_code\": \"OD_SIMUL\",\n        \"diary_type_name\": \"OD Simulation\"\n    },\n    {\n        \"code\": \"30\",\n        \"name\": \"JOURNAL DE PAIE\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31428,\n        \"diary_type_id\": 11,\n        \"diary_type_code\": \"OD_PAIE\",\n        \"diary_type_name\": \"OD Paie\"\n    },\n    {\n        \"code\": \"40\",\n        \"name\": \"JOURNAL AN\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31429,\n        \"diary_type_id\": 10,\n        \"diary_type_code\": \"AN\",\n        \"diary_type_name\": \"À Nouveaux\"\n    },\n    {\n        \"code\": \"50\",\n        \"name\": \"JOURNAL OD DECL FISCALE\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31430,\n        \"diary_type_id\": 14,\n        \"diary_type_code\": \"OD_DECL_FISCALE\",\n        \"diary_type_name\": \"OD TVA\"\n    },\n    {\n        \"code\": \"60\",\n        \"name\": \"JOURNAL OD LETTRAGE\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31431,\n        \"diary_type_id\": 12,\n        \"diary_type_code\": \"OD_LET\",\n        \"diary_type_name\": \"OD Lettrage\"\n    },\n    {\n        \"code\": \"98\",\n        \"name\": \"JOURNAL A EXTOURNER\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31432,\n        \"diary_type_id\": 8,\n        \"diary_type_code\": \"A_EXT\",\n        \"diary_type_name\": \"À extourner\"\n    },\n    {\n        \"code\": \"99\",\n        \"name\": \"JOURNAL EXTOURNE\",\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 31433,\n        \"diary_type_id\": 9,\n        \"diary_type_code\": \"EXT\",\n        \"diary_type_name\": \"Extourne\"\n    }\n]"
-								},
-								{
-									"name": "Get one (by code)",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "X-Third-Party-Secret",
-												"value": "{{X-Third-Party-Secret}}",
-												"type": "text"
-											}
-										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/diary?code=01",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"diary"
-											],
-											"query": [
-												{
-													"key": "code",
-													"value": "01",
-													"description": "OPTIONAL - Get diary by code."
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": null,
-									"cookie": [],
-									"body": "[\n    {\n        \"code\": \"01\",\n        \"name\": \"JOURNAL D'ACHATS\",\n        \"closed\": false,\n        \"account\": null,\n        \"blocked\": true,\n        \"diary_id\": 188,\n        \"diary_type_id\": 1,\n        \"diary_type_code\": \"ACH\",\n        \"diary_type_name\": \"Achat\"\n    }\n]"
-								},
-								{
-									"name": "Fetch diaries by type",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "X-Third-Party-Secret",
-												"value": "{{X-Third-Party-Secret}}",
-												"type": "text"
-											}
-										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/diary?type=ACH",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"diary"
-											],
-											"query": [
-												{
-													"key": "type",
-													"value": "ACH",
-													"description": "OPTIONAL - Fetch diaries by type."
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": null,
-									"cookie": [],
-									"body": "[\n    {\n        \"code\": \"01\",\n        \"name\": \"JOURNAL D'ACHATS\",\n        \"closed\": false,\n        \"account\": null,\n        \"blocked\": true,\n        \"diary_id\": 188,\n        \"diary_type_id\": 1,\n        \"diary_type_code\": \"ACH\",\n        \"diary_type_name\": \"Achat\"\n    },\n    {\n        \"code\": \"03\",\n        \"name\": \"JOURNAL D'ACHATS BIS\",\n        \"closed\": false,\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 190,\n        \"diary_type_id\": 1,\n        \"diary_type_code\": \"ACH\",\n        \"diary_type_name\": \"Achat\"\n    }\n]"
-								},
-								{
-									"name": "Fetch by diary name",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "X-Third-Party-Secret",
-												"value": "{{X-Third-Party-Secret}}",
-												"type": "text"
-											}
-										],
-										"url": {
-											"raw": "https://api.myunisoft.fr/api/v1/diary?q=situation",
-											"protocol": "https",
-											"host": [
-												"api",
-												"myunisoft",
-												"fr"
-											],
-											"path": [
-												"api",
-												"v1",
-												"diary"
-											],
-											"query": [
-												{
-													"key": "q",
-													"value": "situation",
-													"description": "OPTIONAL - Fetch diaries whose name and code include \"q\"."
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": null,
-									"cookie": [],
-									"body": "[\n    {\n        \"code\": \"21\",\n        \"name\": \"JOURNAL  SITUATIONS\",\n        \"closed\": false,\n        \"account\": null,\n        \"blocked\": false,\n        \"diary_id\": 199,\n        \"diary_type_id\": 5,\n        \"diary_type_code\": \"OD\",\n        \"diary_type_name\": \"OD\"\n    },\n    {\n        \"code\": \"ECS\",\n        \"name\": \"EXTRA COMPTABLE DE SITUATION\",\n        \"closed\": false,\n        \"account\": null,\n        \"blocked\": true,\n        \"diary_id\": 58952,\n        \"diary_type_id\": 15,\n        \"diary_type_code\": \"OD_EXC\",\n        \"diary_type_name\": \"OD Extracomptable\"\n    }\n]"
-								}
-							]
 						},
 						{
 							"name": "VAT (TVA)",
@@ -8977,63 +9894,6 @@
 								"description": "📢 récupérer la balance JSON"
 							},
 							"response": []
-						},
-						{
-							"name": "Associate",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{API-TOKEN}}"
-									}
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "X-Third-Party-Secret",
-										"value": "{{X-Third-Party-Secret}}",
-										"type": "text"
-									},
-									{
-										"key": "society-id",
-										"value": "",
-										"type": "text"
-									}
-								],
-								"url": "https://api.myunisoft.fr/api/v1/society/{{id_society}}/associate",
-								"description": "📢 Fetch society associates and capital.\n\n⚠️ A `society-id` is required with a cabinet/firm access."
-							},
-							"response": [
-								{
-									"name": "Associate",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "X-Third-Party-Secret",
-												"value": "{{X-Third-Party-Secret}}",
-												"type": "text"
-											},
-											{
-												"key": "society-id",
-												"value": "",
-												"type": "text"
-											}
-										],
-										"url": "https://api.myunisoft.fr/api/v1//society/{{id_society}}/associate"
-									},
-									"_postman_previewlanguage": "json",
-									"header": [
-										{}
-									],
-									"cookie": [
-										{
-											"expires": "Invalid Date"
-										}
-									],
-									"body": "{\n    \"capital\": {\n        \"historical_id\": 31,\n        \"date\": \"2019-05-21\",\n        \"capital\": 100000,\n        \"social_part\": 10250,\n        \"social_part_value\": 9.76\n    },\n    \"associate_list\": {\n        \"physical_person_list\": [\n            {\n                \"physical_person_link_id\": 35,\n                \"physical_person\": {\n                    \"id\": 2,\n                    \"firstname\": \"Léon\",\n                    \"name\": \"Souvannavong\",\n\t\t\t\t\t\"coord\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"id\": 43,\n\t\t\t\t\t\t\t\"type\": {\n\t\t\t\t\t\t\t\t\"id\": 4,\n\t\t\t\t\t\t\t\t\"label\": \"Tel. port.\",\n\t\t\t\t\t\t\t\t\"value\": \"Tel. port.\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"label\": \"tel port\",\n\t\t\t\t\t\t\t\"value\": \"0615574485\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"id\": 45,\n\t\t\t\t\t\t\t\"type\": {\n\t\t\t\t\t\t\t\t\"id\": 1,\n\t\t\t\t\t\t\t\t\"label\": \"Mail\",\n\t\t\t\t\t\t\t\t\"value\": \"Mail\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"label\": \"mail\",\n\t\t\t\t\t\t\t\"value\": \"l.souvannavong@jmail.com\"\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n                },\n                \"signatory_function\": {\n                    \"id\": 1,\n                    \"label\": \"Gérant\"\n                },\n                \"function\": {\n                    \"id\": 3,\n                    \"label\": \"Dirigeant associé\"\n                },\n                \"start_date\": \"2018-12-29\",\n                \"end_date\": \"2018-01-01\",\n                \"social_part\": {\n                    \"PP\": 7860,\n                    \"NP\": 500,\n                    \"US\": 500,\n                    \"percent\": 81.6\n                }\n            }\n        ],\n        \"society_list\": [\n            {\n                \"society_link_id\": 35,\n                \"society\": {\n                    \"id\": 114,\n                    \"name\": \"SOCIETE ETCHEBEST\",\n                    \"siret\": \"\",\n                    \"capital\": 0,\n                    \"address\": \"25 T Allee paul vaillant près du lac 91360 Villemoisson FRANCE\"\n                },\n                \"signatory_function\": {\n                    \"id\": 1,\n                    \"label\": \"Gérant\"\n                },\n                \"start_date\": \"2018-12-31\",\n                \"end_date\": \"\",\n                \"social_part\": {\n                    \"PP\": 1000,\n                    \"NP\": 890,\n                    \"US\": 890,\n                    \"percent\": 18.4\n                }\n            }\n        ]\n    }\n}"
-								}
-							]
 						},
 						{
 							"name": "Get widget",
@@ -10104,7 +10964,45 @@
 						"url": "https://api.myunisoft.fr/api/v1/document/upload",
 						"description": "Upload raw file (binary).\n\nIf the upload is a success the API will return a status code 201."
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Upload document",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-filename",
+										"value": "fichier.jpg",
+										"description": "File name with its extension",
+										"type": "text"
+									},
+									{
+										"key": "x-external-ref",
+										"value": "",
+										"description": "No required. External reference of the partner document",
+										"type": "text"
+									},
+									{
+										"key": "X-Third-Party-Secret",
+										"value": "{{X-Third-Party-Secret}}",
+										"type": "text"
+									}
+								],
+								"url": "https://api.myunisoft.fr/api/v1/document/upload"
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"documentId\": \"1\",\n    \"download\": \"https://app.myunisoft.fr/api/ged/ged/document/1-gTt2QkfLPABeb6Z/download\"\n}"
+						}
+					]
 				}
 			],
 			"description": "The following endpoints allow you to get document data and document file.\n\nThere are 3 kinds of document :\n\n- `AF` => Annual Folder\n    \n- `PF` => Permanent Folder\n    \n- `DB` => Documentary Base\n    \n\nFor example, to upload a document from these categories :\n\n_**Documentary Base :**_\n\nYou have to go in `Tenue > GED > Base documentaire` then use the `Ajouter un fichier` button.\n\n<img src=\"https://content.pstmn.io/aa3e3a23-4075-4f62-8151-d46eb9fbb34c/Q2FwdHVyZS5KUEc=\">\n\n_**Annual Folder :**_\n\nYou have to go in `Révision > Dossier de révision > Achats + Fournisseurs` then upload a document in a Diligence.\n\n<img src=\"https://content.pstmn.io/07f72c9e-ba02-4996-aa2a-1a71867d1bcf/Q2FwdHVyZS5KUEc=\">\n\n_**Permanent Folder :**_\n\nYou have to go in `Révision > Dossier de révision > Régularité` then upload a document in a Diligence.\n\n<img src=\"https://content.pstmn.io/8082dfc8-97e9-4bd9-9dd4-a041f9990117/Q2FwdHVyZS5KUEc=\">\n\nThese documents are respectively available in `Tenue > GED > Base documentaire > Your_folder`, `Tenue > GED > Dossier de révision > DA` and `Tenue > GED > Dossier de révision > DP`.\n\nFor each of the above actions, a `CREATE` document event is triggered. if a partner has a webhook attached to this event, they will be notified when a new document is created at MyUnisoft.\n\n> ⚠️ Document size limit is 50MB"
@@ -12183,9 +13081,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{root}}/api/v1/mad/accountingFirm?version=1.0.0&accountingFolderId",
+							"raw": "https://api.myunisoft.fr/api/v1/mad/accountingFirm?version=1.0.0&accountingFolderId",
+							"protocol": "https",
 							"host": [
-								"{{root}}"
+								"api",
+								"myunisoft",
+								"fr"
 							],
 							"path": [
 								"api",
@@ -12319,9 +13220,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{root}}/api/v1/mad/associates?version=1.0.0&accountingFolderId",
+							"raw": "https://api.myunisoft.fr/api/v1/mad/associates?version=1.0.0&accountingFolderId",
+							"protocol": "https",
 							"host": [
-								"{{root}}"
+								"api",
+								"myunisoft",
+								"fr"
 							],
 							"path": [
 								"api",
@@ -12460,9 +13364,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{root}}/api/v1/mad/comments?version=1.0.0&accountingFolderId&type&id",
+							"raw": "https://api.myunisoft.fr/api/v1/mad/comments?version=1.0.0&accountingFolderId&type&id",
+							"protocol": "https",
 							"host": [
-								"{{root}}"
+								"api",
+								"myunisoft",
+								"fr"
 							],
 							"path": [
 								"api",
@@ -12604,9 +13511,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{root}}/api/v1/mad/vats?version=1.0.0&accountingFolderId",
+							"raw": "https://api.myunisoft.fr/api/v1/mad/vats?version=1.0.0&accountingFolderId",
+							"protocol": "https",
 							"host": [
-								"{{root}}"
+								"api",
+								"myunisoft",
+								"fr"
 							],
 							"path": [
 								"api",
@@ -12625,6 +13535,72 @@
 								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Balance",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Third-Party-Secret",
+								"value": "{{X-Third-Party-Secret}}",
+								"type": "text"
+							},
+							{
+								"key": "society-id",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.myunisoft.fr/api/v1/mad/balance?accountingFolderId=&version=1.0.0&idExercice=&classAccount=",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myunisoft",
+								"fr"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mad",
+								"balance"
+							],
+							"query": [
+								{
+									"key": "accountingFolderId",
+									"value": ""
+								},
+								{
+									"key": "version",
+									"value": "1.0.0"
+								},
+								{
+									"key": "idExercice",
+									"value": ""
+								},
+								{
+									"key": "startDate",
+									"value": "",
+									"description": "YYYY-MM-DD",
+									"disabled": true
+								},
+								{
+									"key": "endDate",
+									"value": "",
+									"description": "YYYY-MM-DD",
+									"disabled": true
+								},
+								{
+									"key": "classAccount",
+									"value": "",
+									"description": "Only include entries linked to the requested account root (value%)\nexample : 6%, 61%, 612%"
+								}
+							]
+						},
+						"description": "📢 This endpoint lets you get the balance"
 					},
 					"response": []
 				}
