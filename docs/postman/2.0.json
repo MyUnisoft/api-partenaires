@@ -8394,12 +8394,6 @@
 										{
 											"name": "diary",
 											"originalRequest": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{API_TOKEN}}"
-													}
-												},
 												"method": "POST",
 												"header": [
 													{
@@ -8410,26 +8404,64 @@
 													{
 														"key": "society-id",
 														"value": "1",
-														"description": "Required with firm access",
+														"type": "text"
+													},
+													{
+														"key": "Content-Type",
+														"value": "application/json",
 														"type": "text"
 													}
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n    \"code\": \"API\",\r\n    \"name\": \"JOURNAL TESTS\",\r\n    \"diary_type_id\": 3,\r\n    \"diary_account_id\": 1234567\r\n}",
+													"raw": "{\r\n    \"code\": \"TEST\",\r\n    \"name\": \"JOURNAL TESTS\",\r\n    \"diary_type_id\": 3,\r\n    \"diary_account_id\": 18720228\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "https://api.myunisoft.fr/api/v1/diary",
-												"description": "📢 This endpoint allows you to create an accounting diary.\n\nIt requires to provide the diary_type_id. See the list :\n\n| **id** | **name** | **code** |\n| --- | --- | --- |\n| 1 | Achat | ACH |\n| 2 | Vente | VTE |\n| 3 | Banque | BQ |\n| 4 | Caisse | CAISSE |\n| 5 | OD | OD |\n| 6 | OD AUDIT | OD_AUDIT |\n| 8 | À extourner | A_EXT |\n| 9 | Extourne | EXT |\n| 10 | À Nouveaux | AN |\n| 11 | OD Paie | AD_PAIE |\n| 12 | OD Lettrage | OD_LET |\n| 13 | Note de frais | NDF |\n| 14 | OD TVA | OD_DECL_FISCALE |\n| 15 | OD Extracomptable | OD_EXC |\n| 19 | Reprise Balance | RBAL |\n\nYou may need to provide the diary_account_id (for bank diaries)\n\n⚠️ A `society-id` is required with a cabinet/firm access"
+												"url": "https://api.myunisoft.fr/api/v1/diary"
 											},
-											"_postman_previewlanguage": "",
-											"header": "",
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "X-Rate-Limit-Remaining",
+													"value": "9"
+												},
+												{
+													"key": "X-Rate-Limit-Reset",
+													"value": "1596441345.429604"
+												},
+												{
+													"key": "X-Rate-Limit-Total",
+													"value": "10"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 03 Aug 2020 07:55:44 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "2535"
+												}
+											],
 											"cookie": [],
-											"body": ""
+											"body": "{\n    \"diary_id\": 123456\n}"
 										}
 									]
 								},
@@ -8718,12 +8750,6 @@
 										{
 											"name": "diary",
 											"originalRequest": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{API_TOKEN}}"
-													}
-												},
 												"method": "PUT",
 												"header": [
 													{
@@ -8734,13 +8760,17 @@
 													{
 														"key": "society-id",
 														"value": "1",
-														"description": "Required with firm access",
+														"type": "text"
+													},
+													{
+														"key": "Content-Type",
+														"value": "application/json",
 														"type": "text"
 													}
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n    \"name\": \"JOURNAL A MODIFIER\",\r\n    \"diary_type_id\": 3,\r\n    \"diary_account_id\": 1234567\r\n}",
+													"raw": "{\r\n    \"name\": \"JOURNAL TEST MODIFIE\",\r\n    \"diary_type_id\": 1,\r\n    \"diary_account_id\": 18721456,\r\n    \"closed\": false\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -8748,7 +8778,7 @@
 													}
 												},
 												"url": {
-													"raw": "https://api.myunisoft.fr/api/v1/diary?id",
+													"raw": "https://api.myunisoft.fr/api/v1/diary?id=123456",
 													"protocol": "https",
 													"host": [
 														"api",
@@ -8763,17 +8793,50 @@
 													"query": [
 														{
 															"key": "id",
-															"value": null,
-															"description": "provide the diary id you try to update"
+															"value": "123456"
 														}
 													]
-												},
-												"description": "📢 This endpoint allows you to update an accounting diary.\n\nIt requires to provide the diary_type_id. See the list :\n\n| **id** | **name** | **code** |\n| --- | --- | --- |\n| 1 | Achat | ACH |\n| 2 | Vente | VTE |\n| 3 | Banque | BQ |\n| 4 | Caisse | CAISSE |\n| 5 | OD | OD |\n| 6 | OD AUDIT | OD_AUDIT |\n| 8 | À extourner | A_EXT |\n| 9 | Extourne | EXT |\n| 10 | À Nouveaux | AN |\n| 11 | OD Paie | AD_PAIE |\n| 12 | OD Lettrage | OD_LET |\n| 13 | Note de frais | NDF |\n| 14 | OD TVA | OD_DECL_FISCALE |\n| 15 | OD Extracomptable | OD_EXC |\n| 19 | Reprise Balance | RBAL |\n\nYou may need to provide the diary_account_id (for bank diaries)\n\n⚠️ A `society-id` is required with a cabinet/firm access"
+												}
 											},
-											"_postman_previewlanguage": "",
-											"header": "",
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "X-Rate-Limit-Remaining",
+													"value": "9"
+												},
+												{
+													"key": "X-Rate-Limit-Reset",
+													"value": "1596441345.429604"
+												},
+												{
+													"key": "X-Rate-Limit-Total",
+													"value": "10"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 03 Aug 2020 07:55:44 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "2535"
+												}
+											],
 											"cookie": [],
-											"body": ""
+											"body": "{\n    \"code\": \"Success\",\n    \"message\": \"\"\n}"
 										}
 									]
 								},
@@ -8816,12 +8879,6 @@
 										{
 											"name": "diary",
 											"originalRequest": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{API_TOKEN}}"
-													}
-												},
 												"method": "DELETE",
 												"header": [
 													{
@@ -8832,7 +8889,11 @@
 													{
 														"key": "society-id",
 														"value": "1",
-														"description": "Required with firm access",
+														"type": "text"
+													},
+													{
+														"key": "Content-Type",
+														"value": "application/json",
 														"type": "text"
 													}
 												],
@@ -8845,11 +8906,330 @@
 														}
 													}
 												},
-												"url": "https://api.myunisoft.fr/api/v1/diary",
-												"description": "📢 This endpoint allows you to delete accounting diaries.\n\nIt requires to provide the diary id in the body.\n\n⚠️ A `society-id` is required with a cabinet/firm access"
+												"url": "https://api.myunisoft.fr/api/v1/diary"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "X-Rate-Limit-Remaining",
+													"value": "9"
+												},
+												{
+													"key": "X-Rate-Limit-Reset",
+													"value": "1596441345.429604"
+												},
+												{
+													"key": "X-Rate-Limit-Total",
+													"value": "10"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 03 Aug 2020 07:55:44 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "2535"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"code\": \"Success\",\n    \"message\": \"\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Comments (Entries)",
+							"item": [
+								{
+									"name": "Create Entry Comment",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API_TOKEN}}"
+											}
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "1",
+												"description": "required with firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"comment\": \"Votre commentaire\",\r\n    \"entry_id\": 1234567,\r\n    \"location\" : \"ENTRIES\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.myunisoft.fr/api/v1/entry/comment"
+									},
+									"response": [
+										{
+											"name": "Create Entry Comment",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "1",
+														"description": "required with firm access",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"comment\": \"Votre commentaire\",\r\n    \"entry_id\": 1234567,\r\n    \"location\" : \"ENTRIES\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "https://api.myunisoft.fr/api/v1/entry/comment"
 											},
 											"_postman_previewlanguage": "",
-											"header": "",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Update Entry Comment",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API_TOKEN}}"
+											}
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "1",
+												"description": "required with firm access",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"comment\": \"Votre commentaire modifié\",\r\n    \"entry_id\": 1234567,\r\n    \"location\" : \"ENTRIES\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/entry/comment/:comment_id",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"entry",
+												"comment",
+												":comment_id"
+											],
+											"variable": [
+												{
+													"key": "comment_id",
+													"value": "1",
+													"description": "Required to provide the comment id you want to update"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Update Entry Comment",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "1",
+														"description": "required with firm access",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"comment\": \"Votre commentaire modifié\",\r\n    \"entry_id\": 1234567,\r\n    \"location\" : \"ENTRIES\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://api.myunisoft.fr/api/v1/entry/comment/:comment_id",
+													"protocol": "https",
+													"host": [
+														"api",
+														"myunisoft",
+														"fr"
+													],
+													"path": [
+														"api",
+														"v1",
+														"entry",
+														"comment",
+														":comment_id"
+													],
+													"variable": [
+														{
+															"key": "comment_id",
+															"value": "1",
+															"description": "Required to provide the comment id you want to update"
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": "",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Delete Entry Comment",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{API_TOKEN}}"
+											}
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "X-Third-Party-Secret",
+												"value": "{{X-Third-Party-Secret}}",
+												"type": "text"
+											},
+											{
+												"key": "society-id",
+												"value": "1",
+												"description": "required with firm access",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://api.myunisoft.fr/api/v1/entry/comment/:comment_id",
+											"protocol": "https",
+											"host": [
+												"api",
+												"myunisoft",
+												"fr"
+											],
+											"path": [
+												"api",
+												"v1",
+												"entry",
+												"comment",
+												":comment_id"
+											],
+											"variable": [
+												{
+													"key": "comment_id",
+													"value": "1",
+													"description": "Required to provide the comment id you want to update"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Delete Entry Comment",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "1",
+														"description": "required with firm access",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "https://api.myunisoft.fr/api/v1/entry/comment/:comment_id",
+													"protocol": "https",
+													"host": [
+														"api",
+														"myunisoft",
+														"fr"
+													],
+													"path": [
+														"api",
+														"v1",
+														"entry",
+														"comment",
+														":comment_id"
+													],
+													"variable": [
+														{
+															"key": "comment_id",
+															"value": "1",
+															"description": "Required to provide the comment id you want to update"
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": "",
+											"header": [],
 											"cookie": [],
 											"body": ""
 										}
