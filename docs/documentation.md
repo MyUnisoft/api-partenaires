@@ -167,7 +167,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - <kbd>Export</kbd> [JSON](./MAD/api/entries.md), [FEC](./accounting/folder/export/FEC.md), [EDI](./accounting/folder/export/EDI.md)
 - [Attacher une pièce jointe à une écriture existante](./accounting/folder/import/pj.md)
 - [Récupérer et créer des drapeaux (flag) sur des lignes/mouvements](./accounting/folder/import/flags.md)
-- [Ajout ou modification d'un commentaire sur une écriture](./accounting/firm/entry_comment.md)
+- [Ajout, modification ou suppression d'un commentaire sur une écriture](./accounting/firm/entry_comment.md)
 
 #### Documents
 
