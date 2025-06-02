@@ -15,18 +15,18 @@ Dans MyUnisoft, pour désactiver un dossier de production vous devez utiliser : 
 
 Vous recherchez avec la barre de recherche rapide votre dossier.
 
-![](../../images/admin_accounting_folder.png)
+![Aperçu Administration dossiers](../../images/admin_accounting_folder.png)
 
 Pour désactiver le dossier , il faut passer sa formule sur `inactif`.
 
-![](../../images/set_formule_inactive.png)
+![Aperçu sélection formule dossier inactif](../../images/set_formule_inactive.png)
 
 > [!IMPORTANT]
 > Le changement de formule vers `inactif` est unidirectionnel. Vous ne pourrez pas réactiver le dossier vous-même. Il vous faudra passer par le support technique si vous souhaitez réactiver le dossier.
 
 # API
 
-La route https://api.myunisoft.fr/api/v1/disable_accounting_folder permet de procéder à cet opération via l'API partenaire.
+La route <https://api.myunisoft.fr/api/v1/disable_accounting_folder> permet de procéder à cet opération via l'API partenaire.
 
 ```bash
 curl --location --request PUT 'https://api.myunisoft.fr/api/v1/disable_accounting_folder' \

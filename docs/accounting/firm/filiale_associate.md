@@ -11,11 +11,11 @@ next: false
 
 Ce guide a pour objectif de vous aider à récupérer les filiales associés à une entreprise. Dans MyUnisoft, la gestion des filiales s'effectue avec le module CRM: `Ecosystème` > `CRM` > `Entreprises` > `Filiales`.
 
-![](../../images/filiales_associate.PNG)
+![Aperçu onglet filiales](../../images/filiales_associate.PNG)
 
 ## API
 
-La route <kbd>GET</kbd> https://api.myunisoft.fr/api/v1/society/filiale_associate permet de récupérer les mêmes données que celle visible ci-dessus dans l'imprime écran:
+La route <kbd>GET</kbd> <https://api.myunisoft.fr/api/v1/society/filiale_associate> permet de récupérer les mêmes données que celle visible ci-dessus dans l'imprime écran:
 
 <details class="details custom-block">
   <summary markdown="span">Retour JSON de l'API</summary>

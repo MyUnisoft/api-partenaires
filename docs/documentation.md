@@ -59,7 +59,7 @@ Il vous sera nécessaire de choisir l'un des deux types d'accès (ou de discuter
 > [!NOTE]
 > Le terme **cabinet** ou **firm** est souvent utilisé à tort pour désigner un schéma (ou tenant) dans MyUnisoft. Un schéma peut contenir un à plusieurs cabinets et représente un client signé sur le plan commercial et technique.
 
-![](./images/entities.png)
+![Diagramme de définition des entités](./images/entities.png)
 
 > [!TIP]  
 > Pour récupérer la liste et le paramétrage de plusieurs dossiers, ainsi que pour accéder aux entités non liées au dossier telles que les utilisateurs et les portefeuilles, il est nécessaire d'avoir un accès de type cabinet.
@@ -72,7 +72,7 @@ Il vous sera nécessaire de choisir l'un des deux types d'accès (ou de discuter
 
 Voici la marche à suivre concernant l'authentification si vous êtes un partenaire: [Comment s'authentifier ?](authentication/partenaire.md)
 
-### Formule API Cabinet (destiné aux cabinets eux-mêmes).
+### Formule API Cabinet (destiné aux cabinets eux-mêmes)
 
 Voici la marche à suivre concernant l'authentification si vous êtes un cabinet ayant souscrit à l'offre API Cabinet: [Comment s'authentifier ?](authentication/cabinet.md)
 

@@ -39,15 +39,17 @@ Actuellement, l'API partenaires de la GED se limite à la gestion des éléments
 
 ## 📑 Arborescence
 
-#### Documents partagés
+### Documents partagés
+
 L’arborescence des documents partagés est entièrement personnalisée par le client. Elle se compose uniquement de dossiers et sous-dossiers créés selon les besoins spécifiques du client, offrant ainsi une structure adaptée à son utilisation.
 
 Si le dossier <kbd>\_\_OLD__</kbd> est présent, cela signifie que le cabinet a propagé l’arborescence configurée au niveau cabinet à l’ensemble des dossiers comptables. Lors de cette propagation, si des documents étaient déjà présents dans l’onglet Documents partagés, ils sont automatiquement déplacés dans le dossier <kbd>\_\_OLD__</kbd> pour éviter toute perte de données.
 
-#### Dossier de révision
+### Dossier de révision
+
 Pour le dossier de révision, vous pouvez vous référer à l'image ci-dessous pour mieux comprendre son organisation et son contenu.
 
-![](../images/arbo_ged.jpg)
+![Aperçu d'une arborescence de GED](../images/arbo_ged.jpg)
 
 ## 🔀 Webhooks
 
@@ -59,7 +61,8 @@ Pour le dossier de révision, vous pouvez vous référer à l'image ci-dessous p
 
 Vous pouvez effectuer les actions suivantes pour déclencher des évènements liés aux webhooks :
 
-##### Via l'application
+### Via l'application
+
 ::: details Documents partagés
 Pour déclencher un événement lors de la création d’un document dans la section `Documents partagés`, suivez ces étapes :
 
@@ -69,7 +72,7 @@ Pour déclencher un événement lors de la création d’un document dans la sec
 
 3. Ouvrez la section `Documents partagés`.
 
-4. Choisissez un dossier, puis cliquez sur `Ajouter un fichier` pour importer un document depuis votre appareil local. 
+4. Choisissez un dossier, puis cliquez sur `Ajouter un fichier` pour importer un document depuis votre appareil local.
 
 Une fois le document visible dans la liste, l'événement de création de document est déclenché. Si un webhook est configuré pour cette action, il sera automatiquement exécuté.
 <Carousel :includes='["shared_documents"]' :excludes='["4_bis"]'/>
@@ -95,7 +98,7 @@ Une fois ces opérations terminées, l'événement de création de document est 
 <Carousel :includes='["revision_folder"]' :excludes='["4_bis"]'/>
 :::
 
-##### Via l'API GED
+### Via l'API GED
 
 Lors de l'upload d'un document via notre API GED, les webhooks seront utilisés. Voir la documentation [Nous envoyer un document](#upload) ci dessous.
 
@@ -108,6 +111,7 @@ L’API GED est mise à disposition de nos partenaires pour leur permettre d’i
 Vous pouvez interagir avec l'API pour récupérer des informations sur un document en utilisant son identifiant. Pour plus de détails sur l’utilisation de cet endpoint, veuillez consulter notre [documentation Postman](https://docs.api.myunisoft.fr/#fa193f93-62e7-4b68-93c7-40b4dfa4cbd0).
 
 En réponse, l’API renverra un objet JSON structuré selon le typage suivant :
+
 ```ts
 interface Document {
   accountingFirm: {
@@ -158,19 +162,22 @@ Plus de précisions sur les propriétés :
 > Ces noms de fichier se retrouveront dans la propriété `folderPath`.
 
 ### 📂 Obtenir des informations sur un ou plusieurs documents
+
 Cet endpoint fonctionne de manière similaire au précédent, mais il permet de récupérer des informations sur plusieurs documents en envoyant des paramètres dans la requête. La réponse sera un tableau d'objets, chacun ayant la même structure que celle décrite dans la section `Obtenir des informations sur un document`.
 
 Les paramètres `from` et `to` permettent de spécifier une plage de temps, indiquant à l'API de rechercher tous les documents créés dans MyUnisoft au cours de cette période. Le filtre est appliqué sur la date de création des documents.
 
 Pour l'utiliser, vous pouvez consulter notre [documentation Postman](https://docs.api.myunisoft.fr/#e4150391-9401-4be2-b0c8-381e695d3d17).
 
-### 🖨️ Télécharger un fichier.
+### 🖨️ Télécharger un fichier
+
 Cet endpoint permet de télécharger un fichier.
 
 Pour l'utiliser, vous pouvez consulter notre [documentation Postman](https://docs.api.myunisoft.fr/#1b4f5b33-f0a9-488c-8118-1f618cc4035a).
 
 ### 📨 Nous envoyer un document <a id="upload"></a>
-Cet endpoint permet d'upload un document sur MyUnisoft. 
+
+Cet endpoint permet d'upload un document sur MyUnisoft.
 
 Une fois téléchargé, le document est placé dans les [Document externes](#📁-ged), **et il revient au client de classer les documents via l'application MyUnisoft.**
 

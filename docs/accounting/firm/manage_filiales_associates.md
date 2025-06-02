@@ -12,11 +12,11 @@ next: false
 Ce guide a pour objectif de vous aider à ajouter ou mettre à jour les filiales associées à une entreprise.
 Dans MyUnisoft, la gestion des filiales s'effectue avec le module CRM: `Ecosystème` > `CRM` > `Entreprises` > `Filiales`.
 
-![](../../images/ecosysteme_crm_filiales.png)
+![Aperçu de l'onglet ecosystème crm filiales](../../images/ecosysteme_crm_filiales.png)
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/society/filiale_associate permet d'ajouter et/ou mettre à jour les données des filiales associées à une entreprise via l'API partenaire.
+La route <https://api.myunisoft.fr/api/v1/society/filiale_associate> permet d'ajouter et/ou mettre à jour les données des filiales associées à une entreprise via l'API partenaire.
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet : L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production.

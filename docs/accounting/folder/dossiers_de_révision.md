@@ -15,9 +15,9 @@ Ce guide va vous accompagner pour récupérer la liste des `dossiers de révisio
 
 ## Récupérer la liste des dossiers de révisions d'une société (dossier)
 
-### API
+### API de récupération de la liste des dossiers de révision
 
-La route https://api.myunisoft.fr/api/v1/dadp/dossier_revision_list permet de récupérer cette liste avec l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/dadp/dossier_revision_list> permet de récupérer cette liste avec l'API partenaires.
 
 ```bash
 curl --location 'https://api.myunisoft.fr/api/v1/dadp/dossier_revision_list' \
@@ -74,9 +74,9 @@ La valeur de la propriété `id_dossier_revision` (de type number) est celle à 
 
 ## Récupérer la liste des modèles de dossiers de révisions d'une société (dossier)
 
-### API
+### API de récupération dela liste des modèles de dossiers de révision
 
-La route https://api.myunisoft.fr/api/v1/dadp/dossier_revision/models permet de récupérer cette liste avec l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/dadp/dossier_revision/models> permet de récupérer cette liste avec l'API partenaires.
 
 ```bash
 curl --location 'https://api.myunisoft.fr/api/v1/dadp/dossier_revision/models' \

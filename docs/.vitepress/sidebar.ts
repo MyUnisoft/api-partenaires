@@ -332,7 +332,7 @@ export default {
             {
               text: httpText({
                 method: "GET",
-                endpoint: "/mad/account"
+                endpoint: "/mad/accounts"
               }),
               link: "/MAD/api/account.md"
             },

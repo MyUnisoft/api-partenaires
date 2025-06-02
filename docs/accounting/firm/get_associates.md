@@ -13,19 +13,19 @@ Ce guide va vous permettre de récupérer la composition du capital et la liste 
 
 Dans MyUnisoft, pour accéder à l'onglet `Associés`, vous devez passer par le module CRM : `Ecosystème` > `CRM` > `Entreprises`.
 
-![](../../images/ecosysteme_crm_entreprises.png)
+![Aperçu menu écosystème crm entreprise](../../images/ecosysteme_crm_entreprises.png)
 
 Sélectionnez le dossier de production pour lequel vous souhaitez consulter la liste des associés et la composition du capital.
 
-![](../../images/liste_entreprises.png)
+![Aperçu liste des entreprises](../../images/liste_entreprises.png)
 
 Vous obtenez les différents onglets de l'entreprise interrogée. Cliquez sur `Associés` pour accéder à celui-ci.
 
-![](../../images/modif_associes.png)
+![Aperçu menu des associés](../../images/modif_associes.png)
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/society/:id_society/associate permet de procéder à cette même opération via l'API partenaire.
+La route <https://api.myunisoft.fr/api/v1/society/:id_society/associate> permet de procéder à cette même opération via l'API partenaire.
 
 ```bash
 curl --location --globoff 'https://api.myunisoft.fr/api/v1/society/1/associate' \

@@ -13,19 +13,19 @@ Ce guide a pour objectif de vous accompagner dans le processus de **création**,
 
 Dans MyUnisoft les exercices peuvent être gérés par le biais du CRM : `Ecosystème` > `CRM` > `Modifier l'entreprise`.
 
-![](../../images/ecosysteme_crm_entreprise_menu.png)
+![Aperçu menu modification entreprise](../../images/ecosysteme_crm_entreprise_menu.png)
 
 Assurez-vous de travailler sur les **Entreprises** :
 
-![](../../images/crm_list_entreprises.PNG)
+![Aperçu menu liste des entreprises](../../images/crm_list_entreprises.PNG)
 
 Choisir l'onglet "Exercices" :
 
-![](../../images/exercices.PNG)
+![Aperçu liste des exercices](../../images/exercices.PNG)
 
 ## Création d'un exercice
 
-La route https://api.myunisoft.fr/api/v1/society/exercice permet de créer un exercice avec l'API partenaire.
+La route <https://api.myunisoft.fr/api/v1/society/exercice> permet de créer un exercice avec l'API partenaire.
 
 ```bash
 curl --location 'https://api.myunisoft.fr/api/v1/society/exercice' \
@@ -92,7 +92,7 @@ export interface Exercice {
 
 ## Mise à jour d'un exercice
 
-La route https://api.myunisoft.fr/api/v1/society/exercice permet de mettre à jour un exercice avec l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/society/exercice> permet de mettre à jour un exercice avec l'API partenaires.
 
 ```bash
 curl --location --request PUT 'https://api.myunisoft.fr/api/v1/society/exercice' \
@@ -165,11 +165,11 @@ export interface Exercice {
 
 Dans MyUnisoft, les exercices peuvent être clôturés par : `Révision` > `Clôture` > `Clôturer un exercice`
 
-![](../../images/close_exercice_path.png)
+![Aperçu menu clotûre d'exercice](../../images/close_exercice_path.png)
 
 ### API
 
-La route https://api.myunisoft.fr/api/v1/society/closeExercice permet de clôturer un exercice avec l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/society/closeExercice> permet de clôturer un exercice avec l'API partenaires.
 
 ```bash
 curl --location --request PUT 'https://api.myunisoft.fr/api/v1/society/closeExercice?id_exercice=94312&lettering_method_id=2&id_review_model=1&carry_forward=true' \

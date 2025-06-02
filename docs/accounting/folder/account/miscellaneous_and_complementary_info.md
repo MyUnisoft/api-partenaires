@@ -16,19 +16,19 @@ Ce guide a pour objectif de vous aider dans la récupération et la compréhensi
 
 Dans MyUnisoft le plan comptable est accessible à partir du menu: `Paramètres` > `Dossier` > `Plan comptable`.
 
-![](../../../images/plan_comptable.PNG)
+![Aperçu du plan comptable d'un dossier](../../../images/plan_comptable.PNG)
 
 Sélectionner par exemple un compte fournisseur et éditez-le (un pop-up devrait apparaitre).
 
-![](../../../images/fiche_compte.PNG)
+![Aperçu de la fiche de compte](../../../images/fiche_compte.PNG)
 
 Vous n'avez plus qu'à accéder à l'onglet secondaire "Info. complémentaires".
 
-![](../../../images/fiche_compte_complementaire.PNG)
+![Aperçu des informations complémentaires d'un compte](../../../images/fiche_compte_complementaire.PNG)
 
 ## Informations diverses
 
-![](../../../images/fiche_compte_divers.jpg)
+![Aperçu des informations diverses d'un compte](../../../images/fiche_compte_divers.jpg)
 
 Les valeurs contenues dans la pop-up **Divers** sont aussi des informations complémentaires ce qui implique que dans la réponse JSON de l'api, ces valeurs sont contenues la propriété `complementary_informations`.
 Toujours dans le retour JSON de l'api, les champs associés commencent tous par `misc_`: misc_language_id, misc_doubtful_id, misc_referent, misc_archived, misc_group.
@@ -37,6 +37,7 @@ Toujours dans le retour JSON de l'api, les champs associés commencent tous par 
 > À savoir que le champ `Compte douteux`/`misc_doubtful_id` n'existe que pour les **comptes clients** (numéro de compte commençant par **41**).
 
 Voici un tableau des différentes langues disponibles associées à leur ID:
+
 | Label | id |
 |:---:|:---:|
 | Français | 1 |
@@ -50,7 +51,6 @@ Voici un tableau des différentes langues disponibles associées à leur ID:
 ## API
 
 Ces informations pourront être récupérées au sein de la clé **complementary_informations** retournée par la route `https://api.myunisoft.fr/api/v1/account/v2?details=true&account_id={{id}}`.
-
 
 ```json
 {
@@ -75,10 +75,10 @@ Ces informations pourront être récupérées au sein de la clé **complementary
   "correspondance_no_compte": null,
   "complementary_informations": {
       "ape": {
-          "id": 534,
-          "info": "Édition de logiciels applicatifs",
-          "label": "5829C-Édition de logiciels applicatifs",
-          "value": "5829C"
+        "id": 534,
+        "info": "Édition de logiciels applicatifs",
+        "label": "5829C-Édition de logiciels applicatifs",
+        "value": "5829C"
       },
       "tel": "+33655547180",
       "city": "SAINTE GENEVIEVE DES BOIS",
@@ -96,16 +96,16 @@ Ces informations pourront être récupérées au sein de la clé **complementary
       },
       "firstname": null,
       "iban_list": [
-          {
-              "bic": "",
-              "rum": "",
-              "iban": "",
-              "document": null,
-              "first_prlv": false,
-              "etablissement": "",
-              "rum_date_signature": null,
-              "id_iban_compte_tiers": 11
-          }
+        {
+          "bic": "",
+          "rum": "",
+          "iban": "",
+          "document": null,
+          "first_prlv": false,
+          "etablissement": "",
+          "rum_date_signature": null,
+          "id_iban_compte_tiers": 11
+        }
       ],
       "id_country": null,
       "is_foreign": false,
@@ -114,19 +114,19 @@ Ces informations pourront être récupérées au sein de la clé **complementary
       "postal_code": "91700",
       "contact_list": [
         {
-            "tel1": "",
-            "tel2": "",
-            "email": "user@myunisoft.fr",
-            "ordre": 1,
-            "lastname": "random",
-            "firstname": "name",
-            "id_contact_compte_tiers": 1
+          "tel1": "",
+          "tel2": "",
+          "email": "user@myunisoft.fr",
+          "ordre": 1,
+          "lastname": "random",
+          "firstname": "name",
+          "id_contact_compte_tiers": 1
         }
       ],
       "payment_type": {
-          "code": "CB",
-          "label": "Carte bleue",
-          "payment_type_id": 13
+        "code": "CB",
+        "label": "Carte bleue",
+        "payment_type_id": 13
       },
       "misc_archived": false,
       "misc_referent": null,
@@ -137,11 +137,11 @@ Ces informations pourront être récupérées au sein de la clé **complementary
       "misc_doubtful_id": null,
       "misc_language_id": 1,
       "payment_deadline": {
-          "label": "30 jours fin de mois",
-          "end_month": true,
-          "day_number": null,
-          "number_of_days": 30,
-          "id_payment_deadline": 3
+        "label": "30 jours fin de mois",
+        "end_month": true,
+        "day_number": null,
+        "number_of_days": 30,
+        "id_payment_deadline": 3
       },
       "person_in_charge": "Cyril MANDRILLY",
       "contact_firstname": "Thomas",
@@ -153,8 +153,6 @@ Ces informations pourront être récupérées au sein de la clé **complementary
   }
 }
 ```
-
-> 
 
 <details class="details custom-block"><summary>interface TypeScript pour la clé complementary_informations</summary>
 
@@ -252,7 +250,7 @@ export interface PaymentDeadline {
 
 ### Contacts
 
-![](../../../images/fiche_compte_contact.PNG)
+![Aperçu de la fiche de compte contact](../../../images/fiche_compte_contact.PNG)
 
 Le contact principal est représenté par les champs suivants:
 
@@ -293,7 +291,7 @@ Pour la mise à jour des contacts, merci de suivre le [guide suivant](./update_c
 
 ### Réglements
 
-![](../../../images/fiche_compte_reglement.PNG)
+![Aperçu de la fiche de compte règlement](../../../images/fiche_compte_reglement.PNG)
 
 Le délai de paiement peut être retrouvé avec la clé `payment_deadline`
 

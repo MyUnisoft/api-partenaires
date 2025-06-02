@@ -13,18 +13,18 @@ Cette page va vous accompagner dans l'opération d'archivage d'une société (do
 
 Dans MyUnisoft, il est possible avec un **profil administrateur** d'effectuer cette opération depuis : `Ecosystème` > `CRM` > `Entreprises`.
 
-![](../../images/ecosysteme_crm_entreprises.png)
+![Aperçu du menu écosystème CRM entreprise](../../images/ecosysteme_crm_entreprises.png)
 
 Vous obtenez ainsi la liste des dossiers. Il suffit de cliquer sur la corbeille pour procéder à l'archivage du dossier.
 
-![](../../images/liste_entreprises.png)
+![Aperçu de la liste des entreprises](../../images/liste_entreprises.png)
 
 > [!IMPORTANT]
 > Pour **désarchiver** un dossier, il est **obligatoire de contacter notre support technique** qui pourra effectuer l'opération.
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/society permet d'archiver un dossier de production avec l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/society> permet d'archiver un dossier de production avec l'API partenaires.
 
 ```bash
 curl --location --request DELETE 'https://app.myunisoft.fr/api/v1/society' \

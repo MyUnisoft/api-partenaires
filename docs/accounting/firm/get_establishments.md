@@ -13,19 +13,19 @@ Ce guide va vous permettre de récupérer la liste des établissements d'une soc
 
 Dans MyUnisoft, pour accéder à la liste des établissements d'un dossier, vous devez consulter l'onglet `Etablissements` en passant par le module CRM : `Ecosystème` > `CRM` > `Entreprises`.
 
-![](../../images/ecosysteme_crm_entreprises.png)
+![Aperçu menu écosystèle crm entreprises](../../images/ecosysteme_crm_entreprises.png)
 
 Sélectionnez le dossier de production pour lequel vous souhaitez consulter la liste des établissements.
 
-![](../../images/liste_entreprises.png)
+![Aperçu liste des entreprises](../../images/liste_entreprises.png)
 
 Vous obtenez les différents onglets de l'entreprise interrogée. Cliquez sur `Etablissements` pour accéder à celui-ci.
 
-![](../../images/modif_etab.png)
+![Aperçu sélection menu établissemenyt](../../images/modif_etab.png)
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/society permet de procéder à cette même opération via l'API partenaire.
+La route <https://api.myunisoft.fr/api/v1/society> permet de procéder à cette même opération via l'API partenaire.
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet : L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production.

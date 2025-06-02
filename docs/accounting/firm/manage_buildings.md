@@ -12,14 +12,14 @@ next: false
 Ce guide a pour objectif de vous aider à Ajouter, mettre à jour et supprimer les immeubles d'un dossier.
 Dans MyUnisoft, la gestion des immeubles s'effectue avec le module CRM : `Ecosystème` > `CRM` > `Entreprises` > `Immeubles`.
 
-![](../../images/modif_immeubles.png)
+![Aperçu onglet immeubles](../../images/modif_immeubles.png)
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet : L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production.
 
 ## Ajouter un immeuble
 
-La route <kbd>POST</kbd> https://api.myunisoft.fr/api/v1/building permet d'ajouter un immeuble à une entreprise via l'API partenaire.
+La route <kbd>POST</kbd> <https://api.myunisoft.fr/api/v1/building> permet d'ajouter un immeuble à une entreprise via l'API partenaire.
 
 ```bash
 curl --location 'https://api.myunisoft.fr/api/v1/building' \
@@ -143,7 +143,7 @@ interface Immeuble {
 
 ## Mettre à jour un immeuble
 
-La route <kbd>PUT</kbd> https://api.myunisoft.fr/api/v1/building permet de mettre à jour les informations d'un immeuble lié à une entreprise via l'API partenaire.
+La route <kbd>PUT</kbd> <https://api.myunisoft.fr/api/v1/building> permet de mettre à jour les informations d'un immeuble lié à une entreprise via l'API partenaire.
 
 ```bash
 curl --location --request PUT 'https://api.myunisoft.fr/api/v1/building?building_id=96' \
@@ -267,7 +267,7 @@ interface Immeuble {
 
 ## Supprimer un immeuble
 
-La route <kbd>DELETE</kbd> https://api.myunisoft.fr/api/v1/building permet de supprimer un immeuble via l'API partenaire.
+La route <kbd>DELETE</kbd> <https://api.myunisoft.fr/api/v1/building> permet de supprimer un immeuble via l'API partenaire.
 
 ```bash
 curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/building' \

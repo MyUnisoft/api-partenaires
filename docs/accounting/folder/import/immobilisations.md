@@ -13,17 +13,17 @@ Ce guide va vous accompagner pour vous permettre d'importer des immobilisations.
 
 Dans MyUnisoft, il est possible de procéder à un import des immobilisations depuis : `Tenue` > `Flux` > `Imports`.
 
-![](../../../images/tenue_flux_imports_menu.png)
+![Aperçu du menu tenue flux import](../../../images/tenue_flux_imports_menu.png)
 
 Vous obtenez la page permettant de procéder à des imports :
 
-![](../../../images/imports_immobilisations.png)
+![Aperçu du formulaire d'import d'immobilisations](../../../images/imports_immobilisations.png)
 
 Après sélection de la catégorie, du type et du format d'import, il suffit de choisir le fichier et cliquer sur `Importer`.
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/immo_import permet d'effectuer la même opération depuis l'API partenaire.
+La route <https://api.myunisoft.fr/api/v1/immo_import> permet d'effectuer la même opération depuis l'API partenaire.
 
 ```bash
 curl --location --request POST 'https://api.myunisoft.fr/api/v1/immo_import?filename=Immo_2023.csv&format=LOOP&society_id=1' \
@@ -60,7 +60,7 @@ Voici les différents formats de fichier supportés :
 
 ```json
 {
-    "status": "success"
+  "status": "success"
 }
 ```
 

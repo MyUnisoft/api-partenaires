@@ -21,11 +21,12 @@ La route (racine) pour la requête http est POST <kdb>/api/authenticate/firm</kd
 > [!NOTE]
 > Le lien racine du service authentification est le suivant: [https://app.myunisoft.fr/api/authenticate](https://app.myunisoft.fr/api/authenticate)
 
-Le body (JSON) de la requête pour l’authentification:
+Le body (JSON) de la requête pour l’authentification :
+
 ```json
 {
-    "mail": "{{mail}}",
-    "password": "{{password}}"
+  "mail": "{{mail}}",
+  "password": "{{password}}"
 }
 ```
 
@@ -37,6 +38,7 @@ Les champs “**password**” et “**mail**” doivent être complétés avec l
 ---
 
 Vous devriez recevoir un status code `200` avec un JSON contenant la clé API Token.
+
 ```json
 {
     "api_token": "{{API_TOKEN}}",
@@ -52,6 +54,6 @@ Vous devriez recevoir un status code `200` avec un JSON contenant la clé API To
 
 Dans l'interface MyUnisoft il est possible de récupérer l'id de l'entité par le biais du menu `Tenue` > `Liens dynamiques`. Il suffira de récupérer le "numéro du schéma".
 
-![](../images/liens_dynamique.PNG)
+![Aperçu de la récupération de l'id de l'entité schéma](../images/liens_dynamique.PNG)
 
 Si vous n'avez pas vous-même accès un collaborateur de l'entité pourra toujours vous fournir l'information (N'hésitez pas non plus à demander à notre équipe).

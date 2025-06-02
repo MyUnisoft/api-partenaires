@@ -13,15 +13,15 @@ Ce guide a pour objectif de vous accompagner dans l'opération de récupération
 
 Dans MyUnisoft les emprunts sont gérés depuis : `Révision` > `Feuilles de travail` > `Emprunts`.
 
-![](../../images/revision_feuille_de_travail_emprunts_menu.png)
+![Aperçu du menu révision feuille de travail emprunts](../../images/revision_feuille_de_travail_emprunts_menu.png)
 
 Vous obtenez la liste des comptes d'emprunts.
 
-![](../../images/emprunts.png)
+![Aperçu de la liste des emprunts](../../images/emprunts.png)
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/loans permet de récupérer cette liste avec l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/loans> permet de récupérer cette liste avec l'API partenaires.
 
 ```bash
 curl --location 'https://api.myunisoft.fr/api/v1/loans?dossier_revision_id=12345' \

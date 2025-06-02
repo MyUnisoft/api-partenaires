@@ -13,15 +13,15 @@ Avec ce guide, vous allez être accompagné afin de créer et/ou mettre à jour 
 
 Dans MyUnisoft, pour gérer ces éléments vous devez accéder à l'onglet `Associés` par le module CRM : `Ecosystème` > `CRM` > `Entreprises`.
 
-![](../../images/ecosysteme_crm_entreprises.png)
+![Aperçu écosystème crm entreprises](../../images/ecosysteme_crm_entreprises.png)
 
 Sélectionnez le dossier de production pour lequel vous souhaitez gérer la liste des associés et la composition du capital.
 
-![](../../images/liste_entreprises.png)
+![Aperçu liste des entrepries](../../images/liste_entreprises.png)
 
 Vous obtenez les différents onglets de l'entreprise interrogée. Cliquez sur `Associés` pour accéder à celui-ci et pouvoir compléter les éléments requis.
 
-![](../../images/modif_associes.png)
+![Aperçu onglet associé](../../images/modif_associes.png)
 
 ## API
 
@@ -29,7 +29,7 @@ Ce module est composé de trois thématiques sur lesquelles vous pouvez opérer 
 
 ### Capital
 
-La route https://api.myunisoft.fr/api/v1/society/capital permet d'ajouter et/ou mettre à jour les données du capital social via l'API partenaire.
+La route <https://api.myunisoft.fr/api/v1/society/capital> permet d'ajouter et/ou mettre à jour les données du capital social via l'API partenaire.
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet : L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production.
@@ -84,7 +84,7 @@ NB : Le format de date de la propriété `effective_date` est le suivant : "YYYY
 
 ### Personnes physiques
 
-La route https://api.myunisoft.fr/api/v1/associate/natural_person permet d'ajouter et/ou mettre à jour les associés personnes physiques via l'API partenaire.
+La route <https://api.myunisoft.fr/api/v1/associate/natural_person> permet d'ajouter et/ou mettre à jour les associés personnes physiques via l'API partenaire.
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet : L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production.
@@ -188,7 +188,7 @@ Voici quelques détails concernant certaines propriétés spécifiques et les mo
 
 ### Personnes morales
 
-La route https://api.myunisoft.fr/api/v1/associate/legal_entity permet d'ajouter et/ou mettre à jour les associés personnes morales via l'API partenaire.
+La route <https://api.myunisoft.fr/api/v1/associate/legal_entity> permet d'ajouter et/ou mettre à jour les associés personnes morales via l'API partenaire.
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet : L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production.

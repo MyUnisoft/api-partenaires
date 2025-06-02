@@ -18,7 +18,7 @@ curl --location \
 
 Cette API retourne les différents plans comptables étalons disponibles, soit les modèles par défaut, soit ceux personnalisés par les cabinets.
 
-**Exemple de réponse JSON**
+## Exemple de réponse JSON
 
 ```json
 {
@@ -50,7 +50,7 @@ Cette API retourne les différents plans comptables étalons disponibles, soit l
 
 Ces trois endpoints correspondent aux modules visibles dans l'interface lors de l'édition d'un plan comptable.
 
-![](../../images/pcg_etalon.PNG)
+![Aperçu du pcg étalon](../../images/pcg_etalon.PNG)
 
 ## Réponse JSON
 
@@ -211,6 +211,7 @@ Les exemples ci-dessous ne sont pas nécessairement "complet".
   ]
 }
 ```
+
 </details>
 
 <details class="details custom-block">
@@ -388,6 +389,7 @@ Les exemples ci-dessous ne sont pas nécessairement "complet".
   }
 ]
 ```
+
 </details>
 
 <details class="details custom-block">
@@ -551,4 +553,5 @@ Les exemples ci-dessous ne sont pas nécessairement "complet".
   }
 ]
 ```
+
 </details>

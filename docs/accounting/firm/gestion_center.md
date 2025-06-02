@@ -15,7 +15,7 @@ Celle-ci est notamment utile lors du paramétrage du dossier fiscal d'une socié
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/society/gestion_center permet de récupérer la liste des centres de gestion (`gestion_center`).
+La route <https://api.myunisoft.fr/api/v1/society/gestion_center> permet de récupérer la liste des centres de gestion (`gestion_center`).
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet : L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production.

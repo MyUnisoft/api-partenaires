@@ -19,7 +19,7 @@ curl --location \
 
 ## 🔧 Paramètres de la requête
 
-Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string). 
+Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string).
 
 | nom | description | obligatoire |
 | --- | --- | :---: |
@@ -39,5 +39,4 @@ Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/ac
 
 Un dossier de production (ou société) peut être configuré par le biais du CRM entreprise: `Paramètres` > `Écosystème` > `Cabinet`.
 
-![](../images/accountingFirm.jpg)
-
+![Aperçu de la page de sélection des cobinets en vue de paramétrage](../images/accountingFirm.jpg)

@@ -8,17 +8,18 @@ next: false
 <span id="readme-top"></span>
 
 # Récupérer les utilisateurs et personne physiques d'un schéma (cabinet)
+
 Ce guide a pour objectif de vous aider dans la récupération des utilisateurs.
 
 Dans MyUnisoft les utilisateurs et personne physiques peuvent être gérés par le biais du CRM: `Ecosystème` > `CRM` > `Utilisateurs`.
 
-![](../../images/crm_users.PNG)
+![Aperçu crm liste des utilisateurs](../../images/crm_users.PNG)
 
 ## API
 
 ### Utilisateurs
 
-La route https://api.myunisoft.fr/api/v1/users_v2 permet de récupérer la liste des comptes utilisateurs du schéma ayant accès à la solution (les clients et collaborateurs du cabinet).
+La route <https://api.myunisoft.fr/api/v1/users_v2> permet de récupérer la liste des comptes utilisateurs du schéma ayant accès à la solution (les clients et collaborateurs du cabinet).
 
 > [!IMPORTANT]
 > Tout utilisateur sera aussi une personne physique.
@@ -86,6 +87,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/users_v2' \
   ]
 }
 ```
+
 </details>
 
 <details class="details custom-block"><summary>Définition TypeScript d'un utilisateur</summary>
@@ -137,25 +139,27 @@ interface UserPersonalDetail {
   coordonnee: string;
 }
 ```
+
 </details>
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ---
 
-MyUnisoft possède deux types de profil distincts;
-- [id: 1] Client 
+MyUnisoft possède deux types de profil distincts :
+
+- [id: 1] Client
 - [id: 2] Cabinet (ce sont les collaborateurs comptables du cabinet).
 
 Il existent plusieurs droits au sein de chaque types.
 
-![](../../images/user_rights.png)
+![Aperçu du diagramme droits des utilisateurs](../../images/user_rights.png)
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Personne physiques
 
-La route https://api.myunisoft.fr/api/v1/pers_physique permet de récupérer la liste des personne physiques.
+La route <https://api.myunisoft.fr/api/v1/pers_physique> permet de récupérer la liste des personne physiques.
 
 ```bash
 $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/pers_physique' \
@@ -208,6 +212,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/pers_physique' 
   ]
 }
 ```
+
 </details>
 
 <details class="details custom-block"><summary>Définition TypeScript d'une personne physique</summary>
@@ -261,6 +266,7 @@ interface Company {
   society_name: string;
 }
 ```
+
 </details>
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>

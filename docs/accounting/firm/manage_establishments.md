@@ -9,24 +9,23 @@ next: false
 
 # Ajouter, fermer des établissements
 
-
 Avec ce guide, vous allez être accompagnés afin d'ajouter ou fermer des établlissements liés à votre dossier.
 
 Dans MyUnisoft, vous devez consulter l'onglet `Etablissements` en passant par le module CRM : `Ecosystème` > `CRM` > `Entreprises`.
 
-![](../../images/ecosysteme_crm_entreprises.png)
+![Aperçu menu ecosystème crm entreprises](../../images/ecosysteme_crm_entreprises.png)
 
 Sélectionnez le dossier de production pour lequel vous souhaitez consulter la liste des établissements.
 
-![](../../images/liste_entreprises.png)
+![Aperçu liste des entreprises](../../images/liste_entreprises.png)
 
 Vous obtenez les différents onglets de l'entreprise interrogée. Cliquez sur `Etablissements` pour accéder à celui-ci.
 
-![](../../images/modif_etab.png)
+![Aperçu sélection onglet établissement](../../images/modif_etab.png)
 
 ## Ajouter un établissement
 
-La route https://api.myunisoft.fr/api/v1/society/establishment permet **d'ajouter un établissement** à une société via l'API partenaire.
+La route <https://api.myunisoft.fr/api/v1/society/establishment> permet **d'ajouter un établissement** à une société via l'API partenaire.
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet : L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production.
@@ -101,7 +100,7 @@ Voici quelques détails concernant certaines propriétés attendues du body :
 
 ## Fermer un établissement
 
-La route https://api.myunisoft.fr/api/v1/society/establishment/close permet **de fermer un établissement** de société via l'API partenaire.
+La route <https://api.myunisoft.fr/api/v1/society/establishment/close> permet **de fermer un établissement** de société via l'API partenaire.
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet : L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production.

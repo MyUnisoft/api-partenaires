@@ -6,11 +6,12 @@ next: false
 ---
 
 # Création d'écriture comptable avec le format CSV
+
 MyUnisoft met à disposition son propre [modèle/format](https://github.com/MyUnisoft/api-partenaires/blob/main/docs/accounting/folder/import/Modele_import_csv.csv) CSV pour l'import d'écritures comptable.
 
 Cela correspond à la même API utilisé dans l'interface MyUnisoft `Tenue` > `Imports`
 
-![](../../../images/import_csv.PNG)
+![Aperçu du formulaire d'import CSV](../../../images/import_csv.PNG)
 
 ## API
 
@@ -24,5 +25,6 @@ $ curl --location \
 ```
 
 La route prend plusieurs arguments:
+
 - **filename** (le nom du fichier qui est attaché avec la requête).
 - **HascodeVerif** (si l'argument est à `true` cela permet d'éviter les doublons).

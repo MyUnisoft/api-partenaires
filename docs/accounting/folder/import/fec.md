@@ -6,10 +6,12 @@ next: false
 ---
 
 # Création d'une entrée comptable avec le format FEC
+
 Documentation sur la création d’une entrée comptable au format FEC.
 
 Les routes HTTP concernées;
-- https://api.myunisoft.fr/api/v1/FEC
+
+- <https://api.myunisoft.fr/api/v1/FEC>
 
 ## Introduction
 
@@ -17,7 +19,7 @@ FEC est le diminutif de fichier des écritures comptables. Si n'êtes pas encore
 
 Exemple du format à plat:
 
-![](https://cdn2.hubspot.net/hubfs/3924385/Images/exemple%20fec%20excel.png)
+![Aperçu d'un fichier FEC au format .xls](https://cdn2.hubspot.net/hubfs/3924385/Images/exemple%20fec%20excel.png)
 
 ## API
 
@@ -33,11 +35,13 @@ $ curl --location \
 ```
 
 La route prend plusieurs arguments:
+
 - **exercice_id** (Il est possible de le récupérer par [API](../../../MAD/api/exercice.md)).
 - **filename** (le nom du fichier qui est attaché avec la requête).
 - **type** (valeur numérique entre `0` et `2`).
 
 Le type permet de configurer le comportement de la requête:
+
 - **0** = vérification si écriture sur l'exercice (renvoie d'un message d'erreur).
 - **1** = aucune vérification on rajoute les données a l'exercice existant.
 - **2** = on supprime les écritures si présent sur l'exercice.
@@ -46,10 +50,11 @@ Le type permet de configurer le comportement de la requête:
 
 Il est possible d'attacher des pièces jointes aux écritures importées au format FEC. Pour cela il suffit d'ajouter les pièces jointes dans le dossier compressé (dossier `.zip`) et de renseigner le nom de fichier correspondant dans la colonne `Pièce jointe` du fichier FEC. Le principe est similaire aux archives TRA+PJ.
 
-![](../../../images/fec_pj.jpg)
+![Aperçu du fichier FEC et des pièces jointes](../../../images/fec_pj.jpg)
 
 Ficher fec.txt:
-```
+
+```plaintext
 JournalCode	JournalLib	EcritureNum EcritureDate	CompteNum	  CompteLib	                              CompAuxNum	CompAuxLib	PieceRef	PieceDate	EcritureLib	Debit	Credit	EcritureLet	DateLet	ValidDate	MontantDevise	IdDevise	PieceJointe
 AC	        Achats                  20200220	    625ACCOUNT  Frais déplacements		          	                              0320-1	  20200331	sncf	      52	  0					                                          EUR     	PJ-1.pdf
 [...]

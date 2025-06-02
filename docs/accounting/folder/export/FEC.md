@@ -13,7 +13,7 @@ Ce guide a pour objectif de vous aider dans l'exportation d'écritures comptable
 
 Dans MyUnisoft, l'exportation d'écritures comptables s'effectue dans le module: `Tenue` > `Flux` > `Exports`.
 
-![](../../../images/export_fec.png)
+![Aperçu de la page export de FEC](../../../images/export_fec.png)
 
 ## Liste des paramètres
 
@@ -45,7 +45,7 @@ curl --location \
 <details class="details custom-block">
   <summary>Retour de l'API</summary>
 
-  ```
+```plaintext
 JournalCode|JournalLib|EcritureNum|EcritureDate|CompteNum|CompteLib|CompAuxNum|CompAuxLib|PieceRef|PieceDate|EcritureLib|Debit|Credit|EcritureLet|DateLet|ValidDate|Montantdevise|Idevise|PJ|RefInterne
 18|JOURNAL DE CAISSE|1|20210101|101100|CAPITAL NON APPELE|||0000|20210101|CAPITAL|0|10|||20210101||||E50451528
 18|JOURNAL DE CAISSE|1|20210101|530000|CAISSE|||0000|20210101|CAPITAL|10|0|||20210101||||E50451528
@@ -88,7 +88,8 @@ AC|AC|4|20210102|613200|LOCATIONS IMMOBILIER|||0000|20210102|SC PALAIS|500|0|mlm
 15|JOURNAL BANQUE|18|20210123|512000|BANQUE|||0000|20210123|CARTE X1161 19/01 IONOS BY 1 AND|0|33,36|||20210123||||E51030492
 15|JOURNAL BANQUE|18|20210123|530000|CAISSE|||0000|20210123|CARTE X1161 19/01 IONOS BY 1 AND|27,8|0|||20210123||||E51030492
 15|JOURNAL BANQUE|18|20210123|471000|COMPTE ATTENTE INFOR|||0000|20210123|CARTE X1161 19/01 IONOS BY 1 AND|5,56|0|||20210123||||E51030492
-  ```
+```
+
 </details>
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>

@@ -14,7 +14,7 @@ Ce guide va vous accompagner pour vous peremettre de récupérer la prochaine va
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/account/next_lettering permet d'obtenir la prochaine valeur de lettrage d'un compte avec l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/account/next_lettering> permet d'obtenir la prochaine valeur de lettrage d'un compte avec l'API partenaires.
 
 ```bash
 curl --location 'https://api.myunisoft.fr/api/v1/account/next_lettering?account_id=24208754&partial=false' \
@@ -26,7 +26,7 @@ curl --location 'https://api.myunisoft.fr/api/v1/account/next_lettering?account_
 > [!IMPORTANT]
 > Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
 
-Il sera nécessaire de renseigner les paramères de requête suivants : 
+Il sera nécessaire de renseigner les paramères de requête suivants :
 
 | paramètre | decription |
 | --- | --- |

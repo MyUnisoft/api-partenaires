@@ -13,17 +13,17 @@ Ce guide va vous accompagner pour vous permettre d'importer des emprunts.
 
 Dans MyUnisoft, il est possible de procéder à un import des emprunts depuis : `Tenue` > `Flux` > `Import`.
 
-![](../../../images/tenue_flux_imports_menu.png)
+![Aperçu du menu de tenue flux imports](../../../images/tenue_flux_imports_menu.png)
 
 Vous obtenez la page permettant de procéder à des imports :
 
-![](../../../images/imports_emprunts.png)
+![Aperçu du formulaire d'import d'emprunts](../../../images/imports_emprunts.png)
 
 Une fois votre fichier sélectionné (NB: un modèle est récupérable sur cette même page ), il suffit de cliquer sur `Importer`.
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/loans/excel permet d'effectuer la même opération depuis l'API partenaire.
+La route <https://api.myunisoft.fr/api/v1/loans/excel> permet d'effectuer la même opération depuis l'API partenaire.
 
 ```bash
 curl --location --request POST 'https://api.myunisoft.fr/api/v1/loans/excel?filename=import_emprunts.zip' \

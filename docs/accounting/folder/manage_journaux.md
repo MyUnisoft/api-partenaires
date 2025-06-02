@@ -13,15 +13,15 @@ Ce guide a pour objectif de vous aider dans la gestion (création, mise à jour,
 
 Dans MyUnisoft, la gestion des journaux est accessible en passant par `Paramètres` > `Dossier` > `Journaux`.
 
-![](../../images/liste_journaux.PNG)
+![Aperçu de la l iste des journaux](../../images/liste_journaux.PNG)
 
 ## Ajouter un nouveau journal au dossier
 
 Pour créer un nouveau journal depuis l'application, il suffit de cliquer sur le lien `+ Ajouter une ligne`.
 
-### API
+### API pour l'ajout d'un nouveau journal
 
-La route https://api.myunisoft.fr/api/v1/diary permet de créer un nouveau journal par le biais de l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/diary> permet de créer un nouveau journal par le biais de l'API partenaires.
 
 ```bash
 curl --location 'https://api.myunisoft.fr/api/v1/diary' \
@@ -44,7 +44,7 @@ En cas de succès de la requête, vous obtiendrez un status code `200`, ainsi qu
 
 ```json
 {
-    "diary_id": 123456
+  "diary_id": 123456
 }
 ```
 
@@ -55,7 +55,7 @@ La route attend un body contenant plusieurs propriétés dont voici quelques dé
 - `diary_type_id` : Il s'agit d'indiquer ici l'id du type de journal. La liste des différents types de journaux est **référencée plus bas dans cette page** à la section "Informations complémentaires".
 - `diary_account_id` : En indiquant l'id du compte souhaité, vous pouvez le rattacher au journal que vous tentez de créer. Pour récupérer la liste des comptes d'un dossier, consultez cette [page](./account/create.md).
 
-#### Définition TypeScript du body
+#### Définition TypeScript du body pour un ajout de journal
 
 ```ts
 interface Diary {
@@ -70,9 +70,9 @@ interface Diary {
 
 Il est possible dans MyUnisoft de mettre à jour, fermer ou rouvrir un journal.
 
-### API
+### API pour la mise à jour, fermeture ou réouverture d'un journal
 
-La route https://api.myunisoft.fr/api/v1/diary permet ces opérations par le biais de l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/diary> permet ces opérations par le biais de l'API partenaires.
 
 ```bash
 curl --location --request PUT 'https://api.myunisoft.fr/api/v1/diary?id=123456' \
@@ -94,8 +94,8 @@ En cas de succès de la requête, vous obtiendrez un status code `200`, ainsi qu
 
 ```json
 {
-    "code": "Success",
-    "message": ""
+  "code": "Success",
+  "message": ""
 }
 ```
 
@@ -109,7 +109,7 @@ La route attend un body contenant plusieurs propriétés dont voici quelques dé
 - `diary_account_id` : En indiquant l'id du compte souhaité, vous pouvez le rattacher au journal que vous tentez de créer. Pour récupérer la liste des comptes d'un dossier, consultez cette [page](./account/create.md).
 - `closed`: permet de fermer ou rouvrir un journal.
 
-#### Définition TypeScript du body
+#### Définition TypeScript du body pour la mise à jour, fermeture ou réouverture d'un journal
 
 ```ts
 interface Diary {
@@ -124,9 +124,9 @@ interface Diary {
 
 Il est possible de supprimer un ou plusieurs journaux personnalisés depuis l'application.
 
-### API
+### API pour la suppression d'un journal
 
-La route https://api.myunisoft.fr/api/v1/diary permet ces opérations par le biais de l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/diary> permet ces opérations par le biais de l'API partenaires.
 
 ```bash
 curl --location --request DELETE 'https://app.myunisoft.fr/api/v1/diary' \
@@ -136,7 +136,7 @@ curl --location --request DELETE 'https://app.myunisoft.fr/api/v1/diary' \
 --header 'Authorization: Bearer {{API_TOKEN}}' \
 --data '{
     "diary": [
-        915140
+      915140
     ]
 }'
 ```
@@ -148,8 +148,8 @@ En cas de succès de la requête, vous obtiendrez un status code `200`, ainsi qu
 
 ```json
 {
-    "code": "Success",
-    "message": ""
+  "code": "Success",
+  "message": ""
 }
 ```
 
@@ -157,7 +157,7 @@ La route attend un body contenant la propriété suivante :
 
 - `diary` : Vous devrez passer un tableau avec l'id du journal que vous souhaitez supprimer. Pour récupérer la valeur de l'id du journal vous pouvez consulter cette [page](./journaux.md).
 
-#### Définition TypeScript du body
+#### Définition TypeScript du body de suppression d'un journal
 
 ```ts
 interface DiariesToRemove {

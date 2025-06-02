@@ -102,6 +102,7 @@ Exemple de réponse pour le SIRET `84014327500039` (MY UNISOFT).
     "activity": "\u00c9dition de logiciels applicatifs"
 }
 ```
+
 </details>
 
 ### Cabinet d'appartenance
@@ -139,7 +140,7 @@ Type du dossier qui correspond à la propriété  `id_type_company`.
 
 Cet affichage correspond à l'onglet `Utilisateurs` du **CRM**, permettant de configurer les responsables du dossier (personnes physiques).
 
-![](../../images/crm_users_responsable.PNG)
+![Aperçu responsables utilisateurs](../../images/crm_users_responsable.PNG)
 
 Les trois champs doivent être mis à jour en utilisant les clés suivantes, chacune contenant l’ID de la personne physique (préalablement récupéré via l'API users_v2) :
 

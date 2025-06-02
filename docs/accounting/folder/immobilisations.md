@@ -13,15 +13,15 @@ Ce guide a pour objectif de vous accompagner dans l'opération de récupération
 
 Dans MyUnisoft les immobilisations sont gérées depuis : `Révision` > `Feuilles de travail` > `Immobilisations`.
 
-![](../../images/revision_feuille_de_travail_immobilisations_menu.png)
+![Aperçu menu Révision feuille de travail immobilisations](../../images/revision_feuille_de_travail_immobilisations_menu.png)
 
 Vous obtenez la liste des comptes d'immobilisations et le détails de chacun.
 
-![](../../images/immobilisations.png)
+![Aperçu contenu de la feuille de travail des immobilisations](../../images/immobilisations.png)
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/immo permet de récupérer cette liste avec l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/immo> permet de récupérer cette liste avec l'API partenaires.
 
 ```bash
 curl --location 'https://api.myunisoft.fr/api/v1/immo?dossier_revision_id=12345' \

@@ -13,19 +13,19 @@ Avec ce guide, vous allez être accompagné afin de créer et/ou mettre à jour 
 
 Dans MyUnisoft, la gestion du dossier fiscal s'effectue avec le module CRM : `Ecosystème` > `CRM` > `Entreprises`.
 
-![](../../images/ecosysteme_crm_entreprises.png)
+![Aperçu menu ecosysteme crm entreprise](../../images/ecosysteme_crm_entreprises.png)
 
 Sélectionnez le dossier de production sur lequel vous souhaitez intervenir (une option de recherche rapide est disponible).
 
-![](../../images/liste_entreprises.png)
+![Aperçu liste des entreprises](../../images/liste_entreprises.png)
 
 Vous obtenez les différents onglets de l'entreprise interrogée. Cliquez sur `Dossier fiscal` pour accéder à celui-ci.
 
-![](../../images/modif_dossier.png)
+![Aperçu menu dossier fiscal](../../images/modif_dossier.png)
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/society/fiscal_file permet d'ajouter et/ou mettre à jour des informations au dossier fiscal via l'API partenaire.
+La route <https://api.myunisoft.fr/api/v1/society/fiscal_file> permet d'ajouter et/ou mettre à jour des informations au dossier fiscal via l'API partenaire.
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet : L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production.
@@ -51,122 +51,122 @@ En fonction des éléments que vous aurez renseigné dans le body de la requête
 
 ```json
 {
-    "rof_tva": "TVA1",
-    "rof_tdfc": "IS1",
-    "rof_cfe": "CFE1",
-    "rof_cvae": "CVAE1",
-    "rof_rcm": "RCM1",
-    "rof_groupe": "",
-    "acompte_pro_mens": false,
-    "exercice_declaration": false,
-    "tva_intraco": "FR45530514157",
-    "due_date_tva": 21,
-    "adherent_code": "",
-    "mono_etab": false,
-    "close_entries_VAT": false,
-    "mail_liasse": "",
-    "fiscal_integration": false,
-    "head_group_if": false,
-    "start_date_if": "",
-    "end_date_if": "",
-    "adv_legal_form_id": "SARL",
-    "adv_name": "Groupe conseil",
-    "adv_name_2": "",
-    "adv_phone_number": "+33112134567",
-    "adv_address_number": "10",
-    "adv_street_name": "du Boulevard",
-    "adv_postal_code": "75000",
-    "adv_city": "PARIS",
-    "adv_country": "FRANCE",
-    "ecf_legal_form_id": "EURL",
-    "ecf_siren": "",
-    "ecf_name": "Prestataire",
-    "ecf_name_2": "",
-    "ecf_address_number": "",
-    "ecf_street_name": "de la corniche",
-    "ecf_postal_code": "75000",
-    "ecf_city": "PARIS",
-    "ecf_country": "FRANCE",
-    "sie_address_number": "8",
-    "sie_street_name": "de l'impasse",
-    "sie_name": "SIE de Paris",
-    "sie_postal_code": "75000",
-    "sie_city": "PARIS",
-    "sie_country": "FRANCE",
-    "vis_name": "",
-    "vis_agreement_number": "",
-    "vis_viseur": true,
-    "vis_address_number": "",
-    "vis_street_name": "",
-    "vis_postal_code": "",
-    "vis_city": "",
-    "vis_country": "",
-    "id_pers_physique": null,
-    "id_societe_signataire": null,
-    "id_societe_comptable": null,
-    "fiscal_decl_by_firm": true,
-    "id_comptable": 0,
-    "assujetti_unique": false,
-    "siren_assujetti_unique": "",
-    "rof_ts": "",
-    "periodicity_ts": 0,
-    "holding_name": "",
-    "adv_forme_juridique": {
-        "id": 1,
-        "code": "SARL",
-        "label": "Société à Responsabilité Limitée",
-        "code_edi": "SRL"
-    },
-    "ecf_forme_juridique": {
-        "id": 4,
-        "code": "EURL",
-        "label": "Entreprise Unipersonnelle à Responsabilité Limitée",
-        "code_edi": "ERL"
-    },
-    "adv_road_type": {
-        "id": 1,
-        "label": "Allée",
-        "value": "Allée"
-    },
-    "ecf_road_type": {
-        "id": 3,
-        "label": "Boulevard",
-        "value": "Boulevard"
-    },
-    "sie_road_type": {
-        "id": 2,
-        "label": "Avenue",
-        "value": "Avenue"
-    },
-    "sheet_group": {
-        "id": 2,
-        "label": "IS-BIC-Normal",
-        "value": "ISBICN",
-        "id_bilan": 1,
-        "regime_impot": true,
-        "id_regime_impot": 1
-    },
-    "vat_regime": {
-        "id": 4,
-        "label": "Réel Normal Mensuel",
-        "value": "M"
-    },
-    "gestion_center": {
-        "id": 7,
-        "label": "CGA83",
-        "value": "CGA83"
-    },
-    "info_bnc": {
-        "info_bnc_id": 1982,
-        "membership_year": null,
-        "activity_code_pm": null
-    },
-    "society_status": {
-        "id": 1,
-        "label": "En activité",
-        "value": "En activité",
-        "effective_date": "2023-09-14"
-    }
+  "rof_tva": "TVA1",
+  "rof_tdfc": "IS1",
+  "rof_cfe": "CFE1",
+  "rof_cvae": "CVAE1",
+  "rof_rcm": "RCM1",
+  "rof_groupe": "",
+  "acompte_pro_mens": false,
+  "exercice_declaration": false,
+  "tva_intraco": "FR45530514157",
+  "due_date_tva": 21,
+  "adherent_code": "",
+  "mono_etab": false,
+  "close_entries_VAT": false,
+  "mail_liasse": "",
+  "fiscal_integration": false,
+  "head_group_if": false,
+  "start_date_if": "",
+  "end_date_if": "",
+  "adv_legal_form_id": "SARL",
+  "adv_name": "Groupe conseil",
+  "adv_name_2": "",
+  "adv_phone_number": "+33112134567",
+  "adv_address_number": "10",
+  "adv_street_name": "du Boulevard",
+  "adv_postal_code": "75000",
+  "adv_city": "PARIS",
+  "adv_country": "FRANCE",
+  "ecf_legal_form_id": "EURL",
+  "ecf_siren": "",
+  "ecf_name": "Prestataire",
+  "ecf_name_2": "",
+  "ecf_address_number": "",
+  "ecf_street_name": "de la corniche",
+  "ecf_postal_code": "75000",
+  "ecf_city": "PARIS",
+  "ecf_country": "FRANCE",
+  "sie_address_number": "8",
+  "sie_street_name": "de l'impasse",
+  "sie_name": "SIE de Paris",
+  "sie_postal_code": "75000",
+  "sie_city": "PARIS",
+  "sie_country": "FRANCE",
+  "vis_name": "",
+  "vis_agreement_number": "",
+  "vis_viseur": true,
+  "vis_address_number": "",
+  "vis_street_name": "",
+  "vis_postal_code": "",
+  "vis_city": "",
+  "vis_country": "",
+  "id_pers_physique": null,
+  "id_societe_signataire": null,
+  "id_societe_comptable": null,
+  "fiscal_decl_by_firm": true,
+  "id_comptable": 0,
+  "assujetti_unique": false,
+  "siren_assujetti_unique": "",
+  "rof_ts": "",
+  "periodicity_ts": 0,
+  "holding_name": "",
+  "adv_forme_juridique": {
+    "id": 1,
+    "code": "SARL",
+    "label": "Société à Responsabilité Limitée",
+    "code_edi": "SRL"
+  },
+  "ecf_forme_juridique": {
+    "id": 4,
+    "code": "EURL",
+    "label": "Entreprise Unipersonnelle à Responsabilité Limitée",
+    "code_edi": "ERL"
+  },
+  "adv_road_type": {
+    "id": 1,
+    "label": "Allée",
+    "value": "Allée"
+  },
+  "ecf_road_type": {
+    "id": 3,
+    "label": "Boulevard",
+    "value": "Boulevard"
+  },
+  "sie_road_type": {
+    "id": 2,
+    "label": "Avenue",
+    "value": "Avenue"
+  },
+  "sheet_group": {
+    "id": 2,
+    "label": "IS-BIC-Normal",
+    "value": "ISBICN",
+    "id_bilan": 1,
+    "regime_impot": true,
+    "id_regime_impot": 1
+  },
+  "vat_regime": {
+    "id": 4,
+    "label": "Réel Normal Mensuel",
+    "value": "M"
+  },
+  "gestion_center": {
+    "id": 7,
+    "label": "CGA83",
+    "value": "CGA83"
+  },
+  "info_bnc": {
+    "info_bnc_id": 1982,
+    "membership_year": null,
+    "activity_code_pm": null
+  },
+  "society_status": {
+    "id": 1,
+    "label": "En activité",
+    "value": "En activité",
+    "effective_date": "2023-09-14"
+  }
 }
 ```
 

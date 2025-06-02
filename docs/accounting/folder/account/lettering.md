@@ -11,15 +11,15 @@ Ce guide va acompagner dans l'opération de lettrage des mouvements d'un compte.
 
 Dans MyUnisoft, vous pouvez lettrer les mouvements d'un compte afin de déterminer l'origine de son solde depuis : `Tenue` > `Saisie/Consultation` >`Consultation`.
 
-![](../../../images/tenue_consultation_menu.png)
+![Aperçu du menu tenue consultation](../../../images/tenue_consultation_menu.png)
 
 Vous obtenez la page de consultation du compte avec les boutons d'actions permettant de lettrer ou délettrer des écritures.
 
-![](../../../images/consultation_lettrage.png)
+![Aperçu de la consultation lettrage](../../../images/consultation_lettrage.png)
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/entry/lettering permet de lettrer des mouvements avec l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/entry/lettering> permet de lettrer des mouvements avec l'API partenaires.
 
 ```bash
 curl --location --request PUT 'https://api.myunisoft.fr/api/v1/entry/lettering' \
@@ -28,15 +28,15 @@ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/entry/lettering' 
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{API_TOKEN}}' \
 --data '{
-    "lettering": "AAA",
-    "line_entry_list": [
-        {
-            "line_entry_id": 123456789
-        },
-        {
-            "line_entry_id": 987654321
-        }
-    ]
+  "lettering": "AAA",
+  "line_entry_list": [
+    {
+      "line_entry_id": 123456789
+    },
+    {
+      "line_entry_id": 987654321
+    }
+  ]
 }'
 ```
 
@@ -54,8 +54,8 @@ Il sera nécessaire de renseigner dans le body les paramètres de requête suiva
 
 ```json
 {
-    "code": "Success",
-    "message": ""
+  "code": "Success",
+  "message": ""
 }
 ```
 

@@ -11,15 +11,15 @@ L'objectif de ce guide est de centraliser l'ensemble des étapes de paramétrage
 
 Dans MyUnisoft, ce paramétrage s'effectue en passant par le menu `Ecosystème` > `CRM` > `Entreprises`.
 
-![](../../images/ecosysteme_crm_entreprises.png)
+![Aperçu menu ecosystème crm entreprises](../../images/ecosysteme_crm_entreprises.png)
 
 Sélectionnez le dossier de production sur lequel vous souhaitez intervenir.
 
-![](../../images/liste_entreprises.png)
+![Aperçu liste des entreprises](../../images/liste_entreprises.png)
 
 Vous obtenez l'accès à la page de modification de l'entreprise interrogée.
 
-![](../../images/menu_modif_dossier.png)
+![Aperçu menu modif dossier infos générales](../../images/menu_modif_dossier.png)
 
 Chacun des onglets consultables vous permettra de paramétrer de façon avancée la thématique sélectionnée.
 

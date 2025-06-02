@@ -7,10 +7,10 @@ next:
   link: MAD/specs/v1.0.0/entries.md
 ---
 
+# Export des mouvements
+
 > [!CAUTION]
 > Les réponses peuvent également être très gourmandes en termes de sérialisation JSON. Par exemple, pour des exercices contenant plus de 500 000 mouvements, la taille des réponses peut varier entre **150** et **250** Mo.
-
-# Export des mouvements
 
 L'API d'export ci-dessous vous permettra de récupérer les mouvements par deux biais distincts;
 
@@ -29,7 +29,7 @@ curl --location \
 
 ## 🔧 Paramètres de la requête
 
-Le paramétrage de cette route s'effectue uniquement via des [query strings](https://en.wikipedia.org/wiki/Query_string). 
+Le paramétrage de cette route s'effectue uniquement via des [query strings](https://en.wikipedia.org/wiki/Query_string).
 
 | nom | description | obligatoire | valeurs multiples |
 | --- | --- | :---: | :---: |
@@ -47,13 +47,12 @@ Le paramétrage de cette route s'effectue uniquement via des [query strings](htt
 > L'écart entre la date de début et de fin ne doit pas dépasser le bornage maximum prévu par l'exercice comptable (12 à 24 mois).
 
 > [!IMPORTANT]
-> 🔹 Accès cabinet 
+> 🔹 Accès cabinet
 > L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production (la société concernée par la demande d'extraction).
 
 ### Source
 
 Le paramètre `source` doit contenir le code correspondant à l'une des sources documentées [ici](../specs/v1.0.0/entries.md#source-d-une-ecriture)
-
 
 ## 🔬 Réponse
 
@@ -151,8 +150,8 @@ Sur MyUnisoft, il existe plusieurs moyens de récupérer et/ou consulter les éc
 - Par le biais de la saisie: `Tenue` > `Saisie/Consultation` > `Saisie`
 - Par la **recherche rapide**: accessible via l'icône en forme de loupe en haut à droite.
 
-![](../../images/quick_search.jpg)
+![Aperçu de la recherche des écritures](../../images/quick_search.jpg)
 
 L'avantage de la première option est qu'elle permet de consulter les factures en attente, ce qui est courant lors d'un import au format JSON nécessitant une étape de validation par le responsable de dossier.
 
-![](../images/saisie_header.PNG)
+![Aperçu des options de saisie d'écriture](../images/saisie_header.PNG)

@@ -8,18 +8,20 @@ next: false
 <span id="readme-top"></span>
 
 # Récupérer la TVA d'une société (dossier)
+
 Ce guide a pour objectif de vous aider dans la récupération des paramètres de TVA d'un dossier (société).
 
 Dans MyUnisoft les paramètres de TVA peuvent être récupérés dans `Paramètres` > `Dossier` > `Plan comptable` > `Liste TVA`.
 
-![](../../images/liste_tva.PNG)
+![Aperçu de la liste TVA](../../images/liste_tva.PNG)
 
 > 🐤 Développeur ? Débutant en comptabilité ? Nous vous recommandons les ressources suivantes:
+>
 > - [TVA collectée et TVA déductible](https://intia.fr/fr/ressources/tva-collectee-et-tva-deductible/)
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/vat_param permet de récupérer la même liste mais par le biais de l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/vat_param> permet de récupérer la même liste mais par le biais de l'API partenaires.
 
 ```bash
 $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/vat_param' \
@@ -31,35 +33,36 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/vat_param' \
 > Penser à préciser l'en-tête **society-id** si vous utilisez un 🔹 Accès cabinet.
 
 Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à l'exemple ci-dessous**
+
 ```json
 [
-    {
-        "vat_param_id": 6628,
-        "code": "01",
-        "account_ded": {
-            "account_id": 1180209,
-            "account_number": "445660",
-            "label": "TVA DEDUCT.S/ACHATS"
-        },
-        "account_coll": {
-            "account_id": 1180443,
-            "account_number": "445712",
-            "label": "TVA collectée"
-        },
-        "vat": {
-            "id": 4,
-            "rate": 20
-        },
-        "vat_type": {
-            "id": 1,
-            "label": "Bien et service"
-        },
-        "vat_exigility": {
-            "id": 1,
-            "label": "Débit (facturation)"
-        },
-        "blocked": false
-    }
+  {
+    "vat_param_id": 6628,
+    "code": "01",
+    "account_ded": {
+      "account_id": 1180209,
+      "account_number": "445660",
+      "label": "TVA DEDUCT.S/ACHATS"
+    },
+    "account_coll": {
+      "account_id": 1180443,
+      "account_number": "445712",
+      "label": "TVA collectée"
+    },
+    "vat": {
+      "id": 4,
+      "rate": 20
+    },
+    "vat_type": {
+      "id": 1,
+      "label": "Bien et service"
+    },
+    "vat_exigility": {
+      "id": 1,
+      "label": "Débit (facturation)"
+    },
+    "blocked": false
+  }
 ]
 ```
 
@@ -67,6 +70,7 @@ Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à 
 > Il y a une erreur de frappe sur la clé **vat_exigility** (ce n'est pas une erreur dans l'exemple).
 
 ### Rate
+
 Les rates possibiles sont: 2.10%, 5.5%, 10%, 20%, 8.5%, 0%, 0.90%, 1.05%, 1.75%. Leur Ids dans le même ordre (de 1 à 9).
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
@@ -169,6 +173,7 @@ interface VatRegime {
 Attention `account_ded` et `account_coll` peuvent être null (dans le cas d'un rate à 0% par exemple). La TVA `Autres opérations imposables basées sur le CA (02/A2)` ne possède pas de compte déductible.
 
 ## Architecture d'une TVA MyUnisoft
+
 À la différence de plusieurs autres logiciels la TVA sur MyUnisoft est directement composé d'un compte achat (déductible) et vente (collectée). Dans le cadre d'une auto-liquidation vous aurez donc au sein d'une même TVA l'intégralité des informations qui vous sont nécessaires.
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
