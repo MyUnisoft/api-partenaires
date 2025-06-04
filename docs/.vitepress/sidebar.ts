@@ -240,7 +240,12 @@ export default {
             {
               text: "TVA",
               link: "/MAD/specs/v1.0.0/vat"
-            },{
+            },
+            {
+              text: "User",
+              link: "/MAD/specs/v1.0.0/users"
+            },
+            {
               text: "Commentaire",
               link: "/MAD/specs/v1.0.0/comments"
             },
@@ -363,6 +368,13 @@ export default {
                 endpoint: "/mad/vats"
               }),
               link: "/MAD/api/vat.md"
+            },
+            {
+              text: httpText({
+                method: "GET",
+                endpoint: "/mad/users"
+              }),
+              link: "/MAD/api/users.md"
             },
             {
               text: httpText({
