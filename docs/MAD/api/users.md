@@ -3,15 +3,15 @@ prev:
   text: 💃 Introduction
   link: MAD/introduction.md
 next:
-  text: Journal (Spec)
-  link: MAD/specs/v1.0.0/journal.md
+  text: Utilisateur (Spec)
+  link: MAD/specs/v1.0.0/users.md
 ---
 
-# Export des journaux
+# Export des utilisateurs
 
 ```bash
 curl --location \
---request GET 'https://api.myunisoft.fr/api/v1/mad/journals?version=1.0.0' \
+--request GET 'https://api.myunisoft.fr/api/v1/mad/users?version=1.0.0' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}' \
 --header 'Content-Type: application/json'
@@ -21,20 +21,16 @@ curl --location \
 
 Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string). 
 
-| nom | description | obligatoire |
-| --- | --- | :---: |
-| version | version du format | ✔️ |
+| nom | description | obligatoire | valeurs multiples |
+| --- | --- | :---: | :---: |
+| version | version du format | ✔️ | ❌ |
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > 🔹 Accès cabinet  
 > L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production (la société concernée par la demande d'extraction).
 
 ## 🔬 Réponse
 
-Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/journal.md).
+Retour d'API: `User[]`
 
-## 💬 Gérer les journaux sur l'interface MyUnisoft
-
-La liste des journaux est accessible par le biais du menu: `Paramètres` > `Dossier` > `Journaux`.
-
-![](../../images/liste_journaux.PNG)
+Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/users.md).

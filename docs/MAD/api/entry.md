@@ -35,7 +35,7 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 | comment | Ajoute les commentaires liés à l'écriture | ❌ | ❌ |
 
 > [!IMPORTANT]
-> 🔹 Accès cabinet 
+> 🔹 Accès cabinet  
 > L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production (la société concernée par la demande d'extraction).
 
 ## 🔬 Réponse

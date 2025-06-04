@@ -48,7 +48,8 @@ La génération est opérée de manière asynchrone et se décompose de la faço
 ## Déclenchement de l'opération
 
 > [!IMPORTANT]  
-> 🔹 L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production (la société concernée par la demande d'extraction).
+> 🔹 Accès cabinet  
+> L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production (la société concernée par la demande d'extraction).
 
 ```bash
 curl --location 'https://app.myunisoft.fr/api/v1/mad/all?accountingFolderId=1&format=json&version=1.0.0' \
