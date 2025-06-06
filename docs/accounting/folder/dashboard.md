@@ -11,7 +11,7 @@ next: false
 
 API pour récupérer les informations des dashboards et widgets. Ces modules graphiques sont consultables sur la page d'accueil (home page) d'un dossier de production MyUnisoft.
 
-![](../../images/accountingFolderHomeGraphs.PNG)
+![Aperçu des widgets et dashboards](../../images/accountingFolderHomeGraphs.PNG)
 
 ## Dashboards
 
@@ -24,37 +24,38 @@ curl --location --request GET 'https://app.myunisoft.fr/api/v1/dashboard?applica
 > [!NOTE]
 > Il est nécessaire de fournir l'id d'un exercice. Voir la [documentation suivante](../../MAD/api/exercice.md) pour récupérer la liste de tous les exercices d'un dossier de production.
 
-La réponse ressemble au payload JSON suivant:
+La réponse ressemble au payload JSON suivant :
+
 ```json
 {
-    "id_config_user_dashboard": 1864,
-    "cards_list": [
-        {
-            "id_card": 1,
-            "type": "client",
-            "year": []
-        },
-        {
-            "id_card": 2,
-            "type": "fournisseur",
-            "year": []
-        },
-        {
-            "id_card": 3,
-            "type": "situation_globale",
-            "year": []
-        },
-        {
-            "id_card": 4,
-            "type": "tresorerie",
-            "year": []
-        },
-        {
-            "id_card": 7,
-            "type": "ca",
-            "year": []
-        }
-    ]
+  "id_config_user_dashboard": 1864,
+  "cards_list": [
+    {
+      "id_card": 1,
+      "type": "client",
+      "year": []
+    },
+    {
+      "id_card": 2,
+      "type": "fournisseur",
+      "year": []
+    },
+    {
+      "id_card": 3,
+      "type": "situation_globale",
+      "year": []
+    },
+    {
+      "id_card": 4,
+      "type": "tresorerie",
+      "year": []
+    },
+    {
+      "id_card": 7,
+      "type": "ca",
+      "year": []
+    }
+  ]
 }
 ```
 
@@ -62,7 +63,7 @@ Chaque objet contenu au sein de **cards_list** représente un dashboard. La clé
 
 Par exemple ici `situation_globale`:
 
-![](../../images/dashboard_situation_globale.PNG)
+![Aperçu du dashboard situation globale](../../images/dashboard_situation_globale.PNG)
 
 <details class="details custom-block">
 <summary>Voir la réponse JSON</summary>
@@ -215,11 +216,12 @@ Par exemple ici `situation_globale`:
     ]
 }
 ```
+
 </details>
 
 ## Widget
 
-![](../../images/dashboard_widget_waiting.PNG)
+![Aperçu des écritures en attente de traitement](../../images/dashboard_widget_waiting.PNG)
 
 ```bash
 $ curl --location --request GET 'https://app.myunisoft.fr/api/v1/customer_waiting_account/widget' \

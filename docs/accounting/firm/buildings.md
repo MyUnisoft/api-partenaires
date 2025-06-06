@@ -12,11 +12,11 @@ next: false
 Ce guide a pour objectif de vous aider à récupérer la liste des immeubles d'un dossier.
 Dans MyUnisoft, la gestion des immeubles s'effectue avec le module CRM : `Ecosystème` > `CRM` > `Entreprises` > `Immeubles`.
 
-![](../../images/modif_immeubles.png)
+![Aperçu menu modification d'un immeuble](../../images/modif_immeubles.png)
 
 ## API
 
-La route <kbd>GET</kbd> https://api.myunisoft.fr/api/v1/building permet de récupérer la liste de l'ensemble des immeubles liés à une entreprise via l'API partenaire.
+La route <kbd>GET</kbd> <https://api.myunisoft.fr/api/v1/building> permet de récupérer la liste de l'ensemble des immeubles liés à une entreprise via l'API partenaire.
 
 ```bash
 curl --location 'https://app.myunisoft.fr/api/v1/building' \

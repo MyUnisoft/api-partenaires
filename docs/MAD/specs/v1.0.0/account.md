@@ -77,7 +77,7 @@ Sur MyUnisoft les comptes sont classés de `1` à `9` (Exactement comme le [plan
 
 Les comptes ayant les racines `401` (Fournisseurs), `411` (Clients) et `421` (Personnel) seront divisés en deux parties:
 
-![](../../images/auxiliaire.png)
+![Aperçu de la décomposition d'une codification de compte de tiers](../../images/auxiliaire.png)
 
 1. La racine du compte, qui est toujours de **trois caractères**.
 2. L'auxiliaire.
@@ -171,6 +171,7 @@ type Account = SimplifiedAccount & {
   { employee: EmployeeAccount; }
 );
 ```
+
 </details>
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
@@ -186,7 +187,7 @@ Les comptes sont segmentés en plusieurs **sections distinctes** au sein du fich
 ### Comptes de correspondance
 
 | nom de la colonne | position | chemin de la propriété MyUnisoft |
-| --- | --- | --- | 
+| --- | --- | --- |
 | FIXE | 1 | N/A |
 | IDENTIFIANT | 4 | `CRR` |
 | CODE | 7 | correspondanceAccount.number |
@@ -198,7 +199,7 @@ Les comptes sont segmentés en plusieurs **sections distinctes** au sein du fich
 Ce sont les comptes commençant avec la racine 401, 411 ou 421.
 
 | nom de la colonne | position | chemin de la propriété MyUnisoft |
-| --- | --- | --- | 
+| --- | --- | --- |
 | FIXE | 1 | N/A |
 | IDENTIFIANT | 4 | `CAE` |
 | CODE | 7 | number |
@@ -213,14 +214,13 @@ Ce sont les comptes commençant avec la racine 401, 411 ou 421.
 | PRENOM | 620 | company.contacts[0].firstname |
 
 ### Compte général
-+
+
 Ce sont tous les autres comptes ne correspondant pas aux racines des tiers.
 
 | nom de la colonne | position | chemin de la propriété MyUnisoft |
-| --- | --- | --- | 
+| --- | --- | --- |
 | FIXE | 1 | N/A |
 | IDENTIFIANT | 4 | `CGN` |
 | CODE | 7 | number |
 | LIBELLE | 24 | name |
 | CORRESP1 | 259 | correspondanceAccount.number |
-

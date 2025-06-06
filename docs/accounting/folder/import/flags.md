@@ -6,6 +6,7 @@ next: false
 ---
 
 # Récupérer et créer des drapeaux (flag) sur des lignes/mouvements
+
 Ce guide a pour objectif de vous aider:
 
 - À récupérer des informations sur les drapeaux.
@@ -13,11 +14,11 @@ Ce guide a pour objectif de vous aider:
 
 Dans MyUnisoft vous pouvez retrouver l'information avec le module `Demande d'info/PJ` de la page d'accueil société:
 
-![](../../../images/flags_infopj.PNG)
+![Aperçu de la demande d'info pièces jointes](../../../images/flags_infopj.PNG)
 
 ## API
 
-La route <kbd>GET</kbd> https://api.myunisoft.fr/api/v1/flags/comment_attach_doc permets de récupérer les mêmes données que le module `Demande d'info/PJ`:
+La route <kbd>GET</kbd> <https://api.myunisoft.fr/api/v1/flags/comment_attach_doc> permets de récupérer les mêmes données que le module `Demande d'info/PJ`:
 
 ```bash
 curl --location \
@@ -76,7 +77,7 @@ curl --location \
 
 ### Ajout ou mise à jour d'un drapeau
 
-Il est aussi possible d'ajouter ou modifier un drapeau sur une ligne d'écriture à tout moment en utilisant la route <kbd>PUT</kbd> https://api.myunisoft.fr/api/v1/flags
+Il est aussi possible d'ajouter ou modifier un drapeau sur une ligne d'écriture à tout moment en utilisant la route <kbd>PUT</kbd> <https://api.myunisoft.fr/api/v1/flags>
 
 ```bash
 curl --location --request PUT 'https://api.myunisoft.fr/api/v1/flags?type_entry=ENTRIES_LINE&line_entry_id=156009180&type_flag=INFO_PJ&flagged=true&dh=2021-01-01T22%3A00%3A00.45654' \

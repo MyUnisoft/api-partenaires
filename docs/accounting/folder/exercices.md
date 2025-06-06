@@ -13,19 +13,19 @@ Ce guide a pour objectif de vous aider dans la récupération des exercices d'un
 
 Dans MyUnisoft les exercices peuvent être gérés par le biais du CRM: `Ecosystème` > `CRM` > `Modifier l'entreprise`.
 
-![](../../images/ecosysteme_crm_entreprise_menu.png)
+![Aperçu du menu ecosystème crm modifier l'entreprise](../../images/ecosysteme_crm_entreprise_menu.png)
 
 Assurez-vous de travailler sur les **Entreprises** :
 
-![](../../images/crm_list_entreprises.PNG)
+![Aperçu sélecteur entreprise](../../images/crm_list_entreprises.PNG)
 
 Choisir l'onglet "Exercices" :
 
-![](../../images/exercices.PNG)
+![Aperçu de l'onglet exercices et son contenu](../../images/exercices.PNG)
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/society/exercice permet de récupérer la même liste mais par le biais de l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/society/exercice> permet de récupérer la même liste mais par le biais de l'API partenaires.
 
 ```bash
 $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/society/exercice' \

@@ -13,7 +13,7 @@ next: false
 
 Sur MyUnisoft les mouvements sont groupés dans une abstraction que nous appelons "Écriture comptable".
 
-![](../../images/entries_abstract.png)
+![Aperçu de l'abstraction métier d'une écriture](../../images/entries_abstract.png)
 
 > [!NOTE]
 > Un mouvement est aussi communément appelé une "ligne d'écriture".
@@ -123,7 +123,8 @@ Sur MyUnisoft les mouvements sont groupés dans une abstraction que nous appelon
 
 ## Interfaces
 
-Liste des interfaces communes:
+Liste des interfaces communes :
+
 - [Currency (Devise)](./currency.md)
 - [SimplifiedAccount](./simplifiedAccount.md)
 - [Attachment (Pièce/documents joints)](./attachment.md)
@@ -151,6 +152,7 @@ type Lettering = {
   value: null;
 };
 ```
+
 </details>
 
 <details class="details custom-block">
@@ -215,6 +217,7 @@ type Lettering = {
   ]
 }
 ```
+
 </details>
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
@@ -238,6 +241,7 @@ export interface MovementAnalytics {
   }[];
 }
 ```
+
 </details>
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
@@ -270,6 +274,7 @@ interface Movement {
   analytics: MovementAnalytics[];
 }
 ```
+
 </details>
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
@@ -316,6 +321,7 @@ interface Entry {
   additionalProducerProperties: EntryAdditionalProducerProps;
 }
 ```
+
 </details>
 
 #### Dates

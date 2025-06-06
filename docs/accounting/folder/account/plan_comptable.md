@@ -7,16 +7,17 @@ next: false
 
 <span id="readme-top"></span>
 
-# Récupérer et travailler avec le plan comptable.
+# Récupérer et travailler avec le plan comptable
+
 Ce guide a pour objectif de vous aider dans la gestion du plan comptable.
 
 Dans MyUnisoft le plan comptable peut être édité: `Paramètres` > `Dossier` > `Plan comptable`.
 
-![](../../../images/plan_comptable.PNG)
+![Aperçu du plan comptable](../../../images/plan_comptable.PNG)
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/account?mode=2 permet de récupérer la même liste mais par le biais de l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/account?mode=2> permet de récupérer la même liste mais par le biais de l'API partenaires.
 
 ```bash
 $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/account?mode=2' \
@@ -30,6 +31,7 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/account?mode=2'
 Noter la présence du paramètre `mode` égal à **2**. Ce mode permet de récupérer toutes les informations en lien avec les comptes alors que le mode 1 ne retournera que l'id, numéro et label de chaque compte.
 
 Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à l'exemple ci-dessous**
+
 ```json
 {
   "rows_number": 394,
@@ -168,6 +170,7 @@ interface AmountTypePaid {
   label: string;
 }
 ```
+
 </details>
 
 ---
@@ -176,22 +179,23 @@ Si vous avez choisi le mode 1 le retour sera plutôt similaire à celui-ci:
 
 ```json
 [
-    {
-        "account_id": 11660,
-        "account_number": "101000",
-        "label": "CAPITAL"
-    },
-    {
-        "account_id": 11661,
-        "account_number": "106100",
-        "label": "RESERVE LEGALE"
-    }
+  {
+    "account_id": 11660,
+    "account_number": "101000",
+    "label": "CAPITAL"
+  },
+  {
+    "account_id": 11661,
+    "account_number": "106100",
+    "label": "RESERVE LEGALE"
+  }
 ]
 ```
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
-### Récupération des entrées comptables en lien avec un compte.
+### Récupération des entrées comptables en lien avec un compte
+
 Il est possible de récupérer les entrées en lien avec un compte (par id ou numéro).
 
 ```bash
@@ -203,40 +207,41 @@ $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/account/entries
 Le paramètre `account_id` si l'id du compte est connu ou bien `account_no` si vous voulez faire une recherche par le numéro. L'ensemble des paramètres possibles sont disponibles sur le [postman en ligne](https://docs.api.myunisoft.fr/#intro).
 
 Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à l'exemple ci-dessous**
+
 ```json
 {
-    "rows_number": 255,
-    "pages_number": 3,
-    "total_debit": 3777.89,
-    "total_credit": 3737.48,
-    "list_entries_line": [
-        {
-            "diary_id": 6007,
-            "diary_code": "AD",
-            "is_an": true,
-            "entry_id": 1034259,
-            "entry_line_id": 4030899,
-            "account_id": 1,
-            "date": "2001-04-30",
-            "piece": null,
-            "piece2": null,
-            "label": "Reprise",
-            "debit": null,
-            "credit": 1497.8,
-            "solde": -1497.8,
-            "lettrage": "AAA",
-            "comment": false,
-            "pj_list": [],
-            "payment_type": null,
-            "deadline": null,
-            "added_date": "2001-04-30",
-            "period_from": null,
-            "period_to": null,
-            "closed": false,
-            "dotted": false,
-            "flags": null
-        }
-    ]
+  "rows_number": 255,
+  "pages_number": 3,
+  "total_debit": 3777.89,
+  "total_credit": 3737.48,
+  "list_entries_line": [
+    {
+      "diary_id": 6007,
+      "diary_code": "AD",
+      "is_an": true,
+      "entry_id": 1034259,
+      "entry_line_id": 4030899,
+      "account_id": 1,
+      "date": "2001-04-30",
+      "piece": null,
+      "piece2": null,
+      "label": "Reprise",
+      "debit": null,
+      "credit": 1497.8,
+      "solde": -1497.8,
+      "lettrage": "AAA",
+      "comment": false,
+      "pj_list": [],
+      "payment_type": null,
+      "deadline": null,
+      "added_date": "2001-04-30",
+      "period_from": null,
+      "period_to": null,
+      "closed": false,
+      "dotted": false,
+      "flags": null
+    }
+  ]
 }
 ```
 
@@ -296,9 +301,11 @@ interface CloudDocument {
 }
 
 ```
+
 </details>
 
-### Récupération et/ou création d'un compte.
+### Récupération et/ou création d'un compte
+
 [Lire le guide suivant](./create.md)
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>

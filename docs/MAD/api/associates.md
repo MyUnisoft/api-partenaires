@@ -19,7 +19,7 @@ curl --location \
 
 ## 🔧 Paramètres de la requête
 
-Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string). 
+Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string).
 
 | nom | description | obligatoire |
 | --- | --- | :---: |
@@ -33,11 +33,10 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 
 Dans MyUnisoft les paramètres des associés peuvent être récupérés dans `Ecosystème` > `CRM` > `Modifier l'entreprise` > `Onglet Associés`.
 
-![](../../images/associates.jpg)
+![Aperçu de l'onglet associés](../../images/associates.jpg)
 
 ## 🔬 Réponse
 
 Retour d'API: `Associates`
 
 Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/associates.md).
-

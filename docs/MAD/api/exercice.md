@@ -19,14 +19,14 @@ curl --location \
 
 ## 🔧 Paramètres de la requête
 
-Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string). 
+Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string).
 
 | nom | description | obligatoire |
 | --- | --- | :---: |
 | version | version du format | ✔️ |
 
 > [!IMPORTANT]
-> 🔹 Accès cabinet 
+> 🔹 Accès cabinet
 > L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production (la société concernée par la demande d'extraction).
 
 ## 🔬 Réponse
@@ -44,7 +44,7 @@ Les exercices peuvent être gérés par le biais du CRM dans le menu: `Ecosystè
 
 1 - <kbd>Entreprises</kbd> doit être sélectionné dans la liste:
 
-![](../../images/crm_list_entreprises.PNG)
+![Aperçu ddu menu de sélection des entreprises](../../images/crm_list_entreprises.PNG)
 
 ---
 

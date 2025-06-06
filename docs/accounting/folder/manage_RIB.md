@@ -11,14 +11,14 @@ Ce guide vous accompagnera dans la gestion (ajout, modification, suppression) de
 
 Dans MyUnisoft, la configuration des RIB/IBAN s'effectue à partir de: `Paramètres` > `Banques`.
 
-![](../../images/RIB.jpg)
+![Aperçu de la liste des IBANs](../../images/RIB.jpg)
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet : L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production **pour chaque route exposée ci-dessous**.
 
 ## Ajouter un RIB/IBAN
 
-Pour ajouter un RIB/IBAN, l'API partenaire met à votre disposition la route https://api.myunisoft.fr/api/v1/rib.
+Pour ajouter un RIB/IBAN, l'API partenaire met à votre disposition la route <https://api.myunisoft.fr/api/v1/rib>.
 
 ```bash
 curl --location 'https://api.myunisoft.fr/api/v1/rib' \
@@ -27,14 +27,14 @@ curl --location 'https://api.myunisoft.fr/api/v1/rib' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{API_TOKEN}}' \
 --data '{
-    "banking_integration": true,
-    "bic": "ABCDFRPP",
-    "diary_id": 669294,
-    "iban": "FR3817569000XXXXXX237686L18",
-    "is_default": true,
-    "owner": "SOCIETE TEST",
-    "rib_label": "BANK TEST",
-    "start_date": "2023-08-10"
+  "banking_integration": true,
+  "bic": "ABCDFRPP",
+  "diary_id": 669294,
+  "iban": "FR3817569000XXXXXX237686L18",
+  "is_default": true,
+  "owner": "SOCIETE TEST",
+  "rib_label": "BANK TEST",
+  "start_date": "2023-08-10"
 }'
 ```
 
@@ -87,7 +87,7 @@ Voici quelques détails sur les propriétés nécessaires :
 
 ## Modifier un RIB/IBAN
 
-Pour modifier un RIB/IBAN, l'API partenaire met à votre disposition la route https://api.myunisoft.fr/api/v1/rib/:id.
+Pour modifier un RIB/IBAN, l'API partenaire met à votre disposition la route <https://api.myunisoft.fr/api/v1/rib/:id>.
 
 ```bash
 curl --location --request PUT 'https://api.myunisoft.fr/api/v1/rib/10665' \
@@ -96,15 +96,15 @@ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/rib/10665' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{API_TOKEN}}' \
 --data '{
-    "banking_integration": true,
-    "bic": "ABCDFRPP",
-    "diary_id": 669294,
-    "iban": "FR3817569000XXXXXX237686L18",
-    "is_default": true,
-    "owner": "SOCIETE TEST",
-    "rib_id": 10665,
-    "rib_label": "BNP",
-    "start_date": "2023-08-10"
+  "banking_integration": true,
+  "bic": "ABCDFRPP",
+  "diary_id": 669294,
+  "iban": "FR3817569000XXXXXX237686L18",
+  "is_default": true,
+  "owner": "SOCIETE TEST",
+  "rib_id": 10665,
+  "rib_label": "BNP",
+  "start_date": "2023-08-10"
 }'
 ```
 
@@ -164,16 +164,16 @@ Voici quelques détails sur les propriétés necessaires :
 
 ## Supprimer un RIB/IBAN
 
-Pour supprimer un RIB/IBAN, l'API partenaire met à votre disposition la route https://api.myunisoft.fr/api/v1/rib.
+Pour supprimer un RIB/IBAN, l'API partenaire met à votre disposition la route <https://api.myunisoft.fr/api/v1/rib>.
 
 ```bash
 curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/rib' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Society-id: 1;' \
 --data '{
-    "rib_id": [
-        10662
-    ]
+  "rib_id": [
+    10662
+  ]
 }'
 ```
 

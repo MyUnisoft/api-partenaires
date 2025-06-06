@@ -6,14 +6,16 @@ next: false
 ---
 
 # Création d'une entrée comptable avec le format Factur-X
+
 Documentation sur la création d’une entrée comptable au format Factur-X.
 ​
 Les routes HTTP concernées;
-- https://api.myunisoft.fr/api/v1/invoice
+
+- <https://api.myunisoft.fr/api/v1/invoice>
 
 ## Introduction
 
-Factur-X est un standard franco-allemand de facture électronique mixte (PDF pour les utilisateurs et données XML pour un traitement automatisé), première implémentation de la Norme Sémantique Européenne EN 16931 publiée par la Commission Européenne le 16 octobre 2017. Factur-x est le même standard que ZUGFeRD 2.1. 
+Factur-X est un standard franco-allemand de facture électronique mixte (PDF pour les utilisateurs et données XML pour un traitement automatisé), première implémentation de la Norme Sémantique Européenne EN 16931 publiée par la Commission Européenne le 16 octobre 2017. Factur-x est le même standard que ZUGFeRD 2.1.
 
 Factur-X est en même temps une facture lisible sous format PDF, contenant toutes les informations utiles à son traitement, notamment en cas d’écart de rapprochement avec les commandes ou les réceptions, et des données de facture présentées sous forme de fichier structuré, complet ou pas, permettant aux systèmes d’information de procéder à une intégration et un rapprochement automatisé.
 
@@ -30,7 +32,8 @@ curl --location \
 --data-binary '@/F:/Code/MyUnisoft/impex/tmp/EBP/CHORUS00000034 20210122 143504.pdf'
 ```
 
-La route prend plusieurs arguments:
+La route prend plusieurs arguments :
+
 - **invoice_type_id** (Required 1 = Achat / 2 = Note de frais / 3 = Vente / 4 = Avoir)
 - **ocr_type_id** 6 Pour Factur-X.
 - **name** (le nom du fichier qui est attaché avec la requête).

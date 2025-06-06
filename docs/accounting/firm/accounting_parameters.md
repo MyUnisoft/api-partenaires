@@ -111,6 +111,7 @@ curl --location \
     ]
   }
   ```
+
 </details>
 
-![](../../images/accounting_parameters.png)
+![Aperçu des paramètres de comptabilité](../../images/accounting_parameters.png)

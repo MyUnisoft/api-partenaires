@@ -21,15 +21,15 @@ Ils peuvent être transmis via le système automatisé d'OCR, en flux manuel par
 
 Dans l'application MyUnisoft, ces documents peuvent être importés après avoir sélectionné un dossier comptable par le bouton "Déposer un nouveau document".
 
-![](../../../images/import_documents.png)
+![Aperçu icone d'import de documents](../../../images/import_documents.png)
 
 Vous obtenez la page suivante :
 
-![](../../../images/Import_documents_page.png)
+![Aperçu page import de documents](../../../images/Import_documents_page.png)
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/invoice vous permet d'envoyer des documents typés.
+La route <https://api.myunisoft.fr/api/v1/invoice> vous permet d'envoyer des documents typés.
 
 ```bash
 curl --location 'https://api.myunisoft.fr/api/v1/invoice?invoice_type_id=1&ocr_type_id=2&name=facture&extension=png' \
@@ -67,13 +67,13 @@ En cas de succès, l'API retournera un status code `200` avec la réponse JSON s
 
 ```json
 {
-    "id": 1234567,
-    "token": "8a6ec632125eeedc7008xxxxxxxx5512",
-    "link": "https://api.myunisoft.fr/api/ged/ged/document/1-8a6ec632125eeedc7008xxxxxxxx5512",
-    "thumbnail": "https://api.myunisoft.fr/api/ged/ged/document/1-8a6ec632125eeedc7008xxxxxxxx5512/preview?x=90&y=120",
-    "download": "https://api.myunisoft.fr/api/ged/ged/document/1-8a6ec632125eeedc7008xxxxxxxx5512/download",
-    "baseURL": "https://x.xxxxxxxx.myunisoft.fr",
-    "label": "facture.png",
-    "OCR": false
+  "id": 1234567,
+  "token": "8a6ec632125eeedc7008xxxxxxxx5512",
+  "link": "https://api.myunisoft.fr/api/ged/ged/document/1-8a6ec632125eeedc7008xxxxxxxx5512",
+  "thumbnail": "https://api.myunisoft.fr/api/ged/ged/document/1-8a6ec632125eeedc7008xxxxxxxx5512/preview?x=90&y=120",
+  "download": "https://api.myunisoft.fr/api/ged/ged/document/1-8a6ec632125eeedc7008xxxxxxxx5512/download",
+  "baseURL": "https://x.xxxxxxxx.myunisoft.fr",
+  "label": "facture.png",
+  "OCR": false
 }
 ```

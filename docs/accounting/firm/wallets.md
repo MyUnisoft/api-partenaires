@@ -14,13 +14,13 @@ Ce guide va vous accompagner pour la récupération des portefeuilles.
 Dans MyUnisoft, des portefeuilles sont associés aux utilisateurs et entreprises.
 Ils correspondent à un groupe de dossiers comptables prédéfinis en amont par un membre du cabinet dans l'application MyUnisoft ou à une sélection de dossiers comptables auquel l'utilisateur à accès.
 
-![](../../images/crm_wallets.png)
+![Aperçu de la liste des portefeuilles d'un utilisateur](../../images/crm_wallets.png)
 
 ## API
 
 ### Récupération des portefeuilles
 
-La route https://api.myunisoft.fr/api/v1/wallet permet de récupérer la liste des portefeuilles du schéma.
+La route <https://api.myunisoft.fr/api/v1/wallet> permet de récupérer la liste des portefeuilles du schéma.
 
 ```bash
 $ curl --location 'https://app.myunisoft.fr/api/v1/wallet' \

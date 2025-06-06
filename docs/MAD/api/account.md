@@ -19,7 +19,7 @@ curl --location \
 
 ## 🔧 Paramètres de la requête
 
-Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string). 
+Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string).
 
 | nom | description | obligatoire | valeurs multiples |
 | --- | --- | :---: | :---: |
@@ -44,8 +44,8 @@ Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/ac
 
 Le plan comptable peut être configuré à partir du menu: `Paramètres` > `Dossier` > `Plan comptable`.
 
-![](../../images/plan_comptable.PNG)
+![Aperçu du plan comptable](../../images/plan_comptable.PNG)
 
 La modification des comptes tiers `401`, `411` et `421` permettra d'ajouter des informations complémentaires à ceux-ci, telles que l'adresse du siège, les contacts, etc.
 
-![](../../images/fiche_compte_complementaire.PNG)
+![Aperçu des infos complémentaires d'une fiche de compte](../../images/fiche_compte_complementaire.PNG)

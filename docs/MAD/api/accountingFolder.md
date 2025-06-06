@@ -19,7 +19,7 @@ curl --location \
 
 ## 🔧 Paramètres de la requête
 
-Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string). 
+Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string).
 
 | nom | description | obligatoire |
 | --- | --- | :---: |
@@ -40,8 +40,8 @@ Le JSON renvoyé correspondra à la [spécification suivante](../specs/v1.0.0/ac
 
 Un dossier de production (ou société) peut être configuré par le biais du CRM entreprise: `Écosystème` > `CRM` > `Entreprises`.
 
-![](../images/crm_enterprise.PNG)
+![Aperçu de la liste des entreprises](../images/crm_enterprise.PNG)
 
 Dès la sélection d'une entreprise pour modification, la vue multi-onglets suivante se présentera à vous:
 
-![](../images/crm_edit.PNG)
+![Aperçu des onglets de paramétrage d'un dossier](../images/crm_edit.PNG)

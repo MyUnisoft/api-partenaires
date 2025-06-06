@@ -5,24 +5,24 @@ prev:
 next: false
 ---
 
-# Liste des dossiers accessibles pour un utilisateur.
+# Liste des dossiers accessibles pour un utilisateur
+
 Ce guide a pour but de vous aider dans la récupération des droits d'accès d'un utilisateur.
 
 Dans MyUnisoft la gestion des utilisateurs s'effectue dans le CRM: `Ecosystème` > `CRM` > `Utilisateurs`.
 
-![](../../images/crm_users.PNG)
+![Aperçu liste des utilisateurs](../../images/crm_users.PNG)
 
 > [!NOTE]
 > Visitez la page [**Utilisateur**](./users.md) pour avoir des informations sur les différents rôles.
 
 ## Configurer la liste d'accès
 
-![](../../images/gestion_des_droits_user.PNG)
+![Aperçu gestion des droits utilisateurs](../../images/gestion_des_droits_user.PNG)
 
 1. Les dossiers accessibles pour un utilisateur sont configurés dans le menu `Gestion des droits`.
 2. Dans la section **Accès aux entreprises**, cliquez sur le menu déroulant nommé **Entreprise** et sélectionnez l'entreprise dont vous voulez donner l'accès avant de cliquer sur **Ajouter**.
 3. Vous retrouvez ici la liste des entreprises accessibles pour cet utilisateur.
-
 
 ## Récupérer la liste d'accès
 
@@ -44,6 +44,7 @@ curl --location \
 ```
 
 Retour JSON de l'API:
+
 ```json
 [
   "5623",

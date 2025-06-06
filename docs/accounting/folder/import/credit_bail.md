@@ -13,17 +13,17 @@ Ce guide va vous accompagner pour vous permettre d'importer des crédits-bails'.
 
 Dans MyUnisoft, il est possible de procéder à un import des emprunts depuis : `Tenue` > `Flux` > `Imports`.
 
-![](../../../images/tenue_flux_imports_menu.png)
+![Aperçu du menu tenue import](../../../images/tenue_flux_imports_menu.png)
 
 Vous obtenez la page permettant de procéder à des imports :
 
-![](../../../images/imports_credits_bails.png)
+![Aperçu import de crédit bail](../../../images/imports_credits_bails.png)
 
 Une fois la catégorie, le type d'import et le dossier sur lequel travailler, il suffit de sélectionner le fichier et cliquer sur `importer`.
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/leasings permet de récupérer cette liste avec l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/leasings> permet de récupérer cette liste avec l'API partenaires.
 
 ```bash
 curl --location 'https://api.myunisoft.fr/api/v1/leasings/import' \

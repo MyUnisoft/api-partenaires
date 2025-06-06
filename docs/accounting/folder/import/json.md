@@ -13,17 +13,17 @@ Documentation sur la création d’une entrée comptable au format JSON.
 ​
 Les routes HTTP concernées;
 
-- https://api.myunisoft.fr/api/v1/entry?type=e
-- https://api.myunisoft.fr/api/v1/entry/temp (permet la création de "factures en attentes").
+- <https://api.myunisoft.fr/api/v1/entry?type=e>
+- <https://api.myunisoft.fr/api/v1/entry/temp> (permet la création de "factures en attentes").
 
 ## Définition TypeScript d'une entrée au format JSON
-​
-La définition de type permet d’identifier les différents types des propriétés pour les structures JSON.
-​
+
+​La définition de type permet d’identifier les différents types des propriétés pour les structures JSON.
+
 ### Pièce jointe
-​
-Définition de la structure JSON pour l’ajout d’une pièce jointe. Les mimes-types qui ne sont pas référencés ci-dessous ne sont pas supportés.
-​
+
+​Définition de la structure JSON pour l’ajout d’une pièce jointe. Les mimes-types qui ne sont pas référencés ci-dessous ne sont pas supportés.
+
 ```ts
 interface PJ {
   /** Le contenu (Buffer) de la pièce jointe au format base64. */
@@ -53,7 +53,7 @@ interface PJ {
     "text/plain";
 }
 ```
-​
+
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Analytique
@@ -82,9 +82,9 @@ L'objet en question est récupérable automatiquement par le biais de l'API `htt
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Ligne entrée comptable
-​
+
 Définition de type de la structure JSON d’une ligne d’entrée comptable.
-​
+
 ```ts
 interface NewEntryLine {
   /** Tableau contenant une ou plusieurs pièces jointes à attacher à la ligne. */
@@ -157,9 +157,9 @@ interface NewEntryLine {
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 
 ### Entrée comptable
-​
+
 Structure principale (racine) pour la création d’une entrée comptable dans MyUnisoft. Il est important que l’intégralité des lignes soit équilibré en crédit et débit.
-​
+
 ```ts
 interface NewEntry {
   /** Tableau contenant une ou plusieurs pièces jointes à attacher à l'entrée comptable. */
@@ -460,7 +460,7 @@ Exemple avec l’outil cité plus tôt:
 ​
 Il vous suffit de copier-coller le schéma ci-dessus dans le formulaire de gauche et votre entrée comptable dans le formulaire de droite. S'il y des anomalies elles seront détectées.
 ​
-![](https://i.imgur.com/EUgYd4T.png)
+![Exemple de validation avec JSON Schema Validator](https://i.imgur.com/EUgYd4T.png)
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
 

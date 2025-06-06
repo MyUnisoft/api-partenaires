@@ -13,43 +13,38 @@ La consommation de l'api partenaire requiert une clé [JWT](https://jwt.io/) val
 
 Les clés se gèrent depuis les pages **Connecteurs dossier** ou **Connecteurs cabinet** (suivant votre type d'accès) dans l'application MyUnisoft: `Paramètres` > `Connecteurs dossier` ou `Connecteurs cabinet`.
 
-![](../images/connector_path.png)
+![Aperçu du chemin vers les connecteurs](../images/connector_path.png)
 
 ## Type d'accès
 
 - 🔸 **Accès Société**:
 
-    L'accès de niveau société vous donne accès à un unique dossier.
+L'accès de niveau société vous donne accès à un unique dossier.
 
-    Faites attention a bien sélectionner la société ciblée pour créer ce type de token.
+Faites attention a bien sélectionner la société ciblée pour créer ce type de token.
 
-    ![](../images/connector_society.png)
+![Aperçu des connecteurs d'accès niveau société](../images/connector_society.png)
 
 - 🔹 **Accès Cabinet**:
 
-    L'accès de niveau cabinet vous donne accès à la totalité des dossiers contenu dans un schéma (cabinet).
+L'accès de niveau cabinet vous donne accès à la totalité des dossiers contenu dans un schéma (cabinet).
 
-    Faites attention a bien sélectionner le mode `Cabinet`.
+Faites attention a bien sélectionner le mode `Cabinet`.
 
-    ![](../images/connector_schema.png)
+![Aperçu des connecteurs d'accès niveau cabinet](../images/connector_schema.png)
 
 ## Génération d'une clé
 
-1. Sélection du partenaire:
+1. **Sélection du partenaire** : Vous devez sélectionner la carte correspondante au partenaire avec lequel vous désirez établir une liaison. Cliquez maintenant sur ladite carte.
 
-    Vous devez sélectionner la carte correspondante au partenaire avec lequel vous désirez établir une liaison. Cliquez maintenant sur ladite carte.
-
-2. Création de la clé:
-
-    Cliquez sur le bouton `Générer` pour créer un clé.
+2. **Création de la clé** : Cliquez sur le bouton `Générer` pour créer un clé.
 
 > [!CAUTION]
 > Assurez-vous de bien copier la clé avant de fermer la fenêtre sans quoi vous serez obliger de générer une nouvelle clé.
 
-![](../images/connector_society_card.png)
+![Aperçu du bouton "générer" d'un connecteur](../images/connector_society_card.png)
 
-![](../images/connector_society_token.png)
-
+![Aperçu du token récupéré](../images/connector_society_token.png)
 
 > [!TIP]
 > Une fois votre clé générée il n’est plus nécessaire de refaire les étapes ci-dessus sauf si la clé a entre-temps été **déconnecté**.
@@ -65,7 +60,7 @@ Sur cette ligne, vous devriez voir la mention `En attente de connexion`. Ce mess
 >
 > [Guide sur les endpoints accessibles](../endpoints/keyinfo.md).
 
-![](../images/connectors_state.png)
+![Aperçu de l'état d'une clé](../images/connectors_state.png)
 
 ## Évènements liés à une clé
 
@@ -75,13 +70,13 @@ Un évènement est une notification avec un statut (Error, Warning, Info) conten
 
 Pour consulter ce journal d'évènement, cliquez sur la carte partenaire dans la section `Connectés`, une fenêtre s'ouvre alors. Maintenant cliquez sur l'onglet `Journaux d'évènements`, vous devriez voir une liste contenant les informations citées plus tôt.
 
-![](../images/connectors_event.png)
+![Aperçu des évènements liés à une clé](../images/connectors_event.png)
 
 ## Déconnexion d'une clé
 
 Pour supprimer une clé, cliquez sur la carte partenaire dans la section `Connectés`, une fenêtre s'ouvre alors. Maintenant cliquez sur le bouton rouge en haut à droite et enfin cliquez sur `Déconnecter`.
 
-![](../images/connector_delete.png)
+![Aperçu du bouton de déconnexion d'une clé](../images/connector_delete.png)
 
 ## Erreur
 

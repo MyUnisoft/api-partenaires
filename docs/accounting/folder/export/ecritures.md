@@ -11,7 +11,7 @@ Ce guide a pour objectif de vous aider dans la récupération des écritures com
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/entries?type=e permet de récupérer l'intégralité des écritures par **type**.
+La route <https://api.myunisoft.fr/api/v1/entries?type=e> permet de récupérer l'intégralité des écritures par **type**.
 
 ```bash
 $ curl --location \
@@ -99,7 +99,7 @@ Il vous est possible de récupérer les écritures par période et par code jour
 }
 ```
 
-### Interface TypeScript (type E & O uniquement).
+### Interface TypeScript (type E & O uniquement)
 
 ```ts
 export type Entries = {

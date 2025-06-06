@@ -15,7 +15,7 @@ Celle-ci est notamment utile lors du paramétrage du dossier fiscal d'une socié
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/society/compte_edi permet de récupérer la liste de ces comptes EDI ("account_edi" dans le dossier fiscal).
+La route <https://api.myunisoft.fr/api/v1/society/compte_edi> permet de récupérer la liste de ces comptes EDI ("account_edi" dans le dossier fiscal).
 
 > [!IMPORTANT]
 > 🔹 Accès cabinet : L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production.

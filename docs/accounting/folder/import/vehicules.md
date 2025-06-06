@@ -13,17 +13,17 @@ Ce guide va vous accompagner dans l'opération d'import de véhicules dans une s
 
 Dans MyUnisoft, vous pouvez procéder à des imports de données concernant la flotte de véhicules d'un dossier depuis : `Tenue` > `Flux` > `Imports`
 
-![](../../../images/tenue_flux_imports_menu.png)
+![Aperçu du menu tenue flux imports](../../../images/tenue_flux_imports_menu.png)
 
 Vous obtenez la page permettant de procéder à des imports :
 
-![](../../../images/imports_vehicules.png)
+![Aperçu du formulaire import de véhicules](../../../images/imports_vehicules.png)
 
 Après sélection de la catégorie, du type et du format d'import, il suffit de choisir le fichier et cliquer sur `Importer`.
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/vehicles_import permet d'effectuer la même opération depuis l'API partenaire.
+La route <https://api.myunisoft.fr/api/v1/vehicles_import> permet d'effectuer la même opération depuis l'API partenaire.
 
 ```bash
 curl --location 'https://api.myunisoft.fr/api/v1/vehicles_import?filename=imports_vhl.xlsx' \
@@ -53,8 +53,8 @@ Une fois l'opération accomplie avec succès l'API retournera un `statusCode` 20
 
 ```json
 {
-    "status": "Success",
-    "message": ""
+  "status": "Success",
+  "message": ""
 }
 ```
 

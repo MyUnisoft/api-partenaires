@@ -8,15 +8,16 @@ next: false
 <span id="readme-top"></span>
 
 # Récupérer les journaux d'une société (dossier)
+
 Ce guide a pour objectif de vous aider dans la récupération des journaux (diary) d'une société (dossier).
 
 Dans MyUnisoft la liste des journaux est accessible en passant par `Paramètres` > `Dossier` > `Journaux`.
 
-![](../../images/liste_journaux.PNG)
+![Aperçu de la liste des journaux](../../images/liste_journaux.PNG)
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/diary permet de récupérer la même liste mais par le biais de l'API partenaires.
+La route <https://api.myunisoft.fr/api/v1/diary> permet de récupérer la même liste mais par le biais de l'API partenaires.
 
 ```bash
 $ curl --location --request GET 'https://api.myunisoft.fr/api/v1/diary' \
@@ -190,6 +191,7 @@ Si tout va bien vous devriez recevoir un JSON avec **une structure similaire à 
     }
 ]
 ```
+
 </details>
 
 ### Type de journaux

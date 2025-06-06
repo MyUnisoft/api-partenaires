@@ -6,23 +6,24 @@ next: false
 ---
 
 # Création d'une entrée comptable avec le format TRA+PJ
+
 Documentation sur la création d’une entrée comptable au format TRA+PJ.
 ​
-Les routes HTTP concernées;
-- https://api.myunisoft.fr/api/v1/TRA/partial
+Les routes HTTP concernées :
+
+- <https://api.myunisoft.fr/api/v1/TRA/partial>
 
 ## Introduction
 
 Un TRA + PJ est une archive .zip contenant un fichier .TRA et optionnellement des pièces jointes (à la racine de l'archive).
 
-![](../../../images/TRA_archive.PNG)
+![Aperçu archives TRA et ses Pièces jointes](../../../images/TRA_archive.PNG)
 
 Le format du fichier .TRA est documenté dans <a href="https://github.com/MyUnisoft/api-partenaires/blob/main/docs/MAD/TRA.pdf" target="_blank">le PDF ici</a>.
 
-
 ## 🔧 Paramètres de la requête
 
-Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string). 
+Le paramétrage de la route se fait exclusivement par le biais des [querystrings](https://en.wikipedia.org/wiki/Query_string).
 
 | nom | description | obligatoire |
 | --- | --- | :---: |

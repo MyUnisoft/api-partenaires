@@ -13,19 +13,19 @@ Ce guide va vous permettre de récupérer le dossier fiscal d'une société.
 
 Dans MyUnisoft, pour accéder au dossier fiscal, vous devez passer par le module CRM : `Ecosystème` > `CRM` > `Entreprises`.
 
-![](../../images/ecosysteme_crm_entreprises.png)
+![Aperçu menu écosystème crm entreprises](../../images/ecosysteme_crm_entreprises.png)
 
 Sélectionnez le dossier de production pour lequel vous souhaitez consulter le dossier fiscal.
 
-![](../../images/liste_entreprises.png)
+![Aperçu liste des entreprises](../../images/liste_entreprises.png)
 
 Vous obtenez les différents onglets de l'entreprise interrogée. Cliquez sur `Dossier fiscal` pour accéder à celui-ci.
 
-![](../../images/modif_dossier.png)
+![Aperçu onglet dossier fiscal](../../images/modif_dossier.png)
 
 ## API
 
-La route https://api.myunisoft.fr/api/v1/society/fiscal_file permet de récupérer le dossier fiscal d'une société.
+La route <https://api.myunisoft.fr/api/v1/society/fiscal_file> permet de récupérer le dossier fiscal d'une société.
 
 ```bash
 curl --location 'https://api.myunisoft.fr/api/v1/society/fiscal_file' \
