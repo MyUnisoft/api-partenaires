@@ -160,6 +160,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
   - [Importer des crédits-bails](./accounting/folder/import/credit_bail.md)
 - [Récupérer la liste des véhicules d'une société](./accounting/folder/vehicules.md)
   - [Importer des véhicules](./accounting/folder/import/vehicules.md)
+- [Récupérer la revue analytique d'un dossier comptable (révision par cycle)](./accounting/folder/analytic_review.md)
 
 #### Ecritures et mouvements
 
