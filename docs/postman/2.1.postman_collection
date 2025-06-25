@@ -7966,6 +7966,64 @@
 													"body": "[\r\n    {\r\n        \"na\": {\r\n            \"id\": 3499356,\r\n            \"value\": false\r\n        },\r\n        \"ref\": \"AC-E-01\",\r\n        \"help\": \"Revue de la marge, vérifier la cohérence vs N-1 / par rapport au secteur (taux de marge)\\nRevue du CA, analyser les principales variations (effet prix / effet volume)\",\r\n        \"name\": \"Analyse du Chiffre d'Affaires et de la marge\",\r\n        \"ref_id\": 31,\r\n        \"children\": {\r\n            \"id_ref_da_dp\": 31,\r\n            \"diligence_list\": [\r\n                {\r\n                    \"to\": \"2020-06-30\",\r\n                    \"from\": \"2019-07-01\",\r\n                    \"name\": \"Du 01/07/2019 Au 30/06/2020\",\r\n                    \"pj_list\": [],\r\n                    \"comments\": 0,\r\n                    \"valid_rm\": \"to_validate\",\r\n                    \"diligence_id\": 3489592,\r\n                    \"valid_collab\": \"to_do\",\r\n                    \"link_work_sheet\": \"\",\r\n                    \"custom_worksheet\": {\r\n                        \"original_custom_worksheet\": {},\r\n                        \"diligence_custom_worksheet\": {}\r\n                    },\r\n                    \"hasJustification\": false,\r\n                    \"label_work_sheet\": \"\"\r\n                }\r\n            ]\r\n        },\r\n        \"periodicity\": \"E\"\r\n    },\r\n    {\r\n        \"na\": {\r\n            \"id\": 3499357,\r\n            \"value\": false\r\n        },\r\n        \"ref\": \"AC-E-02\",\r\n        \"help\": \"Rapprocher la balance client à la comptabilité \\nAnalyser l’évolution du poste clients et du ratio du crédit clients\\nRevue de tous les soldes dont l’antériorité est anormalement élevée\",\r\n        \"name\": \"Balance agée Clients\",\r\n        \"ref_id\": 32,\r\n        \"children\": {\r\n            \"id_ref_da_dp\": 32,\r\n            \"diligence_list\": [\r\n                {\r\n                    \"to\": \"2020-06-30\",\r\n                    \"from\": \"2019-07-01\",\r\n                    \"name\": \"Du 01/07/2019 Au 30/06/2020\",\r\n                    \"pj_list\": [],\r\n                    \"comments\": 0,\r\n                    \"valid_rm\": \"to_validate\",\r\n                    \"diligence_id\": 3489593,\r\n                    \"valid_collab\": \"to_do\",\r\n                    \"link_work_sheet\": \"\",\r\n                    \"custom_worksheet\": {\r\n                        \"original_custom_worksheet\": {},\r\n                        \"diligence_custom_worksheet\": {}\r\n                    },\r\n                    \"hasJustification\": false,\r\n                    \"label_work_sheet\": \"\"\r\n                }\r\n            ]\r\n        },\r\n        \"periodicity\": \"E\"\r\n    },\r\n    {\r\n        \"na\": {\r\n            \"id\": 3499358,\r\n            \"value\": false\r\n        },\r\n        \"ref\": \"AC-E-03\",\r\n        \"help\": \"Analyser les soldes significatifs et l’antériorité des soldes clients\\nAppréhender les créances potentiellement douteuses (impayés, litiges, … )\",\r\n        \"name\": \"Grand livre auxiliaire annoté_Clients\",\r\n        \"ref_id\": 33,\r\n        \"children\": {\r\n            \"id_ref_da_dp\": 33,\r\n            \"diligence_list\": [\r\n                {\r\n                    \"to\": \"2020-06-30\",\r\n                    \"from\": \"2019-07-01\",\r\n                    \"name\": \"Du 01/07/2019 Au 30/06/2020\",\r\n                    \"pj_list\": [],\r\n                    \"comments\": 0,\r\n                    \"valid_rm\": \"to_validate\",\r\n                    \"diligence_id\": 3489594,\r\n                    \"valid_collab\": \"to_do\",\r\n                    \"link_work_sheet\": \"\",\r\n                    \"custom_worksheet\": {\r\n                        \"original_custom_worksheet\": {},\r\n                        \"diligence_custom_worksheet\": {}\r\n                    },\r\n                    \"hasJustification\": false,\r\n                    \"label_work_sheet\": \"\"\r\n                }\r\n            ]\r\n        },\r\n        \"periodicity\": \"E\"\r\n    },\r\n    {\r\n        \"na\": {\r\n            \"id\": 3499359,\r\n            \"value\": false\r\n        },\r\n        \"ref\": \"AC-E-04\",\r\n        \"help\": \"\\r\\n<BODY text=#000000 bgColor=#ffffff>Validation et comptabilisation des créances douteuses et de la dépréciation Justifier les provisions</BODY>\",\r\n        \"name\": \"Liste des créances douteuses\",\r\n        \"ref_id\": 34,\r\n        \"children\": {\r\n            \"id_ref_da_dp\": 34,\r\n            \"diligence_list\": [\r\n                {\r\n                    \"to\": \"2020-06-30\",\r\n                    \"from\": \"2019-07-01\",\r\n                    \"name\": \"Du 01/07/2019 Au 30/06/2020\",\r\n                    \"pj_list\": [],\r\n                    \"comments\": 0,\r\n                    \"valid_rm\": \"to_validate\",\r\n                    \"diligence_id\": 3489595,\r\n                    \"valid_collab\": \"to_do\",\r\n                    \"link_work_sheet\": \"\",\r\n                    \"custom_worksheet\": {\r\n                        \"original_custom_worksheet\": {\r\n                            \"link\": \"https://preprod-mycloud.myunisoft.fr/index.php/s/wCgTWz72Kzq3LBW\",\r\n                            \"name\": \"FT Clients Douteux.v1.1\",\r\n                            \"token\": \"wCgTWz72Kzq3LBW\",\r\n                            \"baseUrl\": \"https://preprod-mycloud.myunisoft.fr/\",\r\n                            \"download\": \"https://preprod-mycloud.myunisoft.fr/index.php/s/wCgTWz72Kzq3LBW/download\",\r\n                            \"thumbnail\": \"https://preprod-mycloud.myunisoft.fr/index.php/apps/files_sharing/publicpreview/wCgTWz72Kzq3LBW?x=90&y=120&a=true\",\r\n                            \"document_id\": 3870529,\r\n                            \"original_name\": \"FT Clients Douteux.v1.1\"\r\n                        },\r\n                        \"diligence_custom_worksheet\": {}\r\n                    },\r\n                    \"hasJustification\": false,\r\n                    \"label_work_sheet\": \"\"\r\n                }\r\n            ]\r\n        },\r\n        \"periodicity\": \"E\"\r\n    },\r\n    {\r\n        \"na\": {\r\n            \"id\": 3499360,\r\n            \"value\": false\r\n        },\r\n        \"ref\": \"AC-E-05\",\r\n        \"help\": \"Revue de l’évolution du crédit client, calcul du ratio crédit clients\",\r\n        \"name\": \"Vérification de la cohérence du crédit-client\",\r\n        \"ref_id\": 35,\r\n        \"children\": {\r\n            \"id_ref_da_dp\": 35,\r\n            \"diligence_list\": [\r\n                {\r\n                    \"to\": \"2020-06-30\",\r\n                    \"from\": \"2019-07-01\",\r\n                    \"name\": \"Du 01/07/2019 Au 30/06/2020\",\r\n                    \"pj_list\": [],\r\n                    \"comments\": 0,\r\n                    \"valid_rm\": \"to_validate\",\r\n                    \"diligence_id\": 3489596,\r\n                    \"valid_collab\": \"to_do\",\r\n                    \"link_work_sheet\": \"\",\r\n                    \"custom_worksheet\": {\r\n                        \"original_custom_worksheet\": {},\r\n                        \"diligence_custom_worksheet\": {}\r\n                    },\r\n                    \"hasJustification\": false,\r\n                    \"label_work_sheet\": \"\"\r\n                }\r\n            ]\r\n        },\r\n        \"periodicity\": \"E\"\r\n    },\r\n    {\r\n        \"na\": {\r\n            \"id\": 3499362,\r\n            \"value\": false\r\n        },\r\n        \"ref\": \"AC-E-07\",\r\n        \"help\": \"Justifier tous les soldes dont l'antériorité est anormalement élévée\\nVérifier avec la direction si des clients douteux ne sont pas à constater\",\r\n        \"name\": \"Justification de tout solde ancien (avoir à établir, débouclement etc)\",\r\n        \"ref_id\": 37,\r\n        \"children\": {\r\n            \"id_ref_da_dp\": 37,\r\n            \"diligence_list\": [\r\n                {\r\n                    \"to\": \"2020-06-30\",\r\n                    \"from\": \"2019-07-01\",\r\n                    \"name\": \"Du 01/07/2019 Au 30/06/2020\",\r\n                    \"pj_list\": [],\r\n                    \"comments\": 0,\r\n                    \"valid_rm\": \"to_validate\",\r\n                    \"diligence_id\": 3489598,\r\n                    \"valid_collab\": \"to_do\",\r\n                    \"link_work_sheet\": \"\",\r\n                    \"custom_worksheet\": {\r\n                        \"original_custom_worksheet\": {},\r\n                        \"diligence_custom_worksheet\": {}\r\n                    },\r\n                    \"hasJustification\": false,\r\n                    \"label_work_sheet\": \"\"\r\n                }\r\n            ]\r\n        },\r\n        \"periodicity\": \"E\"\r\n    },\r\n    {\r\n        \"na\": {\r\n            \"id\": 3499363,\r\n            \"value\": false\r\n        },\r\n        \"ref\": \"AC-E-08\",\r\n        \"help\": \"Validation du Cut Off par sondage, établir le détail des factures à établir, vérifier la cohérence avec N-1\",\r\n        \"name\": \"Liste des factures à établir\",\r\n        \"ref_id\": 38,\r\n        \"children\": {\r\n            \"id_ref_da_dp\": 38,\r\n            \"diligence_list\": [\r\n                {\r\n                    \"to\": \"2020-06-30\",\r\n                    \"from\": \"2019-07-01\",\r\n                    \"name\": \"Du 01/07/2019 Au 30/06/2020\",\r\n                    \"pj_list\": [],\r\n                    \"comments\": 0,\r\n                    \"valid_rm\": \"to_validate\",\r\n                    \"diligence_id\": 3489599,\r\n                    \"valid_collab\": \"to_do\",\r\n                    \"link_work_sheet\": \"FAE\",\r\n                    \"custom_worksheet\": {\r\n                        \"original_custom_worksheet\": {},\r\n                        \"diligence_custom_worksheet\": {}\r\n                    },\r\n                    \"hasJustification\": false,\r\n                    \"label_work_sheet\": \"FAE\"\r\n                }\r\n            ]\r\n        },\r\n        \"periodicity\": \"E\"\r\n    },\r\n    {\r\n        \"na\": {\r\n            \"id\": 3499364,\r\n            \"value\": false\r\n        },\r\n        \"ref\": \"AC-E-09\",\r\n        \"help\": \"Validation du Cut off par sondage, établir le détail des avoirs à établir , vérifier la cohérence avec N-1\",\r\n        \"name\": \"Liste des avoirs à établir\",\r\n        \"ref_id\": 39,\r\n        \"children\": {\r\n            \"id_ref_da_dp\": 39,\r\n            \"diligence_list\": [\r\n                {\r\n                    \"to\": \"2020-06-30\",\r\n                    \"from\": \"2019-07-01\",\r\n                    \"name\": \"Du 01/07/2019 Au 30/06/2020\",\r\n                    \"pj_list\": [],\r\n                    \"comments\": 0,\r\n                    \"valid_rm\": \"to_validate\",\r\n                    \"diligence_id\": 3489600,\r\n                    \"valid_collab\": \"to_do\",\r\n                    \"link_work_sheet\": \"AAE\",\r\n                    \"custom_worksheet\": {\r\n                        \"original_custom_worksheet\": {},\r\n                        \"diligence_custom_worksheet\": {}\r\n                    },\r\n                    \"hasJustification\": false,\r\n                    \"label_work_sheet\": \"AAE\"\r\n                }\r\n            ]\r\n        },\r\n        \"periodicity\": \"E\"\r\n    },\r\n    {\r\n        \"na\": {\r\n            \"id\": 3499365,\r\n            \"value\": false\r\n        },\r\n        \"ref\": \"AC-E-10\",\r\n        \"help\": \"Validation du Cut off par sondage, établir le détail des PCA, vérifier la cohérence avec N-1\",\r\n        \"name\": \"Produits constatés d'avance\",\r\n        \"ref_id\": 40,\r\n        \"children\": {\r\n            \"id_ref_da_dp\": 40,\r\n            \"diligence_list\": [\r\n                {\r\n                    \"to\": \"2020-06-30\",\r\n                    \"from\": \"2019-07-01\",\r\n                    \"name\": \"Du 01/07/2019 Au 30/06/2020\",\r\n                    \"pj_list\": [],\r\n                    \"comments\": 0,\r\n                    \"valid_rm\": \"to_validate\",\r\n                    \"diligence_id\": 3489601,\r\n                    \"valid_collab\": \"to_do\",\r\n                    \"link_work_sheet\": \"pca\",\r\n                    \"custom_worksheet\": {\r\n                        \"original_custom_worksheet\": {},\r\n                        \"diligence_custom_worksheet\": {}\r\n                    },\r\n                    \"hasJustification\": false,\r\n                    \"label_work_sheet\": \"PCA\"\r\n                }\r\n            ]\r\n        },\r\n        \"periodicity\": \"E\"\r\n    },\r\n    {\r\n        \"na\": null,\r\n        \"ref\": \"AC-E-99\",\r\n        \"help\": \"Contrôles Divers clients et ventes\",\r\n        \"name\": \"Divers - Ventes + Clients\",\r\n        \"ref_id\": 41,\r\n        \"children\": null,\r\n        \"periodicity\": \"PONC\"\r\n    }\r\n]"
 												}
 											]
+										},
+										{
+											"name": "dossier revision analytic review",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{API_TOKEN}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "X-Third-Party-Secret",
+														"value": "{{X-Third-Party-Secret}}",
+														"type": "text"
+													},
+													{
+														"key": "society-id",
+														"value": "",
+														"description": "with firm access",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "https://api.myunisoft.fr/api/v1/dadp/analytic_review?review_id=&cycle_id=",
+													"protocol": "https",
+													"host": [
+														"api",
+														"myunisoft",
+														"fr"
+													],
+													"path": [
+														"api",
+														"v1",
+														"dadp",
+														"analytic_review"
+													],
+													"query": [
+														{
+															"key": "review_id",
+															"value": "",
+															"description": "required to provide the dossier revision id you want to review"
+														},
+														{
+															"key": "cycle_id",
+															"value": "",
+															"description": "required to provide the cycle id you want to work with : [1: Régularité, 2: Trésorerie , 3: Achats et fournisseurs , 4: Charges externes , 5: Ventes + clients , 6: Stocks , 7: Immobilisations , 8: Personnel , 9: Etat, 10: Capitaux et provisions, 11: Groupes et associés, 12: Autres comptes, 13: Annexe]"
+														}
+													]
+												},
+												"description": "📢 This endpoint lets you get the analytic review by cycle."
+											},
+											"response": []
 										}
 									]
 								},
@@ -11001,10 +11059,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": "",
-											"header": [],
+											"_postman_previewlanguage": null,
+											"header": null,
 											"cookie": [],
-											"body": ""
+											"body": null
 										}
 									]
 								},
@@ -11119,10 +11177,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": "",
-											"header": [],
+											"_postman_previewlanguage": null,
+											"header": null,
 											"cookie": [],
-											"body": ""
+											"body": null
 										}
 									]
 								},
@@ -11219,10 +11277,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": "",
-											"header": [],
+											"_postman_previewlanguage": null,
+											"header": null,
 											"cookie": [],
-											"body": ""
+											"body": null
 										}
 									]
 								}
@@ -12519,20 +12577,26 @@
 										},
 										{
 											"key": "centralize_account",
-											"value": null,
+											"value": "",
 											"description": "OPTIONAL - 'true' or 'false' - Centraliser les comptes de tiers",
 											"disabled": true
 										},
 										{
 											"key": "extended",
-											"value": null,
+											"value": "",
 											"description": "OPTIONAL - 'true' or 'false'",
 											"disabled": true
 										},
 										{
 											"key": "subtype",
-											"value": null,
+											"value": "",
 											"description": "0 -> Balance Générale\n1 -> Client\n2 -> Fournisseur",
+											"disabled": true
+										},
+										{
+											"key": "id_cycle",
+											"value": null,
+											"description": "OPTIONNAL - provide the id cycle you need\nTo get the id cycle list check /dadp/dossier_revision_list",
 											"disabled": true
 										}
 									]
