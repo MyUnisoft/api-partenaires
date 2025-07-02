@@ -154,6 +154,10 @@ interface Bank {
         "isDefault": {
           "type": "boolean",
           "description": "default RIB that could be automatically used internally for many operations (like TVA payments)"
+        },
+        "bankingIntegration": {
+          "type": "boolean",
+          "description": "Specifies whether bank recovery is enabled."
         }
       },
       "required": [
