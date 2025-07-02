@@ -122,7 +122,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 
 ### Guides sur les API cabinets
 
-- [Création et mise à jour d'un dossier de production](./accounting/firm/create_society.md)
+- [Créer et mettre à jour un dossier de production](./accounting/firm/create_society.md)
   - [Paramétrage avancé d'un dossier de production](./accounting/firm/manage_society.md)
 - [Gérer les utilisateurs d'un schéma](./accounting/firm/user_management.md)
   - [Récupérer les utilisateurs et personnes physiques](./accounting/firm/users.md)
@@ -150,7 +150,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 
 #### Révision
 
-- [Récupération des dossiers de révision et des modèles de dossier](./accounting/folder/dossiers_de_révision.md)
+- [Récupérer des dossiers de révision et des modèles de dossier](./accounting/folder/dossiers_de_révision.md)
 - [Lettrer les mouvements d'un compte](./accounting/folder/account/lettering.md)
 - [Récupérer la liste des immobilisations d'une société](./accounting/folder/immobilisations.md)
   - [Importer des immobilisations](./accounting/folder/import/immobilisations.md)
@@ -160,7 +160,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
   - [Importer des crédits-bails](./accounting/folder/import/credit_bail.md)
 - [Récupérer la liste des véhicules d'une société](./accounting/folder/vehicules.md)
   - [Importer des véhicules](./accounting/folder/import/vehicules.md)
-- [Récupérer la revue analytique d'un dossier comptable (révision par cycle)](./accounting/folder/analytic_review.md)
+- [Récupérer la revue analytique d'une société (révision par cycle)](./accounting/folder/analytic_review.md)
 
 #### Ecritures et mouvements
 
