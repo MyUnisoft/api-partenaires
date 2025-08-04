@@ -153,13 +153,13 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer des dossiers de révision et des modèles de dossier](./accounting/folder/dossiers_de_révision.md)
 - [Lettrer les mouvements d'un compte](./accounting/folder/account/lettering.md)
 - [Récupérer la liste des immobilisations d'une société](./accounting/folder/immobilisations.md)
-  - [Importer des immobilisations](./accounting/folder/import/immobilisations.md)
+  - [Importer des immobilisations sur un dossier](./accounting/folder/import/immobilisations.md)
 - [Récupérer la liste des emprunts d'une société](./accounting/folder/emprunts.md)
-  - [Importer des emprunts](./accounting/folder/import/emprunts.md)
+  - [Importer des emprunts sur un dossier](./accounting/folder/import/emprunts.md)
 - [Récupérer la liste des crédits-bails d'une société](./accounting/folder/credit_bail.md)
-  - [Importer des crédits-bails](./accounting/folder/import/credit_bail.md)
+  - [Importer des crédits-bails sur un dossier](./accounting/folder/import/credit_bail.md)
 - [Récupérer la liste des véhicules d'une société](./accounting/folder/vehicules.md)
-  - [Importer des véhicules](./accounting/folder/import/vehicules.md)
+  - [Importer des véhicules sur un dossier](./accounting/folder/import/vehicules.md)
 - [Récupérer la revue analytique d'une société (révision par cycle)](./accounting/folder/analytic_review.md)
 
 #### Ecritures et mouvements
@@ -172,7 +172,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 
 #### Documents
 
-- [Déposer des documents typés (achats, ventes, avoirs et notes de frais)](./accounting/folder/import/documents.md)
+- [Déposer des documents typés (achats, ventes, avoirs et notes de frais) sur un dossier](./accounting/folder/import/documents.md)
 - [Déposer des documents divers sur un dossier](./discussion/add_various_documents.md)
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
