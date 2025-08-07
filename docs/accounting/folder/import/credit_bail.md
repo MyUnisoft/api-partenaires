@@ -9,9 +9,9 @@ next: false
 
 # Importer des crédits-bails
 
-Ce guide va vous accompagner pour vous permettre d'importer des crédits-bails'.
+Ce guide va vous accompagner pour vous permettre d'importer des crédits-bails.
 
-Dans MyUnisoft, il est possible de procéder à un import des emprunts depuis : `Tenue` > `Flux` > `Imports`.
+Dans MyUnisoft, il est possible de procéder à un import des crédits-bails depuis : `Tenue` > `Flux` > `Imports`.
 
 ![Aperçu du menu tenue import](../../../images/tenue_flux_imports_menu.png)
 
