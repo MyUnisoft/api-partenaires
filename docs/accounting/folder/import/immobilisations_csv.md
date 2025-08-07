@@ -7,7 +7,7 @@ next: false
 
 <span id="readme-top"></span>
 
-# Importer des immobilisations
+# Importer des immobilisations avec un fichier .csv
 
 Ce guide va vous accompagner pour vous permettre d'importer des immobilisations.
 
