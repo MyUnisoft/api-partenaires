@@ -16,7 +16,7 @@ next:
 
 [L'ancien système d'authentification](cabinet.md) avec accès cabinet se base sur la combinaison d'un **mail** et d'un **mot de passe**.
 
-Aujourd'hui, il est désormais possible de générer un token directement depuis la page [Connecteurs](https://app.myunisoft.fr/tab/collab/connectors) de [MyUnisoft](https://app.myunisoft.fr/).
+Aujourd'hui, il est désormais possible de générer un token directement depuis la page [Connecteurs](https://app.prodcomptable.myunisoft.fr/tab/collab/connectors) de [MyUnisoft](https://app.prodcomptable.myunisoft.fr/).
 
 -  [🔹 Authentification](partenaire.md)
 

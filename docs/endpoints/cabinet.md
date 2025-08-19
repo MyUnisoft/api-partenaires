@@ -13,7 +13,7 @@ Pour toutes les endpoints liées aux informations sur une société particulièr
 
 ```bash
 curl --location \
---request GET 'https://app.myunisoft.fr/api/v1/society/exercice' \
+--request GET 'https://api.myunisoft.fr/api/v1/society/exercice' \
 --header 'X-Third-Party-Secret: {{THIRD_PARTY_SECRET}}' \
 --header 'society-id: 1' \
 --header 'Authorization: Bearer {{API_TOKEN}}'

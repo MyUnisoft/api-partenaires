@@ -27,7 +27,7 @@ Vous obtenez ainsi la liste des dossiers. Il suffit de cliquer sur la corbeille 
 La route <https://api.myunisoft.fr/api/v1/society> permet d'archiver un dossier de production avec l'API partenaires.
 
 ```bash
-curl --location --request DELETE 'https://app.myunisoft.fr/api/v1/society' \
+curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/society' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'society-id: 1;'
 --header 'Authorization: Bearer {{API_TOKEN}}'

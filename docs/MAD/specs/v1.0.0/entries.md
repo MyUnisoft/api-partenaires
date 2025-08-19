@@ -24,7 +24,7 @@ Sur MyUnisoft les mouvements sont groupés dans une abstraction que nous appelon
   "attachments": {
     "document.pdf": {
       "type": "URL",
-      "value": "https://app.myunisoft.fr/api/ged/ged/document/1-xTt2Qx4LPABeb1Z/download"
+      "value": "https://app.prodcomptable.myunisoft.fr/api/ged/ged/document/1-xTt2Qx4LPABeb1Z/download"
     }
   },
   "date": "2023-02-01",

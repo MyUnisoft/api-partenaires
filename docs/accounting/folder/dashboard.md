@@ -16,7 +16,7 @@ API pour récupérer les informations des dashboards et widgets. Ces modules gra
 ## Dashboards
 
 ```bash
-curl --location --request GET 'https://app.myunisoft.fr/api/v1/dashboard?application_type=Web&exercice_id=1345' \
+curl --location --request GET 'https://api.myunisoft.fr/api/v1/dashboard?application_type=Web&exercice_id=1345' \
 --header 'X-Third-Party-Secret: {{X_PARTY_SECRET}}' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
@@ -224,7 +224,7 @@ Par exemple ici `situation_globale`:
 ![Aperçu des écritures en attente de traitement](../../images/dashboard_widget_waiting.PNG)
 
 ```bash
-$ curl --location --request GET 'https://app.myunisoft.fr/api/v1/customer_waiting_account/widget' \
+$ curl --location --request GET 'https://api.myunisoft.fr/api/v1/customer_waiting_account/widget' \
 --header 'X-Third-Party-Secret: {{X_PARTY_SECRET}}' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```

@@ -25,7 +25,7 @@ L’objectif premier de Factur-X est de permettre aux fournisseurs, émetteurs d
 
 ```bash
 curl --location \
---request POST 'https://app.myunisoft.fr/api/v1/invoice?invoice_type_id=1&ocr_type_id=6&name=CHORUS0000003&extension=pdf' \
+--request POST 'https://api.myunisoft.fr/api/v1/invoice?invoice_type_id=1&ocr_type_id=6&name=CHORUS0000003&extension=pdf' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Content-Type: application/octet-stream' \
 --header 'Authorization: {{API_TOKEN}}' \

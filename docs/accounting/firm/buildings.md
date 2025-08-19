@@ -19,7 +19,7 @@ Dans MyUnisoft, la gestion des immeubles s'effectue avec le module CRM : `Ecosys
 La route <kbd>GET</kbd> <https://api.myunisoft.fr/api/v1/building> permet de récupérer la liste de l'ensemble des immeubles liés à une entreprise via l'API partenaire.
 
 ```bash
-curl --location 'https://app.myunisoft.fr/api/v1/building' \
+curl --location 'https://api.myunisoft.fr/api/v1/building' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'society-id: 1;' \
 --header 'Authorization: Bearer {{API_TOKEN}}'

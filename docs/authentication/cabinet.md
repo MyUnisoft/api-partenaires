@@ -19,7 +19,7 @@ Notre service authentification possède un endpoint spécifique qui permet la g�
 La route (racine) pour la requête http est POST <kdb>/api/authenticate/firm</kdb>.
 
 > [!NOTE]
-> Le lien racine du service authentification est le suivant: [https://app.myunisoft.fr/api/authenticate](https://app.myunisoft.fr/api/authenticate)
+> Le lien racine du service authentification est le suivant: [https://app.prodcomptable.myunisoft.fr/api/authenticate](https://app.prodcomptable.myunisoft.fr/api/authenticate)
 
 Le body (JSON) de la requête pour l’authentification :
 

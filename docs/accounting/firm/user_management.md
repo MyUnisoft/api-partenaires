@@ -31,7 +31,7 @@ Dans MyUnisoft les utilisateurs et personnes physiques peuvent être gérés par
 La route `https://api.myunisoft.fr/api/v1/profils/type` permet de récupérer tous les types de profils associables à l'utilisateur.
 
 ```bash
-$ curl --location 'https://app.myunisoft.fr/api/v1/profils/type' \
+$ curl --location 'https://api.myunisoft.fr/api/v1/profils/type' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
@@ -60,7 +60,7 @@ La route `https://api.myunisoft.fr/api/v1/profils?profil_type_id` permet de réc
 Elle attend donc un paramètre de requête 'profil_type_id'.
 
 ```bash
-$ curl --location 'https://app.myunisoft.fr/api/v1/profils?profil_type_id=2' \
+$ curl --location 'https://api.myunisoft.fr/api/v1/profils?profil_type_id=2' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
@@ -133,7 +133,7 @@ $ curl --location 'https://app.myunisoft.fr/api/v1/profils?profil_type_id=2' \
 La route `https://api.myunisoft.fr/api/v1/wallet` permet de récupérer le(s) portefeuille(s) associé(s) au cabinet.
 
 ```bash
-$ curl --location 'https://app.myunisoft.fr/api/v1/wallet' \
+$ curl --location 'https://api.myunisoft.fr/api/v1/wallet' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
@@ -176,7 +176,7 @@ $ curl --location 'https://app.myunisoft.fr/api/v1/wallet' \
 La route `https://api.myunisoft.fr/api/v1/user` permet de créer un compte utilisateur associé au schéma ayant accès à la solution.
 
 ```bash
-$ curl --location 'https://app.myunisoft.fr/api/v1/user' \
+$ curl --location 'https://api.myunisoft.fr/api/v1/user' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{API_TOKEN}}' \
@@ -239,10 +239,10 @@ MyUnisoft possède deux types de profil distincts :
 - [id: 1] Client
 - [id: 2] Cabinet (ce sont les collaborateurs comptables du cabinet).
 
-Pour récupérer les ids de ces deux profils, vous pouvez utiliser cet endpoint `https://app.myunisoft.fr/api/v1/profils/type`.
+Pour récupérer les ids de ces deux profils, vous pouvez utiliser cet endpoint `https://api.myunisoft.fr/api/v1/profils/type`.
 
 ```bash
-curl --location 'https://app.myunisoft.fr/api/v1/profils/type' \
+curl --location 'https://api.myunisoft.fr/api/v1/profils/type' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
@@ -252,7 +252,7 @@ curl --location 'https://app.myunisoft.fr/api/v1/profils/type' \
 La route `https://api.myunisoft.fr/api/v1/user` permet de mettre à jour un compte utilisateur associé au schéma ayant accès à la solution.
 
 ```bash
-$ curl --location --request PUT 'https://app.myunisoft.fr/api/v1/user' \
+$ curl --location --request PUT 'https://api.myunisoft.fr/api/v1/user' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{API_TOKEN}}' \
@@ -343,7 +343,7 @@ $ curl --location --request PUT 'https://app.myunisoft.fr/api/v1/user' \
 La route `https://api.myunisoft.fr/api/v1/user` permet de désactiver un compte utilisateur associé au schéma ayant accès à la solution.
 
 ```bash
-curl --location --request DELETE 'https://app.myunisoft.fr/api/v1/user?user_id=123' \
+curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/user?user_id=123' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: {{API_TOKEN}}'
 ```

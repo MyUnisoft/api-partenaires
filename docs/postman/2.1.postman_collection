@@ -41,7 +41,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://app.myunisoft.fr/api/authenticate/firm",
+							"raw": "https://app.prodcomptable.myunisoft.fr/api/authenticate/firm",
 							"protocol": "https",
 							"host": [
 								"app",
@@ -72,7 +72,7 @@
 									}
 								},
 								"url": {
-									"raw": "https://app.myunisoft.fr/api/authenticate/firm",
+									"raw": "https://app.prodcomptable.myunisoft.fr/api/authenticate/firm",
 									"protocol": "https",
 									"host": [
 										"app",
@@ -124,7 +124,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://app.myunisoft.fr/api/authenticate",
+							"raw": "https://app.prodcomptable.myunisoft.fr/api/authenticate",
 							"protocol": "https",
 							"host": [
 								"app",
@@ -154,7 +154,7 @@
 									}
 								},
 								"url": {
-									"raw": "https://app.myunisoft.fr/api/authenticate",
+									"raw": "https://app.prodcomptable.myunisoft.fr/api/authenticate",
 									"protocol": "https",
 									"host": [
 										"app",
@@ -5498,7 +5498,7 @@
 											}
 										],
 										"url": {
-											"raw": "https://app.myunisoft.fr/api/v1/dashboard?application_type=Web&exercice_id=1345",
+											"raw": "https://api.myunisoft.fr/api/v1/dashboard?application_type=Web&exercice_id=1345",
 											"protocol": "https",
 											"host": [
 												"app",
@@ -5536,7 +5536,7 @@
 													}
 												],
 												"url": {
-													"raw": "https://app.myunisoft.fr/api/v1/dashboard?application_type=Web&exercice_id=1345",
+													"raw": "https://api.myunisoft.fr/api/v1/dashboard?application_type=Web&exercice_id=1345",
 													"protocol": "https",
 													"host": [
 														"app",
@@ -12627,7 +12627,7 @@
 									}
 								],
 								"url": {
-									"raw": "https://app.myunisoft.fr/api/v1/customer_waiting_account/widget",
+									"raw": "https://api.myunisoft.fr/api/v1/customer_waiting_account/widget",
 									"protocol": "https",
 									"host": [
 										"app",
@@ -12656,7 +12656,7 @@
 											}
 										],
 										"url": {
-											"raw": "https://app.myunisoft.fr/api/v1/customer_waiting_account/widget",
+											"raw": "https://api.myunisoft.fr/api/v1/customer_waiting_account/widget",
 											"protocol": "https",
 											"host": [
 												"app",
@@ -13034,7 +13034,7 @@
 									}
 								],
 								"url": {
-									"raw": "https://app.myunisoft.fr/api/v1/country",
+									"raw": "https://api.myunisoft.fr/api/v1/country",
 									"protocol": "https",
 									"host": [
 										"app",
@@ -13062,7 +13062,7 @@
 											}
 										],
 										"url": {
-											"raw": "https://app.myunisoft.fr/api/v1/country",
+											"raw": "https://api.myunisoft.fr/api/v1/country",
 											"protocol": "https",
 											"host": [
 												"app",
@@ -13914,7 +13914,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"documentId\": \"1\",\n    \"download\": \"https://app.myunisoft.fr/api/ged/ged/document/1-gTt2QkfLPABeb6Z/download\"\n}"
+							"body": "{\n    \"documentId\": \"1\",\n    \"download\": \"https://app.prodcomptable.myunisoft.fr/api/ged/ged/document/1-gTt2QkfLPABeb6Z/download\"\n}"
 						}
 					]
 				}
@@ -15465,7 +15465,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"producerId\": \"13524346\",\n        \"attachments\": {\n            \"VotreDocumentSelectionne_12-06-2022 (5).pdf\": {\n                \"type\": \"URL\",\n                \"value\": \"https://app.myunisoft.fr/api/ged/ged/document/1-gTt2QkfLPABeb6Z/download\"\n            }\n        },\n        \"date\": \"2023-02-01\",\n        \"dueDate\": null,\n        \"journal\": {\n            \"producerId\": \"137145\",\n            \"customerReferenceCode\": \"AC\",\n            \"name\": \"ACHATS\",\n            \"type\": \"Achat\"\n        },\n        \"currency\": {\n            \"code\": \"EUR\"\n        },\n        \"movements\": [\n            {\n                \"producerId\": \"43221797\",\n                \"description\": \"TEST\",\n                \"value\": {\n                    \"credit\": 1200,\n                    \"debit\": 0,\n                    \"amount\": 1200\n                },\n                \"dueDate\": null,\n                \"lettering\": {\n                    \"state\": \"none\",\n                    \"value\": null\n                },\n                \"freeNumber\": null,\n                \"invoiceNumber\": null,\n                \"attachments\": {},\n                \"account\": {\n                    \"producerId\": \"1482937\",\n                    \"number\": \"6010000000\",\n                    \"name\": \"ACHATS MATIERES PREM\"\n                },\n                \"payment\": null,\n                \"analytics\": [\n                    {\n                        \"producerId\": \"703\",\n                        \"code\": \"AXE1\",\n                        \"name\": \"LIBELLE AXE1\",\n                        \"sections\": [\n                            {\n                                \"producerId\": \"1694\",\n                                \"amount\": 1200,\n                                \"rate\": 100,\n                                \"code\": \"ATTENTE\",\n                                \"name\": \"Waiting section\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                \"producerId\": \"43221798\",\n                \"description\": \"TEST\",\n                \"value\": {\n                    \"credit\": 0,\n                    \"debit\": 1200,\n                    \"amount\": -1200\n                },\n                \"dueDate\": null,\n                \"lettering\": {\n                    \"state\": \"none\",\n                    \"value\": null\n                },\n                \"freeNumber\": null,\n                \"invoiceNumber\": null,\n                \"attachments\": {},\n                \"account\": {\n                    \"producerId\": \"2567407\",\n                    \"number\": \"4551200000\",\n                    \"name\": \"COMPTE COURANT RACLE\"\n                },\n                \"payment\": null,\n                \"analytics\": []\n            }\n        ]\n    }\n]"
+							"body": "[\n    {\n        \"producerId\": \"13524346\",\n        \"attachments\": {\n            \"VotreDocumentSelectionne_12-06-2022 (5).pdf\": {\n                \"type\": \"URL\",\n                \"value\": \"https://app.prodcomptable.myunisoft.fr/api/ged/ged/document/1-gTt2QkfLPABeb6Z/download\"\n            }\n        },\n        \"date\": \"2023-02-01\",\n        \"dueDate\": null,\n        \"journal\": {\n            \"producerId\": \"137145\",\n            \"customerReferenceCode\": \"AC\",\n            \"name\": \"ACHATS\",\n            \"type\": \"Achat\"\n        },\n        \"currency\": {\n            \"code\": \"EUR\"\n        },\n        \"movements\": [\n            {\n                \"producerId\": \"43221797\",\n                \"description\": \"TEST\",\n                \"value\": {\n                    \"credit\": 1200,\n                    \"debit\": 0,\n                    \"amount\": 1200\n                },\n                \"dueDate\": null,\n                \"lettering\": {\n                    \"state\": \"none\",\n                    \"value\": null\n                },\n                \"freeNumber\": null,\n                \"invoiceNumber\": null,\n                \"attachments\": {},\n                \"account\": {\n                    \"producerId\": \"1482937\",\n                    \"number\": \"6010000000\",\n                    \"name\": \"ACHATS MATIERES PREM\"\n                },\n                \"payment\": null,\n                \"analytics\": [\n                    {\n                        \"producerId\": \"703\",\n                        \"code\": \"AXE1\",\n                        \"name\": \"LIBELLE AXE1\",\n                        \"sections\": [\n                            {\n                                \"producerId\": \"1694\",\n                                \"amount\": 1200,\n                                \"rate\": 100,\n                                \"code\": \"ATTENTE\",\n                                \"name\": \"Waiting section\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                \"producerId\": \"43221798\",\n                \"description\": \"TEST\",\n                \"value\": {\n                    \"credit\": 0,\n                    \"debit\": 1200,\n                    \"amount\": -1200\n                },\n                \"dueDate\": null,\n                \"lettering\": {\n                    \"state\": \"none\",\n                    \"value\": null\n                },\n                \"freeNumber\": null,\n                \"invoiceNumber\": null,\n                \"attachments\": {},\n                \"account\": {\n                    \"producerId\": \"2567407\",\n                    \"number\": \"4551200000\",\n                    \"name\": \"COMPTE COURANT RACLE\"\n                },\n                \"payment\": null,\n                \"analytics\": []\n            }\n        ]\n    }\n]"
 						}
 					]
 				},
@@ -15722,7 +15722,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"producerId\": \"170300\",\n    \"attachments\": {\n        \"VotreDocumentSelectionne_12-06-2022 (5).pdf\": {\n            \"type\": \"URL\",\n            \"value\": \"https://app.myunisoft.fr/api/ged/ged/document/1-gTt2QkfLPABeb6Z/download\"\n        }\n    },\n    \"date\": \"2023-02-01\",\n    \"dueDate\": null,\n    \"journal\": {\n        \"producerId\": \"137145\",\n        \"customerReferenceCode\": \"AC\",\n        \"name\": \"ACHATS\",\n        \"type\": \"Achat\"\n    },\n    \"currency\": {\n        \"code\": \"EUR\"\n    },\n    \"movements\": [\n        {\n            \"producerId\": \"43221797\",\n            \"description\": \"TEST\",\n            \"value\": {\n                \"credit\": 1200,\n                \"debit\": 0,\n                \"amount\": 1200\n            },\n            \"dueDate\": null,\n            \"lettering\": {\n                \"state\": \"none\",\n                \"value\": null\n            },\n            \"freeNumber\": null,\n            \"invoiceNumber\": null,\n            \"attachments\": {},\n            \"account\": {\n                \"producerId\": \"1482937\",\n                \"number\": \"6010000000\",\n                \"name\": \"ACHATS MATIERES PREM\"\n            },\n            \"payment\": null,\n            \"analytics\": [\n                {\n                    \"producerId\": \"703\",\n                    \"code\": \"AXE1\",\n                    \"name\": \"LIBELLE AXE1\",\n                    \"sections\": [\n                        {\n                            \"producerId\": \"1694\",\n                            \"amount\": 1200,\n                            \"rate\": 100,\n                            \"code\": \"ATTENTE\",\n                            \"name\": \"Waiting section\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"producerId\": \"43221798\",\n            \"description\": \"TEST\",\n            \"value\": {\n                \"credit\": 0,\n                \"debit\": 1200,\n                \"amount\": -1200\n            },\n            \"dueDate\": null,\n            \"lettering\": {\n                \"state\": \"none\",\n                \"value\": null\n            },\n            \"freeNumber\": null,\n            \"invoiceNumber\": null,\n            \"attachments\": {},\n            \"account\": {\n                \"producerId\": \"2567407\",\n                \"number\": \"4551200000\",\n                \"name\": \"COMPTE COURANT RACLE\"\n            },\n            \"payment\": null,\n            \"analytics\": []\n        }\n    ]\n    }"
+							"body": "{\n    \"producerId\": \"170300\",\n    \"attachments\": {\n        \"VotreDocumentSelectionne_12-06-2022 (5).pdf\": {\n            \"type\": \"URL\",\n            \"value\": \"https://app.prodcomptable.myunisoft.fr/api/ged/ged/document/1-gTt2QkfLPABeb6Z/download\"\n        }\n    },\n    \"date\": \"2023-02-01\",\n    \"dueDate\": null,\n    \"journal\": {\n        \"producerId\": \"137145\",\n        \"customerReferenceCode\": \"AC\",\n        \"name\": \"ACHATS\",\n        \"type\": \"Achat\"\n    },\n    \"currency\": {\n        \"code\": \"EUR\"\n    },\n    \"movements\": [\n        {\n            \"producerId\": \"43221797\",\n            \"description\": \"TEST\",\n            \"value\": {\n                \"credit\": 1200,\n                \"debit\": 0,\n                \"amount\": 1200\n            },\n            \"dueDate\": null,\n            \"lettering\": {\n                \"state\": \"none\",\n                \"value\": null\n            },\n            \"freeNumber\": null,\n            \"invoiceNumber\": null,\n            \"attachments\": {},\n            \"account\": {\n                \"producerId\": \"1482937\",\n                \"number\": \"6010000000\",\n                \"name\": \"ACHATS MATIERES PREM\"\n            },\n            \"payment\": null,\n            \"analytics\": [\n                {\n                    \"producerId\": \"703\",\n                    \"code\": \"AXE1\",\n                    \"name\": \"LIBELLE AXE1\",\n                    \"sections\": [\n                        {\n                            \"producerId\": \"1694\",\n                            \"amount\": 1200,\n                            \"rate\": 100,\n                            \"code\": \"ATTENTE\",\n                            \"name\": \"Waiting section\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"producerId\": \"43221798\",\n            \"description\": \"TEST\",\n            \"value\": {\n                \"credit\": 0,\n                \"debit\": 1200,\n                \"amount\": -1200\n            },\n            \"dueDate\": null,\n            \"lettering\": {\n                \"state\": \"none\",\n                \"value\": null\n            },\n            \"freeNumber\": null,\n            \"invoiceNumber\": null,\n            \"attachments\": {},\n            \"account\": {\n                \"producerId\": \"2567407\",\n                \"number\": \"4551200000\",\n                \"name\": \"COMPTE COURANT RACLE\"\n            },\n            \"payment\": null,\n            \"analytics\": []\n        }\n    ]\n    }"
 						}
 					]
 				},

@@ -13,7 +13,7 @@ Lors de l'utilisation des endpoints avec un accès de type société il n'est pa
 
 ```bash
 curl --location \
---request GET 'https://app.myunisoft.fr/api/v1/society/exercice' \
+--request GET 'https://api.myunisoft.fr/api/v1/society/exercice' \
 --header 'X-Third-Party-Secret: {{THIRD_PARTY_SECRET}}' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```

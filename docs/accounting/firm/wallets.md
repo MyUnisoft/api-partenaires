@@ -23,7 +23,7 @@ Ils correspondent à un groupe de dossiers comptables prédéfinis en amont par 
 La route <https://api.myunisoft.fr/api/v1/wallet> permet de récupérer la liste des portefeuilles du schéma.
 
 ```bash
-$ curl --location 'https://app.myunisoft.fr/api/v1/wallet' \
+$ curl --location 'https://api.myunisoft.fr/api/v1/wallet' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```

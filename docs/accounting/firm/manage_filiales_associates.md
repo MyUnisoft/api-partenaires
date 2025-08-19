@@ -22,7 +22,7 @@ La route <https://api.myunisoft.fr/api/v1/society/filiale_associate> permet d'aj
 > 🔹 Accès cabinet : L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production.
 
 ```bash
-curl --location 'https://app.myunisoft.fr/api/v1/society/filiale_associate' \
+curl --location 'https://api.myunisoft.fr/api/v1/society/filiale_associate' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'society-id: 1' \
 --header 'Content-Type: application/json' \

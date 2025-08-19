@@ -51,7 +51,7 @@ La génération est opérée de manière asynchrone et se décompose de la faço
 > 🔹 L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production (la société concernée par la demande d'extraction).
 
 ```bash
-curl --location 'https://app.myunisoft.fr/api/v1/mad/all?accountingFolderId=1&format=json&version=1.0.0' \
+curl --location 'https://api.myunisoft.fr/api/v1/mad/all?accountingFolderId=1&format=json&version=1.0.0' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V;' \
 --header 'society-id: 1;' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
@@ -79,7 +79,7 @@ Le paramétrage de la route se fait exclusivement par le biais des [querystrings
 | exportId | l'id de l'export | ✔️ | ❌ |
 
 ```bash
-curl --location 'https://app.myunisoft.fr/api/v1/mad/all/status?exportId=export_4eb2e1fce7838647' \
+curl --location 'https://api.myunisoft.fr/api/v1/mad/all/status?exportId=export_4eb2e1fce7838647' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V;' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
 ```
@@ -90,7 +90,7 @@ curl --location 'https://app.myunisoft.fr/api/v1/mad/all/status?exportId=export_
 {
     "id": "export_4eb2e1fce7838647",
     "status": "DONE",
-    "url": "https://app.myunisoft.fr/api/ged/ged/document/x-xxxxxxxxxxxxxxxxxxxxx/download"
+    "url": "https://app.prodcomptable.myunisoft.fr/api/ged/ged/document/x-xxxxxxxxxxxxxxxxxxxxx/download"
 }
 ```
 
@@ -115,7 +115,7 @@ curl --location 'https://app.myunisoft.fr/api/v1/mad/all/status?exportId=export_
 
 Lorsque le statut d'export est `DONE` le fichier contenant les données est récupérable via l'URL fourni dans la réponse de la route de récupération du statut.
 
-Dans le cas de notre exemple : `"https://app.myunisoft.fr/api/ged/ged/document/x-xxxxxxxxxxxxxxxxxxxxx/download"`
+Dans le cas de notre exemple : `"https://app.prodcomptable.myunisoft.fr/api/ged/ged/document/x-xxxxxxxxxxxxxxxxxxxxx/download"`
 
 ## 🔬 Structure des données récupérées
 

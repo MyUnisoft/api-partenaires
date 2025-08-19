@@ -60,16 +60,16 @@ Le paramètre (URL) de la route est le suivant :
   "reactions": [],
   "documents": [
       {
-        "url": "https://api.myunisoft.fr/api/ged/ged/document/1-24ddf9d8b2eb6895e9915c2dd825c73d/download",
-        "link": "https://api.myunisoft.fr/api/ged/ged/document/1-24ddf9d8b2eb6895e9915c2dd825c73d",
+        "url": "https://app.prodcomptable.myunisoft.fr/api/ged/ged/document/1-24ddf9d8b2eb6895e9915c2dd825c73d/download",
+        "link": "https://app.prodcomptable.myunisoft.fr/api/ged/ged/document/1-24ddf9d8b2eb6895e9915c2dd825c73d",
         "size": 7,
         "baseUrl": "https://4.mycloud.myunisoft.fr",
         "libelle": "document.png",
-        "download": "https://api.myunisoft.fr/api/ged/ged/document/1-24ddf9d8b2eb6895e9915c2dd825c73d/download",
-        "thumbnail": "https://api.myunisoft.fr/api/ged/ged/document/1-24ddf9d8b2eb6895e9915c2dd825c73d/preview?x=90&y=120",
+        "download": "https://app.prodcomptable.myunisoft.fr/api/ged/ged/document/1-24ddf9d8b2eb6895e9915c2dd825c73d/download",
+        "thumbnail": "https://app.prodcomptable.myunisoft.fr/api/ged/ged/document/1-24ddf9d8b2eb6895e9915c2dd825c73d/preview?x=90&y=120",
         "id_document": 4125602,
         "nom_original": "document.png",
-        "download_link": "https://api.myunisoft.fr/api/ged/ged/document/1-24ddf9d8b2eb6895e9915c2dd825c73d/download",
+        "download_link": "https://app.prodcomptable.myunisoft.fr/api/ged/ged/document/1-24ddf9d8b2eb6895e9915c2dd825c73d/download",
         "date_heure_creation": "2024-12-12T13:41:38.552"
       }
   ]

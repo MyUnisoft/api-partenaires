@@ -24,7 +24,7 @@ Les écritures et mouvements peuvent avoir plusieurs types de pièce jointe;
   "attachments": {
     "document.pdf": {
       "type": "URL",
-      "value": "https://app.myunisoft.fr/api/ged/ged/document/1-gTt2QkfLPABeb6Z/download"
+      "value": "https://app.prodcomptable.myunisoft.fr/api/ged/ged/document/1-gTt2QkfLPABeb6Z/download"
     }
   }
 }

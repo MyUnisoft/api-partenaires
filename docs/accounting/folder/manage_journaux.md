@@ -129,7 +129,7 @@ Il est possible de supprimer un ou plusieurs journaux personnalisés depuis l'ap
 La route <https://api.myunisoft.fr/api/v1/diary> permet ces opérations par le biais de l'API partenaires.
 
 ```bash
-curl --location --request DELETE 'https://app.myunisoft.fr/api/v1/diary' \
+curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/diary' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'society-id: 1' \
 --header 'Content-Type: application/json' \
