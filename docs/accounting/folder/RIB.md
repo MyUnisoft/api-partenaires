@@ -19,7 +19,7 @@ Dans MyUnisoft, la configuration des RIB/IBAN s'effectue à partir de: `Paramèt
 ## API
 
 ```bash
-curl --location --request GET 'https://app.myunisoft.fr/api/v1/rib' \
+curl --location --request GET 'https://api.myunisoft.fr/api/v1/rib' \
 --header 'X-Third-Party-Secret: X-Third-Party-Secret' \
 --header 'society-id: 19' \
 --header 'Authorization: Bearer Authorization'

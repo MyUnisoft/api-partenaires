@@ -22,7 +22,7 @@ Dans MyUnisoft, la création d'un dossier s'effectue avec le module CRM: `Ecosys
 
 ```bash
 curl --location \
---request POST 'https://app.myunisoft.fr/api/v1/society' \
+--request POST 'https://api.myunisoft.fr/api/v1/society' \
 --header 'X-Third-Party-Secret: xxx-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
@@ -61,7 +61,7 @@ Exemple "minimaliste" d'un BODY JSON:
 
 ```bash
 curl --location \
---request GET 'https://app.myunisoft.fr/api/v1/society/data_gouv_fields?siren={{SIRET}}&check=false' \
+--request GET 'https://api.myunisoft.fr/api/v1/society/data_gouv_fields?siren={{SIRET}}&check=false' \
 --header 'X-Third-Party-Secret: xxx-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
@@ -111,7 +111,7 @@ Le cabinet correspond à la propriété `member_id`.
 
 ```bash
 curl --location \
---request GET 'https://app.myunisoft.fr/api/v1/member' \
+--request GET 'https://api.myunisoft.fr/api/v1/member' \
 --header 'X-Third-Party-Secret: xxx-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{API_TOKEN}}'

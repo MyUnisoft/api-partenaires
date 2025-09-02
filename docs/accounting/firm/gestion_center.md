@@ -21,7 +21,7 @@ La route <https://api.myunisoft.fr/api/v1/society/gestion_center> permet de réc
 > 🔹 Accès cabinet : L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production.
 
 ```bash
-curl --location 'https://app.myunisoft.fr/api/v1/society/gestion_center' \
+curl --location 'https://api.myunisoft.fr/api/v1/society/gestion_center' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'society-id: 1' \
 --header 'Authorization: Bearer {{API_TOKEN}}'

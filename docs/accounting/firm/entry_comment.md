@@ -82,7 +82,7 @@ Pour modifier le commentaire d'une écriture comptable, vous pouvez utiliser la 
 > Penser à préciser l'en-tête **society-id** obligatoire pour les accès cabinet.
 
 ```bash
-curl --location --request PUT 'https://app.myunisoft.fr/api/v1/entry/comment/21909' \
+curl --location --request PUT 'https://api.myunisoft.fr/api/v1/entry/comment/21909' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'society-id: 1' \
 --header 'Content-Type: application/json' \
@@ -160,7 +160,7 @@ Pour supprimer le commentaire d'une écriture comptable, vous pouvez utiliser la
 > Penser à préciser l'en-tête **society-id** obligatoire pour les accès cabinet.
 
 ```bash
-curl --location --request DELETE 'https://app.myunisoft.fr/api/v1/entry/comment/21909' \
+curl --location --request DELETE 'https://api.myunisoft.fr/api/v1/entry/comment/21909' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'society-id: 1' \
 --header 'Authorization: Bearer {{API_TOKEN}}'

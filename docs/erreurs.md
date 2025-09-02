@@ -17,7 +17,7 @@ Exemple JSON pour une erreur avec détails :
         "code": "ERR-INTERNAL",
         "message": "Internal Server Error",
         "details": {
-            "url": "https://app.myunisoft.fr/api/v1/key/create",
+            "url": "https://api.myunisoft.fr/api/v1/key/create",
             "method": "POST",
             "requestedAt": "09 Mar 2021, 21:09:24",
             "correlationId": "09347205-7de2-4efe-aa68-f0f24a378029"

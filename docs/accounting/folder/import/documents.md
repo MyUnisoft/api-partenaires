@@ -69,9 +69,9 @@ En cas de succès, l'API retournera un status code `200` avec la réponse JSON s
 {
   "id": 1234567,
   "token": "8a6ec632125eeedc7008xxxxxxxx5512",
-  "link": "https://api.myunisoft.fr/api/ged/ged/document/1-8a6ec632125eeedc7008xxxxxxxx5512",
-  "thumbnail": "https://api.myunisoft.fr/api/ged/ged/document/1-8a6ec632125eeedc7008xxxxxxxx5512/preview?x=90&y=120",
-  "download": "https://api.myunisoft.fr/api/ged/ged/document/1-8a6ec632125eeedc7008xxxxxxxx5512/download",
+  "link": "https://app.prodcomptable.myunisoft.fr/api/ged/ged/document/1-8a6ec632125eeedc7008xxxxxxxx5512",
+  "thumbnail": "https://app.prodcomptable.myunisoft.fr/api/ged/ged/document/1-8a6ec632125eeedc7008xxxxxxxx5512/preview?x=90&y=120",
+  "download": "https://app.prodcomptable.myunisoft.fr/api/ged/ged/document/1-8a6ec632125eeedc7008xxxxxxxx5512/download",
   "baseURL": "https://x.xxxxxxxx.myunisoft.fr",
   "label": "facture.png",
   "OCR": false

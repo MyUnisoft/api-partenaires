@@ -82,7 +82,7 @@ Voici la marche à suivre concernant l'authentification si vous êtes un cabinet
 
 La racine de notre API partenaires est la suivante: [https://api.myunisoft.fr/api/v1](https://api.myunisoft.fr/api/v1)
 
-Pour vérifier sa disponibilité et son bon fonctionnement vous pouvez appeler: [https://api.myunisoft.fr/api/partners/health](https://app.myunisoft.fr/api/partners/health)
+Pour vérifier sa disponibilité et son bon fonctionnement vous pouvez appeler: [https://api.myunisoft.fr/api/partners/health](https://api.myunisoft.fr/api/partners/health)
 
 ---
 

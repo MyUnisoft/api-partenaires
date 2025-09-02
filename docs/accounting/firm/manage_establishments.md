@@ -106,7 +106,7 @@ La route <https://api.myunisoft.fr/api/v1/society/establishment/close> permet **
 > 🔹 Accès cabinet : L'accès cabinet nécessitera la présence de l'en-tête HTTP `society-id` avec l'id du dossier de production.
 
 ```bash
-curl --location --request PUT 'https://app.myunisoft.fr/api/v1/society/establishment/close?closing_date=20230910' \
+curl --location --request PUT 'https://api.myunisoft.fr/api/v1/society/establishment/close?closing_date=20230910' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Society-id: 1' \
 --header 'Content-Type: application/json' \

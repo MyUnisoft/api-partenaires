@@ -32,7 +32,7 @@ Dans MyUnisoft, l'exportation d'écritures comptables s'effectue dans le module:
 
 ```bash
 curl --location \
---request POST 'https://app.myunisoft.fr/api/v1/export/fec?export_type=0&exercice_id=159' \
+--request POST 'https://api.myunisoft.fr/api/v1/export/fec?export_type=0&exercice_id=159' \
 --header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
 --header 'Content-Type: application/json' \
 --header 'society-id: 19' \

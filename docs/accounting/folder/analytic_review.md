@@ -24,7 +24,7 @@ Vous obtenez ainsi l'ensemble des cycles de révision comptable du dossier.
 La route <https://api.myunisoft.fr/api/v1/dadp/analytic_review> permet de récupérer chaque revue par cycle avec l'API partenaires.
 
 ```bash
-curl --location 'https://app.myunisoft.fr/api/v1/dadp/analytic_review?review_id=138404&cycle_id=3' \
+curl --location 'https://api.myunisoft.fr/api/v1/dadp/analytic_review?review_id=138404&cycle_id=3' \
 --header 'X-Third-Party-Secret: nodejs-G0D2VEsH4uQf1erFpfVRYsgc' \
 --header 'society-id: 1' \
 --header 'Authorization: Bearer {{API_TOKEN}}'
