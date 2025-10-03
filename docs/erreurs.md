@@ -56,7 +56,7 @@ Les codes d’erreurs (unique) sont les suivants;
 - **ERR-INVALID-FIRM-JWT**
 - **ERR-API-TOKEN-NOT-FOUND** (le token n’existe pas ou est révoqué).
 - **ERR-FIRM-TOKEN-NOT-FOUND** (le token n’existe pas ou est révoqué).
-- **ERR-FOLDER-NOT-FOUND** (pas de dossier actif lié à ce token, il faut le regénérer).
+- **ERR-FOLDER-NOT-FOUND** (pas de dossier actif lié à ce token, il faut le régénérer).
 - **ERR-SECRET-NOT-CONFIGURED**
 - **ERR-SECRET-HEADER-NOT-SET** (l’en-tête X-Third-Party-Secret est manquante).
 - **ERR-INVALID-SECRET** (l’en-tête X-Third-Party-Secret n’est pas valide).
