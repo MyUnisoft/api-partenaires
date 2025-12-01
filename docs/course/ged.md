@@ -34,7 +34,7 @@ La plupart des éditeurs de GED souhaitent :
 4. Envoyer des fichiers.
 
 ::: info
-Actuellement, l'API partenaires de la GED se limite à la gestion des éléments du dossier de révision et des documents partagés.
+Actuellement, l'API partenaires de la GED se limite à la gestion des éléments du dossier de révision, des documents partagés et des documents des flux divers
 :::
 
 ## 📑 Arborescence
@@ -98,6 +98,18 @@ Une fois ces opérations terminées, l'événement de création de document est 
 <Carousel :includes='["revision_folder"]' :excludes='["4_bis"]'/>
 :::
 
+::: details Flux divers
+Pour déclencher un événement lors de la création d’un document dans le `dossier de révision`, suivez ces étapes :
+
+1. Sélectionnez un dossier comptable.
+
+2. Accédez à `Tenue > Dépôts de documents`.
+
+3. Import un document depuis la fenêtre `Autres`.
+
+Une fois ces opérations terminées, l'événement de création de document est déclenché. Si un webhook est configuré pour cette action, il sera automatiquement exécuté.
+:::
+
 ### Via l'API GED
 
 Lors de l'upload d'un document via notre API GED, les webhooks seront utilisés. Voir la documentation [Nous envoyer un document](#upload) ci dessous.
@@ -151,7 +163,7 @@ Plus de précisions sur les propriétés :
 
 | Propriété | Détails |
 |-----------|---------|
-| `kind` | Peut prendre les valeurs suivantes : `AF`, `PF`, `DB`, `ED`, qui correspondent respectivement aux acronymes de **AnnualFolder**, **PermanentFolder**, **DocumentaryBase**, et **ExternalDocument**. |
+| `kind` | Peut prendre les valeurs suivantes : `AF`, `PF`, `DB`, `ED`, `MF` qui correspondent respectivement aux acronymes de **AnnualFolder**, **PermanentFolder**, **DocumentaryBase**, **ExternalDocument** et **MiscellaneousFlow**. |
 | `folderPath` | Représente le chemin du fichier/dossier sous forme de tableau. Par exemple, pour un document du dossier de révision : `PF/Contrôles/Régularité/Fiscal/modele-facture-fr-moderne-rouge-750px.png`. |
 | `revisionFolder` | Cette propriété est uniquement disponible lorsque le document provient du dossier de révision. |
 | `id` | Ces propriétés sont des `integer` et son l'identifiant unique côté MyUnisoft. |
@@ -193,6 +205,9 @@ Voici un aperçu des deux cas d'utilisations à suivre pour ajouter un document 
 
 > [!NOTE]
 > Lorsqu'un document à classer est déplacé dans le dossier de révision ou les documents partagés, aucun événement n'est déclenché.
+
+> [!NOTE]
+> Le dépôt dans les documents des Flux divers (MF - MiscellaneousFlow) via l'API GED n'est pas encore géré.
 
 ::: details Document partagés
 <Carousel :includes='["shared_documents"]' :excludes='["4\\."]'/>
