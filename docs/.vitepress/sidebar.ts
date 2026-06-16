@@ -127,6 +127,14 @@ export default {
                 description: "Récupérer les filiales associés à une entreprise"
               }),
               link: "/accounting/firm/filiale_associate.md"
+            },
+            {
+              text: httpText({
+                method: "POST",
+                endpoint: "/society/fiscal_file",
+                description: "Création et mise à jour du dossier fiscal d'une société"
+              }),
+              link: "/accounting/firm/create_update_fiscal_file.md"
             }
           ],
           collapsed: true

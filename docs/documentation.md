@@ -124,6 +124,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 
 - [Créer et mettre à jour un dossier de production](./accounting/firm/create_society.md)
   - [Paramétrage avancé d'un dossier de production](./accounting/firm/manage_society.md)
+  - [Créer et mettre à jour le dossier fiscal d'une société](./accounting/firm/create_update_fiscal_file.md)
 - [Gérer les utilisateurs d'un schéma](./accounting/firm/user_management.md)
   - [Récupérer les utilisateurs et personnes physiques](./accounting/firm/users.md)
 - [Récupérer les dossiers accessibles pour un utilisateur](./accounting/firm/dossier_accessible.md)

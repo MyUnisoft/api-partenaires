@@ -59,6 +59,8 @@ En fonction des éléments que vous aurez renseigné dans le body de la requête
   "rof_groupe": "",
   "acompte_pro_mens": false,
   "exercice_declaration": false,
+  "efi_declaration": false,
+  "is_agricole": false,
   "tva_intraco": "FR45530514157",
   "due_date_tva": 21,
   "adherent_code": "",
@@ -187,6 +189,8 @@ export interface FiscalFile {
   rof_groupe: string,
   acompte_pro_mens: boolean,
   exercice_declaration: boolean,
+  efi_declaration: boolean,
+  is_agricole: boolean,
   tva_intraco: string,
   due_date_tva: number,
   adherent_code: string,
@@ -280,5 +284,29 @@ Voici quelques détails concernant certaines propriétés spécifiques et les mo
   | `0` | "Non concerné" |
   | `1` | "Mensuel" |
   | `2` | "Trimestriel" |
+
+## Paramètres spécifiques aux régimes de TVA
+
+Le régime de TVA de la société est défini via la propriété `vat_regime_id` (voir la liste des régimes sur cette [page](../specs/vat_regimes.md)). En fonction du régime sélectionné, les paramètres suivants peuvent être renseignés dans le body :
+
+- `acompte_pro_mens` (`boolean`) : acomptes provisionnels mensuels.
+- `assujetti_unique` (`boolean`) : assujetti unique.
+- `close_entries_VAT` (`boolean`) : validation des écritures suite à l'envoi EDI TVA.
+- `efi_declaration` (`boolean`) : déclarations réalisées en EFI.
+- `is_agricole` (`boolean`) : régime agricole.
+- `exercice_declaration` (`boolean`) : déclaration annuelle sur l'exercice comptable.
+- `tva_intraco` (`string`) : n° de TVA intracommunautaire.
+- `due_date_tva` (`number`) : jour d'échéance de la TVA.
+
+Le tableau ci-dessous indique les paramètres applicables pour chaque régime de TVA :
+
+| Régime de TVA | Paramètres applicables |
+| --- | --- |
+| Réel normal mensuel | `acompte_pro_mens`, `assujetti_unique`, `close_entries_VAT`, `efi_declaration`, `tva_intraco`, `due_date_tva` |
+| Réel normal trimestriel | `is_agricole`, `close_entries_VAT`, `efi_declaration`, `tva_intraco`, `due_date_tva` |
+| Réel simplifié | `close_entries_VAT`, `efi_declaration`, `tva_intraco`, `due_date_tva` |
+| Réel simplifié agricole | `exercice_declaration`, `close_entries_VAT`, `efi_declaration`, `tva_intraco`, `due_date_tva` |
+| Franchise | `close_entries_VAT`, `efi_declaration`, `tva_intraco`, `due_date_tva` |
+| Non assujetti | `close_entries_VAT`, `efi_declaration`, `tva_intraco`, `due_date_tva` |
 
 <p align="right">(<a href="#readme-top">retour en haut de page</a>)</p>
