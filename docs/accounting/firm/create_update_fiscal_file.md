@@ -98,6 +98,7 @@ En fonction des éléments que vous aurez renseigné dans le body de la requête
   "vis_name": "",
   "vis_agreement_number": "",
   "vis_viseur": true,
+  "vis_state": "VIS",
   "vis_address_number": "",
   "vis_street_name": "",
   "vis_postal_code": "",
@@ -228,6 +229,7 @@ export interface FiscalFile {
   vis_name: string,
   vis_agreement_number: string,
   vis_viseur: boolean,
+  vis_state: "OG" | "VIS" | null,
   vis_address_number: string,
   vis_street_name: string,
   vis_postal_code: string,
@@ -284,6 +286,64 @@ Voici quelques détails concernant certaines propriétés spécifiques et les mo
   | `0` | "Non concerné" |
   | `1` | "Mensuel" |
   | `2` | "Trimestriel" |
+
+## Intervenants (Organisme de Gestion / Viseur conventionné)
+
+L'état de l'intervenant du dossier fiscal est défini via la propriété `vis_state`. Les valeurs acceptées sont :
+
+| Valeur | Correspondance |
+| --- | --- |
+| `null` | Non concerné |
+| `"OG"` | Organisme de Gestion |
+| `"VIS"` | Viseur conventionné |
+
+En fonction de la valeur de `vis_state`, des champs conditionnels peuvent/doivent être renseignés dans le body :
+
+- Si `vis_state` est égal à `"OG"` :
+
+  | Propriété | Type | Description |
+  | --- | --- | --- |
+  | `gestion_center_id` | `number` | Centre de gestion (liste récupérable sur cette [page](./gestion_center.md)). |
+  | `adherent_code` | `string` | Code adhérent. |
+
+- Si `vis_state` est égal à `"VIS"` :
+
+  | Propriété | Type | Description |
+  | --- | --- | --- |
+  | `vis_name` | `string` | Désignation. |
+  | `vis_agreement_number` | `string` | Numéro d'agrément. |
+  | `vis_address_number` | `string` | Numéro de voie. |
+  | `vis_road_type_id` | `number` | Type de voie (liste récupérable sur cette [page](../specs/road_types.md)). |
+  | `vis_street_name` | `string` | Nom de la voie. |
+  | `vis_postal_code` | `string` | Code postal. |
+  | `vis_city` | `string` | Ville. |
+  | `vis_country` | `string` | Pays. |
+
+### Exemple de payload — Organisme de Gestion (OG)
+
+```json
+{
+  "vis_state": "OG",
+  "gestion_center_id": 105,
+  "adherent_code": "ADH-9876"
+}
+```
+
+### Exemple de payload — Viseur conventionné (VIS)
+
+```json
+{
+  "vis_state": "VIS",
+  "vis_agreement_number": "AGR123456",
+  "vis_name": "Cabinet Dupont",
+  "vis_address_number": "12",
+  "vis_road_type_id": 4,
+  "vis_street_name": "Rue de la République",
+  "vis_postal_code": "75001",
+  "vis_city": "Paris",
+  "vis_country": "France"
+}
+```
 
 ## Paramètres spécifiques aux régimes de TVA
 
