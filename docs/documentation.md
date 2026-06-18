@@ -132,6 +132,7 @@ Une liste de guides qui pourront certainement vous aider dans la réalisation de
 - [Récupérer le paramétrage plans comptables étalons](./accounting/firm/pcg_etalon.md)
 - [Récupérer les portefeuilles](./accounting/firm/wallets.md)
 - [Récupérer les comptes d'envoie EDI d'un dossier de production](./accounting/firm/compte_edi.md)
+- [Créer et mettre à jour un compte EDI](./accounting/firm/create_update_compte_edi.md)
 
 ### Guides sur les API comptabilités
 
