@@ -135,6 +135,14 @@ export default {
                 description: "Création et mise à jour du dossier fiscal d'une société"
               }),
               link: "/accounting/firm/create_update_fiscal_file.md"
+            },
+            {
+              text: httpText({
+                method: "POST",
+                endpoint: "/edi_account",
+                description: "Création et mise à jour d'un compte EDI"
+              }),
+              link: "/accounting/firm/create_update_compte_edi.md"
             }
           ],
           collapsed: true
