@@ -114,6 +114,11 @@ En fonction des éléments que vous aurez renseigné dans le body de la requête
   "rof_ts": "",
   "periodicity_ts": 0,
   "holding_name": "",
+  "vat_signatory_pers_physique_id": 1234,
+  "vat_signatory_capacity": "Gérant",
+  "vat_fiscal_rep_pers_physique_id": 5678,
+  "vat_fiscal_rep_societe_id": null,
+  "vat_fiscal_rep_capacity": "Expert-comptable",
   "adv_forme_juridique": {
     "id": 1,
     "code": "SARL",
@@ -245,6 +250,11 @@ export interface FiscalFile {
   rof_ts: string,
   periodicity_ts: number,
   holding_name: string,
+  vat_signatory_pers_physique_id: number,
+  vat_signatory_capacity: string,
+  vat_fiscal_rep_pers_physique_id: number,
+  vat_fiscal_rep_societe_id: number,
+  vat_fiscal_rep_capacity: string,
   adv_road_type_id: number,
   sie_road_type_id: number,
   ecf_road_type_id: number,
@@ -286,6 +296,52 @@ Voici quelques détails concernant certaines propriétés spécifiques et les mo
   | `0` | "Non concerné" |
   | `1` | "Mensuel" |
   | `2` | "Trimestriel" |
+
+## Signataire et représentant fiscal (TVA)
+
+Ces propriétés permettent de renseigner le signataire et le représentant fiscal utilisés pour la TVA.
+
+### Signataire
+
+| Propriété | Type | Description |
+| --- | --- | --- |
+| `vat_signatory_pers_physique_id` | `number` | Id de la personne physique agissant comme signataire (récupérable via l'endpoint `GET list/pers_physique`, voir la [page](./users.md)). |
+| `vat_signatory_capacity` | `string` | Qualité du signataire. |
+
+### Représentant fiscal
+
+Le représentant fiscal est soit une **personne physique**, soit une **personne morale**.
+
+| Propriété | Type | Description |
+| --- | --- | --- |
+| `vat_fiscal_rep_pers_physique_id` | `number` | Id du représentant fiscal si c'est une personne physique (récupérable via l'endpoint `GET list/pers_physique`, voir la [page](./users.md)). |
+| `vat_fiscal_rep_societe_id` | `number` | Id du représentant fiscal si c'est une personne morale (récupérable via `GET /api/v1/society`, voir la [page](../society.md)). |
+| `vat_fiscal_rep_capacity` | `string` | Qualité du représentant fiscal. |
+
+> [!IMPORTANT]
+> Il n'est pas possible de renseigner à la fois une personne physique (`vat_fiscal_rep_pers_physique_id`) et une personne morale (`vat_fiscal_rep_societe_id`) : ces deux propriétés sont mutuellement exclusives.
+
+### Exemple de payload — Représentant fiscal (personne physique)
+
+```json
+{
+  "vat_signatory_pers_physique_id": 1234,
+  "vat_signatory_capacity": "Gérant",
+  "vat_fiscal_rep_pers_physique_id": 5678,
+  "vat_fiscal_rep_capacity": "Expert-comptable"
+}
+```
+
+### Exemple de payload — Représentant fiscal (personne morale)
+
+```json
+{
+  "vat_signatory_pers_physique_id": 1234,
+  "vat_signatory_capacity": "Gérant",
+  "vat_fiscal_rep_societe_id": 91011,
+  "vat_fiscal_rep_capacity": "Cabinet de gestion"
+}
+```
 
 ## Intervenants (Organisme de Gestion / Viseur conventionné)
 
