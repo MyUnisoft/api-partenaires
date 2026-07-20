@@ -305,7 +305,7 @@ Ces propriétés permettent de renseigner le signataire et le représentant fisc
 
 | Propriété | Type | Description |
 | --- | --- | --- |
-| `vat_signatory_pers_physique_id` | `number` | Id de la personne physique agissant comme signataire (récupérable via l'endpoint `GET list/pers_physique`, voir la [page](./users.md)). |
+| `vat_signatory_pers_physique_id` | `number` | Id de la personne physique agissant comme signataire (récupérable via l'endpoint `GET /api/v1/pers_physique`, voir la [page](./users.md)). |
 | `vat_signatory_capacity` | `string` | Qualité du signataire. |
 
 ### Représentant fiscal
@@ -314,7 +314,7 @@ Le représentant fiscal est soit une **personne physique**, soit une **personne 
 
 | Propriété | Type | Description |
 | --- | --- | --- |
-| `vat_fiscal_rep_pers_physique_id` | `number` | Id du représentant fiscal si c'est une personne physique (récupérable via l'endpoint `GET list/pers_physique`, voir la [page](./users.md)). |
+| `vat_fiscal_rep_pers_physique_id` | `number` | Id du représentant fiscal si c'est une personne physique (récupérable via l'endpoint `GET /api/v1/pers_physique`, voir la [page](./users.md)). |
 | `vat_fiscal_rep_societe_id` | `number` | Id du représentant fiscal si c'est une personne morale (récupérable via `GET /api/v1/society`, voir la [page](../society.md)). |
 | `vat_fiscal_rep_capacity` | `string` | Qualité du représentant fiscal. |
 
