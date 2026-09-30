@@ -173,6 +173,10 @@ export default {
                 {
                   text: "Factur-X",
                   link: "/accounting/folder/import/facturx.md"
+                },
+                {
+                  text: "Relevé bancaire",
+                  link: "/accounting/folder/import/releve_bancaire.md"
                 }
               ]
             },
