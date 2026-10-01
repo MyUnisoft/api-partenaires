@@ -47,11 +47,11 @@ La route requiert des paramètres [(query string)](https://en.wikipedia.org/wiki
 
 | clé | description | valeurs | obligatoire |
 | --- | --- | --- | --- |
-| `invoice_type_id` | l'id du type de document | 1 = Achat<br> 2 = Note de frais<br> 3 = Vente<br> 4 = Avoir | ✅ |
+| `invoice_type_id` | l'id du type de document | 1 = Achat (facture ou avoir)<br> 2 = Note de frais<br> 3 = Vente (facture ou avoir) | ✅ |
 | `ocr_type_id` | l'id de type d'OCR utilisé |  2 = MANUEL<br> 5 = OCR MyUnisoft<br> 6 = Factur-X | ✅ |
 | `name` | le nom du document |  | ❌ |
 | `return_type` | permet de préciser le type de retour | 1 = "Pas de contenu" (Default)<br> 2 = retourne les infos du document | ❌ |
-| `extension` | l'extension de fichier du document | formats supportés : **jpg, jpeg, tiff, tif, bmp, png, pdf**<br> Taille maximale : **15 Mégaoctets (15Mo)** | ✅ |
+| `extension` | l'extension de fichier du document | formats supportés : **jpg, jpeg, tiff, tif, bmp, png, pdf, heic, webp**<br> Taille maximale : **15 Mégaoctets (15Mo)** | ✅ |
 
 En cas de succès, l'API retournera un status code `200` avec la réponse JSON suivante :
 
