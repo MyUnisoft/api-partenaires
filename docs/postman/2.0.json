@@ -5075,7 +5075,7 @@
 												{
 													"key": "invoice_type_id",
 													"value": "1",
-													"description": "Required 1 = Achat / 2 = Note de frais / 3 = Vente / 4 = Avoir"
+													"description": "Required 1 = Achat (facture ou avoir) / 2 = Note de frais / 3 = Vente (facture ou avoir)"
 												},
 												{
 													"key": "ocr_type_id",
@@ -5501,7 +5501,7 @@
 												{
 													"key": "invoice_type_id",
 													"value": "1",
-													"description": "Required 1 = Achat / 2 = Note de frais / 3 = Vente / 4 = Avoir"
+													"description": "Required 1 = Achat (facture ou avoir) / 2 = Note de frais / 3 = Vente (facture ou avoir)"
 												},
 												{
 													"key": "ocr_type_id",
@@ -5565,7 +5565,7 @@
 														{
 															"key": "invoice_type_id",
 															"value": "1",
-															"description": "Required 1 = Achat / 2 = Note de frais / 3 = Vente / 4 = Avoir"
+															"description": "Required 1 = Achat (facture ou avoir) / 2 = Note de frais / 3 = Vente (facture ou avoir)"
 														},
 														{
 															"key": "ocr_type_id",
@@ -5634,7 +5634,7 @@
 														{
 															"key": "invoice_type_id",
 															"value": "1",
-															"description": "Required 1 = Achat / 2 = Note de frais / 3 = Vente / 4 = Avoir"
+															"description": "Required 1 = Achat (facture ou avoir) / 2 = Note de frais / 3 = Vente (facture ou avoir)"
 														},
 														{
 															"key": "ocr_type_id",

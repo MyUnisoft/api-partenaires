@@ -34,7 +34,7 @@ curl --location \
 
 La route prend plusieurs arguments :
 
-- **invoice_type_id** (Required 1 = Achat / 2 = Note de frais / 3 = Vente / 4 = Avoir)
+- **invoice_type_id** (Required 1 = Achat (facture ou avoir) / 2 = Note de frais / 3 = Vente (facture ou avoir))
 - **ocr_type_id** 6 Pour Factur-X.
 - **name** (le nom du fichier qui est attaché avec la requête).
 - **extension** pdf.
