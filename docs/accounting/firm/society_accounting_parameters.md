@@ -191,6 +191,34 @@ Ce endpoint retournera un JSON semblabe à celui-ci
 }
 ```
 
+## Mise à jour des paramètres
+
+La mise à jour se fait avec la même route en `POST`. Le JSON attendu est celui retourné par le `GET` : récupérez les paramètres, modifiez les clés souhaitées puis renvoyez l'objet complet.
+
+> [!WARNING]
+> Le header `society-id` est requis avec un accès 🔹Cabinet.
+
+```bash
+$ curl --location --request POST 'https://api.myunisoft.fr/api/v1/society/accountingParameters' \
+--header 'X-Third-Party-Secret: nompartenaire-L8vlKfjJ5y7zwFj2J49xo53V' \
+--header 'Authorization: Bearer {{API_TOKEN}}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    ...
+    "enable_autolettering": false,
+    ...
+}'
+```
+
+## Lettrage automatique
+
+La clé JSON correspondante est `enable_autolettering` (section `Paramétrage des automatisations`) :
+
+- `true` : le lettrage automatique est activé sur le dossier
+- `false` : le lettrage automatique est désactivé sur le dossier
+
+Ce paramètre s'applique à l'ensemble du dossier. Le paramétrage du lettrage compte par compte n'est pas disponible via l'API.
+
 ## Type de Comptabilité
 
 La clé JSON correspondante est `comptability_type_id` :
